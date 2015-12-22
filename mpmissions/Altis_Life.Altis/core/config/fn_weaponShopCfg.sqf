@@ -73,7 +73,7 @@ switch(_shop) do {
 					[
 						["arifle_MXM_Black_F",nil,500],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["optic_Arco",nil,50
+						["optic_Arco",nil,50],
 						["optic_MRCO",nil,500],
 						["optic_DMS",nil,500],
 						["optic_Aco",nil,500],
