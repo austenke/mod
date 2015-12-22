@@ -59,6 +59,7 @@ switch (_code) do {
 	// Activate mining, should use q key
 	case 16:
 	{
+		[] spawn life_fnc_gangPayout;	
 		if((!life_action_inUse) && (vehicle player == player)) then
                 {
                      if(life_inv_pickaxe > 0) then
