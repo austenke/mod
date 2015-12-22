@@ -1,0 +1,15 @@
+[22:19:48 --4:00] [Thread 506509296] extDB: Version: 35
+[22:19:48 --4:00] [Thread 506509296] extDB: Windows Version
+[22:19:48 --4:00] [Thread 506509296] Message: Arma Linux Servers are using Older Physic Library (than Windows Servers), due to Debian 7 using old version of Glibc
+[22:19:48 --4:00] [Thread 506509296] Message: If you like extDB consider donating or bug BIS to drop support for Debian 7 thanks, so Linux Servers get same Physic Library Version as Windows
+[22:19:48 --4:00] [Thread 506509296] Message: Note currently most/all development for extDB is done on a Linux Server
+[22:19:48 --4:00] [Thread 506509296] Message: Torndeco: 24/01/15
+[22:19:48 --4:00] [Thread 506509296] 
+[22:19:48 --4:00] [Thread 506509296] extDB: Found extdb-conf.ini
+[22:19:48 --4:00] [Thread 506509296] extDB: Detected 4 Cores, Setting up 4 Worker Threads
+[22:19:48 --4:00] [Thread 506509296] extDB: Database Type: MySQL
+[22:19:48 --4:00] [Thread 506509296] extDB: Database Session Pool Started
+[22:19:48 --4:00] [Thread 506509296] extDB: DB_CUSTOM_V5: Loading Template Filename: C:\Users\Dell i5\Desktop\Drunken Life Server\@extDB\extDB\db_custom\altis-life-rpg-4.ini
+[22:19:48 --4:00] [Thread 2914546738] extDB: DB_CUSTOM_V5: Error StatementException: MySQL: [MySQL]: [Comment]: mysql_stmt_execute error	[mysql_stmt_error]: The user specified as a definer ('arma3'@'localhost') does not exist	[mysql_stmt_errno]: 1449	[mysql_stmt_sqlstate]: HY000	[statemnt]: CALL resetLifeVehicles;
+[22:19:48 --4:00] [Thread 2914546738] extDB: DB_CUSTOM_V5: Error Exception: SQL: resetLifeVehicles
+[22:22:28 --4:00] [Thread 506509296] extDB: Stopping ...

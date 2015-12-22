@@ -1,0 +1,17 @@
+[11:48:46 --4:00] [Thread 21623367] extDB: Version: 35
+[11:48:46 --4:00] [Thread 21623367] extDB: Windows Version
+[11:48:46 --4:00] [Thread 21623367] Message: Arma Linux Servers are using Older Physic Library (than Windows Servers), due to Debian 7 using old version of Glibc
+[11:48:46 --4:00] [Thread 21623367] Message: If you like extDB consider donating or bug BIS to drop support for Debian 7 thanks, so Linux Servers get same Physic Library Version as Windows
+[11:48:46 --4:00] [Thread 21623367] Message: Note currently most/all development for extDB is done on a Linux Server
+[11:48:46 --4:00] [Thread 21623367] Message: Torndeco: 24/01/15
+[11:48:46 --4:00] [Thread 21623367] 
+[11:48:46 --4:00] [Thread 21623367] extDB: Found extdb-conf.ini
+[11:48:46 --4:00] [Thread 21623367] extDB: Detected 4 Cores, Setting up 4 Worker Threads
+[11:48:46 --4:00] [Thread 21623367] extDB: Database Type: MySQL
+[11:48:46 --4:00] [Thread 21623367] extDB: Database Session Pool Started
+[11:48:46 --4:00] [Thread 21623367] extDB: DB_CUSTOM_V5: Loading Template Filename: C:\Users\Dell i5\Desktop\Drunken Life Server\@extDB\extDB\db_custom\altis-life-rpg-4.ini
+[11:48:46 --4:00] [Thread 1142833056] extDB: DB_CUSTOM_V5: Error StatementException: MySQL: [MySQL]: [Comment]: mysql_stmt_execute error	[mysql_stmt_error]: The user specified as a definer ('arma3'@'localhost') does not exist	[mysql_stmt_errno]: 1449	[mysql_stmt_sqlstate]: HY000	[statemnt]: CALL resetLifeVehicles;
+[11:48:46 --4:00] [Thread 1142833056] extDB: DB_CUSTOM_V5: Error Exception: SQL: resetLifeVehicles
+[11:51:25 --4:00] [Thread 2431311213] extDB: DB_CUSTOM_V5: Error StatementException: MySQL: [MySQL]: [Comment]: mysql_stmt_execute error	[mysql_stmt_error]: The user specified as a definer ('arma3'@'localhost') does not exist	[mysql_stmt_errno]: 1449	[mysql_stmt_sqlstate]: HY000	[statemnt]: CALL resetLifeVehicles;
+[11:51:25 --4:00] [Thread 2431311213] extDB: DB_CUSTOM_V5: Error Exception: SQL: resetLifeVehicles
+[11:55:52 --4:00] [Thread 21623367] extDB: Stopping ...

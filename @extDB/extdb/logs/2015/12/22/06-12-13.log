@@ -1,0 +1,19 @@
+[01:12:13 --4:00] [Thread 670352815] extDB: Version: 35
+[01:12:13 --4:00] [Thread 670352815] extDB: Windows Version
+[01:12:13 --4:00] [Thread 670352815] Message: Arma Linux Servers are using Older Physic Library (than Windows Servers), due to Debian 7 using old version of Glibc
+[01:12:13 --4:00] [Thread 670352815] Message: If you like extDB consider donating or bug BIS to drop support for Debian 7 thanks, so Linux Servers get same Physic Library Version as Windows
+[01:12:13 --4:00] [Thread 670352815] Message: Note currently most/all development for extDB is done on a Linux Server
+[01:12:13 --4:00] [Thread 670352815] Message: Torndeco: 24/01/15
+[01:12:13 --4:00] [Thread 670352815] 
+[01:12:13 --4:00] [Thread 670352815] extDB: Found extdb-conf.ini
+[01:12:13 --4:00] [Thread 670352815] extDB: Detected 4 Cores, Setting up 4 Worker Threads
+[01:12:13 --4:00] [Thread 670352815] extDB: Database Type: MySQL
+[01:12:13 --4:00] [Thread 670352815] extDB: Database Session Pool Started
+[01:12:13 --4:00] [Thread 670352815] extDB: DB_CUSTOM_V5: Loading Template Filename: C:\Users\Dell i5\Desktop\Drunken Life Server\@extDB\extDB\db_custom\altis-life-rpg-4.ini
+[01:12:14 --4:00] [Thread 3523753719] extDB: DB_CUSTOM_V5: Error StatementException: MySQL: [MySQL]: [Comment]: mysql_stmt_execute error	[mysql_stmt_error]: The user specified as a definer ('arma3'@'localhost') does not exist	[mysql_stmt_errno]: 1449	[mysql_stmt_sqlstate]: HY000	[statemnt]: CALL resetLifeVehicles;
+[01:12:14 --4:00] [Thread 3523753719] extDB: DB_CUSTOM_V5: Error Exception: SQL: resetLifeVehicles
+[01:14:53 --4:00] [Thread 320698071] extDB: DB_CUSTOM_V5: Error StatementException: MySQL: [MySQL]: [Comment]: mysql_stmt_prepare error	[mysql_stmt_error]: Table 'arma3life.wanted' doesn't exist	[mysql_stmt_errno]: 1146	[mysql_stmt_sqlstate]: 42S02	[statemnt]: SELECT wantedID, wantedName FROM wanted WHERE active='1' AND wantedID in (?);
+[01:14:53 --4:00] [Thread 320698071] extDB: DB_CUSTOM_V5: Error Exception: SQL: wantedFetchID:76561198040225987
+[01:14:57 --4:00] [Thread 320698071] extDB: DB_CUSTOM_V5: Error StatementException: MySQL: [MySQL]: [Comment]: mysql_stmt_prepare error	[mysql_stmt_error]: Table 'arma3life.wanted' doesn't exist	[mysql_stmt_errno]: 1146	[mysql_stmt_sqlstate]: 42S02	[statemnt]: SELECT wantedID, wantedName FROM wanted WHERE active='1' AND wantedID in (?);
+[01:14:57 --4:00] [Thread 320698071] extDB: DB_CUSTOM_V5: Error Exception: SQL: wantedFetchID:76561198040225987
+[01:16:40 --4:00] [Thread 670352815] extDB: Stopping ...

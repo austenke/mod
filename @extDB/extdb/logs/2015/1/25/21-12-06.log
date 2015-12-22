@@ -1,0 +1,39 @@
+[21:12:06 +01:00] [Thread 3657563069] extDB: Version: 33
+[21:12:06 +01:00] [Thread 3657563069] extDB: Windows Debug Version
+[21:12:06 +01:00] [Thread 3657563069] 
+[21:12:06 +01:00] [Thread 3657563069] Message: Arma Linux Servers are using Older Physic Library (than Windows Servers), due to Debian 7 using old version of Glibc
+[21:12:06 +01:00] [Thread 3657563069] Message: If you like extDB consider donating or bug BIS to drop support for Debian 7 thanks, so Linux Servers get same Physic Library Version as Windows
+[21:12:06 +01:00] [Thread 3657563069] Message: Note all Dev Work for extDB is done on Linux Setup
+[21:12:06 +01:00] [Thread 3657563069] Message: Torndeco: 24/01/15
+[21:12:06 +01:00] [Thread 3657563069] 
+[21:12:06 +01:00] [Thread 3657563069] extDB: Found extdb-conf.ini
+[21:12:06 +01:00] [Thread 3657563069] extDB: Detected 8 Cores, Setting up 6 Worker Threads
+[21:12:06 +01:00] [Thread 2907975830] extDB: Steam: Sleep
+[21:12:23 +01:00] [Thread 3657563069] extDB: Extension Input from Server: 9:ADD:VAC:vac
+[21:12:24 +01:00] [Thread 3657563069] extDB: Extension Input from Server: 2:vac:getFriends:76561197964070402
+[21:12:24 +01:00] [Thread 1561587298] extDB: VAC: Trace: Input: getFriends:76561197964070402
+[21:12:24 +01:00] [Thread 2907975830] extDB: Steam: Wake Up
+[21:12:24 +01:00] [Thread 2907975830] STEAM: Response Status OK
+[21:12:24 +01:00] [Thread 2907975830] STEAM: Response Status 200
+[21:12:25 +01:00] [Thread 2907975830] extDB: Steam: Sleep
+[21:12:32 +01:00] [Thread 3657563069] extDB: Extension Input from Server: 4:1
+[21:13:25 +01:00] [Thread 2907975830] extDB: Steam: Wake Up
+[21:13:25 +01:00] [Thread 2907975830] extDB: Steam: Sleep
+[21:14:17 +01:00] [Thread 3657563069] extDB: Extension Input from Server: 9:ADD:VAC:vac
+[21:14:17 +01:00] [Thread 3657563069] extDB: Error Protocol Name Already Taken: vac
+[21:14:18 +01:00] [Thread 3657563069] extDB: Extension Input from Server: 2:vac:getFriends:76561197964070402
+[21:14:18 +01:00] [Thread 1561587298] extDB: VAC: Trace: Input: getFriends:76561197964070402
+[21:14:18 +01:00] [Thread 2907975830] extDB: Steam: Wake Up
+[21:14:18 +01:00] [Thread 2907975830] STEAM: Response Status OK
+[21:14:18 +01:00] [Thread 2907975830] STEAM: Response Status 200
+[21:14:18 +01:00] [Thread 2907975830] extDB: Steam: Sleep
+[21:14:31 +01:00] [Thread 3657563069] extDB: Extension Input from Server: 9:ADD:VAC:vac
+[21:14:31 +01:00] [Thread 3657563069] extDB: Error Protocol Name Already Taken: vac
+[21:14:33 +01:00] [Thread 3657563069] extDB: Extension Input from Server: 2:vac:getFriends:76561197964070402
+[21:14:33 +01:00] [Thread 1561587298] extDB: VAC: Trace: Input: getFriends:76561197964070402
+[21:14:33 +01:00] [Thread 2907975830] extDB: Steam: Wake Up
+[21:14:33 +01:00] [Thread 2907975830] STEAM: Response Status OK
+[21:14:33 +01:00] [Thread 2907975830] STEAM: Response Status 200
+[21:14:33 +01:00] [Thread 2907975830] extDB: Steam: Sleep
+[21:15:33 +01:00] [Thread 2907975830] extDB: Steam: Wake Up
+[21:15:33 +01:00] [Thread 2907975830] extDB: Steam: Sleep
