@@ -73,7 +73,7 @@ switch(_shop) do {
 					[
 						["arifle_MXM_Black_F",nil,500],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["optic_Arco",nil,500],
+						["optic_Arco",nil,50
 						["optic_MRCO",nil,500],
 						["optic_DMS",nil,500],
 						["optic_Aco",nil,500],
@@ -217,15 +217,15 @@ switch(_shop) do {
 		};
 	};
 
-	case "cop_cheif":
+	case "cop_chief":
 	{
 		switch(true) do
 		{
 			case (playerSide != west): {"You are not a cop!"};
-			case (FETCH_CONST(life_coplevel) = 7): {"You are not the Cheif rank!"};
+			case (FETCH_CONST(life_coplevel) = 7): {"You are not the Chief rank!"};
 			default
 			{
-				["Altis Cheif shop",
+				["Altis Chief shop",
 					[
 						["SMG_02_F","Cadet Gun",5000],
 						["30Rnd_9x21_Mag",nil,200],
