@@ -12,4 +12,4 @@ _hideout = (nearestObjects[getPosATL player,["Land_u_Barracks_V2_F","Land_i_Barr
 
 //if(_group == grpPlayer) exitWith {titleText[localize "STR_GNOTF_Controlled","PLAIN"]};
 
-hint formatText["Your gang is ",(group player) getVariable "gang_name"];
+hint formatText["Your gang is ",{grpPlayer GVAR "gang_name"}];
