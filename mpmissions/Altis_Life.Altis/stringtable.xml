@@ -2932,11 +2932,6 @@
 			<Italian>Defib</Italian>
 			<Portuguese>Defib</Portuguese>
 		</Key>
-			<Key ID="STR_Item_GagKit">
-       		<Original>Gag Kit</Original>
-			<German>Knebel Bausatz</German>
-			<French>Kit de baillonement</French>
-		</Key>
 		<Key ID="STR_Item_Cannabis">
 			<Original>Cannabis</Original>
 			<German>Kannabis</German>

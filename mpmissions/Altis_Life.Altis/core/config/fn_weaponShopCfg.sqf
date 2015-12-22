@@ -19,194 +19,17 @@ _shop = [_this,0,"",[""]] call BIS_fnc_param;
 if(_shop == "") exitWith {closeDialog 0}; //Bad shop type passed.
 
 switch(_shop) do {
-	case "cop_cadet":
-	{
-		switch(true) do
-		{
+	case "cop_basic": {
+		switch(true) do {
 			case (playerSide != west): {"You are not a cop!"};
-			case (FETCH_CONST(life_coplevel) = 1): {"You are not the Cadet rank!"};
-			default
-			{
-				["Altis Cadet weapon Shop",
-					[
-						["SMG_02_F","Cadet Gun",5000],
-						["30Rnd_9x21_Mag",nil,200],
-						["optic_Holosight",nil,9000]
-					]
+			default {
+				["Altis Cop Shop",
+					[]
 				];
 			};
 		};
 	};
-
-	case "cop_constable":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (FETCH_CONST(life_coplevel) = 2): {"You are not at a Constable rank!"};
-			default
-			{
-				["Altis Constable weapon Shop",
-					[
-						["arifle_MX_Black_F","Constable Gun",5000],
-						["arifle_MXC_Black_F","Constable Gun",5000],
-						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["optic_Arco",nil,15000],
-						["optic_MRCO",nil,15000],
-						["optic_Hamr",nil,15000],
-						["optic_Holosight",nil,9000],
-						["smokeshellyellow","TearGas",2000]
-					]
-				];
-			};
-		};
-	};
-
-	case "cop_corporal":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (FETCH_CONST(life_coplevel) = 3): {"You are not the Corporal rank!"};
-			default
-			{
-				["Altis Corporal weapon Shop",
-					[
-						["arifle_MX_Black_F","Constable Gun",5000],
-						["arifle_MXC_Black_F","Constable Gun",5000],
-						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["optic_DMS",nil,500],
-						["optic_Arco",nil,15000],
-						["optic_MRCO",nil,15000],
-						["optic_Hamr",nil,15000],
-						["optic_Holosight",nil,9000],
-						["smokeshellyellow","TearGas",2000]
-					]
-				];
-			};
-		};
-	};
-
-	case "cop_sergeant":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (FETCH_CONST(life_coplevel) = 4): {"You are not the Sergeant rank!"};
-			default
-			{
-				["Altis Sergeant weapon Shop",
-					[
-						["arifle_MX_Black_F","Constable Gun",5000],
-						["arifle_MXC_Black_F","Constable Gun",5000],
-						["arifle_MXM_Black_F","Sergeant And Up",500],
-						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["optic_Arco",nil,500],
-						["optic_MRCO",nil,500],
-						["optic_DMS",nil,500],
-						["optic_Aco",nil,500],
-						["optic_Holosight",nil,500],
-						["optic_Hamr",nil,500],
-						["optic_NVS",nil,500],
-						["optic_SOS",nil,500],
-						["bipod_02_F_blk",nil,500],
-						["smokeshellyellow","TearGas",500]
-					]
-				];
-			};
-		};
-	};
-
-	case "cop_lieutenant":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (FETCH_CONST(life_coplevel) = 5): {"You are not the Lieutenant rank!"};
-			default
-			{
-				["Altis Lieutenant weapon Shop",
-					[
-						["arifle_MX_Black_F","Constable Gun",5000],
-						["arifle_MXC_Black_F","Constable Gun",5000],
-						["arifle_MXM_Black_F","Sergeant And Up",500],
-						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["optic_Arco",nil,500],
-						["optic_MRCO",nil,500],
-						["optic_DMS",nil,500],
-						["optic_Aco",nil,500],
-						["optic_Holosight",nil,500],
-						["optic_Hamr",nil,500],
-						["optic_NVS",nil,500],
-						["optic_SOS",nil,500],
-						["bipod_02_F_blk",nil,500],
-						["smokeshellyellow","TearGas",500]
-					]
-				];
-			};
-		};
-	};
-
-	case "cop_captain":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (FETCH_CONST(life_coplevel) = 6): {"You are not the Captain rank!"};
-			default
-			{
-				["Altis Captain weapon Shop",
-					[
-						["arifle_MX_Black_F","Constable Gun",5000],
-						["arifle_MXC_Black_F","Constable Gun",5000],
-						["arifle_MXM_Black_F","Sergeant And Up",500],
-						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["optic_Arco",nil,500],
-						["optic_MRCO",nil,500],
-						["optic_DMS",nil,500],
-						["optic_Aco",nil,500],
-						["optic_Holosight",nil,500],
-						["optic_Hamr",nil,500],
-						["optic_NVS",nil,500],
-						["optic_SOS",nil,500],
-						["bipod_02_F_blk",nil,500],
-						["smokeshellyellow","TearGas",500]
-					]
-				];
-			};
-		};
-	};
-
-	case "cop_cheif":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (FETCH_CONST(life_coplevel) = 7): {"You are not the Cheif rank!"};
-			default
-			{
-				["Altis Cheif weapon Shop",
-					[
-						["arifle_MX_Black_F","Constable Gun",5000],
-						["arifle_MXC_Black_F","Constable Gun",5000],
-						["arifle_MXM_Black_F","Sergeant And Up",500],
-						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["optic_Arco",nil,500],
-						["optic_MRCO",nil,500],
-						["optic_DMS",nil,500],
-						["optic_Aco",nil,500],
-						["optic_Holosight",nil,500],
-						["optic_Hamr",nil,500],
-						["optic_NVS",nil,500],
-						["optic_SOS",nil,500],
-						["bipod_02_F_blk",nil,500],
-						["smokeshellyellow","TearGas",500]
-					]
-				];
-			};
-		};
-	};
-
+	
 	case "med_basic": {
 		switch (true) do {
 			case (playerSide != independent): {"You are not an EMS Medic"};
@@ -220,6 +43,69 @@ switch(_shop) do {
 						["Medikit",nil,500],
 						["NVGoggles",nil,1200],
 						["B_FieldPack_ocamo",nil,3000]
+					]
+				];
+			};
+		};
+	};
+
+	case "cop_patrol":
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (FETCH_CONST(life_coplevel) < 1): {"You are not the right rank!"};
+			default
+			{
+				["Altis Patrol Officer Shop",
+					[
+						["SMG_02_F","Cadet Gun",5000],
+						["30Rnd_9x21_Mag",nil,200],
+						["arifle_MX_Black_F","Constable Gun",5000],
+						["arifle_MXC_Black_F","Constable Gun",5000],
+						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
+						["optic_Arco",nil,15000],
+						["optic_MRCO",nil,15000],
+						["optic_Aco",nil,15000],
+						["optic_Holosight",nil,9000],
+						["optic_Hamr",nil,15000],
+						["smokeshellyellow","TearGas",2000],
+						["ItemGPS",nil,100],
+						["Binocular",nil,150],
+						["ToolKit",nil,250],
+						["FirstAidKit",nil,150]
+					]
+				];
+			};
+		};
+	};
+
+	case "cop_sergeant":
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop!"};
+			case (FETCH_CONST(life_coplevel) < 6): {"You are not at a sergeant rank!"};
+			default
+			{
+				["Altis Sergeant Officer Shop",
+					[
+						["arifle_MXM_Black_F",nil,500],
+						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
+						["optic_Arco",nil,500],
+						["optic_MRCO",nil,500],
+						["optic_DMS",nil,500],
+						["optic_Aco",nil,500],
+						["optic_Holosight",nil,500],
+						["optic_Hamr",nil,500],
+						["optic_NVS",nil,500],
+						["optic_SOS",nil,500],
+						["bipod_02_F_blk",nil,500],
+						["smokeshellyellow","TearGas",500],
+						["ItemGPS",nil,500],
+						["Binocular",nil,500],
+						["ToolKit",nil,500],
+						["FirstAidKit",nil,500]
 					]
 				];
 			};

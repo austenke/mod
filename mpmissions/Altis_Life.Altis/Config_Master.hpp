@@ -104,7 +104,6 @@ class Life_Settings {
 //Virtual Items
 class VirtualItems {
 	VITEMMACRO(defib, "STR_Item_Defib", "defib", 10, 7500, -1, false, -1, "")
-	VITEMMACRO(gagkit, "STR_Item_GagKit", "gagkit", 10, 7500, -1, false, -1, "")
 
 	//Misc
 	VITEMMACRO(pickaxe, "STR_Item_Pickaxe", "pickaxe", 2, 750, 350, false, -1, "icons\ico_pickaxe.paa")
@@ -219,7 +218,7 @@ class VirtualShops {
 
 	class rebel {
 		name = "STR_Shops_Rebel";
-		items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "blastingcharge", "gagkit" };
+		items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "blastingcharge" };
 	};
 
 	class gang {
@@ -274,7 +273,7 @@ class VirtualShops {
 
 	class cop {
 		name = "STR_Shops_Cop";
-		items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "fuelFull", "defusekit", "gagkit" };
+		items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "fuelFull", "defusekit" };
 	};
 
 	class cement {

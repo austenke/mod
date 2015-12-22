@@ -4,7 +4,7 @@ onLoadMission = "A Drunken Altis Life Experience";
 LoadScreen  = "images\logo.jpg";
 joinUnassigned = 1;
 respawn = BASE;
-respawndelay = 45;
+respawndelay = 3;
 disabledAI = true;
 disableChannels[]={0,1,2};
 enableDebugConsole = 1;
@@ -55,7 +55,7 @@ class CfgSounds
 	class tazersound
 	{
 		name = "Tazersound";
-		sound[] = {"\sounds\tazer.ogg", 0.4, 1};
+		sound[] = {"\sounds\tazer.ogg", 0.8, 1};
 		titles[] = {};
 	};
 

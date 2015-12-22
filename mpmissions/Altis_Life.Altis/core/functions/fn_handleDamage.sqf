@@ -52,9 +52,9 @@ if(_projectile in ["B_65x39_Caseless","B_9x21_Ball"] && _curWep in ["arifle_MXC_
 				_isVehicle = if(vehicle player != player) then {true} else {false};
 				_damage = false;
 				_damageHandle = false;
-				if(!(_isVehicle && !life_istazed)) then {
-//Copy a knocking out function instead of using the tazing function on the server
-					[player,"Rubber Bullet",true] spawn life_fnc_knockedOut;
+				player setDamage ((player damage) + .1);
+				if(!(_isVehicle && !life_istazed) && ((damage player) > .4)) then {
+					[_unit,_source] spawn life_fnc_tazed;
 				};	
 			};
 			
