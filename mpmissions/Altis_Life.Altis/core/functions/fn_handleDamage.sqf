@@ -52,7 +52,7 @@ if(_projectile in ["B_65x39_Caseless","B_9x21_Ball"] && _curWep in ["arifle_MXC_
 				_isVehicle = if(vehicle player != player) then {true} else {false};
 				_damage = false;
 				_damageHandle = false;
-				player setDamage ((player damage) + .1);
+				player setDamage .5;
 				if(!(_isVehicle && !life_istazed) && ((damage player) > .4)) then {
 					[_unit,_source] spawn life_fnc_tazed;
 				};	
