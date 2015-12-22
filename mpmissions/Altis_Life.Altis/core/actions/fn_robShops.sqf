@@ -32,7 +32,7 @@ _kassa = 12000 + round(random 25000);
 _shop removeAction _action;
 _shop switchMove "AmovPercMstpSsurWnonDnon";
 _chance = random(100);
-if(_chance >= 90) then 
+if(_chance >= 80) then 
 { 
 	hint "The cashier hit the silent alarm, police has been alerted!"; 
 	[[format["ALARM! - %1 is being robbed!", _name],_name,1],"clientMessage",true,false] spawn life_fnc_MP;
@@ -53,7 +53,7 @@ if(_rip) then
 	[[_shop],"life_fnc_robberyStart",nil,true] spawn life_fnc_MP;
 	while{true} do
 	{
-			sleep 0.90;
+			sleep 1.10;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format["Robbery in Progress, stay close (4m) (%1%2)...",round(_cP * 100),"%"];
