@@ -53,7 +53,7 @@ if(_rip) then
 	[[_shop],"life_fnc_robberyStart",nil,true] spawn life_fnc_MP;
 	while{true} do
 	{
-			sleep 1.10;
+			sleep 1.70;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format["Robbery in Progress, stay close (4m) (%1%2)...",round(_cP * 100),"%"];
