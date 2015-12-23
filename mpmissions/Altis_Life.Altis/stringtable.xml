@@ -3417,6 +3417,9 @@
 			<Italian>Licenza di Guida</Italian>
 			<Portuguese>Licença de Motorista</Portuguese>
 		</Key>
+		<Key ID="STR_License_Jet">
+		<Original>Jet Training</Original>
+		</Key>
 		<Key ID="STR_License_Pilot">
 			<Original>Pilot License</Original>
 			<German>Pilotenschein</German>
