@@ -208,7 +208,7 @@ class Licenses {
 	LICENSEMACRO(cement,"STR_License_Cement","cement",5000,false,"civ")
 	LICENSEMACRO(mAir,"STR_License_Pilot","mAir",20000,false,"med")
 	LICENSEMACRO(home,"STR_License_Home","home",1000000,false,"civ")
-	LICENSEMACRO(Jet training,"STR_License_Jet","jet",5000000,false,"civ")
+	LICENSEMACRO(Jet,"STR_License_Jet","jet",5000000,false,"civ")
 };
 
 class VirtualShops {
