@@ -107,6 +107,20 @@ class CfgSounds
 		sound[] = {"\sounds\yelp.ogg", 1.0, 1};
 		titles[] = {};
 	};
+
+	class bankAlarm
+	{
+		name = "yelp";
+		sound[] = {"\sounds\bankAlarm.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class robbankdone
+	{
+		name = "yelp";
+		sound[] = {"\sounds\robbankdone.ogg", 1.0, 1};
+		titles[] = {};
+	};
 };
 
 class CfgDebriefing
