@@ -60,7 +60,7 @@ while {true} do {
 	_hideout SVAR ["inCapture",true,true];
 	if(_cP >= 1 OR !alive player) exitWith {_hideout SVAR ["inCapture",false,true];};
 	if(life_istazed) exitWith {_hideout SVAR ["inCapture",false,true];}; //Tazed
-	if(player distance _hideout > 20) exitWith { };
+	if(player distance _hideout > 25) exitWith {_hideout SVAR ["inCapture",false,true];};
 	//if(life_interrupted) exitWith {_hideout SVAR ["inCapture",false,true];};
 };
 
