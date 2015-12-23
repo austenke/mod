@@ -59,7 +59,7 @@ switch (_code) do {
 	// Activate mining, should use q key
 	case 16:
 	{
-		titleText[format["%1",(group player) getVariable "gang_name"],"PLAIN"];
+		//titleText[format["%1",(group player) getVariable "gang_name"],"PLAIN"];
 		if((!life_action_inUse) && (vehicle player == player)) then
                 {
                      if(life_inv_pickaxe > 0) then
@@ -127,13 +127,13 @@ switch (_code) do {
 	
 	//Holster / recall weapon.
 	case 35: {
-		if(!(EQUAL(currentWeapon player,""))) then {
+		if((currentWeapon player) != "") then {
 			life_curWep_h = currentWeapon player;
 			player action ["SwitchWeapon", player, player, 100];
 			player switchCamera cameraView;
 		};
 		
-		if(!isNil "life_curWep_h" && {!(EQUAL(life_curWep_h,""))}) then {
+		if(!_shift && !isNil "life_curWep_h" && {!(EQUAL(life_curWep_h,""))}) then {
 			if(life_curWep_h in [RIFLE,LAUNCHER,PISTOL]) then {
 				player selectWeapon life_curWep_h;
 			};
