@@ -11,28 +11,28 @@ if(_type == "") exitWith {-1};
 
 switch (_type) do
 {
-	case "driver": {500}; //Drivers License cost
-	case "boat": {1000}; //Boating license cost
-	case "pilot": {25000}; //Pilot/air license cost
-	case "gun": {10000}; //Firearm/gun license cost
-	case "dive": {2000}; //Diving license cost
-	case "oil": {10000}; //Oil processing license cost
-	case "cair": {15000}; //Cop Pilot License cost
+	case "driver": {10000}; //Drivers License cost
+	case "boat": {20000}; //Boating license cost
+	case "pilot": {500000}; //Pilot/air license cost
+	case "gun": {25000}; //Firearm/gun license cost
+	case "dive": {15000}; //Diving license cost
+	case "oil": {100000}; //Oil processing license cost
+	case "cair": {500000}; //Cop Pilot License cost
 	case "swat": {35000}; //Swat License cost
-	case "cg": {8000}; //Coast guard license cost
-	case "heroin": {25000}; //Heroin processing license cost
-	case "marijuana": {19500}; //Marijuana processing license cost
-	case "medmarijuana": {1500}; //Medical Marijuana processing license cost
+	case "cg": {20000}; //Coast guard license cost
+	case "heroin": {500000}; //Heroin processing license cost
+	case "marijuana": {500000}; //Marijuana processing license cost
+	case "medmarijuana": {500000}; //Medical Marijuana processing license cost
 	case "gang": {10000}; //Gang license cost
 	case "rebel": {2000000}; //Rebel license cost
 	case "truck": {20000}; //Truck license cost
-	case "diamond": {35000};
-	case "salt": {100000};
-	case "cocaine": {30000};
-	case "sand": {14500};
-	case "iron": {9500};
-	case "copper": {8000};
-	case "cement": {6500};
-	case "mair": {15000};
-	case "home": {75000};
+	case "diamond": {500000};
+	case "salt": {300000};
+	case "cocaine": {500000};
+	case "sand": {500000};
+	case "iron": {100000};
+	case "copper": {5000};
+	case "cement": {5000};
+	case "mair": {20000};
+	case "home": {1000000};
 };
