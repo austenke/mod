@@ -141,6 +141,9 @@ class VirtualItems {
 	VITEMMACRO(marijuana, "STR_Item_Marijuana", "marijuana", 3, 4000, 2350, true, -1, "icons\ico_marijuana.paa")
 	VITEMMACRO(cocaine_unprocessed, "STR_Item_CocaineU", "cocaineUnprocessed", 6, -1, 3000, true, -1, "")
 	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 4, -1, 11000, true, -1, "")
+	VITEMMACRO(grapes, "STR_Item_grapes", "grapes", 3, -1, -1, false, -1, "icons\grapes.png")
+	VITEMMACRO(wine, "STR_Item_wine", "wine", 2, -1, 12000, false, -1, "")
+	VITEMMACRO(moonshine, "STR_Item_moonshine", "moonshine", 2, 16000, 15000, true, -1, "")
 
 	//Drink
 	VITEMMACRO(redgull, "STR_Item_RedGull", "redgull", 1, 1500, 200, false, 100, "icons\ico_redgull.paa")
@@ -209,6 +212,10 @@ class Licenses {
 	LICENSEMACRO(mAir,"STR_License_Pilot","mAir",20000,false,"med")
 	LICENSEMACRO(home,"STR_License_Home","home",1000000,false,"civ")
 	LICENSEMACRO(Jet,"STR_License_Jet","jet",5000000,false,"civ")
+	LICENSEMACRO(wine,"STR_License_wine","wine",500000,false,"civ")
+	LICENSEMACRO(moonshine,"STR_License_moonshine","moonshine",1000000,true,"civ")
+
+
 };
 
 class VirtualShops {
@@ -239,7 +246,7 @@ class VirtualShops {
 	
 	class drugdealer {
 		name = "STR_Shops_DrugDealer";
-		items[] = { "cocaine_processed", "heroin_processed", "marijuana" };
+		items[] = { "cocaine_processed", "heroin_processed", "marijuana", "moonshine" };
 	};
 
 	class oil {

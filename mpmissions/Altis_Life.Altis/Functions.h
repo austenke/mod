@@ -101,7 +101,8 @@ class Life_Client_Core
 		class gutAnimal {};
 		class surrender {}; //surrender action
 		class robShops {}; //Rob Gas Station & Shops Script
-		class robBank {}; 
+		class robBank {};
+		class gatherGrapes {}; //custom grapes
 	};
 	
 	class Housing
