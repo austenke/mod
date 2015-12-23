@@ -61,6 +61,13 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,inde
 	};
 };
 
+if((!life_action_inUse) && (vehicle player == player)) then {
+    if(life_inv_pickaxe > 0) then
+    {
+        [] spawn life_fnc_pickAxeUse;
+    };
+};
+
 
 //If target is a player then check if we can use the cop menu.
 if(isPlayer _curTarget && _curTarget isKindOf "Man") then {

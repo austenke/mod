@@ -87,7 +87,7 @@ _this select 0 setFlagTexture _flagTexture;
 [[[0,1],format[localize "STR_GNOTF_CaptureSuccess",name player,(group player) getVariable "gang_name" ]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 _hideout SVAR ["inCapture",false,true];
 _hideout SVAR ["gangOwner",grpPlayer,true];
-titleText[format["%1",grpPlayer],"PLAIN"];
+titleText[format["%1",grpPlayer getVariable "gang_name"],"PLAIN"];
 life_cash = life_cash + 3000;
 
 // CREATE MARKER AT MAP BY Pictureclass

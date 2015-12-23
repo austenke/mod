@@ -60,13 +60,10 @@ switch (_code) do {
 	case 16:
 	{
 		titleText[format["%1",(group player) getVariable "gang_id"],"PLAIN"];
-		if((!life_action_inUse) && (vehicle player == player)) then
-                {
-                     if(life_inv_pickaxe > 0) then
-                     {
-                     [] spawn life_fnc_pickAxeUse;
-        	     };
-                }
+		[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+        //life_curWep_h = currentWeapon player;
+		//player action ["SwitchWeapon", player, player, 100];
+		//player switchCamera cameraView;
 	};
 
 	//Lock and unlock, uses U Key
