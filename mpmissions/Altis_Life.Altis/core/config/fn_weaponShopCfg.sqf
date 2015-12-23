@@ -42,15 +42,7 @@ switch(_shop) do {
 					[
 						["SMG_02_F","Cadet Gun",5000],
 						["30Rnd_9x21_Mag",nil,200],
-						["arifle_MX_Black_F","Constable Gun",5000],
-						["arifle_MXC_Black_F","Constable Gun",5000],
-						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["optic_Arco",nil,15000],
-						["optic_MRCO",nil,15000],
-						["optic_Aco",nil,15000],
 						["optic_Holosight",nil,9000],
-						["optic_Hamr",nil,15000],
-						["smokeshellyellow","TearGas",2000],
 						["ItemGPS",nil,100],
 						["Binocular",nil,150],
 						["ToolKit",nil,250],
@@ -71,23 +63,18 @@ switch(_shop) do {
 			{
 				["Altis Constable weapon Shop",
 					[
-						["arifle_MXM_Black_F",nil,500],
+						["arifle_MX_Black_F",nil,5000],
+						["arifle_MXC_Black_F",nil,5000],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
 						["optic_Arco",nil,50],
 						["optic_MRCO",nil,500],
-						["optic_DMS",nil,500],
+						["optic_Hamr",nil,500],
 						["optic_Aco",nil,500],
 						["optic_Holosight",nil,500],
-						["optic_Hamr",nil,500],
-						["optic_NVS",nil,500],
-						["optic_SOS",nil,500],
-						["bipod_02_F_blk",nil,500],
-						["smokeshellyellow","TearGas",500],
 						["ItemGPS",nil,500],
 						["Binocular",nil,500],
 						["ToolKit",nil,500],
-						["FirstAidKit",nil,500]
-					]
+						["FirstAidKit",nil,500]					]
 				];
 			};
 		};
@@ -103,21 +90,20 @@ switch(_shop) do {
 			{
 				["Altis Corporal weapon Shop",
 					[
-						["SMG_02_F","Cadet Gun",5000],
-						["30Rnd_9x21_Mag",nil,200],
-						["arifle_MX_Black_F","Constable Gun",5000],
-						["arifle_MXC_Black_F","Constable Gun",5000],
+						["arifle_MX_Black_F",nil,5000],
+						["arifle_MXC_Black_F",nil,5000],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["optic_Arco",nil,15000],
-						["optic_MRCO",nil,15000],
-						["optic_Aco",nil,15000],
-						["optic_Holosight",nil,9000],
-						["optic_Hamr",nil,15000],
+						["optic_Arco",nil,50],
+						["optic_MRCO",nil,500],
+						["optic_Hamr",nil,500],
+						["optic_DMS",nil,500],
+						["optic_Aco",nil,500],
+						["optic_Holosight",nil,500],
 						["smokeshellyellow","TearGas",2000],
-						["ItemGPS",nil,100],
-						["Binocular",nil,150],
-						["ToolKit",nil,250],
-						["FirstAidKit",nil,150]
+						["ItemGPS",nil,500],
+						["Binocular",nil,500],
+						["ToolKit",nil,500],
+						["FirstAidKit",nil,500]
 					]
 				];
 			};
@@ -134,21 +120,24 @@ switch(_shop) do {
 			{
 				["Altis Sergeant weapon Shop",
 					[
-						["SMG_02_F","Cadet Gun",5000],
-						["30Rnd_9x21_Mag",nil,200],
-						["arifle_MX_Black_F","Constable Gun",5000],
-						["arifle_MXC_Black_F","Constable Gun",5000],
+						["arifle_MX_Black_F",nil,5000],
+						["arifle_MXC_Black_F",nil,5000],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["optic_Arco",nil,15000],
-						["optic_MRCO",nil,15000],
-						["optic_Aco",nil,15000],
-						["optic_Holosight",nil,9000],
-						["optic_Hamr",nil,15000],
+						["optic_Arco",nil,50],
+						["optic_MRCO",nil,500],
+						["optic_Hamr",nil,500],
+						["optic_DMS",nil,500],
+						["optic_Aco",nil,500],
+						["optic_NVS",nil,500],
+						["optic_SOS",nil,500],
+						["optic_AMS",nil,500],
+						["optic_Holosight",nil,500],
+						["bipod_02_F_blk",nil,500],
 						["smokeshellyellow","TearGas",2000],
-						["ItemGPS",nil,100],
-						["Binocular",nil,150],
-						["ToolKit",nil,250],
-						["FirstAidKit",nil,150]
+						["ItemGPS",nil,500],
+						["Binocular",nil,500],
+						["ToolKit",nil,500],
+						["FirstAidKit",nil,500]
 					]
 				];
 			};
@@ -165,21 +154,23 @@ switch(_shop) do {
 			{
 				["Altis Lieutenant weapon Shop",
 					[
-						["SMG_02_F","Cadet Gun",5000],
-						["30Rnd_9x21_Mag",nil,200],
-						["arifle_MX_Black_F","Constable Gun",5000],
-						["arifle_MXC_Black_F","Constable Gun",5000],
+						["arifle_MXM_Black_F",nil,500],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["optic_Arco",nil,15000],
-						["optic_MRCO",nil,15000],
-						["optic_Aco",nil,15000],
-						["optic_Holosight",nil,9000],
-						["optic_Hamr",nil,15000],
+						["optic_Arco",nil,50],
+						["optic_MRCO",nil,500],
+						["optic_Hamr",nil,500],
+						["optic_DMS",nil,500],
+						["optic_Aco",nil,500],
+						["optic_NVS",nil,500],
+						["optic_SOS",nil,500],
+						["optic_AMS",nil,500],
+						["optic_Holosight",nil,500],
+						["bipod_02_F_blk",nil,500],
 						["smokeshellyellow","TearGas",2000],
-						["ItemGPS",nil,100],
-						["Binocular",nil,150],
-						["ToolKit",nil,250],
-						["FirstAidKit",nil,150]
+						["ItemGPS",nil,500],
+						["Binocular",nil,500],
+						["ToolKit",nil,500],
+						["FirstAidKit",nil,500]
 					]
 				];
 			};
@@ -196,21 +187,23 @@ switch(_shop) do {
 			{
 				["Altis Captain weapon Shop",
 					[
-						["SMG_02_F","Cadet Gun",5000],
-						["30Rnd_9x21_Mag",nil,200],
-						["arifle_MX_Black_F","Constable Gun",5000],
-						["arifle_MXC_Black_F","Constable Gun",5000],
+						["arifle_MXM_Black_F",nil,500],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["optic_Arco",nil,15000],
-						["optic_MRCO",nil,15000],
-						["optic_Aco",nil,15000],
-						["optic_Holosight",nil,9000],
-						["optic_Hamr",nil,15000],
+						["optic_Arco",nil,50],
+						["optic_MRCO",nil,500],
+						["optic_Hamr",nil,500],
+						["optic_DMS",nil,500],
+						["optic_Aco",nil,500],
+						["optic_NVS",nil,500],
+						["optic_SOS",nil,500],
+						["optic_AMS",nil,500],
+						["optic_Holosight",nil,500],
+						["bipod_02_F_blk",nil,500],
 						["smokeshellyellow","TearGas",2000],
-						["ItemGPS",nil,100],
-						["Binocular",nil,150],
-						["ToolKit",nil,250],
-						["FirstAidKit",nil,150]
+						["ItemGPS",nil,500],
+						["Binocular",nil,500],
+						["ToolKit",nil,500],
+						["FirstAidKit",nil,500]
 					]
 				];
 			};
@@ -227,21 +220,23 @@ switch(_shop) do {
 			{
 				["Altis Chief shop",
 					[
-						["SMG_02_F","Cadet Gun",5000],
-						["30Rnd_9x21_Mag",nil,200],
-						["arifle_MX_Black_F","Constable Gun",5000],
-						["arifle_MXC_Black_F","Constable Gun",5000],
+						["arifle_MXM_Black_F",nil,500],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["optic_Arco",nil,15000],
-						["optic_MRCO",nil,15000],
-						["optic_Aco",nil,15000],
-						["optic_Holosight",nil,9000],
-						["optic_Hamr",nil,15000],
+						["optic_Arco",nil,50],
+						["optic_MRCO",nil,500],
+						["optic_Hamr",nil,500],
+						["optic_DMS",nil,500],
+						["optic_Aco",nil,500],
+						["optic_NVS",nil,500],
+						["optic_SOS",nil,500],
+						["optic_AMS",nil,500],
+						["optic_Holosight",nil,500],
+						["bipod_02_F_blk",nil,500],
 						["smokeshellyellow","TearGas",2000],
-						["ItemGPS",nil,100],
-						["Binocular",nil,150],
-						["ToolKit",nil,250],
-						["FirstAidKit",nil,150]
+						["ItemGPS",nil,500],
+						["Binocular",nil,500],
+						["ToolKit",nil,500],
+						["FirstAidKit",nil,500]
 					]
 				];
 			};
