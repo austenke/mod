@@ -29,7 +29,6 @@ if(isNull _cop) exitWith {};
 	};
 };
 
-if((player getVariable["surrender",FALSE])) then { player setVariable["surrender",FALSE,TRUE]; player switchMove ""; };
 titleText[format[localize "STR_Cop_Retrained",_cop GVAR ["realname",name _cop]],"PLAIN"];
 				
 while {player GVAR  "restrained"} do {
