@@ -2312,8 +2312,8 @@ class Mission
 				};
 				class Item17
 				{
-					position[]={10385.096,27.72389,13200.513};
-					azimut=-59.367298;
+					position[]={4182.2212,46.107758,11655.702};
+					azimut=48.92432;
 					offsetY=0.1;
 					special="NONE";
 					id=114;
@@ -10124,7 +10124,7 @@ class Mission
 		};
 		class Item89
 		{
-			position[]={11556.398,77.697838,7048.0737};
+			position[]={6321.937,34.777435,14637.234};
 			name="weed_1";
 			text="Weed Field";
 			type="mil_dot";
@@ -10132,11 +10132,12 @@ class Mission
 		};
 		class Item90
 		{
-			position[]={10390.828,27.723936,13200.983};
+			position[]={4178.8247,46.366428,11659.963};
 			name="Weed_p_1";
 			text="Weed Processing";
 			type="mil_dot";
 			colorName="Color1_FD_F";
+			angle=108.29162;
 		};
 		class Item91
 		{
