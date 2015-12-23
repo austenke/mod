@@ -124,7 +124,7 @@ switch (_code) do {
 	
 	//Holster / recall weapon.
 	case 35: {
-		if(life_curWep_h == "") then {
+		if(!(life_curWep_h in [RIFLE,LAUNCHER,PISTOL])) then {
 			life_curWep_h = currentWeapon player;
 			player action ["SwitchWeapon", player, player, 100];
 			player switchCamera cameraView;
