@@ -26,6 +26,12 @@ if(isNull _curTarget) exitWith {
 			[_fish] call life_fnc_catchFish;
 		};
 	} else {
+		if((!life_action_inUse) && (vehicle player == player)) then {
+    		if(life_inv_pickaxe > 0) then
+    		{
+        		[] spawn life_fnc_pickAxeUse;
+    		};
+		};
 		if(playerSide == civilian && !life_action_gathering) then {
 			_handle = [] spawn life_fnc_gather;
 			waitUntil {scriptDone _handle};
@@ -59,13 +65,6 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,inde
 	if(((playerSide == blufor && {(EQUAL(LIFE_SETTINGS(getNumber,"revive_cops"),1))}) || playerSide == independent)) then {
 		[_curTarget] call life_fnc_revivePlayer;
 	};
-};
-
-if((!life_action_inUse) && (vehicle player == player)) then {
-    if(life_inv_pickaxe > 0) then
-    {
-        [] spawn life_fnc_pickAxeUse;
-    };
 };
 
 
