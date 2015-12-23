@@ -93,7 +93,7 @@ class Clothing {
 
 		uniforms[] = {
 			{ "U_Marshal", "Cadet Outfit", 500, { "life_coplevel", "SCALAR", 2 } },
-			{ "U_Rangemaster", "Constable and Up", 500, { "life_coplevel", "SCALAR", 2 } },
+			{ "U_Rangemaster", "Constable and Up", 500, { "life_coplevel", 2, "SCALAR", 2 } },
 			{ "U_B_CombatUniform_mcam", "Lieutenant and Up", 500, { "life_coplevel", "SCALAR", 2 } }
 		};
 
