@@ -3618,13 +3618,6 @@
 			<Italian>!!!!!! QUALCUNO STA CERCANDO DI INTRODURSI NELLA RISERVA FEDERALE !!!!!!</Italian>
 			<Portuguese>!!!!! A RESERVA FEDERAL ESTÁ SENDO ROUBADA !!!!!!</Portuguese>
 		</Key>
-		<Key ID="STR_ISTR_Bolt_AlertBank">
-			<Original>!!!!! SOMEONE IS BREAKING INTO THE KAVALA BANK !!!!!!</Original>
-			<German>!!!!! JEMAND BRICHT IN DIE KAVALA BANK !!!!!!</German>
-			<French>!!!!! QUELQU'UN TENTE DE S'INTRODUIRe DANS LA KAVALA BANK !!!!!!</French>
-			<Italian>!!!!!! QUALCUNO STA CERCANDO DI INTRODURSI NELLA KAVALA BANK !!!!!!</Italian>
-			<Portuguese>!!!!! A KAVALA BANK ESTÁ SENDO ROUBADA !!!!!!</Portuguese>
-		</Key>
 		<Key ID="STR_ISTR_Bolt_AlertHouse">
 			<Original>%1 was seen breaking into a house.</Original>
 			<German>%1 wurde beim Einbruch in ein Haus gesehen.</German>
