@@ -10,23 +10,14 @@
 closeDialog 0;
 
 //Little hint then wait a litle before starting drugs effects
-hint "Winners don't use drugs !";
-sleep 3;
+hint "Woah dude, is that a dinosaur?";
+sleep 1;
 
 //Activate ppEffects we need
 "chromAberration" ppEffectEnable true;
 "radialBlur" ppEffectEnable true;
 enableCamShake true;
-_smoke = "SmokeShellGreen" createVehicle position player;
-if (vehicle player != player) then
-    {
-        _smoke attachTo [vehicle player, [-0.6,-1,0]];
-    }
-    else
-    {
-        _smoke attachTo [player, [0,-0.1,1.5]];
-    };
-    
+
 //Let's go for 45secs of effetcs
 for "_i" from 0 to 44 do
 {

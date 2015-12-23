@@ -41,7 +41,7 @@ if(_shooter isKindOf "Man" && alive player) then {
 		[0,"STR_NOTF_Tazed",true,[profileName, _shooter GVAR ["realname",name _shooter]]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 		_unit attachTo [_obj,[0,0,0]];
 		disableUserInput true;
-		sleep 15;
+		sleep 35;
 		
 		[player,"amovppnemstpsraswrfldnon"] remoteExecCall ["life_fnc_animSync",RCLIENT];
 		

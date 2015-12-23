@@ -47,6 +47,7 @@ while {player GVAR  "restrained"} do {
 	};
 	
 	if(!alive _cop) exitWith {
+		titleText["Your arresting officer was killed","PLAIN"];
 		player SVAR ["Escorting",false,true];
 		detach player;
 	};
