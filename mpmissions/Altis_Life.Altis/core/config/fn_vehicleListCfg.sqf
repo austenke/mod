@@ -102,7 +102,7 @@ switch (_shop) do
 		[
 			["B_Heli_Light_01_F",253000],
 			["O_Heli_Light_02_unarmed_F",750000],
-			["O_Plane_CAS_02_F",10000]
+			["O_Plane_CAS_02_F",5000000]
 		];
 	};
 	
