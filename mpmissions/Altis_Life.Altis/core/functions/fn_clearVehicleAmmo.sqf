@@ -42,6 +42,16 @@ if(EQUAL(_veh,"O_Plane_CAS_02_F")) then
 	_vehicle removeMagazinesTurret ["20Rnd_Rocket_03_AP_F",[0]];
 };
 
+//Jet 
+case "O_Plane_CAS_02_F":
+{
+//Remove ammo and Flares
+_veh setVehicleAmmo 0;
+_veh setDamage 0;
+_veh allowDamage true;
+        //systemChat "Weapons removed";
+    };
+
 clearWeaponCargoGlobal _vehicle;
 clearMagazineCargoGlobal _vehicle;
 clearItemCargoGlobal _vehicle;
