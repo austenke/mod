@@ -162,6 +162,8 @@ class Life_Client_Core
 		file = "core\functions";
 		class UnLockCarSound {};
 		class LockCarSound {};
+		class robbankdone {};
+		class bankAlarm {};
 		class robberyFinish {};
 		class robberyStart {};
 		class robberyFail {};
