@@ -2359,8 +2359,7 @@ class Mission
 				class Item21
 				{
 					position[]={14327.697,18.496597,17426.902};
-					azimut=-187.52769;
-					offsetY=0.69999999;
+					azimut=-187.528;
 					special="NONE";
 					id=118;
 					side="CIV";
