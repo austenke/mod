@@ -41,12 +41,12 @@ _progressBar progressSetPosition 0.01;
 _cP = 0.01;
 
 while {true} do {
-	if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
-		[player,"AinvPknlMstpSnonWnonDnon_medic_1",true] remoteExecCall ["life_fnc_animSync",RCLIENT];
-		player switchMove "AinvPknlMstpSnonWnonDnon_medic_1";
-		player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
-	};
-	sleep 0.26;
+	//if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
+	//	[player,"AinvPknlMstpSnonWnonDnon_medic_1",true] remoteExecCall ["life_fnc_animSync",RCLIENT];
+	//	player switchMove "AinvPknlMstpSnonWnonDnon_medic_1";
+	//	player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
+	//};
+	sleep 1;
 	if(isNull _ui) then {
 		5 cutRsc ["life_progress","PLAIN"];
 		_ui = GVAR_UINS "life_progress";
@@ -59,7 +59,8 @@ while {true} do {
 	_hideout SVAR ["inCapture",true,true];
 	if(_cP >= 1 OR !alive player) exitWith {_hideout SVAR ["inCapture",false,true];};
 	if(life_istazed) exitWith {_hideout SVAR ["inCapture",false,true];}; //Tazed
-	if(life_interrupted) exitWith {_hideout SVAR ["inCapture",false,true];};
+	if(_robber distance _hideout > 20) exitWith { };
+	//if(life_interrupted) exitWith {_hideout SVAR ["inCapture",false,true];};
 };
 
 //Kill the UI display and check for various states
