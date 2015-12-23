@@ -33,7 +33,6 @@ if(_chance >= 60) then
 	hint "The banker hit the silent alarm, police has been alerted!"; 
 	["THE KAVALA BANK IS BEING ROBBED!","clientMessage",true,false] spawn life_fnc_MP;
 	[[1,2],"STR_ISTR_Bolt_AlertBank",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
-}
 };
  
 //Setup our progress bar.
