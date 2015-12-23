@@ -59,11 +59,11 @@ switch (_code) do {
 	// Activate mining, should use q key
 	case 16:
 	{
-		titleText[format["%1",(group player) getVariable "gang_id"],"PLAIN"];
-		[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
-        //life_curWep_h = currentWeapon player;
-		//player action ["SwitchWeapon", player, player, 100];
-		//player switchCamera cameraView;
+		titleText[format["%1",grpPlayer getVariable "gang_id"],"PLAIN"];
+		//[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+        life_curWep_h = currentWeapon player;
+		player action ["SwitchWeapon", player, player, 100];
+		player switchCamera cameraView;
 	};
 
 	//Lock and unlock, uses U Key
