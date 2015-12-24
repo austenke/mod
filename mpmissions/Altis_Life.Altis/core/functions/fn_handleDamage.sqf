@@ -53,9 +53,11 @@ if(_projectile in ["B_65x39_Caseless","B_9x21_Ball"] && _curWep in ["arifle_MXC_
 				_damage = 0;
 				//_damageHandle = false;
 				if((damage player) < .4) then {
+					hint "health low enough";
 					player setDamage .5;
 				} else {
 					if(!(_isVehicle && !life_istazed)) then {
+						hint "tazing";
 						player setDamage .1;
 						[_unit,_source] spawn life_fnc_tazed;
 					};	

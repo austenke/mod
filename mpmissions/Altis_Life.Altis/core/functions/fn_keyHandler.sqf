@@ -59,7 +59,9 @@ switch (_code) do {
 	// Test key
 	case 16:
 	{
-		titleText[format["%1",grpPlayer getVariable "gang_id"],"PLAIN"];
+		//titleText[format["%1",grpPlayer getVariable "gang_id"],"PLAIN"];
+		[["foo","name here",4],""TON_fnc_clientMessage"",true,false] call life_fnc_MP;
+
 	};
 	case 17:
 	{

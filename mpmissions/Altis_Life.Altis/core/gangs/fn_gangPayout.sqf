@@ -5,7 +5,6 @@
 	Description:
 	Things
 */
-private ["_index","_gang","_gangPaycheck","_owner","_myGang"];
 
 while {true} do {
 	sleep 10;
