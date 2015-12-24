@@ -3332,14 +3332,14 @@ class Mission
 				};
 				class Item105
 				{
-					position[]={3784.1113,36.817429,14502.232};
+					position[]={3783.5298,36.753048,14502.155};
 					azimut=-93.469704;
 					special="NONE";
 					id=202;
 					side="CIV";
 					vehicle="C_man_polo_6_F";
 					skill=0.60000002;
-					init="this allowDamage false; this addAction[""Ferment Whiskey"",life_fnc_processAction,""whiskey"",0,false,false,"""",' life_inv_rye > 0 && life_inv_yeast > 0 && !life_is_processing'];this addAction[""Make Moonshine"",life_fnc_processAction,""moonshine"",0,false,false,"""",' life_inv_mash > 0 && life_inv_yeast > 0 && !life_is_processing'];this addAction[""Make Mash"",life_fnc_processAction,""mash"",0,false,false,"""",' life_inv_cornmeal > 0 && life_inv_water > 0 && !life_is_processing'];this setVariable[""realname"",""Distillery""]; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""stiller"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""stiller"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""stiller"",0,false,false,"""",' !license_civ_stiller && playerSide == civilian '];";
+					init="this allowDamage false; this addAction[""Ferment Whiskey"",life_fnc_processAction,""whiskey"",0,false,false,"""",' life_inv_rye > 0 && life_inv_yeast > 0 && !life_is_processing'];this addAction[""Make Moonshine"",life_fnc_processAction,""moonshine"",0,false,false,"""",' life_inv_mash > 0 && life_inv_yeast > 0 && !life_is_processing'];this addAction[""Make Mash"",life_fnc_processAction,""mash"",0,false,false,"""",' life_inv_cornmeal > 0 && life_inv_water > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""stiller"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""stiller"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""stiller"",0,false,false,"""",' !license_civ_stiller && playerSide == civilian '];";
 				};
 				class Item106
 				{
@@ -3354,7 +3354,7 @@ class Mission
 				};
 				class Item107
 				{
-					position[]={4735.707,39.679073,12806.354};
+					position[]={4734.2061,39.702354,12809.133};
 					azimut=-93.469704;
 					offsetY=0.2;
 					special="NONE";
@@ -3362,7 +3362,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_polo_6_F";
 					skill=0.60000002;
-					init="this allowDamage false; this allowDamage false; this enableSimulation false;this setVariable[""realname"",""Brewery""]; this addAction[""Brew Beer"",life_fnc_processAction,""beer"",0,false,false,"""",' life_inv_hops > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""liquor"",0,false,false,"""",' !license_civ_liquor && playerSide == civilian '];";
+					init="this allowDamage false; this allowDamage false; this enableSimulation false; this addAction[""Brew Beer"",life_fnc_processAction,""beer"",0,false,false,"""",' life_inv_hops > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""liquor"",0,false,false,"""",' !license_civ_liquor && playerSide == civilian '];";
 				};
 			};
 		};
@@ -11335,7 +11335,7 @@ class Mission
 			name="distillery_1";
 			text="Cletus's Distillery";
 			type="mil_dot";
-			colorName="ColorRed";
+			colorName="ColorOrange";
 		};
 		class Item231
 		{
@@ -11355,11 +11355,11 @@ class Mission
 		};
 		class Item233
 		{
-			position[]={4730.874,39.72501,12811.675};
+			position[]={4732.4312,39.695877,12810.729};
 			name="brewery_1";
 			text="Brewery";
 			type="mil_dot";
-			colorName="ColorRed";
+			colorName="ColorOrange";
 		};
 		class Item234
 		{
