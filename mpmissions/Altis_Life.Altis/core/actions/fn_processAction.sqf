@@ -30,13 +30,13 @@ _itemInfo = switch (_type) do
 	case "cocaine": {_license = _type;["cocaine_unprocessed","cocaine_processed",3000,(localize "STR_Process_Cocaine"), false];};
 	case "marijuana": {_license = _type;["cannabis","marijuana",2000,(localize "STR_Process_Marijuana"), false];};
 	case "cement": {_license = _type;["rock","cement",350,(localize "STR_Process_Cement"), false];};
-	case "mash": {_license = _type;["water","cornmeal","mash",100,(localize "STR_Process_Mash"), false];};
-	case "whiskey": {_license = _type;["yeast","rye","whiskey",1000,(localize "STR_Process_Whiskey"), false];};
-	case "beer": {_license = _type;["yeast","hops","beerp",1500,(localize "STR_Process_Beer"), false];};
-	case "moonshine": {_license = _type;["yeast","mash","moonshine",250,(localize "STR_Process_Moonshine"), false];};
-	case "bottledshine": {_license = _type;["moonshine","bottledshine",500,(localize "STR_Process_BottledShine"), false];};
-	case "bottledbeer": {_license = _type;["beerp","bottledbeer",500,(localize "STR_Process_BottledBeer"), false];};
-	case "bottledwhiskey": {_license = _type;["whiskey","bottledwhiskey",500,(localize "STR_Process_BottledWhiskey"), false];};
+	case "mash": {_license = "stiller";["water","mash",100,"Broyer les graines",true,"cornmeal"]};
+	case "whiskey": {_license = "stiller";["yeast","whiskey",1000,"Fermentation du Whiskey",true,"rye"]};//new
+	case "beer": {_license = "liquor";["yeast","beerp",1500,"Brassage de la bière",true,"hops"]};//new
+	case "moonshine": {_license = "stiller";["yeast","moonshine",250,"Alcool de contrebande",true,"mash"]};//new
+	case "bottledshine": {_license = "bottler";["moonshine","bottledshine",500,"Mise en bouteille",false]};//new
+	case "bottledbeer": {_license = "bottler";["beerp","bottledbeer",500,"Mise en bouteille",false]};//new
+	case "bottledwhiskey": {_license = "bottler";["whiskey","bottledwhiskey",500,"Mise en bouteille",false]};//new
 	default {[];};
 };
  
