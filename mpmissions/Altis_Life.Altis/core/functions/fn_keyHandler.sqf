@@ -6,7 +6,7 @@
 	Description:
 	Main key handler for event 'keyDown'
 */
-private ["_handled","_shift","_alt","_code","_ctrl","_alt","_ctrlKey","_veh","_locked","_interactionKey","_mapKey","_interruptionKeys"];
+private ["_handled","_shift","_alt","_code","_ctrl","_alt","_ctrlKey","_veh","_locked","_interactionKey","_mapKey","_interruptionKeys","_query","_queryResult"];
 _ctrl = SEL(_this,0);
 _code = SEL(_this,1);
 _shift = SEL(_this,2);
@@ -63,7 +63,6 @@ switch (_code) do {
 		//[["foo","name here",4],""TON_fnc_clientMessage"",true,false] call life_fnc_MP;
 		//[] spawn life_fnc_gangPayout;
 
-		private["_query","_queryResult"];
 		waitUntil{!DB_Async_Active};
 		_queryResult = ["hideoutCheck",2] call DB_fnc_asyncCall;
 		life_hideoutCheck = _queryResult;
