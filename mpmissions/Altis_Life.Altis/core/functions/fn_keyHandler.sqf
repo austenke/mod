@@ -59,11 +59,7 @@ switch (_code) do {
 	// Activate mining, should use q key
 	case 16:
 	{
-		titleText[format["%1",life_curWep_h],"PLAIN"];
-		//[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
-        life_curWep_h = currentWeapon player;
-		player action ["SwitchWeapon", player, player, 100];
-		player switchCamera cameraView;
+		titleText[format["%1",grpPlayer getVariable "gang_id"],"PLAIN"];
 	};
 
 	//Lock and unlock, uses U Key
@@ -124,21 +120,17 @@ switch (_code) do {
 	
 	//Holster / recall weapon.
 	case 35: {
-		if(life_curWep_h in [RIFLE,LAUNCHER,PISTOL]) then {
-			player selectWeapon life_curWep_h;
-			hint "a";
-		} else {
-			hint "b"
+		if(_shift && !_ctrlKey && !(EQUAL(currentWeapon player,""))) then {
 			life_curWep_h = currentWeapon player;
 			player action ["SwitchWeapon", player, player, 100];
 			player switchCamera cameraView;
 		};
 		
-		//if(!_shift && !isNil "life_curWep_h" && {!(EQUAL(life_curWep_h,""))}) then {
-		//	if(life_curWep_h in [RIFLE,LAUNCHER,PISTOL]) then {
-		//		player selectWeapon life_curWep_h;
-		//	};
-		//};
+		if(!_shift && _ctrlKey && !isNil "life_curWep_h" && {!(EQUAL(life_curWep_h,""))}) then {
+			if(life_curWep_h in [RIFLE,LAUNCHER,PISTOL]) then {
+				player selectWeapon life_curWep_h;
+			};
+		};
 	};
 	
 	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
