@@ -56,10 +56,14 @@ switch (_code) do {
 		};
 	};
 	
-	// Activate mining, should use q key
+	// Test keys
 	case 16:
 	{
-		titleText[format["%1",currentWeapon player],"PLAIN"];
+		titleText[format["%1",grpPlayer],"PLAIN"];
+	};
+	case 17:
+	{
+		[[1,2],"Index rules",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 	};
 
 	//Lock and unlock, uses U Key
