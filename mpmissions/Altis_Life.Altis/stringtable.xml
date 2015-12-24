@@ -2517,6 +2517,30 @@
 		</Key>
 	</Package>
 	<Package name="MISC_Strings">
+		<Key ID="STR_MISC_StPubIntox">
+			<Original>%1 has passed out drunk in public!</Original>
+			<English>%1 has passed out drunk in public!</English>
+			<German>%1 hat sich betrunken im öffentlichen bestanden!</German>
+		</Key>
+		<Key ID="STR_MISC_AlreadyDrinking">
+			<Original>You are already drinking some booze</Original>
+			<English>You are already drinking some booze</English>
+			<German>Du bist schon etwas trinken Alkohol</German>
+		</Key>
+		<Key ID="STR_MISC_WestIndNoNo">
+			<Original>No drinking on duty</Original>
+			<English>No drinking on duty</English>
+			<German>Kein Trinkwasser im Dienst</German>
+			<French>Pas boire pendant le travail</French>
+		</Key>
+		<Key ID="STR_MISC_DrunkBlackOut">
+			<Original>You have passed out</Original>
+			<English>You have passed out</English>
+		</Key>
+		<Key ID="STR_MISC_DrunkBlackOut1">
+			<Original>What the hell happened to me??</Original>
+			<English>What the hell happened to me??</English>
+		</Key>
 		<Key ID="STR_MISC_TooMuch">
 			<Original>You tried to give %1 %2 %3 but they couldn't hold that so it was returned.</Original>
 			<German>Du wolltest %1 %2 %3 geben, aber er hat keinen Platz in seinem Inventar und hat es darum zurückgegeben.</German>
@@ -2925,6 +2949,42 @@
 		</Key>
 	</Package>
 	<Package name="Life_Items">
+		<Key ID="STR_Item_Bottles">
+			<Original>Glass Bottles</Original>
+		</Key>
+		<Key ID="STR_Item_BottledShine">
+    		<Original>Bottled Moonshine</Original>
+		</Key>
+		<Key ID="STR_Item_BottledWhiskey">
+			<Original>Bottled Whiskey</Original>
+		</Key>
+		<Key ID="STR_Item_BottledBeer">
+			<Original>Bottled Beer</Original>
+		</Key>
+		<Key ID="STR_Item_Moonshine">
+			<Original>Moonshine</Original>
+		</Key>
+		<Key ID="STR_Item_Whiskey">
+			<Original>Distilled Whiskey</Original>
+		</Key>
+		<Key ID="STR_Item_Beerp">
+			<Original>Fermented Beer</Original>
+		</Key>
+		<Key ID="STR_Item_Mash">
+			<Original>Mash</Original>
+		</Key>
+		<Key ID="STR_Item_Rye">
+			<Original>Rye</Original>
+		</Key>
+		<Key ID="STR_Item_Hops">
+			<Original>Hops</Original>
+		</Key>
+		<Key ID="STR_Item_Yeast">
+			<Original>Yeast</Original>
+		</Key>
+		<Key ID="STR_Item_Cornmeal">
+			<Original>Cornmeal Grains</Original>
+		</Key>
 		<Key ID="STR_Item_Defib">
 			<Original>Defib</Original>
 			<German>Defib</German>
@@ -3410,6 +3470,18 @@
 		</Key>
 	</Package>
 	<Package name="Life_License">
+		<Key ID="STR_License_Stiller">
+			<Original>Distillers License</Original>
+		</Key>
+		<Key ID="STR_License_Liquor">
+			<Original>Liquor License</Original>
+		</Key>
+		<Key ID="STR_License_Bottler">
+			<Original>Bottling License</Original>
+		</Key>
+		<Key ID = "STR_License_Mash">
+			<Original>Mash License</Original>
+		</Key>
 		<Key ID="STR_License_Driver">
 			<Original>Driver License</Original>
 			<German>Führerschein</German>
@@ -3823,6 +3895,27 @@
 		</Key>
 	</Package>
 		<Package name="Process_Action">
+		<Key ID = "STR_Process_Mash">
+			<Original>Making Mash</Original>
+		</Key>
+		<Key ID = "STR_Process_Whiskey">
+			<Original>Fermenting Whiskey</Original>
+		</Key>
+		<Key ID = "STR_Process_Beer">
+			<Original>Brewing Beer</Orginal>
+		</Key>
+		<Key ID = "STR_Process_Moonshine">
+			<Original>Making Moonshine</Original>
+		</Key>
+		<Key ID = "STR_Process_BottledShine">
+			<Original>Bottling Moonshine</Original>
+		</Key>
+		<Key ID = "STR_Process_BottledBeer">
+			<Original>Bottling Beer</Original>
+		</Key>
+		<Key ID = "STR_Process_BottleWhiskey">
+			<Original>Bottling Whiskey</Original>
+		</Key>
 		<Key ID="STR_Process_Oil">
 			<Original>Processing Oil</Original>
 			<German>Öl wird verarbeite</German>
@@ -3923,6 +4016,18 @@
 		</Key>
 	</Package>
 	<Package name="Gather_Items">
+		<Key ID="STR_Gather_Rye">
+			<Original>Gather Rye</Original>
+			<English>Gather Rye</English>
+		</Key>
+		<Key ID="STR_Gather_Hops">
+			<Original>Pick Hops</Original>
+			<English>Pick Hops</English>
+		</Key>
+		<Key ID="STR_Gather_Yeast">
+			<Original>Gather Yeast</Original>
+			<English>Gather Yeast</English>
+		</Key>
 		<Key ID="STR_Gather_Apples">
 			<Original>Gather Apples</Original>
 			<German>Äpfel sammeln</German>

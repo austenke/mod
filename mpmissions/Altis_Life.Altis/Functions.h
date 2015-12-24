@@ -286,6 +286,7 @@ class Life_Client_Core
 		class fedCamDisplay {};
 		class copLoadout {};
 		class ticketPaid {};
+		class breathalyzer {};
 	};
 	
 	class Gangs
@@ -343,6 +344,9 @@ class Life_Client_Core
 		class defuseKit {};
 		class storageBox {};
 		class weed {};
+		class drinkbeer {};
+		class drinkmoonshine {};
+		class drinkwhiskey {};
 	};
 	
 	class Dialog_Controls

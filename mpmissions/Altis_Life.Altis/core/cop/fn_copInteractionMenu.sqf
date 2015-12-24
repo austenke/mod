@@ -72,4 +72,17 @@ _Btn7 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar;";
 if(!((player distance (getMarkerPos "police_hq_1") < 30) OR  (player distance (getMarkerPos "police_hq_2") < 30) OR (player distance (getMarkerPos "cop_spawn_3") < 30) OR (player distance (getMarkerPos "cop_spawn_5") < 30))) then  {
 	_Btn6 ctrlEnable false;
 };
+
+//add to defines
+#define Btn9 37458
+
+//add _btn9 to private array like so
+private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn8","_Btn9"];
+
+//displayCtrl for button 9
+_Btn9 = _display displayCtrl Btn9;
+
+//actually the Breathalyser button
+_Btn9 ctrlSetText localize "STR_pInAct_Breathalyzer";
+_Btn9 buttonSetAction "[[player],""life_fnc_breathalyzer"",life_pInact_curTarget,FALSE] spawn life_fnc_MP;closeDialog 0";
 		

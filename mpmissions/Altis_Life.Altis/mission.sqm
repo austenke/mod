@@ -3809,15 +3809,14 @@ class Mission
 				class Item0
 				{
 					position[]={3783.9854,36.860023,14503.332};
-					azimut=-93.46299;
+					azimut=-93.462997;
 					special="NONE";
 					id=226;
 					side="CIV";
 					vehicle="C_man_polo_6_F";
 					leader=1;
 					skill=0.60000002;
-					text="grapes_1";
-					init="this enableSimulation false; this allowDamage false; this addAction[""Moonshine Distillery"",life_fnc_processAction,""moonshine"",0,false,false,"""",' life_inv_grapes > 0 && !life_is_processing']; this addAction[""MoonShining License($25000)"",life_fnc_buyLicense,""moonshine"",0,false,false,"""",' !license_civ_moonshine && playerSide == civilian '];";
+					init="this allowDamage false; this addAction[""Ferment Whiskey"",life_fnc_processAction,""whiskey"",0,false,false,"""",' life_inv_rye > 0 && life_inv_yeast > 0 && !life_is_processing'];this addAction[""Make Moonshine"",life_fnc_processAction,""moonshine"",0,false,false,"""",' life_inv_mash > 0 && life_inv_yeast > 0 && !life_is_processing'];this addAction[""Make Mash"",life_fnc_processAction,""mash"",0,false,false,"""",' life_inv_cornmeal > 0 && life_inv_water > 0 && !life_is_processing'];this setVariable[""realname"",""Distillery""]; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""stiller"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""stiller"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""stiller"",0,false,false,"""",' !license_civ_stiller && playerSide == civilian '];";
 				};
 			};
 		};
@@ -3837,8 +3836,7 @@ class Mission
 					vehicle="C_man_polo_6_F";
 					leader=1;
 					skill=0.60000002;
-					text="grapes_1_1";
-					init="this enableSimulation false; this allowDamage false; this addAction[""Process Grapes"",life_fnc_processAction,""grapes"",0,false,false,"""",' life_inv_grapes > 0 && !life_is_processing'];";
+					init="this allowDamage false;this enableSimulation false;this setVariable[""realname"",""Bottler""];this addAction[""Make Bottles"",life_fnc_processAction,""glassbottle"",0,false,false,"""",' life_inv_glass > 0 && !life_is_processing']; this addAction[""Bottle Beer"",life_fnc_processAction,""bottledbeer"",0,false,false,"""",'life_inv_beerp > 0 && !life_is_processing'];this addAction[""Bottle Whiskey"",life_fnc_processAction,""bottledwhiskey"",0,false,false,"""",'life_inv_whiskey > 0 && !life_is_processing'];this addAction[""Bottle Moonshine"",life_fnc_processAction,""bottledshine"",0,false,false,"""",'life_inv_moonshine > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""bottler"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""bottler"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""bottler"",0,false,false,"""",' !license_civ_bottler && playerSide == civilian '];";
 				};
 			};
 		};
@@ -3850,16 +3848,16 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3460.9402,2.9190078,13213.001};
-					azimut=-405.26501;
+					position[]={4735.3813,39.696507,12807.34};
+					azimut=-93.462997;
+					offsetY=0.2;
 					special="NONE";
 					id=228;
 					side="CIV";
 					vehicle="C_man_polo_6_F";
 					leader=1;
 					skill=0.60000002;
-					text="grapes_1_1_1";
-					init="this allowDamage false; this enableSimulation false; this addAction[""Liqour Store"",life_fnc_virt_menu,""beer""];";
+					init="this allowDamage false; this allowDamage false; this enableSimulation false;this setVariable[""realname"",""Brewery""]; this addAction[""Brew Beer"",life_fnc_processAction,""beer"",0,false,false,"""",' life_inv_hops > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""liquor"",0,false,false,"""",' !license_civ_liquor && playerSide == civilian '];";
 				};
 			};
 		};
@@ -9525,7 +9523,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=234;
+		items=236;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -11361,7 +11359,7 @@ class Mission
 		class Item230
 		{
 			position[]={3785.4421,37.053562,14504.161};
-			name="Dealer_1_1";
+			name="distillery_1";
 			text="Cletus's Distillery";
 			type="mil_dot";
 			colorName="ColorRed";
@@ -11369,7 +11367,7 @@ class Mission
 		class Item231
 		{
 			position[]={3757.4595,5.2467055,11124.668};
-			name="Dealer_1_1_1";
+			name="bottling_1";
 			text="Francois's Wine Bottling";
 			type="mil_dot";
 			colorName="ColorOrange";
@@ -11377,18 +11375,34 @@ class Mission
 		class Item232
 		{
 			position[]={7148.2344,156.6783,16793.59};
-			name="grape_1";
-			text="Grape Field";
+			name="hops_1";
+			text="Hops Field";
 			type="mil_dot";
 			colorName="ColorOrange";
 		};
 		class Item233
 		{
-			position[]={3462.9011,2.8994324,13215.907};
-			name="Gen_5";
-			text="Slutty's Bar";
+			position[]={4730.874,39.72501,12811.675};
+			name="brewery_1";
+			text="Brewery";
 			type="mil_dot";
 			colorName="ColorRed";
+		};
+		class Item234
+		{
+			position[]={6221.2354,30.892071,15547.075};
+			name="yeast_1";
+			text="Yeast Field";
+			type="mil_dot";
+			colorName="ColorOrange";
+		};
+		class Item235
+		{
+			position[]={5393.5029,70.821594,12535.438};
+			name="rye_1";
+			text="Rye Field";
+			type="mil_dot";
+			colorName="ColorOrange";
 		};
 	};
 };

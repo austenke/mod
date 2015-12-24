@@ -117,6 +117,17 @@ class VirtualItems {
 	VITEMMACRO(defusekit, "STR_Item_DefuseKit", "defuseKit", 2, 2500, -1, false, -1, "icons\ico_defusekit.paa")
 	VITEMMACRO(storagesmall, "STR_Item_StorageBS", "storageSmall", 5, 750000, -1, false, -1, "icons\ico_storageSmall.paa")
 	VITEMMACRO(storagebig, "STR_Item_StorageBL", "storageBig", 10, 1500000, -1, false, -1, "icons\ico_storageBig.paa")
+	VITEMMACRO(bottledshine, "STR_Item_BottledShine","bottledshine",2,12500,10000,true,-1,"")
+	VITEMMACRO(bottledwhiskey, "STR_Item_BottledWhiskey","bottledwhiskey",2,8000,5000,false,-1,"")
+	VITEMMACRO(bottledbeer, "STR_Item_BottledBeer","bottledbeer",2,6000,4000,false,-1,"")
+	VITEMMACRO(moonshine, "STR_Item_Moonshine","moonshine",2,8000,7000,true,-1,"")
+	VITEMMACRO(whiskey, "STR_Item_Whiskey","whiskey",2,5000,4500,false,-1,"")
+	VITEMMACRO(beerp, "STR_Item_Beerp","beerp",2,5000,4500,false,-1,"")
+	VITEMMACRO(rye, "STR_Item_Rye","rye",2,2500,2000,false,-1,"")
+	VITEMMACRO(hops, "STR_Item_Hops","hops",2,2000,1800,false,-1,"")
+	VITEMMACRO(yeast, "STR_Item_Yeast","yeast",2,2100,2000,false,-1,"")
+	VITEMMACRO(cornmeal, "STR_Item_Cornmeal","cornmeal",2,500,200,false,-1,"")
+	VITEMMACRO(bottles, "STR_Item_Bottles","bottles",2,100,75,false,-1,"")
 
 	//Mined Items
 	VITEMMACRO(oil_unprocessed, "STR_Item_OilU", "oilUnprocessed", 7, -1, -1, false, -1, "")
@@ -209,6 +220,10 @@ class Licenses {
 	LICENSEMACRO(mAir,"STR_License_Pilot","mAir",20000,false,"med")
 	LICENSEMACRO(home,"STR_License_Home","home",1000000,false,"civ")
 	LICENSEMACRO(Jet,"STR_License_Jet","jet",5000000,false,"civ")
+	LICENSEMACRO(stiller,"STR_License_Stiller","stiller",50000,false,"civ")
+	LICENSEMACRO(liquor,"STR_License_Liquor","liquor",100000,false,"civ")
+	LICENSEMACRO(bottler,"STR_License_Bottler","bottler",100000,false,"civ")
+	LICENSEMACRO(mash,"STR_License_Mash","mash",100000,false,"civ")
 };
 
 class VirtualShops {
