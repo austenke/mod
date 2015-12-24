@@ -76,21 +76,21 @@ class CfgSounds
 	class robberyStart
 	{
 		name = "robberyStart";
-		sound[] = {"\sounds\robberyStart.ogg", 6, 1};
+		sound[] = {"\sounds\robberyStart.ogg", 1.0, 1};
 		titles[] = {};
 	};
 
 	class robberyFinish
 	{
 		name = "robberyFinish";
-		sound[] = {"\sounds\robberyFinish.ogg", 6, 1};
+		sound[] = {"\sounds\robberyFinish.ogg", 1.0, 1};
 		titles[] = {};
 	};
 
 	class robberyFail
 	{
 		name = "robberyFail";
-		sound[] = {"\sounds\robberyFail.ogg", 6, 1};
+		sound[] = {"\sounds\robberyFail.ogg", 1.0, 1};
 		titles[] = {};
 	};
 	
@@ -111,7 +111,7 @@ class CfgSounds
 	class bankAlarm
 	{
 		name = "yelp";
-		sound[] = {"\sounds\bankAlarm.ogg", 1.0, 1};
+		sound[] = {"\sounds\bankAlarm.ogg", 3.0, 1};
 		titles[] = {};
 	};
 
