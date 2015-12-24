@@ -50,8 +50,8 @@ if(_projectile in ["B_65x39_Caseless","B_9x21_Ball"] && _curWep in ["arifle_MXC_
 			if(side _source == west && playerSide != west) then {
 				private["_isVehicle"];
 				_isVehicle = if(vehicle player != player) then {true} else {false};
-				_damage = false;
-				_damageHandle = false;
+				_damage = 0;
+				//_damageHandle = false;
 				if((damage player) < .4) then {
 					player setDamage .5;
 				} else {
