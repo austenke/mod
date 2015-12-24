@@ -8,5 +8,7 @@
 
 while {true} do {
 	sleep 10;
-	titleText[format["%1",grpPlayer getVariable "gang_id"],"PLAIN"];
+	_hideout = (nearestObjects[getPosATL player,["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"],25]) select 0;
+	_group = _hideout GVAR ["gangOwner",grpNull];
+	if(_group == (group player)) exitWith {titleText["You own the nearest hideout","PLAIN"]};
 };
