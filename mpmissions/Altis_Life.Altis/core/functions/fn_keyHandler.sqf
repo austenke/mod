@@ -63,10 +63,10 @@ switch (_code) do {
 		//[["foo","name here",4],""TON_fnc_clientMessage"",true,false] call life_fnc_MP;
 		//[] spawn life_fnc_gangPayout;
 
-		waitUntil{!DB_Async_Active};
+		waitUntil{sleep (random 0.3); !DB_Async_Active};
 		_queryResult = ["hideoutCheck",2] call DB_fnc_asyncCall;
-		life_hideoutCheck = _queryResult;
-		hint format["%1",life_hideoutCheck];
+		//life_hideoutCheck = _queryResult;
+		hint format["%1",_queryResult];
 	};
 	case 17:
 	{
