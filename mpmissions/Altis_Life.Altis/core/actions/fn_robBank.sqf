@@ -28,7 +28,8 @@ _kassa = 12000 + round(random 400000);
 _shop removeAction _action;
 _shop switchMove "AmovPercMstpSsurWnonDnon";
 _chance = random(100);
-if(_chance >= 60) then 
+// forget the chance thing for now
+if(_chance >= 0) then 
 { 
 	hint "The cashier hit the silent alarm, police has been alerted!"; 
 	sleep 1;
