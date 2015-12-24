@@ -2124,14 +2124,14 @@ class Mission
 				class Item1
 				{
 					position[]={14191.887,76.972687,21234.332};
-					azimut=95.948593;
+					azimut=95.948601;
 					special="NONE";
 					id=98;
 					side="EAST";
 					vehicle="O_Soldier_F";
 					skill=0.60000002;
 					text="reb_1";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false;  this addAction[""Rebel Market"",life_fnc_virt_menu,""rebel""];  this addAction[""Rebel Clothing Shop"",life_fnc_clothingMenu,""reb"",0,false,false,"""",' license_civ_rebel && playerSide == civilian'];  this addAction[""Rebel Weapon Shop"",life_fnc_weaponShopMenu,""rebel"",0,false,false,"""",' license_civ_rebel && playerSide == civilian'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""rebel"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""rebel"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""rebel"",0,false,false,"""",' !license_civ_rebel && playerSide == civilian '];  this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false;  this addAction[""Rebel Market"",life_fnc_virt_menu,""rebel""];  this addAction[""Rebel Clothing Shop"",life_fnc_clothingMenu,""reb"",0,false,false,"""",' license_civ_rebel && playerSide == civilian'];  this addAction[""Rebel Weapon Shop"",life_fnc_weaponShopMenu,""rebel"",0,false,false,"""",' license_civ_rebel && playerSide == civilian'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""rebel"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""rebel"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""rebel"",0,false,false,"""",' !license_civ_rebel && playerSide == civilian '];  this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];  this addAction[""Medical Assistance"",life_fnc_healHospital];";
 				};
 				class Item2
 				{
@@ -2254,7 +2254,7 @@ class Mission
 				};
 				class Item12
 				{
-					position[]={3491.6553,19.495581,14145.029};
+					position[]={4226.0464,19.373209,15088.548};
 					azimut=-172.9682;
 					special="NONE";
 					id=109;
@@ -3004,7 +3004,7 @@ class Mission
 				class Item76
 				{
 					position[]={8307.4414,75.940002,10051.118};
-					azimut=58.40181;
+					azimut=58.401798;
 					offsetY=0.5;
 					special="NONE";
 					id=173;
@@ -3012,19 +3012,19 @@ class Mission
 					vehicle="O_Soldier_F";
 					skill=0.60000002;
 					text="reb_1_1";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false;  this addAction[""Rebel Market"",life_fnc_virt_menu,""rebel""];  this addAction[""Rebel Clothing Shop"",life_fnc_clothingMenu,""reb"",0,false,false,"""",' license_civ_rebel && playerSide == civilian'];  this addAction[""Rebel Weapon Shop"",life_fnc_weaponShopMenu,""rebel"",0,false,false,"""",' license_civ_rebel && playerSide == civilian'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""rebel"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""rebel"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""rebel"",0,false,false,"""",' !license_civ_rebel && playerSide == civilian '];  this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false;  this addAction[""Rebel Market"",life_fnc_virt_menu,""rebel""];  this addAction[""Rebel Clothing Shop"",life_fnc_clothingMenu,""reb"",0,false,false,"""",' license_civ_rebel && playerSide == civilian'];  this addAction[""Rebel Weapon Shop"",life_fnc_weaponShopMenu,""rebel"",0,false,false,"""",' license_civ_rebel && playerSide == civilian'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""rebel"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""rebel"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""rebel"",0,false,false,"""",' !license_civ_rebel && playerSide == civilian '];  this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']; this addAction[""Medical Assistance"",life_fnc_healHospital];";
 				};
 				class Item77
 				{
 					position[]={20080.098,100.96654,6744.7939};
-					azimut=-547.83221;
+					azimut=-547.83197;
 					special="NONE";
 					id=174;
 					side="EAST";
 					vehicle="O_Soldier_F";
 					skill=0.60000002;
 					text="reb_1_2";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false;  this addAction[""Rebel Market"",life_fnc_virt_menu,""rebel""];  this addAction[""Rebel Clothing Shop"",life_fnc_clothingMenu,""reb"",0,false,false,"""",' license_civ_rebel && playerSide == civilian'];  this addAction[""Rebel Weapon Shop"",life_fnc_weaponShopMenu,""rebel"",0,false,false,"""",' license_civ_rebel && playerSide == civilian'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""rebel"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""rebel"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""rebel"",0,false,false,"""",' !license_civ_rebel && playerSide == civilian '];  this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false;  this addAction[""Rebel Market"",life_fnc_virt_menu,""rebel""];  this addAction[""Rebel Clothing Shop"",life_fnc_clothingMenu,""reb"",0,false,false,"""",' license_civ_rebel && playerSide == civilian'];  this addAction[""Rebel Weapon Shop"",life_fnc_weaponShopMenu,""rebel"",0,false,false,"""",' license_civ_rebel && playerSide == civilian'];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""rebel"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""rebel"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""rebel"",0,false,false,"""",' !license_civ_rebel && playerSide == civilian '];  this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];  this addAction[""Medical Assistance"",life_fnc_healHospital];";
 				};
 				class Item78
 				{
@@ -9945,7 +9945,7 @@ class Mission
 		};
 		class Item58
 		{
-			position[]={3492.7932,19.49818,14145.842};
+			position[]={4227.1846,19.435169,15089.36};
 			name="Dealer_1";
 			text="Drug Dealer";
 			type="mil_dot";
