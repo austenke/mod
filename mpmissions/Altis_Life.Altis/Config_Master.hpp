@@ -144,6 +144,8 @@ class VirtualItems {
 	VITEMMACRO(grapes, "STR_Item_grapes", "grapes", 3, -1, -1, false, -1, "icons\grapes.png")
 	VITEMMACRO(wine, "STR_Item_wine", "wine", 2, -1, 12000, false, -1, "")
 	VITEMMACRO(moonshine, "STR_Item_moonshine", "moonshine", 2, 16000, 15000, true, -1, "")
+	VITEMMACRO(methU, "STR_Item_methU", "methUnprocessed", 6, -1, -1, true, -1, "")
+	VITEMMACRO(methP, "STR_Item_methP", "methProcessed", 4, 15000, 13000, true, -1, "")
 
 	//Drink
 	VITEMMACRO(redgull, "STR_Item_RedGull", "redgull", 1, 1500, 200, false, 100, "icons\ico_redgull.paa")
@@ -214,6 +216,7 @@ class Licenses {
 	LICENSEMACRO(Jet,"STR_License_Jet","jet",5000000,false,"civ")
 	LICENSEMACRO(wine,"STR_License_wine","wine",500000,false,"civ")
 	LICENSEMACRO(moonshine,"STR_License_moonshine","moonshine",1000000,true,"civ")
+	LICENSEMACRO(meth,"STR_License_meth","meth",800000,true,"civ")
 
 
 };

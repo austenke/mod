@@ -69,6 +69,8 @@ switch (_mode) do
 			case "grapes": {"life_inv_grapes"};
 			case "wine": {"life_inv_wine"};
 			case "moonshine": {"life_inv_moonshine"};
+			case "methu": {"life_inv_methu"};
+			case "methp": {"life_inv_methp"};
 		};
 	};
 	
@@ -128,6 +130,8 @@ switch (_mode) do
 			case "life_inv_grapes": {"grapes"};
 			case "life_inv_wine": {"wine"};
 			case "life_inv_moonshine": {"moonshine"};
+			case "life_inv_methu": {"methu"};
+			case "life_inv_methp": {"methp"};
 		};
 	};
 };

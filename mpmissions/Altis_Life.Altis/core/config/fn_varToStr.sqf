@@ -64,6 +64,8 @@ switch (_var) do
 	case "life_inv_grapes": {(localize "STR_Item_Grapes")};
 	case "life_inv_wine": {(localize "STR_Item_Wine")};
 	case "life_inv_moonshine": {(localize "STR_Item_Moonshine")};
+	case "life_inv_methu": {(localize "STR_Item_MethU")};
+	case "life_inv_methp": {(localize "STR_Item_MethP")};
 
 	
 	//License Block
@@ -92,5 +94,6 @@ switch (_var) do
 	case "license_civ_jet": {(localize "STR_License_Jet")};
 	case "license_civ_grapes": {(localize "STR_License_Grape")};
 	case "license_civ_moonshine": {(localize "STR_License_Moonshine")};
+	case "license_civ_meth": {(localize "STR_License_Meth")};
 
 };
