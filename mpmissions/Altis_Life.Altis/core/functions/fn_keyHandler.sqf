@@ -59,7 +59,7 @@ switch (_code) do {
 	// Activate mining, should use q key
 	case 16:
 	{
-		titleText[format["%1",grpPlayer getVariable "gang_id"],"PLAIN"];
+		titleText[format["%1",currentWeapon player],"PLAIN"];
 	};
 
 	//Lock and unlock, uses U Key
