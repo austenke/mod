@@ -124,11 +124,13 @@ switch (_code) do {
 			life_curWep_h = currentWeapon player;
 			player action ["SwitchWeapon", player, player, 100];
 			player switchCamera cameraView;
+			titleText[format["%1",life_curWep_h],"PLAIN"];
 		};
 		
 		if(!_shift && _ctrlKey && !isNil "life_curWep_h" && {!(EQUAL(life_curWep_h,""))}) then {
 			if(life_curWep_h in [RIFLE,LAUNCHER,PISTOL]) then {
 				player selectWeapon life_curWep_h;
+				titleText[format["%1",life_curWep_h],"PLAIN"];
 			};
 		};
 	};
