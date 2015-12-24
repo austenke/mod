@@ -59,18 +59,7 @@ switch (_code) do {
 	// Test key
 	case 16:
 	{
-		//titleText[format["%1",grpPlayer getVariable "gang_id"],"PLAIN"];
-		//[["foo","name here",4],""TON_fnc_clientMessage"",true,false] call life_fnc_MP;
-		//[] spawn life_fnc_gangPayout;
-
-		//waitUntil{sleep (random 0.3); !DB_Async_Active};
-		//_queryResult = ["hideoutCheck",2] call DB_fnc_asyncCall;
-		//life_hideoutCheck = _queryResult;
-
-		_query = format["housingFetchPlayerHouse:%1",_this];
-		waitUntil{!DB_Async_Active};
-		_houses = [_query,2,true] call DB_fnc_asyncCall;
-		hint format["%1",_houses];
+		[] call ["life_fnc_gangPayout"];
 	};
 	case 17:
 	{
