@@ -61,7 +61,13 @@ switch (_code) do {
 	{
 		//titleText[format["%1",grpPlayer getVariable "gang_id"],"PLAIN"];
 		//[["foo","name here",4],""TON_fnc_clientMessage"",true,false] call life_fnc_MP;
-		[] spawn life_fnc_gangPayout;
+		//[] spawn life_fnc_gangPayout;
+
+		private["_query","_queryResult"];
+		waitUntil{!DB_Async_Active};
+		_queryResult = ["hideoutCheck",2] call DB_fnc_asyncCall;
+		life_hideoutCheck = _queryResult;
+		hint format["%1",life_hideoutCheck];
 	};
 	case 17:
 	{
