@@ -66,9 +66,6 @@ switch (_mode) do
 			case "storagesmall": {"life_inv_storagesmall"};
 			case "storagebig": {"life_inv_storagebig"};
 			case "speedbomb": {"life_inv_speedbomb"};
-			case "grapes": {"life_inv_grapes"};
-			case "wine": {"life_inv_wine"};
-			case "moonshine": {"life_inv_moonshine"};
 		};
 	};
 	
@@ -125,9 +122,6 @@ switch (_mode) do
 			case "life_inv_defusekit": {"defusekit"};
 			case "life_inv_storagesmall": {"storagesmall"};
 			case "life_inv_storagebig": {"storagebig"};
-			case "life_inv_grapes": {"grapes"};
-			case "life_inv_wine": {"wine"};
-			case "life_inv_moonshine": {"moonshine"};
 		};
 	};
 };
