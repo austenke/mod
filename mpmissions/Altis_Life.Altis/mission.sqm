@@ -11360,7 +11360,7 @@ class Mission
 		class Item233
 		{
 			position[]={9930.6875,-0.19739178,10966.2};
-			name="rebel_land";
+			name="KOS_MSG";
 			markerType="RECTANGLE";
 			type="Empty";
 			colorName="ColorRed";
