@@ -34,9 +34,9 @@ _itemInfo = switch (_type) do
 	case "whiskey": {_license = "stiller";["yeast","whiskey",1000,"Fermenting Whiskey",true,"rye"]};//new
 	case "beer": {_license = "liquor";["yeast","beerp",1500,"Brewing Beer",true,"hops"]};//new
 	case "moonshine": {_license = "stiller";["yeast","moonshine",250,"Distilling Moonshine",true,"mash"]};//new
-	case "bottledshine": {_license = "bottler";["moonshine","bottledshine",500,"Bottling",false]};//new
-	case "bottledbeer": {_license = "bottler";["beerp","bottledbeer",500,"Bottling",false]};//new
-	case "bottledwhiskey": {_license = "bottler";["whiskey","bottledwhiskey",500,"Bottling",false]};//new
+	case "bottledshine": {_license = "bottler";["moonshine","bottledshine",500,"Bottling Moonshine",false]};//new
+	case "bottledbeer": {_license = "bottler";["beerp","bottledbeer",500,"Bottling Beer",false]};//new
+	case "bottledwhiskey": {_license = "bottler";["whiskey","bottledwhiskey",500,"Bottling Whiskey",false]};//new
 	default {[];};
 };
  
@@ -112,7 +112,7 @@ if(_hasLicense) then
 		([false,_oldItem2,_min] call life_fnc_handleInv);
 		5 cutText ["","PLAIN"];
  
-		titleText[format["You have process %1 and %2 to %3.",_itemNameo1,_itemNameo2,_itemName],"PLAIN"];
+		titleText[format["You have processed %1 and %2 to %3.",_itemNameo1,_itemNameo2,_itemName],"PLAIN"];
 	} else
 	{
 		
