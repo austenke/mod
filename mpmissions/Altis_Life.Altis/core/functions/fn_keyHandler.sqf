@@ -56,14 +56,14 @@ switch (_code) do {
 		};
 	};
 	
-	// Test keys
+	// Test key
 	case 16:
 	{
-		titleText[format["%1",grpPlayer],"PLAIN"];
+		titleText[format["%1",grpPlayer getVariable "gang_id"],"PLAIN"];
 	};
 	case 17:
 	{
-		[[1,2],"Index rules",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+		[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 	};
 
 	//Lock and unlock, uses U Key
