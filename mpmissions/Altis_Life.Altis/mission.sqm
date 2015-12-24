@@ -9640,7 +9640,7 @@ class Mission
 			name="airshop";
 			text="Air Shop";
 			type="mil_dot";
-			colorName="Color1_FD_F";
+			colorName="ColorGreen";
 		};
 		class Item20
 		{
@@ -9850,8 +9850,8 @@ class Mission
 			position[]={14418.972,18.719999,16244.317};
 			name="air_serv_1";
 			text="Air Service Station";
-			type="respawn_air";
-			colorName="Color1_FD_F";
+			type="b_maint";
+			colorName="ColorYellow";
 		};
 		class Item47
 		{
@@ -9929,10 +9929,10 @@ class Mission
 		};
 		class Item56
 		{
-			position[]={3649.4426,7.00559,13384.339};
+			position[]={16828.16,1.9263988,13553.94};
 			name="jail_release";
 			type="Empty";
-			angle=190.78471;
+			angle=146.22455;
 		};
 		class Item57
 		{
@@ -10575,7 +10575,7 @@ class Mission
 			name="civ_gar_1";
 			text="Garage";
 			type="o_service";
-			colorName="ColorYellow";
+			colorName="ColorBlue";
 			angle=-136.783;
 		};
 		class Item136
@@ -10591,7 +10591,8 @@ class Mission
 			name="civ_gar_1_1";
 			text="Garage";
 			type="o_service";
-			angle=108.01333;
+			colorName="ColorBlue";
+			angle=108.013;
 		};
 		class Item138
 		{
@@ -10622,7 +10623,7 @@ class Mission
 			name="civ_gar_1_3";
 			text="Garage";
 			type="o_service";
-			colorName="ColorYellow";
+			colorName="ColorBlue";
 			angle=-10.8682;
 		};
 		class Item142
