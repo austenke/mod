@@ -63,7 +63,7 @@ switch (_code) do {
 	};
 	case 17:
 	{
-		[[1,2],"STR_ISTR_Bolt_AlertBank",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+		//[[1,2],"STR_ISTR_Bolt_AlertBank",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 	};
 
 	//Lock and unlock, uses U Key

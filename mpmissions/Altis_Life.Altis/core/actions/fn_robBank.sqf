@@ -31,7 +31,9 @@ _chance = random(100);
 if(_chance >= 60) then 
 { 
 	hint "The cashier hit the silent alarm, police has been alerted!"; 
+	sleep 1;
 	[[format["ALARM! - %1 is being robbed!", _name],_name,1],"clientMessage",true,false] spawn life_fnc_MP;
+	[[1,2],"STR_ISTR_Bolt_AlertBank",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 };
  
 //Setup our progress bar.
