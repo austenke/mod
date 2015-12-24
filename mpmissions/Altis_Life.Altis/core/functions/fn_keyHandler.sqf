@@ -126,8 +126,9 @@ switch (_code) do {
 	case 35: {
 		if(life_curWep_h in [RIFLE,LAUNCHER,PISTOL]) then {
 			player selectWeapon life_curWep_h;
-			life_curWep_h = "";
+			hint "a";
 		} else {
+			hint "b"
 			life_curWep_h = currentWeapon player;
 			player action ["SwitchWeapon", player, player, 100];
 			player switchCamera cameraView;
