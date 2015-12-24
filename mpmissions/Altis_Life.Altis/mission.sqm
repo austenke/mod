@@ -9496,7 +9496,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=241;
+		items=242;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -11431,6 +11431,14 @@ class Mission
 			text="Government Office";
 			type="loc_Power";
 			colorName="ColorWhite";
+		};
+		class Item241
+		{
+			position[]={6468.3955,123.4379,13774.062};
+			name="cornmeal_1";
+			text="Corn Field";
+			type="mil_dot";
+			colorName="ColorGreen";
 		};
 	};
 };

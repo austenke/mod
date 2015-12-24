@@ -5,6 +5,10 @@
 			<Original>Bruce's Outback Outfits</Original>
 			<Portuguese>Loja de Roupas</Portuguese>
 		</Key>
+		<Key ID="STR_Shops_C_Pub">
+			<Original>Pub</Original>
+			<Portuguese>Pub</Portuguese>
+		</Key>
 		<Key ID="STR_Shops_C_Police">
 			<Original>Altis Police Department Shop</Original>
 			<Portuguese>Loja de Roupas Policiais</Portuguese>
@@ -4027,6 +4031,10 @@
 		<Key ID="STR_Gather_Yeast">
 			<Original>Gather Yeast</Original>
 			<English>Gather Yeast</English>
+		</Key>
+		<Key ID="STR_Gather_Cornmeal">
+			<Original>Gather Cornmeal</Original>
+			<English>Gather Cornmeal</English>
 		</Key>
 		<Key ID="STR_Gather_Apples">
 			<Original>Gather Apples</Original>
