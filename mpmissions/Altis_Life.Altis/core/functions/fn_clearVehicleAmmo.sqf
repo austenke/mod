@@ -40,6 +40,7 @@ if(EQUAL(_veh,"O_Plane_CAS_02_F")) then
 	_vehicle removeMagazinesTurret ["2Rnd_Bomb_03_F",[0]];
 	_vehicle removeMagazinesTurret ["20Rnd_Rocket_03_HE_F",[0]];
 	_vehicle removeMagazinesTurret ["20Rnd_Rocket_03_AP_F",[0]];
+	_vehicle setVehicleAmmo 0;
 };
 
 //Jet 
