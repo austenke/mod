@@ -3850,7 +3850,7 @@ class Mission
 					vehicle="C_man_polo_6_F";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Brew Mash"",life_fnc_processAction,""mash"",0,false,false,"""",' life_inv_cornmeal > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""liquor"",0,false,false,"""",' !license_civ_liquor && playerSide == civilian '];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Make Mash"",life_fnc_processAction,""mash"",0,false,false,"""",' life_inv_cornmeal > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""mash"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""mash"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""mash"",0,false,false,"""",' !license_civ_mash && playerSide == civilian '];";
 				};
 			};
 		};
