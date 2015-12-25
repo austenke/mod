@@ -1,6 +1,6 @@
 author = "Ohmslaw & Valiant & Index";
-onLoadName = "Drunken Life 0.5";
-onLoadMission = "A Drunken Altis Life Experience";
+onLoadName = "Drunken Life 0.6";
+onLoadMission = "www.drunkenlife.ca";
 LoadScreen  = "images\logo.jpg";
 joinUnassigned = 1;
 respawn = BASE;
