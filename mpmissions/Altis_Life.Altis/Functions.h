@@ -28,6 +28,16 @@ class Life_Client_Core
 		class welcomeNotification {};
 		class survival {};
 	};
+
+//	class Slots    ---------------In Development----------------
+//	{
+//		file = "core\casino\slots";
+//		class slotInit {};
+//		class slotPlay {};
+//		class slotRandom {};
+//		class slotRewards {};
+//		class slotStat {};
+//	};
 	
 	class Admin
 	{
@@ -378,5 +388,11 @@ class Life_Client_Core
 		class vehicleGarage {};
 		class gangDeposit {};
 		class wireTransfer {};
+	};
+
+	class Cam
+	{
+	   file ="core";
+	   class IntroCam {};
 	};
 };
