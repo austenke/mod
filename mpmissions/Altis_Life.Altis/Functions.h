@@ -153,7 +153,6 @@ class Life_Client_Core
 		class wantedList {};
 		class wantedInfo {};
 		class wantedMenu {};
-		class wantedAddP {};
 		class pardon {};
 		class giveItem {};
 		class giveMoney {};
@@ -304,7 +303,6 @@ class Life_Client_Core
 		class copLoadout {};
 		class ticketPaid {};
 		class breathalyzer {};
-		class wantedGrab {};
 	};
 	
 	class Gangs
