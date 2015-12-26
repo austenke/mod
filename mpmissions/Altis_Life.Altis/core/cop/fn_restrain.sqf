@@ -29,15 +29,18 @@ if(isNull _cop) exitWith {};
 	};
 };
 
+if((player GVAR["surrender",FALSE])) then { player SVAR["surrender",FALSE,TRUE]; player switchMove ""; };
+
 titleText[format[localize "STR_Cop_Retrained",_cop GVAR ["realname",name _cop]],"PLAIN"];
+player say3D "handcuffs";
 				
 while {player GVAR  "restrained"} do {
 	if(vehicle player == player) then {
-		player playMove "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon";
+		player playMove "AmovPercMstpSnonWnonDnon_Ease";
 	};
 	
 	_state = vehicle player;
-	waitUntil {animationState player != "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon" || !(player GVAR "restrained") || vehicle player != _state};
+	waitUntil {animationState player != "AmovPercMstpSnonWnonDnon_Ease" || !(player GVAR "restrained") || vehicle player != _state};
 			
 	if(!alive player) exitWith {
 		player SVAR ["restrained",false,true];
@@ -47,7 +50,6 @@ while {player GVAR  "restrained"} do {
 	};
 	
 	if(!alive _cop) exitWith {
-		titleText["Your arresting officer was killed","PLAIN"];
 		player SVAR ["Escorting",false,true];
 		detach player;
 	};
@@ -61,7 +63,7 @@ while {player GVAR  "restrained"} do {
 //disableUserInput false;
 		
 if(alive player) then {
-	player switchMove "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon";
+	player switchMove "AmovPercMstpSlowWrflDnon_SaluteIn";
 	player SVAR ["Escorting",false,true];
 	player SVAR ["transporting",false,true];
 	detach player;
