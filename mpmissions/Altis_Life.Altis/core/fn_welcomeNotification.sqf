@@ -7,7 +7,7 @@
 format["Welcome %1!",profileName] hintC
 [
 	"Welcome to the Drunken Life Server!",
-	"Talk to us on teamspeak at TEMP",
+	"Talk to us on teamspeak at ts.DrunkenLife.ca",
 	"Visit our website at www.DrunkenLife.ca"
 ];
 	
