@@ -406,7 +406,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_1";
-					description="Civ 1";
+					description="Alcoholic 1";
 				};
 			};
 		};
@@ -428,7 +428,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_2";
-					description="Civ 2";
+					description="Alcoholic 2";
 				};
 			};
 		};
@@ -450,7 +450,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_3";
-					description="Civ 3";
+					description="Alcoholic 3";
 				};
 			};
 		};
@@ -472,7 +472,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_4";
-					description="Civ 4";
+					description="Alcoholic 4";
 				};
 			};
 		};
@@ -494,7 +494,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_5";
-					description="Civ 5";
+					description="Alcoholic 5";
 				};
 			};
 		};
@@ -516,7 +516,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_6";
-					description="Civ 6";
+					description="Alcoholic 6";
 				};
 			};
 		};
@@ -538,7 +538,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_7";
-					description="Civ 7";
+					description="Alcoholic 7";
 				};
 			};
 		};
@@ -560,7 +560,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_8";
-					description="Civ 8";
+					description="Alcoholic 8";
 				};
 			};
 		};
@@ -582,7 +582,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_9";
-					description="Civ 9";
+					description="Alcoholic 9";
 				};
 			};
 		};
@@ -604,7 +604,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_10";
-					description="Civ 10";
+					description="Alcoholic 10";
 				};
 			};
 		};
@@ -626,7 +626,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_11";
-					description="Civ 11";
+					description="Alcoholic 11";
 				};
 			};
 		};
@@ -648,7 +648,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_12";
-					description="Civ 12";
+					description="Alcoholic 12";
 				};
 			};
 		};
@@ -670,7 +670,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_13";
-					description="Civ 13";
+					description="Alcoholic 13";
 				};
 			};
 		};
@@ -692,7 +692,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_14";
-					description="Civ 14";
+					description="Alcoholic 14";
 				};
 			};
 		};
@@ -714,7 +714,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_15";
-					description="Civ 15";
+					description="Alcoholic 15";
 				};
 			};
 		};
@@ -736,7 +736,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_16";
-					description="Civ 16";
+					description="Alcoholic 16";
 				};
 			};
 		};
@@ -758,7 +758,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_17";
-					description="Civ 17";
+					description="Alcoholic 17";
 				};
 			};
 		};
@@ -780,7 +780,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_18";
-					description="Civ 18";
+					description="Alcoholic 18";
 				};
 			};
 		};
@@ -802,7 +802,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_19";
-					description="Civ 19";
+					description="Alcoholic 19";
 				};
 			};
 		};
@@ -824,7 +824,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_20";
-					description="Civ 20";
+					description="Alcoholic 20";
 				};
 			};
 		};
@@ -846,7 +846,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_21";
-					description="Civ 21";
+					description="Alcoholic 21";
 				};
 			};
 		};
@@ -868,7 +868,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_22";
-					description="Civ 22";
+					description="Alcoholic 22";
 				};
 			};
 		};
@@ -890,7 +890,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_23";
-					description="Civ 23";
+					description="Alcoholic 23";
 				};
 			};
 		};
@@ -912,7 +912,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_24";
-					description="Civ 24";
+					description="Alcoholic 24";
 				};
 			};
 		};
@@ -934,7 +934,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_25";
-					description="Civ 25";
+					description="Alcoholic 25";
 				};
 			};
 		};
@@ -956,7 +956,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_26";
-					description="Civ 26";
+					description="Alcoholic 26";
 				};
 			};
 		};
@@ -978,7 +978,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_27";
-					description="Civ 27";
+					description="Alcoholic 27";
 				};
 			};
 		};
@@ -1000,7 +1000,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_28";
-					description="Civ 28";
+					description="Alcoholic 28";
 				};
 			};
 		};
@@ -1022,7 +1022,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_29";
-					description="Civ 29";
+					description="Alcoholic 29";
 				};
 			};
 		};
@@ -1044,7 +1044,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_30";
-					description="Civ 30";
+					description="Alcoholic 30";
 				};
 			};
 		};
@@ -1066,7 +1066,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_31";
-					description="Civ 31";
+					description="Alcoholic 31";
 				};
 			};
 		};
@@ -1088,7 +1088,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_32";
-					description="Civ 32";
+					description="Alcoholic 32";
 				};
 			};
 		};
@@ -1110,7 +1110,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_33";
-					description="Civ 33";
+					description="Alcoholic 33";
 				};
 			};
 		};
@@ -1132,7 +1132,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_34";
-					description="Civ 34";
+					description="Alcoholic 34";
 				};
 			};
 		};
@@ -1154,7 +1154,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_35";
-					description="Civ 35";
+					description="Alcoholic 35";
 				};
 			};
 		};
@@ -1176,7 +1176,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_36";
-					description="Civ 36";
+					description="Alcoholic 36";
 				};
 			};
 		};
@@ -1198,7 +1198,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_37";
-					description="Civ 37";
+					description="Alcoholic 37";
 				};
 			};
 		};
@@ -1220,7 +1220,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_38";
-					description="Civ 38";
+					description="Alcoholic 38";
 				};
 			};
 		};
@@ -1242,7 +1242,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_39";
-					description="Civ 39";
+					description="Alcoholic 39";
 				};
 			};
 		};
@@ -1264,7 +1264,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_40";
-					description="Civ 40";
+					description="Alcoholic 40";
 				};
 			};
 		};
@@ -1286,7 +1286,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_41";
-					description="Civ 41";
+					description="Alcoholic 41";
 				};
 			};
 		};
@@ -1308,7 +1308,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_42";
-					description="Civ 42";
+					description="Alcoholic 42";
 				};
 			};
 		};
@@ -1330,7 +1330,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_43";
-					description="Civ 43";
+					description="Alcoholic 43";
 				};
 			};
 		};
@@ -1352,7 +1352,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_44";
-					description="Civ 44";
+					description="Alcoholic 44";
 				};
 			};
 		};
@@ -1374,7 +1374,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_45";
-					description="Civ 45";
+					description="Alcoholic 45";
 				};
 			};
 		};
@@ -1396,7 +1396,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_46";
-					description="Civ 46";
+					description="Alcoholic 46";
 				};
 			};
 		};
@@ -1418,7 +1418,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_47";
-					description="Civ 47";
+					description="Alcoholic 47";
 				};
 			};
 		};
@@ -1440,7 +1440,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_48";
-					description="Civ 48";
+					description="Alcoholic 48";
 				};
 			};
 		};
@@ -1462,7 +1462,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_49";
-					description="Civ 49";
+					description="Alcoholic 49";
 				};
 			};
 		};
@@ -1484,7 +1484,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_50";
-					description="Civ 50";
+					description="Alcoholic 50";
 				};
 			};
 		};
@@ -1506,7 +1506,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_51";
-					description="Civ 51";
+					description="Alcoholic 51";
 				};
 			};
 		};
@@ -1528,7 +1528,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_52";
-					description="Civ 52";
+					description="Alcoholic 52";
 				};
 			};
 		};
@@ -1550,7 +1550,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_53";
-					description="Civ 53";
+					description="Alcoholic 53";
 				};
 			};
 		};
@@ -1572,7 +1572,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_54";
-					description="Civ 54";
+					description="Alcoholic 54";
 				};
 			};
 		};
@@ -1594,7 +1594,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_55";
-					description="Civ 55";
+					description="Alcoholic 55";
 				};
 			};
 		};
@@ -1616,7 +1616,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_56";
-					description="Civ 56";
+					description="Alcoholic 56";
 				};
 			};
 		};
@@ -1638,7 +1638,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_57";
-					description="Civ 57";
+					description="Alcoholic 57";
 				};
 			};
 		};
@@ -1660,7 +1660,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_58";
-					description="Civ 58";
+					description="Alcoholic 58";
 				};
 			};
 		};
@@ -1682,7 +1682,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_59";
-					description="Civ 59";
+					description="Alcoholic 59";
 				};
 			};
 		};
@@ -1704,7 +1704,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_60";
-					description="Civ 60";
+					description="Alcoholic 60";
 				};
 			};
 		};
@@ -1726,7 +1726,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_61";
-					description="Civ 61";
+					description="Alcoholic 61";
 				};
 			};
 		};
@@ -1748,7 +1748,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_62";
-					description="Civ 62";
+					description="Alcoholic 62";
 				};
 			};
 		};
@@ -1770,7 +1770,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_63";
-					description="Civ 63";
+					description="Alcoholic 63";
 				};
 			};
 		};
@@ -1792,7 +1792,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_64";
-					description="Civ 64";
+					description="Alcoholic 64";
 				};
 			};
 		};
@@ -1814,7 +1814,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_65";
-					description="Civ 65";
+					description="Alcoholic 65";
 				};
 			};
 		};
@@ -1836,7 +1836,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_70";
-					description="Civ 70";
+					description="Alcoholic 70";
 				};
 			};
 		};
@@ -1858,7 +1858,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_69";
-					description="Civ 69";
+					description="Alcoholic 69";
 				};
 			};
 		};
@@ -1880,7 +1880,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_68";
-					description="Civ 68";
+					description="Alcoholic 68";
 				};
 			};
 		};
@@ -1902,7 +1902,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_67";
-					description="Civ 67";
+					description="Alcoholic 67";
 				};
 			};
 		};
@@ -1924,7 +1924,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_66";
-					description="Civ 66";
+					description="Alcoholic 66";
 				};
 			};
 		};
@@ -1946,7 +1946,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_75";
-					description="Civ 75";
+					description="Alcoholic 75";
 				};
 			};
 		};
@@ -1968,7 +1968,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_74";
-					description="Civ 74";
+					description="Alcoholic 74";
 				};
 			};
 		};
@@ -1990,7 +1990,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_73";
-					description="Civ 73";
+					description="Alcoholic 73";
 				};
 			};
 		};
@@ -2012,7 +2012,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_72";
-					description="Civ 72";
+					description="Alcoholic 72";
 				};
 			};
 		};
@@ -2034,7 +2034,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="civ_71";
-					description="Civ 71";
+					description="Alcoholic 71";
 				};
 			};
 		};
