@@ -60,7 +60,7 @@ switch (_code) do {
 	case 16:
 	{
 		//[] call ["life_fnc_gangPayout"];
-		[player,getPlayerUID player,_gangName] remoteExec ["TON_fnc_gangPayout",RSERV];
+		[player,getPlayerUID player,_gangName] remoteExec ["TON_fnc_insertGang",RSERV];
 	};
 	case 17:
 	{
