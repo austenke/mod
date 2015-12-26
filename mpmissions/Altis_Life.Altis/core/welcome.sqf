@@ -11,7 +11,7 @@ _role3names = ["Temp"];
 _role4 = "Website";
 _role4names = ["www.DrunkenLife.ca"];
 _role5 = "Teamspeak";
-_role5names = ["ts.DrunkenLife.ca"];
+_role5names = ["Temp"];
 _role6 = "Enjoy";
 _role6names = ["Have fun and follow the rules!"];
 
