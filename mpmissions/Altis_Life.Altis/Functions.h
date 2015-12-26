@@ -253,6 +253,7 @@ class Life_Client_Core
 		class punchBalls {};
       	class punchBallsAction {};
       	class suicideVest {};
+      	class handledowned {};
 	};
 	
 	class Vehicle
