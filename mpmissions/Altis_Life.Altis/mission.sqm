@@ -129,7 +129,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=102;
+		items=101;
 		class Item0
 		{
 			side="WEST";
@@ -2105,7 +2105,7 @@ class Mission
 			side="CIV";
 			class Vehicles
 			{
-				items=108;
+				items=109;
 				class Item0
 				{
 					position[]={8353.1738,85.225037,24952.445};
@@ -3364,6 +3364,16 @@ class Mission
 					skill=0.60000002;
 					init="this allowDamage false; this allowDamage false; this enableSimulation false; this addAction[""Brew Beer"",life_fnc_processAction,""beer"",0,false,false,"""",' life_inv_hops > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""liquor"",0,false,false,"""",' !license_civ_liquor && playerSide == civilian '];";
 				};
+				class Item108
+				{
+					position[]={4726.2192,39.829548,12817.115};
+					azimut=-116.1333;
+					id=205;
+					side="CIV";
+					vehicle="C_man_polo_6_F";
+					skill=0.60000002;
+					init="this allowDamage false; this enableSimulation false; this addAction[""Brew Mash"",life_fnc_processAction,""mash"",0,false,false,"""",' life_inv_cornmeal > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""liquor"",0,false,false,"""",' !license_civ_liquor && playerSide == civilian '];";
+				};
 			};
 		};
 		class Item80
@@ -3378,7 +3388,7 @@ class Mission
 					azimut=-46.6264;
 					offsetY=0.69999999;
 					special="NONE";
-					id=205;
+					id=206;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -3397,7 +3407,7 @@ class Mission
 				{
 					position[]={8437.2002,105.64852,25149.426};
 					azimut=182.302;
-					id=206;
+					id=207;
 					side="GUER";
 					vehicle="I_Story_Colonel_F";
 					player="PLAY CDG";
@@ -3419,7 +3429,7 @@ class Mission
 					position[]={8424.9258,99.930687,25177.225};
 					azimut=185.11099;
 					special="NONE";
-					id=207;
+					id=208;
 					side="GUER";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
@@ -3433,7 +3443,7 @@ class Mission
 					position[]={8425.2324,99.418427,25179.02};
 					azimut=185.11099;
 					special="NONE";
-					id=208;
+					id=209;
 					side="GUER";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
@@ -3446,7 +3456,7 @@ class Mission
 					position[]={8427.6777,99.306786,25178.748};
 					azimut=185.11099;
 					special="NONE";
-					id=209;
+					id=210;
 					side="GUER";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
@@ -3459,7 +3469,7 @@ class Mission
 					position[]={8428.2236,99.711594,25177.109};
 					azimut=185.11099;
 					special="NONE";
-					id=210;
+					id=211;
 					side="GUER";
 					vehicle="B_medic_F";
 					player="PLAY CDG";
@@ -3479,7 +3489,7 @@ class Mission
 				{
 					position[]={16694.869,11.540719,13651.368};
 					azimut=-220.06747;
-					id=211;
+					id=212;
 					side="WEST";
 					vehicle="B_RangeMaster_F";
 					leader=1;
@@ -3500,7 +3510,7 @@ class Mission
 					azimut=-446.01001;
 					offsetY=0.69999999;
 					special="NONE";
-					id=212;
+					id=213;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -3520,7 +3530,7 @@ class Mission
 					position[]={14193.46,76.880859,21237.172};
 					azimut=467.24973;
 					special="NONE";
-					id=213;
+					id=214;
 					side="EAST";
 					vehicle="O_Soldier_F";
 					leader=1;
@@ -3541,7 +3551,7 @@ class Mission
 					position[]={20049.748,90.684822,6631.147};
 					azimut=235.90199;
 					special="NONE";
-					id=214;
+					id=215;
 					side="EAST";
 					vehicle="O_Soldier_F";
 					leader=1;
@@ -3562,7 +3572,7 @@ class Mission
 					position[]={3749.4978,11.415071,13456.95};
 					azimut=4.5651999;
 					special="NONE";
-					id=215;
+					id=216;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -3582,7 +3592,7 @@ class Mission
 					position[]={9029.6426,111.65836,15715.456};
 					azimut=352.25299;
 					special="NONE";
-					id=216;
+					id=217;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -3602,7 +3612,7 @@ class Mission
 					position[]={15318.867,16.527754,17594.498};
 					azimut=543.57001;
 					special="NONE";
-					id=217;
+					id=218;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -3622,7 +3632,7 @@ class Mission
 					position[]={17434.668,5.5416403,13939.061};
 					azimut=630.27197;
 					special="NONE";
-					id=218;
+					id=219;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -3642,7 +3652,7 @@ class Mission
 					position[]={16759.029,12.486111,12499.235};
 					azimut=685.39001;
 					special="NONE";
-					id=219;
+					id=220;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -3662,7 +3672,7 @@ class Mission
 					position[]={19957.934,60.074337,11432.134};
 					azimut=774.802;
 					special="NONE";
-					id=220;
+					id=221;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -3682,7 +3692,7 @@ class Mission
 					position[]={21236.021,23.001022,7093.9395};
 					azimut=676.35999;
 					special="NONE";
-					id=221;
+					id=222;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -3702,7 +3712,7 @@ class Mission
 					position[]={20766.652,36.882442,16669.635};
 					azimut=845.22498;
 					special="NONE";
-					id=222;
+					id=223;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -3722,7 +3732,7 @@ class Mission
 					position[]={23361.5,12.92133,19811.826};
 					azimut=864.23901;
 					special="NONE";
-					id=223;
+					id=224;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -3742,7 +3752,7 @@ class Mission
 					position[]={25690.646,20.938156,21388.887};
 					azimut=859.94202;
 					special="NONE";
-					id=224;
+					id=225;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -3762,7 +3772,7 @@ class Mission
 					position[]={9215.6055,17.626371,12097.924};
 					azimut=695.7915;
 					special="NONE";
-					id=225;
+					id=226;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -3783,7 +3793,7 @@ class Mission
 					azimut=271.72601;
 					offsetY=0.69999999;
 					special="NONE";
-					id=226;
+					id=227;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -3804,7 +3814,7 @@ class Mission
 					azimut=271.72601;
 					offsetY=0.69999999;
 					special="NONE";
-					id=227;
+					id=228;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -3825,32 +3835,12 @@ class Mission
 					azimut=271.72601;
 					offsetY=0.69999999;
 					special="NONE";
-					id=228;
+					id=229;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
 					init="this allowDamage false; this enableSimulation false; ";
-				};
-			};
-		};
-		class Item101
-		{
-			side="CIV";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={4734.8901,39.609428,12805.192};
-					azimut=-116.133;
-					offsetY=0.2;
-					id=229;
-					side="CIV";
-					vehicle="C_man_polo_6_F";
-					leader=1;
-					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Brew Mash"",life_fnc_processAction,""mash"",0,false,false,"""",' life_inv_cornmeal > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""liquor"",0,false,false,"""",' !license_civ_liquor && playerSide == civilian '];";
 				};
 			};
 		};
