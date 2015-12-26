@@ -29,14 +29,6 @@ class Life_Client_Core
 		class survival {};
 	};
 
-	class custom         //Custom Scripts
-	{
-		file = "core\custom";
-		class BagHostage {};
-		class BaggedHostage {};
-		class UnBagHostage {};
-	};
-
 //	class Slots    ---------------In Development----------------
 //	{
 //		file = "core\casino\slots";
@@ -121,6 +113,9 @@ class Life_Client_Core
 		class robShops {}; //Rob Gas Station & Shops Script
 		class robBank {}; 
 		class detonate {};
+		class BagHostage {};
+		class BaggedHostage {};
+		class UnBagHostage {};
 	};
 	
 	class Housing
