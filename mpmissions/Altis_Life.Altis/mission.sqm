@@ -11569,6 +11569,9 @@ class Mission
 		};
 	};
 };
+class Effects
+{
+};
 class Sensors
 	{
 		items=4;
