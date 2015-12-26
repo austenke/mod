@@ -33,11 +33,11 @@ titleText[format[localize "STR_Cop_Retrained",_cop GVAR ["realname",name _cop]],
 				
 while {player GVAR  "restrained"} do {
 	if(vehicle player == player) then {
-		player playMove "AmovPercMstpSnonWnonDnon_Ease";
+		player playMove "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon";
 	};
 	
 	_state = vehicle player;
-	waitUntil {animationState player != "AmovPercMstpSnonWnonDnon_Ease" || !(player GVAR "restrained") || vehicle player != _state};
+	waitUntil {animationState player != "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon" || !(player GVAR "restrained") || vehicle player != _state};
 			
 	if(!alive player) exitWith {
 		player SVAR ["restrained",false,true];
@@ -61,7 +61,7 @@ while {player GVAR  "restrained"} do {
 //disableUserInput false;
 		
 if(alive player) then {
-	player switchMove "AmovPercMstpSlowWrflDnon_SaluteIn";
+	player switchMove "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon";
 	player SVAR ["Escorting",false,true];
 	player SVAR ["transporting",false,true];
 	detach player;
