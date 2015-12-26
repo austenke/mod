@@ -3362,7 +3362,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_polo_6_F";
 					skill=0.60000002;
-					init="this allowDamage false; this allowDamage false; this enableSimulation false; this addAction[""Brew Beer"",life_fnc_processAction,""beer"",0,false,false,"""",' life_inv_hops > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""liquor"",0,false,false,"""",' !license_civ_liquor && playerSide == civilian '];";
+					init="this allowDamage false; this allowDamage false; this enableSimulation false; this addAction[""Brew Beer"",life_fnc_processAction,""beer"",0,false,false,"""",' life_inv_cornmeal > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""liquor"",0,false,false,"""",' !license_civ_liquor && playerSide == civilian '];";
 				};
 			};
 		};
