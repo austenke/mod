@@ -9,6 +9,8 @@ private ["_point","_data"];
 
 _point = [_this,0,0,[0]] call BIS_fnc_param;
 
+hint "Unit in cap zone";
+
 life_capture_zone = _point;
 if (_point == 0) exitWith
 {

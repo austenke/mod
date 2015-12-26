@@ -1490,6 +1490,9 @@
 		</Key>
 	</Package>
 	<Package name="Notifications">
+		<Key ID="STR_NOTF_RobShop">
+			<Original>%1 has started robbing the %2!</Original>
+		</Key>
 		<Key ID="STR_NOTF_NE_1">
 			<Original>You do not have $%1 for a %2</Original>
 			<German>Du hast keine $%1 für einen %2</German>

@@ -35,7 +35,7 @@ _chance = random(100);
 if(_chance >= 80) then 
 { 
 	hint "The cashier hit the silent alarm, police has been alerted!"; 
-	[[format["ALARM! - %1 is being robbed!", _name],_name,1],"clientMessage",true,false] spawn life_fnc_MP;
+	[[1,format[localize "STR_NOTF_RobShop",(name _robber), _name]],"life_fnc_broadcast",west,FALSE] call life_fnc_MP;
 };
  
 //Setup our progress bar.
