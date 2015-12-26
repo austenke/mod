@@ -35,7 +35,7 @@ if(EQUAL(_veh,"B_Heli_Transport_01_F")) then
 if(EQUAL(_veh,"O_Plane_CAS_02_F")) then 
 
 {
-	_vehicle removeMagazinesTurret ["500Rnd_Cannon_30mm_Plane_CAS_02_F",[-1]];
+
     _vehicle removeMagazinesTurret ["2Rnd_Missile_AA_03_F",[-1]];
     _vehicle removeMagazinesTurret ["4Rnd_Missile_AGM_01_F",[-1]];
     _vehicle removeMagazinesTurret ["2Rnd_Bomb_03_F",[-1]];
