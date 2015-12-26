@@ -174,7 +174,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_18";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Bomb Squad 1";
+					description="WhiteListed - Cop 18";
 				};
 				class Item3
 				{
@@ -266,7 +266,7 @@ class Mission
 					skill=0.60000002;
 					text="cop_19";
 					init="removeBackpack this; removeAllWeapons this;";
-					description="WhiteListed - Bomb Squad 2";
+					description="WhiteListed - Cop 19";
 				};
 				class Item10
 				{
@@ -2315,8 +2315,8 @@ class Mission
 				class Item17
 				{
 					position[]={4180.2686,46.284294,11658.896};
-					azimut=496.63934;
-					offsetY=0.69999999;
+					azimut=496.63901;
+					offsetY=0.80000001;
 					special="NONE";
 					id=114;
 					side="CIV";
