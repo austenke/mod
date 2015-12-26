@@ -295,6 +295,8 @@ class Life_Client_Core
 		class initGang {};
 		class gangPayout {};
 		class createGang {};
+		class toggleCaptureUI {};
+		class updateCaptureUI {};
 		class gangCreated {};
 		class gangMenu {};
 		class gangKick {};

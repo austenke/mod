@@ -167,6 +167,11 @@ class CfgFunctions
 	};
 };
 
+class Gangs
+	{
+		class capZones {};
+	};
+
 class CfgVehicles
 {
 	class Car_F;
