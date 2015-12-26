@@ -2314,9 +2314,9 @@ class Mission
 				};
 				class Item17
 				{
-					position[]={4182.665,46.074032,11654.652};
-					azimut=48.917629;
-					offsetY=0.1;
+					position[]={4177.1797,46.531475,11662.929};
+					azimut=184.15387;
+					offsetY=0.5;
 					special="NONE";
 					id=114;
 					side="CIV";
@@ -11462,77 +11462,6 @@ class Mission
 		};
 	};
 };
-class Effects
-{
-};
-class Sensors
-	{
-		items=4;
-		class Item0
-		{
-			position[]={4869.4619,336.93668,21908.779};
-			activationBy="CIV";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			text="Capture Base 2";
-			name="capture_2";
-			expCond="player in (list capture_2)";
-			expActiv="[2] call life_fnc_toggleCaptureUI;";
-			expDesactiv="[0] call life_fnc_toggleCaptureUI;";
-			class Effects
-			{
-			};
-		};
-		class Item1
-		{
-			position[]={11202.305,182.41,8717.2939};
-			activationBy="CIV";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			text="Capture Base 1";
-			name="capture_1";
-			expCond="player in (list capture_1)";
-			expActiv="[1] call life_fnc_toggleCaptureUI;";
-			expDesactiv="[0] call life_fnc_toggleCaptureUI;";
-			class Effects
-			{
-			};
-		};
-		class Item2
-		{
-			position[]={21995.65,28.332605,21052.943};
-			activationBy="CIV";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			text="Capture Base 4";
-			name="capture_4";
-			expCond="player in (list capture_4)";
-			expActiv="[4] call life_fnc_toggleCaptureUI;";
-			expDesactiv="[0] call life_fnc_toggleCaptureUI;";
-			class Effects
-			{
-			};
-		};
-		class Item3
-		{
-			position[]={20223.555,47.216564,8916.2324};
-			activationBy="CIV";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			text="Capture Base 3";
-			name="capture_3";
-			expCond="player in (list capture_3)";
-			expActiv="[3] call life_fnc_toggleCaptureUI;";
-			expDesactiv="[0] call life_fnc_toggleCaptureUI;";
-			class Effects
-			{
-			};
-		};
-	};
 class Intro
 {
 	addOns[]=
