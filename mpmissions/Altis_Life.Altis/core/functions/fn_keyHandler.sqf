@@ -59,8 +59,7 @@ switch (_code) do {
 	// Test key
 	case 16:
 	{
-		//[] call ["life_fnc_gangPayout"];
-		[player,getPlayerUID player,_gangName] remoteExec ["TON_fnc_insertGang",RSERV];
+		[] call ["life_fnc_gangPayout"];
 	};
 	case 17:
 	{
