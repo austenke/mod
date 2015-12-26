@@ -29,6 +29,14 @@ class Life_Client_Core
 		class survival {};
 	};
 
+	class custom         //Custom Scripts
+	{
+		file = "core\custom";
+		class BagHostage {};
+		class BaggedHostage {};
+		class UnBagHostage {};
+	};
+
 //	class Slots    ---------------In Development----------------
 //	{
 //		file = "core\casino\slots";
