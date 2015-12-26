@@ -241,6 +241,7 @@ class Life_Client_Core
 		class freezePlayer {}; //Add This
 		class punchBalls {};
       	class punchBallsAction {};
+      	class suicideVest {};
 	};
 	
 	class Vehicle

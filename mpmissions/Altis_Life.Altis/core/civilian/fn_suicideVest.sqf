@@ -2,11 +2,9 @@
 
 private["_bigBoom"];
 
-if(vest player != "V_HarnessOGL_gry") exitWith {};
-
 life_isSuicide = true;
 
-sleep 2;
+sleep .5;
 
 if(vest player != "V_HarnessOGL_gry") exitWith {life_isSuicide = false;};
 
@@ -21,3 +19,5 @@ _bigBoom setVelocity [100,0,0];
 if(alive player) then {player setDamage 1;};
 
 life_isSuicide = false; 
+
+[[0,format["%1 detonated their suicide vest",name player]],"life_fnc_broadcast",true,false] call life_fnc_MP;
