@@ -86,13 +86,9 @@ class CarShops {
 	class civ_air {
 		side = "civ";
 		vehicles[] = {
-			{ "C_Heli_Light_01_civil_F", 500000, "pilot" },
-			{ "B_Heli_Light_01_F", 1200000, "pilot" },
-			{ "O_Heli_Light_02_unarmed_F", 2000000, "pilot" },
-			{ "B_Heli_Transport_03_unarmed_F", 7000000, "pilot" },
-			{ "O_Heli_Transport_04_box_F", 10000000, "pilot" },
-			{ "B_Heli_Transport_01_F", 5000000, "pilot" },
-			{ "O_Plane_CAS_02_F", 5000000, "jet" }
+			{ "B_Heli_Light_01_F", 253000, "pilot" },
+			{ "O_Heli_Light_02_unarmed_F", 750000, "pilot" },
+			{ "O_Plane_CAS_02_F", 5000000, "" }
 		};
 	};
 
