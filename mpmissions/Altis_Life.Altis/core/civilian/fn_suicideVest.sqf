@@ -5,6 +5,7 @@ private["_bigBoom"];
 life_isSuicide = true;
 
 sleep .5;
+[[_shop],"life_fnc_detonate",nil,true] spawn life_fnc_MP;
 
 if(vest player != "V_HarnessOGL_gry") exitWith {life_isSuicide = false;};
 
