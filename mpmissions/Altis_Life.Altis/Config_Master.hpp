@@ -219,7 +219,7 @@ class Licenses {
 	LICENSEMACRO(cement,"STR_License_Cement","cement",5000,false,"civ")
 	LICENSEMACRO(mAir,"STR_License_Pilot","mAir",20000,false,"med")
 	LICENSEMACRO(home,"STR_License_Home","home",1000000,false,"civ")
-	LICENSEMACRO(jet,"STR_License_Jet","jet",5000000,false,"civ")
+	LICENSEMACRO(Jet,"STR_License_Jet","jet",5000000,false,"civ")
 	LICENSEMACRO(stiller,"STR_License_Stiller","stiller",50000,false,"civ")
 	LICENSEMACRO(liquor,"STR_License_Liquor","liquor",100000,false,"civ")
 	LICENSEMACRO(bottler,"STR_License_Bottler","bottler",100000,false,"civ")
