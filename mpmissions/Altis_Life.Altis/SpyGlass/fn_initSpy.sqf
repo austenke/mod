@@ -10,7 +10,7 @@
 	
 	Will also become a standalone system which is why it's setup like this.
 */
-
+exitwith {};
 private["_binConfigPatches","_cfgPatches","_endM"];
 if(isServer && !hasInterface) exitWith {}; //Server doesn't need to know.
 
