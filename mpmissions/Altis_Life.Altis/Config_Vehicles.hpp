@@ -716,7 +716,7 @@ class CfgVehicles {
     };
 
     class O_Heli_Transport_04_box_F {
-		vItemSpace = 550;
+		vItemSpace = 275;
 		storageFee[] = { 0, 0, 1500, 0 };
 		garageSell[] = { 0, 0, 5000, 0 };
 		chopShop = 3000;
@@ -738,13 +738,6 @@ class CfgVehicles {
 
 	class C_Heli_Light_01_civil_F {
 		vItemSpace = 20;
-		storageFee[] = { 0, 0, 1500, 0 };
-		garageSell[] = { 0, 0, 5000, 0 };
-		chopShop = 3000;
-	};
-
-	class O_Heli_Transport_04_box_F {
-		vItemSpace = 275;
 		storageFee[] = { 0, 0, 1500, 0 };
 		garageSell[] = { 0, 0, 5000, 0 };
 		chopShop = 3000;
