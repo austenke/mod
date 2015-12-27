@@ -179,7 +179,7 @@ class CfgVehicles {
 	};
 
 	class C_Rubberboat {
-        vItemSpace = 45;
+        vItemSpace = 65;
         storageFee[] = { 400, 300, 0, 0 };
 		garageSell[] = { 950, 350, 0, 0 };
         insurance = 2500;
@@ -188,7 +188,7 @@ class CfgVehicles {
     };
 
 	class B_Heli_Transport_01_F {
-		vItemSpace = 200;
+		vItemSpace = 275;
 		storageFee[] = { 0, 50000, 0, 0 };
 		garageSell[] = { 0, 85000, 0, 0 };
 		insurance = 16000;
@@ -227,7 +227,7 @@ class CfgVehicles {
     };
 
 	class B_G_Boat_Transport_01_F {
-        vItemSpace = 45;
+        vItemSpace = 200;
         storageFee[] = { 1000, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
@@ -235,7 +235,7 @@ class CfgVehicles {
     };
 
 	class B_Boat_Transport_01_F {
-        vItemSpace = 45;
+        vItemSpace = 200;
         storageFee[] = { 0, 450, 0, 0 };
 		garageSell[] = { 0, 850, 0, 0 };
         insurance = 2500;
@@ -244,7 +244,7 @@ class CfgVehicles {
     };
 
 	class O_Truck_03_transport_F {
-        vItemSpace = 285;
+        vItemSpace = 450;
         storageFee[] = { 1000, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
@@ -261,19 +261,19 @@ class CfgVehicles {
     };
 
 	class Land_CargoBox_V1_F : Default {
-        vItemSpace = 5000;
+        vItemSpace = 6000;
     };
 
 	class Box_IND_Grenades_F : Default {
-        vItemSpace = 350;
+        vItemSpace = 400;
     };
 
 	class B_supplyCrate_F {
-        vItemSpace = 700;
+        vItemSpace = 800;
     };
 
 	class B_G_Offroad_01_F {
-        vItemSpace = 65;
+        vItemSpace = 70;
         storageFee[] = { 1000, 0, 0, 0 };
 		garageSell[] = { 3500, 0, 0, 0 };
         insurance = 2500;
@@ -292,7 +292,7 @@ class CfgVehicles {
     };
 
 	class C_Boat_Civil_01_F {
-        vItemSpace = 85;
+        vItemSpace = 100;
         storageFee[] = { 4500, 2500, 0, 0 };
 		garageSell[] = { 6800, 3500, 0, 0 };
         insurance = 2500;
@@ -301,7 +301,7 @@ class CfgVehicles {
     };
 
 	class C_Boat_Civil_01_police_F {
-        vItemSpace = 85;
+        vItemSpace = 100;
         storageFee[] = { 0, 3500, 0, 0 };
 		garageSell[] = { 0, 4950, 0, 0 };
         insurance = 2500;
@@ -310,7 +310,7 @@ class CfgVehicles {
     };
 
 	class C_Boat_Civil_01_rescue_F {
-        vItemSpace = 85;
+        vItemSpace = 100;
         storageFee[] = { 1000, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
@@ -318,7 +318,7 @@ class CfgVehicles {
     };
 
 	class B_Truck_01_box_F {
-        vItemSpace = 450;
+        vItemSpace = 800;
         storageFee[] = { 35000, 0, 0, 0 };
 		garageSell[] = { 150000, 0, 0, 0 };
         insurance = 2500;
@@ -327,7 +327,7 @@ class CfgVehicles {
     };
 
 	class B_Truck_01_transport_F {
-        vItemSpace = 325;
+        vItemSpace = 0;
         storageFee[] = { 25650, 0, 0, 0 };
 		garageSell[] = { 135000, 0, 0, 0 };
         insurance = 2500;
@@ -336,7 +336,7 @@ class CfgVehicles {
     };
 
 	class O_MRAP_02_F {
-        vItemSpace = 60;
+        vItemSpace = 100;
         storageFee[] = { 45000, 0, 0, 0 };
 		garageSell[] = { 65000, 0, 0, 0 };
         insurance = 2500;
@@ -345,7 +345,7 @@ class CfgVehicles {
     };
 
 	class I_MRAP_03_F {
-        vItemSpace = 58;
+        vItemSpace = 100;
         storageFee[] = { 1000, 0, 0, 0 };
         insurance = 2500;
         chopShop = 5000;
@@ -409,7 +409,7 @@ class CfgVehicles {
 	class C_Kart_01_Vrana_F : C_Kart_01_Blu_F {}; //Inherits everything from the above class
 
 	class C_Hatchback_01_sport_F {
-        vItemSpace = 45;
+        vItemSpace = 40;
         storageFee[] = { 2500, 1000, 0, 0 };
 		garageSell[] = { 15000, 7500, 0, 0 };
         insurance = 5500;
@@ -440,7 +440,7 @@ class CfgVehicles {
     };
 
 	class B_Quadbike_01_F {
-        vItemSpace = 25;
+        vItemSpace = 20;
         storageFee[] = { 1000, 0, 0, 0 };
 		garageSell[] = { 950, 0, 0, 0 };
         insurance = 2500;
@@ -477,7 +477,7 @@ class CfgVehicles {
     };
 
 	class I_Truck_02_covered_F {
-        vItemSpace = 250;
+        vItemSpace = 275;
         storageFee[] = { 14500, 0, 0, 0 };
 		garageSell[] = { 62000, 0, 0, 0 };
         insurance = 6500;
@@ -494,13 +494,13 @@ class CfgVehicles {
     };
 
 	class I_Truck_02_transport_F : I_Truck_02_covered_F {
-        vItemSpace = 200;
+        vItemSpace = 220;
         storageFee[] = { 12000, 0, 0, 0 };
 		garageSell[] = { 49800, 3500, 0, 0 };
     };
 
 	class O_Truck_03_covered_F {
-		vItemSpace = 300;
+		vItemSpace = 550;
 		storageFee[] = { 25000, 0, 0, 0 };
 		garageSell[] = { 65000, 0, 0, 0 };
 		insurance = 2500;
@@ -543,7 +543,7 @@ class CfgVehicles {
     };
 
 	class C_SUV_01_F {
-        vItemSpace = 50;
+        vItemSpace = 40;
         storageFee[] = { 1000, 0, 0, 0 };
 		garageSell[] = { 15000, 7500, 0, 0 };
         insurance = 2500;
@@ -600,7 +600,7 @@ class CfgVehicles {
     };
     
 	class B_MRAP_01_F {
-        vItemSpace = 65;
+        vItemSpace = 100;
         storageFee[] = { 0, 7500, 0, 0 };
 		garageSell[] = { 0, 10000, 0, 0 };
         insurance = 2500;
@@ -616,7 +616,7 @@ class CfgVehicles {
     };
 
 	class B_Heli_Light_01_F {
-        vItemSpace = 90;
+        vItemSpace = 20;
         storageFee[] = { 45000, 19500, 0, 0 };
 		garageSell[] = { 57000, 35000, 0, 0 };
         insurance = 2500;
@@ -671,7 +671,7 @@ class CfgVehicles {
     };
 
 	class O_Heli_Light_02_unarmed_F {
-        vItemSpace = 210;
+        vItemSpace = 200;
         storageFee[] = { 55000, 0, 22000, 0 };
 		garageSell[] = { 72500, 0, 35000, 0 };
         insurance = 2500;
@@ -714,4 +714,39 @@ class CfgVehicles {
             } }
         };
     };
+
+    class O_Heli_Transport_04_box_F {
+		vItemSpace = 550;
+		storageFee[] = { 0, 0, 1500, 0 };
+		garageSell[] = { 0, 0, 5000, 0 };
+		chopShop = 3000;
+	};
+
+	class B_Heli_Transport_03_unarmed_F {
+		vItemSpace = 375;
+		storageFee[] = { 0, 0, 1500, 0 };
+		garageSell[] = { 0, 0, 5000, 0 };
+		chopShop = 3000;
+	};
+
+	class I_Heli_light_03_unarmed_F {
+		vItemSpace = 250;
+		storageFee[] = { 0, 0, 1500, 0 };
+		garageSell[] = { 0, 0, 5000, 0 };
+		chopShop = 3000;
+	};
+
+	class C_Heli_Light_01_civil_F {
+		vItemSpace = 20;
+		storageFee[] = { 0, 0, 1500, 0 };
+		garageSell[] = { 0, 0, 5000, 0 };
+		chopShop = 3000;
+	};
+
+	class O_Heli_Transport_04_box_F {
+		vItemSpace = 275;
+		storageFee[] = { 0, 0, 1500, 0 };
+		garageSell[] = { 0, 0, 5000, 0 };
+		chopShop = 3000;
+	};
 };
