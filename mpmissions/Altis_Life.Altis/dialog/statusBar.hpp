@@ -14,7 +14,7 @@ class osefStatusBar {
 	class controls {
 		class statusBarText {
 			idc = 1000;
-			x = safezoneX + safezoneW - 1.7;
+			x = safezoneX + safezoneW - 1.8;
 			y = safezoneY + safezoneH - 0.08;
 			w = 1;
 			h = 0.04;
