@@ -14,9 +14,10 @@
 #define Btn6 37455
 #define Btn7 37456
 #define Btn8 37457
+#define Btn9 37458
 #define Title 37401
 
-private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7"];
+private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn8","_Btn9"];
 
 disableSerialization;
 _curTarget = param [0,ObjNull,[ObjNull]];
@@ -35,6 +36,8 @@ _Btn4 = _display displayCtrl Btn4;
 _Btn5 = _display displayCtrl Btn5;
 _Btn6 = _display displayCtrl Btn6;
 _Btn7 = _display displayCtrl Btn7;
+_Btn8 = _display displayCtrl Btn8;
+_Btn9 = _display displayCtrl Btn9;
 life_pInact_curTarget = _curTarget;
 
 //Set Unrestrain Button
@@ -73,22 +76,13 @@ if(!((player distance (getMarkerPos "police_hq_1") < 30) OR  (player distance (g
 	_Btn6 ctrlEnable false;
 };
 
-//add to defines
-#define Btn9 37458
-
-//add _btn9 to private array like so
-private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn8","_Btn9"];
-
-//displayCtrl for button 9
-_Btn9 = _display displayCtrl Btn9;
-
 //actually the Breathalyser button
-_Btn9 ctrlSetText localize "STR_pInAct_Breathalyzer";
-_Btn9 buttonSetAction "[[player],""life_fnc_breathalyzer"",life_pInact_curTarget,FALSE] spawn life_fnc_MP;closeDialog 0";
+_Btn8 ctrlSetText localize "STR_pInAct_Breathalyzer";
+_Btn8 buttonSetAction "[[player],""life_fnc_breathalyzer"",life_pInact_curTarget,FALSE] spawn life_fnc_MP;closeDialog 0";
 
-//Button 8 - Remove Weapons
-BTN_SHOW(_Btn8,true);
-SET_TEXT_LOC(_Btn8,"STR_pInAct_RemoveWeapons");
-SET_TOOLTIP(_Btn8,"Removes the current player's weapons");
-SET_ACTION(_Btn8,"[life_pInact_curTarget] spawn life_fnc_removeWeaponAction; closeDialog 0");
+//Button 9 - Remove Weapons
+BTN_SHOW(_Btn9,true);
+SET_TEXT_LOC(_Btn9,"STR_pInAct_RemoveWeapons");
+SET_TOOLTIP(_Btn9,"Removes the current player's weapons");
+SET_ACTION(_Btn9,"[life_pInact_curTarget] spawn life_fnc_removeWeaponAction; closeDialog 0");
 		
