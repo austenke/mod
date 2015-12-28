@@ -32,6 +32,10 @@ switch (true) do {
 		[cursorTarget] spawn life_fnc_boltcutter;
 		closeDialog 0;
 	};
+
+	case (EQUAL(_item,"chainsaw")): {
+		[] spawn life_fnc_chainsawUse;
+	};
 	
 	case (EQUAL(_item,"blastingcharge")): {
 		player reveal fed_bank;

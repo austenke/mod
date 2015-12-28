@@ -60,6 +60,13 @@ class CfgSounds
 		titles[] = {};
 	};
 
+	class chainsaw
+	{
+		name = "chainsaw";
+		sound[] = {"\sounds\chainsaw.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
 	class LockCarSound
   	{
  	   	name = "LockCarSound";

@@ -129,6 +129,7 @@ class VirtualItems {
 	VITEMMACRO(cornmeal, "STR_Item_Cornmeal","cornmeal",2,500,200,false,-1,"")
 	VITEMMACRO(bottles, "STR_Item_Bottles","bottles",2,100,75,false,-1,"")
 	VITEMMACRO(burlapsack, "STR_Item_BurlapSack","burlapsack",5,10000,75,false,-1,"")
+	VITEMMACRO(chainsaw, "STR_Item_Chainsaw", "chainsaw", 10, 750, 500, false,- 1, "icons\Chainsaw.paa")
 
 	//Mined Items
 	VITEMMACRO(oil_unprocessed, "STR_Item_OilU", "oilUnprocessed", 5, -1, -1, false, -1, "")
@@ -145,6 +146,7 @@ class VirtualItems {
 	VITEMMACRO(diamond_cut, "STR_Item_DiamondC", "diamondCut", 6, -1, 11000, false, -1, "")
 	VITEMMACRO(rock, "STR_Item_Rock", "rock", 4, -1, -1, false, -1, "")
 	VITEMMACRO(cement, "STR_Item_CementBag", "cement", 3, -1, 2200, false, -1, "")
+	VITEMMACRO(wood, "STR_Item_Wood", "wood", 5, 6100, 6000, false, -1, "icons\Wood.paa")
 
 	//Drugs
 	VITEMMACRO(heroin_unprocessed, "STR_Item_HeroinU", "heroinUnprocessed", 6, -1, -1, true, -1, "")
@@ -230,7 +232,7 @@ class Licenses {
 class VirtualShops {
 	class market {
 		name = "STR_Shops_Market";
-		items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "storagesmall", "storagebig" };
+		items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "chainsaw", "pickaxe", "fuelFull", "peach", "boltcutter", "storagesmall", "storagebig" };
 	};
 
 	class rebel {
@@ -301,6 +303,11 @@ class VirtualShops {
 	class gold {
 		name = "STR_Shops_Gold";
 		items[] = { "goldbar" };
+	};
+
+	class wood {
+		name = "STR_Shops_wood";
+		items[] = { "wood" };
 	};
 };
 

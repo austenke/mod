@@ -366,6 +366,7 @@ class Life_Client_Core
 		class drinkbeer {};
 		class drinkmoonshine {};
 		class drinkwhiskey {};
+		class chainsawUse {};
 	};
 	
 	class Dialog_Controls

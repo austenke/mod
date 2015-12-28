@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Altis Life RPG">
 	<Package name="Shop_Names">
+		<Key ID="STR_Shops_wood">
+			<Original>wood Buyer</Original>
+			<German>wood Buyer</German>
+			<Italian>wood Buyer</Italian>
+			<French>wood Buyer</French>
+		</Key>
 		<Key ID="STR_Shops_C_Bruce">
 			<Original>Bruce's Outback Outfits</Original>
 			<Portuguese>Loja de Roupas</Portuguese>
@@ -2952,6 +2958,20 @@
 		</Key>
 	</Package>
 	<Package name="Life_Items">
+		<Key ID="STR_Item_Chainsaw">
+			<Original>Chainsaw</Original>
+			<German>Chainsaw</German>
+			<French>Chainsaw</French>
+			<Italian>Chainsaw</Italian>
+			<Portuguese>Chainsaw</Portuguese>
+		</Key>
+		<Key ID="STR_Item_Wood">
+			<Original>Wood</Original>
+			<German>Wood</German>
+			<French>Wood</French>
+			<Italian>Wood</Italian>
+			<Portuguese>Wood</Portuguese>
+		</Key>
 		<Key ID="STR_Item_Bottles">
 			<Original>Glass Bottles</Original>
 		</Key>
@@ -3630,6 +3650,27 @@
 		</Key>
 	</Package>
 	<Package name="More_Item_Strings">
+		<Key ID="STR_ISTR_Logging_NotNear">
+			<Original>You are not near a logging area!</Original>
+			<German>Sie sind nicht in der Nähe eines Logging -Bereich!</German>
+			<French>Vous n'êtes pas à proximité d'une zone d'exploitation !</French>
+			<Italian>Non sei vicino ad una zona di registrazione !</Italian>
+			<Portuguese>Você não está perto de uma área de corte !</Portuguese>
+		</Key>
+		<Key ID="STR_ISTR_Logging_MineVeh">
+			<Original>You can't use a chainsaw from inside a car!</Original>
+			<German>Sie können nicht eine Kettensäge aus dem Inneren eines Autos !</German>
+			<French>Vous ne pouvez pas utiliser une tronçonneuse à l'intérieur d'une voiture !</French>	
+			<Italian>Non è possibile utilizzare una motosega da dentro una macchina!</Italian>			
+			<Portuguese>Non è possibile utilizzare una motosega da dentro una macchina!</Portuguese>
+		</Key>
+        <Key ID="STR_ISTR_Logging_Success">
+			<Original>You have produced %2 %1</Original>
+			<German></German>
+			<French></French>
+			<Italian></Italian>
+			<Portuguese></Portuguese>
+		</Key>
 		<Key ID="STR_ISTR_Blast_VaultOnly">
 			<Original>This can only be used on a vault.</Original>
 			<German>Dies kann nur an einem Tresor benutzt werden.</German>
