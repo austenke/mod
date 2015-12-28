@@ -85,4 +85,10 @@ _Btn9 = _display displayCtrl Btn9;
 //actually the Breathalyser button
 _Btn9 ctrlSetText localize "STR_pInAct_Breathalyzer";
 _Btn9 buttonSetAction "[[player],""life_fnc_breathalyzer"",life_pInact_curTarget,FALSE] spawn life_fnc_MP;closeDialog 0";
+
+//Button 8 - Remove Weapons
+BTN_SHOW(_Btn8,true);
+SET_TEXT_LOC(_Btn8,"STR_pInAct_RemoveWeapons");
+SET_TOOLTIP(_Btn8,"Removes the current player's weapons");
+SET_ACTION(_Btn8,"[life_pInact_curTarget] spawn life_fnc_removeWeaponAction; closeDialog 0");
 		
