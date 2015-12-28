@@ -2608,7 +2608,7 @@ class Mission
 				};
 				class Item42
 				{
-					position[]={3639.0557,10.197898,13075.123};
+					position[]={3638.7454,10.189519,13076.403};
 					azimut=-356.63461;
 					special="NONE";
 					id=139;
@@ -2632,9 +2632,8 @@ class Mission
 				};
 				class Item44
 				{
-					position[]={3480.8184,2.7004993,13228.261};
-					azimut=-37.975685;
-					offsetY=0.5;
+					position[]={3479.5771,2.645133,13230.705};
+					azimut=-37.9757;
 					special="NONE";
 					id=141;
 					side="CIV";
@@ -10551,7 +10550,7 @@ class Mission
 		};
 		class Item128
 		{
-			position[]={20081.033,100.96766,6737.1904};
+			position[]={20082.629,100.97688,6733.4146};
 			name="Rebelop_2";
 			text="Rebel Outpost";
 			type="mil_triangle";
@@ -10911,7 +10910,7 @@ class Mission
 		};
 		class Item173
 		{
-			position[]={20782.402,37.286591,16680.141};
+			position[]={20782.441,37.290298,16680.229};
 			name="atm_marker_2_6";
 			type="loc_Tourism";
 			colorName="ColorGreen";
@@ -11139,7 +11138,7 @@ class Mission
 		};
 		class Item202
 		{
-			position[]={20058.586,90.91021,6634.5728};
+			position[]={20050.893,90.70842,6631.6157};
 			name="Rebelop_2_1";
 			text="Rebel Vehicle Shop";
 			type="mil_triangle";
@@ -11254,7 +11253,7 @@ class Mission
 		};
 		class Item215
 		{
-			position[]={3757.0313,12.157246,13480.412};
+			position[]={3752.6528,11.617154,13462.898};
 			name="gas_station";
 			text="Gas Station";
 			type="loc_Fuelstation";
@@ -11262,7 +11261,7 @@ class Mission
 		};
 		class Item216
 		{
-			position[]={9023.5078,111.8329,15730.648};
+			position[]={9031.6943,111.68142,15720.497};
 			name="gas_station_2";
 			text="Gas Station";
 			type="loc_Fuelstation";
@@ -11270,7 +11269,7 @@ class Mission
 		};
 		class Item217
 		{
-			position[]={15299.847,16.522072,17575.877};
+			position[]={15315.943,16.588026,17589.01};
 			name="gas_station_2_1";
 			text="Gas Station";
 			type="loc_Fuelstation";
@@ -11278,7 +11277,7 @@ class Mission
 		};
 		class Item218
 		{
-			position[]={17416.688,5.54,13934.897};
+			position[]={17429.785,5.54,13942.368};
 			name="gas_station_2_1_1";
 			text="Gas Station";
 			type="loc_Fuelstation";
@@ -11286,7 +11285,7 @@ class Mission
 		};
 		class Item219
 		{
-			position[]={16757.434,12.46,12506.99};
+			position[]={16760.129,12.460681,12502.414};
 			name="gas_station_2_1_1_1";
 			text="Gas Station";
 			type="loc_Fuelstation";
@@ -11294,7 +11293,7 @@ class Mission
 		};
 		class Item220
 		{
-			position[]={19965.805,60.145847,11447.844};
+			position[]={19962.572,59.871307,11434.098};
 			name="gas_station_2_1_1_2";
 			text="Gas Station";
 			type="loc_Fuelstation";
@@ -11302,7 +11301,7 @@ class Mission
 		};
 		class Item221
 		{
-			position[]={21231.721,22.92894,7117.876};
+			position[]={21233.424,23.034649,7099.7998};
 			name="gas_station_2_1_1_2_1";
 			text="Gas Station";
 			type="loc_Fuelstation";
@@ -11310,7 +11309,7 @@ class Mission
 		};
 		class Item222
 		{
-			position[]={20788.467,37.089127,16669.734};
+			position[]={20768.611,36.776402,16664.061};
 			name="gas_station_2_1_1_2_2";
 			text="Gas Station";
 			type="loc_Fuelstation";
@@ -11318,7 +11317,7 @@ class Mission
 		};
 		class Item223
 		{
-			position[]={23381.41,12.843835,19798.826};
+			position[]={23363.277,12.914189,19807.031};
 			name="gas_station_2_1_1_2_3";
 			text="Gas Station";
 			type="loc_Fuelstation";
@@ -11326,7 +11325,7 @@ class Mission
 		};
 		class Item224
 		{
-			position[]={25693.16,20.704947,21383.281};
+			position[]={25690.93,20.810152,21384.318};
 			name="gas_station_2_1_1_2_4";
 			text="Gas Station";
 			type="loc_Fuelstation";
@@ -11334,7 +11333,7 @@ class Mission
 		};
 		class Item225
 		{
-			position[]={9205.9893,18.120785,12114.319};
+			position[]={9213.8711,17.777306,12100.729};
 			name="gas_station_2_1_1_2_5";
 			text="Gas Station";
 			type="loc_Fuelstation";
