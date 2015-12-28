@@ -1,4 +1,8 @@
-// Index is an OG
+/*
+Author: Index
+
+
+*/
 
 private["_bigBoom"];
 
