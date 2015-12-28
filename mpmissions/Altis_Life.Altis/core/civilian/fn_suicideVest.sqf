@@ -1,7 +1,5 @@
 /*
 Author: Index
-
-
 */
 
 private["_bigBoom"];

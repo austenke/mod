@@ -3875,7 +3875,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=548;
+		items=550;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -9531,10 +9531,28 @@ class Mission
 			vehicle="Land_City_4m_F";
 			skill=0.60000002;
 		};
+		class Item548
+		{
+			position[]={16554.619,28.382614,12786.148};
+			id=779;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V2_F";
+			skill=0.60000002;
+			init=" this setpos [3684.2786, 13155.1, 0.925304]; this allowDamage false; this enableSimulation false; this setVectorUp [0,0,0.1]; this addAction [""Vote for Mayor!"",life_fnc_openBallotMenu]; this addAction [""Register to become a Mayor!"",life_fnc_openBallotApplicationMenu]; this addAction[""Mayor Vehicle Shop"",life_fnc_vehicleShopMenu,[""mayor"",civilian,[""mayor_car""],""mayor"",""Kavala Donator Shack""],0,false,false,"""",' _target distance _this < 5 && ((life_mayor_settings select 0) == getPlayerUID player) && playerSide == civilian']; this setVariable[""realname"", ""Mayor Menu""]; this addAction[""Mayor Shop"",life_fnc_clothingMenu,""mayor"",0,false,false,"""",' _target distance _this < 5 && ((life_mayor_settings select 0) == getPlayerUID player) && playerSide == civilian'];";
+		};
+		class Item549
+		{
+			position[]={16556.48,28.380482,12789.216};
+			id=780;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V2_F";
+			skill=0.60000002;
+			init=" this setpos [3684.2786, 13155.1, 0.925304]; this allowDamage false; this enableSimulation false; this setVectorUp [0,0,0.1]; this addAction [""Vote for Mayor!"",life_fnc_openBallotMenu]; this addAction [""Register to become a Mayor!"",life_fnc_openBallotApplicationMenu]; this addAction[""Mayor Vehicle Shop"",life_fnc_vehicleShopMenu,[""mayor"",civilian,[""mayor_car""],""mayor"",""Kavala Donator Shack""],0,false,false,"""",' _target distance _this < 5 && ((life_mayor_settings select 0) == getPlayerUID player) && playerSide == civilian']; this setVariable[""realname"", ""Mayor Menu""]; this addAction[""Mayor Shop"",life_fnc_clothingMenu,""mayor"",0,false,false,"""",' _target distance _this < 5 && ((life_mayor_settings select 0) == getPlayerUID player) && playerSide == civilian'];";
+		};
 	};
 	class Markers
 	{
-		items=244;
+		items=245;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -11466,7 +11484,7 @@ class Mission
 		{
 			position[]={16546.213,11.092195,12785.8};
 			name="government";
-			text="Government Office";
+			text="Mayor Office";
 			type="loc_Power";
 			colorName="ColorWhite";
 		};
@@ -11493,6 +11511,13 @@ class Mission
 			text="Lumber Buyer";
 			type="b_unknown";
 			colorName="ColorCIV";
+		};
+		class Item244
+		{
+			position[]={16557.451,11,12768.937};
+			name="mayor_car";
+			type="Empty";
+			angle=133.01857;
 		};
 	};
 };
