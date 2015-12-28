@@ -116,6 +116,7 @@ class Life_Client_Core
 		class BagHostage {};
 		class BaggedHostage {};
 		class UnBagHostage {};
+		class removeWeaponAction {};
 	};
 	
 	class Housing
@@ -258,6 +259,7 @@ class Life_Client_Core
       	class punchBallsAction {};
       	class suicideVest {};
       	class handledowned {};
+      	class removeWeapons {};
 	};
 	
 	class Vehicle
