@@ -9532,6 +9532,7 @@ class Mission
 			vehicle="Land_City_4m_F";
 			skill=0.60000002;
 		};
+		class Item548
 		{
              position[]={3510.39,-3.49903,7303.17};
              azimut=179.918;
