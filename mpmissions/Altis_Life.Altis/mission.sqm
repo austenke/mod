@@ -9532,6 +9532,7 @@ class Mission
 			vehicle="Land_City_4m_F";
 			skill=0.60000002;
 		};
+<<<<<<< HEAD
 		class Item548
 		{
              position[]={3510.39,-3.49903,7303.17};
@@ -11872,6 +11873,8 @@ class Mission
              skill=0.6;
              offsetY=183.571;
         };
+=======
+>>>>>>> parent of 46c2757... oil rig?
 	};
 	class Markers
 	{
