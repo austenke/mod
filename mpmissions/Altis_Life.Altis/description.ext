@@ -123,14 +123,14 @@ class CfgSounds
 		titles[] = {};
 	};
 
-	class bankAlarm
+	class bankAlarm  //why is this named yelp?
 	{
 		name = "yelp";
 		sound[] = {"\sounds\bankAlarm.ogg", 3.0, 1};
 		titles[] = {};
 	};
 
-	class robbankdone
+	class robbankdone  //why is this named yelp?
 	{
 		name = "yelp";
 		sound[] = {"\sounds\robbankdone.ogg", 1.0, 1};
