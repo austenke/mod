@@ -9533,21 +9533,21 @@ class Mission
 		};
 		class Item548
 		{
-			position[]={16562.611,11,12777.925};
+			position[]={16557.49,11,12784.945};
 			id=779;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init=" this allowDamage false; this enableSimulation false; this setVectorUp [0,0,0.1]; this addAction [""Vote for Mayor!"",life_fnc_openBallotMenu]; this addAction [""Register to become a Mayor!"",life_fnc_openBallotApplicationMenu]; this addAction[""Mayor Vehicle Shop"",life_fnc_vehicleShopMenu,[""mayor"",civilian,[""mayor_car""],""mayor"",""Kavala Donator Shack""],0,false,false,"""",' _target distance _this < 5 && ((life_mayor_settings select 0) == getPlayerUID player) && playerSide == civilian']; this setVariable[""realname"", ""Mayor Menu""]; this addAction[""Mayor Shop"",life_fnc_clothingMenu,""mayor"",0,false,false,"""",' _target distance _this < 5 && ((life_mayor_settings select 0) == getPlayerUID player) && playerSide == civilian'];";
+			init=" this allowDamage false; this enableSimulation false; this setVectorUp [0,0,0.1]; this addAction [""Vote for Mayor!"",life_fnc_openBallotMenu]; this addAction [""Register to become a Mayor!"",life_fnc_openBallotApplicationMenu]; this addAction[""Mayor Vehicle Shop"",life_fnc_vehicleShopMenu,[""mayor"",civilian,[""mayor_car""],""mayor""],0,false,false,"""",' _target distance _this < 5 && ((life_mayor_settings select 0) == getPlayerUID player) && playerSide == civilian']; this setVariable[""realname"", ""Mayor Menu""]; this addAction[""Mayor Shop"",life_fnc_clothingMenu,""mayor"",0,false,false,"""",' _target distance _this < 5 && ((life_mayor_settings select 0) == getPlayerUID player) && playerSide == civilian'];";
 		};
 		class Item549
 		{
-			position[]={16564.473,11,12780.992};
+			position[]={16559.352,11.004794,12788.013};
 			id=780;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init=" this allowDamage false; this enableSimulation false; this setVectorUp [0,0,0.1]; this addAction [""Vote for Mayor!"",life_fnc_openBallotMenu]; this addAction [""Register to become a Mayor!"",life_fnc_openBallotApplicationMenu]; this addAction[""Mayor Vehicle Shop"",life_fnc_vehicleShopMenu,[""mayor"",civilian,[""mayor_car""],""mayor"",""Kavala Donator Shack""],0,false,false,"""",' _target distance _this < 5 && ((life_mayor_settings select 0) == getPlayerUID player) && playerSide == civilian']; this setVariable[""realname"", ""Mayor Menu""]; this addAction[""Mayor Shop"",life_fnc_clothingMenu,""mayor"",0,false,false,"""",' _target distance _this < 5 && ((life_mayor_settings select 0) == getPlayerUID player) && playerSide == civilian'];";
+			init=" this allowDamage false; this enableSimulation false; this setVectorUp [0,0,0.1]; this addAction [""Vote for Mayor!"",life_fnc_openBallotMenu]; this addAction [""Register to become a Mayor!"",life_fnc_openBallotApplicationMenu]; this addAction[""Mayor Vehicle Shop"",life_fnc_vehicleShopMenu,[""mayor"",civilian,[""mayor_car""],""mayor""],0,false,false,"""",' _target distance _this < 5 && ((life_mayor_settings select 0) == getPlayerUID player) && playerSide == civilian']; this setVariable[""realname"", ""Mayor Menu""]; this addAction[""Mayor Shop"",life_fnc_clothingMenu,""mayor"",0,false,false,"""",' _target distance _this < 5 && ((life_mayor_settings select 0) == getPlayerUID player) && playerSide == civilian'];";
 		};
 	};
 	class Markers
@@ -11514,7 +11514,7 @@ class Mission
 		};
 		class Item244
 		{
-			position[]={16557.451,11,12768.937};
+			position[]={16560.244,11,12775.278};
 			name="mayor_car";
 			type="Empty";
 			angle=133.01857;
