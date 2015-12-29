@@ -25,6 +25,7 @@ _name = M_CONFIG(getText,"VirtualItems",_type,"displayName");
 
 if(([true,_type,_amount] call life_fnc_handleInv)) then
 {
+	_toSelect = ((life_capture_list) select 0);
 	if(!isNil "_hideout" && {!isNil {grpPlayer getVariable "gang_bank"}} && {(grpPlayer getVariable "gang_bank") >= _price}) then {
 		_action = [
 			format[(localize "STR_Shop_Virt_Gang_FundsMSG")+ "<br/><br/>" +(localize "STR_Shop_Virt_Gang_Funds")+ " <t color='#8cff9b'>$%1</t><br/>" +(localize "STR_Shop_Virt_YourFunds")+ " <t color='#8cff9b'>$%2</t>",
@@ -41,6 +42,7 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 			_funds = _funds - (_price * _amount);
 			grpPlayer setVariable["gang_bank",_funds,true];
 			[1,grpPlayer] remoteExecCall ["TON_fnc_updateGang",RSERV];
+			[5,grpPlayer,_toSelect select 0,1000] remoteExecCall ["TON_fnc_updateGang",RSERV];
 		} else {
 			if((_price * _amount) > CASH) exitWith {[false,_type,_amount] call life_fnc_handleInv; hint localize "STR_NOTF_NotEnoughMoney";};
 			hint format[localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText];
