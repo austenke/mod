@@ -59,7 +59,7 @@ switch (_code) do {
 	// Test key
 	case 16:
 	{
-		
+		[5,_grpMembers] remoteExecCall ["TON_fnc_fooStuff",RSERV];
 	};
 	case 17:
 	{
