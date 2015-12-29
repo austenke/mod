@@ -130,9 +130,8 @@ class CfgFunctions
 			class cleanupRequest {};
 			class setObjVar {};
 			class keyManagement {};
-			class Airdrop
 		};
-
+		
 		class Housing
 		{
 			file = "\life_server\Functions\Housing";
@@ -153,7 +152,6 @@ class CfgFunctions
 			class queryPlayerGang {};
 			class removeGang {};
 			class updateGang {};
-			class capZones {};
 		};
 
 		class Actions
