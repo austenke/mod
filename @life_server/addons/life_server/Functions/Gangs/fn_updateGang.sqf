@@ -50,10 +50,17 @@ switch (_mode) do {
 		_query = format["gangMembersUpdate:%1:%2",_membersFinal,_groupID];
 	};
 	case 5: {
-		_gang = [_this,2,"",[""]] call BIS_fnc_param;
+		_gangName = [_this,2,"",[""]] call BIS_fnc_param;
 		_amt = [_this,3,0,[0]] call BIS_fnc_param;
-		_query = format["cartelGangMoneyUpdate:%1:%2",_amt,_gang];
-
+		{    
+			if(_x getVariable "gang_name" == _gangName) exitWith { 
+				_funds = _x getVariable "gang_bank";
+				_newFunds = _funds + _amt;
+				_groupID2 = _x getVariable["gang_id",-1];
+				_x setVariable ["gang_bank",_newFunds,true]; //NOTE: "true" must be set to broadcast the change to the clients    
+				_query = format["gangBankInfoUpdate:%1:%2",([(_x getVariable ["gang_bank",0])] call DB_fnc_numberSafe),_groupID2];
+			};
+		} foreach allGroups;
 	};
 };
 
