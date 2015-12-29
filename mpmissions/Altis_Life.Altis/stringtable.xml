@@ -74,7 +74,7 @@
 			<Portuguese>Traficante</Portuguese>
 		</Key>
 		<Key ID="STR_Shops_Oil">
-			<Original>Oil Trader</Original>
+			<Original>Oil Buyer</Original>
 			<German>Ölhändler</German>
 			<Italian>Vendita Petrolio</Italian>
 			<French>Acheteur de Pétrole</French>
@@ -3948,6 +3948,21 @@
 			<Italian>This item isn't usable.</Italian>
 			<Portuguese>Esse item não é usável.</Portuguese>
 		</Key>
+		<Key ID="STR_Process_Pumped_Oil">
+			<Original>You have pumped %1 barrel of Oil</Original>
+		</Key>
+		<Key ID="STR_Process_Pump_Stay">
+			<Original>You need to stay within 10m to pump oil.</Original>
+		</Key>
+		<Key ID="STR_Process_Pump_Oil">
+			<Original>Pumping Oil</Original>
+		</Key>
+		<Key ID="STR_Process_Pump_Oil_Fail">
+			<Original>Your Inventory is full</Original>
+		</Key>
+		<Key ID="STR_Process_Pump_InUse">
+			<Original>You cannot use that pump currently.</Original>
+		</Key>
 	</Package>
 		<Package name="Process_Action">
 		<Key ID = "STR_Process_Mash">
@@ -4068,6 +4083,21 @@
 			<French>Vous avez traité %1 en %2 pour $3%</French>
 			<Italian>Hai processato %1 in %2 al costo di €%3</Italian>
 			<Portuguese>Você trasformou %1 em %2 por R$%3</Portuguese>
+		</Key>
+		<Key ID="STR_Process_Pumped_Oil">
+			<Original>You have pumped %1 barrel of Oil</Original>
+		</Key>
+		<Key ID="STR_Process_Pump_Stay">
+			<Original>You need to stay within 10m to pump oil.</Original>
+		</Key>
+		<Key ID="STR_Process_Pump_Oil">
+			<Original>Pumping Oil</Original>
+		</Key>
+		<Key ID="STR_Process_Pump_Oil_Fail">
+			<Original>Your Inventory is full</Original>
+		</Key>
+		<Key ID="STR_Process_Pump_InUse">
+			<Original>You cannot use that pump currently.</Original>
 		</Key>
 	</Package>
 	<Package name="Gather_Items">
