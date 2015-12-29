@@ -14111,7 +14111,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=1;
+		items=4;
 		class Item0
 		{
 			position[]={14258.32,4.3334875,13026.549};
@@ -14123,6 +14123,54 @@ class Mission
 			name="capture_3";
 			expCond="player in (list capture_3)";
 			expActiv="[3] call life_fnc_toggleCaptureUI;";
+			expDesactiv="[0] call life_fnc_toggleCaptureUI;";
+			class Effects
+			{
+			};
+		};
+		class Item1
+		{
+			position[]={11202.17,182.41,8717.082};
+			activationBy="CIV";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			text="Capture Base 1";
+			name="capture_1";
+			expCond="player in (list capture_1)";
+			expActiv="[1] call life_fnc_toggleCaptureUI;";
+			expDesactiv="[0] call life_fnc_toggleCaptureUI;";
+			class Effects
+			{
+			};
+		};
+		class Item2
+		{
+			position[]={4869.5215,336.86002,21908.609};
+			activationBy="CIV";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			text="Capture Base 2";
+			name="capture_2";
+			expCond="player in (list capture_2)";
+			expActiv="[2] call life_fnc_toggleCaptureUI;";
+			expDesactiv="[0] call life_fnc_toggleCaptureUI;";
+			class Effects
+			{
+			};
+		};
+		class Item3
+		{
+			position[]={21995.688,28.333998,21052.883};
+			activationBy="CIV";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			text="Capture Base 4";
+			name="capture_4";
+			expCond="player in (list capture_4)";
+			expActiv="[4] call life_fnc_toggleCaptureUI;";
 			expDesactiv="[0] call life_fnc_toggleCaptureUI;";
 			class Effects
 			{
