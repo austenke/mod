@@ -11532,7 +11532,7 @@ class Mission
 			age="UNKNOWN";
 			text="Capture Base 3";
 			name="capture_3";
-			expCond="";
+			expCond="player in (list capture_3)";
 			expActiv="[3] call life_fnc_toggleCaptureUI;";
 			expDesactiv="[0] call life_fnc_toggleCaptureUI;";
 			class Effects
