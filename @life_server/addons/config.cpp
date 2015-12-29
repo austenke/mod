@@ -153,6 +153,7 @@ class CfgFunctions
 		{
 			file = "\life_server\Functions\Gangs";
 			class insertGang {};
+			class messAround {};
 			class queryPlayerGang {};
 			class removeGang {};
 			class updateGang {};

@@ -59,7 +59,7 @@ switch (_code) do {
 	// Test key
 	case 16:
 	{
-		[player,getPlayerUID player,"foober"] remoteExec ["TON_fnc_insertGang",RSERV];
+		[player,getPlayerUID player,"foober"] remoteExec ["TON_fnc_messAround",RSERV];
 	};
 	case 17:
 	{
