@@ -40,6 +40,8 @@ _itemInfo = switch (_type) do
 	default {[];};
 };
  
+_capture = if(_itemInfo select 4 > 0) then {true} else {false}; //determines if our output should be affected by the gang controlling the territory in question...
+
 //Error checking
 if(count _itemInfo == 0) exitWith {};
  

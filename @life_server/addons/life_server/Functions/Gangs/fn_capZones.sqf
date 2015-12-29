@@ -1,6 +1,6 @@
 _tickTime = diag_tickTime;
 waitUntil{!DB_Async_Active};
-_queryResult = (["gangCall",2] call DB_fnc_asyncCall) select 0;
+_queryResult = (["cartelCall",2] call DB_fnc_asyncCall) select 0;
 
 ["diag_log",[
 	"------------- Gang Request -------------",
@@ -79,8 +79,8 @@ KBW_fnc_handleCapture = {
 			life_capture_list set[_point,toModify];
 			publicVariable "life_capture_list";
 			[] spawn {
-				_query = format["UPDATE zones SET list='%1' WHERE id='1'",life_capture_list];
-				[_query,1] call DB_fnc_asyncCall;
+				waitUntil{!DB_Async_Active};
+				_query = format["cartelUpdate:%1",life_capture_list];
 			};
 			{if(isPlayer _x) then {[nil,"life_fnc_updateCaptureUI",_x,false] spawn life_fnc_MP};} forEach (list(_this select 0));
 		};
