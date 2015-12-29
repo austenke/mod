@@ -59,17 +59,6 @@ switch (_code) do {
 	// Test key
 	case 16:
 	{
-		index_fnc_messWithStuff = {
-			private["_ownerID","_uid","_gangName","_query","_queryResult","_gangMembers","_group"];
-			_ownerID = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
-			_uid = [_this,1,"",[""]] call BIS_fnc_param;
-			_gangName = [_this,2,"",[""]] call BIS_fnc_param;
-			_group = group _ownerID;
-
-			[[1,"Foobar"],"life_fnc_broadcast",_ownerID,false] call life_fnc_MP;
-		};
-
-		[player,getPlayerUID player,"foober"] remoteExec [index_fnc_messWithStuff,RSERV];
 	};
 	case 17:
 	{

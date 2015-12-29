@@ -1,9 +1,6 @@
-_query = "SELECT list FROM zones WHERE id = '1'";
-
-waitUntil{sleep (random 0.3); !DB_Async_Active};
 _tickTime = diag_tickTime;
-
-_queryResult = [_query,2] call DB_fnc_asyncCall;
+waitUntil{!DB_Async_Active};
+_queryResult = (["gangCall",2] call DB_fnc_asyncCall) select 0;
 
 ["diag_log",[
 	"------------- Gang Query Request -------------",
