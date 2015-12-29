@@ -52,13 +52,14 @@ if(_projectile in ["B_65x39_Caseless","B_9x21_Ball"] && _curWep in ["arifle_MXC_
 				_isVehicle = if(vehicle player != player) then {true} else {false};
 				//_damageHandle = false;
 
+				player allowDamage false;
+
 				systemChat "-----------------------------------";
 				systemChat format["Bullet Damage - %1",_damage];
 				systemChat format["Player Health - %1",damage player];
 				systemChat "-----------------------------------";
 
-				_damage = 0;
-				if((damage player) < .4) then {
+				if((damage player) < _damage) then {
 					hint "health low enough";
 					player setDamage .5;
 				} else {

@@ -20,7 +20,7 @@ class Life_atm_management {
 			x = 0.35;
 			y = 0.2 + (11 / 250);
 			w = 0.3;
-			h = 0.6 - (22 / 250);
+			h = 0.9;
 		};
 	};
 	
@@ -129,7 +129,7 @@ class Life_atm_management {
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
 			x = 0.35;
-			y = 0.82 - (1 / 25);
+			y = 0.9 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
