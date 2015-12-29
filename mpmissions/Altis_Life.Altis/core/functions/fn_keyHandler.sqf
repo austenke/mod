@@ -44,6 +44,18 @@ if(!(EQUAL(count (actionKeys "User10"),0)) && {(inputAction "User10" > 0)}) exit
 	true;
 };
 
+// Add redgull to user action 11
+if(!(EQUAL(count (actionKeys "User11"),0)) && {(inputAction "User11" > 0)}) exitWith {
+	[] spawn {
+		life_redgull_effect = time;
+		titleText[localize "STR_ISTR_RedGullEffect","PLAIN"];
+		player enableFatigue false;
+		waitUntil {!alive player OR ((time - life_redgull_effect) > (5 * 60))};
+		player enableFatigue true;
+	};
+	true;
+};
+
 switch (_code) do {
 	//Space key for Jumping
 	case 57: {
