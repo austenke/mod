@@ -4,7 +4,6 @@ _queryResult = (["gangCall",2] call DB_fnc_asyncCall) select 0;
 
 ["diag_log",[
 	"------------- Gang Query Request -------------",
-	format["QUERY: %1",_query],
 	format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
 	format["Result: %1",_queryResult],
 	"-------------------------------------------------"
@@ -13,7 +12,7 @@ _queryResult = (["gangCall",2] call DB_fnc_asyncCall) select 0;
 life_capture_list = _queryResult select 0;
 publicVariable "life_capture_list";
 {
-if((life_capture_list select _x) select 2 >= 0.99) then {
+if(((life_capture_list select _x) select 2) >= 0.99) then {
 	_string = (life_capture_list select _x) select 0;
 	_marker = format["capture_label_%1",(_x + 1)];
 	_marker setMarkerText format["%1 - %2",(life_capture_list select _x) select 1,_string];
