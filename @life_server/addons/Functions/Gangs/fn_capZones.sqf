@@ -1,6 +1,9 @@
 _query = "SELECT list FROM zones WHERE id = '1'";
 
+waitUntil{!DB_Async_Active};
+
 _queryResult = [_query,2] call DB_fnc_asyncCall;
+
 life_capture_list = _queryResult select 0;
 publicVariable "life_capture_list";
 {
