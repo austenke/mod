@@ -186,5 +186,6 @@ _dome allowDamage false;
 life_server_isReady = true;
 PVAR_ALL("life_server_isReady");
 
+[] execVM "\life_server\Functions\Cartels\fn_config.sqf";
 [] execVM "\life_server\Functions\airdrop\config.sqf";
 [] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";
