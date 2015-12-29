@@ -15,7 +15,7 @@ class Life_atm_management {
 		};
 		
 		class MainBackground:Life_RscText {
-			colorBackground[] = {0, 0, 0, 0.7};
+			colorBackground[] = {0, 0, 0, 0.85};
 			idc = -1;
 			x = 0.35;
 			y = 0.2 + (11 / 250);
@@ -120,7 +120,7 @@ class Life_atm_management {
 			text = "$STR_pInAct_WithdrawFromGang";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] call life_fnc_gangWithdraw";
-			y = .8; x = 0.365;
+			y = .752; x = 0.365;
 			w = 0.275;
 		};
 		
@@ -129,7 +129,7 @@ class Life_atm_management {
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
 			x = 0.35;
-			y = 0.9 - (1 / 25);
+			y = 0.82 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};

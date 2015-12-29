@@ -9,6 +9,9 @@ private["_value"];
 _value = parseNumber(ctrlText 2702);
 
 //Series of stupid checks
+_grpOwner = grpPlayer getVariable ["owner",0];
+_ownerID = getPlayerUID player;
+if(steamid != _grpOwner) exitWith {hint "You are not the owner of this gang";};
 if(_value > 999999) exitWith {hint localize "STR_ATM_GreaterThan";};
 if(_value < 0) exitWith {};
 if(!([str(_value)] call life_fnc_isnumeric)) exitWith {hint localize "STR_ATM_notnumeric"};
