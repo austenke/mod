@@ -69,7 +69,6 @@ class CfgRemoteExec {
 		F(life_fnc_wantedRemove,SERVER)
 		F(life_fnc_wantedAdd,SERVER)
 		F(TON_fnc_insertGang,SERVER)
-		F(TON_fnc_messAround,SERVER)
 		F(TON_fnc_removeGang,SERVER)
 		F(TON_fnc_updateGang,SERVER)
 		F(TON_fnc_updateHouseTrunk,SERVER)
