@@ -170,6 +170,7 @@ life_wanted_list = [];
 };
 
 [] spawn TON_fnc_initHouses;
+[] spawn TON_fnc_capZones;
 
 /* Setup the federal reserve building(s) */
 private["_dome","_rsb"];
@@ -184,6 +185,3 @@ _dome allowDamage false;
 /* Tell clients that the server is ready and is accepting queries */
 life_server_isReady = true;
 PVAR_ALL("life_server_isReady");
-
-/* Initialize hunting zone(s) */
-["hunting_zone",30] spawn TON_fnc_huntingZone;

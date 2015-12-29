@@ -33,7 +33,7 @@ class CfgServerSettings
 		LOG = false; //Custom Logging Enabled?
 		LOG_Settings[] = {{"HACKER","hacker.log"},{"LOG2","debug.log"}}; //First Selection = ID | Second Selection = Log File
 		/*Debug*/
-		MySQL_Query = false; //Log queries? Only set this to true if you are developing.
+		MySQL_Query = true; //Log queries? Only set this to true if you are developing.
 	};
 };
 
@@ -152,6 +152,7 @@ class CfgFunctions
 			class queryPlayerGang {};
 			class removeGang {};
 			class updateGang {};
+			class capZones {};
 		};
 
 		class Actions
