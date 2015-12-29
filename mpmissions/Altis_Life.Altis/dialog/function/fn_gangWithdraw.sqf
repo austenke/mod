@@ -12,10 +12,12 @@ _value = parseNumber(ctrlText 2702);
 if(_value > 999999) exitWith {hint localize "STR_ATM_GreaterThan";};
 if(_value < 0) exitWith {};
 if(!([str(_value)] call life_fnc_isnumeric)) exitWith {hint localize "STR_ATM_notnumeric"};
-if(_value > GANG_FUNDS) exitWith {hint localize "STR_NOTF_NotEnoughFunds"};
+
+_gFund = GANG_FUNDS;
+
+if(_value > _gFund) exitWith {hint localize "STR_NOTF_NotEnoughFunds"};
 
 ADD(BANK,_value);
-_gFund = GANG_FUNDS;
 SUB(_gFund,_value);
 grpPlayer SVAR ["gang_bank",_gFund,true];
 
