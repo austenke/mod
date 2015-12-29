@@ -11526,11 +11526,13 @@ class Mission
 		class Item0
 		{
 			position[]={14258.32,4.3334875,13026.549};
+			activationBy="CIV";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
 			text="Capture Base 3";
 			name="capture_3";
+			expCond="";
 			expActiv="[3] call life_fnc_toggleCaptureUI;";
 			expDesactiv="[0] call life_fnc_toggleCaptureUI;";
 			class Effects
