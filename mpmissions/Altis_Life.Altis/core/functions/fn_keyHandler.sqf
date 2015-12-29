@@ -59,7 +59,7 @@ switch (_code) do {
 	// Test key
 	case 16:
 	{
-		[5,_grpMembers] remoteExecCall ["TON_fnc_fooStuff",RSERV];
+		[player,getPlayerUID player,"foober"] remoteExec ["TON_fnc_insertGang",RSERV];
 	};
 	case 17:
 	{
