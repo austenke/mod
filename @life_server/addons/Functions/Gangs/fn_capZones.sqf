@@ -1,8 +1,17 @@
 _query = "SELECT list FROM zones WHERE id = '1'";
 
-waitUntil{!DB_Async_Active};
+waitUntil{sleep (random 0.3); !DB_Async_Active};
+_tickTime = diag_tickTime;
 
 _queryResult = [_query,2] call DB_fnc_asyncCall;
+
+["diag_log",[
+	"------------- Gang Query Request -------------",
+	format["QUERY: %1",_query],
+	format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
+	format["Result: %1",_queryResult],
+	"-------------------------------------------------"
+]] call TON_fnc_logIt;
 
 life_capture_list = _queryResult select 0;
 publicVariable "life_capture_list";
