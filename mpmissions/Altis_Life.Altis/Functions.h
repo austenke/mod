@@ -56,6 +56,12 @@ class Life_Client_Core
 		class adminFreeze {};
 		class adminMarkers {};
 	};
+
+	class Custom
+	{
+		file = "core\custom";
+		class PumpOil {};
+	};
 	
 	class Medical_System
 	{
