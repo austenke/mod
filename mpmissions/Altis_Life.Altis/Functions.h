@@ -56,12 +56,6 @@ class Life_Client_Core
 		class adminFreeze {};
 		class adminMarkers {};
 	};
-
-	class Custom
-	{
-		file = "core\custom";
-		class PumpOil {};
-	};
 	
 	class Medical_System
 	{
@@ -123,6 +117,7 @@ class Life_Client_Core
 		class BaggedHostage {};
 		class UnBagHostage {};
 		class removeWeaponAction {};
+		class PumpOil {};
 	};
 	
 	class Housing
