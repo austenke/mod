@@ -50,16 +50,8 @@ if(_projectile in ["B_65x39_Caseless","B_9x21_Ball"] && _curWep in ["arifle_MXC_
 			if(side _source == west && playerSide != west) then {
 				private["_isVehicle"];
 				_isVehicle = if(vehicle player != player) then {true} else {false};
-				//_damageHandle = false;
-
-				["diag_log",[
-					"------------- Ya got shot m8 -------------",
-					format["Target health: ",damage player],
-					format["Damage: ",_damage],
-					"-------------------------------------------------"
-				]] call TON_fnc_logIt;
-
 				_damage = 0;
+				//_damageHandle = false;
 				if((damage player) < .4) then {
 					hint "health low enough";
 					player setDamage .5;
