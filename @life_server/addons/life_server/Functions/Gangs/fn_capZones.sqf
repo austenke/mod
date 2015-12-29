@@ -80,7 +80,15 @@ KBW_fnc_handleCapture = {
 			publicVariable "life_capture_list";
 			[] spawn {
 				waitUntil{!DB_Async_Active};
+				_tickTime = diag_tickTime;
 				_query = format["cartelUpdate:%1",life_capture_list];
+				[_query,2] call DB_fnc_asyncCall;
+				["diag_log",[
+					"------------- Gang Update -------------",
+					format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
+					format["Update: %1",_query],
+					"-------------------------------------------------"
+				]] call TON_fnc_logIt;
 			};
 			{if(isPlayer _x) then {[nil,"life_fnc_updateCaptureUI",_x,false] spawn life_fnc_MP};} forEach (list(_this select 0));
 		};
