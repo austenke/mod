@@ -131,11 +131,8 @@ class CfgFunctions
 			class setObjVar {};
 			class keyManagement {};
 			class Airdrop
-		{
-			file = "\life_server\Functions\airdrop";
-			class generateAirdrop {};
 		};
-		
+
 		class Housing
 		{
 			file = "\life_server\Functions\Housing";
