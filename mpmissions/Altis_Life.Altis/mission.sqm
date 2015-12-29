@@ -13887,8 +13887,8 @@ class Mission
 		};
 		class Item245
 		{
-			position[]={26998.557,-185.51219,13999.748};
-			name="oil_rig";
+			position[]={26998.375,0.24218555,13981.132};
+			name="oilrig_1";
 			text="Oil Rig";
 			type="mil_triangle";
 			colorName="ColorRed";
