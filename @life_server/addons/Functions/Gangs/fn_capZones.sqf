@@ -11,8 +11,9 @@ _queryResult = (["gangCall",2] call DB_fnc_asyncCall) select 0;
 
 life_capture_list = _queryResult select 0;
 publicVariable "life_capture_list";
+["diag_log",[format["-- %1 --",((life_capture_list select 1) select 2)]]] call TON_fnc_logIt;
 {
-if(((life_capture_list select _x) select 2) >= 0.99) then {
+if(((life_capture_list select _x) select 2) > 0.98) then {
 	_string = (life_capture_list select _x) select 0;
 	_marker = format["capture_label_%1",(_x + 1)];
 	_marker setMarkerText format["%1 - %2",(life_capture_list select _x) select 1,_string];
