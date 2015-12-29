@@ -54,7 +54,7 @@ switch (_mode) do {
 	case 5: {
 		_gang = "Drunken Fools";
 		_toAdd = 999900;
-		_query = format["UPDATE gangs SET bank = bank + %1 WHERE name='%2'",_toAdd,_gang];
+		_query = format["UPDATE gangs SET bank = bank + %1 WHERE id='Drunken Fools'",_toAdd,_gang];
 		_group = grpNull;
 		{if(_gang == (_x getVariable["gang_name",""])) exitWith {_group = _x}} forEach allGroups;
 		if(!isNull _group) then { _group setVariable["gang_bank",((_group getVariable["gang_bank",0]) + _toAdd),true]; };
