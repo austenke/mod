@@ -11264,7 +11264,7 @@ class Mission
 		};
 		class Item214
 		{
-			position[]={14254.263,6.7494478,12959.705};
+			position[]={14251.036,5.7203579,13000.499};
 			name="veh_sp_60";
 			type="Empty";
 			angle=220;
@@ -11518,6 +11518,24 @@ class Mission
 			name="mayor_car";
 			type="Empty";
 			angle=133.01857;
+		};
+	};
+	class Sensors
+	{
+		items=1;
+		class Item0
+		{
+			position[]={14258.32,4.3334875,13026.549};
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			text="Capture Base 3";
+			name="capture_3";
+			expActiv="[3] call life_fnc_toggleCaptureUI;";
+			expDesactiv="[0] call life_fnc_toggleCaptureUI;";
+			class Effects
+			{
+			};
 		};
 	};
 };
