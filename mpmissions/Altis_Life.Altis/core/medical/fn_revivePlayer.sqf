@@ -7,7 +7,7 @@
 	Starts the revive process on the player.
 */
 private["_target","_revivable","_targetName","_ui","_progressBar","_titleText","_cP","_title"];
-_target = param [0,ObjNull,[ObjNull]];
+_target = _this [0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _target) exitWith {}; //DAFUQ?@!%$!R?EFFD?TGSF?HBS?DHBFNFD?YHDGN?D?FJH
 
 if(life_inv_defib < 1) exitWith {titleText["You need a defibrillator first!","PLAIN"];};
@@ -35,7 +35,7 @@ _cP = 0.01;
 //Lets reuse the same thing!
 while {true} do {
 	if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
-		[player,"AinvPknlMstpSnonWnonDnon_medic_1"] remoteExecCall ["life_fnc_animSync",RCLIENT];
+		[[player,"AinvPknlMstpSnonWnonDnon_medic_1"],"life_fnc_animSync",true,false] call life_fnc_MP;
 		player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
 	};
 	
@@ -55,10 +55,8 @@ while {true} do {
 //Kill the UI display and check for various states
 5 cutText ["","PLAIN"];
 player playActionNow "stop";
-
 if(_target GVAR ["Reviving",ObjNull] != player) exitWith {hint localize "STR_Medic_AlreadyReviving"};
 _target SVAR ["Reviving",NIL,TRUE];
-
 if(!alive player OR life_istazed) exitWith {life_action_inUse = false;};
 if(_target GVAR ["Revive",FALSE]) exitWith {hint localize "STR_Medic_RevivedRespawned"};
 if((player GVAR ["restrained",false])) exitWith {life_action_inUse = false;};
@@ -69,8 +67,8 @@ ADD(BANK,(LIFE_SETTINGS(getNumber,"revive_fee")));
 
 life_action_inUse = false;
 _target SVAR ["Revive",TRUE,TRUE];
-[profileName] remoteExecCall ["life_fnc_revived",_target];
-titleText[format[localize "STR_Medic_RevivePayReceive",_targetName,[(call life_revive_fee)] call life_fnc_numberText],"PLAIN"];
+[[profileName],"life_fnc_revived",_target,FALSE] call life_fnc_MP;
+titleText[format[localize "STR_Medic_RevivePayReceive",_targetName,[LIFE_SETTINGS(getNumber,"revive_fee")] call life_fnc_numberText],"PLAIN"];
 
 sleep .6;
 player reveal _target;
