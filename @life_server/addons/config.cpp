@@ -167,11 +167,6 @@ class CfgFunctions
 	};
 };
 
-class Gangs
-	{
-		class capZones {};
-	};
-
 class CfgVehicles
 {
 	class Car_F;
@@ -189,9 +184,4 @@ class CfgVehicles
 			init = "(_this select 0) execVM ""\life_server\fix_headgear.sqf""";
 		};
 	};
-};
-
-class Gangs
-{
-	class capZones {};
 };
