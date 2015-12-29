@@ -76,11 +76,11 @@ if(!((player distance (getMarkerPos "police_hq_1") < 30) OR  (player distance (g
 	_Btn6 ctrlEnable false;
 };
 
-//actually the Breathalyser button
-_Btn8 ctrlSetText localize "STR_pInAct_Breathalyzer";
-_Btn8 buttonSetAction "[[player],""life_fnc_breathalyzer"",life_pInact_curTarget,FALSE] spawn life_fnc_MP;closeDialog 0";
+//Button 8 - Remove Weapons
+_Btn8 ctrlSetText localize "STR_pInAct_RemoveWeapons";
+_Btn8 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_removeWeaponAction; closeDialog 0";
 
-//Button 9 - Remove Weapons
-_Btn9 ctrlSetText localize "STR_pInAct_RemoveWeapons";
-_Btn9 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_removeWeaponAction; closeDialog 0";
+//actually the Breathalyser button
+_Btn9 ctrlSetText localize "STR_pInAct_Breathalyzer";
+_Btn9 buttonSetAction "[[player],""life_fnc_breathalyzer"",life_pInact_curTarget,FALSE] spawn life_fnc_MP;closeDialog 0";
 		
