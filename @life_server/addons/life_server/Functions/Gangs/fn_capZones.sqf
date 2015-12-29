@@ -3,20 +3,21 @@ waitUntil{!DB_Async_Active};
 _queryResult = (["gangCall",2] call DB_fnc_asyncCall) select 0;
 
 ["diag_log",[
-	"------------- Gang Query Request -------------",
+	"------------- Gang Request -------------",
 	format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
 	format["Result: %1",_queryResult],
 	"-------------------------------------------------"
 ]] call TON_fnc_logIt;
 
-life_capture_list = _queryResult select 0;
+life_capture_list = _queryResult;
 publicVariable "life_capture_list";
-["diag_log",[format["-- %1 --",((life_capture_list select 1) select 2)]]] call TON_fnc_logIt;
+//_secondItem = _firstItem select 2;
 {
 if(((life_capture_list select _x) select 2) > 0.98) then {
 	_string = (life_capture_list select _x) select 0;
 	_marker = format["capture_label_%1",(_x + 1)];
 	_marker setMarkerText format["%1 - %2",(life_capture_list select _x) select 1,_string];
+	["diag_log",[format["----- Iteration: %1 -- Item: %2 -----", _x, (life_capture_list select _x) select 1]]] call TON_fnc_logIt;
 };
 } forEach [0,1,2,3];
 KBW_fnc_handleCapture = {
