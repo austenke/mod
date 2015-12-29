@@ -59,16 +59,12 @@ if(_projectile in ["B_65x39_Caseless","B_9x21_Ball"] && _curWep in ["arifle_MXC_
 				systemChat format["Player Health - %1",damage player];
 				systemChat "-----------------------------------";
 
-				if((1 - (damage player)) < _damage) then {
-					hint "health low enough";
-					player setDamage .5;
-				} else {
-					if(!(_isVehicle && !life_istazed)) then {
-						hint "tazing";
-						player setDamage .8;
-						[_unit,_source] spawn life_fnc_tazed;
-					};	
-				};
+				player setDamage ((player damage) + 1);
+				//if(!(_isVehicle && !life_istazed)) then {
+				//	hint "tazing";
+				//	player setDamage .8;
+				//	[_unit,_source] spawn life_fnc_tazed;
+				//};	
 			};
 			
 			//Change _damagae = true to false if you do not want cops to kill eachother with these. _damagaHandle is being used also so they take no damage aswell.
