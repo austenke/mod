@@ -22,25 +22,24 @@ _itemInfo = switch (_type) do
 {
 	case "oil": {_license = "oil";["oil_unprocessed","oil_processed",1200,(localize "STR_Process_Oil"), false];};
 	case "diamond": {_license = "diamond";["diamond_uncut","diamond_cut",1350,(localize "STR_Process_Diamond"), false];};
-	case "heroin": {_license = "heroin";["heroin_unprocessed","heroin_processed",4000,(localize "STR_Process_Heroin"), false];};
+	case "heroin": {_license = "heroin";_toSelect = ((life_capture_list) select 4);["heroin_unprocessed","heroin_processed",4000,(localize "STR_Process_Heroin"), false];};
 	case "copper": {_license = "copper";["copper_unrefined","copper_refined",750,(localize "STR_Process_Copper"), false];};
 	case "iron": {_license = "iron";["iron_unrefined","iron_refined",1120,(localize "STR_Process_Iron"), false];};
 	case "sand": {_license = "sand";["sand","glass",650,(localize "STR_Process_Sand"), false];};
 	case "salt": {_license = "salt";["salt_unrefined","salt_refined",450,(localize "STR_Process_Salt"), false];};
-	case "cocaine": {_license = "cocaine";["cocaine_unprocessed","cocaine_processed",3000,(localize "STR_Process_Cocaine"), false];};
+	case "cocaine": {_license = "cocaine";_toSelect = ((life_capture_list) select 2);["cocaine_unprocessed","cocaine_processed",3000,(localize "STR_Process_Cocaine"), false];};
 	case "marijuana": {_license = "marijuana";["cannabis","marijuana",2000,(localize "STR_Process_Marijuana"), false];};
 	case "cement": {_license = "cement";["rock","cement",350,(localize "STR_Process_Cement"), false];};
 	case "mash": {_license = "stiller";["waterBottle","mash",100,"Grinding Cornmeal",true,"cornmeal"]};//new
 	case "whiskey": {_license = "stiller";["yeast","whiskey",1000,"Fermenting Whiskey",true,"rye"]};//new
 	case "beer": {_license = "liquor";["yeast","beerp",1500,"Brewing Beer",true,"hops"]};//new
-	case "moonshine": {_license = "stiller";["yeast","moonshine",250,"Making Moonshine",true,"mash"]};//new
+	case "moonshine": {_license = "stiller";_toSelect = ((life_capture_list) select 3);["yeast","moonshine",250,"Making Moonshine",true,"mash"]};//new
 	case "bottledshine": {_license = "bottler";["moonshine","bottledshine",500,"Bottling Moonshine",false]};//new
 	case "bottledbeer": {_license = "bottler";["beerp","bottledbeer",500,"Bottling Beer",false]};//new
 	case "bottledwhiskey": {_license = "bottler";["whiskey","bottledwhiskey",500,"Bottling Whiskey",false]};//new
 	default {[];};
 };
  
-_capture = if(_itemInfo select 4 > 0) then {true} else {false}; //determines if our output should be affected by the gang controlling the territory in question...
 
 //Error checking
 if(count _itemInfo == 0) exitWith {};
@@ -121,6 +120,7 @@ if(_hasLicense) then
 		5 cutText ["","PLAIN"];
 		titleText[format["You have process %1 to %2.",_itemNameo1,_itemName],"PLAIN"];
 	};
+	[5,grpPlayer,_toSelect select 0,2000] remoteExecCall ["TON_fnc_updateGang",RSERV];
 	if(!([true,_newItem,_min] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_min] call life_fnc_handleInv; life_is_processing = false;};
 	life_is_processing = false;
 			

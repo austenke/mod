@@ -23,6 +23,8 @@ if((_itemInfo select 6) != "CfgVehicles") then {
 
 if(_bad != "") exitWith {hint _bad};
 
+
+_toSelect = ((life_capture_list) select 0);
 if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then {
 	CASH = CASH + _price;
 	[_item,false] call life_fnc_handleItem;
@@ -48,16 +50,19 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then {
 			grpPlayer setVariable["gang_bank",_funds,true];
 			[_item,true] spawn life_fnc_handleItem;
 			[1,grpPlayer] remoteExecCall ["TON_fnc_updateGang",RSERV];
+			[5,grpPlayer,_toSelect select 0,10000] remoteExecCall ["TON_fnc_updateGang",RSERV];
 		} else {
 			if(_price > CASH) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
 			hint parseText format[localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
 			SUB(CASH,_price);
+			[5,grpPlayer,_toSelect select 0,10000] remoteExecCall ["TON_fnc_updateGang",RSERV];
 			[_item,true] spawn life_fnc_handleItem;
 		};
 	} else {
 		if(_price > CASH) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
 		hint parseText format[localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
 		CASH = CASH - _price;
+		[5,grpPlayer,_toSelect select 0,10000] remoteExecCall ["TON_fnc_updateGang",RSERV];
 		[_item,true] spawn life_fnc_handleItem;
 	};
 };

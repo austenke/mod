@@ -13,6 +13,7 @@ _length = count (toArray(_gangName));
 _chrByte = toArray (_gangName);
 _allowed = toArray("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_ ");
 if(_length > 32) exitWith {hint localize "STR_GNOTF_Over32"};
+if(_gangName == "Contested") exitWith {hint localize "STR_GNOTF_IncorrectChar"};
 _badChar = false;
 {if(!(_x in _allowed)) exitWith {_badChar = true;};} foreach _chrByte;
 if(_badChar) exitWith {hint localize "STR_GNOTF_IncorrectChar";};
