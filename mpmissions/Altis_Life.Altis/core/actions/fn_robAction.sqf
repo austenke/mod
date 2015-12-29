@@ -1,4 +1,3 @@
-#include "..\..\script_macros.hpp"
 /*
 	File: fn_robAction.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -13,6 +12,6 @@ _target = cursorTarget;
 if(isNull _target) exitWith {};
 if(!isPlayer _target) exitWith {};
 
-if(_target GVAR ["robbed",false]) exitWith {};
-[player] remoteExecCall ["life_fnc_robPerson",_target];
-_target SVAR ["robbed",TRUE,TRUE];
+if(_target getVariable["robbed",false]) exitWith {};
+[[player],"life_fnc_robPerson",_target,false] call life_fnc_MP;
+_target setVariable["robbed",TRUE,TRUE];
