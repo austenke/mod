@@ -109,14 +109,6 @@ class CfgFunctions
 	class TON_System
 	{
 		tag = "TON";
-
-		class Cartels
-        {
-            file = "\life_server\Functions\Cartels";
-            class config {};
-            class HandleDB {};
-        };
-
 		class Systems
 		{
 			file = "\life_server\Functions\Systems";
