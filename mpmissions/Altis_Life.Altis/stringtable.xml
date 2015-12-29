@@ -528,6 +528,13 @@
 			<Italian>Hai despoitato €%1 nel conto bancario della tua gang</Italian>
 			<Portuguese>Você depositou R$%1 na conta da sua gangue.</Portuguese>
  		</Key>
+ 		<Key ID="STR_ATM_WithdrawGang">
+ 			<Original>You have withdrawn $%1 from your gangs bank account</Original>
+			<German>Du hast $%1 auf dein Gang Konto überwiesen</German>
+ 			<French>Vous avez déposé $%1 sur le compte bancaire de votre gang.</French>
+			<Italian>Hai despoitato €%1 nel conto bancario della tua gang</Italian>
+			<Portuguese>Você depositou R$%1 na conta da sua gangue.</Portuguese>
+ 		</Key>
 	</Package>
 	<Package name="Cell_Phone">
 		<Key ID="STR_CELL_Title">
@@ -4436,6 +4443,13 @@
 		</Key>
 		<Key ID="STR_pInAct_DepositToGang">
 			<Original>Deposit To Gang</Original>
+			<German>Auf Gang-Konto einzahlen</German>
+			<French>Déposer pour le gang</French>
+			<Italian>Deposita alla Gang</Italian>
+			<Portuguese>Depositar: Gangue</Portuguese>
+		</Key>
+		<Key ID="STR_pInAct_WithdrawFromGang">
+			<Original>Withdraw From Gang</Original>
 			<German>Auf Gang-Konto einzahlen</German>
 			<French>Déposer pour le gang</French>
 			<Italian>Deposita alla Gang</Italian>
