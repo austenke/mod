@@ -40,4 +40,5 @@ if(([true,_gather,1] call life_fnc_handleInv)) then {
 	titleText[format[localize "STR_Process_Pumped_Oil",1],"PLAIN"];
 };
 
+5 cutText ["","PLAIN"];
 life_action_inUse = false;
