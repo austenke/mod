@@ -34,7 +34,7 @@ while{true} do {
 	
 if(player distance _Pump > 10) exitWith {hint localize "STR_Process_Pump_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 
-_gather = ["oilu",1];
+_gather = ["oil_unprocessed",1];
 
 if(([true,SEL(_gather,0),_diff] call life_fnc_handleInv)) then {
 	titleText[format[localize "STR_Process_Pumped_Oil",1],"PLAIN"];
