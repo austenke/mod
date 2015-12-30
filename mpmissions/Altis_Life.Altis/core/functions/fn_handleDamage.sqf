@@ -52,17 +52,18 @@ if(_projectile in ["B_65x39_Caseless","B_9x21_Ball"] && _curWep in ["arifle_MXC_
 				_isVehicle = if(vehicle player != player) then {true} else {false};
 				//_damageHandle = false;
 
-				player allowDamage false;
+				//player allowDamage false;
 
 				systemChat "-----------------------------------";
 				systemChat format["Bullet Damage - %1",_damage];
 				systemChat format["Player Health - %1",damage player];
 				systemChat "-----------------------------------";
 
-				player setDamage ((player damage) + 1);
+				_damage = false;
+
 				if(!(_isVehicle && !life_istazed)) then {
-					hint "tazing";
-					player setDamage .8;
+					//hint "tazing";
+					//player setDamage .8;
 					[_unit,_source] spawn life_fnc_tazed;
 				};	
 			};
