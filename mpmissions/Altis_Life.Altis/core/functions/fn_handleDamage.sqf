@@ -74,7 +74,7 @@ if(_projectile in ["B_65x39_Caseless","B_9x21_Ball"] && _curWep in ["arifle_MXC_
 
 				_damage = _oldDamage + ((_damage - _oldDamage) / 20);
 
-				if((1 - damage player) > _damage && !(_isVehicle && !life_istazed)) then {
+				if(!((1 - damage player) > _damage) && !(_isVehicle && !life_istazed)) then {
 					//hint "tazing";
 					//player setDamage .8;
 					[_unit,_source] spawn life_fnc_tazed;
