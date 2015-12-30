@@ -92,6 +92,9 @@ class CfgFunctions
 			class wantedAdd {};
 			class wantedCrimes {};
 			class wantedProfUpdate {};
+			class wantedPardon{};
+			class wantedPunish{};
+			class wantedTicket{};
 		};
 		
 		class Jail_Sys
