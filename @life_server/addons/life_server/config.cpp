@@ -144,6 +144,12 @@ class CfgFunctions
 			class houseCleanup {};
 			class preCheckHouse {};
 		};
+
+		class Mayor
+		{
+			file = "\life_server\Functions\Mayor";
+			class updateMayor {};
+		};
 		
 		class Gangs
 		{

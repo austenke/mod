@@ -4479,7 +4479,7 @@
 			<Portuguese>Depositar: Gangue</Portuguese>
 		</Key>
 		<Key ID="STR_pInAct_WithdrawFromGang">
-			<Original>Withdraw From Gang</Original>
+			<Original>Take From Gang</Original>
 			<German>Auf Gang-Konto einzahlen</German>
 			<French>Déposer pour le gang</French>
 			<Italian>Deposita alla Gang</Italian>

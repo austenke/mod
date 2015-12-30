@@ -26,7 +26,7 @@ _trigger = false;
 if(_trigger) exitWith {hint "Please remove any restricted characters inside your text. Restricted Characters: '/\`:|;{}-<>"};
 
 if(!isNil 'life_mayor_entered') exitWith {hint "You have already applied for Mayor.";};
-[[player,_textToBeSent],"MAYOR_fnc_submitBallotApplication",false,false] spawn life_fnc_MP;
+[0,player,getPlayerUID player,_text] remoteExecCall  ["TON_fnc_updateMayor",RSERV];
 hint "Application sent, please wait..";
 life_mayor_entered = true;
 closeDialog 0;

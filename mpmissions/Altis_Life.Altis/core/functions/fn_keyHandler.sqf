@@ -75,7 +75,7 @@ switch (_code) do {
 	// Tab, causes surrender
 	case 15:
 	{
-		if (!_alt && vehicle player == player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed) then
+		if (!_shift && !_alt && vehicle player == player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed) then
 		{
 			if (player getVariable ["surrender", false]) then
 			{
