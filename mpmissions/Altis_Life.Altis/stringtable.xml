@@ -1853,6 +1853,13 @@
 			<Italian>%1 non ha alcun soldo.</Italian>
 			<Portuguese>%1 não tem nenhum dinheiro.</Portuguese>
 		</Key>
+		<Key ID="STR_NOTF_Pardon">
+			<Original>%1 was pardoned by %2</Original>
+			<German>%1 wurde von %2 pardon</German>
+			<French>%1 a été pardoné par %2</French>
+			<Italian>%1 è stato pardoned da %2</Italian>
+			<Portuguese>%1 foi pardoned por %2</Portuguese>
+		</Key>
 		<Key ID="STR_NOTF_Tazed">
 			<Original>%1 was tazed by %2</Original>
 			<German>%1 wurde von %2 getazert</German>
