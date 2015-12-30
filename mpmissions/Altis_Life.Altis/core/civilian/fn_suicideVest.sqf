@@ -4,12 +4,23 @@ Author: Index
 
 private["_bigBoom"];
 
-life_isSuicide = true;
+//player say3D "explosion";
+
+for [{_x=5},{_x > 0},{_x=_x-1}] do {
+
+	titleText[format["%1",_x],"PLAIN"];
+	sleep 1;
+
+	if(vest player != "V_HarnessOGL_gry") exitWith {life_isSuicide = false;};
+	if(!alive player) exitWith {life_isSuicide = false;};
+	if(life_istazed) exitWith {life_isSuicide = false;};
+}
+
+titleText["BOOOOOOM!","PLAIN"];
 
 sleep .5;
 
-
-if(vest player != "V_HarnessOGL_gry") exitWith {life_isSuicide = false;};
+life_isSuicide = true;
 
 removeVest player;
 
