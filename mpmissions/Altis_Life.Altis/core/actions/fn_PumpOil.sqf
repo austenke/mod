@@ -42,3 +42,4 @@ if(([true,_gather,1] call life_fnc_handleInv)) then {
 
 5 cutText ["","PLAIN"];
 life_action_inUse = false;
+life_is_processing = false;
