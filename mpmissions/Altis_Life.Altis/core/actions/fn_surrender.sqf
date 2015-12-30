@@ -13,6 +13,9 @@ while { player getVariable ["surrender", false] }  do {
 	if (!alive player) then {
 		player setVariable ["surrender", false, true];
 	};
+	
+	// Check if player is tazed.
+	if(life_istazed) exitWith {player setVariable ["surrender", false, true];};
 };
 
 player playMoveNow "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon"; //Animation out
