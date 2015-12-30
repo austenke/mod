@@ -11,7 +11,7 @@ _veh = cursorTarget;
 life_interrupted = false;
 if(isNull _veh) exitwith {};
 if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) then {
-	if("ToolKit" in (items player) || side == west) then {
+	if("ToolKit" in (items player) || playerSide == west) then {
 		life_action_inUse = true;
 		_displayName = FETCH_CONFIG2(getText,CONFIG_VEHICLES,(typeOf _veh),"displayName");
 		_upp = format[localize "STR_NOTF_Repairing",_displayName];
