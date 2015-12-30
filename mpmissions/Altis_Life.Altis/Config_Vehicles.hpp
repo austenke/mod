@@ -90,8 +90,7 @@ class CarShops {
 			{ "O_Heli_Light_02_unarmed_F", 2000000, "pilot" },
 			{ "B_Heli_Transport_03_unarmed_F", 7000000, "pilot" },
 			{ "O_Heli_Transport_04_box_F", 10000000, "pilot" },
-			{ "B_Heli_Transport_01_F", 5000000, "pilot" },
-			{ "O_Plane_CAS_02_F", 5000000, "jet" }
+			{ "B_Heli_Transport_01_F", 5000000, "pilot" }
 		};
 	};
 
@@ -126,6 +125,13 @@ class CarShops {
 			{ "C_Rubberboat", 5000, "boat" },
 			{ "C_Boat_Civil_01_F", 22000, "boat" },
 			{ "B_SDV_01_F", 150000, "boat" }
+		};
+	};
+
+	class jetshop {
+		side = "civ";
+		vehicles[] = {
+			{ "O_Plane_CAS_02_F", 7000000, "jet" }
 		};
 	};
 };

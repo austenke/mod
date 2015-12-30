@@ -101,8 +101,7 @@ switch (_shop) do
 		_return =
 		[
 			["B_Heli_Light_01_F",253000],
-			["O_Heli_Light_02_unarmed_F",750000],
-			["O_Plane_CAS_02_F",5000000]
+			["O_Heli_Light_02_unarmed_F",750000]
 		];
 	};
 	
@@ -147,6 +146,14 @@ switch (_shop) do
 			["C_Boat_Civil_01_police_F",20000],
 			["B_Boat_Armed_01_minigun_F",75000],
 			["B_SDV_01_F",100000]
+		];
+	};
+
+	case "jetshop":
+	{
+		_return = 
+		[
+			["O_Plane_CAS_02_F",7000000]
 		];
 	};
 };
