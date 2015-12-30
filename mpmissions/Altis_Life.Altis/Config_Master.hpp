@@ -127,6 +127,7 @@ class VirtualItems {
 	VITEMMACRO(hops, "STR_Item_Hops","hops",2,2000,1800,false,-1,"")
 	VITEMMACRO(yeast, "STR_Item_Yeast","yeast",2,2100,2000,false,-1,"")
 	VITEMMACRO(cornmeal, "STR_Item_Cornmeal","cornmeal",2,500,200,false,-1,"")
+	VITEMMACRO(mash, "STR_Item_Mash","mash",2,500,200,false,-1,"")
 	VITEMMACRO(bottles, "STR_Item_Bottles","bottles",2,100,75,false,-1,"")
 	VITEMMACRO(burlapsack, "STR_Item_BurlapSack","burlapsack",5,10000,75,false,-1,"")
 	VITEMMACRO(chainsaw, "STR_Item_Chainsaw", "chainsaw", 10, 750, 500, false,- 1, "icons\Chainsaw.paa")
