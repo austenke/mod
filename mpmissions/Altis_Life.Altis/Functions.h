@@ -225,6 +225,7 @@ class Life_Client_Core
 		class nearATM {};
 		class fadeSound {};
 		class vdmed {};
+		class speedBomb {};
 	};
 	
 	class Network

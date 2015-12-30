@@ -3460,6 +3460,13 @@
 			<Italian>Carica Esplosiva</Italian>
 			<Portuguese>Explosivo</Portuguese>
 		</Key>
+		<Key ID="STR_Item_SpeedBomb">
+			<Original>Speed Bomb</Original>
+			<German>Speed Bomb</German>
+			<French>Speed Bomb</French>
+			<Italian>Speed Bomb</Italian>
+			<Portuguese>SSpeed Bomb</Portuguese>
+		</Key>
 		<Key ID="STR_Item_BCutter">
 			<Original>Bolt Cutter</Original>
 			<German>Bolzenschneider</German>

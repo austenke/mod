@@ -33,6 +33,10 @@ switch (true) do {
 		closeDialog 0;
 	};
 
+	case (_item == "speedbomb"): {		
+		[] spawn life_fnc_speedBomb;
+	};
+
 	case (EQUAL(_item,"chainsaw")): {
 		[] spawn life_fnc_chainsawUse;
 	};
