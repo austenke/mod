@@ -56,7 +56,7 @@ if(_projectile in ["B_65x39_Caseless","B_9x21_Ball"] && _curWep in ["arifle_MXC_
 
 				//player allowDamage false;
 
-				_newDamage = .1;
+				_newDamage = .05;
 
 				_damage = (damage player) + _newDamage;
 
