@@ -10625,8 +10625,8 @@ class Mission
 		};
 		class Item649
 		{
-			position[]={26982.459,0.0016010702,14011.071};
-			azimut=180;
+			position[]={26982.459,-0.19407678,14011.071};
+			azimut=179.77106;
 			offsetY=8;
 			id=876;
 			side="EMPTY";
@@ -12536,10 +12536,10 @@ class Mission
 		};
 		class Item233
 		{
-			position[]={14282.143,17.847263,15817.409};
+			position[]={14289.473,17.836515,15825.64};
 			name="jetspawn";
 			type="Empty";
-			angle=31.671812;
+			angle=40.496479;
 		};
 		class Item234
 		{
