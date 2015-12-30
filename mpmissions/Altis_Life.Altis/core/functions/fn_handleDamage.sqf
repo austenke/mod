@@ -56,13 +56,18 @@ if(_projectile in ["B_65x39_Caseless","B_9x21_Ball"] && _curWep in ["arifle_MXC_
 
 				//player allowDamage false;
 
-				_damage = (damage player) + .05;
+				_newDamage = _damage / 5;
 
-				if(!((1 - damage player) > _damage) && !(_isVehicle && !life_istazed)) then {
-					//hint "tazing";
-					//player setDamage .8;
-					[_unit,_source] spawn life_fnc_tazed;
-				};	
+				_damage = (damage player) + _newDamage;
+
+				if(!((1 - damage player) > _damage)) then {
+					if(!(_isVehicle && !life_istazed)) then {
+						//hint "tazing";
+						//player setDamage .8;
+						[_unit,_source] spawn life_fnc_tazed;
+					}
+					_damage = 0;
+				};
 			};
 			
 			//Change _damagae = true to false if you do not want cops to kill eachother with these. _damagaHandle is being used also so they take no damage aswell.
