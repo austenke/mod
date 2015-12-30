@@ -43,6 +43,7 @@ if(_shooter isKindOf "Man" && alive player) then {
 		disableUserInput true;
 		sleep 35;
 		
+		if(_unit GVAR "restrained") exitWith {}; //He's restrained.
 		[player,"amovppnemstpsraswrfldnon"] remoteExecCall ["life_fnc_animSync",RCLIENT];
 		
 		if(!(player GVAR ["Escorting",false])) then {

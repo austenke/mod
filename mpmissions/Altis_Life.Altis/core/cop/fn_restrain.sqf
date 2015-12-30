@@ -34,6 +34,9 @@ if((player GVAR["surrender",FALSE])) then { player SVAR["surrender",FALSE,TRUE];
 titleText[format[localize "STR_Cop_Retrained",_cop GVAR ["realname",name _cop]],"PLAIN"];
 //player say3D "handcuffs";
 
+if(!(player GVAR ["Escorting",false])) then {
+	detach player;
+};
 life_istazed = false;
 player allowDamage true;
 disableUserInput false;
