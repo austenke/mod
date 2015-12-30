@@ -16,6 +16,7 @@ if(isNull _vendor OR _type == "" OR (player distance _vendor > 10)) exitWith {};
 _error1 = false; // used below check the comment there ;) 
 _error2 = false;
 _min = 0;
+_toSelect = 0;
 //unprocessed item,processed item, cost if no license,Text to display (I.e Processing  (percent) ..."
  
 _itemInfo = switch (_type) do
@@ -120,7 +121,10 @@ if(_hasLicense) then
 		5 cutText ["","PLAIN"];
 		titleText[format["You have process %1 to %2.",_itemNameo1,_itemName],"PLAIN"];
 	};
-	[5,grpPlayer,_toSelect select 0,2000] remoteExecCall ["TON_fnc_updateGang",RSERV];
+	if(_toSelect != 0) then
+	{
+		[5,grpPlayer,_toSelect select 0,2000] remoteExecCall ["TON_fnc_updateGang",RSERV];
+	};
 	if(!([true,_newItem,_min] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_min] call life_fnc_handleInv; life_is_processing = false;};
 	life_is_processing = false;
 			
@@ -158,6 +162,10 @@ else
 		
 		5 cutText ["","PLAIN"];
 		titleText[format["You have process %1 to %2 for %3$.",_itemNameo1,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
+	};
+	if(_toSelect != 0) then
+	{
+		[5,grpPlayer,_toSelect select 0,2000] remoteExecCall ["TON_fnc_updateGang",RSERV];
 	};
 	if(!([true,_newItem,_min] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_min] call life_fnc_handleInv; life_is_processing = false;};
 	life_cash = life_cash - _cost;

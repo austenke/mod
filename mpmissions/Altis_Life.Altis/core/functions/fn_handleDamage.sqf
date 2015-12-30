@@ -54,11 +54,6 @@ if(_projectile in ["B_65x39_Caseless","B_9x21_Ball"] && _curWep in ["arifle_MXC_
 
 				//player allowDamage false;
 
-				systemChat "-----------------------------------";
-				systemChat format["Bullet Damage - %1",_damage];
-				systemChat format["Player Health - %1",damage player];
-				systemChat "-----------------------------------";
-
 				_damage = false;
 
 				if(!(_isVehicle && !life_istazed)) then {
