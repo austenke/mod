@@ -32,6 +32,12 @@ if(isNull _curTarget) exitWith {
         		[] spawn life_fnc_pickAxeUse;
     		};
 		};
+		if((!life_action_inUse) && (vehicle player == player)) then {
+    		if(life_inv_chainsaw > 0) then
+    		{
+        		[] spawn life_fnc_chainsawUse;
+    		};
+		};
 		if(playerSide == civilian && !life_action_gathering) then {
 			_handle = [] spawn life_fnc_gather;
 			waitUntil {scriptDone _handle};

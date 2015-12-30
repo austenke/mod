@@ -17,7 +17,7 @@ switch (true) do {
 	default {""};
 };
 //Mine check
-if(EQUAL(_mine,"")) exitWith {hint localize "STR_ISTR_Logging_NotNear"};
+if(EQUAL(_mine,"")) exitWith {};
 if(vehicle player != player) exitWith {hint localize "STR_ISTR_Logging_MineVeh";};
 
 _diff = [SEL(_mine,0),SEL(_mine,1),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;

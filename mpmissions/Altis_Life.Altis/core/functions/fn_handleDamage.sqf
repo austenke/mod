@@ -56,23 +56,7 @@ if(_projectile in ["B_65x39_Caseless","B_9x21_Ball"] && _curWep in ["arifle_MXC_
 
 				//player allowDamage false;
 
-				switch(_selection)do{
-
-					case("head"):{_oldDamage = _unit getHitPointDamage "HitHead";};
-
-					case("body"):{_oldDamage = _unit getHitPointDamage "HitBody";};
-
-					case("hands"):{_oldDamage = _unit getHitPointDamage "HitHands";};
-
-					case("legs"):{_oldDamage = _unit getHitPointDamage "HitLegs";};
-
-					case(""):{_oldDamage = damage _unit;};
-
-					default{};
-
-				};
-
-				_damage = _oldDamage + ((_damage - _oldDamage) / 20);
+				_damage = (damage player) + .05;
 
 				if(!((1 - damage player) > _damage) && !(_isVehicle && !life_istazed)) then {
 					//hint "tazing";
