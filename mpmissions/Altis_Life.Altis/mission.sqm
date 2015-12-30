@@ -3803,7 +3803,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=654;
+		items=652;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -10587,8 +10587,8 @@ class Mission
 		};
 		class Item649
 		{
-			position[]={26985.326,0.13994372,14013.861};
-			azimut=270.10486;
+			position[]={26982.459,0.0016010702,14011.071};
+			azimut=180;
 			offsetY=8;
 			id=874;
 			side="EMPTY";
@@ -10598,42 +10598,19 @@ class Mission
 		};
 		class Item650
 		{
-			position[]={26985.33,0.14522848,14012.188};
-			azimut=270.10486;
-			offsetY=8;
-			id=875;
-			side="EMPTY";
-			vehicle="Land_Device_assembled_F";
-			skill=0.60000002;
-			init="this enableSimulation true;this allowDamage false;this setdir 190.32;this setVectorUp [0,0,1]; this addAction[""Pump Oil"",life_fnc_PumpOil,""""];";
-		};
-		class Item651
-		{
-			position[]={26985.379,0.1507833,14010.717};
-			azimut=270.10486;
-			offsetY=8;
-			id=876;
-			side="EMPTY";
-			vehicle="Land_Device_assembled_F";
-			skill=0.60000002;
-			init="this enableSimulation true;this allowDamage false;this setdir 190.32;this setVectorUp [0,0,1]; this addAction[""Pump Oil"",life_fnc_PumpOil,""""];";
-		};
-		class Item652
-		{
 			position[]={6245.1528,43,16280.563};
 			azimut=270.10501;
-			offsetY=8;
-			id=877;
+			id=875;
 			side="EMPTY";
 			vehicle="Land_Device_assembled_F";
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false; this addAction[""Process Oil"",life_fnc_processAction,""oil"",0,false,false,"""",' life_inv_oilu > 0 && !life_is_processing']; this addAction[""Oil Processing ($2,000,000)"",life_fnc_buyLicense,""oil"",0,false,false,"""",' !license_civ_oil && playerSide == civilian '];";
 		};
-		class Item653
+		class Item651
 		{
 			position[]={16857.352,12.375484,15468.38};
 			azimut=246.34142;
-			id=878;
+			id=876;
 			side="EMPTY";
 			vehicle="Land_CashDesk_F";
 			skill=0.60000002;
@@ -12358,7 +12335,7 @@ class Mission
 			name="bank_1";
 			text="Kavala Financial";
 			type="loc_Tourism";
-			colorName="ColorWEST";
+			colorName="ColorYellow";
 		};
 		class Item215
 		{
