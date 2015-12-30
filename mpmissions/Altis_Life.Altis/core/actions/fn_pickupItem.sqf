@@ -31,7 +31,7 @@ if(!(EQUAL(_diff,SEL(_itemInfo,1)))) then {
 		player playMove "AinvPknlMstpSlayWrflDnon";
 		
 		_this SVAR ["item",[SEL(_itemInfo,0),(SEL(_itemInfo,1)) - _diff],true];
-		titleText[format[localize "STR_NOTF_Picked",_diff,localize _itemName],"PLAIN"];
+		titleText[format[localize "STR_NOTF_Picked",_diff,_itemName],"PLAIN"];
 		INUSE(_this);
 	} else {
 		INUSE(_this);
@@ -42,7 +42,7 @@ if(!(EQUAL(_diff,SEL(_itemInfo,1)))) then {
 		//waitUntil{isNull _this};
 		player playMove "AinvPknlMstpSlayWrflDnon";
 		
-		titleText[format[localize "STR_NOTF_Picked",_diff,localize _itemName],"PLAIN"];
+		titleText[format[localize "STR_NOTF_Picked",_diff,_itemName],"PLAIN"];
 	} else {
 		INUSE(_this);
 	};

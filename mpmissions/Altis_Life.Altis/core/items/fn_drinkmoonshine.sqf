@@ -9,6 +9,8 @@ enableCamShake true;
 
 player setVariable["inDrink",true,true];
 
+titleText "Holy FUCK this is strong!";
+
 for "_i" from 0 to 89 do
 {
     if(life_drink > 0.15) then {
