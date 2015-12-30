@@ -31,7 +31,7 @@ _itemInfo = switch (_type) do
 	case "cocaine": {_license = "cocaine";_toSelect = ((life_capture_list) select 2);["cocaine_unprocessed","cocaine_processed",3000,(localize "STR_Process_Cocaine"), false];};
 	case "marijuana": {_license = "marijuana";["cannabis","marijuana",2000,(localize "STR_Process_Marijuana"), false];};
 	case "cement": {_license = "cement";["rock","cement",350,(localize "STR_Process_Cement"), false];};
-	case "mash": {_license = "stiller";["waterBottle","mash",100,"Grinding Cornmeal",true,"cornmeal"]};//new
+	case "mash": {_license = "stiller";["waterBottle","mash",100,"Mixing Ingredients",true,"cornmeal"]};//new
 	case "whiskey": {_license = "stiller";["yeast","whiskey",1000,"Fermenting Whiskey",true,"rye"]};//new
 	case "beer": {_license = "liquor";["yeast","beerp",1500,"Brewing Beer",true,"hops"]};//new
 	case "moonshine": {_license = "stiller";_toSelect = ((life_capture_list) select 3);["yeast","moonshine",250,"Making Moonshine",true,"mash"]};//new
