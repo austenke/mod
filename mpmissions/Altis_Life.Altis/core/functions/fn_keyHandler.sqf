@@ -60,7 +60,6 @@ if(!(EQUAL(count (actionKeys "User11"),0)) && {(inputAction "User11" > 0)}) exit
 
 switch (_code) do {
 	
-
 	//Space key for Jumping
 	case 57: {
 		if(isNil "jumpActionTime") then {jumpActionTime = 0;};
@@ -94,54 +93,6 @@ switch (_code) do {
 	case 17:
 	{
 		//[[1,2],"STR_ISTR_Bolt_AlertBank",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
-	};
-
-	//Lock and unlock, uses U Key
-	case 22:
-	{
-		if(!_alt && !_ctrlKey) then
-		{
-			if(vehicle player == player) then
-			{
-				_veh = cursorTarget;
-			}
-				else
-			{
-				_veh = vehicle player;
-			};
-			
-			_locked = locked _veh;
-			
-			if(_veh in life_vehicles && player distance _veh < 6.5 OR vehicle player == _veh) then
-			{
-				if(_locked == 2) then
-				{
-					if(local _veh) then
-					{
-						_veh lock 0;
-					}
-						else
-					{
-						[[_veh,0], "life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
-					};
-					systemChat "You have unlocked your vehicle.";
-					[[_veh],"life_fnc_UnLockCarSound",nil,true] spawn life_fnc_MP;
-				}
-					else
-				{
-					if(local _veh) then
-					{
-						_veh lock 2;
-					}
-						else
-					{
-						[[_veh,2], "life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
-					};
-					systemChat "You have locked your vehicle.";
-					[[_veh],"life_fnc_LockCarSound",nil,true] spawn life_fnc_MP;
-				};
-			};
-		};
 	};
 
 	//Map Key
@@ -307,15 +258,15 @@ case 33:
 		};
 	};
 	
-//Shift+P = Faded Sound
-case 25:
-{
-    if(_shift) then
-    {
-        [] call life_fnc_fadeSound;
-        _handled = true;
-    };
-};
+	//Shift+P = Faded Sound
+	case 25:
+	{
+    	if(_shift) then
+    	{
+    	    [] call life_fnc_fadeSound;
+    	    _handled = true;
+ 	   };
+	};
 
 	//U Key
 	case 22: {
@@ -351,6 +302,7 @@ case 25:
 						} else {
 							[_veh,0] remoteExecCall ["life_fnc_lockVehicle",_veh];
 						};
+						[[_veh],"life_fnc_UnLockCarSound",nil,true] spawn life_fnc_MP;
 						systemChat localize "STR_MISC_VehUnlock";
 					} else {
 						if(local _veh) then {
@@ -358,6 +310,7 @@ case 25:
 						} else {
 							[_veh,2] remoteExecCall ["life_fnc_lockVehicle",_veh];
 						};	
+						[[_veh],"life_fnc_LockCarSound",nil,true] spawn life_fnc_MP;
 						systemChat localize "STR_MISC_VehLock";
 					};
 				};
