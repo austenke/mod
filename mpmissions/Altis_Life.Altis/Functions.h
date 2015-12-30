@@ -400,6 +400,7 @@ class Life_Client_Core
 		class wireTransfer {};
 	};
 
+	/*
 	class Mayor
 	{
 		file = "core\mayor";
@@ -411,6 +412,7 @@ class Life_Client_Core
 		class openBallotApplicationMenu {};
 		class openBallotApplicationMenuClient {};
 	};
+	*/
 
 	class Cam
 	{
