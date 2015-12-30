@@ -56,7 +56,11 @@ if(!(EQUAL(count (actionKeys "User11"),0)) && {(inputAction "User11" > 0)}) exit
 	true;
 };
 
+
+
 switch (_code) do {
+	
+
 	//Space key for Jumping
 	case 57: {
 		if(isNil "jumpActionTime") then {jumpActionTime = 0;};
@@ -68,6 +72,21 @@ switch (_code) do {
 		};
 	};
 	
+	// Tab, causes surrender
+	case 15:
+	{
+		if (vehicle player == player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed) then
+		{
+			if (player getVariable ["surrender", false]) then
+			{
+				player setVariable ["surrender", false, true];
+			} else
+			{
+				[] spawn life_fnc_surrender;
+			};
+		};
+	};
+
 	// Test key
 	case 16:
 	{
@@ -176,27 +195,6 @@ switch (_code) do {
 			_handled = true;
 		};
 	};
-	
-	//surrender... shift + g
-	case 34:
-	{
-		if(_shift) then {_handled = true;};
-
-		if (_shift) then
-		{
-			if (vehicle player == player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed) then
-			{
-				if (player getVariable ["surrender", false]) then
-				{
-					player setVariable ["surrender", false, true];
-				} else
-				{
-					[] spawn life_fnc_surrender;
-				};
-			};
-		};
-	};
-
 	//T Key (Trunk)
 	case 20: {
 		if(!_alt && !_ctrlKey && !dialog && {!life_action_inUse}) then {
