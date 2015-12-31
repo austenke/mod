@@ -1,14 +1,11 @@
-//Index is a god
-
-_foo = [_this,0,"",[""]] call BIS_fnc_param;
-
-_display = findDisplay 9000;
-_list = _display displayCtrl 9001;
-_data = lbData[9001,(lbCurSel 9001)];
-_data = call compile format["%1", _data];
-if(isNil "_data") exitWith {};
-if(typeName _data != "ARRAY") exitWith {};
-if(count _data == 0) exitWith {};
-
-_left=[_data,3] call KRON_StrLeft
-[getPlayerUID _foo,name _foo,_left] remoteExecCall ["life_fnc_wantedAdd",RSERV];
+private["_unit","_amount"];
+ctrlShow[2001,false];
+if((lbCurSel 9902) == -1) exitWith {hint "Niemand wurde ausgewaehlt!";ctrlShow[2001,true];};
+_unit = lbData [9902,lbCurSel 9902];
+_unit = call compile format["%1",_unit];
+_amount = lbData [9991,lbCurSel 9991];
+if(isNil "_unit") exitWith {ctrlShow[2001,true];};
+//if(_unit == player) exitWith {ctrlShow[2001,true];};
+if(isNull _unit) exitWith {ctrlShow[2001,true];};
+[[1,format["Nach %1 wird nun gefahndet.",name _unit,_amount,getPlayerUID _unit]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+[[getPlayerUID _unit,name _unit,_amount],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;

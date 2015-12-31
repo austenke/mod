@@ -1,4 +1,4 @@
-//fn_wantedadd2.sqfprivate["_display","_list","_side"];
+private["_display","_list","_side"];
 
 disableSerialization;
 
