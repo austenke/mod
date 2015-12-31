@@ -92,9 +92,9 @@ class Clothing {
 		side = "cop";
 
 		uniforms[] = {
-			{ "U_Marshal", "Cadet Outfit", 500, { "life_coplevel", "SCALAR", 2 } },
-			{ "U_Rangemaster", "Constable and Up", 500, { "life_coplevel", "SCALAR", 2 } },
-			{ "U_B_CombatUniform_mcam", "Lieutenant and Up", 500, { "life_coplevel", "SCALAR", 2 } }
+			{ "U_Marshal", "Cadet Outfit", 500, { "life_coplevel", 1 } },
+			{ "U_Rangemaster", "Constable and Up", 500, { "life_coplevel", 2 } },
+			{ "U_B_CombatUniform_mcam", "Lieutenant and Up", 500, { "life_coplevel", 7 } }
 		};
 
 		headgear[] = {
@@ -164,6 +164,10 @@ class Clothing {
 			{ "H_ShemagOpen_khk", "", 800, { "", "", -1 } },
 			{ "H_Bandanna_camo", "", 650, { "", "", -1 } },
 			{ "H_Booniehat_tan", "", 650, { "", "", -1 } },
+			{ "H_BandMask_blk", "", 650, { "", "", -1 } },
+			{ "H_BandMask_khk", "", 650, { "", "", -1 } },
+			{ "H_BandMask_reaper", "", 650, { "", "", -1 } },
+			{ "H_BandMask_demon", "", 650, { "", "", -1 } },
 			{ "H_HelmetB_light_desert", "", 5000, { "", "", -1 } },
 			{ "H_CrewHelmetHeli_B", "Gas Mask", 35000, { "", "", -1 } }
 		};
