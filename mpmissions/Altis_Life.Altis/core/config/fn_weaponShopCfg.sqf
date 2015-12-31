@@ -23,7 +23,7 @@ switch(_shop) do {
 		switch(true) do {
 			case (playerSide != west): {"You are not a cop!"};
 			case (FETCH_CONST(life_coplevel) == 0): {"You are not a whitelisted officer of the law!"};
-			case (FETCH_CONST(life_coplevel) == 1): {"You are not Cadet rank!"};
+			case (FETCH_CONST(life_coplevel) == 1):
 			default {
 				["Altis Cadet Shop",
 					[
@@ -37,7 +37,7 @@ switch(_shop) do {
 					]
 				];
 			};
-			case (FETCH_CONST(life_coplevel) == 2): {"You are not at a Constable rank!"};
+			case (FETCH_CONST(life_coplevel) == 2):
 			default {
 				["Altis Constable weapon Shop",
 					[
@@ -56,7 +56,7 @@ switch(_shop) do {
 					]
 				];
 			};
-			case (FETCH_CONST(life_coplevel) == 3): {"You are not the Corporal rank!"};
+			case (FETCH_CONST(life_coplevel) == 3):
 			default {
 				["Altis Corporal weapon Shop",
 					[
@@ -77,7 +77,7 @@ switch(_shop) do {
 					]
 				];
 			};
-			case (FETCH_CONST(life_coplevel) == 4): {"You are not the Sergeant rank!"};
+			case (FETCH_CONST(life_coplevel) == 4):
 			default {
 				["Altis Sergeant weapon Shop",
 					[
@@ -102,7 +102,7 @@ switch(_shop) do {
 					]
 				];
 			};
-			case (FETCH_CONST(life_coplevel) == 5): {"You are not the Lieutenant rank!"};
+			case (FETCH_CONST(life_coplevel) == 5):
 			default {
 				["Altis Lieutenant weapon Shop",
 					[
@@ -126,7 +126,7 @@ switch(_shop) do {
 					]
 				];
 			};
-			case (FETCH_CONST(life_coplevel) == 6): {"You are not the Captain rank!"};
+			case (FETCH_CONST(life_coplevel) == 6):
 			default {
 				["Altis Captain weapon Shop",
 					[
@@ -150,7 +150,7 @@ switch(_shop) do {
 					]
 				];
 			};
-			case (FETCH_CONST(life_coplevel) == 7): {"You are not the Chief rank!"};
+			case (FETCH_CONST(life_coplevel) == 7):
 			default {
 				["Altis Chief shop",
 					[
@@ -170,6 +170,22 @@ switch(_shop) do {
 						["ItemGPS",nil,500],
 						["Binocular",nil,500],
 						["ToolKit",nil,500],
+						["FirstAidKit",nil,500]
+					]
+				];
+			};
+		};
+	};
+
+	case "cop_equipment": {
+		switch (true) do {
+			case (playerside !=west): {"You are not a cop"};
+			case (FETCH_CONST(life_coplevel) > 0):
+			default {
+				["APD Equipment",
+					[
+						["ItemGPS",nil,500],
+						["Binocular",nil,500],
 						["FirstAidKit",nil,500]
 					]
 				];
