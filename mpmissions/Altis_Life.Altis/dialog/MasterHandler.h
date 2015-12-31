@@ -6,6 +6,7 @@
 #include "player_inv.hpp"
 #include "gang.hpp"
 #include "key_chain.hpp"
+	#include "key_chain2.hpp"
 #include "impound.hpp"
 #include "bank.hpp"
 #include "veh_shop.hpp"

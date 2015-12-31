@@ -166,6 +166,7 @@ class Life_Client_Core
 		class useItem {};
 		class cellphone {};
 		class keyMenu {};
+		class keyMenu2 {};
 		class keyGive {};
 		class keyDrop {};
 		class s_onSliderChange {};
