@@ -157,8 +157,6 @@ class Life_Client_Core
 		class wantedList {};
 		class wantedInfo {};
 		class wantedMenu {};
-		class chargeCrime {};
-		class indexWanted {};
 		class pardon {};
 		class giveItem {};
 		class giveMoney {};
