@@ -263,6 +263,18 @@
 			<German>TP Hier</German>
 			<French>TP Ici</French>
 		</Key>
+		<Key ID="STR_Admin_TpTo">
+			<Original>TP To</Original>
+			<English>TP To</English>
+			<German>TP To</German>
+			<French>TP To</French>
+		</Key>
+		<Key ID="STR_Admin_Revive">
+			<Original>Revive</Original>
+			<English>Revive</English>
+			<German>Revive</German>
+			<French>Revive</French>
+		</Key>
 		<Key ID="STR_Admin_Debug">
 			<Original>Debug</Original>
 			<English>Debug</English>

@@ -171,5 +171,15 @@ class life_admin_menu {
 			h = (1 / 25);
 
 		};
+		class Revive : Life_RscButtonMenu {
+			idc = 2912;
+			text = "$STR_Admin_Revive";
+			onButtonClick = "[[name player],"life_fnc_revived",cursorTarget,FALSE] spawn life_fnc_MP;";
+			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.9;
+			w = (6.25 / 40);
+			h = (1 / 25);
+
+		};
 	};
 };
