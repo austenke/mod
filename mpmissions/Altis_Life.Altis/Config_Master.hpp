@@ -294,7 +294,7 @@ class VirtualShops {
 
 	class cop {
 		name = "STR_Shops_Cop";
-		items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "fuelFull", "defusekit" };
+		items[] = { "donuts", "coffee", "spikeStrip", "redgull", "defib", "fuelFull", "defusekit" };
 	};
 
 	class cement {
