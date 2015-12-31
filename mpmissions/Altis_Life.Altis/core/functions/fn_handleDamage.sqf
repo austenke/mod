@@ -47,7 +47,7 @@ if(!isNull _source) then {
 	};
 };
 
-if(_magazine in ["30Rnd_65x39_caseless_mag_Tracer","9mm 30Rnd Mag"] && _curWep in ["arifle_MXC_Black_F","arifle_MX_Black_F","arifle_MXM_Black_F","SMG_02_F"]) then {
+if(_magazines in ["30Rnd_65x39_caseless_mag_Tracer","9mm 30Rnd Mag"] && _curWep in ["arifle_MXC_Black_F","arifle_MX_Black_F","arifle_MXM_Black_F","SMG_02_F"]) then {
 			//copied from taser source
 			if(side _source == west && playerSide != west) then {
 				private["_isVehicle"];
