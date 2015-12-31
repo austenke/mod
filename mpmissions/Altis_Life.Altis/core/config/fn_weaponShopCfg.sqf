@@ -29,7 +29,7 @@ switch(_shop) do {
 					[
 						["SMG_02_F",nil,50000],
 						["30Rnd_9x21_Mag",nil,200],
-						["optic_Holosight",nil,9000],
+						["optic_Holosight",nil,9000]
 					]
 				];
 			};
@@ -45,7 +45,7 @@ switch(_shop) do {
 						["optic_MRCO",nil,500],
 						["optic_Hamr",nil,500],
 						["optic_Aco",nil,500],
-						["optic_Holosight",nil,500],				
+						["optic_Holosight",nil,500]			
 					]
 				];
 			};
