@@ -17,9 +17,9 @@ if(FETCH_CONST(life_adminlevel) < 5) exitWith {closeDialog 0; hint localize "STR
 if(life_stealth) then {
         life_stealth = false;
         titleText ["Stealth mode disabled","PLAIN"]; titleFadeOut 2;
-        [[player,false],"TON_fnc_hideObj",false,false] call life_fnc_mp;
+        player hideObject false;
 } else {
         life_stealth = true;
         titleText ["Stealth mode enabled","PLAIN"]; titleFadeOut 2;
-        [[player,true],"TON_fnc_hideObj",false,false] call life_fnc_mp;
+        player hideObject true;
 };

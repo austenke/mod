@@ -153,30 +153,30 @@ class life_admin_menu {
 			h = (1 / 25);
 		};
 		class TeleportTo : Life_RscButtonMenu {
-			idc = 2907;
+			idc = 2912;
 			text = "$STR_Admin_TpTo";
 			onButtonClick = "[] call life_fnc_adminTpTo;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.9;
+			y = 0.92;
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
 		class Stealth : Life_RscButtonMenu {
-			idc = 2912;
+			idc = 2913;
 			text = "$STR_Admin_Stealth";
 			onButtonClick = "[] spawn life_fnc_adminStealth;";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.9;
+			y = 0.92;
 			w = (6.25 / 40);
 			h = (1 / 25);
 
 		};
 		class Revive : Life_RscButtonMenu {
-			idc = 2912;
+			idc = 2914;
 			text = "$STR_Admin_Revive";
 			onButtonClick = "[[name player],"life_fnc_revived",cursorTarget,FALSE] spawn life_fnc_MP;";
 			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.9;
+			y = 0.92;
 			w = (6.25 / 40);
 			h = (1 / 25);
 
