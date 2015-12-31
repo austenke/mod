@@ -14,11 +14,7 @@ for [{_x=5},{_x > 0},{_x=_x-1}] do {
 	if(vest player != "V_HarnessOGL_gry") exitWith {life_isSuicide = false;};
 	if(!alive player) exitWith {life_isSuicide = false;};
 	if(life_istazed) exitWith {life_isSuicide = false;};
-}
-
-titleText["BOOOOOOM!","PLAIN"];
-
-sleep .5;
+};
 
 life_isSuicide = true;
 

@@ -25,4 +25,5 @@ titleText["You have attached a speed bomb to this vehicle.","PLAIN"];
 	_bigBoom setPos (getPos _veh);
 	_bigBoom setVelocity [100,0,0];
 	hint "A speed bomb you planted on a vehicle has detonated!";
+	[[0,format["%1 has detonated a speed bomb!",name player]],"life_fnc_broadcast",true,false] call life_fnc_MP;
 };
