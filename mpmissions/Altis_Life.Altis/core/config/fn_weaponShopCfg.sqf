@@ -27,13 +27,9 @@ switch(_shop) do {
 			default {
 				["Altis Cadet Shop",
 					[
-						["SMG_02_F","Cadet Gun",5000],
+						["SMG_02_F",nil,50000],
 						["30Rnd_9x21_Mag",nil,200],
 						["optic_Holosight",nil,9000],
-						["ItemGPS",nil,100],
-						["Binocular",nil,150],
-						["ToolKit",nil,250],
-						["FirstAidKit",nil,150]
 					]
 				];
 			};
@@ -41,18 +37,15 @@ switch(_shop) do {
 			default {
 				["Altis Constable weapon Shop",
 					[
-						["arifle_MX_Black_F",nil,5000],
-						["arifle_MXC_Black_F",nil,5000],
+						["arifle_MX_Black_F",nil,100000],
+						["arifle_MXC_Black_F",nil,100000],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
+						["30Rnd_65x39_caseless_mag",nil,500],
 						["optic_Arco",nil,50],
 						["optic_MRCO",nil,500],
 						["optic_Hamr",nil,500],
 						["optic_Aco",nil,500],
-						["optic_Holosight",nil,500],
-						["ItemGPS",nil,500],
-						["Binocular",nil,500],
-						["ToolKit",nil,500],
-						["FirstAidKit",nil,500]					
+						["optic_Holosight",nil,500],				
 					]
 				];
 			};
@@ -60,20 +53,16 @@ switch(_shop) do {
 			default {
 				["Altis Corporal weapon Shop",
 					[
-						["arifle_MX_Black_F",nil,5000],
-						["arifle_MXC_Black_F",nil,5000],
+						["arifle_MX_Black_F",nil,100000],
+						["arifle_MXC_Black_F",nil,100000],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
+						["30Rnd_65x39_caseless_mag",nil,500],
 						["optic_Arco",nil,50],
 						["optic_MRCO",nil,500],
 						["optic_Hamr",nil,500],
 						["optic_DMS",nil,500],
 						["optic_Aco",nil,500],
-						["optic_Holosight",nil,500],
-						["smokeshellyellow","TearGas",2000],
-						["ItemGPS",nil,500],
-						["Binocular",nil,500],
-						["ToolKit",nil,500],
-						["FirstAidKit",nil,500]
+						["optic_Holosight",nil,500]
 					]
 				];
 			};
@@ -81,9 +70,10 @@ switch(_shop) do {
 			default {
 				["Altis Sergeant weapon Shop",
 					[
-						["arifle_MX_Black_F",nil,5000],
-						["arifle_MXC_Black_F",nil,5000],
+						["arifle_MX_Black_F",nil,100000],
+						["arifle_MXC_Black_F",nil,100000],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
+						["30Rnd_65x39_caseless_mag",nil,500],
 						["optic_Arco",nil,50],
 						["optic_MRCO",nil,500],
 						["optic_Hamr",nil,500],
@@ -94,11 +84,7 @@ switch(_shop) do {
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
 						["bipod_02_F_blk",nil,500],
-						["smokeshellyellow","TearGas",2000],
-						["ItemGPS",nil,500],
-						["Binocular",nil,500],
-						["ToolKit",nil,500],
-						["FirstAidKit",nil,500]
+						["smokeshellyellow","TearGas",2000]
 					]
 				];
 			};
@@ -106,8 +92,11 @@ switch(_shop) do {
 			default {
 				["Altis Lieutenant weapon Shop",
 					[
-						["arifle_MXM_Black_F",nil,500],
+						["arifle_MX_Black_F",nil,100000],
+						["arifle_MXC_Black_F",nil,100000],
+						["arifle_MXM_Black_F",nil,200000],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
+						["30Rnd_65x39_caseless_mag",nil,500],
 						["optic_Arco",nil,50],
 						["optic_MRCO",nil,500],
 						["optic_Hamr",nil,500],
@@ -118,11 +107,7 @@ switch(_shop) do {
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
 						["bipod_02_F_blk",nil,500],
-						["smokeshellyellow","TearGas",2000],
-						["ItemGPS",nil,500],
-						["Binocular",nil,500],
-						["ToolKit",nil,500],
-						["FirstAidKit",nil,500]
+						["smokeshellyellow","TearGas",2000]
 					]
 				];
 			};
@@ -130,8 +115,11 @@ switch(_shop) do {
 			default {
 				["Altis Captain weapon Shop",
 					[
-						["arifle_MXM_Black_F",nil,500],
+						["arifle_MX_Black_F",nil,100000],
+						["arifle_MXC_Black_F",nil,100000],
+						["arifle_MXM_Black_F",nil,200000],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
+						["30Rnd_65x39_caseless_mag",nil,500],
 						["optic_Arco",nil,50],
 						["optic_MRCO",nil,500],
 						["optic_Hamr",nil,500],
@@ -142,11 +130,7 @@ switch(_shop) do {
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
 						["bipod_02_F_blk",nil,500],
-						["smokeshellyellow","TearGas",2000],
-						["ItemGPS",nil,500],
-						["Binocular",nil,500],
-						["ToolKit",nil,500],
-						["FirstAidKit",nil,500]
+						["smokeshellyellow","TearGas",2000]
 					]
 				];
 			};
@@ -154,8 +138,11 @@ switch(_shop) do {
 			default {
 				["Altis Chief shop",
 					[
-						["arifle_MXM_Black_F",nil,500],
+						["arifle_MX_Black_F",nil,100000],
+						["arifle_MXC_Black_F",nil,100000],
+						["arifle_MXM_Black_F",nil,200000],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
+						["30Rnd_65x39_caseless_mag",nil,500],
 						["optic_Arco",nil,50],
 						["optic_MRCO",nil,500],
 						["optic_Hamr",nil,500],
@@ -166,11 +153,7 @@ switch(_shop) do {
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
 						["bipod_02_F_blk",nil,500],
-						["smokeshellyellow","TearGas",2000],
-						["ItemGPS",nil,500],
-						["Binocular",nil,500],
-						["ToolKit",nil,500],
-						["FirstAidKit",nil,500]
+						["smokeshellyellow","TearGas",2000]
 					]
 				];
 			};
