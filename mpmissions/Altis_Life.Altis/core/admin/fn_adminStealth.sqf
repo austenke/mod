@@ -5,9 +5,10 @@
  
 	Description: Enables God mode for Admin
 */
-if(FETCH_CONST(life_adminlevel) < 5) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
- 
+
 _foo = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+
+if(_foo getVariable["life_adminlevel",false] < 1) exitWith {closeDialog 0; hint "You are not an admin, good try though";};
 
 [] spawn {
   while {dialog} do {
