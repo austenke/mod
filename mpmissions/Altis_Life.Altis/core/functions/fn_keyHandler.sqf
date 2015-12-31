@@ -61,7 +61,7 @@ if(!(EQUAL(count (actionKeys "User11"),0)) && {(inputAction "User11" > 0)}) exit
 switch (_code) do {
 	
 	//Delete, fade sound
-	case 57: {
+	case 211: {
 		[] call life_fnc_fadeSound;
     	_handled = true;
 	};
