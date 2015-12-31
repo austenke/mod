@@ -152,5 +152,24 @@ class life_admin_menu {
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
+		class TeleportTo : Life_RscButtonMenu {
+			idc = 2907;
+			text = "$STR_Admin_TpTo";
+			onButtonClick = "[] call life_fnc_adminTpTo;";
+			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.9;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		class Stealth : Life_RscButtonMenu {
+			idc = 2912;
+			text = "$STR_Admin_Stealth";
+			onButtonClick = "[] spawn life_fnc_adminStealth;";
+			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.9;
+			w = (6.25 / 40);
+			h = (1 / 25);
+
+		};
 	};
 };
