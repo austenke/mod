@@ -23,7 +23,6 @@ class playerHUD {
 	onLoad = "uiNamespace setVariable ['playerHUD',_this select 0]";
 	objects[] = {};
 	controls[] = {
-		LIFE_UI_BACK,
 		LIFE_BAR_FOOD,
 		LIFE_BAR_WATER,
 		LIFE_BAR_HEALTH,
