@@ -103,7 +103,7 @@ class Life_Settings {
 
 //Virtual Items
 class VirtualItems {
-	VITEMMACRO(defib, "STR_Item_Defib", "defib", 10, 20000, -1, false, -1, "")
+	VITEMMACRO(defib, "STR_Item_Defib", "defib", 10, 20000, -1, false, -1, "icons\ico_defib.paa")
 
 	//Misc
 	VITEMMACRO(pickaxe, "STR_Item_Pickaxe", "pickaxe", 4, 750, 350, false, -1, "icons\ico_pickaxe.paa")
@@ -129,7 +129,7 @@ class VirtualItems {
 	VITEMMACRO(cornmeal, "STR_Item_Cornmeal","cornmeal",2,500,200,false,-1,"")
 	VITEMMACRO(mash, "STR_Item_Mash","mash",2,500,200,false,-1,"")
 	VITEMMACRO(bottles, "STR_Item_Bottles","bottles",2,100,75,false,-1,"")
-	VITEMMACRO(burlapsack, "STR_Item_BurlapSack","burlapsack",5,10000,75,false,-1,"")
+	VITEMMACRO(burlapsack, "STR_Item_BurlapSack","burlapsack",5,10000,75,false,-1,"icons\ico_blindfold.paa")
 	VITEMMACRO(speedbomb, "STR_Item_SpeedBomb","speedbomb",5,10000,75,false,-1,"icons\ico_speedbomb.paa")
 	VITEMMACRO(chainsaw, "STR_Item_Chainsaw", "chainsaw", 10, 750, 500, false,- 1, "icons\Chainsaw.paa")
 
