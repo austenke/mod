@@ -3,7 +3,7 @@ class Life_key_management2 {
 	name= "life_key_chain2";
 	movingEnable = false;
 	enableSimulation = true;
-	//onLoad = "[] spawn life_fnc_keyMenu;";
+	onLoad = "[] spawn life_fnc_keyMenu2;";
 	
 	class controlsBackground {
 		class Life_RscTitleBackground:Life_RscText {
