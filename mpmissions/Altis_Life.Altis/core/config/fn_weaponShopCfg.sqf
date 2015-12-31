@@ -22,22 +22,8 @@ switch(_shop) do {
 	case "cop_basic": {
 		switch(true) do {
 			case (playerSide != west): {"You are not a cop!"};
-			default {
-				["Altis Cop Shop",
-					[]
-				];
-			};
-		};
-	};
-	
-	case "cop_cadet":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (FETCH_CONST(life_coplevel) < 1): {"You are not the Cadet rank!"};
-			default
-			{
+			case (FETCH_CONST(life_coplevel) == 0): {"You are not a whitelisted officer of the law!"};
+			case (FETCH_CONST(life_coplevel) == 1):
 				["Altis Cadet Shop",
 					[
 						["SMG_02_F","Cadet Gun",5000],
@@ -50,17 +36,7 @@ switch(_shop) do {
 					]
 				];
 			};
-		};
-	};
-
-	case "cop_constable":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (FETCH_CONST(life_coplevel) < 2): {"You are not at a Constable rank!"};
-			default
-			{
+			case (FETCH_CONST(life_coplevel) == 2): {"You are not at a Constable rank!"};
 				["Altis Constable weapon Shop",
 					[
 						["arifle_MX_Black_F",nil,5000],
@@ -74,20 +50,11 @@ switch(_shop) do {
 						["ItemGPS",nil,500],
 						["Binocular",nil,500],
 						["ToolKit",nil,500],
-						["FirstAidKit",nil,500]					]
+						["FirstAidKit",nil,500]					
+					]
 				];
 			};
-		};
-	};
-
-	case "cop_corporal":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (FETCH_CONST(life_coplevel) < 3): {"You are not the Corporal rank!"};
-			default
-			{
+			case (FETCH_CONST(life_coplevel) == 3): {"You are not the Corporal rank!"};
 				["Altis Corporal weapon Shop",
 					[
 						["arifle_MX_Black_F",nil,5000],
@@ -107,17 +74,7 @@ switch(_shop) do {
 					]
 				];
 			};
-		};
-	};
-
-	case "cop_sergeant":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (FETCH_CONST(life_coplevel) < 4): {"You are not the Sergeant rank!"};
-			default
-			{
+			case (FETCH_CONST(life_coplevel) == 4): {"You are not the Sergeant rank!"};
 				["Altis Sergeant weapon Shop",
 					[
 						["arifle_MX_Black_F",nil,5000],
@@ -141,17 +98,7 @@ switch(_shop) do {
 					]
 				];
 			};
-		};
-	};
-
-	case "cop_lieutenant":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (FETCH_CONST(life_coplevel) < 5): {"You are not the Lieutenant rank!"};
-			default
-			{
+			case (FETCH_CONST(life_coplevel) == 5): {"You are not the Lieutenant rank!"};	
 				["Altis Lieutenant weapon Shop",
 					[
 						["arifle_MXM_Black_F",nil,500],
@@ -174,17 +121,7 @@ switch(_shop) do {
 					]
 				];
 			};
-		};
-	};
-
-	case "cop_captain":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (FETCH_CONST(life_coplevel) < 6): {"You are not the Captain rank!"};
-			default
-			{
+			case (FETCH_CONST(life_coplevel) == 6): {"You are not the Captain rank!"};
 				["Altis Captain weapon Shop",
 					[
 						["arifle_MXM_Black_F",nil,500],
@@ -207,17 +144,7 @@ switch(_shop) do {
 					]
 				];
 			};
-		};
-	};
-
-	case "cop_chief":
-	{
-		switch(true) do
-		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (FETCH_CONST(life_coplevel) < 7): {"You are not the Chief rank!"};
-			default
-			{
+			case (FETCH_CONST(life_coplevel) == 7): {"You are not the Chief rank!"};
 				["Altis Chief shop",
 					[
 						["arifle_MXM_Black_F",nil,500],

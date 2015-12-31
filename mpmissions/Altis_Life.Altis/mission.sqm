@@ -2672,7 +2672,7 @@ class Mission
 				class Item47
 				{
 					position[]={3274.4619,2.1988311,12974.263};
-					azimut=182.04906;
+					azimut=182.049;
 					offsetY=0.2;
 					special="NONE";
 					id=144;
@@ -2680,7 +2680,7 @@ class Mission
 					vehicle="B_RangeMaster_F";
 					skill=0.60000002;
 					text="h1_3";
-					init="this enableSimulation false;  this addAction[""Cop Item Shop"",life_fnc_virt_menu,""cop""];  this allowDamage false;  this addAction[""Cop Clothing Shop"",life_fnc_clothingMenu,""cop""]; this addAction[""Cadet Weapon Shop"",life_fnc_weaponShopMenu,""cop_cadet""];  this addAction[""Constable Weapon Shop"",life_fnc_weaponShopMenu,""cop_constable""];  this addAction[""Corporal Weapon Shop"",life_fnc_weaponShopMenu,""cop_corporal""];  this addAction[""Sergeant Weapon Shop"",life_fnc_weaponShopMenu,""cop_sergeant""]; this addAction[""Lieutenant Weapon Shop"",life_fnc_weaponShopMenu,""cop_lieutenant""]; this addAction[""Captain Weapon Shop"",life_fnc_weaponShopMenu,""cop_captain""]; this addAction[""Chief Weapon Shop"",life_fnc_weaponShopMenu,""cop_chief""];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cAir"",0,false,false,"""",' !license_cop_cAir && playerSide == west '];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cg"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cg"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cg"",0,false,false,"""",' !license_cop_cg && playerSide == west '];";
+					init="this enableSimulation false;  this addAction[""Cop Item Shop"",life_fnc_virt_menu,""cop""];  this allowDamage false;  this addAction[""Cop Clothing Shop"",life_fnc_clothingMenu,""cop""];this addAction[""<t color='#FFFF00'>Weapons Locker</t>"",life_fnc_weaponShopMenu,""cop_basic""];this addAction[""<t color='#FFFF00'>Equipment Locker</t>"",life_fnc_weaponShopMenu,""cop_equipment""];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cAir"",0,false,false,"""",' !license_cop_cAir && playerSide == west '];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cg"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cg"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cg"",0,false,false,"""",' !license_cop_cg && playerSide == west '];";
 				};
 				class Item48
 				{
