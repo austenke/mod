@@ -28,7 +28,7 @@ class Life_key_management2 {
 	class controls {
 
 		
-		class Title2 : Life_RscTitle {
+		class Title : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = -1;
 			text = "$STR_Keys_Title";
@@ -38,7 +38,7 @@ class Life_key_management2 {
 			h = (1 / 25);
 		};
 		
-		class KeyChainList2 : Life_RscListBox 
+		class KeyChainList : Life_RscListBox 
 		{
 			idc = 9951;
 			text = "";
@@ -48,7 +48,7 @@ class Life_key_management2 {
 			w = 0.56; h = 0.370;
 		};
 
-		class CloseButtonKey2 : Life_RscButtonMenu {
+		class CloseButtonKey : Life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
@@ -58,7 +58,7 @@ class Life_key_management2 {
 			h = (1 / 25);
 		};
 		
-		class NearPlayers2 : Life_RscCombo {
+		class NearPlayers : Life_RscCombo {
 		
 		idc = 9952;
 		
@@ -67,7 +67,7 @@ class Life_key_management2 {
 		
 		};
 		
-		class DropKey2 : life_RscButtonMenu {
+		class DropKey : life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Keys_DropKey";
 			onButtonClick = "[] call life_fnc_keyDrop";
@@ -77,7 +77,7 @@ class Life_key_management2 {
 			h = (1 / 25);
 		};
 		
-		class GiveKey2 : Life_RscButtonMenu {
+		class GiveKey : Life_RscButtonMenu {
 			idc = 9953;
 			text = "$STR_Keys_GiveKey";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};

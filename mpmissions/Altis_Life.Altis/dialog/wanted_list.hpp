@@ -101,7 +101,7 @@ class life_wanted_menu {
 			idc = 2405;
 			text = "$STR_PM_AddWanted";
 			onButtonClick = "[] call life_fnc_keyMenu2; closeDialog 0;";
-			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
