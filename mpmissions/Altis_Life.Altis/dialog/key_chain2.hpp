@@ -1,9 +1,9 @@
-class Life_key_management {
+class Life_key_management2 {
 	idd = 9950;
-	name= "life_key_chain";
+	name= "life_key_chain2";
 	movingEnable = false;
 	enableSimulation = true;
-	onLoad = "[] spawn life_fnc_keyMenu;";
+	//onLoad = "[] spawn life_fnc_keyMenu;";
 	
 	class controlsBackground {
 		class Life_RscTitleBackground:Life_RscText {
@@ -28,7 +28,7 @@ class Life_key_management {
 	class controls {
 
 		
-		class Title : Life_RscTitle {
+		class Title2 : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = -1;
 			text = "$STR_Keys_Title";
@@ -38,7 +38,7 @@ class Life_key_management {
 			h = (1 / 25);
 		};
 		
-		class KeyChainList : Life_RscListBox 
+		class KeyChainList2 : Life_RscListBox 
 		{
 			idc = 9951;
 			text = "";
@@ -48,7 +48,7 @@ class Life_key_management {
 			w = 0.56; h = 0.370;
 		};
 
-		class CloseButtonKey : Life_RscButtonMenu {
+		class CloseButtonKey2 : Life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Global_Close";
 			onButtonClick = "closeDialog 0;";
@@ -58,7 +58,7 @@ class Life_key_management {
 			h = (1 / 25);
 		};
 		
-		class NearPlayers : Life_RscCombo {
+		class NearPlayers2 : Life_RscCombo {
 		
 		idc = 9952;
 		
@@ -67,7 +67,7 @@ class Life_key_management {
 		
 		};
 		
-		class DropKey : life_RscButtonMenu {
+		class DropKey2 : life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_Keys_DropKey";
 			onButtonClick = "[] call life_fnc_keyDrop";
@@ -77,7 +77,7 @@ class Life_key_management {
 			h = (1 / 25);
 		};
 		
-		class GiveKey : Life_RscButtonMenu {
+		class GiveKey2 : Life_RscButtonMenu {
 			idc = 9953;
 			text = "$STR_Keys_GiveKey";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
