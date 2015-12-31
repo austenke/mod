@@ -23,7 +23,7 @@ switch(_shop) do {
 		switch(true) do {
 			case (playerSide != west): {"You are not a cop!"};
 			case (FETCH_CONST(life_coplevel) == 0): {"You are not a whitelisted officer of the law!"};
-			case (FETCH_CONST(life_coplevel) == 1):
+			case (FETCH_CONST(life_coplevel) == 1): {"You are not Cadet rank!"};
 			default {
 				["Altis Cadet Shop",
 					[
