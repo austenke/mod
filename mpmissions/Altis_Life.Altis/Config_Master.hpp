@@ -130,7 +130,7 @@ class VirtualItems {
 	VITEMMACRO(mash, "STR_Item_Mash","mash",2,500,200,false,-1,"")
 	VITEMMACRO(bottles, "STR_Item_Bottles","bottles",2,100,75,false,-1,"")
 	VITEMMACRO(burlapsack, "STR_Item_BurlapSack","burlapsack",5,10000,75,false,-1,"")
-	VITEMMACRO(speedbomb, "STR_Item_SpeedBomb","speedbomb",5,10000,75,false,-1,"")
+	VITEMMACRO(speedbomb, "STR_Item_SpeedBomb","speedbomb",5,10000,75,false,-1,"icons\ico_speedbomb.paa")
 	VITEMMACRO(chainsaw, "STR_Item_Chainsaw", "chainsaw", 10, 750, 500, false,- 1, "icons\Chainsaw.paa")
 
 	//Mined Items
