@@ -69,8 +69,8 @@ class Life_key_management2 {
 		
 		class DropKey : life_RscButtonMenu {
 			idc = -1;
-			text = "$STR_Keys_DropKey";
-			onButtonClick = "[] call life_fnc_keyDrop";
+			text = "$STR_PM_ChargeCrime";
+			onButtonClick = "";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);

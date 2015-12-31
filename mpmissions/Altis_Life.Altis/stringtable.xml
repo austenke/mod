@@ -1227,11 +1227,11 @@
 			<Portuguese>Add Crimes</Portuguese>
 		</Key>
 		<Key ID="STR_PM_ChargeCrime">
-			<Original>Charge</Original>
-			<German>Charge</German>
-			<French>Charge</French>
-			<Italian>Charge</Italian>
-			<Portuguese>Charge</Portuguese>
+			<Original>Charge Crime</Original>
+			<German>Charge Crime</German>
+			<French>Charge Crime</French>
+			<Italian>Charge Crime</Italian>
+			<Portuguese>Charge Crime</Portuguese>
 		</Key>
 		<Key ID="STR_PM_CellPhone">
 			<Original>Cell Phone</Original>
