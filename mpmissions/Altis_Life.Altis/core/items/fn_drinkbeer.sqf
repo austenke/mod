@@ -26,7 +26,7 @@ for "_i" from 0 to 59 do
 		sleep 1;
 	};
 };
-if (life_drink > 0.22) then {
+if (life_drink > 0.2) then {
 			titleText [localize "STR_MISC_DrunkBlackOut","BLACK OUT"];
 			player playMoveNow "Incapacitated";
 			//titleText[localize "STR_MISC_DrunkBlackOut","BLACK IN"];

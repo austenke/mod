@@ -1219,6 +1219,20 @@
 			<Italian>Lista Ricercati</Italian>
 			<Portuguese>Lista de Foragidos</Portuguese>
 		</Key>
+		<Key ID="STR_PM_AddWanted">
+			<Original>Add Crimes</Original>
+			<German>Add Crimes</German>
+			<French>Add Crimes</French>
+			<Italian>Add Crimes</Italian>
+			<Portuguese>Add Crimes</Portuguese>
+		</Key>
+		<Key ID="STR_PM_ChargeCrime">
+			<Original>Charge</Original>
+			<German>Charge</German>
+			<French>Charge</French>
+			<Italian>Charge</Italian>
+			<Portuguese>Charge</Portuguese>
+		</Key>
 		<Key ID="STR_PM_CellPhone">
 			<Original>Cell Phone</Original>
 			<German>Telefon</German>
