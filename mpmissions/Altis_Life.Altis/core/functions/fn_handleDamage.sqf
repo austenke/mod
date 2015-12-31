@@ -6,7 +6,7 @@
 	Description:
 	Handles damage, specifically for handling the 'tazer' pistol and nothing else.
 */
-private["_unit","_damage","_source","_projectile","_part","_curWep",];
+private["_unit","_damage","_source","_projectile","_part","_curWep"];
 _unit = SEL(_this,0);
 _part = SEL(_this,1);
 _damage = SEL(_this,2);
