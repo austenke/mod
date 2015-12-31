@@ -5,6 +5,7 @@ Author: Index
 private["_bigBoom"];
 
 if(life_blowUp) exitWith {}; //Already detonating
+if(player getVariable["restrained",false]) exitWith {hint "You are restrained";};
 
 //player say3D "explosion";
 
