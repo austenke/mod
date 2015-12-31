@@ -39,14 +39,13 @@ SUB(_units,[player]);
 			_text = switch (true) do {
 				case (_x in (units grpPlayer) && playerSide == civilian): {format["<t color='#00FF00'>%1</t>",(_x GVAR ["realname",name _x])];};
 				case (!isNil {(_x GVAR "rank")}): {format["<img image='%1' size='1'></img> %2",switch ((_x GVAR "rank")) do {
-					case (2) : {_name = format["Constable %1", name _x];_icon = MISSION_ROOT + "icons\ico_constable.paa";};
+					case 2: {"icons\ico_constable.paa"};
 					case 3: {"icons\ico_corporal.paa"}; 
-					case 4: {"\a3\ui_f\data\gui\cfg\Ranks\sergeant_gs.paa"};
-					case 5: {"\a3\ui_f\data\gui\cfg\Ranks\lieutenant_gs.paa"};
-					case 6: {"\a3\ui_f\data\gui\cfg\Ranks\captain_gs.paa"};
-					case 7: {"\a3\ui_f\data\gui\cfg\Ranks\major_gs.paa"};
-					case 8: {"\a3\ui_f\data\gui\cfg\Ranks\colonel_gs.paa"};
-					default {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};
+					case 4: {"icons\ico_sergeant.paa"};
+					case 5: {"icons\ico_lieutenant.paa"};
+					case 6: {"\a3\ui_f\data\gui\cfg\Ranks\major_gs.paa"};
+					case 7: {"\a3\ui_f\data\gui\cfg\Ranks\colonel_gs.paa"};
+					default {"icons\ico_cadet.paa"};
 					},_x GVAR ["realname",name _x]]};
 				case ((!isNil {_x GVAR "name"} && playerSide == independent)): {format["<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img></t> %1",_x GVAR ["name","Unknown Player"]]};
 				default {
@@ -57,6 +56,7 @@ SUB(_units,[player]);
 					};
 				};
 			};
+			if(_x getVariable ["DirectVON",false]) then {_text = "<t color='#00FF88'>[TALKING] " + _text};
 			_idc ctrlSetStructuredText parseText _text;
 			_idc ctrlSetPosition [_sPos select 0, _sPos select 1, 0.4, 0.65];
 			_idc ctrlSetScale scale;
