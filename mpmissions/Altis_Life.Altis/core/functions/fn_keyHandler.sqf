@@ -60,6 +60,12 @@ if(!(EQUAL(count (actionKeys "User11"),0)) && {(inputAction "User11" > 0)}) exit
 
 switch (_code) do {
 	
+	//Delete, fade sound
+	case 57: {
+		[] call life_fnc_fadeSound;
+    	_handled = true;
+	};
+
 	//Space key for Jumping
 	case 57: {
 		if(isNil "jumpActionTime") then {jumpActionTime = 0;};
@@ -244,29 +250,6 @@ case 33:
             };                                            
         };
     };
-	
-	//O Key
-	case 24: {
-		if(_shift) then {
-			if (soundVolume != 1) then {
-				1 fadeSound 1;
-				systemChat localize "STR_MISC_soundnormal";
-			} else {
-				1 fadeSound 0.1;
-				systemChat localize "STR_MISC_soundfade";
-			};
-		};
-	};
-	
-	//Shift+P = Faded Sound
-	case 25:
-	{
-    	if(_shift) then
-    	{
-    	    [] call life_fnc_fadeSound;
-    	    _handled = true;
- 	   };
-	};
 
 	//U Key
 	case 22: {
