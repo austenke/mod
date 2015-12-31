@@ -174,7 +174,7 @@ class life_admin_menu {
 		class Revive : Life_RscButtonMenu {
 			idc = 2914;
 			text = "$STR_Admin_Revive";
-			onButtonClick = "[[name player],"life_fnc_revived",cursorTarget,FALSE] spawn life_fnc_MP;";
+			onButtonClick = "[[name player],'life_fnc_revived',cursorTarget,FALSE] spawn life_fnc_MP;";
 			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.92;
 			w = (6.25 / 40);
