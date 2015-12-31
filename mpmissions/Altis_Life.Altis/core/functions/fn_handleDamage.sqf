@@ -6,7 +6,7 @@
 	Description:
 	Handles damage, specifically for handling the 'tazer' pistol and nothing else.
 */
-private["_unit","_damage","_source","_projectile","_part","_curWep"];
+private["_unit","_damage","_source","_curMags","_part","_curWep",];
 _unit = SEL(_this,0);
 _part = SEL(_this,1);
 _damage = SEL(_this,2);
@@ -47,7 +47,7 @@ if(!isNull _source) then {
 	};
 };
 
-if(_mag in ["30Rnd_65x39_caseless_mag_Tracer","9mm 30Rnd Mag"] && _curWep in ["arifle_MXC_Black_F","arifle_MX_Black_F","arifle_MXM_Black_F","SMG_02_F"]) then {
+if(_curMags in ["30Rnd_65x39_caseless_mag_Tracer","9mm 30Rnd Mag"] && _curWep in ["arifle_MXC_Black_F","arifle_MX_Black_F","arifle_MXM_Black_F","SMG_02_F"]) then {
 			//copied from taser source
 			if(side _source == west && playerSide != west) then {
 				private["_isVehicle"];
