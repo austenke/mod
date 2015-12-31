@@ -4,7 +4,13 @@ Author: Index
 
 private["_bigBoom"];
 
+if(life_isSuicide) exitWith {}; //Already detonating
+
 //player say3D "explosion";
+
+life_isSuicide = true;
+
+[[0,format["%1 is about to detonate their suicide vest!",name player]],"life_fnc_broadcast",true,false] call life_fnc_MP;
 
 for [{_x=5},{_x > 0},{_x=_x-1}] do {
 
@@ -15,8 +21,6 @@ for [{_x=5},{_x > 0},{_x=_x-1}] do {
 	if(!alive player) exitWith {life_isSuicide = false;};
 	if(life_istazed) exitWith {life_isSuicide = false;};
 };
-
-life_isSuicide = true;
 
 removeVest player;
 

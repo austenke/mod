@@ -3027,11 +3027,11 @@
 			<Original>Cornmeal Grains</Original>
 		</Key>
 		<Key ID="STR_Item_Defib">
-			<Original>Defib</Original>
-			<German>Defib</German>
-			<French>Defib</French>
-			<Italian>Defib</Italian>
-			<Portuguese>Defib</Portuguese>
+			<Original>Defibrillator</Original>
+			<German>Defibrillator</German>
+			<French>Defibrillator</French>
+			<Italian>Defibrillator</Italian>
+			<Portuguese>Defibrillator</Portuguese>
 		</Key>
 		<Key ID="STR_Item_Cannabis">
 			<Original>Cannabis</Original>
@@ -3466,6 +3466,13 @@
 			<French>Speed Bomb</French>
 			<Italian>Speed Bomb</Italian>
 			<Portuguese>SSpeed Bomb</Portuguese>
+		</Key>
+		<Key ID="STR_Item_BurlapSack">
+			<Original>Burlap Sack</Original>
+			<German>Burlap Sack</German>
+			<French>Burlap Sack</French>
+			<Italian>Burlap Sack</Italian>
+			<Portuguese>Burlap Sack</Portuguese>
 		</Key>
 		<Key ID="STR_Item_BCutter">
 			<Original>Bolt Cutter</Original>

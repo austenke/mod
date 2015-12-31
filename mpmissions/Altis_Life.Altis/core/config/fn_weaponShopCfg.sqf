@@ -323,6 +323,8 @@ switch(_shop) do {
 						["smokeshellpurple",nil,5000],
 						["smokeshellorange",nil,5000],
 						["smokeshellblue",nil,5000],
+						["NVGoggles_INDEP",nil,1000],
+						["NVGoggles",nil,1000],
 						["ItemGPS",nil,500],
 						["Binocular",nil,500],
 						["ToolKit",nil,20000],
