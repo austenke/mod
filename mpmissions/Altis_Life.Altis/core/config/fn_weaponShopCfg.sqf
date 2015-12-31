@@ -200,7 +200,7 @@ switch(_shop) do {
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are not a civilian!"};
-			case (!license_civ_rebel): {"You don't have a Rebel training license!"};
+			case (!license_civ_rebel): {"You don't have  Rebel training!"};
 			default
 			{
 				["Mohammed's Jihadi Shop",
@@ -255,19 +255,32 @@ switch(_shop) do {
 						["smokeshellred",nil,5000],
 						["smokeshellpurple",nil,5000],
 						["smokeshellorange",nil,5000],
-						["smokeshellblue",nil,5000],
-						["NVGoggles_INDEP",nil,1000],
-						["NVGoggles",nil,1000],
-						["ItemGPS",nil,500],
-						["Binocular",nil,500],
-						["ToolKit",nil,20000],
-						["FirstAidKit",nil,500]
+						["smokeshellblue",nil,5000]
 				    ]
 				];
 			};
 		};
 	};
 	
+	case "rebel_equipment": {
+		switch (true) do {
+			case (playerside !=civilian): {"You are not a civilian!"};
+			case (!license_civ_rebel): {"You dont have Rebel Training!"};
+			default {
+				["Rebel Equipment",
+					[
+						["NVGoggles_INDEP",nil,1000],
+						["NVGoggles",nil,1000],
+						["ItemGPS",nil,500],
+						["Binocular",nil,500],
+						["ToolKit",nil,20000],
+						["FirstAidKit",nil,500]
+					]
+				];
+			};
+		};
+	};
+
 	case "gun":
 	{
 		switch(true) do
