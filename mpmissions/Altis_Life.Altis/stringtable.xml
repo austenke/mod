@@ -245,6 +245,13 @@
 			<Italian>Vedi ID</Italian>
 			<Portuguese>Obter ID</Portuguese>
 		</Key>
+		<Key ID="STR_Admin_Stealth">
+			<Original>Stealth</Original>
+			<German>Stealth</German>
+			<French>Stealth</French>
+			<Italian>Stealth</Italian>
+			<Portuguese>Stealth</Portuguese>
+		</Key>
 		 <Key ID="STR_Admin_Spectate">
 			<Original>Spectate</Original>
 			<English>Spectate</English>

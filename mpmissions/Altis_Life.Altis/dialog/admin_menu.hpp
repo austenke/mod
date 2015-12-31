@@ -157,16 +157,16 @@ class life_admin_menu {
 			text = "$STR_Admin_TpTo";
 			onButtonClick = "[] call life_fnc_adminTpTo;";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.92;
+			y = 0.95;
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
 		class Stealth : Life_RscButtonMenu {
 			idc = 2913;
 			text = "$STR_Admin_Stealth";
-			onButtonClick = "[] spawn life_fnc_adminStealth;";
+			onButtonClick = "[player] remoteExecCall ['life_fnc_corpse',0];";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.92;
+			y = 0.95;
 			w = (6.25 / 40);
 			h = (1 / 25);
 
@@ -176,7 +176,7 @@ class life_admin_menu {
 			text = "$STR_Admin_Revive";
 			onButtonClick = "[[name player],'life_fnc_revived',cursorTarget,FALSE] spawn life_fnc_MP;";
 			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.92;
+			y = 0.95;
 			w = (6.25 / 40);
 			h = (1 / 25);
 
