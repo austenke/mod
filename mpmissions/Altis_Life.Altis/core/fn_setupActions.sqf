@@ -8,7 +8,7 @@ switch (playerSide) do {
 	case civilian: {
 		// Blow up big boi
 		life_actions = life_actions + [player addAction["<t color='#FFCC00'>Blow Up!</t>",life_fnc_suicideVest,"",0,false,false,"",' 
-		life_blowUp == false && alive player && vest player == "V_HarnessOGL_gry" && !(player getVariable "restrained") ']];
+		alive player && vest player == "V_HarnessOGL_gry" && !(player getVariable "restrained") ']];
 		//Drop fishing net
 		life_actions = [player addAction[localize "STR_pAct_DropFishingNet",life_fnc_dropFishingNet,"",0,false,false,"",'
 		(surfaceisWater (getPos vehicle player)) && (vehicle player isKindOf "Ship") && life_carryWeight < life_maxWeight && speed (vehicle player) < 2 && speed (vehicle player) > -1 && !life_net_dropped ']];

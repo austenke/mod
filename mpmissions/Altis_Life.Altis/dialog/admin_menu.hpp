@@ -161,10 +161,10 @@ class life_admin_menu {
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
-		class Stealth : Life_RscButtonMenu {
+		class WantedList : Life_RscButtonMenu {
 			idc = 2913;
-			text = "$STR_Admin_Stealth";
-			onButtonClick = "[player] remoteExecCall ['life_fnc_adminStealth',0];";
+			text = "$STR_PM_WantedList";
+			onButtonClick = "[] call life_fnc_wantedMenu;";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.93;
 			w = (6.25 / 40);
