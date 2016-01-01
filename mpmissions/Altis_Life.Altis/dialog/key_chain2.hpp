@@ -31,7 +31,7 @@ class Life_key_management2 {
 		class Title : Life_RscTitle {
 			colorBackground[] = {0, 0, 0, 0};
 			idc = -1;
-			text = "$STR_Keys_Title";
+			text = "$STR_PM_AddCharges";
 			x = 0.1;
 			y = 0.2;
 			w = 0.6;
@@ -70,7 +70,7 @@ class Life_key_management2 {
 		class DropKey : life_RscButtonMenu {
 			idc = -1;
 			text = "$STR_PM_ChargeCrime";
-			onButtonClick = "";
+			onButtonClick = "[] spawn life_fnc_chargeCrime;";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);

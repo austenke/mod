@@ -97,14 +97,14 @@ class life_wanted_menu {
 			h = (1 / 25);
 		};
 
-		class AddCrimeKey : Life_RscButtonMenu {
-			idc = 2405;
-			text = "$STR_PM_AddWanted";
-			onButtonClick = "closeDialog 0; createDialog ""Life_key_management2"";";
-			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.8 - (1 / 25);
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
+		//class AddCrimeKey : Life_RscButtonMenu {
+		//	idc = 2405;
+		//	text = "$STR_PM_AddWanted";
+		//	onButtonClick = "closeDialog 0; createDialog ""Life_key_management2"";";
+		//	x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+		//	y = 0.8 - (1 / 25);
+		//	w = (6.25 / 40);
+		//	h = (1 / 25);
+		//};
 	};
 };

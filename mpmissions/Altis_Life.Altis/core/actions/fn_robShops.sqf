@@ -54,7 +54,7 @@ _pgText ctrlSetText format["Robbery in Progress, stay close (3m) (1%1)...","%"];
 _progress progressSetPosition 0.01;
 _cP = 0.01;
  
-if(_rip) then
+if(life_action_inUse) then
 {
 	[[_shop],"life_fnc_robberyStart",nil,true] spawn life_fnc_MP;
 	while{true} do
@@ -70,7 +70,7 @@ if(_rip) then
 	};
 
 	if!(alive _robber) exitWith { life_action_inUse = false; deleteMarker _marker; };
-	if(_robber distance _shop > 6.5) exitWith { life_action_inUse = false; deleteMarker _marker; _shop switchMove ""; hint "You need to stay close to rob the store! - Now the register is locked."; 5 cutText ["","PLAIN"]; _rip = false; };
+	if(_robber distance _shop > 6.5) exitWith { life_action_inUse = false; deleteMarker _marker; _shop switchMove ""; hint "You need to stay close to rob the store! - Now the register is locked."; 5 cutText ["","PLAIN"]; };
 	5 cutText ["","PLAIN"];
 
 	titleText[format["You have stolen $%1, now get away before the cops arrive!",[_kassa] call life_fnc_numberText],"PLAIN"];
@@ -82,7 +82,7 @@ if(_rip) then
 	[[getPlayerUID _robber,name _robber,"211"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 	[[_shop],"life_fnc_robberyFinish",nil,true] spawn life_fnc_MP;
 
-	_rip = false;
+	//_rip = false;
 	life_use_atm = false;
 	sleep (30 + random(180));
 	life_use_atm = true;

@@ -87,6 +87,6 @@ _Btn9 ctrlSetText localize "STR_pInAct_Breathalyzer";
 _Btn9 buttonSetAction "[[player],""life_fnc_breathalyzer"",life_pInact_curTarget,FALSE] spawn life_fnc_MP;closeDialog 0";
 
 //add charge crimes button
-_Btn10 ctrlSetText "Charge With Crimes";
+_Btn10 ctrlSetText localize "STR_PM_AddWanted";
 _Btn10 buttonSetAction "closeDialog 0; createDialog ""Life_key_management2"";";
 

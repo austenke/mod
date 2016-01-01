@@ -1226,6 +1226,13 @@
 			<Italian>Add Crimes</Italian>
 			<Portuguese>Add Crimes</Portuguese>
 		</Key>
+		<Key ID="STR_PM_AddCharges">
+			<Original>Add Charges To Suspect</Original>
+			<German>Charge Crime</German>
+			<French>Charge Crime</French>
+			<Italian>Charge Crime</Italian>
+			<Portuguese>Charge Crime</Portuguese>
+		</Key>
 		<Key ID="STR_PM_ChargeCrime">
 			<Original>Charge Crime</Original>
 			<German>Charge Crime</German>

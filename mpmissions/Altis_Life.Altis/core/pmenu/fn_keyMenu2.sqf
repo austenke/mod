@@ -16,9 +16,9 @@ disableSerialization;
 _display = findDisplay 9950;
 _vehicles = _display displayCtrl 9951;
 lbClear _vehicles;
-_plist = _display displayCtrl 9952;
-lbClear _plist;
-_near_units = [];
+//_plist = _display displayCtrl 9952;
+//lbClear _plist;
+//_near_units = [];
 
 _crimes = ["187 - Manslaughter","901 - Escaping Jail",
 	"215 - Attempted Auto Theft","213 - Use of Illegal Explosives",
@@ -28,7 +28,7 @@ _crimes = ["187 - Manslaughter","901 - Escaping Jail",
 
 {
 	_vehicles lbAdd format["%1",_x];
-	_vehicles lbSetData [(lbSize _plist)-1,str(_x)];
+	_vehicles lbSetData [(lbSize _vehicles)-1,str(_x)];
 } foreach _crimes;
 
 if(((lbSize _vehicles)-1) == -1) then {
