@@ -27,8 +27,9 @@ _crimes = ["187 - Manslaughter","901 - Escaping Jail",
 	"482 - Intent To Distribute","483 - Drug Trafficking","459 - Burglary","390 - Public Intoxication"];
 
 {
+	_left=[_x,3] call KRON_StrLeft;
 	_vehicles lbAdd format["%1",_x];
-	_vehicles lbSetData [(lbSize _vehicles)-1,str(_x)];
+	_vehicles lbSetData [(lbSize _vehicles)-1,_left];
 } foreach _crimes;
 
 if(((lbSize _vehicles)-1) == -1) then {
