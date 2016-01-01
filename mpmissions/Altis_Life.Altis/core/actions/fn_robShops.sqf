@@ -45,11 +45,10 @@ _ui = uiNameSpace getVariable "life_progress";
 _progress = _ui displayCtrl 38201;
 _pgText = _ui displayCtrl 38202;
 
-_markerName = format["%1_rob_marker",_name]
-_markerText = createMarker [_markerName, position player];
-_markerName setMarkerColor "ColorBlue";
-_markerName setMarkerText " Robbery in Progress!";
-_markerName setMarkerType "Warning";
+_marker = createMarker [format["%1_rob_marker",_name], position player];
+_marker setMarkerColor "ColorBlue";
+_marker setMarkerText " Robbery in Progress!";
+_marker setMarkerType "Warning";
 
 _pgText ctrlSetText format["Robbery in Progress, stay close (3m) (1%1)...","%"];
 _progress progressSetPosition 0.01;
