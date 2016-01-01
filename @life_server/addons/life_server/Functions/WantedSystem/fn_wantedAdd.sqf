@@ -12,6 +12,13 @@ _type = [_this,2,"",[""]] call BIS_fnc_param;
 _customBounty = [_this,3,-1,[0]] call BIS_fnc_param;
 if(_uid == "" OR _type == "" OR _name == "") exitWith {}; //Bad data passed.
 
+["diag_log",[
+	"------------- Wanted Crime Add -------------",
+	format["Player: %1",_name],
+	format["Player: %1",_type],
+	"-------------------------------------------------"
+]] call TON_fnc_logIt;
+
 //What is the crime?
 switch(_type) do
 {
