@@ -3332,33 +3332,13 @@ class Mission
 				};
 			};
 		};
-		class Item81
-		{
-			side="GUER";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={8437.2002,105.64852,25149.426};
-					azimut=182.302;
-					id=200;
-					side="GUER";
-					vehicle="I_Story_Colonel_F";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					text="hc_1";
-					description="Headless Client";
-				};
-			};
-		};
+
 		class Item82
 		{
 			side="GUER";
 			class Vehicles
 			{
-				items=4;
+				items=10;
 				class Item0
 				{
 					position[]={8424.9258,99.930687,25177.225};
@@ -3410,6 +3390,84 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="medic_2";
+					description="EMS Medic";
+				};
+				class Item4
+				{
+					position[]={8428.2236,99.711594,25177.109};
+					azimut=185.11099;
+					special="NONE";
+					id=882;
+					side="GUER";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="medic_5";
+					description="EMS Medic";
+				};
+				class Item5
+				{
+					position[]={8428.2236,99.711594,25177.109};
+					azimut=185.11099;
+					special="NONE";
+					id=883;
+					side="GUER";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="medic_6";
+					description="EMS Medic";
+				};
+				class Item6
+				{
+					position[]={8428.2236,99.711594,25177.109};
+					azimut=185.11099;
+					special="NONE";
+					id=884;
+					side="GUER";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="medic_7";
+					description="EMS Medic";
+				};
+				class Item7
+				{
+					position[]={8428.2236,99.711594,25177.109};
+					azimut=185.11099;
+					special="NONE";
+					id=885;
+					side="GUER";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="medic_8";
+					description="EMS Medic";
+				};
+				class Item8
+				{
+					position[]={8428.2236,99.711594,25177.109};
+					azimut=185.11099;
+					special="NONE";
+					id=886;
+					side="GUER";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="medic_9";
+					description="EMS Medic";
+				};
+				class Item9
+				{
+					position[]={8428.2236,99.711594,25177.109};
+					azimut=185.11099;
+					special="NONE";
+					id=887;
+					side="GUER";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="medic_10";
 					description="EMS Medic";
 				};
 			};
