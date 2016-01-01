@@ -17,7 +17,7 @@ if(side _robber != civilian) exitWith { hint "You can not rob this station!" };
 if(_robber distance _shop > 5) exitWith { hint "You need to stay close to the gas station attendant to rob him" };
 
 //if (isNull _kassa) then { _kassa = 1000; };
-if (_rip) exitWith { hint "Robbery already in progress!" };
+if (life_action_inUse) exitWith { hint "Robbery already in progress!" };
 if (vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
 
 if !(alive _robber) exitWith {};
@@ -27,7 +27,7 @@ if (currentWeapon _robber == "") exitWith {
 										  };
 if (_kassa == 0) exitWith { hint "There is no cash in the register!" };
 
-_rip = true;
+life_action_inUse = true;
 _kassa = 12000 + round(random 25000);
 _shop removeAction _action;
 _shop switchMove "AmovPercMstpSsurWnonDnon";
@@ -46,7 +46,7 @@ _progress = _ui displayCtrl 38201;
 _pgText = _ui displayCtrl 38202;
 
 _marker = createMarker [format["%1_rob_marker",_name], position player];
-_marker setMarkerColor "ColorBlue";
+_marker setMarkerColor "ColorRed";
 _marker setMarkerText " Robbery in Progress!";
 _marker setMarkerType "hd_warning";
 
@@ -65,15 +65,16 @@ if(_rip) then
 		_pgText ctrlSetText format["Robbery in Progress, stay close (4m) (%1%2)...",round(_cP * 100),"%"];
 
 		if(_cP >= 1) exitWith {};
-		if(_robber distance _shop > 6.5) exitWith {deleteMarker _marker;};
-		if!(alive _robber) exitWith {deleteMarker _marker;};
+		if(_robber distance _shop > 6.5) exitWith {deleteMarker _marker; life_action_inUse = false;};
+		if!(alive _robber) exitWith {deleteMarker _marker; life_action_inUse = false;};
 	};
 
-	if!(alive _robber) exitWith { _rip = false; deleteMarker _marker; };
-	if(_robber distance _shop > 6.5) exitWith { deleteMarker _marker; _shop switchMove ""; hint "You need to stay close to rob the store! - Now the register is locked."; 5 cutText ["","PLAIN"]; _rip = false; };
+	if!(alive _robber) exitWith { life_action_inUse = false; deleteMarker _marker; };
+	if(_robber distance _shop > 6.5) exitWith { life_action_inUse = false; deleteMarker _marker; _shop switchMove ""; hint "You need to stay close to rob the store! - Now the register is locked."; 5 cutText ["","PLAIN"]; _rip = false; };
 	5 cutText ["","PLAIN"];
 
 	titleText[format["You have stolen $%1, now get away before the cops arrive!",[_kassa] call life_fnc_numberText],"PLAIN"];
+	life_action_inUse = false;
 	deleteMarker _marker;
 	life_cash = life_cash + _kassa;
 	//[[1,format["911 - Gas Station: %1 was just robbed by %2 for a total of $%3", _shop, _robber, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
