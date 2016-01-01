@@ -58,14 +58,14 @@ class Life_key_management2 {
 			h = (1 / 25);
 		};
 		
-		class NearPlayers : Life_RscCombo {
+		//class NearPlayers : Life_RscCombo {
 		
-		idc = 9952;
+		//idc = 9952;
 		
-		x = 0.26; y = 0.645;
-		w = 0.275; h = 0.03;
+		//x = 0.26; y = 0.645;
+		//w = 0.275; h = 0.03;
 		
-		};
+		//};
 		
 		class DropKey : life_RscButtonMenu {
 			idc = -1;

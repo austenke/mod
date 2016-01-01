@@ -9,7 +9,7 @@ Idea developed by PEpwnzya v1.0
 private["_robber","_shop","_name","_kassa","_ui","_progress","_pgText","_cP","_rip","_pos","_source"];
 _shop = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param; //The object that has the action attached to it is _this. ,0, is the index of object, ObjNull is the default should there be nothing in the parameter or it's broken
 _robber = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param; //Can you guess? Alright, it's the player, or the "caller". The object is 0, the person activating the object is 1
-//_kassa = 1000; //The amount the shop has to rob, you could make this a parameter of the call ((https://community.bistudio.com/wiki/addAction Give it a try and post below ;)
+_kassa = 1000; //The amount the shop has to rob, you could make this a parameter of the call ((https://community.bistudio.com/wiki/addAction Give it a try and post below ;)
 _action = [_this,2] call BIS_fnc_param;//Action name
 _name = [_this,3] call BIS_fnc_param;//Shop Name  
 
@@ -48,7 +48,7 @@ _pgText = _ui displayCtrl 38202;
 _marker = createMarker [format["%1_rob_marker",_name], position player];
 _marker setMarkerColor "ColorBlue";
 _marker setMarkerText " Robbery in Progress!";
-_marker setMarkerType "Warning";
+_marker setMarkerType "hd_warning";
 
 _pgText ctrlSetText format["Robbery in Progress, stay close (3m) (1%1)...","%"];
 _progress progressSetPosition 0.01;

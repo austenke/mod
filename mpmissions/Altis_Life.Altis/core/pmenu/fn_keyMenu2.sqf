@@ -27,16 +27,9 @@ _crimes = ["187 - Manslaughter","901 - Escaping Jail",
 	"482 - Intent To Distribute","483 - Drug Trafficking","459 - Burglary","390 - Public Intoxication"];
 
 {
-	if(!isNull _x && alive _x && _x != player && side _x != west) then {
-		_vehicles lbAdd format["%1 - %2",_x getVariable["realname",name _x], side _x];
-		_vehicles lbSetData [(lbSize _vehicles)-1,str(_i)];
-	};
+	_vehicles lbAdd format["%1",_x];
+	_vehicles lbSetData [(lbSize _plist)-1,str(_x)];
 } foreach playableUnits;
-
-{
-	_plist lbAdd format["%1",_x];
-	_plist lbSetData [(lbSize _plist)-1,str(_x)];
-} foreach _crimes;
 
 if(((lbSize _vehicles)-1) == -1) then {
 	_vehicles lbAdd "No players";
