@@ -24,6 +24,7 @@ class Life_Client_Core
 		class setupEVH {};
 		class initCiv {};
 		class initCop {};
+		class initZeus {};
 		class initMedic {};
 		class welcomeNotification {};
 		class survival {};
@@ -359,12 +360,6 @@ class Life_Client_Core
 		class chopShopSell {};
 	};
 	
-	class Master_Directory    
-	{
-		file = "core\initZeus";
-	    class initZeus {};
-	
-	};
 	
 	class Items
 	{
