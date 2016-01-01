@@ -3332,7 +3332,27 @@ class Mission
 				};
 			};
 		};
-
+		class Item81
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8437.2002,105.64852,25149.426};
+					azimut=182.302;
+					id=200;
+					side="GUER";
+					vehicle="I_Story_Colonel_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="hc_1";
+					description="Headless Client";
+				};
+			};
+		};
 		class Item82
 		{
 			side="GUER";
