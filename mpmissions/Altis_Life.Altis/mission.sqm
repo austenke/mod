@@ -12293,7 +12293,7 @@ class Mission
 		{
 			position[]={14259.231,4.371201,13025.758};
 			name="capture_label_3";
-			text="Meth Cartel";
+			text="Moonshine Cartel";
 			type="hd_flag";
 			colorName="ColorRed";
 			angle=-350.99701;
