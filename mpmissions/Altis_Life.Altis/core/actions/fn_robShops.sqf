@@ -44,6 +44,13 @@ disableSerialization;
 _ui = uiNameSpace getVariable "life_progress";
 _progress = _ui displayCtrl 38201;
 _pgText = _ui displayCtrl 38202;
+
+_markerName = format["%1_rob_marker",_name]
+_markerText = createMarker [_markerName, position player];
+_markerName setMarkerColor "ColorBlue";
+_markerName setMarkerText " Robbery in Progress!";
+_markerName setMarkerType "Warning";
+
 _pgText ctrlSetText format["Robbery in Progress, stay close (3m) (1%1)...","%"];
 _progress progressSetPosition 0.01;
 _cP = 0.01;
@@ -59,15 +66,16 @@ if(_rip) then
 		_pgText ctrlSetText format["Robbery in Progress, stay close (4m) (%1%2)...",round(_cP * 100),"%"];
 
 		if(_cP >= 1) exitWith {};
-		if(_robber distance _shop > 6.5) exitWith { };
-		if!(alive _robber) exitWith {};
+		if(_robber distance _shop > 6.5) exitWith {deleteMarker _markerName;};
+		if!(alive _robber) exitWith {deleteMarker _markerName;};
 	};
 
-	if!(alive _robber) exitWith { _rip = false; };
-	if(_robber distance _shop > 6.5) exitWith { _shop switchMove ""; hint "You need to stay close to rob the store! - Now the register is locked."; 5 cutText ["","PLAIN"]; _rip = false; };
+	if!(alive _robber) exitWith { _rip = false; deleteMarker _markerName; };
+	if(_robber distance _shop > 6.5) exitWith { deleteMarker _markerName; _shop switchMove ""; hint "You need to stay close to rob the store! - Now the register is locked."; 5 cutText ["","PLAIN"]; _rip = false; };
 	5 cutText ["","PLAIN"];
 
 	titleText[format["You have stolen $%1, now get away before the cops arrive!",[_kassa] call life_fnc_numberText],"PLAIN"];
+	deleteMarker _markerName;
 	life_cash = life_cash + _kassa;
 	//[[1,format["911 - Gas Station: %1 was just robbed by %2 for a total of $%3", _shop, _robber, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 	[[format["%1 was just robbed by %2 for a total of $%3", _name,name _robber, [_kassa] call life_fnc_numberText],_name,1],"clientMessage",true,false] spawn life_fnc_MP;
