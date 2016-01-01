@@ -29,7 +29,7 @@ _crimes = ["187 - Manslaughter","901 - Escaping Jail",
 {
 	_vehicles lbAdd format["%1",_x];
 	_vehicles lbSetData [(lbSize _plist)-1,str(_x)];
-} foreach playableUnits;
+} foreach _crimes;
 
 if(((lbSize _vehicles)-1) == -1) then {
 	_vehicles lbAdd "No players";
