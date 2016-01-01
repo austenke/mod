@@ -1,4 +1,4 @@
-#include "\life_server\script_macros.hpp"
+#include "..\..\script_macros.hpp"
 
 private["_dialog","_list","_plist","_sel","_vehicle","_owners","_index","_unit","_uid"];
 
