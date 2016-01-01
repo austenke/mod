@@ -6,10 +6,10 @@
 	preProcessFile "SpyGlass\endoftheline.sqf"; \
 	sleep 2.5; \
 	failMission "SpyGlass";
-	
+
 /*
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Checks for known cheat menus and closes them then reports them to the server.
 */
@@ -32,7 +32,7 @@ while {true} do {
 			case (typeName ""): {if(!isNull (GVAR_UINS [_targetDisplay,displayNull])) exitWith {_detection = true;};};
 			default {if(!isNull (findDisplay _targetDisplay)) exitWith {_detection = true;};};
 		};
-			
+
 		if(_detection) exitWith {
 			[[profileName,steamid,format["MenuBasedHack_%1",_targetName]],"SPY_fnc_cookieJar",false,false] call life_fnc_MP;
 			[[profileName,format["Menu Hack: %1",_targetName]],"SPY_fnc_notifyAdmins",true,false] call life_fnc_MP;
@@ -40,14 +40,14 @@ while {true} do {
 			SPYGLASS_END
 		};
 	} foreach _displays;
-		
+
 	if(_detection) exitWith {};
 
 	/* A very old menu that can cause false-positives so we close it */
 	if(!isNull (findDisplay 129)) then {
 		closeDialog 0;
 	};
-	
+
 	/* Check to see if RscDisplayInventory has more controls then it should */
 	_display = findDisplay 602;
 	if(!isNull _display && {count (allControls _display) > 85}) then {
@@ -57,7 +57,7 @@ while {true} do {
 		closeDialog 0;
 		SPYGLASS_END
 	};
-		
+
 	if(!isNull (findDisplay 148)) then {
 		sleep 0.5;
 		if((lbSize 104)-1 > 3) exitWith {
@@ -67,7 +67,8 @@ while {true} do {
 			SPYGLASS_END
 		};
 	};
-	
+
+	//_display = uiNamespace getVariable ["RscDisplayInsertMarker", displayNull];
 	_display = findDisplay 54;
 	if(!isNull _display) then {
 		{
@@ -82,13 +83,13 @@ while {true} do {
 			{if (buttonAction (_display displayCtrl _x) != "") exitWith {true}; false} forEach [1,2]
 		];
 	};
-		
+
 	_display = findDisplay 131;
 	if(!isNull _display) then {
 		//These shouldn't be here...
 		(_display displayCtrl 102) ctrlRemoveAllEventHandlers "LBDblClick";
 		(_display displayCtrl 102) ctrlRemoveAllEventHandlers "LBSelChanged";
-		
+
 		{
 			if (_x && !isNull _display) exitWith {
 				[[profileName,steamid,"MenuBasedHack_RscDisplayConfigureAction"],"SPY_fnc_cookieJar",false,false] call life_fnc_MP;
@@ -101,12 +102,12 @@ while {true} do {
 			{if (buttonAction (_display displayCtrl _x) != "") exitWith {true}; false} forEach [1,104,105,106,107,108,109]
 		];
 	};
-		
+
 	_display = findDisplay 163;
 	if(!isNull _display) then {
 		(_display displayCtrl 101) ctrlRemoveAllEventHandlers "LBDblClick";
 		(_display displayCtrl 101) ctrlRemoveAllEventHandlers "LBSelChanged";
-		
+
 		{
 			if (_x && !isNull _display) exitWith {
 				[[profileName,steamid,"MenuBasedHack_RscDisplayControlSchemes"],"SPY_fnc_cookieJar",false,false] call life_fnc_MP;
@@ -119,7 +120,7 @@ while {true} do {
 			{if (buttonAction (_display displayCtrl _x) != "") exitWith {true}; false} forEach [1,2]
 		];
 	};
-	
+
 	/* We'll just move the no-recoil check into this thread. */
 	if((unitRecoilCoefficient player) < 1) then {
 		[[profileName,steamid,"No_recoil_hack"],"SPY_fnc_cookieJar",false,false] spawn life_fnc_MP;
@@ -127,11 +128,11 @@ while {true} do {
 		sleep 0.5;
 		failMission "SpyGlass";
 	};
-	
+
 	/*
 		Display Validator
 		Loops through and makes sure none of the displays were modified..
-		
+
 		Checks every 5 minutes.
 	*/
 	if((time - _timeStamp) > 300) then {
@@ -170,6 +171,6 @@ while {true} do {
 			["RscDisplayStart","[2] call compile preprocessfilelinenumbers gettext (configfile >> 'CfgFunctions' >> 'init'); ['onLoad',_this,'RscDisplayLoading','Loading'] call (uinamespace getvariable 'BIS_fnc_initDisplay')","[""onUnload"",_this,""RscDisplayLoading"",'Loading'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')"],
 			["RscDisplayInsertMarker","[""onLoad"",_this,""RscDisplayInsertMarker"",'GUI'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')","[""onUnload"",_this,""RscDisplayInsertMarker"",'GUI'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')"]
 		];
-	};
+
 	uiSleep 1;
 };
