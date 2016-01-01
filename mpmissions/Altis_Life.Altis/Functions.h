@@ -119,7 +119,7 @@ class Life_Client_Core
 		class BaggedHostage {};
 		class UnBagHostage {};
 		class removeWeaponAction {};
-		class gatherOil {};
+		class PumpOil {};
 	};
 	
 	class Housing
