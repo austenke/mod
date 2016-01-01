@@ -65,16 +65,16 @@ if(_rip) then
 		_pgText ctrlSetText format["Robbery in Progress, stay close (4m) (%1%2)...",round(_cP * 100),"%"];
 
 		if(_cP >= 1) exitWith {};
-		if(_robber distance _shop > 6.5) exitWith {deleteMarker _markerName;};
-		if!(alive _robber) exitWith {deleteMarker _markerName;};
+		if(_robber distance _shop > 6.5) exitWith {deleteMarker _marker;};
+		if!(alive _robber) exitWith {deleteMarker _marker;};
 	};
 
-	if!(alive _robber) exitWith { _rip = false; deleteMarker _markerName; };
-	if(_robber distance _shop > 6.5) exitWith { deleteMarker _markerName; _shop switchMove ""; hint "You need to stay close to rob the store! - Now the register is locked."; 5 cutText ["","PLAIN"]; _rip = false; };
+	if!(alive _robber) exitWith { _rip = false; deleteMarker _marker; };
+	if(_robber distance _shop > 6.5) exitWith { deleteMarker _marker; _shop switchMove ""; hint "You need to stay close to rob the store! - Now the register is locked."; 5 cutText ["","PLAIN"]; _rip = false; };
 	5 cutText ["","PLAIN"];
 
 	titleText[format["You have stolen $%1, now get away before the cops arrive!",[_kassa] call life_fnc_numberText],"PLAIN"];
-	deleteMarker _markerName;
+	deleteMarker _marker;
 	life_cash = life_cash + _kassa;
 	//[[1,format["911 - Gas Station: %1 was just robbed by %2 for a total of $%3", _shop, _robber, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 	[[format["%1 was just robbed by %2 for a total of $%3", _name,name _robber, [_kassa] call life_fnc_numberText],_name,1],"clientMessage",true,false] spawn life_fnc_MP;
