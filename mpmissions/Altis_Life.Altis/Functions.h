@@ -174,7 +174,7 @@ class Life_Client_Core
 		class settingsMenu {};
 		class s_onChar {};
 		class s_onCheckedChange {};
-		//class chargeCrime {};
+		class chargeCrime {};
 	};
 	
 	class Functions
@@ -424,3 +424,4 @@ class Life_Client_Core
 	   file ="core";
 	   class IntroCam {};
 	};
+};
