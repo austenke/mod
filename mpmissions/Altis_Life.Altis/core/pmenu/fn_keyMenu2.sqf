@@ -8,6 +8,9 @@
 	Will be revised.
 */
 private["_display","_vehicles","_plist","_near_units","_pic","_name","_text","_color","_index"];
+
+if(FETCH_CONST(life_coplevel) < 1 && FETCH_CONST(life_adminlevel) == 0) exitWith {};
+
 disableSerialization;
 
 _display = findDisplay 9950;
