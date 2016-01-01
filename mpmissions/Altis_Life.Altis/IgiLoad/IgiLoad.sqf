@@ -85,9 +85,9 @@ if (isnil "IL_Variables") then
 
 	//Set smoke and light for parachute drop.
 	IL_Para_Smoke = true;
-	IL_Para_Light = true;
+	IL_Para_Light = false;
 	//Additional smoke after landing
-	IL_Para_Smoke_Add = true;
+	IL_Para_Smoke_Add = false;
 	//Additional light after landing
 	IL_Para_Light_Add = true;
 	//Smoke and light color
