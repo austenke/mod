@@ -119,7 +119,7 @@ class Life_Client_Core
 		class BaggedHostage {};
 		class UnBagHostage {};
 		class removeWeaponAction {};
-		class PumpOil {};
+		class gatherOil {};
 	};
 	
 	class Housing
@@ -423,4 +423,3 @@ class Life_Client_Core
 	   file ="core";
 	   class IntroCam {};
 	};
-};

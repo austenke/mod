@@ -34,10 +34,9 @@ while{true} do {
 	
 if(player distance _Pump > 10) exitWith {hint localize "STR_Process_Pump_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 
-_gather = "oil_unprocessed";
+_barrel = "Land_MetalBarrel_F" createVehicle getMarkerPos "barrelspawn";
 
-if(([true,_gather,1] call life_fnc_handleInv)) then {
-	titleText[format[localize "STR_Process_Pumped_Oil",1],"PLAIN"];
+titleText[format[localize "STR_Process_Pumped_Oil",1],"PLAIN"];
 };
 
 5 cutText ["","PLAIN"];

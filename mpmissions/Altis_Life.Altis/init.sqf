@@ -7,5 +7,6 @@ life_versionInfo = "Altis Life RPG v3.1.5";
 [] execVM "teargas.sqf";
 [] execVM "scripts\Visuals.sqf";
 [] execVM "scripts\fn_statusBar.sqf";
+[] execVM "IgiLoad\IgiLoadInit.sqf";
 
 StartProgress = true;
