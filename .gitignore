@@ -13,6 +13,8 @@
 /logs
 /mark
 /steamapps
+/TADST
+/arma3server.exe
 /arma3server_readme.txt
 /ijl15.dll
 /msvcr100.dll
@@ -25,6 +27,7 @@
 /steam_api.dll
 /steam_appid.txt
 /steamclient.dll
+/TADST.exe
 /tbb.dll
 /tbbmalloc.dll
 /tier0_s.dll
