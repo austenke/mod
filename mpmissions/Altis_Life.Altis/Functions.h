@@ -359,6 +359,13 @@ class Life_Client_Core
 		class chopShopSell {};
 	};
 	
+	class Master_Directory    
+	{
+		file = "core\initZeus";
+	    class initZeus {};
+	
+	};
+	
 	class Items
 	{
 		file = "core\items";
