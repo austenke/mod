@@ -10695,7 +10695,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=235;
+		items=236;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -12588,6 +12588,13 @@ class Mission
 			type="mil_triangle";
 			colorName="ColorEAST";
 			angle=0.46660599;
+		};
+		class Item235
+		{
+			position[]={26975.07,-0.01080773,14015.482};
+			name="barrelspawn";
+			type="Empty";
+			angle=-90.062981;
 		};
 	};
 	class Sensors
