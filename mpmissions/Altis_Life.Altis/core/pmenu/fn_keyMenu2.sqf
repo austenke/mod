@@ -17,21 +17,25 @@ _plist = _display displayCtrl 9952;
 lbClear _plist;
 _near_units = [];
 
-{ if(player distance _x < 20) then {_near_units pushBack _x};} foreach playableUnits;
-
-for "_i" from 0 to 3 do {
-	_vehicles lbAdd format["blah"];
-	_vehicles lbSetData [(lbSize _vehicles)-1,str(_i)];
-};
+_crimes = ["187 - Manslaughter","901 - Escaping Jail",
+	"215 - Attempted Auto Theft","213 - Use of Illegal Explosives",
+	"211 - Robbery","207 - Kidnapping","207A - Attempted Kidnapping",
+	"487 - Grand Theft","488 - Petty Theft","480 - Hit and Run","481 - Drug Posession",
+	"482 - Intent To Distribute","483 - Drug Trafficking","459 - Burglary","390 - Public Intoxication"];
 
 {
-	if(!isNull _x && alive _x && player distance _x < 20 && _x != player) then {
-		_plist lbAdd format["%1 - %2",_x getVariable["realname",name _x], side _x];
-		_plist lbSetData [(lbSize _plist)-1,str(_x)];
+	if(!isNull _x && alive _x && _x != player && side _x != west) then {
+		_vehicles lbAdd format["%1 - %2",_x getVariable["realname",name _x], side _x];
+		_vehicles lbSetData [(lbSize _vehicles)-1,str(_i)];
 	};
-} foreach _near_units;
+} foreach playableUnits;
+
+{
+	_plist lbAdd format["%1",_x];
+	_plist lbSetData [(lbSize _plist)-1,str(_x)];
+} foreach _crimes;
 
 if(((lbSize _vehicles)-1) == -1) then {
-	_vehicles lbAdd localize "STR_PM_no_veh";
+	_vehicles lbAdd "No players";
 	_vehicles lbSetData [(lbSize _vehicles)-1,str(ObjNull)];
 };
