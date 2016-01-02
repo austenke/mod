@@ -24,11 +24,7 @@ life_delivery_in_progress = true;
 life_dp_point = call compile format["%1",_dp];
 
 _dp = [_dp,"_"," "] call KRON_Replace;
-life_cur_task = player createSimpleTask [format["Delivery_%1",life_dp_point]];
-life_cur_task setSimpleTaskDescription [format[localize "STR_NOTF_DPStart",toUpper _dp],"Delivery Job",""];
-life_cur_task setTaskState "Assigned";
-player setCurrentTask life_cur_task;
-
+_dp = "Land_Cargo20_red_F" createVehicle getMarkerPos "dptest";
 ["DeliveryAssigned",[format[localize "STR_NOTF_DPTask",toUpper _dp]]] call bis_fnc_showNotification;
 
 [] spawn {
