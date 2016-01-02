@@ -1,8 +1,8 @@
 waitUntil {!isNull player && player == player};
 if(player diarySubjectExists "rules")exitwith{};
 
-player createDiarySubject ["changelog","Change Log"];
-player createDiarySubject ["serverrules","General Rules"];
+player createDiarySubject ["changelog","Recent Change Logs"];
+player createDiarySubject ["serverrules","Server Rules"];
 player createDiarySubject ["policerules","Police Procedures/Rules"];
 player createDiarySubject ["safezones","Safe Zones (No Killing)"];
 //player createDiarySubject ["civrules","Civilian Rules"];
@@ -23,33 +23,15 @@ player createDiarySubject ["controls","Controls"];
 */
 	player createDiaryRecord["changelog",
 		[
-			"Official Change Log",
+			"Change Log Update 12/2/15",
 				"
-					The official change log can be found on the BIS forums (search Altis Life RPG)
-				"
-		]
-	];
-	
-	player createDiaryRecord["changelog",
-		[
-			"Custom Change Log",
-				"
-					This section is meant for people doing their own edits to the mission, DO NOT REMOVE THE ABOVE.
-				"
-		]
-	];
-
-		player createDiaryRecord ["serverrules",
-		[
-			"Exploits", 
-				"
-				These are considered exploits, and you will not be kicked, but banned.<br/><br/>
-
-				1. Getting out of jail via any method other than paying bail or escaping via helicopter.<br/>
-				2. Killing yourself to get out of roleplay. Getting out of being tazed, restrained, arrested, jail, etc. If the log shows you got arrested, then you died, you will be banned. Do not pay bail and kill yourself for an easy ride home. Walk you lazy turd.<br/>
-				3. Duping items and/or money. If someone sends you an unobtainable amount of money right at the start of the game, report to an admin IMMEDIATELY and transfer said money to an admin. Do this ASAP or an admin could ban you if they see that much on you without question.<br/>
-				4. Using clearly hacked items. If a hacker comes in and spawns unobtainable items, you could be banned for using said items. Report the items to the admins immediately and stay away from them.<br/>
-				5. Abusing bugs or game mechanics for gain. Is there a replicating gun somewhere? Report it and leave it alone. If an admin catches you abusing the glitch, ban.<br/><br/>
+Added a ton of item icons<br/>
+Started work on manual crime charge menu<b/r>
+Fixed vehicle prices<br/>
+Increased capacity of police vest<br/>
+Start work on actual item gather (real 3d items)<br/>
+Fixed bug with civilian revives<br/>
+Extended Oil Rig platform<br/>
 				"
 		]
 	];
@@ -68,136 +50,109 @@ player createDiarySubject ["controls","Controls"];
 				"
 		]
 	];
-					
 	
 	player createDiaryRecord ["serverrules",
 		[
-			"Bannable Offenses", 
+			" Ghosting or Metagaming", 
 				"
-				Consider this your one and only warning.<br/><br/>
-				
-				1. Hacking<br/>
-				2. Cheating<br/>
-				3. Exploiting (See 'Exploits')<br/>
-				4. Being kicked 3 or more times.<br/><br/>
-				"
-		]
-	];
-	
-	player createDiaryRecord ["serverrules",
-		[
-			"Cop Interaction", 
-				"
-				Items on this list may result in your removal from the server and/or ban, based on the admins discretion.<br/><br/>
-				
-				1. Civilians can be arrested for looking in cops' backpacks/vehicles. Constantly doing this will result in your removal from the server.<br/>
-				2. Civilians can be arrested for following cops in game in order to give away their position.<br/>
-				3. Civilians or Rebels who take up arms to kill cops in town or elsewhere for no RP reason will be considered RDMing. See RDMing section.<br/>
-				4. Following and or harassing cops for long periods of time will be considered griefing and/or spamming, and will result in your removal from the server.<br/>
-				5. Actively blocking cops from doing their duties can lead to your arrest. Constantly doing this will result in your removal from the server.<br/><br/>
-				"
-		]
-	];
-	
-	player createDiaryRecord ["serverrules",
-		[
-			"Boats", 
-				"
-				Items on this list may result in your removal from the server and/or ban, based on the admins discretion.<br/><br/>
-				
-				1. Repeatedly pushing boats without permission.<br/>
-				2. Pushing a boat with the intention of hurting or killing someone. This is not RP, it is just a flaw in the mechanics.<br/>
-				3. Purposefully running over swimmers/divers.<br/><br/>
-				"
-		]
-	];
-	
-	player createDiaryRecord ["serverrules",
-		[
-			"Aviation", 
-				"
-				Items on this list may result in your removal from the server and/or ban, based on the admins discretion.<br/><br/>
-				
-				1. Purposefully ramming a helicopter into anything. Other helicopters, vehicles, buildings.<br/>
-				2. Flying below 150m over the city constantly. Once is illegal, more than that you risk crashing into the city, thus against server rules.<br/>
-				3. Stealing helicopters without proper warning and significant time for the driver to lock the vehicle. If they land and run away without locking, fine, if they just get out and you get in before they get a chance to lock it, no no.<br/><br/>
-				"
-		]
-	];
-	
-	player createDiaryRecord ["serverrules",
-		[
-			"Vehicles", 
-				"
-				Items on this list may result in your removal from the server and/or ban, based on the admins discretion.<br/><br/>
-				
-				1. Purposefully running people over (VRDM). There are accidents, and then there is going out of your way to run someone over.<br/>
-				2. Purposefully throwing yourself in front of vehicles in order to die/get hurt.<br/>
-				3. Ramming into other vehicles in order to cause an explosion.<br/>
-				4. Constantly trying to enter vehicles that do not belong to you in order to grief the vehicle owner, and not trying to RP.<br/>
-				5. Stealing a vehicle just to crash it or otherwise destroy it.<br/>
-				6. Purchasing multiple vehicles for the purpose of doing any of the above.<br/>
-				7. The only reason for shooting at a vehicle would be to disable it and/or fire warning shots in a role-play scenario.You are not to deliberately destroy enemies vehicles.<br/><br/>
-				"
-		]
-	];
-	
-	player createDiaryRecord ["serverrules",
-		[
-			"Communication Rules", 
-				"
-				Items on this list may result in your removal from the server and/or ban, based on the admins discretion.<br/><br/>
-				
-				1. Side Chat may not be used to play music or otherwise micspam.<br/>
-				2. Spamming any chat channel will result in your removal.<br/>
-				4. Teamspeak channels are split up into areas for a reason. Cops must be in the cop channels at all times.<br/>
-				5. Civilians cannot be in any cop channels on teamspeak in order to gather information on their location or movements. Civs caught doing this will be removed the channel. Repeat offenders can be kicked or banned from both the game and teamspeak.<br/><br/>
-				"
-		]
-	];
-	
-	player createDiaryRecord ["serverrules",
-		[
-			"Random Deathmatching (RDM)", 
-				"
-				Items on this list may result in your removal from the server and/or ban, based on the admins discretion.<br/><br/>
-				
-				1. Killing anyone without a roleplay cause.<br/>
-				2. Declaring a rebellion is not a cause to kill anyone, even cops.<br/>
-				3. Cops and civilians/rebels can only commence in a shootout if there are reasons relating to a crime.<br/>
-				4. If you are killed in the crossfire of a fight, it is not RDM.<br/>
-				5. Killing someone in an attempt to protect yourself or others is not RDMing.<br/>
-				6. Shooting a player without giving reasonable time to follow demands is considered RDM.<br/><br/>
-				
-				These are all judged by admins on a case by case basis.<br/><br/>
-				"
-		]
-	];
-	player createDiaryRecord ["serverrules",
-		[
-			"New Life Rule", 
-				"
-				The New Life Rule applies to police and civilians.<br/><br/>
-				
-				Items on this list may result in your removal from the server and/or ban, based on the admins discretion.<br/><br/>
+			Using the multi server system with syncing to give you or your gang an advantage in any way.<br/><br/>
 
-				1. If you are killed you must wait 15 minutes before returning to the scene of your death.<br/>
-				2. If you die during roleplay your past crimes are forgotten, but you also cannot seek revenge.<br/>
-				3. If you are RDM'd, it is not a new life.<br/>
-				4. If you manually respawn, it is not a new life.<br/>
-				5. If you purposefully kill yourself to avoid roleplay, it is not a new life.<br/><br/>
+Leaking information from a secondary gang to your primary gang to gain advantage is metagaming.<br/><br/>
+				"
+		]
+	];
+	
+	player createDiaryRecord ["serverrules",
+		[
+			"Trolling & Racism", 
+				"
+
+Racism is against the rules, in and out of character.<br/><br/>
+
+A high level of Trolling can be a bannable offense. Don¡¯t be a dick or continue toxicity for long periods of time.
+				"
+		]
+	];
+	
+	player createDiaryRecord ["serverrules",
+		[
+			"Combat Logging & Exploiting", 
+				"
+				Do not exit the game, return to lobby, or respawn to avoid a role-play situation.<br/><br/>
+
+				Another player breaking rules does not give you the right to combat log.<br/><br/>
+
+				This rule also applies to storing vehicles. This includes, but is not limited to, being engaged in a firefight, being chased, or having your vehicle stolen after you pull it from the garage.<br/><br/>
+
+				Duping items and/or money is bannable. If someone sends you an unobtainable amount of money right at the start of the game, report to an admin IMMEDIATELY. We have Money logs to monitor the entire economy.<br/><br/>
+
+				Using clearly hacked items. If a hacker comes in and spawns unobtainable items, you could be banned for using said items. Report the items to the admins immediately and stay away from them.<br/><br/>
+
+				 Knowingly using a bug or glitch to your advantage or another's detriment is not allowed.<br/><br/>		
+				"
+		]
+	];
+	
+	player createDiaryRecord ["serverrules",
+		[
+			"New Life Rules (NLR)", 
+				"
+				New Life Rules applies to all areas of the map except Kill on Sight (KOS) zones.<br/><br/>
+
+If you die in one particular area you are not allowed to respawn within the same city you died in. If you are traveling around the map, you are not allowed to be within 2 kilometers from your death scene.<br/><br/>
+
+Grey-Area: If you are traveling to Athira, and died there by a specific gang who stole your chopper, you may respawn to another location. If you see your old chopper 2 kilometers away at another location you may then initiate or chase them. However if you go straight to the Chop shop without visually seeing them since your respawn you will be banned.<br/><br/>
+				"
+		]
+	];
+	
+	player createDiaryRecord ["serverrules",
+		[
+			"Communication Rules & Teamspeak Rules", 
+				"
+				You must make sure you have your in-game effects volume turned up! This is the sound level for your direct communication. VON is used for Vehicle, Group, and Side.<br/><br/>
+
+				No voice on side chat as well as promoting other servers of any kind.<br/><br/>
+
+				If you wish to initiate on a player, give the player 5 seconds to respond to your demands before shooting. If the player poses a threat, ex: He's armed and looks straight at you during the 5 second initiation you may shoot him for your safety.<br/><br/>
+
+				Side Chat may not be used to play music or otherwise micspam.<br/><br/>
+
+				Teamspeak channels are split up into areas for a reason. Police Officers must be in the Police Teamspeak at all times unless off-duty. Our teamspeak is ts.DrunkenLife.ca <br/><br/>
+
+				Civilians cannot be in any police channels on teamspeak in order to gather information on their location, movements, or to resolve a problem. If a problem persists, please contact your Admin to settle the issue. Civs caught doing this will be removed the channel. Repeat offenders can be kicked or banned from both the game and teamspeak.<br/><br/>
+				"
+		]
+	];
+	
+	player createDiaryRecord ["serverrules",
+		[
+			"Kill on Sight (KOS)", 
+				"
+				Cartels, Federal Reserves, Chop Shops, Store Robberies, and Rebel Outposts are all Kill on Sight. These locations are exempt from RDM rule. Traveling to these areas are at your own risk, please consider your security before going into those areas.<br/><br/>
+				"
+		]
+	];
+	player createDiaryRecord ["serverrules",
+		[
+			"Vehicular Death Match (VDM)", 
+				"
+				Vehicular Death Match is using your vehicle as a weapon to kill or injure a player intentionally.<br/><br/>
+				
+				If you run over a player accidently you will be charged for Vehicular Manslaughter, police & administration will keep track of your vehicular manslaughter counts to determine whether you're breaking the rules intentionally or not over time.<br/><br/>
+
+If you run over a player accidently, please consider getting your charges appealed by an A.P.D. Officer explaining the situation. This is up to your discretion to get an appeal.<br/><br/>
 				"
 		]
 	];
 
 	player createDiaryRecord ["serverrules",
 		[
-			"Don't Be A Dick!", 
+			"Random Death Match (RDM)",
 				"
-				If an admin has to tell you that you are being a dick, you are doing dickish things.<br/>
-				Causing others grief, disrupting roleplay, the list goes on.<br/>
-				Just don't be a dick okay?<br/>
-				This rule may be invoked at an admin's discretion.<br/><br/>
+				Random Death Match is using your gun as a weapon without initiating verbal contact, sending text message in-game, or by any means to kill a player without establishing a way to notify the person that his life is in danger.<br/><br/>
+
+				If you wish to initiate on a player, give the player 5 seconds to respond to your demands before shooting. If the player poses a threat, ex: He's armed and looks straight at you during the 5 second initiation you may shoot him for your safety<br/><br/>
 				"
 		]
 	];
