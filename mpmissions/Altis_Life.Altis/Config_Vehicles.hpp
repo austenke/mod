@@ -400,6 +400,18 @@ class CfgVehicles {
             { "Fed", "fed", {
 	                "#(ai,64,64,1)Fresnel(0.3,3)"
             } },
+            { "AMC", "civ", {
+	                "textures\Offroad\AMC.paa"
+            } },
+            { "GameOver", "civ", {
+	                "textures\Offroad\gameover.paa"
+            } },
+            { "HelloKitty", "civ", {
+	                "textures\Offroad\hello.paa"
+            } },
+            { "Classy White", "civ", {
+	                "textures\Offroad\Offroad_White.paa"
+            } },
 			{ "Police", "cop", {
 	                "textures\cop\police_truck.paa"
             } },
@@ -447,6 +459,30 @@ class CfgVehicles {
 			{ "Green", "civ", {
 	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport06_co.paa"
             } },
+			{ "Redbull", "civ", {
+					"textures\hatch_sport\hb_redbull.paa"
+			} },	
+			{ "Repsol", "civ", {
+					"textures\hatch_sport\hb_resol.paa"
+			} },
+			{ "Rockstar", "civ", {
+					"textures\hatch_sport\hb_rockstar.paa"
+			} },
+			{ "Shark", "civ", {
+					"textures\hatch_sport\hb_shark.paa"
+			} },	
+			{ "PedoBear", "civ", {
+					"textures\hatch_sport\pedo.paa"
+			} },	
+			{ "Monster", "civ", {
+					"textures\hatch_sport\monster.paa"
+			} },
+			{ "RedGull", "civ", {
+					"textures\hatch_sport\redgull_rally.paa"
+			} },
+			{ "Youtube", "civ", {
+					"textures\hatch_sport\youtube.paa"
+			} },	
             { "Police", "cop", {
                 "textures\cop\hatch_cop.paa"
             } }
@@ -575,6 +611,39 @@ class CfgVehicles {
 			{ "Orange", "civ", {
 	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa"
             } },
+			{ "BlueFlame", "civ", {
+					"textures\suv\blueflame.paa"
+            } },
+			{ "Camo", "civ", {
+					"textures\suv\camo.paa"
+			} },		
+			{ "Ferrari", "civ", {
+					"textures\suv\ferrari.paa"
+			} },
+			{ "Pimp", "civ", {
+					"textures\suv\pimp.paa"
+			} },	
+			{ "Superman", "civ", {
+					"textures\suv\superman.paa"
+			} },
+			{ "Fireball", "civ", {
+					"textures\suv\suv_fireball.paa"
+			} },	
+			{ "Monster", "civ", {
+					"textures\suv\suv_monaster.paa"
+			} },
+			{ "Tagged", "civ", {
+					"textures\suv\suv_tag.paa"
+			} },	
+			{ "Taxi", "civ", {
+					"textures\suv\SUV_Taxi.paa"
+			} },	
+			{ "Tron", "civ", {
+					"textures\suv\suv_tron.paa"
+			} },
+			{ "Trippy", "civ", {
+					"textures\suv\trippy.paa"
+			} },	
             { "Cop", "cop", {
                 "textures\cop\police_suv.paa"
             } }
@@ -639,8 +708,11 @@ class CfgVehicles {
         	{ "Sheriff", "cop", {
                 "textures\cop\cop_heli1.paa"
             } },
-			{ "Black", "fed", {
+			{ "Black", "reb", {
 	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"
+            } },
+			{ "RedBull", "civ", {
+	                "textures\heli\lb_redbull.paa"
             } },
 			{ "Civ Blue", "civ", {
 	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_blue_co.paa"
@@ -648,7 +720,7 @@ class CfgVehicles {
 			{ "Civ Red", "civ", {
 	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_co.paa"
             } },
-			{ "Digi Green", "donate", {
+			{ "Digi Green", "reb", {
 	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa"
             } },
 			{ "Blueline", "civ", {
@@ -691,13 +763,13 @@ class CfgVehicles {
         insurance = 2500;
         chopShop = 5000;
         textures[] = {
-        	{ "Black", "fed", {
+        	{ "Black", "civ", {
                 "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_co.paa"
             } },
 			{ "White / Blue", "civ", {
 	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa"   
             } },
-			{ "Digi Green", "donate", {
+			{ "Digi Green", "reb", {
 	                "\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa"
             } },
 			{ "Desert Digi", "reb", {
