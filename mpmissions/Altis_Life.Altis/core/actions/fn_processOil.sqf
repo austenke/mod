@@ -5,8 +5,9 @@
 	-------------For Drunken Life use ONLY--------------
 */
 
-private["_Proc","_upp","_ui","_progress","_pgText","_cP"];
+private["_Proc","_upp","_ui","_progress","_pgText","_cP","_barrelp","_barrel"];
 _Proc = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+_barrel = nearestObjects[getPos player,["Land_BarrelWater_F"],8] select 0;
 
 //Error check
 if((isNull _Proc) OR (player distance _Proc > 10)) exitWith {};
@@ -38,11 +39,11 @@ while{true} do {
 	
 if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Proc_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 
-barrelp = createVehicle ["Land_MetalBarrel_F", position player, [], 0, "CAN_COLLIDE"];
-barrelp attachTo[player,[0,1,1.9]];
+_barrelp = createVehicle ["Land_MetalBarrel_F", position player, [], 0, "CAN_COLLIDE"];
+_barrelp attachTo[player,[0,1,1.9]];
 
 5 cutText ["","PLAIN"];
 life_action_inUse = false;
 life_is_processing = false;
 
-deletevehicle barrel;
+deletevehicle _barrel;
