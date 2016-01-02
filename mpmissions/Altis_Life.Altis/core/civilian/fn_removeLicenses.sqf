@@ -22,8 +22,6 @@ switch (_state) do {
 	//Jail licenses
 	case 1: {
 		SVAR_MNS [LICENSE_VARNAME("gun","civ"),false];
-		SVAR_MNS [LICENSE_VARNAME("driver","civ"),false];
-		SVAR_MNS [LICENSE_VARNAME("rebel","civ"),false];
 	};
 	
 	//Remove motor vehicle licenses
