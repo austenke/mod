@@ -12,6 +12,6 @@ _price = 50000;
 
 if((isNull _sell) OR (player distance _sell > 10)) exitWith {};
 
-deletevehicle barrelp;
+deletevehicle _barrelp;
 
 ADD(CASH,_price);
