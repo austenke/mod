@@ -566,7 +566,7 @@ class CfgVehicles {
         	{ "Dark Red", "civ", {
                 "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_co.paa"
             } },
-			{ "Black", "cop", {
+			{ "Black", "civ", {
 	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_02_co.paa"
             } },
 			{ "Silver", "civ", {
