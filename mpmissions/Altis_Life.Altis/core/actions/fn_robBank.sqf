@@ -7,7 +7,7 @@ _shop = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param; //The object that has th
 _robber = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param; //Can you guess? Alright, it's the player, or the "caller". The object is 0, the person activating the object is 1
 //_kassa = 1000; //The amount the shop has to rob, you could make this a parameter of the call ((https://community.bistudio.com/wiki/addAction Give it a try and post below ;)
 _action = [_this,2] call BIS_fnc_param;//Action name
-_name = [_this,3] call BIS_fnc_param;//Shop Name  
+_name = "Kavala Bank";//Shop Name  
 
 if(side _robber != civilian) exitWith { hint "You can not rob this Bank!" };
 if(_robber distance _shop > 5) exitWith { hint "You need to stay close to the bank teller to rob him" };
@@ -42,6 +42,12 @@ disableSerialization;
 _ui = uiNameSpace getVariable "life_progress";
 _progress = _ui displayCtrl 38201;
 _pgText = _ui displayCtrl 38202;
+
+_marker = createMarker [format["%1_rob_marker",_name], position player];
+_marker setMarkerColor "ColorRed";
+_marker setMarkerText " Robbery in Progress!";
+_marker setMarkerType "hd_warning";
+
 _pgText ctrlSetText format["Robbery in Progress, stay close (10m) (1%1)...","%"];
 _progress progressSetPosition 0.01;
 _cP = 0.01;
@@ -57,16 +63,17 @@ if(_rip) then
 		_pgText ctrlSetText format["Robbery in Progress, stay close (10m) (%1%2)...",round(_cP * 100),"%"];
 
 		if(_cP >= 1) exitWith {};
-		if(_robber distance _shop > 10.5) exitWith { };
-		if!(alive _robber) exitWith {};
+		if(_robber distance _shop > 10.5) exitWith {deleteMarker _marker;};
+		if!(alive _robber) exitWith {deleteMarker _marker;};
 	};
 
-	if!(alive _robber) exitWith { _rip = false; };
-	if(_robber distance _shop > 10.5) exitWith { _shop switchMove ""; hint "You need to stay close to rob the bank. The vault has been sealed"; 5 cutText ["","PLAIN"]; _rip = false; };
+	if!(alive _robber) exitWith { _rip = false; deleteMarker _marker; };
+	if(_robber distance _shop > 10.5) exitWith { _shop switchMove ""; hint "You need to stay close to rob the bank. The vault has been sealed"; 5 cutText ["","PLAIN"]; _rip = false; deleteMarker _marker; };
 	5 cutText ["","PLAIN"];
 
 	titleText[format["You have stolen $%1, now get away before the cops arrive!",[_kassa] call life_fnc_numberText],"PLAIN"];
 	life_cash = life_cash + _kassa;
+	deleteMarker _marker;
 	//[[1,format["911 - Altis Bank: %1 was just robbed by %2 for a total of $%3", _shop, _robber, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 	[[format["%1 was just robbed by %2 for a total of $%3", _name,name _robber, [_kassa] call life_fnc_numberText],_name,1],"clientMessage",true,false] spawn life_fnc_MP;
 	[[getPlayerUID _robber,name _robber,"211"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
