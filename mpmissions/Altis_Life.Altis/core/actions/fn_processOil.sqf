@@ -38,6 +38,7 @@ while{true} do {
 	
 if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Proc_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 
+deletevehicle cursortarget;
 _barrelp = "Land_MetalBarrel_F" createVehicle position player;
 _barrelp attachTo[player,[0,1,1.9]];
 
