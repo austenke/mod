@@ -412,6 +412,9 @@ class CfgVehicles {
             { "Classy White", "civ", {
 	                "textures\Offroad\Offroad_White.paa"
             } },
+		    { "Dope", "civ", {
+	                "textures\Offroad\weed.paa"
+            } },
 			{ "Police", "cop", {
 	                "textures\cop\police_truck.paa"
             } },
