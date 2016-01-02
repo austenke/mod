@@ -2781,7 +2781,7 @@ class Mission
 				};
 				class Item56
 				{
-					position[]={25803.852,20.684671,21407.223};
+					position[]={25802.738,20.72271,21408.02};
 					azimut=-225.54848;
 					offsetY=0.2;
 					special="NONE";
@@ -4171,7 +4171,7 @@ class Mission
 		};
 		class Item18
 		{
-			position[]={25804.574,20.668461,21407.039};
+			position[]={25803.461,20.706451,21407.836};
 			azimut=-47.007801;
 			offsetY=0.44999999;
 			id=252;
@@ -11665,7 +11665,7 @@ class Mission
 		};
 		class Item108
 		{
-			position[]={25802.662,20.748543,21408.992};
+			position[]={25801.549,20.786533,21409.789};
 			name="license_shop_2";
 			text="DMV";
 			type="c_unknown";
