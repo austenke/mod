@@ -75,7 +75,7 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget}) exitWith {
 //Check if it's a barrel
 if(_curTarget == _barrel) exitWith {
 	//Open barrel interaction menu
-	[_curTarget] call life_fnc_bInteractionMenu;
+	[_curTarget] call life_fnc_copInteractionMenu;
 };
 
 //If target is a player then check if we can use the cop menu.
