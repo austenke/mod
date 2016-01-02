@@ -73,7 +73,7 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget}) exitWith {
 };
 
 //Check if it's a barrel
-if(_curTarget == _barrel exitWith {
+if(_curTarget == _barrel) exitWith {
 	//Open barrel interaction menu
 	[_curTarget] call life_fnc_bInteractionMenu;
 };
