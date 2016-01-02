@@ -56,9 +56,9 @@ if(currentMagazine _source in ["30Rnd_65x39_caseless_mag_Tracer","9mm 30Rnd Mag"
 
 				//player allowDamage false;
 
-				_damage = (damage player) + .05;
+				_damage = (damage player) / 10;
 
-				if(!((1 - damage player) > _damage) && !(_isVehicle && !life_istazed)) then {
+				if(!((1 - damage player) > _damage) && !(_isVehicle && !life_istazed) && !(_unit GVAR ["restrained",false])) then {
 					//hint "tazing";
 					//player setDamage .8;
 					[_unit,_source] spawn life_fnc_tazed;
