@@ -40,7 +40,7 @@ while{true} do {
 	
 if(player distance _Pump > 10) exitWith {hint localize "STR_Process_Pump_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 
-_barrel = "Land_MetalBarrel_F" createVehicle position player;
+_barrel = "Land_BarrelWater_F" createVehicle position player;
 _barrel attachTo[player,[0,1,1.9]];
 
 

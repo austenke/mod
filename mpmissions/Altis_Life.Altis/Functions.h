@@ -121,6 +121,7 @@ class Life_Client_Core
 		class UnBagHostage {};
 		class removeWeaponAction {};
 		class PumpOil {};
+		class processOil {};
 	};
 	
 	class Housing
