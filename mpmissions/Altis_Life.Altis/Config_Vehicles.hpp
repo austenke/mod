@@ -463,7 +463,7 @@ class CfgVehicles {
 					"textures\hatch_sport\hb_redbull.paa"
 			} },	
 			{ "Repsol", "civ", {
-					"textures\hatch_sport\hb_resol.paa"
+					"textures\hatch_sport\hb_repsol.paa"
 			} },
 			{ "Rockstar", "civ", {
 					"textures\hatch_sport\hb_rockstar.paa"
@@ -630,7 +630,7 @@ class CfgVehicles {
 					"textures\suv\suv_fireball.paa"
 			} },	
 			{ "Monster", "civ", {
-					"textures\suv\suv_monaster.paa"
+					"textures\suv\suv_monster.paa"
 			} },
 			{ "Tagged", "civ", {
 					"textures\suv\suv_tag.paa"
