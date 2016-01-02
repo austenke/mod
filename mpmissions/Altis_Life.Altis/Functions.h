@@ -122,6 +122,7 @@ class Life_Client_Core
 		class removeWeaponAction {};
 		class PumpOil {};
 		class processOil {};
+		class sellOil {};
 	};
 	
 	class Housing
