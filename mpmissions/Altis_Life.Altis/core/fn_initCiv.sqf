@@ -24,3 +24,4 @@ if(life_is_arrested) then {
 //[] call life_fnc_gangPayout;
 
 player addRating 9999999;
+[] remoteExecCall ["TON_fnc_reskinVehicles",2];
