@@ -4163,6 +4163,9 @@
 		<Key ID="STR_Process_Proc_Oil">
 			<Original>Processing Oil</Original>
 		</Key>
+		<Key ID="STR_Process_ProcDone_Oil">
+			<Original>You have processed 1 Oil barrel</Original>
+		</Key>
 		<Key ID="STR_Process_Pump_Oil_Fail">
 			<Original>Your Inventory is full</Original>
 		</Key>
@@ -4693,6 +4696,9 @@
 			<French>Vous n'avez pas choisi les vêtements que vous vouliez acheter.</French>
 			<Italian>Non hai selezionato i vestiti che vuoi comprare.</Italian>
 			<Portuguese>Você não selecionou a roupa que deseja comprar.</Portuguese>
+		</Key>
+		<Key ID="STR_Shop_sellOil">
+			<Original>You sold 1 barrel of Oil for $300,000.</Original>
 		</Key>
 		<Key ID="STR_Shop_NotEnoughClothes">
 			<Original>Sorry sir, you don't have enough money to buy those clothes.</Original>
