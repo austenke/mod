@@ -2843,14 +2843,14 @@ class Mission
 				};
 				class Item61
 				{
-					position[]={21664.324,13.717401,14079.875};
-					azimut=188.0706;
+					position[]={16838.992,5.1178203,12053.939};
+					azimut=273.88699;
 					special="NONE";
 					id=158;
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Oil Trader"",life_fnc_virt_menu,""oil""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Sell Oil Barrel"",life_fnc_sellOil,""""];";
 				};
 				class Item62
 				{
@@ -11718,12 +11718,12 @@ class Mission
 		};
 		class Item114
 		{
-			position[]={21669.254,13.70441,14079.938};
+			position[]={16841.121,5.1240969,12054.164};
 			name="oil_trader";
 			text="Oil Buyer";
 			type="mil_triangle";
 			colorName="ColorEAST";
-			angle=-0.048813999;
+			angle=3.7874596;
 		};
 		class Item115
 		{
