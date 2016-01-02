@@ -117,6 +117,7 @@ class CfgFunctions
 			class cleanup {};
 			class huntingZone {};
 			class getID {};
+			class reskinVehicles {};
 			class vehicleCreate {};
 			class vehicleDead {};
 			class spawnVehicle {};
