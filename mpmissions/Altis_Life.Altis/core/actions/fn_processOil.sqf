@@ -41,7 +41,7 @@ if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Proc_Stay"; 
 _barrelp = createVehicle ["Land_MetalBarrel_F", position player, [], 0, "CAN_COLLIDE"];
 _barrelp attachTo[player,[0,1,1.9]];
 
-sleep 5
+sleep 5;
 
 deletevehicle _barrelp;
 
