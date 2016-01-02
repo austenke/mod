@@ -16,4 +16,4 @@ _data = lbData [ _list, ( lbCurSel _list ) ]; // retrieve the data (previously s
 
 hint format["Charging suspect %1 with %2",name _curTarget,_data];
 
-[[getPlayerUID _curTarget,name _curTarget,_data],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+[getPlayerUID _curTarget,name _curTarget,_data] remoteExecCall ["life_fnc_wantedAdd",RSERV];
