@@ -448,7 +448,7 @@ class CfgVehicles {
 	                "\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_sport06_co.paa"
             } },
             { "Police", "cop", {
-                "#(ai,64,64,1)Fresnel(1.3,7)"
+                "textures\cop\hatch_cop.paa"
             } }
         };
     };
@@ -576,7 +576,7 @@ class CfgVehicles {
 	                "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa"
             } },
             { "Cop", "cop", {
-                "#(ai,64,64,1)Fresnel(1.3,7)"
+                "textures\cop\police_suv.paa"
             } }
 	        };
     };
@@ -637,7 +637,7 @@ class CfgVehicles {
         chopShop = 5000;
         textures[] = {
         	{ "Sheriff", "cop", {
-                "\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_sheriff_co.paa"
+                "textures\cop\cop_heli1.paa"
             } },
 			{ "Black", "fed", {
 	                "\a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"
