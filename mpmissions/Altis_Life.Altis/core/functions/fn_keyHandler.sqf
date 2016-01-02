@@ -56,6 +56,12 @@ if(!(EQUAL(count (actionKeys "User11"),0)) && {(inputAction "User11" > 0)}) exit
 	true;
 };
 
+// testing oil
+if(!(EQUAL(count (actionKeys "User9"),0)) && {(inputAction "User9" > 0)}) exitWith {
+		detach cursortarget;
+	};
+};
+
 
 
 switch (_code) do {
