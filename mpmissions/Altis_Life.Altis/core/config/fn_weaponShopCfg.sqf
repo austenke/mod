@@ -107,9 +107,7 @@ switch(_shop) do {
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
 						["bipod_02_F_blk",nil,500],
-						["smokeshellyellow","TearGas",2000],
-						["B_UavTerminal",nil,5000],
-						["B_UAV_01_backpack_F",nil,5000]
+						["smokeshellyellow","TearGas",2000]
 					]
 				];
 			};
@@ -132,9 +130,7 @@ switch(_shop) do {
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
 						["bipod_02_F_blk",nil,500],
-						["smokeshellyellow","TearGas",2000],
-						["B_UavTerminal",nil,5000],
-						["B_UAV_01_backpack_F",nil,5000]
+						["smokeshellyellow","TearGas",2000]
 					]
 				];
 			};
@@ -157,9 +153,7 @@ switch(_shop) do {
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
 						["bipod_02_F_blk",nil,500],
-						["smokeshellyellow","TearGas",2000],
-						["B_UavTerminal",nil,5000],
-						["B_UAV_01_backpack_F",nil,5000]
+						["smokeshellyellow","TearGas",2000]
 					]
 				];
 			};
@@ -169,13 +163,115 @@ switch(_shop) do {
 	case "cop_equipment": {
 		switch (true) do {
 			case (playerside !=west): {"You are not a cop"};
-			case (FETCH_CONST(life_coplevel) > 0):
+			case (FETCH_CONST(life_coplevel) == 0): {"You are not a whitelisted officer of the law!"};
+			case (FETCH_CONST(life_coplevel) == 1):
 			default {
-				["APD Equipment",
+				["Cadet Equipment",
 					[
+						["U_Marshal","Cadet Outfit",500],
+						["V_TacVest_blk_POLICE",nil,500],
+						["H_Cap_police",nil,500],
+						["G_Aviator",nil,500],
+						["NVGoggles_OPFOR",nil,500],
 						["ItemGPS",nil,500],
 						["Binocular",nil,500],
 						["FirstAidKit",nil,500]
+					]
+				];
+			};
+			case (FETCH_CONST(life_coplevel) == 2):
+			default {
+				["Constable Equipment",
+					[
+						["U_Rangemaster",nil,500],
+						["V_TacVest_blk_POLICE",nil,500],
+						["H_Cap_police",nil,500],
+						["G_Aviator",nil,500],
+						["NVGoggles_OPFOR",nil,500],
+						["ItemGPS",nil,500],
+						["Binocular",nil,500],
+						["FirstAidKit",nil,500]
+					]
+				];
+			};
+			case (FETCH_CONST(life_coplevel) == 3):
+			default {
+				["Corporal Equipment",
+					[
+						["U_Rangemaster",nil,500],
+						["V_TacVest_blk_POLICE",nil,500],
+						["H_Cap_police",nil,500],
+						["G_Aviator",nil,500],
+						["NVGoggles_OPFOR",nil,500],
+						["ItemGPS",nil,500],
+						["Binocular",nil,500],
+						["FirstAidKit",nil,500]
+					]
+				];
+			};
+			case (FETCH_CONST(life_coplevel) == 4):
+			default {
+				["Sergeant Equipment",
+					[
+						["U_Rangemaster",nil,500],
+						["V_TacVest_blk_POLICE",nil,500],
+						["H_Cap_police",nil,500],
+						["G_Aviator",nil,500],
+						["NVGoggles_OPFOR",nil,500],
+						["ItemGPS",nil,500],
+						["Binocular",nil,500],
+						["FirstAidKit",nil,500]
+					]
+				];
+			};
+			case (FETCH_CONST(life_coplevel) == 5):
+			default {
+				["Lieutenant Equipment",
+					[
+						["U_Rangemaster",nil,500],
+						["V_TacVest_blk_POLICE",nil,500],
+						["H_Cap_police",nil,500],
+						["G_Aviator",nil,500],
+						["NVGoggles_OPFOR",nil,500],
+						["ItemGPS",nil,500],
+						["Binocular",nil,500],
+						["FirstAidKit",nil,500],
+						["B_UavTerminal",nil,500],
+						["B_UAV_01_F",nil,500]
+					]
+				];
+			};
+			case (FETCH_CONST(life_coplevel) == 6):
+			default {
+				["Captain Equipment",
+					[
+						["U_B_CombatUniform_mcam",nil,500],
+						["V_TacVest_blk_POLICE",nil,500],
+						["H_Cap_police",nil,500],
+						["G_Aviator",nil,500],
+						["NVGoggles_OPFOR",nil,500],
+						["ItemGPS",nil,500],
+						["Binocular",nil,500],
+						["FirstAidKit",nil,500],
+						["B_UavTerminal",nil,500],
+						["B_UAV_01_F",nil,500]
+					]
+				];
+			};
+			case (FETCH_CONST(life_coplevel) == 7):
+			default {
+				["Cheif Equipment",
+					[
+						["U_B_CombatUniform_mcam",nil,500],
+						["V_TacVest_blk_POLICE",nil,500],
+						["H_Cap_police",nil,500],
+						["G_Aviator",nil,500],
+						["NVGoggles_OPFOR",nil,500],
+						["ItemGPS",nil,500],
+						["Binocular",nil,500],
+						["FirstAidKit",nil,500],
+						["B_UavTerminal",nil,500],
+						["B_UAV_01_F",nil,500]
 					]
 				];
 			};
@@ -206,10 +302,10 @@ switch(_shop) do {
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are not a civilian!"};
-			case (!license_civ_rebel): {"You don't have  Rebel training!"};
+			case (!license_civ_rebel): {"You don't have Rebel training!"};
 			default
 			{
-				["Mohammed's Jihadi Shop",
+				["Rebel Arsenal",
 					[
 						["srifle_DMR_05_tan_f",nil,1000000],
 						["10Rnd_93x64_DMR_05_Mag",nil,20000],
@@ -313,31 +409,6 @@ switch(_shop) do {
 		};
 	};
 	
-	case "gang":
-	{
-		switch(true) do
-		{
-			case (playerSide != civilian): {"You are not a civilian!"};
-			default
-			{
-				["Hideout Armament",
-					[
-						["hgun_Rook40_F",nil,1500],
-						["hgun_Pistol_heavy_02_F",nil,2500],
-						["hgun_ACPC2_F",nil,4500],
-						["hgun_PDW2000_F",nil,9500],
-						["optic_ACO_grn_smg",nil,950],
-						["V_Rangemaster_belt",nil,1900],
-						["16Rnd_9x21_Mag",nil,25],
-						["9Rnd_45ACP_Mag",nil,45],
-						["6Rnd_45ACP_Cylinder",nil,50],
-						["30Rnd_9x21_Mag",nil,75]
-					]
-				];
-			};
-		};
-	};
-	
 	case "genstore":
 	{
 		["Altis General Store",
@@ -346,11 +417,7 @@ switch(_shop) do {
 				["ItemGPS",nil,100],
 				["ToolKit",nil,20000],
 				["FirstAidKit",nil,150],
-				["NVGoggles",nil,2000],
-				["Chemlight_red",nil,300],
-				["Chemlight_yellow",nil,300],
-				["Chemlight_green",nil,300],
-				["Chemlight_blue",nil,300]
+				["NVGoggles",nil,2000]
 			]
 		];
 	};
