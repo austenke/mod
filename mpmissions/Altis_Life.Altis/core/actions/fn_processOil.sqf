@@ -9,7 +9,7 @@ private["_Proc","_upp","_ui","_progress","_pgText","_cP"];
 _Proc = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 
 //Error check
-if((isNull _Prco) OR (player distance _Proc > 10)) exitWith {};
+if((isNull _Proc) OR (player distance _Proc > 10)) exitWith {};
 if (life_is_processing) exitWith {hint localize "STR_Process_Proc_InUse";};
 
 
@@ -38,7 +38,6 @@ while{true} do {
 	
 if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Proc_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 
-deletevehicle _barrel
 _barrelp = "Land_MetalBarrel_F" createVehicle position player;
 _barrelp attachTo[player,[0,1,1.9]];
 
