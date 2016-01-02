@@ -10834,7 +10834,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=235;
+		items=236;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -12725,6 +12725,13 @@ class Mission
 			name="barrelspawn";
 			type="Empty";
 			angle=174.95735;
+		};
+		class Item235
+		{
+			position[]={3911.3145,16.22237,13591.759};
+			name="dptest";
+			type="Empty";
+			angle=-102.74245;
 		};
 	};
 	class Sensors
