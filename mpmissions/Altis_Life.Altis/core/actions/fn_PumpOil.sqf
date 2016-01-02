@@ -40,8 +40,8 @@ while{true} do {
 	
 if(player distance _Pump > 10) exitWith {hint localize "STR_Process_Pump_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 
-_barrel = createVehicle ["Land_BarrelWater_F", position player, [], 0, "CAN_COLLIDE"];
-_barrel attachTo[player,[0,1,1.9]];
+barrel = createVehicle ["Land_BarrelWater_F", position player, [], 0, "CAN_COLLIDE"];
+barrel attachTo[player,[0,1,1.9]];
 
 
 //titleText[format[localize "STR_Process_Pumped_Oil",1],"PLAIN"];
