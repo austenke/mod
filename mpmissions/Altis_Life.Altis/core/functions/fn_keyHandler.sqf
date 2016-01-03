@@ -198,33 +198,7 @@ switch (_code) do {
 	};
 	
 	    //F Key
-case 33:
-    {    if(_shift) then
-            {
-                if(playerSide == west && vehicle player != player && !life_siren2_active && ((driver vehicle player) == player)) then
-                {
-                    [] spawn
-                    {
-                        life_siren2_active = true;
-                        sleep 1.2;
-                        life_yelp_active = false;
-                    };
-                    _veh = vehicle player;
-                    if(isNil {_veh getVariable "yelp"}) then {_veh setVariable["yelp",false,true];};
-                    if((_veh getVariable "yelp")) then
-                    {
-                        titleText ["Yelp Off","PLAIN"];
-                        _veh setVariable["yelp",false,true];
-                    }
-                        else
-                    {
-                        titleText ["Yelp On","PLAIN"];
-                        _veh setVariable["yelp",true,true];
-                        [[_veh],"life_fnc_copYelp",nil,true] spawn life_fnc_MP;
-                    };
-                };
-            };
-
+	case 33: {
         if (!_shift) then
         {
             if(playerSide == west && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then

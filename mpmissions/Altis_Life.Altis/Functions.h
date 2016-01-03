@@ -303,7 +303,6 @@ class Life_Client_Core
 		class ticketPay {};
 		class ticketPrompt {};
 		class copSiren {};
-		class copSiren2 {};
 		class spikeStripEffect {};
 		class radar {};
 		class questionDealer {};

@@ -241,7 +241,7 @@ class VirtualShops {
 
 	class rebel {
 		name = "STR_Shops_Rebel";
-		items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "blastingcharge", "burlapsack", "defib", "speedbomb" };
+		items[] = { "waterBottle", "ziptie", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "fuelFull", "peach", "boltcutter", "blastingcharge", "burlapsack", "defib", "speedbomb" };
 	};
 
 	class gang {
