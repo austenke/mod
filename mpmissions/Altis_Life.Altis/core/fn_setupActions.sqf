@@ -17,5 +17,14 @@ switch (playerSide) do {
 		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && animationState cursorTarget in ["Incapacitated","amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon"] && !(cursorTarget getVariable["robbed",FALSE]) ']];
 		life_actions = life_actions + [player addAction["Punch Balls",life_fnc_punchBallsAction,"",0,false,false,"",'
         !isNull cursorTarget && player distance cursorTarget < 5 && isPlayer cursorTarget && animationState cursorTarget in ["Incapacitated","amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon"]']];
+
+        life_actions = life_actions + [player addAction["Restrain",life_fnc_restrainAction,"",0,false,false,"",'
+    	life_inv_ziptie > 1 && animationState cursorTarget == "Incapacitated" && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
+        
+        life_actions = life_actions + [player addAction["Unrestrain",life_fnc_unrestrain,"",0,false,false,"",'
+        cursorTarget SVAR ["restrained",FALSE,TRUE] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 &&  ']];
+
+        life_actions = life_actions + [player addAction["Escort",life_fnc_escortAction,"",0,false,false,"",'
+        (currentWeapon player) in [RIFLE,LAUNCHER,PISTOL] && cursorTarget SVAR ["restrained",FALSE,TRUE] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
 	};
 };

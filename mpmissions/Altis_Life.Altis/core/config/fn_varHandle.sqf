@@ -66,6 +66,7 @@ switch (_mode) do
 			case "storagesmall": {"life_inv_storagesmall"};
 			case "storagebig": {"life_inv_storagebig"};
 			case "speedbomb": {"life_inv_speedbomb"};
+			case "ziptie": {"life_inv_ziptie"};
 			case "burlapsack": {"life_inv_burlapsack"};
 			case "nitro": {"life_inv_nitro"};
 		};

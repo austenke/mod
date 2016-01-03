@@ -13,7 +13,10 @@ if((player distance _unit > 3)) exitWith {};
 if((_unit getVariable "restrained")) exitWith {};
 //if(side _unit == west) exitWith {};
 if(player == _unit) exitWith {};
-if(side player == civilian) then {hint "You have restrained your target!";};
+if(side player == civilian) then {
+	if(life_inv_ziptie < 1) exitWith {hint "You need zipties first!";};
+	hint "You have restrained your target!";
+};
 if(!isPlayer _unit) exitWith {};
 
 

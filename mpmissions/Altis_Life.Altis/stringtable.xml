@@ -3023,6 +3023,13 @@
 			<Italian>Chainsaw</Italian>
 			<Portuguese>Chainsaw</Portuguese>
 		</Key>
+		<Key ID="STR_Item_ZipTie">
+			<Original>Ziptie</Original>
+			<German>Ziptie</German>
+			<French>Ziptie</French>
+			<Italian>Ziptie</Italian>
+			<Portuguese>Ziptie</Portuguese>
+		</Key>
 		<Key ID="STR_Item_Wood">
 			<Original>Wood</Original>
 			<German>Wood</German>
