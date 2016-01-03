@@ -150,7 +150,23 @@ compileFinal "
 	[[_msg,name player,1],""TON_fnc_clientMessage"",true,false] call life_fnc_MP;
 	[] call life_fnc_cellphone;
 	hint format[""You sent %1 a message: %2"",_to,_msg];
+
+	_markername = format[""911_call_%1"",str(getPos player)];
+	if (getMarkerColor _markername == "") then {
+		{	
+			_marker = createMarkerLocal _markername;
+			_marker setMarkerColorLocal ""ColorBlue"";
+			_marker setMarkerTypeLocal ""hd_marker"";
+			_marker setMarkerTextLocal format[""911 call - %1"",name player];
+		} foreach _cops;
+	};
 	ctrlShow[3016,true];
+
+	sleep 120;
+
+	{
+		deleteMarker _markername;
+	} foreach _cops;
 ";
 //To All Admins
 TON_fnc_cell_textadmin =
