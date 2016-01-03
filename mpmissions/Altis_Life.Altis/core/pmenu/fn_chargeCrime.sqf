@@ -12,7 +12,7 @@ if(FETCH_CONST(life_coplevel) < 1 && FETCH_CONST(life_adminlevel) == 0) then {
 
 	_dialog = findDisplay 2700;
 	_list = _dialog displayCtrl 2701;
-	_data = lbData [ _list, ( lbCurSel _list ) ]; // retrieve the data (previously set) from the listbox's currently selected index
+	_data = lbData [ 9951, ( lbCurSel 9951 ) ]; // retrieve the data (previously set) from the listbox's currently selected index
 
 	hint format["Charging suspect %1 with %2",name _curTarget,_data];
 
