@@ -72,7 +72,7 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget}) exitWith {
 };
 
 //Barrel Check
-_barrel = "Land_BarrelWater_F"
+_barrel = "Land_BarrelWater_F";
 if(curTarget ==_barrel then {
 showDialogue "life_interactBarrel"
 }
