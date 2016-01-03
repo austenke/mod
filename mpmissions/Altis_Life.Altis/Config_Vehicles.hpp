@@ -637,7 +637,10 @@ class CfgVehicles {
 			} },
 			{ "Tagged", "civ", {
 					"textures\suv\suv_tag.paa"
-			} },	
+			} },
+		    { "nKitsu", "civ", {
+	                "textures\Offroad\thenkitsu.paa"
+            } },			
 			{ "Taxi", "civ", {
 					"textures\suv\SUV_Taxi.paa"
 			} },	
