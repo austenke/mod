@@ -41,6 +41,7 @@ if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Proc_Stay"; 
 
 _barrelp = createVehicle ["Land_MetalBarrel_F", position player, [], 0, "CAN_COLLIDE"];
 _barrelp attachTo[player,[0,1,1.9]];
+_barrelp setVariable ["owner", player, true];
 
 titleText[format[localize "STR_Process_Procdone_Oil",1],"PLAIN"];
 
