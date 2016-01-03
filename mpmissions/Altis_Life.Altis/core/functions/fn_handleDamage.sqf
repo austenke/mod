@@ -12,13 +12,18 @@ _part = SEL(_this,1);
 _damage = SEL(_this,2);
 _source = SEL(_this,3);
 _projectile = SEL(_this,4);
-
-_oldDamage = 0;
+_curWep = "";
+_curMag = "";
 
 // Nerf stupid ass Bohemia vehicle damage
 if ((vehicle _unit) isKindOf "Car" && (isNull _source || _source == _unit)) then
 {
     _damage = _damage / 2;
+};
+
+if(isPlayer _source && _source isKindOf "Man") then {
+    _curWep = currentWeapon _source;
+    _curMag = currentMagazine _source;
 };
 
 // //Handle the tazer first (Top-Priority).
