@@ -14,6 +14,8 @@ _camTime = 8;// you can change the time for sure, I adjusted mine to the intro m
 if(!life_firstSpawn) then {
 	_camTime = 5;
 };
+
+[[_shop],"life_fnc_introsound",nil,true] spawn life_fnc_MP;
 //intro move
 showCinemaBorder true;
 camUseNVG false;
