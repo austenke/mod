@@ -93,9 +93,10 @@ switch (_code) do {
 	};
 
 	// Test key
-	case 16:
-	{
+	case 16: {
+		[] spawn life_fnc_activateNitro
 	};
+	
 	case 17:
 	{
 		//[[1,2],"STR_ISTR_Bolt_AlertBank",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
