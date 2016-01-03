@@ -123,8 +123,6 @@ class Life_Client_Core
 		class PumpOil {};
 		class processOil {};
 		class sellOil {};
-		class pickupOil {};
-		class dropOil {};
 		class activateNitro {};
 	};
 	
