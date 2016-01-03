@@ -3073,6 +3073,13 @@
 			<Italian>Defibrillator</Italian>
 			<Portuguese>Defibrillator</Portuguese>
 		</Key>
+		<Key ID="STR_Item_nitro">
+			<Original>nitro</Original>
+			<German>nitro</German>
+			<French>nitro</French>
+			<Italian>nitro</Italian>
+			<Portuguese>nitro</Portuguese>
+		</Key>
 		<Key ID="STR_Item_Cannabis">
 			<Original>Cannabis</Original>
 			<German>Kannabis</German>

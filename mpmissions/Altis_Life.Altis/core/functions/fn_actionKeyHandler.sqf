@@ -71,12 +71,6 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget}) exitWith {
 	[_curTarget] call life_fnc_revivePlayer;
 };
 
-//Barrel Check
-_barrel = "Land_BarrelWater_F";
-if(curTarget ==_barrel then {
-showDialogue "life_interactBarrel"
-}
-
 //If target is a player then check if we can use the cop menu.
 if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	if((_curTarget GVAR ["restrained",false]) && !dialog && playerSide == west) then {

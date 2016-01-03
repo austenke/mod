@@ -132,6 +132,7 @@ class VirtualItems {
 	VITEMMACRO(burlapsack, "STR_Item_BurlapSack","burlapsack",5,10000,75,false,-1,"icons\ico_blindfold.paa")
 	VITEMMACRO(speedbomb, "STR_Item_SpeedBomb","speedbomb",5,10000,75,false,-1,"icons\ico_speedbomb.paa")
 	VITEMMACRO(chainsaw, "STR_Item_Chainsaw", "chainsaw", 10, 750, 500, false,- 1, "icons\Chainsaw.paa")
+	VITEMMACRO(nitro, "STR_Item_nitro", "nitro", 10, 750, 500, false,- 1, "icons\nitro.paa")
 
 	//Mined Items
 	VITEMMACRO(oil_unprocessed, "STR_Item_OilU", "oilUnprocessed", 5, -1, -1, true, -1, "icons\ico_oilunprocessed.paa")
@@ -234,7 +235,7 @@ class Licenses {
 class VirtualShops {
 	class market {
 		name = "STR_Shops_Market";
-		items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "chainsaw", "pickaxe", "fuelFull", "peach", "boltcutter", "storagesmall", "storagebig" };
+		items[] = { "waterBottle", "nitro", "rabbit", "apple", "redgull", "tbacon", "chainsaw", "pickaxe", "fuelFull", "peach", "boltcutter", "storagesmall", "storagebig" };
 	};
 
 	class rebel {

@@ -123,6 +123,7 @@ class Life_Client_Core
 		class PumpOil {};
 		class processOil {};
 		class sellOil {};
+		class activateNitro {};
 	};
 	
 	class Housing
@@ -380,6 +381,7 @@ class Life_Client_Core
 		class drinkmoonshine {};
 		class drinkwhiskey {};
 		class chainsawUse {};
+		class nitro {};
 	};
 	
 	class Dialog_Controls

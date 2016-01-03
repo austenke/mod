@@ -37,6 +37,10 @@ switch (true) do {
 		[] spawn life_fnc_speedBomb;
 	};
 
+	case (_item == "nitro"): {
+		[] spawn life_fnc_nitro;
+	};
+
 	case (EQUAL(_item,"chainsaw")): {
 		[] spawn life_fnc_chainsawUse;
 	};

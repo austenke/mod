@@ -67,6 +67,7 @@ switch (_mode) do
 			case "storagebig": {"life_inv_storagebig"};
 			case "speedbomb": {"life_inv_speedbomb"};
 			case "burlapsack": {"life_inv_burlapsack"};
+			case "nitro": {"life_inv_nitro"};
 		};
 	};
 	
@@ -124,6 +125,7 @@ switch (_mode) do
 			case "life_inv_storagesmall": {"storagesmall"};
 			case "life_inv_storagebig": {"storagebig"};
 			case "life_inv_burlapsack": {"burlapsack"};
+			case "life_inv_nitro": {"nitro"};
 		};
 	};
 };
