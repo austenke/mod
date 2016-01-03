@@ -70,7 +70,7 @@ class Life_cell_phone {
 		class TextCopButton : life_RscButtonMenu 
 		{
 			idc = 3016;
-			text = "Text Police";
+			text = "Cops";
 			colorBackground[] = {0,0.23,1,0.48};
 			onButtonClick = "[] call TON_fnc_cell_textcop";
 			
@@ -83,7 +83,7 @@ class Life_cell_phone {
 		class TextAdminButton : life_RscButtonMenu 
 		{
 			idc = 3017;
-			text = "Text Admin";
+			text = "Admin";
 			colorBackground[] = {0,0.23,1,0.48};
 			onButtonClick = "[] call TON_fnc_cell_textadmin";
 			
@@ -109,7 +109,7 @@ class Life_cell_phone {
 		class AdminMsgAllButton : life_RscButtonMenu 
 		{
 			idc = 3021;
-			text = "Text All";
+			text = "All";
 			colorBackground[] = {0,0.23,1,0.48};
 			onButtonClick = "[] call TON_fnc_cell_adminmsgall";
 			
