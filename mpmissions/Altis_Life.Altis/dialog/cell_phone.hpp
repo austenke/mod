@@ -70,7 +70,7 @@ class Life_cell_phone {
 		class TextCopButton : life_RscButtonMenu 
 		{
 			idc = 3016;
-			text = "Cops";
+			text = "Police";
 			colorBackground[] = {0,0.23,1,0.48};
 			onButtonClick = "[] call TON_fnc_cell_textcop";
 			
