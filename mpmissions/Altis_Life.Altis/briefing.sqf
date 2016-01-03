@@ -3,11 +3,11 @@ if(player diarySubjectExists "rules")exitwith{};
 
 player createDiarySubject ["changelog","Recent Change Logs"];
 player createDiarySubject ["serverrules","Server Rules"];
-player createDiarySubject ["policerules","Police Procedures/Rules"];
-//player createDiarySubject ["civrules","Civilian/Rebel Info]";
+player createDiarySubject ["policerules","Police GuideBook"];
+player createDiarySubject ["civrules","Rebel/Civ Info]";
 player createDiarySubject ["illegal","Illegal Possessions"];
 player createDiarySubject ["controls","Controls"];
-player createDiarySubject ["DLstuff","Information about Drunken Life"],
+player createDiarySubject ["DLstuff","Drunken Life"],
 
 /*  Example
 	player createDiaryRecord ["", //Container
@@ -46,14 +46,14 @@ Extended Oil Rig platform<br/>
 				"
 Using the multi server system with syncing to give you or your gang an advantage in any way.<br/><br/>
 
-Leaking information from a secondary gang to your primary gang to gain advantage is metagaming.<br/><br/>
+Leaking information from a secondary gang to your primary gang to gain advantage is metagaming.
 				"
 		]
 	];
 	
 	player createDiaryRecord ["serverrules",
 		[
-			"Trolling & Racism", 
+			"Trolling and Racism", 
 				"
 A high level of Trolling can be a bannable offense. Dont be a dick or continue toxicity for long periods of time.<br/><br/>
 
@@ -64,7 +64,7 @@ Racism is against the rules, in and out of character.
 	
 	player createDiaryRecord ["serverrules",
 		[
-			"Combat Logging & Exploiting", 
+			"Combat Logging and Exploiting", 
 				"
 Do not exit the game, return to lobby, or respawn to avoid a role-play situation.<br/><br/>
 
@@ -96,7 +96,7 @@ Grey-Area: If you are traveling to Athira, and died there by a specific gang who
 	
 	player createDiaryRecord ["serverrules",
 		[
-			"Communication Rules & Teamspeak Rules", 
+			"Communication Rules and Teamspeak Rules", 
 				"
 You must make sure you have your in-game effects volume turned up! This is the sound level for your direct communication. VON is used for Vehicle, Group, and Side.<br/><br/>
 
@@ -127,7 +127,7 @@ Cartels, Federal Reserves, Chop Shops, Store Robberies, and Rebel Outposts are a
 				"
 Vehicular Death Match is using your vehicle as a weapon to kill or injure a player intentionally.<br/><br/>
 				
-If you run over a player accidently you will be charged for Vehicular Manslaughter, police & administration will keep track of your vehicular manslaughter counts to determine whether you're breaking the rules intentionally or not over time.<br/><br/>
+If you run over a player accidently you will be charged for Vehicular Manslaughter, police and administration will keep track of your vehicular manslaughter counts to determine whether you're breaking the rules intentionally or not over time.<br/><br/>
 
 If you run over a player accidently, please consider getting your charges appealed by an A.P.D. Officer explaining the situation. This is up to your discretion to get an appeal.
 				"
@@ -150,7 +150,7 @@ If you wish to initiate on a player, give the player 5 seconds to respond to you
 		[
 			"Last updated 12/2/15",
 				"
-The Police Rules and Guidebook has been updated and modified by the Chief of Police of Altis. -nKitsu
+The Police Rules and Guidebook has been updated and modified by the Altis Chief of Police. nKitsu
 				"
 		]
 	];
@@ -168,8 +168,7 @@ Nearby officers should immediately head to the Federal Reserve to assist. Petty 
 
 Lethal force may only be authorized by the highest ranking officer. Always start with Taze bullets, roleplay is automatically intiated between two parties. (Police and Rebels)<br/><br/>
 
-Any civilian who actively makes an attempt to block the police from entering the building may be arrested or ticketed.<br/><br/>
-				"
+Any civilian who actively makes an attempt to block the police from entering the building may be arrested or ticketed.				"
 		]
 	];
 	
@@ -177,7 +176,7 @@ Any civilian who actively makes an attempt to block the police from entering the
 		[
 			"Illegal Area Policy",
 				"
-You may enter any drug-related area and camp for a maximum of 5 minutes. Read Raiding/Camping Policy for more information. After you finish holding the hideout for a bust for 5 minutes, you must not return for 30 minutes unless you're in pursuit of a player back into the area.<br/><br/>
+You may enter any drug-related area and camp for a maximum of 5 minutes. Read Raiding/Camping Policy for more information. After you finish holding the hideout for 5 minutes, you may not return for 30 minutes unless you're in pursuit of a player back into the area.<br/><br/>
 
 Police may NEVER enter any Drug Cartels or Rebel Outposts. If there's a situation of going into pursuit of suspects into these two areas you are allowed to continue the chase but request backup immediately. If there's a hostage situation and you've discovered evidence that it's being held at these two locations, you are to ask your highest ranking officer to handle the raid.
 				"
@@ -222,7 +221,7 @@ In case anything illegal is found, the person may be ticketed or arrested depend
 	
 	player createDiaryRecord ["policerules",
 		[
-			"Information about Vehicles & Aviations",
+			"Vehicles and Aviations",
 				"
 Vehicles in the parking lot, or are reasonably parked elsewhere should be left alone.<br/><br/>
 
@@ -272,7 +271,7 @@ Killing a human in a way without reason is guilty of Manslaughter. Pushing bodie
 An attempt to point, shoot, injure, or plan to kill an officer, civilian, medic, or any human being is guilty of attempt to kill.<br/><br/>
 
 
-8.2 - Hit & Run (Vehicular Manslaughter)<br/><br/>
+8.2 - Hit and Run (Vehicular Manslaughter)<br/><br/>
 
 Hitting a person unlawfully and driving away without feelings for the humans eating rubber tires all day is guilty by Altis Law.<br/><br/>
 
@@ -370,7 +369,7 @@ At this time the Taser (police weapons only) is the only form of Non-Lethal Forc
 
 Taser should be used to incapacitate non complying civilians in order to restrain them.<br/><br/>
 
-Do not discharge your Taser unless you intend to incapacitate a civilian, randomly discharging your weapon will result in getting marked.<br/><br/>
+Do not discharge your Taser unless you intend to incapacitate a civilian, randomly discharging your weapon will result in getting marked.
 				"
 		]
 	];
@@ -410,14 +409,14 @@ Camping of an illegal area may never exceed longer than 5 minutes when you do no
 				"
 The highest ranking officer on duty is in charge of the police force outside of admins currently online. The highest ranking officer is expected to follow the rules and guidelines of his/her rank, and must report to the admin in case any action need be taken.<br/><br/>
 
-				Police Chain of Command:<br/>
+				Police Chain of Command:<br/><br/>
 				1. Chief<br/>
 				2. Captain<br/>
 				3. Lieutenant<br/>
 				4. Sergeant<br/>
 				5. Corporal<br/>
 				6. Constable<br/>
-				7. Cadets<br/>
+				7. Cadets<br/><br/>
 
 It is your responsibility to contact an admin if you are not registered under a proper rank on the forums or Teamspeak.<br/><br/>
 
@@ -446,7 +445,7 @@ Failure to follow proper weapons discipline and procedure will get you marked. I
 				"
 All cops must be on Teamspeak 3 in a designated cop channel before you connect to the police slot. Failure to be on Teamspeak during your police shift will get you marked. If you exceed a # of marks you will be demoted or blacklisted.<br/><br/>
 
-Your most powerful weapon is your voice, please use it as your primary weapon and your use of force as your secondary weapon. You will represent the entire government structure of Altis. You will serve for the peaceful law abiding civilians of Altis to make sure our nation is under peace & prosperity.<br/><br/>
+Your most powerful weapon is your voice, please use it as your primary weapon and your use of force as your secondary weapon. You will represent the entire government structure of Altis. You will serve for the peaceful law abiding civilians of Altis to make sure our nation is under peace and prosperity.<br/><br/>
 
 Each ranking officer is only permitted a certain equipment locker in the Headquarters. If you wear any other equipment issued from a higher rank, you will get marked. You must wear your police uniform and gear at all times unless there's a reason not to in terms of Roleplay.<br/><br/>
 
@@ -455,7 +454,6 @@ Cadets must be with a Constable or higher to instruct training procedures in Alt
 		]
 	];
 	
-//Civilian/Rebel Rules
 	player createDiaryRecord ["civrules",
 		[
 			"Declaring War",
@@ -468,8 +466,9 @@ If a medic comes in between an active firefight between you and the police, you 
 				"
 		]
 	];
+
 	player createDiaryRecord ["civrules",
-				"
+		[
 			"Robbing the Federal Reserve",
 				"
 Federal Reserve can only be robbed when there's a minimum of 5 police officers online, this will increase to 8 when population grows. Any hostile contact approaching the fed within 1 kilometers is shoot on sight. Except civilians driving on traffic unless they're hostile and intend to approach you.<br/><br/>
@@ -478,7 +477,9 @@ Medic can also be shot on sight, they may approach from time to time to save a l
 				"
 		]
 	];
+
 	player createDiaryRecord ["civrules",
+		[
 			"Cartels"
 				"
 You are permitted to kill anyone on sight airborne or on ground within 850 meters of the Cartel. This is an activity specifically designed for Rebels to participate in, police are not allowed to approach the Cartels under any circumstance unless a hostage has been taken place. Police can follow you into the Cartels if they're in active pursuit, but once losing visual contact they must not continue pursuit.<br/><br/>
@@ -508,7 +509,8 @@ Stolen Vehicles
 				"
 		]
 	];
-	player createDiaryRecord ["illegalitems",
+
+	player createDiaryRecord ["illegal",
 		[
 			"Illegal Items",
 				"
@@ -533,7 +535,7 @@ Possession of Police Equipment is an illegal item, however goes under a differen
 		[
 			"Player Controls",
 				"
-DEL: Earplugs reduce sound by 20%
+DEL: Earplugs reduce sound by 20%<br/><br/>
 
 Y: Open Player Menu<br/><br/>
 
@@ -544,7 +546,7 @@ F: Cop Siren (if cop)<br/><br/>
 T: Vehicle Trunk<br/><br/>
 Left Shift + R: Restrain (Cop Only)<br/><br/>
 
-Left Shift + G: Knock out / stun (Civ Only, used for robbing them)<br/><br/>
+Left Shift + G: To place your hands up<br/><br/>
 
 Left Windows: Main Interaction key which is used for picking up items/money, gathering, interacting with cars (repair,etc) and for cops to interact with civilians. Can be rebound to a single key like H by pressing ESC->Configure->Controls->Custom->Use Action 10<br/><br/>
 
@@ -565,7 +567,7 @@ Left Shift + F: Unholster's your weapon<br/><br/>
 				"
 Welcome to Drunken Life server!<br/><br/>
 
-If you are interested what our Forums are please visit us at<br/>
+If you are interested to join our Forums please visit us at<br/>
 DrunkenLife.ca<br/><br/>
 
 If you want to join our community on Teamspeak please connect us at<br/>
@@ -573,6 +575,7 @@ TS.DrunkenLife.ca<br/><br/>
 				"
 		]
 	];
+
 	player createDiaryRecord["DLstuff",
 		[
 			"Drunken Life Credits",
