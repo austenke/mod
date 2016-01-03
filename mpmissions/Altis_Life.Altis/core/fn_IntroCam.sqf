@@ -15,7 +15,7 @@ if(!life_firstSpawn) then {
 	_camTime = 5;
 };
 
-[[_shop],"life_fnc_introsound",nil,true] spawn life_fnc_MP;
+[[player],"life_fnc_introsound",nil,true] spawn life_fnc_MP;
 //intro move
 showCinemaBorder true;
 camUseNVG false;
