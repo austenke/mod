@@ -5,8 +5,9 @@ player createDiarySubject ["changelog","Recent Change Logs"];
 player createDiarySubject ["serverrules","Server Rules"];
 player createDiarySubject ["policerules","Police Procedures/Rules"];
 //player createDiarySubject ["civrules","Civilian/Rebel Info]";
-player createDiarySubject ["illegalitems","Illegal Possessions"];
+player createDiarySubject ["illegal","Illegal Possessions"];
 player createDiarySubject ["controls","Controls"];
+player createDiarySubject ["DLstuff","Information about Drunken Life"],
 
 /*  Example
 	player createDiaryRecord ["", //Container
@@ -354,7 +355,7 @@ Possession of over 2 Primary Firearms and/or 3 Secondary Firearms is subjected t
 			"Use of Police Sirens", 
 				"
 
-Police Sirens should only be enabled when you are in active pursuit or commanded to do so by higher rank.
+Police Sirens should only be enabled when you are in active pursuit or commanded to do so by higher rank.<br/><br/>
 
 You may use flashing emergency lights if you're speeding on any traffic, to let the public know you're in a rush.
 				"
@@ -487,9 +488,9 @@ Cartels will take a cut on drugs produced by civilians, the % of income goes to 
 		]
 	];
 
-	
-// Illegal Items Section
-	player createDiaryRecord ["illegalitems",
+//illegal
+
+	player createDiaryRecord ["illegal",
 		[
 			"Illegal Vehicles",
 				"
@@ -526,12 +527,11 @@ Possession of Police Equipment is an illegal item, however goes under a differen
 		]
 	];
 
-	
-// Controls Section
+//controls
 
-	player createDiaryRecord ["Player Controls",
+	player createDiaryRecord ["controls",
 		[
-			"",
+			"Player Controls",
 				"
 DEL: Earplugs reduce sound by 20%
 
@@ -553,6 +553,35 @@ Left Shift + L: Activates cop siren lights (as a cop).<br/><br/>
 Left Shift + H: Holster's your pistol<br/><br/>
 
 Left Shift + F: Unholster's your weapon<br/><br/>
+				"
+		]
+	];
+
+//DLstuff
+
+	player createDiaryRecord["DLstuff",
+		[
+			"Drunken Life Information",
+				"
+Welcome to Drunken Life server!<br/><br/>
+
+If you are interested what our Forums are please visit us at<br/>
+DrunkenLife.ca<br/><br/>
+
+If you want to join our community on Teamspeak please connect us at<br/>
+TS.DrunkenLife.ca<br/><br/>
+				"
+		]
+	];
+	player createDiaryRecord["DLstuff",
+		[
+			"Drunken Life Credits",
+				"
+The Developers of this Server is Valiant, Ohmslaw, and Index.<br/><br/>
+
+The Owner of the website and photo icons goes to nKitsu<br/><br/>
+
+The Textures of skins was added by Ohmslaw<br/><br/>
 				"
 		]
 	];
