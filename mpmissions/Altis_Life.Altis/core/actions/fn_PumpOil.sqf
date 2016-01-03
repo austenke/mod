@@ -13,8 +13,6 @@ _Pump = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if((isNull _Pump) OR (player distance _Pump > 10)) exitWith {};
 if (life_is_processing) exitWith {hint localize "STR_Process_Pump_InUse";};
 
-//case "oil": {["oilu","oilp",1200,(localize "STR_Process_Oil"),0];};
-
 _upp = localize "STR_Process_Pump_Oil";
 
 //Setup our progress bar.
@@ -42,6 +40,11 @@ if(player distance _Pump > 10) exitWith {hint localize "STR_Process_Pump_Stay"; 
 
 _barrel = createVehicle ["Land_BarrelWater_F", position player, [], 0, "CAN_COLLIDE"];
 _barrel attachTo[player,[0,1,1.9]];
+_barrel allowDamage false;
+_barrel setVariable ["owner", player, true];
+_barrel enableRopeAttach false;
+player reveal _barrel;
+life_pumped_barrel = _barrel;
 
 titleText[format[localize "STR_Process_Pumped_Oil",1],"PLAIN"];
 
