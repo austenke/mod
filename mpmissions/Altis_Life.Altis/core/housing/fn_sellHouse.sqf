@@ -34,6 +34,7 @@ if(_action) then {
 	
 	BANK = BANK + (round((_houseCfg select 0)/2));
 	_index = life_vehicles find _house;
+	[6] call SOCK_fnc_updatePartial;
 	
 	if(_index != -1) then {
 		life_vehicles set[_index,-1];
