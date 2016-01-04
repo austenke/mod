@@ -4,10 +4,10 @@ if(player diarySubjectExists "rules")exitwith{};
 player createDiarySubject ["changelog","Recent Change Logs"];
 player createDiarySubject ["serverrules","Server Rules"];
 player createDiarySubject ["policerules","Police GuideBook"];
-player createDiarySubject ["civrules","Rebel/Civ Info]";
+player createDiarySubject ["civrules","Rebel/Civ Info"];
 player createDiarySubject ["illegal","Illegal Possessions"];
 player createDiarySubject ["controls","Controls"];
-player createDiarySubject ["DLstuff","Drunken Life"],
+player createDiarySubject ["DLstuff","Drunken Life"];
 
 /*  Example
 	player createDiaryRecord ["", //Container
