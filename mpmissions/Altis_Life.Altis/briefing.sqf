@@ -480,7 +480,7 @@ Medic can also be shot on sight, they may approach from time to time to save a l
 
 	player createDiaryRecord ["civrules",
 		[
-			"Cartels"
+			"Cartels",
 				"
 You are permitted to kill anyone on sight airborne or on ground within 850 meters of the Cartel. This is an activity specifically designed for Rebels to participate in, police are not allowed to approach the Cartels under any circumstance unless a hostage has been taken place. Police can follow you into the Cartels if they're in active pursuit, but once losing visual contact they must not continue pursuit.<br/><br/>
 
