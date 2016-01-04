@@ -493,17 +493,17 @@ Cartels will take a cut on drugs produced by civilians, a percentage of drugs wi
 		[
 			"Illegal Vehicles",
 				"
-A civilian in control of the following vehicles is subject to the consequences defined in the unauthorized control of a prohibited vehicle law.<br/><br/>
+A civilian in control of the following vehicles is guilty in possession of an illegal vehicle by Altis Law.<br/><br/>
 
-Ifrit<br/><br/>
+Ifrit<br/>
 
-50 Cal.<br/><br/>
+50 Cal.<br/>
 
-Police Vehicles under Civilian Possession<br/><br/>
+Police Vehicles under Civilian Possession<br/>
 
-Medic Vehicles under Civilian Possession<br/><br/>
+Medic Vehicles under Civilian Possession<br/>
 
-Stolen Vehicles
+Stolen Vehicles illegally obtained by another Civilian.
 				"
 		]
 	];
@@ -514,15 +514,15 @@ Stolen Vehicles
 				"
 Any weaponry, explosives, or items used to commit a crime purchased from a Rebel Outpost or in the blackmarket is an illegal item.<br/><br/>
 
-Any legal or illegal firearm obtained without a certified license is illegal item.<br/><br/>
+Any legal or illegal firearm obtained without a certified Firearm license is an illegal weapon.<br/><br/>
 
-Possession of Narcotics such as Marijuana and Cocaine is an illegal object and will be confiscated by police<br/><br/>
+Possession of any Narcotics such as Marijuana and Cocaine is an illegal item and will be confiscated by the police department.<br/><br/>
 
 Possession of Oil from Oil Rigs are illegal<br/><br/>
 
-Possession of Moonshine is extremely illegal as the President of Altis declared Moonshine as "poisonous" to the economy and the health of all Civilians.<br/><br/>
+Possession of Moonshine is extremely illegal as the President of Altis declared Moonshine as 'poisonous' to the economy and the health of all Civilians.<br/><br/>
 
-Possession of Police Equipment is an illegal item, however goes under a different charge. (Possession of Police Equipment)
+Possession of Police Equipment is an illegal item, however goes under a different charge. 'Violation for Possession of Police Equipment'
 				"
 		]
 	];
@@ -557,7 +557,7 @@ Left Shift + F: Unholster's your weapon<br/><br/>
 
 	player createDiaryRecord["DLstuff",
 		[
-			"Drunken Life Information",
+			"Drunken Life Info",
 				"
 Welcome to Drunken Life server!<br/><br/>
 
@@ -572,13 +572,13 @@ TS.DrunkenLife.ca<br/><br/>
 
 	player createDiaryRecord["DLstuff",
 		[
-			"Drunken Life Credits",
+			"DL Credits",
 				"
-The Developers of this Server is Valiant, Ohmslaw, and Index.<br/><br/>
+The Developers of the server are credited by Valiant, Ohmslaw, and Index.<br/><br/>
 
-The Owner of the website and photo icons goes to nKitsu<br/><br/>
+The Owner of the website and photo icons credits are credited by nKitsu<br/><br/>
 
-The Textures of skins was added by Ohmslaw<br/><br/>
+The Textures of skins were added to the server by Ohmslaw<br/><br/>
 				"
 		]
 	];
