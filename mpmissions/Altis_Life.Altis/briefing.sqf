@@ -310,7 +310,7 @@ Intoxication of Narcotics or Alcohol is against humanity here on Altis.<br/><br/
 
 8.9 - Possession of Marijuana<br/><br/>
 
-Possession of Marijuana is illegal and forbidden by Altis Law due to lack of critical thinking causing more harm than good to motivational skills, physical exercise, and increase the obesity rates by 35%.<br/><br/>
+Possession of Marijuana is illegal and forbidden by Altis Law due to lack of critical thinking causing more harm than good to motivational skills, physical exercise, and increase the obesity rates by 35 percent..<br/><br/>
 
 
 9.0 - Possession of Cocaine<br/><br/>
@@ -484,18 +484,16 @@ Medic can also be shot on sight, they may approach from time to time to save a l
 				"
 You are permitted to kill anyone on sight airborne or on ground within 850 meters of the Cartel. This is an activity specifically designed for Rebels to participate in, police are not allowed to approach the Cartels under any circumstance unless a hostage has been taken place. Police can follow you into the Cartels if they're in active pursuit, but once losing visual contact they must not continue pursuit.<br/><br/>
 
-Cartels will take a cut on drugs produced by civilians, the % of income goes to your gang bank which will be used to your gang leaders discretion.
+Cartels will take a cut on drugs produced by civilians, a percentage of drugs will go to your gang bank which will be used to your gang leaders discretion. For Gang Paychecks, or upgrades.
 				"
 		]
 	];
-
-//illegal
-
+	
 	player createDiaryRecord ["illegal",
 		[
 			"Illegal Vehicles",
 				"
-A civilian in control of the following prohibited vehicles is subject to the consequences defined in the unauthorized control of a prohibited vehicle law.<br/><br/>
+A civilian in control of the following vehicles is subject to the consequences defined in the unauthorized control of a prohibited vehicle law.<br/><br/>
 
 Ifrit<br/><br/>
 
@@ -529,13 +527,11 @@ Possession of Police Equipment is an illegal item, however goes under a differen
 		]
 	];
 
-//controls
-
 	player createDiaryRecord ["controls",
 		[
 			"Player Controls",
 				"
-DEL: Earplugs reduce sound by 20%<br/><br/>
+DEL: Earplugs reduce sound by 20 percent.<br/><br/>
 
 Y: Open Player Menu<br/><br/>
 
@@ -558,8 +554,6 @@ Left Shift + F: Unholster's your weapon<br/><br/>
 				"
 		]
 	];
-
-//DLstuff
 
 	player createDiaryRecord["DLstuff",
 		[
