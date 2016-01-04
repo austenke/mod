@@ -317,6 +317,7 @@ class Life_Client_Core
 		class copLoadout {};
 		class ticketPaid {};
 		class breathalyzer {};
+		class copEnter {};
 	};
 	
 	class Gangs
