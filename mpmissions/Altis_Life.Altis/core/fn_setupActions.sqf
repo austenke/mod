@@ -22,9 +22,9 @@ switch (playerSide) do {
     	life_inv_ziptie > 1 && animationState cursorTarget == "Incapacitated" && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
         
         life_actions = life_actions + [player addAction["Unrestrain",life_fnc_unrestrain,"",0,false,false,"",'
-        (currentWeapon player) in [RIFLE,LAUNCHER,PISTOL] && cursorTarget SVAR ["restrained",FALSE,TRUE] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
+        (currentWeapon player) in [RIFLE,LAUNCHER,PISTOL] && cursorTarget GVAR ["restrained",false] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
 
         life_actions = life_actions + [player addAction["Escort",life_fnc_escortAction,"",0,false,false,"",'
-        (currentWeapon player) in [RIFLE,LAUNCHER,PISTOL] && cursorTarget SVAR ["restrained",FALSE,TRUE] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
+        (currentWeapon player) in [RIFLE,LAUNCHER,PISTOL] && cursorTarget GVAR ["restrained",false] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
 	};
 };
