@@ -15,6 +15,7 @@ switch (playerSide) do {
 		//Rob person
 		life_actions = life_actions + [player addAction["Rob Person",life_fnc_robAction,"",0,false,false,"",'
 		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && animationState cursorTarget in ["Incapacitated","amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon"] && !(cursorTarget getVariable["robbed",FALSE]) ']];
+		
 		life_actions = life_actions + [player addAction["Punch Balls",life_fnc_punchBallsAction,"",0,false,false,"",'
         !isNull cursorTarget && player distance cursorTarget < 5 && isPlayer cursorTarget && animationState cursorTarget in ["Incapacitated","amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon"]']];
 
@@ -22,10 +23,10 @@ switch (playerSide) do {
     	life_inv_ziptie > 1 && animationState cursorTarget in ["incapacitated","Incapacitated","AinjPfalMstpSnonWnonDf_carried_fallwc"] && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
         
         life_actions = life_actions + [player addAction["Unrestrain",life_fnc_unrestrain,"",0,false,false,"",'
-        (currentWeapon player) in [RIFLE,LAUNCHER,PISTOL] && animationState cursorTarget == "AmovPercMstpSnonWnonDnon_Ease" && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
+        cursorTarget getVariable ["civ_restrained", false] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
 
         life_actions = life_actions + [player addAction["Escort",life_fnc_escortAction,"",0,false,false,"",'
-        (currentWeapon player) in [RIFLE,LAUNCHER,PISTOL] && animationState cursorTarget == "AmovPercMstpSnonWnonDnon_Ease" && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
+        cursorTarget getVariable ["civ_restrained", false] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
 	};
 
 	case west: {
