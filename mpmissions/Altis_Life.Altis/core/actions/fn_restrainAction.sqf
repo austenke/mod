@@ -15,7 +15,7 @@ if((_unit getVariable "restrained")) exitWith {};
 if(player == _unit) exitWith {};
 if(side player == civilian) exitWith {
 	if(life_inv_ziptie < 1) exitWith {hint "You need zipties first!";};
-	titleText "You have restrained your target!";
+	hint "You have restrained your target!";
 	_unit setVariable["civ_restrained",true,true];
 	[[player], "life_fnc_restrain", _unit, false] call life_fnc_MP;
 };
