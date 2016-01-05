@@ -7,7 +7,7 @@
 	Interact with an existing oil barrel
 */
 
-if (cursorTarget getVariable "owner" != player) exitWith {hint "You can't interact with this barrel!";};
+if (cursorTarget getVariable "owner" == "") exitWith {hint "You can't interact with this barrel!";};
 
 if (life_holdBarrel) exitWith {
 	{

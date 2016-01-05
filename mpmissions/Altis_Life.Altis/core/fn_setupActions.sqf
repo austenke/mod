@@ -28,7 +28,7 @@ switch (playerSide) do {
         life_actions = life_actions + [player addAction["Escort",life_fnc_escortAction,"",0,false,false,"",'
         cursorTarget getVariable ["civ_restrained", false] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
 
-		life_actions = life_actions + [player addAction["Interact with barrel",life_fnc_interactOil,"",0,false,false,"",'
+		life_actions = life_actions + [player addAction["Pick Up Barrel",life_fnc_interactOil,"",0,false,false,"",'
         !life_holdBarrel && typeOf cursorTarget == "Land_BarrelWater_F" && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
 	
 		life_actions = life_actions + [player addAction["Drop Barrel",life_fnc_interactOil,"",0,false,false,"",'
