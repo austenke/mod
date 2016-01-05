@@ -40,6 +40,7 @@ life_markers = false; //Finally this
 life_drink = 0;
 life_blowUp = false;
 life_stealth = false;
+life_holdBarrel = false;
 
 //Uniform price (0),Hat Price (1),Glasses Price (2),Vest Price (3),Backpack Price (4)
 life_clothing_purchase = [-1,-1,-1,-1,-1];
