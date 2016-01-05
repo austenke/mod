@@ -13,6 +13,6 @@ if (life_holdBarrel == true) exitWith {
 	{
 	  if (typeOf _x == "Land_BarrelWater_F") exitWith { life_holdBarrel = false;detach _x; };
 	} forEach attachedObjects player;
-}
+};
 
 if (typeOf cursorTarget == "Land_BarrelWater_F") exitWith { cursorTarget attachTo [player,[0,1,1]]; };
