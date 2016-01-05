@@ -7,8 +7,6 @@
 	Interact with an existing oil barrel
 */
 
-if (cursorTarget getVariable "owner" == "") exitWith {hint "You can't interact with this barrel!";};
-
 if (life_holdBarrel) exitWith {
 	{
 	  if (typeOf _x == "Land_BarrelWater_F") exitWith { life_holdBarrel = false;detach _x; };
