@@ -241,7 +241,7 @@ compileFinal "
 			systemChat _message;
 
 			_markername = format[""911_call_%1"",_from];
-			_marker = createMarkerLocal _markername;
+			_marker = createMarkerLocal [_markername];
 			_marker setMarkerColorLocal ""ColorBlue"";
 			_marker setMarkerTypeLocal ""hd_marker"";
 			_marker setMarkerTextLocal format[""911 call - %1"",_from];
