@@ -12,13 +12,6 @@ _type = [_this,2,"",[""]] call BIS_fnc_param;
 _customBounty = [_this,3,-1,[0]] call BIS_fnc_param;
 if(_uid == "" OR _type == "" OR _name == "") exitWith {["diag_log",["----- Tried to launch wanted, bad data passed -----"]] call TON_fnc_logIt;}; //Bad data passed.
 
-["diag_log",[
-	"------------- Wanted Crime Add -------------",
-	format["Player: %1",_name],
-	format["Player: %1",_type],
-	"-------------------------------------------------"
-]] call TON_fnc_logIt;
-
 //What is the crime?
 switch(_type) do
 {
@@ -42,6 +35,13 @@ switch(_type) do
 	case "390": {_type = ["Public Intoxication",1000]};
 	default {_type = [];};
 };
+
+["diag_log",[
+	"------------- Wanted Crime Add -------------",
+	format["Player: %1",_name],
+	format["Crime: %1",_type],
+	"-------------------------------------------------"
+]] call TON_fnc_logIt;
 
 if(count _type == 0) exitWith {}; //Not our information being passed...
 //Is there a custom bounty being sent? Set that as the pricing.

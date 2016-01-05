@@ -19,14 +19,15 @@ switch (playerSide) do {
         !isNull cursorTarget && player distance cursorTarget < 5 && isPlayer cursorTarget && animationState cursorTarget in ["Incapacitated","amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon"]']];
 
         life_actions = life_actions + [player addAction["Restrain",life_fnc_restrainAction,"",0,false,false,"",'
-    	life_inv_ziptie > 1 && animationState cursorTarget == "Incapacitated" && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
+    	life_inv_ziptie > 1 && animationState cursorTarget == "incapacitated" && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
         
         life_actions = life_actions + [player addAction["Unrestrain",life_fnc_unrestrain,"",0,false,false,"",'
         (currentWeapon player) in [RIFLE,LAUNCHER,PISTOL] && cursorTarget GVAR ["restrained",false] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
 
         life_actions = life_actions + [player addAction["Escort",life_fnc_escortAction,"",0,false,false,"",'
         (currentWeapon player) in [RIFLE,LAUNCHER,PISTOL] && cursorTarget GVAR ["restrained",false] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
-	}
+	};
+
 	case west: {
 		//CopEnter - Driver Seat 
 		life_actions = life_actions + [player addAction[localize "Cop Enter as Driver",life_fnc_copEnter,"driver",200,false,false,"",'
@@ -39,6 +40,5 @@ switch (playerSide) do {
 		//CopEnter - Exit 
 		life_actions = life_actions + [player addAction[localize "Cop Exit Vehicle",life_fnc_copEnter,"exit",100,false,false,"",'
 		(vehicle player != player) && (locked(vehicle player)!=0)']];
-
 	};
 };

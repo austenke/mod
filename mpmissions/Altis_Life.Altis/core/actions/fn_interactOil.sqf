@@ -8,7 +8,7 @@
 */
 
 {
-  if (typeOf _x == "Land_MetalBarrel_F") exitWith { detach _x; };
+  if (typeOf _x == "Land_BarrelWater_F") exitWith { detach _x; };
 } forEach attachedObjects player;
 
-if (typeOf cursorTarget == "Land_MetalBarrel_F") exitWith { cursorTarget attachTo [player,[0,1,1]]; };
+if (typeOf cursorTarget == "Land_BarrelWater_F") exitWith { cursorTarget attachTo [player,[0,1,1]]; };
