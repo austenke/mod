@@ -45,6 +45,7 @@ _barrel setVariable ["owner", player, true];
 _barrel enableRopeAttach false;
 player reveal _barrel;
 life_pumped_barrel = _barrel;
+life_holdBarrel = true;
 
 titleText[format[localize "STR_Process_Pumped_Oil",1],"PLAIN"];
 
