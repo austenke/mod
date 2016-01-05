@@ -39,9 +39,9 @@ switch (playerSide) do {
 		//!isNull cursorTarget && (()||(cursorTarget isKindOf "Air")||(cursorTarget isKindOf "Ship"))
 		// (locked cursorTarget) != 0 && cursorTarget distance player < 3.5
 
-		CopEnter - Passenger Seat 
-		life_actions = life_actions + [player addAction["Cop Enter as Passenger",life_fnc_copEnter,"passenger",100,false,false,"",'
-		cursorTarget isKindOf "Car" ']];
+		//CopEnter - Passenger Seat 
+		//life_actions = life_actions + [player addAction["Cop Enter as Passenger",life_fnc_copEnter,"passenger",100,false,false,"",'
+		//cursorTarget isKindOf "Car" ']];
 		// !isNull cursorTarget && ((cursorTarget isKindOf "Car")||(cursorTarget isKindOf "Air")||(cursorTarget isKindOf "Ship")) && (locked cursorTarget) != 0 && cursorTarget distance player < 3.5 ']];
 
 		//CopEnter - Exit 
