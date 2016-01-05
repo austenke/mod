@@ -48,5 +48,6 @@ titleText[format[localize "STR_Process_Procdone_Oil",1],"PLAIN"];
 5 cutText ["","PLAIN"];
 life_action_inUse = false;
 life_is_processing = false;
+life_holdBarrel = true;
 
 deletevehicle _barrel;
