@@ -38,13 +38,13 @@ switch (playerSide) do {
 	case west: {
 		//CopEnter - Driver Seat 
 		life_actions = life_actions + [player addAction["Cop Enter as Driver",life_fnc_copEnter,"driver",200,false,false,"",'
-		cursorTarget isKindOf "Car" && cursorTarget distance player < 3.5 && (locked cursorTarget) !=0 && speed cursorTarget < 1 ']];
+		cursorTarget isKindOf "Car" && cursorTarget distance player < 5.5 && (locked cursorTarget) !=0 && speed cursorTarget < 1 ']];
 		//!isNull cursorTarget && (()||(cursorTarget isKindOf "Air")||(cursorTarget isKindOf "Ship"))
 		// (locked cursorTarget) != 0 && cursorTarget distance player < 3.5
 
 		//CopEnter - Passenger Seat 
 		life_actions = life_actions + [player addAction["Cop Enter as Passenger",life_fnc_copEnter,"passenger",100,false,false,"",'
-		cursorTarget isKindOf "Car" && cursorTarget distance player < 3.5 && (locked cursorTarget) !=0 && speed cursorTarget < 1 ']];
+		cursorTarget isKindOf "Car" && cursorTarget distance player < 5.5 && (locked cursorTarget) !=0 && speed cursorTarget < 1 ']];
 		// !isNull cursorTarget && ((cursorTarget isKindOf "Car")||(cursorTarget isKindOf "Air")||(cursorTarget isKindOf "Ship")) && (locked cursorTarget) != 0 && cursorTarget distance player < 3.5 ']];
 
 		//CopEnter - Exit 

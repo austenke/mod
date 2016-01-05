@@ -12,6 +12,8 @@ _Pump = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 //Error check
 if((isNull _Pump) OR (player distance _Pump > 10)) exitWith {};
 if (life_is_processing) exitWith {hint localize "STR_Process_Pump_InUse";};
+if(life_holdBarrel) exitWith {hint "You are already holding a barrel"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+
 
 _upp = localize "STR_Process_Pump_Oil";
 
@@ -37,6 +39,7 @@ while{true} do {
 };
 	
 if(player distance _Pump > 10) exitWith {hint localize "STR_Process_Pump_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+if(life_holdBarrel) exitWith {hint "You are already holding a barrel"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 
 _barrel = createVehicle ["Land_BarrelWater_F", position player, [], 0, "CAN_COLLIDE"];
 _barrel attachTo[player,[0,1,1.9]];
