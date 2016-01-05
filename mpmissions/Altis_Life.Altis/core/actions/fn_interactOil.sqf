@@ -11,8 +11,8 @@ if (cursorTarget getVariable "owner" != player) exitWith {hint "You can't intera
 
 if (life_holdBarrel == true) exitWith {
 	{
-	  if (typeOf _x == "Land_BarrelWater_F") exitWith { detach _x; };
+	  if (typeOf _x == "Land_BarrelWater_F") exitWith { life_holdBarrel = false;detach _x; };
 	} forEach attachedObjects player;
 }
 
-if (typeOf cursorTarget == "Land_BarrelWater_F") exitWith { life_holdBarrel = true; cursorTarget attachTo [player,[0,1,1]]; };
+if (typeOf cursorTarget == "Land_BarrelWater_F") exitWith { life_holdBarrel = true;cursorTarget attachTo [player,[0,1,1]]; };
