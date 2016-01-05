@@ -17,11 +17,13 @@ if(_criminal distance _shop > 20) exitWith { hint "You need to stay close to the
 if (life_action_inUse) exitWith { hint "Break out already in progress!"; };
 if (vehicle player != _criminal) exitWith { hint "Get out of your vehicle!"; };
 
+if (_prison getVariable["inStart",false]) exitWith { hint "A prison break is already in progress"; };
+
 if !(alive _criminal) exitWith {};
 if (currentWeapon _criminal == "") exitWith { hint "Are you really trying to start a prison break without a gun?"; };
-if (_kassa == 0) exitWith { hint "There is no cash in the register!" };
 
 life_action_inUse = true;
+_prison setVariable ["inStart",true];
 _prison removeAction _action;
 [[1,format[localize "STR_Jail_BreakNOTF",(name _criminal)]],"life_fnc_broadcast",west,FALSE] call life_fnc_MP;
  
@@ -51,19 +53,29 @@ if(life_action_inUse) then
 		_pgText ctrlSetText format["Prison break in progress, stay close (20m) (%1%2)...",round(_cP * 100),"%"];
 
 		if(_cP >= 1) exitWith {};
-		if(_criminal distance _shop > 20) exitWith {deleteMarker _marker; life_action_inUse = false;};
-		if!(alive _criminal) exitWith {deleteMarker _marker; life_action_inUse = false;};
+		if(_criminal distance _shop > 20) exitWith {life_action_inUse = false;};
+		if!(alive _criminal) exitWith {life_action_inUse = false;};
 	};
 
-	if!(alive _criminal) exitWith { life_action_inUse = false; deleteMarker _marker; };
-	if(_criminal distance _shop > 20) exitWith { life_action_inUse = false; deleteMarker _marker; _shop switchMove ""; hint "You need to stay close to the prison to continue a prison break!"; 5 cutText ["","PLAIN"]; };
+	_counter = 0;
+	{
+		if(_x distance (getMarkerPos "jail_marker") < 40) then {
+			_x setPos _prison;
+			_counter = _counter + 1;
+		}
+	} forEach playableUnits;
+
+	if!(alive _criminal) exitWith { life_action_inUse = false; };
+	if(_criminal distance _shop > 20) exitWith { life_action_inUse = false; hint "You need to stay close to the prison to continue a prison break!"; 5 cutText ["","PLAIN"]; };
 	5 cutText ["","PLAIN"];
 
-	titleText[format["You have broken out %1 people, now get away before the cops arrive!",FOOOOOOO],"PLAIN"];
+	titleText[format["You have broken out %1 people, now get away before the cops arrive!",_counter],"PLAIN"];
+	[[0,format["%1 has broken %2 people out of prison!",name player,_counter]],"life_fnc_broadcast",true,false] call life_fnc_MP;
 	life_action_inUse = false;
-	deleteMarker _marker;
 	[[getPlayerUID _criminal,name _criminal,"512"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 };
 
 sleep 300;
+deleteMarker _marker;
+_prison setVariable ["inStart",false];
 _action = _shop addAction["Start a prison break",life_fnc_robShops, _name];

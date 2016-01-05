@@ -2160,7 +2160,7 @@
 			<Portuguese>%1 escapou da prisão</Portuguese>
 		</Key>
 		<Key ID="STR_Jail_BreakNOTF">
-			<Original>%1 is breaking into the jail!</Original>
+			<Original>%1 is starting a prison break!</Original>
 			<German>%1 ist aus dem Gefängnis ausgebrochen!</German>
 			<French>%1 s'est échappé de prison!</French>
 			<Italian>%1 è scappato dalla prigione!</Italian>
