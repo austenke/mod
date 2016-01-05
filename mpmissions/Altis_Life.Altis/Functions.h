@@ -124,6 +124,7 @@ class Life_Client_Core
 		class processOil {};
 		class sellOil {};
 		class activateNitro {};
+		class prisonBreak {};
 	};
 	
 	class Housing
