@@ -2159,6 +2159,13 @@
 			<Italian>%1 è scappato dalla prigione!</Italian>
 			<Portuguese>%1 escapou da prisão</Portuguese>
 		</Key>
+		<Key ID="STR_Jail_BreakNOTF">
+			<Original>%1 is breaking into the jail!</Original>
+			<German>%1 ist aus dem Gefängnis ausgebrochen!</German>
+			<French>%1 s'est échappé de prison!</French>
+			<Italian>%1 è scappato dalla prigione!</Italian>
+			<Portuguese>%1 escapou da prisão</Portuguese>
+		</Key>
 		<Key ID="STR_Jail_EscapeSelf">
 			<Original>You have escaped from jail, you still retain your previous crimes and now have a count of escaping jail.</Original>
 			<German>Du bist aus dem Gefängnis ausgebrochen, die Polizei sucht bereits wegen deiner früheren Verbrechen und Gefängnisausbruch nach dir.</German>
