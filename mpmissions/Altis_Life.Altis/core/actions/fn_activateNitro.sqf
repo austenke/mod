@@ -19,5 +19,5 @@ _vehicle setVariable["nitroTime", time, false];
 systemChat format ["Nitro engaged."];
 _vel = velocity _vehicle;
 _dir = direction _vehicle;
-_speed = 100; //how much you want to add speed for the vehicle
+_speed = 25; //how much you want to add speed for the vehicle
 _vehicle setVelocity [(_vel select 0)+(sin _dir*_speed),(_vel select 1)+ (cos _dir*_speed),(_vel select 2)];
