@@ -483,9 +483,6 @@ class CfgVehicles {
 			{ "RedGull", "civ", {
 					"textures\hatch_sport\redgull_rally.paa"
 			} },
-			{ "Titties", "civ", {
-					"textures\hatch_sport\titcar.paa"
-			} },
 			{ "Youtube", "civ", {
 					"textures\hatch_sport\youtube.paa"
 			} },	
@@ -640,10 +637,7 @@ class CfgVehicles {
 			} },
 			{ "Tagged", "civ", {
 					"textures\suv\suv_tag.paa"
-			} },
-		    { "nKitsu", "civ", {
-	                "textures\suv\thenkitsu.paa"
-            } },			
+			} },			
 			{ "Taxi", "civ", {
 					"textures\suv\SUV_Taxi.paa"
 			} },	
