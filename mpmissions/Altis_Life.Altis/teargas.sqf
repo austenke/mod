@@ -16,10 +16,10 @@ While{true} do
     if (headgear player != "H_CrewHelmetHeli_B") then
     {
         "dynamicBlur" ppEffectEnable true; // enables ppeffect
-        "dynamicBlur" ppEffectAdjust [20]; // intensity of blur
-        "dynamicBlur" ppEffectCommit 3; // time till vision is fully blurred
-        enableCamShake true;     // enables camera shake
-        addCamShake [10, 45, 10];    // sets shakevalues
+        "dynamicBlur" ppEffectAdjust [10]; // intensity of blur
+        "dynamicBlur" ppEffectCommit 4; // time till vision is fully blurred
+        enableCamShake false;     // enables camera shake
+        addCamShake [5, 20, 5];    // sets shakevalues
         player setFatigue 1; // sets the fatigue to 100%
         5 fadeSound 0.1;     // fades the sound to 10% in 5 seconds
 
