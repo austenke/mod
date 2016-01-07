@@ -2152,7 +2152,7 @@
 			<Portuguese>Você foi preso, cumpra sua pena. Se você tentar renascer ou reconectar seu tempo na cadeia irá aumentar!</Portuguese>
 		</Key>
 		<Key ID="STR_Jail_LicenseNOTF">
-			<Original>For being arrested you have lost the following licenses if you own them\n\nFirearms License\nRebel License</Original>
+			<Original>For being arrested you have lost your Firearms license if you had one</Original>
 			<German>Bei der Verhaftung hast du folgende Lizenzen verloren\n\nWaffen Lizenz\nRebellen Lizenz</German>
 			<French>Après votre mise en prison, vous avez perdu les licences suivante si vous les aviez\n\nFirearms License\nRebel License</French>
 			<Italian>A causa del tuo arresto hai perso le seguenti licenze, se le possedevi\n\nPorto d'armi\nLicenza Ribelle</Italian>
