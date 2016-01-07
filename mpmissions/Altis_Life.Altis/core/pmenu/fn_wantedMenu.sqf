@@ -17,7 +17,7 @@ _units = [];
 
 ctrlSetText[2404,"Establishing connection..."];
 
-if(FETCH_CONST(life_coplevel) < 3 && FETCH_CONST(life_adminlevel) == 0) then {
+if(FETCH_CONST(life_coplevel) < 1 && FETCH_CONST(life_adminlevel) == 0) then {
 	ctrlShow[2405,false];
 };
 

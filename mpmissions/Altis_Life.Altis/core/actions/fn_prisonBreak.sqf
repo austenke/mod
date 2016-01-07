@@ -12,7 +12,7 @@ _criminal = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param; //Can you guess? Alr
 _action = [_this,2] call BIS_fnc_param;//Action name
 
 if(side _criminal != civilian) exitWith { hint "Only civilians can break people out!"; };
-if(_criminal distance _shop > 20) exitWith { hint "You need to stay close to the prison to continue a prison break"; };
+if(_criminal distance _prison > 20) exitWith { hint "You need to stay close to the prison to continue a prison break"; };
 
 if (life_action_inUse) exitWith { hint "Break out already in progress!"; };
 if (vehicle player != _criminal) exitWith { hint "Get out of your vehicle!"; };
@@ -39,7 +39,7 @@ _marker setMarkerColor "ColorRed";
 _marker setMarkerText "Prison break in progress!";
 _marker setMarkerType "hd_warning";
 
-_pgText ctrlSetText format["Prison break in progress, stay close (20m) (1%1)...","%"];
+_pgText ctrlSetText format["Prison break in progress, stay within 20 meters (1%1)...","%"];
 _progress progressSetPosition 0.01;
 _cP = 0.01;
  
@@ -50,10 +50,10 @@ if(life_action_inUse) then
 			sleep 1.70;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
-		_pgText ctrlSetText format["Prison break in progress, stay close (20m) (%1%2)...",round(_cP * 100),"%"];
+		_pgText ctrlSetText format["Prison break in progress, stay within 20 meters (%1%2)...",round(_cP * 100),"%"];
 
 		if(_cP >= 1) exitWith {};
-		if(_criminal distance _shop > 20) exitWith {life_action_inUse = false;};
+		if(_criminal distance _prison > 20) exitWith {life_action_inUse = false;};
 		if!(alive _criminal) exitWith {life_action_inUse = false;};
 	};
 
@@ -66,7 +66,7 @@ if(life_action_inUse) then
 	} forEach playableUnits;
 
 	if!(alive _criminal) exitWith { life_action_inUse = false; };
-	if(_criminal distance _shop > 20) exitWith { life_action_inUse = false; hint "You need to stay close to the prison to continue a prison break!"; 5 cutText ["","PLAIN"]; };
+	if(_criminal distance _prison > 20) exitWith { life_action_inUse = false; hint "You need to stay close to the prison to continue a prison break!"; 5 cutText ["","PLAIN"]; };
 	5 cutText ["","PLAIN"];
 
 	titleText[format["You have broken out %1 people, now get away before the cops arrive!",_counter],"PLAIN"];
@@ -78,4 +78,4 @@ if(life_action_inUse) then
 sleep 300;
 deleteMarker _marker;
 _prison setVariable ["inStart",false];
-_action = _shop addAction["Start a prison break",life_fnc_robShops, _name];
+_action = _prison addAction["Start a prison break",life_fnc_robShops, _name];
