@@ -102,10 +102,10 @@
 		_load = round(_cfg / 8);
 		if (vest player == "V_TacVest_blk_POLICE") then { _load = 30; };
 		life_maxWeight = life_maxWeightT + _load;
-		waitUntil {vest player != _bp};
+		waitUntil {vest player != _vp};
 		if(vest player == "") then
 		{
-			life_maxWeight = life_maxWeightT;
+			life_maxWeight = life_maxWeight;
 		};
 	};
 };
