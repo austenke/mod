@@ -13,7 +13,7 @@ _barrel = nearestObjects[getPos player,["Land_BarrelWater_F"],8] select 0;
 if((isNull _Proc) OR (player distance _Proc > 10)) exitWith {};
 if (life_is_processing) exitWith {hint localize "STR_Process_Proc_InUse";};
 if (side player == west) exitWith {hint "You cannot preform this action as an officer."};
-if(isNull life_holdBarrel) exitWith {hint "You need a barrel first!"};
+if(!life_holdBarrel) exitWith {hint "You need a barrel first!"};
 
 
 _upp = localize "STR_Process_Proc_Oil";
