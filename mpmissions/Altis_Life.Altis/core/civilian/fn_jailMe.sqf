@@ -37,7 +37,7 @@ removeUniform player;
 addUniform "U_C_WorkerCoveralls";
 
 // Texture prison uniform
-if(uniform player == "U_C_WorkerCoveralls") then { [[player,0,"textures\prisoner_uniform.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;};
+if((uniform player) == "U_C_WorkerCoveralls") then { [player,0,"textures\prisoner_uniform.jpg"] remoteExecCall ["life_fnc_setTexture",RCLIENT]; };
 
 [_bad] spawn {
 	life_canpay_bail = false;

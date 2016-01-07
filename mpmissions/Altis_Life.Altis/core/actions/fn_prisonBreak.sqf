@@ -53,8 +53,8 @@ if(life_action_inUse) then
 		_pgText ctrlSetText format["Prison break in progress, stay within 20 meters (%1%2)...",round(_cP * 100),"%"];
 
 		if(_cP >= 1) exitWith {};
-		if(_criminal distance _prison > 20) exitWith {life_action_inUse = false;};
-		if!(alive _criminal) exitWith {life_action_inUse = false;};
+		if(_criminal distance _prison > 20) exitWith {life_action_inUse = false; 5 cutText ["","PLAIN"];};
+		if!(alive _criminal) exitWith {life_action_inUse = false; 5 cutText ["","PLAIN"];};
 	};
 
 	_counter = 0;

@@ -65,8 +65,8 @@ if(life_action_inUse) then
 		_pgText ctrlSetText format["Robbery in Progress, stay close (4m) (%1%2)...",round(_cP * 100),"%"];
 
 		if(_cP >= 1) exitWith {};
-		if(_robber distance _shop > 6.5) exitWith {deleteMarker _marker; life_action_inUse = false;};
-		if!(alive _robber) exitWith {deleteMarker _marker; life_action_inUse = false;};
+		if(_robber distance _shop > 6.5) exitWith {deleteMarker _marker; life_action_inUse = false; 5 cutText ["","PLAIN"];};
+		if!(alive _robber) exitWith {deleteMarker _marker; life_action_inUse = false; 5 cutText ["","PLAIN"];};
 	};
 
 	if!(alive _robber) exitWith { life_action_inUse = false; deleteMarker _marker; };
