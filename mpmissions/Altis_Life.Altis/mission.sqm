@@ -2641,7 +2641,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1508;
+		items=1509;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -18927,6 +18927,17 @@ class Mission
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this addAction[""<t color='#B300FA'>[Civ]<t color='#47FA00'>Car Shop"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,[""civ_car_1"",""civ_car_1_1""],""civ"",""Bruce's New & Used Auto's""]]; this addAction[""<t color='#B300FA'>[Civ]<t color='#47FA00'>Vehicle Garage"",  {   [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2]; life_garage_type = ""Car"";   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""car_g_1"";  }];  this addAction[""<t color='#B300FA'>[Civ]<t color='#47FA00'>Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
+		};
+		class Item1508
+		{
+			position[]={4737.5376,39.715374,12806.517};
+			azimut=61.400398;
+			offsetY=0.221828;
+			id=1633;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V2_F";
+			skill=0.60000002;
+			init="this allowDamage false; this allowDamage false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this enableSimulation false; this addAction[""Mix Cornmeal"",life_fnc_processAction,""mash"",0,false,false,"""",' life_inv_cornmeal > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""liquor"",0,false,false,"""",' !license_civ_liquor && playerSide == civilian '];";
 		};
 	};
 	class Markers
