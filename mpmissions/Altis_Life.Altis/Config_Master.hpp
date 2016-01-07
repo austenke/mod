@@ -151,6 +151,7 @@ class VirtualItems {
 	VITEMMACRO(rock, "STR_Item_Rock", "rock", 4, -1, -1, false, -1, "")
 	VITEMMACRO(cement, "STR_Item_CementBag", "cement", 3, -1, 2200, false, -1, "icons\ico_cement.paa")
 	VITEMMACRO(wood, "STR_Item_Wood", "wood", 5, 6100, 6000, false, -1, "icons\Wood.paa")
+	VITEMMACRO(waterBucket, "STR_Item_waterBucket", "waterBucket", 3, -1, -1, false,- 1, "")
 
 	//Drugs
 	VITEMMACRO(heroin_unprocessed, "STR_Item_HeroinU", "heroinUnprocessed", 6, -1, -1, true, -1, "")
@@ -313,6 +314,11 @@ class VirtualShops {
 		name = "STR_Shops_wood";
 		items[] = { "wood" };
 	};
+
+	class redneck {
+		name = "STR_Shops_redneck";
+		items[] = { "moonshine_bottled" };
+	}
 };
 
 #include "Config_Vehicles.hpp"

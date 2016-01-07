@@ -7,6 +7,12 @@
 			<Italian>wood Buyer</Italian>
 			<French>wood Buyer</French>
 		</Key>
+		<Key ID="STR_Shops_redneck">
+			<Original>Moonshine Buyer</Original>
+			<German>Moonshine Buyer</German>
+			<Italian>Moonshine Buyer</Italian>
+			<French>Moonshine Buyer</French>
+		</Key>
 		<Key ID="STR_Shops_C_Bruce">
 			<Original>Bruce's Outback Outfits</Original>
 			<Portuguese>Loja de Roupas</Portuguese>
@@ -3047,6 +3053,9 @@
 		<Key ID="STR_Item_Bottles">
 			<Original>Glass Bottles</Original>
 		</Key>
+		<Key ID="STR_Item_waterBucket">
+			<Original>Water Bucket</Original>
+		</Key>
 		<Key ID="STR_Item_BottledShine">
     		<Original>Bottled Moonshine</Original>
 		</Key>
@@ -4198,6 +4207,10 @@
 		<Key ID="STR_Gather_Rye">
 			<Original>Gather Rye</Original>
 			<English>Gather Rye</English>
+		</Key>
+		<Key ID="STR_Gather_waterBucket">
+			<Original>Fill Bucket</Original>
+			<English>Fill Bucket</English>
 		</Key>
 		<Key ID="STR_Gather_Hops">
 			<Original>Pick Hops</Original>
