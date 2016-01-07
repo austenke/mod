@@ -19,6 +19,26 @@ if(count _ret > 0) then { life_bail_amount = SEL(_ret,3); } else { life_bail_amo
 _esc = false;
 _bail = false;
 
+// Save gear
+life_prison_backpack = backpack player;
+life_prison_uniform = uniform player;
+life_prison_headgear = headgear player;
+life_prison_vest = vest player;
+
+sleep 1;
+
+// Remove gear
+removeBackpack player;
+removeHeadgear player;
+removeVest player;
+removeUniform player;
+
+// Add prison uniform
+addUniform "U_C_WorkerCoveralls";
+
+// Texture prison uniform
+if(uniform player == "U_C_WorkerCoveralls") then { [[player,0,"textures\prisoner_uniform.paa"],"life_fnc_setTexture",true,false] spawn life_fnc_MP;};
+
 [_bad] spawn {
 	life_canpay_bail = false;
 	if(_this select 0) then {
@@ -48,7 +68,6 @@ while {true} do {
 	sleep 0.1;
 };
 
-
 switch (true) do {
 	case (_bail): {
 		life_is_arrested = false;
@@ -75,4 +94,12 @@ switch (true) do {
 		player setPos (getMarkerPos "jail_release");
 		[5] call SOCK_fnc_updatePartial;
 	};
+};
+
+if(player distance (getMarkerPos "jail_release") < 5) then
+{
+    player addUniform life_prison_uniform;
+    player addBackpack life_prison_backpack;
+    player addHeadgear life_prison_headgear;
+    player addVest life_prison_vest;
 };
