@@ -11,6 +11,7 @@ _barrelp = nearestObjects[getPos player,["Land_MetalBarrel_F"],8] select 0;
 _price = 300000;
 
 if((isNull _sell) OR (player distance _sell > 10)) exitWith {};
+if(isNull life_holdBarrel) exitWith {hint "You need a barrel first!"};
 
 deletevehicle _barrelp;
 
