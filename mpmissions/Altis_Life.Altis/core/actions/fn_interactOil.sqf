@@ -8,8 +8,9 @@
 */
 
 if (life_holdBarrel) exitWith {
+	life_holdBarrel = false;
 	{
-	  if ((typeOf _x) in ["Land_BarrelWater_F","Land_MetalBarrel_F"]) exitWith { life_holdBarrel = false;detach _x; };
+	  if ((typeOf _x) in ["Land_BarrelWater_F","Land_MetalBarrel_F"]) exitWith { detach _x; };
 	} forEach attachedObjects player;
 };
 
