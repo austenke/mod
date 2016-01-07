@@ -20,4 +20,6 @@ deletevehicle _barrelp;
 
 ADD(CASH,_price);
 
+life_holdBarrel = false;
+
 titleText[format[localize "STR_Shop_sellOil",1],"PLAIN"];
