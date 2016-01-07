@@ -27,6 +27,7 @@ class Life_Client_Core
 		class initZeus {};
 		class initMedic {};
 		class survival {};
+		class jip {};
 	};
 
 //	class Slots    ---------------In Development----------------
