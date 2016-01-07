@@ -18931,7 +18931,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=239;
+		items=240;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -20854,6 +20854,14 @@ class Mission
 			type="c_car";
 			colorName="ColorOrange";
 			angle=-1.28506;
+		};
+		class Item239
+		{
+			position[]={9961.5156,5.1674428,10007.756};
+			name="bucket_1";
+			text="Water Well";
+			type="mil_dot";
+			colorName="ColorGreen";
 		};
 	};
 	class Sensors
