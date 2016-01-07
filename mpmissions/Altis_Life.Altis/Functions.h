@@ -238,6 +238,7 @@ class Life_Client_Core
 		class vdmed {};
 		class speedBomb {};
 		class corpse {};
+		class Uniformscolor {};
 	};
 	
 	class Network
