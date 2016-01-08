@@ -23,18 +23,18 @@ _itemInfo = switch (_type) do
 {
 	case "oil": {_license = "oil";["oil_unprocessed","oil_processed",1200,(localize "STR_Process_Oil"), false];};
 	case "diamond": {_license = "diamond";["diamond_uncut","diamond_cut",1350,(localize "STR_Process_Diamond"), false];};
-	case "heroin": {_license = "heroin";_toSelect = ((life_capture_list) select 4);["heroin_unprocessed","heroin_processed",4000,(localize "STR_Process_Heroin"), false];};
+	case "heroin": {_license = "heroin";_toSelect = ((life_capture_list) select 3);["heroin_unprocessed","heroin_processed",4000,(localize "STR_Process_Heroin"), false];};
 	case "copper": {_license = "copper";["copper_unrefined","copper_refined",750,(localize "STR_Process_Copper"), false];};
 	case "iron": {_license = "iron";["iron_unrefined","iron_refined",1120,(localize "STR_Process_Iron"), false];};
 	case "sand": {_license = "sand";["sand","glass",650,(localize "STR_Process_Sand"), false];};
 	case "salt": {_license = "salt";["salt_unrefined","salt_refined",450,(localize "STR_Process_Salt"), false];};
-	case "cocaine": {_license = "cocaine";_toSelect = ((life_capture_list) select 2);["cocaine_unprocessed","cocaine_processed",3000,(localize "STR_Process_Cocaine"), false];};
+	case "cocaine": {_license = "cocaine";_toSelect = ((life_capture_list) select 1);["cocaine_unprocessed","cocaine_processed",3000,(localize "STR_Process_Cocaine"), false];};
 	case "marijuana": {_license = "marijuana";["cannabis","marijuana",2000,(localize "STR_Process_Marijuana"), false];};
 	case "cement": {_license = "cement";["rock","cement",350,(localize "STR_Process_Cement"), false];};
 	case "mash": {_license = "stiller";["waterBucket","mash",100,"Mixing Ingredients",true,"cornmeal"]};
 	case "whiskey": {_license = "stiller";["yeast","whiskey",1000,"Fermenting Whiskey",true,"rye"]};
 	case "beer": {_license = "liquor";["yeast","beerp",1500,"Brewing Beer",true,"hops"]};
-	case "moonshine": {_license = "stiller";_toSelect = ((life_capture_list) select 3);["yeast","moonshine",250,"Making Moonshine",true,"mash"]};
+	case "moonshine": {_license = "stiller";_toSelect = ((life_capture_list) select 2);["yeast","moonshine",250,"Making Moonshine",true,"mash"]};
 	case "bottledshine": {_license = "bottler";["moonshine","bottledshine",500,"Bottling Moonshine",false]};
 	case "bottledbeer": {_license = "bottler";["beerp","bottledbeer",500,"Bottling Beer",false]};
 	case "bottledwhiskey": {_license = "bottler";["whiskey","bottledwhiskey",500,"Bottling Whiskey",false]};
@@ -121,7 +121,7 @@ if(_hasLicense) then
 		5 cutText ["","PLAIN"];
 		titleText[format["You have processed %1 to %2.",_itemNameo1,_itemName],"PLAIN"];
 	};
-	if(!(_toSelect select 0 == 0)) then
+	if(_toSelect != 0) then
 	{
 		[5,grpPlayer,_toSelect select 0,2000] remoteExecCall ["TON_fnc_updateGang",RSERV];
 	};
@@ -163,7 +163,7 @@ else
 		5 cutText ["","PLAIN"];
 		titleText[format["You have process %1 to %2 for %3$.",_itemNameo1,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
 	};
-	if(_toSelect select 0 != 0) then
+	if(_toSelect != 0) then
 	{
 		[5,grpPlayer,_toSelect select 0,2000] remoteExecCall ["TON_fnc_updateGang",RSERV];
 	};
