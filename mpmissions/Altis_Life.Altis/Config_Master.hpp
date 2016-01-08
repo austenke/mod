@@ -262,7 +262,7 @@ class VirtualShops {
 	
 	class drugdealer {
 		name = "STR_Shops_DrugDealer";
-		items[] = { "cocaine_processed", "heroin_processed", "marijuana" };
+		items[] = { "cocaineP", "heroin_processed", "marijuana" };
 	};
 
 	class oil {
