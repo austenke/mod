@@ -122,10 +122,11 @@ if(_hasLicense) then
 		5 cutText ["","PLAIN"];
 		titleText[format["You have processed %1 to %2.",_itemNameo1,_itemName],"PLAIN"];
 	};
-	##if(_toSelect select 0 != "") then
+	/*if(_toSelect select 0 != "") then
 	##{
 	##	[5,grpPlayer,_toSelect select 0,2000] remoteExecCall ["TON_fnc_updateGang",RSERV];
 	##};
+	*/
 	if(!([true,_newItem,_min] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_min] call life_fnc_handleInv; life_is_processing = false;};
 	life_is_processing = false;
 			
