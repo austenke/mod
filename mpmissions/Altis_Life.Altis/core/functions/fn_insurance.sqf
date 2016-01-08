@@ -1,4 +1,5 @@
 #include <macro.h>
+#include "..\..\script_macros.hpp"
 
 /*
 Filename: fn_insurance.sqf
@@ -34,7 +35,6 @@ else
                 };   
             };
         } foreach _nearVehicles;
-        
     };
 };
 
@@ -230,13 +230,14 @@ _price = switch(typeOf _vehicle) do
 
 if(_price == -1) exitWith { hint "You can not insure this type of vehicle"; };
 if(playerSide == independent) then { _price = _price / 4; };
-_price = (_price * __GETC__(life_vip_discount));
-if(life_myfunds < _price) exitWith
+//_price = (_price * __GETC__(life_vip_discount));
+if(BANK < _price) exitWith
 {
     hint format["You do not have enough money in your bank account to complete this transaction, it requires $%1",_price];   
 };
 hint format["You have been charged $%1 to insure this vehicle. If it explodes, it will be placed back inside your garage.",_price];
-["atm","take",_price] call life_fnc_updateCash;
+SUB(BANK,_price);
 closeDialog 0;
 _vehicle setVariable["isInsured",true,true];
 [[_vehicle],"TON_fnc_vehicleInsurance",false,false] spawn life_fnc_MP;
+[1] call SOCK_fnc_updatePartial;

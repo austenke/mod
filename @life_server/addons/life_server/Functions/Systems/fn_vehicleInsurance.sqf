@@ -20,4 +20,4 @@ if(count _dbInfo > 0) then {
 	_query = format["InsuranceVehicle:%1:%2",_uid,_plate]; 
 	waitUntil {!DB_Async_Active};	
 	_sql = [_query,1] call DB_fnc_asyncCall;
-}; 
+};
