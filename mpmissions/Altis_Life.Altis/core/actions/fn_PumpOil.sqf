@@ -41,11 +41,12 @@ while{true} do {
 if(player distance _Pump > 10) exitWith {hint localize "STR_Process_Pump_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 if(life_holdBarrel) exitWith {hint "You are already holding a barrel"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 
-_barrel = createVehicle ["Land_BarrelWater_F", position player, [], 0, "CAN_COLLIDE"];
+_barrel = createVehicle ["Land_BarrelWater_F", position player, [], 0];
 _barrel attachTo[player,[0,1,1.9]];
 _barrel allowDamage false;
 _barrel setVariable ["owner", player, true];
 _barrel enableRopeAttach false;
+{ _barrel disableCollisionWith _x;} forEach PlayableUnits;
 player reveal _barrel;
 life_pumped_barrel = _barrel;
 life_holdBarrel = true;
