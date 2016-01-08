@@ -90,5 +90,7 @@ if (vehicle _unit == _unit) then
     };
 };
 
+systemChat format["getDammage _unit = %1, _part = '%2', getHit _part = %3, _damage = %4, _source = %5", getDammage _unit, _part, _unit getHit _part, _damage, _source];
+
 [] call life_fnc_hudUpdate;
 _damage;
