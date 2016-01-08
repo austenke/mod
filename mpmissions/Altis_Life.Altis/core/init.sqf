@@ -123,3 +123,5 @@ life_fnc_moveIn = compileFinal
 
 CONSTVAR(life_paycheck); //Make the paycheck static.
 if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigue false;};
+
+[] call life_fnc_Uniformscolor;

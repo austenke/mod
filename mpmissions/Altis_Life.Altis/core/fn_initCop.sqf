@@ -8,6 +8,7 @@
 */
 private "_end";
 player addRating 9999999;
+call life_fnc_Uniformscolor;
 waitUntil {!(isNull (findDisplay 46))};
 _end = false;
 

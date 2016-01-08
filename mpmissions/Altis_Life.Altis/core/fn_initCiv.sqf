@@ -24,3 +24,4 @@ if(life_is_arrested) then {
 //[] call life_fnc_gangPayout;
 
 player addRating 9999999;
+call life_fnc_Uniformscolor;

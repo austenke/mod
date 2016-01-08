@@ -23,6 +23,5 @@ player assignItem "ItemWatch";
 //[true,SEL(["defib",1],0),_diff] call life_fnc_handleInv
 [true,"defib",1] call life_fnc_handleInv;
 
-[player,0,"textures\medic_uniform.jpg"] remoteExecCall ["life_fnc_setTexture",RCLIENT];
-
 [] call life_fnc_saveGear;
+[] call life_fnc_Uniformscolor;

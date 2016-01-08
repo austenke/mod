@@ -8,6 +8,7 @@
 */
 private["_end"];
 player addRating 99999999;
+call life_fnc_Uniformscolor;
 waitUntil {!(isNull (findDisplay 46))};
 
 if((FETCH_CONST(life_medicLevel)) < 1 && (FETCH_CONST(life_adminlevel) == 0)) exitWith {
