@@ -4012,11 +4012,11 @@
 			<Portuguese>Você precisa selecionar um item primeiro!</Portuguese>
 		</Key>
 		<Key ID="STR_ISTR_RedGullEffect">
-			<Original>You can now run farther for 3 minutes</Original>
-			<German>Du kannst jetzt für 3 Minuten weiterlaufen</German>
-			<French>You can now run farther for 3 minutes</French>
-			<Italian>You can now run farther for 3 minutes</Italian>
-			<Portuguese>Você agora pode correr por 3 minutos</Portuguese>
+			<Original>You can now run farther for 5 minutes</Original>
+			<German>Du kannst jetzt für 5 Minuten weiterlaufen</German>
+			<French>You can now run farther for 5 minutes</French>
+			<Italian>You can now run farther for 5 minutes</Italian>
+			<Portuguese>Você agora pode correr por 5 minutos</Portuguese>
 		</Key>
 		<Key ID="STR_ISTR_SpikesDeployment">
 			<Original>You already have a Spike Strip active in deployment</Original>
