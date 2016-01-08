@@ -18707,7 +18707,7 @@ class Mission
 		};
 		class Item1488
 		{
-			position[]={4733.1538,39.67086,12808.768};
+			position[]={4735.4424,39.727001,12809.813};
 			azimut=61.400398;
 			offsetY=0.221828;
 			id=1613;
@@ -18881,7 +18881,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this addAction[""Cop Item Shop"",life_fnc_virt_menu,""cop""]; this addAction[""Weapons Locker"",life_fnc_weaponShopMenu,""cop_basic""];this addAction[""Equipment Locker"",life_fnc_weaponShopMenu,""cop_equipment""];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cAir"",0,false,false,"""",' !license_cop_cAir && playerSide == west '];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cg"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cg"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cg"",0,false,false,"""",' !license_cop_cg && playerSide == west '];";
+			init="this enableSimulation false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this addAction[""Cop Item Shop"",life_fnc_virt_menu,""cop""]; this addAction[""APD Uniforms"",life_fnc_clothingMenu,""cop""]; this addAction[""Weapons Locker"",life_fnc_weaponShopMenu,""cop_basic""];this addAction[""Equipment Locker"",life_fnc_weaponShopMenu,""cop_equipment""];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cAir"",0,false,false,"""",' !license_cop_cAir && playerSide == west '];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cg"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cg"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cg"",0,false,false,"""",' !license_cop_cg && playerSide == west '];";
 		};
 		class Item1504
 		{
@@ -18930,19 +18930,19 @@ class Mission
 		};
 		class Item1508
 		{
-			position[]={4734.0459,39.64661,12807.142};
-			azimut=61.400398;
+			position[]={9032.2031,21.259377,13091.545};
+			azimut=88.6493;
 			offsetY=0.221828;
 			id=1633;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this allowDamage false; this allowDamage false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this enableSimulation false; this addAction[""Mix Cornmeal"",life_fnc_processAction,""mash"",0,false,false,"""",' life_inv_cornmeal > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""liquor"",0,false,false,"""",' !license_civ_liquor && playerSide == civilian '];";
+			init="this allowDamage false; this allowDamage false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this enableSimulation false; this addAction[""Mix Cornmeal"",life_fnc_processAction,""mash"",0,false,false,"""",' life_inv_cornmeal > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""liquor"",0,false,false,"""",' !license_civ_liquor && playerSide == civilian ']; this addAction[""Add Yeast"",life_fnc_processAction,""moonshine"",0,false,false,"""",' life_inv_mash > 0 && !life_is_processing'];";
 		};
 	};
 	class Markers
 	{
-		items=240;
+		items=241;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -20545,7 +20545,7 @@ class Mission
 		};
 		class Item200
 		{
-			position[]={4732.1846,39.632767,12808.215};
+			position[]={4730.709,39.690014,12809.242};
 			name="brewery_1";
 			text="Brewery";
 			type="mil_dot";
@@ -20553,7 +20553,7 @@ class Mission
 		};
 		class Item201
 		{
-			position[]={6221.2354,30.892071,15547.075};
+			position[]={7548.9683,21.939981,11829.984};
 			name="yeast_1";
 			text="Yeast Field";
 			type="mil_dot";
@@ -20873,6 +20873,14 @@ class Mission
 			text="Water Well";
 			type="mil_dot";
 			colorName="ColorGreen";
+		};
+		class Item240
+		{
+			position[]={9034.3252,20.960009,13091.896};
+			name="moon";
+			text="Moonshine Processing";
+			type="mil_triangle";
+			colorName="ColorEAST";
 		};
 	};
 	class Sensors
