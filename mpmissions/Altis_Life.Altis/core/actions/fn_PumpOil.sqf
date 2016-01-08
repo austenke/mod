@@ -46,7 +46,6 @@ _barrel attachTo[player,[0,1,1.9]];
 _barrel allowDamage false;
 _barrel setVariable ["owner", player, true];
 _barrel enableRopeAttach false;
-{ _barrel disableCollisionWith _x;} forEach PlayableUnits;
 player reveal _barrel;
 life_pumped_barrel = _barrel;
 life_holdBarrel = true;
@@ -56,3 +55,10 @@ titleText[format[localize "STR_Process_Pumped_Oil",1],"PLAIN"];
 5 cutText ["","PLAIN"];
 life_action_inUse = false;
 life_is_processing = false;
+
+while {life_holdBarrel} do {
+	sleep 10;
+	{ 
+		_barrel disableCollisionWith _x;
+	} forEach PlayableUnits;
+};

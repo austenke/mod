@@ -27,6 +27,7 @@ _pgText = _ui displayCtrl 38202;
 _pgText ctrlSetText format["%2 (1%1)...","%",_upp];
 _progress progressSetPosition 0.01;
 _cP = 0.01;
+life_holdBarrel = false;
 
 life_is_processing = true;
 
@@ -50,6 +51,14 @@ titleText[format[localize "STR_Process_Procdone_Oil",1],"PLAIN"];
 5 cutText ["","PLAIN"];
 life_action_inUse = false;
 life_is_processing = false;
-life_holdBarrel = true;
 
 deletevehicle _barrel;
+
+life_holdBarrel = true;
+
+while {life_holdBarrel} do {
+	sleep 10;
+	{ 
+		_barrel disableCollisionWith _x;
+	} forEach PlayableUnits;
+};
