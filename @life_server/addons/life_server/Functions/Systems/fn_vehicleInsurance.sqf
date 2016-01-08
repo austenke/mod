@@ -17,7 +17,13 @@ if(!isNull _vehicle && !isNil "_vehicle") then {
 	deleteVehicle _vehicle;
 };
 if(count _dbInfo > 0) then {	
+	["diag_log",[
+	"------------- Insurance Request -------------",
+	format["UID: %1",_uid],
+	format["Plate: %1",_plate],
+	"-------------------------------------------------"
+	]] call TON_fnc_logIt;
 	_query = format["InsuranceVehicle:%1:%2",_uid,_plate]; 
 	waitUntil {!DB_Async_Active};	
-	_sql = [_query,1] call DB_fnc_asyncCall;
+	[_query,1] call DB_fnc_asyncCall;
 };
