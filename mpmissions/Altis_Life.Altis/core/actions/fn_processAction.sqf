@@ -119,9 +119,9 @@ if(_hasLicense) then
 	{
 		
 		5 cutText ["","PLAIN"];
-		titleText[format["You have process %1 to %2.",_itemNameo1,_itemName],"PLAIN"];
+		titleText[format["You have processed %1 to %2.",_itemNameo1,_itemName],"PLAIN"];
 	};
-	if(_toSelect select 0 != 0) then
+	if(!(_toSelect select 0 == 0)) then
 	{
 		[5,grpPlayer,_toSelect select 0,2000] remoteExecCall ["TON_fnc_updateGang",RSERV];
 	};
