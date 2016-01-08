@@ -48,9 +48,25 @@ if(isNull _vehicle) exitWith {};
 if(_vehicle getVariable["isInsured",false]) exitWith { hint "This vehicle already has insurance."; };
 if(!(_vehicle in life_vehicles)) exitWith { hint "The target vehicle doesn't seem to be your own."; };
 
-if ((typeOf _vehicle) isKindOf "Car") then {_price = 5000;} else {_price = -1;};
-if ((typeOf _vehicle) isKindOf "Air") then {_price = 10000;} else {_price = -1;};
-if ((typeOf _vehicle) isKindOf "Ship") then {_price = 5000;} else {_price = -1;};
+_price = switch((typeOf _vehicle) isKindOf) do
+{
+    case "Car":
+    {
+        5000
+    };
+    case "Air":
+    {
+        10000
+    };
+    case "Ship":
+    {
+        5000
+    };
+    default
+    {
+        -1
+    };
+};
 
 if(_price == -1) exitWith { hint "You can not insure this type of vehicle"; };
 if(playerSide == independent) then { _price = _price / 4; };
