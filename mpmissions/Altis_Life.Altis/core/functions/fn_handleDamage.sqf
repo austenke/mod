@@ -72,7 +72,7 @@ if (_source != _unit && !(playerSide == west && _projectile == "") && ((_curMag 
 
 if (vehicle _unit == _unit) then
 {
-    if ( _source isKindOf "Air" OR _source isKindOf "Car" OR _source isKindOf "Boat" OR _source isKindOf "object" ) then
+    if ( _source isKindOf "Air" OR _source isKindOf "Car" OR _source isKindOf "Boat" ) then
     {
         _damage = false;
         [_unit,_source] spawn life_fnc_vdmed; //_Source is Vehicle, Not a player driving a vehicle
@@ -81,7 +81,7 @@ if (vehicle _unit == _unit) then
     {    
         _vehicle = vehicle _source;
         if (driver _vehicle == _source) then {
-            if (_vehicle isKindOf "Air" OR _vehicle isKindOf "Car" OR _vehicle isKindOf "Boat" OR _source isKindOf "object") then
+            if (_vehicle isKindOf "Air" OR _vehicle isKindOf "Car" OR _vehicle isKindOf "Boat") then
             {
                 _damage = false;
                 [_unit,_source] spawn life_fnc_vdmed;
