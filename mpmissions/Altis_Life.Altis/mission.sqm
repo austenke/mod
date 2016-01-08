@@ -2782,8 +2782,8 @@ class Mission
 		};
 		class Item14
 		{
-			position[]={14031.65,25.928997,18743.328};
-			azimut=216.16933;
+			position[]={14051.908,25.470573,18755.541};
+			azimut=305.44003;
 			id=139;
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
@@ -7610,7 +7610,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="  this enableSimulation false;  this allowDamage false;  this setObjectTexture [0,""images\drunkenlife.jpg""]; this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""reb_car"",civilian,""reb_v_2_1_25_1"",""reb"",""Rebel Motorpool - Western Side""],0,false,false,"""",'license_civ_rebel']; this enableSimulation false; this allowDamage false; this addAction[""Vehicle Garage"",  {   [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];  life_garage_type = ""Car""; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""reb_v_2_1_25_1"";  }]; this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];                                                                                                       this enableSimulation false; this allowDamage false; this addAction[""Air Vehicle Garage"",  {   [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""TON_fnc_getVehicles"",2];  life_garage_type = ""Air""; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""reb_v_2_1_25_1"";  }]; this addAction[""Store vehicle in Garage"",  {   private[""_nearVehicle""];   _nearVehicle = nearestObjects[(getPos (_this select 0)),[""Car"",""Ship"",""Air""],35] select 0;   if(isNil ""_nearVehicle"") exitWith {hint ""There isn't a vehicle near this NPC."";};   [_nearVehicle,false,(_this select 1)] remoteExecCall [""TON_fnc_vehicleStore"",2];   hint ""The server is trying to store the vehicle please wait...."";   life_garage_store = true;  },"""",0,false,false,"""",'!life_garage_store'];";
+			init="this enableSimulation false;  this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""reb_car"",civilian,""reb_v_2_1_25_1"",""reb"",""Rebel Motorpool - Western Side""],0,false,false,"""",'license_civ_rebel'];";
 		};
 		class Item467
 		{
@@ -8556,7 +8556,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="removeallWeapons this;  this enableSimulation false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""reb_car"",civilian,""reb_v_2_1_25"",""reb"",""Rebel Motorpool - Western Side""],0,false,false,"""",'license_civ_rebel']; this enableSimulation false; this allowDamage false; this addAction[""Vehicle Garage"",  {   [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];  life_garage_type = ""Car""; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""reb_v_2_1_25"";  }]; this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];                                                                                                       this enableSimulation false; this allowDamage false; this addAction[""Air Vehicle Garage"",  {   [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""TON_fnc_getVehicles"",2];  life_garage_type = ""Air""; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""reb_v_2_1_25"";  }]; this addAction[""Store vehicle in Garage"",  {   private[""_nearVehicle""];   _nearVehicle = nearestObjects[(getPos (_this select 0)),[""Car"",""Ship"",""Air""],35] select 0;   if(isNil ""_nearVehicle"") exitWith {hint ""There isn't a vehicle near this NPC."";};   [_nearVehicle,false,(_this select 1)] remoteExecCall [""TON_fnc_vehicleStore"",2];   hint ""The server is trying to store the vehicle please wait...."";   life_garage_store = true;  },"""",0,false,false,"""",'!life_garage_store'];";
+			init="this enableSimulation false;  this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""reb_car"",civilian,""reb_v_2_1_25"",""reb"",""Rebel Motorpool - Western Side""],0,false,false,"""",'license_civ_rebel'];";
 		};
 		class Item557
 		{
@@ -18346,8 +18346,8 @@ class Mission
 		};
 		class Item1456
 		{
-			position[]={14060.766,26.346117,18731.666};
-			azimut=129.80228;
+			position[]={14033.009,25.756912,18746.688};
+			azimut=-55.215321;
 			offsetY=0.00100327;
 			id=1581;
 			side="EMPTY";
@@ -18798,14 +18798,14 @@ class Mission
 		};
 		class Item1496
 		{
-			position[]={8281.5283,77.334457,10073.234};
+			position[]={8281.4502,77.343086,10073.042};
 			azimut=238.00101;
 			offsetY=0.0013427699;
 			id=1621;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="  this enableSimulation false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""reb_car"",civilian,""reb_v_2_1_25"",""reb"",""Rebel Motorpool - Western Side""],0,false,false,"""",'license_civ_rebel']; this enableSimulation false; this allowDamage false; this addAction[""Vehicle Garage"",  {   [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];  life_garage_type = ""Car""; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""reb_v_2_1_25"";  }]; this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];                                                                                                       this enableSimulation false; this allowDamage false; this addAction[""Air Vehicle Garage"",  {   [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""TON_fnc_getVehicles"",2];  life_garage_type = ""Air""; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""reb_v_2_1_25"";  }]; this addAction[""Store vehicle in Garage"",  {   private[""_nearVehicle""];   _nearVehicle = nearestObjects[(getPos (_this select 0)),[""Car"",""Ship"",""Air""],35] select 0;   if(isNil ""_nearVehicle"") exitWith {hint ""There isn't a vehicle near this NPC."";};   [_nearVehicle,false,(_this select 1)] remoteExecCall [""TON_fnc_vehicleStore"",2];   hint ""The server is trying to store the vehicle please wait...."";   life_garage_store = true;  },"""",0,false,false,"""",'!life_garage_store'];";
+			init="this enableSimulation false;  this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""reb_car"",civilian,""reb_v_2"",""reb"",""Rebel Motorpool - Western Side""],0,false,false,"""",'license_civ_rebel'];";
 		};
 		class Item1497
 		{
@@ -19948,10 +19948,10 @@ class Mission
 		};
 		class Item125
 		{
-			position[]={8292.2158,76.761848,10078.755};
+			position[]={8288.501,77.021088,10077.455};
 			name="reb_v_2";
 			type="Empty";
-			angle=-118.567;
+			angle=60.821552;
 		};
 		class Item126
 		{
@@ -20049,11 +20049,11 @@ class Mission
 		};
 		class Item138
 		{
-			position[]={14031.674,25.92466,18743.428};
+			position[]={14052.003,25.472212,18755.535};
 			name="atm_marker_2";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=36.9492;
+			angle=126.21995;
 		};
 		class Item139
 		{
@@ -20856,17 +20856,17 @@ class Mission
 		};
 		class Item237
 		{
-			position[]={14055.317,26.187738,18737.67};
+			position[]={14036.024,25.965816,18741.604};
 			name="civ_car_5";
 			type="Empty";
-			angle=-55.148739;
+			angle=-236.70352;
 		};
 		class Item238
 		{
-			position[]={14052.796,26.276775,18733.873};
+			position[]={14038.236,25.813999,18745.377};
 			name="civ_g_5";
 			type="Empty";
-			angle=306.16623;
+			angle=124.6114;
 		};
 		class Item239
 		{
