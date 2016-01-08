@@ -121,7 +121,7 @@ if(_hasLicense) then
 		5 cutText ["","PLAIN"];
 		titleText[format["You have processed %1 to %2.",_itemNameo1,_itemName],"PLAIN"];
 	};
-	if(_toSelect != 0) then
+	if(_toSelect select 0 != "") then
 	{
 		[5,grpPlayer,_toSelect select 0,2000] remoteExecCall ["TON_fnc_updateGang",RSERV];
 	};
@@ -163,7 +163,7 @@ else
 		5 cutText ["","PLAIN"];
 		titleText[format["You have process %1 to %2 for %3$.",_itemNameo1,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
 	};
-	if(_toSelect != 0) then
+	if(_toSelect select 0 != "") then
 	{
 		[5,grpPlayer,_toSelect select 0,2000] remoteExecCall ["TON_fnc_updateGang",RSERV];
 	};
