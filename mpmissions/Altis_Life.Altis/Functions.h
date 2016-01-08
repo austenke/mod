@@ -239,6 +239,7 @@ class Life_Client_Core
 		class speedBomb {};
 		class corpse {};
 		class Uniformscolor {};
+		class insurance {};
 	};
 	
 	class Network
