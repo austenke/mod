@@ -112,8 +112,7 @@ class Clothing {
 		};
 
 		backpacks[] = {
-			{ "B_Kitbag_mcamo", "Invisible Backpack", 1000, { "life_coplevel", "SCALAR", 1 } },
-			{ "B_UAV_01_F", "", 20000, { "life_coplevel", "SCALAR", 1 } }
+			{ "B_Kitbag_mcamo", "", 1000, { "life_coplevel", "SCALAR", 1 } }
 		};
 	};
 
