@@ -48,7 +48,7 @@ if(isNull _vehicle) exitWith {};
 if(_vehicle getVariable["isInsured",false]) exitWith { hint "This vehicle already has insurance."; };
 if(!(_vehicle in life_vehicles)) exitWith { hint "The target vehicle doesn't seem to be your own."; };
 
-_price = switch((typeOf _vehicle) isKindOf) do
+_price = switch(typeOf _vehicle isKindOf) do
 {
     case "Car":
     {
