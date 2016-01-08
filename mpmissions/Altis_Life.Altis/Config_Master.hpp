@@ -159,7 +159,7 @@ class VirtualItems {
 	VITEMMACRO(cannabis, "STR_Item_Cannabis", "cannabis", 4, -1, -1, true, -1, "icons\ico_cannabis.paa")
 	VITEMMACRO(marijuana, "STR_Item_Marijuana", "marijuana", 3, 4000, 2350, true, -1, "icons\ico_marijuana.paa")
 	VITEMMACRO(cocaine_unprocessed, "STR_Item_CocaineU", "cocaineUnprocessed", 7, -1, 3000, true, -1, "icons\ico_cocaineup.paa")
-	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 6, -1, 11000, true, -1, "icons\ico_cocainep.paa")
+	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 6, 14000, 11000, true, -1, "icons\ico_cocainep.paa")
 
 	//Drink
 	VITEMMACRO(redgull, "STR_Item_RedGull", "redgull", 1, 1500, 200, false, 100, "icons\ico_redgull.paa")
@@ -262,7 +262,7 @@ class VirtualShops {
 	
 	class drugdealer {
 		name = "STR_Shops_DrugDealer";
-		items[] = { "cokep", "heroin_processed", "marijuana" };
+		items[] = { "cocaine_processed", "heroin_processed", "marijuana" };
 	};
 
 	class oil {
