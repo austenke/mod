@@ -31,6 +31,7 @@ _loop = true;
 
 waitUntil{uisleep (random .03); !DB_Async_ExtraLock};
 DB_Async_ExtraLock = true;
+diag_log format ["Async call -- _queryResult: %1 -- _queryStmt: %2", _queryResult,_queryStmt];
 while{_loop} do
 {
     _queryResult = "extDB" callExtension format["4:%1", _key];
