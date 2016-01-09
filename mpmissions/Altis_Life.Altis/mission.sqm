@@ -19407,9 +19407,9 @@ class Mission
 		class Item116
 		{
 			position[]={3659.9417,10.392379,13107.519};
-			name="car_g_1";
+			name="civ_g_1";
 			type="Empty";
-			angle=-86.831024;
+			angle=-86.831001;
 		};
 		class Item117
 		{
@@ -20234,7 +20234,7 @@ class Mission
 		class Item217
 		{
 			position[]={16736.094,11.917755,12507.744};
-			name="car_g_4";
+			name="civ_g_4";
 			type="Empty";
 			angle=320.20099;
 		};
