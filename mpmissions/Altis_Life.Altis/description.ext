@@ -114,13 +114,6 @@ class CfgSounds
 		sound[] = {"\sounds\robberyFail.ogg", 1.0, 1};
 		titles[] = {};
 	};
-	
-	class flashbang
-	{
-		name = "flashbang";
-		sound[] = {"\sounds\flashbang.ogg", 1.0, 1};
-		titles[] = {};
-	};
 
 	class bankAlarm  //why is this named yelp?
 	{
