@@ -15,6 +15,7 @@ life_chopShop = SEL(_this,3);
 //Error check
 if(EQUAL(count _nearVehicles,0)) exitWith {titleText[localize "STR_Shop_NoVehNear","PLAIN"];};
 if(!(createDialog "Chop_Shop")) exitWith {hint localize "STR_Shop_ChopShopError"};
+if (playerSide != civilian) exitWith {hint localize "STR_NOTF_NotACiv"};
 
 _control = CONTROL(39400,39402);
 {
