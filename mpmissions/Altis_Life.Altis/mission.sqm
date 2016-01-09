@@ -18999,7 +18999,7 @@ class Mission
 		};
 		class Item73
 		{
-			position[]={14327.465,18.488745,17427.523};
+			position[]={14337.55,18.585384,17428.805};
 			name="Dealer_1_4";
 			text="Drug Dealer";
 			type="mil_dot";
@@ -19967,7 +19967,7 @@ class Mission
 		};
 		class Item193
 		{
-			position[]={7148.2344,156.6783,16793.59};
+			position[]={9896.1016,67.161392,16420.156};
 			name="hops_1";
 			text="Hops Field";
 			type="mil_dot";
@@ -19983,7 +19983,7 @@ class Mission
 		};
 		class Item195
 		{
-			position[]={7548.9683,21.939981,11829.984};
+			position[]={7582.7441,169.58252,17275.422};
 			name="yeast_1";
 			text="Yeast Field";
 			type="mil_dot";
@@ -19991,7 +19991,7 @@ class Mission
 		};
 		class Item196
 		{
-			position[]={5393.5029,70.821594,12535.438};
+			position[]={6455.1128,121.8557,13773.224};
 			name="rye_1";
 			text="Rye Field";
 			type="mil_dot";
@@ -20060,7 +20060,7 @@ class Mission
 		};
 		class Item203
 		{
-			position[]={6468.3955,123.4379,13774.062};
+			position[]={11897.355,15.411356,22410.969};
 			name="cornmeal_1";
 			text="Corn Field";
 			type="mil_dot";
@@ -20284,9 +20284,9 @@ class Mission
 		};
 		class Item231
 		{
-			position[]={9961.5156,5.1674428,10007.756};
+			position[]={9430.3682,0.40275267,22204.049};
 			name="bucket_1";
-			text="Water Well";
+			text="Water Gathering";
 			type="mil_dot";
 			colorName="ColorGreen";
 		};
