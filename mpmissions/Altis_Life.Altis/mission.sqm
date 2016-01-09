@@ -2673,7 +2673,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1498;
+		items=1515;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -18821,6 +18821,176 @@ class Mission
 			position[]={16614.66,3.4287109,12426.854};
 			azimut=-754.63403;
 			id=1624;
+			side="EMPTY";
+			vehicle="Land_LampStreet_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,1]; this allowDamage false; ";
+		};
+		class Item1498
+		{
+			position[]={3609.5791,9.9814625,13116.032};
+			azimut=276.5625;
+			id=1625;
+			side="EMPTY";
+			vehicle="Land_Billboard_F";
+			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false; this SetObjectTexture [0,""images\billboard_rules.jpg""];";
+		};
+		class Item1499
+		{
+			position[]={3518.875,6.1417556,13141.931};
+			azimut=-136.87968;
+			id=1626;
+			side="EMPTY";
+			vehicle="Land_LampStreet_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,1]; this allowDamage false; ";
+		};
+		class Item1500
+		{
+			position[]={3477.5061,6.0429597,13096.865};
+			azimut=-315.51483;
+			id=1627;
+			side="EMPTY";
+			vehicle="Land_LampStreet_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,1]; this allowDamage false; ";
+		};
+		class Item1501
+		{
+			position[]={3603.2961,12.877991,12971.412};
+			azimut=-270.16669;
+			id=1628;
+			side="EMPTY";
+			vehicle="Land_LampStreet_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,1]; this allowDamage false; ";
+		};
+		class Item1502
+		{
+			position[]={3581.8457,13.308748,12899.723};
+			azimut=-31.305664;
+			id=1629;
+			side="EMPTY";
+			vehicle="Land_LampStreet_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,1]; this allowDamage false; ";
+		};
+		class Item1503
+		{
+			position[]={3411.5105,2.3083935,12903.637};
+			azimut=-290.457;
+			id=1630;
+			side="EMPTY";
+			vehicle="Land_LampStreet_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,1]; this allowDamage false; ";
+		};
+		class Item1504
+		{
+			position[]={3513.5381,9.1256189,12824.687};
+			azimut=-240.13504;
+			id=1631;
+			side="EMPTY";
+			vehicle="Land_LampStreet_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,1]; this allowDamage false; ";
+		};
+		class Item1505
+		{
+			position[]={3452.7488,4.2664733,12719.042};
+			azimut=119.81859;
+			id=1632;
+			side="EMPTY";
+			vehicle="Land_LampStreet_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,1]; this allowDamage false; ";
+		};
+		class Item1506
+		{
+			position[]={3745.9548,10.596158,13405.277};
+			azimut=-234.20305;
+			id=1633;
+			side="EMPTY";
+			vehicle="Land_LampStreet_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,1]; this allowDamage false; ";
+		};
+		class Item1507
+		{
+			position[]={3679.4275,10.76466,13319.948};
+			azimut=-232.96237;
+			id=1634;
+			side="EMPTY";
+			vehicle="Land_LampStreet_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,1]; this allowDamage false; ";
+		};
+		class Item1508
+		{
+			position[]={3750.6277,14.806623,13581.175};
+			azimut=-171.83792;
+			id=1635;
+			side="EMPTY";
+			vehicle="Land_LampStreet_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,1]; this allowDamage false; ";
+		};
+		class Item1509
+		{
+			position[]={3631.0205,10.519183,13220.688};
+			azimut=-252.59731;
+			id=1636;
+			side="EMPTY";
+			vehicle="Land_LampStreet_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,1]; this allowDamage false; ";
+		};
+		class Item1510
+		{
+			position[]={3660.4907,10.699276,13258.718};
+			azimut=-69.419487;
+			id=1637;
+			side="EMPTY";
+			vehicle="Land_LampStreet_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,1]; this allowDamage false; ";
+		};
+		class Item1511
+		{
+			position[]={3619.1331,11.862529,13028.467};
+			azimut=-92.244728;
+			id=1638;
+			side="EMPTY";
+			vehicle="Land_LampStreet_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,1]; this allowDamage false; ";
+		};
+		class Item1512
+		{
+			position[]={3709.9792,18.135057,13009.301};
+			azimut=-252.21181;
+			id=1639;
+			side="EMPTY";
+			vehicle="Land_LampStreet_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,1]; this allowDamage false; ";
+		};
+		class Item1513
+		{
+			position[]={3499.9133,7.9059033,12801.896};
+			azimut=-237.14925;
+			id=1640;
+			side="EMPTY";
+			vehicle="Land_LampStreet_F";
+			skill=0.60000002;
+			init="this setVectorUp [0,0,1]; this allowDamage false; ";
+		};
+		class Item1514
+		{
+			position[]={3541.1909,11.574578,12882.013};
+			azimut=-230.60483;
+			id=1641;
 			side="EMPTY";
 			vehicle="Land_LampStreet_F";
 			skill=0.60000002;
