@@ -26,7 +26,6 @@ class Clothing {
 			{ "U_IG_Guerilla3_1", "Brown Jacket & Pants", 735, { "", "", -1 } },
 			{ "U_IG_Guerilla2_3", "The Outback Rangler", 1200, { "", "", -1 } },
 			{ "U_C_HunterBody_grn", "The Hunters Look", 1500, { "", "", -1 } },
-			{ "U_C_WorkerCoveralls", "Mechanic Coveralls", 2500, { "", "", -1 } },
 			{ "U_OrestesBody", "Surfing On Land", 1100, { "", "", -1 } },
 			{ "U_NikosAgedBody", "Casual Wears", 5000, { "", "", -1 } }
 		};
