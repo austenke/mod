@@ -18388,7 +18388,7 @@ class Mission
 		};
 		class Item1458
 		{
-			position[]={3620.9348,10.27656,13196.051};
+			position[]={3618.6624,10.161535,13195.645};
 			azimut=-78.460999;
 			id=1583;
 			side="EMPTY";
@@ -20297,7 +20297,7 @@ class Mission
 		};
 		class Item235
 		{
-			position[]={9430.3682,0.40275267,22204.049};
+			position[]={9409.8027,2.3846655,22216.797};
 			name="bucket_1";
 			text="Water Gathering";
 			type="mil_dot";
