@@ -1988,8 +1988,8 @@
 			<Portuguese>Você não é um Policial.</Portuguese>
 		</Key>
 		<Key ID="STR_NOTF_NotACiv">
-			<Original>You are not a civilian.</Original>
-			<English>You are not a civilian.</English>
+			<Original>You are not a civilian!</Original>
+			<English>You are not a civilian!</English>
 		</Key>
 		<Key ID="STR_NOTF_NoRoom">
 			<Original>You don't have enough room for that item.</Original>
