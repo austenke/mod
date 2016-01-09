@@ -47,9 +47,9 @@ class Life_Settings {
 	paycheck_period = 5; //Scaled in minutes
 	
 	/* Impound Variables */
-	impound_car = 350; //Price for impounding cars
-	impound_boat = 250; //Price for impounding boats
-	impound_air = 850; //Price for impounding helicopters / planes
+	impound_car = 1000; //Price for impounding cars
+	impound_boat = 2000; //Price for impounding boats
+	impound_air = 10000; //Price for impounding helicopters / planes
 
 	/* Car-shop Settings */
 	vehicleShop_rentalOnly[] = { "B_MRAP_01_hmg_F", };
