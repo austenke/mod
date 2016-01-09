@@ -21,6 +21,12 @@ if ((vehicle _unit) isKindOf "Car" && (isNull _source || _source == _unit)) then
     _damage = _damage / 2;
 };
 
+// Flashbang
+if (_projectile in ["mini_Grenade"]) then {
+    _damage = 0;
+    [] spawn life_fnc_handleFlashbang;
+};
+
 if(isPlayer _source && _source isKindOf "Man") then {
     _curWep = currentWeapon _source;
     _curMag = currentMagazine _source;

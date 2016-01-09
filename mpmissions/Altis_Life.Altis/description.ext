@@ -1,5 +1,5 @@
 author = "Ohmslaw & Valiant & Index";
-onLoadName = "Drunken Life 0.9.2";
+onLoadName = "Drunken Life 0.9.3";
 onLoadMission = "www.drunkenlife.ca";
 LoadScreen  = "images\logo.jpg";
 joinUnassigned = 1;
@@ -133,6 +133,13 @@ class CfgSounds
 	{
 		name = "yelp";
 		sound[] = {"\sounds\robbankdone.ogg", 1.0, 1};
+		titles[] = {};
+	};
+
+	class Flashbang
+	{
+		name = "Flashbang";
+		sound[] = {"\sounds\flashbang.ogg", 1.0, 1};
 		titles[] = {};
 	};
 };

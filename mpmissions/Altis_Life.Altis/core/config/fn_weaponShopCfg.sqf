@@ -62,7 +62,8 @@ switch(_shop) do {
 						["optic_Hamr",nil,500],
 						["optic_DMS",nil,500],
 						["optic_Aco",nil,500],
-						["optic_Holosight",nil,500]
+						["optic_Holosight",nil,500],
+						["MiniGrenade","FlashBang",10000]
 					]
 				];
 			};
@@ -83,7 +84,8 @@ switch(_shop) do {
 						["optic_SOS",nil,500],
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
-						["bipod_02_F_blk",nil,500]
+						["bipod_02_F_blk",nil,500],
+						["MiniGrenade","FlashBang",10000]
 					]
 				];
 			};
@@ -105,7 +107,8 @@ switch(_shop) do {
 						["optic_SOS",nil,500],
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
-						["bipod_02_F_blk",nil,500]
+						["bipod_02_F_blk",nil,500],
+						["MiniGrenade","FlashBang",10000]
 					]
 				];
 			};
@@ -127,7 +130,8 @@ switch(_shop) do {
 						["optic_SOS",nil,500],
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
-						["bipod_02_F_blk",nil,500]
+						["bipod_02_F_blk",nil,500],
+						["MiniGrenade","FlashBang",10000]
 					]
 				];
 			};
@@ -149,7 +153,8 @@ switch(_shop) do {
 						["optic_SOS",nil,500],
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
-						["bipod_02_F_blk",nil,500]
+						["bipod_02_F_blk",nil,500],
+						["MiniGrenade","FlashBang",10000]
 					]
 				];
 			};
