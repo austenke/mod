@@ -322,7 +322,7 @@ class VirtualShops {
 
 	class bar {
 		name = "STR_Shops_bar";
-		items[] = { "bottledbeer", "bottledwhiskey" }
+		items[] = { "bottledbeer", "bottledwhiskey" };
 	};
 };
 
