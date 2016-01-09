@@ -8,12 +8,12 @@ class CarShops {
 	class civ_car {
 		side = "civ";
 		vehicles[] = {
-			{ "B_Quadbike_01_F", 2500, "" }, 
+			{ "B_Quadbike_01_F", 4500, "" }, 
 			{ "C_Hatchback_01_F", 8333, "driver" }, 
-			{ "C_Offroad_01_F", 12500, "driver" },
-			{ "C_SUV_01_F", 30000, "driver" },
+			{ "C_Offroad_01_F", 15500, "driver" },
+			{ "C_SUV_01_F", 35000, "driver" },
 			{ "C_Hatchback_01_sport_F", 100000, "driver" },
-			{ "C_Van_01_transport_F", 43333, "driver" }
+			{ "C_Van_01_transport_F", 50000, "driver" }
 		};
 	};
 
@@ -45,12 +45,12 @@ class CarShops {
 	class civ_truck {
 		side = "civ";
 		vehicles[] = {
-			{ "C_Van_01_box_F", 56667, "trucking" },
+			{ "C_Van_01_box_F", 65000, "trucking" },
 			{ "I_Truck_02_transport_F", 146667, "trucking" },
 			{ "I_Truck_02_covered_F", 183333, "trucking" },
-			{ "O_Truck_03_transport_F", 533333, "trucking" },
-			{ "O_Truck_03_covered_F", 600000, "trucking" },
-			{ "B_Truck_01_box_F", 566667, "trucking" },
+			{ "O_Truck_03_transport_F", 700000, "trucking" },
+			{ "O_Truck_03_covered_F", 800000, "trucking" },
+			{ "B_Truck_01_box_F", 1000000, "trucking" },
 			{ "O_Truck_03_device_F", 2333333, "trucking" }
 		};
 	};
@@ -58,15 +58,15 @@ class CarShops {
 	class reb_car {
 		side = "civ";
 		vehicles[] = {
-			{ "B_Quadbike_01_F", 2500, "" },
-			{ "B_G_Offroad_01_F", 12500, "" },
+			{ "B_Quadbike_01_F", 4500, "" },
+			{ "B_G_Offroad_01_F", 15500, "" },
 			{ "O_MRAP_02_F", 2666667, "" },
 			{ "B_G_Offroad_01_armed_F", 3333333, "rebel" },
 			{ "B_Heli_Light_01_F", 666667, "" },
 			{ "O_Heli_Light_02_unarmed_F", 1533333, "" },
 			{ "I_Heli_light_03_unarmed_F", 2333333, "" },
-			{ "B_Heli_Transport_01_F", 2666666, "" },
-			{ "I_Heli_Transport_02_F", 3333333, "" }
+			{ "B_Heli_Transport_01_F", 2666667, "" },
+			{ "I_Heli_Transport_02_F", 4333333, "" }
 		};
 	};
 
@@ -86,11 +86,11 @@ class CarShops {
 		side = "civ";
 		vehicles[] = {
 			{ "C_Heli_Light_01_civil_F", 500000, "pilot" },
-			{ "B_Heli_Light_01_F", 1200000, "pilot" },
-			{ "O_Heli_Light_02_unarmed_F", 2000000, "pilot" },
-			{ "B_Heli_Transport_03_unarmed_F", 533333, "pilot" },
+			{ "B_Heli_Light_01_F", 666667, "pilot" },
+			{ "O_Heli_Light_02_unarmed_F", 1533333, "pilot" },
+			{ "B_Heli_Transport_01_F", 2666667, "pilot" },
 			{ "O_Heli_Transport_04_box_F", 6666667, "pilot" },
-			{ "B_Heli_Transport_01_F", 3333333, "pilot" }
+			{ "B_Heli_Transport_03_unarmed_F", 7666667, "pilot" }
 		};
 	};
 
