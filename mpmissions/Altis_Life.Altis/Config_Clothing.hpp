@@ -99,8 +99,7 @@ class Clothing {
 
 		headgear[] = {
 			{ "NVGoggles_OPFOR", "", 1000, { "life_coplevel", "SCALAR", 2 } },
-			{ "H_Cap_police", "", 1000, { "life_coplevel", "SCALAR", 2 } },
-			{ "H_CrewHelmetHeli_B", "Gas Mask", 1000, { "life_coplevel", "SCALAR", 2 } }
+			{ "H_Cap_police", "", 1000, { "life_coplevel", "SCALAR", 2 } }
 		};
 
 		goggles[] = {

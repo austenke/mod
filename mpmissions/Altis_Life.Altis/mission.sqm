@@ -81,7 +81,8 @@ class Mission
 		"A3_Structures_F_Heli_Civ_Garbage",
 		"A3_Structures_F_Ind_WindPowerPlant",
 		"A3_Structures_F_Heli_Items_Electronics",
-		"A3_Structures_F_EPA_Items_Medical"
+		"A3_Structures_F_EPA_Items_Medical",
+		"A3_Structures_F_EPB_Items_Vessels"
 	};
 	addOnsAuto[]=
 	{
@@ -138,6 +139,8 @@ class Mission
 		"A3_Structures_F_Ind_WindPowerPlant",
 		"A3_Structures_F_Heli_Items_Electronics",
 		"A3_Structures_F_EPA_Items_Medical",
+		"A3_Structures_F_Items_Vessels",
+		"A3_Structures_F_EPB_Items_Vessels",
 		"a3_map_altis"
 	};
 	randomSeed=2004553;
@@ -2634,7 +2637,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1459;
+		items=1466;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -18367,19 +18370,20 @@ class Mission
 		};
 		class Item1456
 		{
-			position[]={9036.8193,20.515112,13088.248};
-			azimut=92.718254;
-			offsetY=0.221828;
+			position[]={3576.1143,4.7161107,13377.802};
+			azimut=43.2509;
+			offsetY=0.245929;
 			id=1581;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this allowDamage false; this allowDamage false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this enableSimulation false; this addAction[""Mix Cornmeal"",life_fnc_processAction,""mash"",0,false,false,"""",' life_inv_cornmeal > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""liquor"",0,false,false,"""",' !license_civ_liquor && playerSide == civilian ']; this addAction[""Add Yeast"",life_fnc_processAction,""moonshine"",0,false,false,"""",' life_inv_mash > 0 && !life_is_processing'];";
+			init="this allowDamage false; this enableSimulation false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this addAction[""Bar"",life_fnc_virt_menu,""bar""];";
 		};
 		class Item1457
 		{
-			position[]={10434.487,84.354309,17250.785};
-			azimut=-133.32385;
+			position[]={10434.494,84.374336,17250.102};
+			azimut=223.791;
+			offsetY=0.44177201;
 			id=1582;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
@@ -18388,13 +18392,84 @@ class Mission
 		};
 		class Item1458
 		{
-			position[]={3617.3823,10.11173,13195.877};
-			azimut=-78.460999;
+			position[]={9031.2842,21.329279,13088.002};
+			azimut=276.20401;
+			offsetY=0.437038;
 			id=1583;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this allowDamage false; this enableSimulation false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this addAction[""Bar"",life_fnc_virt_menu,""bar""];";
+			init="this allowDamage false; this allowDamage false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this enableSimulation false; this addAction[""Mix Cornmeal"",life_fnc_processAction,""mash"",0,false,false,"""",' life_inv_cornmeal > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""liquor"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""liquor"",0,false,false,"""",' !license_civ_liquor && playerSide == civilian ']; this addAction[""Add Yeast"",life_fnc_processAction,""moonshine"",0,false,false,"""",' life_inv_mash > 0 && !life_is_processing'];";
+		};
+		class Item1459
+		{
+			position[]={9030.6943,21.367163,13085.802};
+			azimut=63.990501;
+			offsetY=0.39949599;
+			id=1584;
+			side="EMPTY";
+			vehicle="Land_WaterTank_F";
+			skill=0.60000002;
+		};
+		class Item1460
+		{
+			position[]={9030.4141,21.48415,13089.402};
+			azimut=337.73901;
+			offsetY=0.28435901;
+			id=1585;
+			side="EMPTY";
+			vehicle="Land_BarrelWater_grey_F";
+			skill=0.60000002;
+		};
+		class Item1461
+		{
+			position[]={9030.2441,21.533602,13090.702};
+			azimut=359.65799;
+			offsetY=0.234795;
+			id=1586;
+			side="EMPTY";
+			vehicle="Land_BarrelWater_grey_F";
+			skill=0.60000002;
+		};
+		class Item1462
+		{
+			position[]={9029.9844,21.556828,13090.002};
+			azimut=357.772;
+			offsetY=0.21122;
+			id=1587;
+			side="EMPTY";
+			vehicle="Land_BarrelWater_grey_F";
+			skill=0.60000002;
+		};
+		class Item1463
+		{
+			position[]={9030.8945,21.433538,13090.502};
+			azimut=355.05099;
+			offsetY=0.33424199;
+			id=1588;
+			side="EMPTY";
+			vehicle="Land_BarrelWater_grey_F";
+			skill=0.60000002;
+		};
+		class Item1464
+		{
+			position[]={9030.8545,21.43017,13090.002};
+			azimut=342.37601;
+			offsetY=0.336193;
+			id=1589;
+			side="EMPTY";
+			vehicle="Land_BarrelWater_grey_F";
+			skill=0.60000002;
+		};
+		class Item1465
+		{
+			position[]={9029.8945,21.544352,13089.302};
+			azimut=1.24429;
+			offsetY=0.222977;
+			id=1590;
+			side="EMPTY";
+			vehicle="Land_BarrelWater_grey_F";
+			skill=0.60000002;
 		};
 	};
 	class Markers
@@ -20305,7 +20380,7 @@ class Mission
 		};
 		class Item236
 		{
-			position[]={9037.7393,20.349602,13088.212};
+			position[]={9031.5322,21.366711,13091.975};
 			name="moon";
 			text="Moonshine Processing";
 			type="mil_triangle";
@@ -20341,7 +20416,7 @@ class Mission
 		};
 		class Item241
 		{
-			position[]={10434.021,84.363464,17250.494};
+			position[]={10436.968,84.353844,17250.688};
 			name="moon_trade";
 			text="Moonshine Trader";
 			type="mil_dot";
@@ -20349,7 +20424,7 @@ class Mission
 		};
 		class Item242
 		{
-			position[]={3618.3398,10.141502,13196.171};
+			position[]={3575.8069,4.6994004,13375.591};
 			name="bar";
 			text="Bar";
 			type="c_unknown";
