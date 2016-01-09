@@ -237,7 +237,6 @@ class Life_Client_Core
 		class fadeSound {};
 		class vdmed {};
 		class speedBomb {};
-		class corpse {};
 		class Uniformscolor {};
 		class insurance {};
 	};
