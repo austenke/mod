@@ -2634,7 +2634,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1458;
+		items=1459;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -18386,10 +18386,20 @@ class Mission
 			skill=0.60000002;
 			init="this allowDamage false; this enableSimulation false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this addAction[""Moonshine Trader"",life_fnc_virt_menu,""moon""];";
 		};
+		class Item1458
+		{
+			position[]={3620.9348,10.27656,13196.051};
+			azimut=-78.460999;
+			id=1583;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V2_F";
+			skill=0.60000002;
+			init="this allowDamage false; this enableSimulation false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this addAction[""Bar"",life_fnc_virt_menu,""bar""];";
+		};
 	};
 	class Markers
 	{
-		items=242;
+		items=243;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -20336,6 +20346,14 @@ class Mission
 			text="Moonshine Trader";
 			type="mil_dot";
 			colorName="ColorEAST";
+		};
+		class Item242
+		{
+			position[]={3618.3398,10.141502,13196.171};
+			name="bar";
+			text="Bar";
+			type="c_unknown";
+			colorName="ColorGreen";
 		};
 	};
 	class Sensors

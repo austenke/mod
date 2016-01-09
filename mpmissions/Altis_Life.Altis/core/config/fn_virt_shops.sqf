@@ -26,4 +26,5 @@ switch (_shop) do
 	case "cement": {["Cement Dealer",["cement"]]};
 	case "gold": {["Gold Buyer",["goldbar"]]};
 	case "moon": {["Moonshine Trader",["bottledshine"]]};
+	case "bar": {["Bar",["bottledbeer","bottledwhiskey"]]};
 };

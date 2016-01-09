@@ -17,9 +17,9 @@
 			<Original>Bruce's Outback Outfits</Original>
 			<Portuguese>Loja de Roupas</Portuguese>
 		</Key>
-		<Key ID="STR_Shops_C_Pub">
-			<Original>Pub</Original>
-			<Portuguese>Pub</Portuguese>
+		<Key ID="STR_Shops_bar">
+			<Original>Bar</Original>
+			<Portuguese>Bar</Portuguese>
 		</Key>
 		<Key ID="STR_Shops_C_Police">
 			<Original>Altis Police Department Shop</Original>

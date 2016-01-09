@@ -319,6 +319,11 @@ class VirtualShops {
 		name = "STR_Shops_moon";
 		items[] = { "bottledshine" };
 	}
+
+	class bar {
+		name = "STR_Shops_bar";
+		items[] = { "bottledbeer", "bottledwhiskey" }
+	}
 };
 
 #include "Config_Vehicles.hpp"
