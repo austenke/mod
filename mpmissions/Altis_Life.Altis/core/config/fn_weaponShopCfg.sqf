@@ -83,8 +83,7 @@ switch(_shop) do {
 						["optic_SOS",nil,500],
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
-						["bipod_02_F_blk",nil,500],
-						["smokeshellyellow","TearGas",2000]
+						["bipod_02_F_blk",nil,500]
 					]
 				];
 			};
@@ -106,8 +105,7 @@ switch(_shop) do {
 						["optic_SOS",nil,500],
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
-						["bipod_02_F_blk",nil,500],
-						["smokeshellyellow","TearGas",2000]
+						["bipod_02_F_blk",nil,500]
 					]
 				];
 			};
@@ -129,8 +127,7 @@ switch(_shop) do {
 						["optic_SOS",nil,500],
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
-						["bipod_02_F_blk",nil,500],
-						["smokeshellyellow","TearGas",2000]
+						["bipod_02_F_blk",nil,500]
 					]
 				];
 			};
@@ -152,8 +149,7 @@ switch(_shop) do {
 						["optic_SOS",nil,500],
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
-						["bipod_02_F_blk",nil,500],
-						["smokeshellyellow","TearGas",2000]
+						["bipod_02_F_blk",nil,500]
 					]
 				];
 			};
