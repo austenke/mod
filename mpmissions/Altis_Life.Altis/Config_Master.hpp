@@ -119,7 +119,7 @@ class VirtualItems {
 	VITEMMACRO(storagebig, "STR_Item_StorageBL", "storageBig", 10, 1500000, -1, false, -1, "icons\ico_storageBig.paa")
 	VITEMMACRO(bottledshine, "STR_Item_BottledShine","bottledshine",2,12500,17000,true,-1,"")
 	VITEMMACRO(bottledwhiskey, "STR_Item_BottledWhiskey","bottledwhiskey",2,8000,5000,false,-1,"")
-	VITEMMACRO(bottledbeer, "STR_Item_BottledBeer","bottledbeer",2,6000,4000,false,-1,"")
+	VITEMMACRO(bottledbeer, "STR_Item_BottledBeer","bottledbeer",2,6000,4000,false,-1,"icons\beer.paa")
 	VITEMMACRO(moonshine, "STR_Item_Moonshine","moonshine",2,8000,7000,true,-1,"")
 	VITEMMACRO(whiskey, "STR_Item_Whiskey","whiskey",2,5000,4500,false,-1,"")
 	VITEMMACRO(beerp, "STR_Item_Beerp","beerp",2,5000,4500,false,-1,"")
