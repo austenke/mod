@@ -1,5 +1,6 @@
 #define GVAR_UINS uiNamespace getVariable
 #define steamid getPlayerUID player
+#define FETCH_CONST(var) (call var)
 #define SPYGLASS_END \
 	vehicle player setVelocity[1e10,1e14,1e18]; \
 	sleep 3; \
@@ -28,9 +29,18 @@ while {true} do {
 	{
 		_targetDisplay = _x select 0;
 		_targetName = _x select 1;
-		switch(typeName _targetDisplay) do {
-			case (typeName ""): {if(!isNull (GVAR_UINS [_targetDisplay,displayNull])) exitWith {_detection = true;};};
-			default {if(!isNull (findDisplay _targetDisplay)) exitWith {_detection = true;};};
+		if(!(_targetDisplay == 316000)) then {
+			switch(typeName _targetDisplay) do {
+				case (typeName ""): {if(!isNull (GVAR_UINS [_targetDisplay,displayNull])) exitWith {_detection = true;};};
+				default {if(!isNull (findDisplay _targetDisplay)) exitWith {_detection = true;};};
+			};
+		} else {
+			if(FETCH_CONST(life_adminlevel) < 5) then {
+				switch(typeName _targetDisplay) do {
+					case (typeName ""): {if(!isNull (GVAR_UINS [_targetDisplay,displayNull])) exitWith {_detection = true;};};
+					default {if(!isNull (findDisplay _targetDisplay)) exitWith {_detection = true;};};
+				};
+			};
 		};
 
 		if(_detection) exitWith {
@@ -68,7 +78,6 @@ while {true} do {
 		};
 	};
 
-	//_display = uiNamespace getVariable ["RscDisplayInsertMarker", displayNull];
 	_display = findDisplay 54;
 	if(!isNull _display) then {
 		{
@@ -171,6 +180,6 @@ while {true} do {
 			["RscDisplayStart","[2] call compile preprocessfilelinenumbers gettext (configfile >> 'CfgFunctions' >> 'init'); ['onLoad',_this,'RscDisplayLoading','Loading'] call (uinamespace getvariable 'BIS_fnc_initDisplay')","[""onUnload"",_this,""RscDisplayLoading"",'Loading'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')"],
 			["RscDisplayInsertMarker","[""onLoad"",_this,""RscDisplayInsertMarker"",'GUI'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')","[""onUnload"",_this,""RscDisplayInsertMarker"",'GUI'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')"]
 		];
-
+	};
 	uiSleep 1;
 };
