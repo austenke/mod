@@ -7,11 +7,11 @@
 			<Italian>wood Buyer</Italian>
 			<French>wood Buyer</French>
 		</Key>
-		<Key ID="STR_Shops_redneck">
-			<Original>Moonshine Buyer</Original>
-			<German>Moonshine Buyer</German>
-			<Italian>Moonshine Buyer</Italian>
-			<French>Moonshine Buyer</French>
+		<Key ID="STR_Shops_moon">
+			<Original>Moonshine Trader</Original>
+			<German>Moonshine Trader</German>
+			<Italian>Moonshine Trader</Italian>
+			<French>Moonshine Trader</French>
 		</Key>
 		<Key ID="STR_Shops_C_Bruce">
 			<Original>Bruce's Outback Outfits</Original>

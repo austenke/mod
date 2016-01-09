@@ -315,9 +315,9 @@ class VirtualShops {
 		items[] = { "wood" };
 	};
 
-	class redneck {
-		name = "STR_Shops_redneck";
-		items[] = { "moonshine_bottled" };
+	class moon {
+		name = "STR_Shops_moon";
+		items[] = { "bottledshine" };
 	}
 };
 
