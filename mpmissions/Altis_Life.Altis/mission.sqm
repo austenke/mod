@@ -18367,8 +18367,8 @@ class Mission
 		};
 		class Item1456
 		{
-			position[]={9032.2031,21.259377,13091.545};
-			azimut=88.6493;
+			position[]={9036.8193,20.515112,13088.248};
+			azimut=92.718254;
 			offsetY=0.221828;
 			id=1581;
 			side="EMPTY";
@@ -18378,8 +18378,8 @@ class Mission
 		};
 		class Item1457
 		{
-			position[]={10452.02,84.898239,17259.707};
-			azimut=-46.2337;
+			position[]={10434.487,84.354309,17250.785};
+			azimut=-133.32385;
 			id=1582;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
@@ -18388,7 +18388,7 @@ class Mission
 		};
 		class Item1458
 		{
-			position[]={3618.6624,10.161535,13195.645};
+			position[]={3617.3823,10.11173,13195.877};
 			azimut=-78.460999;
 			id=1583;
 			side="EMPTY";
@@ -20305,7 +20305,7 @@ class Mission
 		};
 		class Item236
 		{
-			position[]={9034.3252,20.960009,13091.896};
+			position[]={9037.7393,20.349602,13088.212};
 			name="moon";
 			text="Moonshine Processing";
 			type="mil_triangle";
@@ -20341,7 +20341,7 @@ class Mission
 		};
 		class Item241
 		{
-			position[]={10452.718,85.16037,17260.928};
+			position[]={10434.021,84.363464,17250.494};
 			name="moon_trade";
 			text="Moonshine Trader";
 			type="mil_dot";
