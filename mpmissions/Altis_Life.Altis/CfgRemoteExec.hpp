@@ -82,7 +82,6 @@ class CfgRemoteExec {
 		F(DB_fnc_updatePartial,SERVER)
 		F(DB_fnc_updateRequest,SERVER)
 		F(TON_fnc_chopShopSell,SERVER)
-		F(TON_fnc_seizeVehicle,SERVER)
 		F(TON_fnc_setObjVar,SERVER)
 		F(TON_fnc_keyManagement,SERVER)
 		F(TON_fnc_vehicleDelete,SERVER)

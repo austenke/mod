@@ -1713,8 +1713,22 @@
 			<Italian>%1 il tuo %2 sta per essere sequestrato dalla Polizia.</Italian>
 			<Portuguese>%1 seu %2 está sendo apreendido pela Polícia</Portuguese>
 		</Key>
+		<Key ID="STR_NOTF_BeingSeized">
+			<Original>%1 your %2 is being seized by the police.</Original>
+			<German>%1 dein %2 wird von der Polizei beschlagnahmt.</German>
+			<French>%1 votre %2 est envoyé a la fourrière par la police.</French>
+			<Italian>%1 il tuo %2 sta per essere sequestrato dalla Polizia.</Italian>
+			<Portuguese>%1 seu %2 está sendo apreendido pela Polícia</Portuguese>
+		</Key>
 		<Key ID="STR_NOTF_Impounding">
 			<Original>Impounding Vehicle</Original>
+			<German>Fahrzeug wird beschlagnahmt</German>
+			<French>Mise en fourrière</French>
+			<Italian>Sequestro Veicolo in corso</Italian>
+			<Portuguese>Apreendendo veículo</Portuguese>
+		</Key>
+		<Key ID="STR_NOTF_Seizing">
+			<Original>Seizing Vehicle</Original>
 			<German>Fahrzeug wird beschlagnahmt</German>
 			<French>Mise en fourrière</French>
 			<Italian>Sequestro Veicolo in corso</Italian>
@@ -1734,8 +1748,22 @@
 			<Italian>Hai sequestrato un %1\n\nHai ricevuto €%2 per aver mantenuto l'ordine nelle strade!</Italian>
 			<Portuguese>Você apreendeu %1\n\nVocê recebeu R$%2 por deixar as ruas mais seguras!</Portuguese>
 		</Key>
+		<Key ID="STR_NOTF_Seized">
+			<Original>You have seized a %1\n\nYou have received $%2 for cleaning up the streets!</Original>
+			<German>Du hast einen %1 beschlagnahmt\n\nDu hast $%2 für das Aufräumen der Straßen bekommen!</German>
+			<French>Vous avez mis en fourrière un(e) %1\n\nVous avez reçus $%2 pour avoir nettoyé les rues!</French>
+			<Italian>Hai sequestrato un %1\n\nHai ricevuto €%2 per aver mantenuto l'ordine nelle strade!</Italian>
+			<Portuguese>Você apreendeu %1\n\nVocê recebeu R$%2 por deixar as ruas mais seguras!</Portuguese>
+		</Key>
 		<Key ID="STR_NOTF_HasImpounded">
 			<Original>%1 has impounded %2's %3</Original>
+			<German>%1 hat %2's %3 beschlagnahmt</German>
+			<French>%1 a mis en fourrière le %3 de %2.</French>
+			<Italian>%1 ha sequestrato il %2 di %3</Italian>
+			<Portuguese>%1 apreendeu %3 de %2</Portuguese>
+		</Key>
+		<Key ID="STR_NOTF_HasSeized">
+			<Original>%1 has seized %2's %3</Original>
 			<German>%1 hat %2's %3 beschlagnahmt</German>
 			<French>%1 a mis en fourrière le %3 de %2.</French>
 			<Italian>%1 ha sequestrato il %2 di %3</Italian>

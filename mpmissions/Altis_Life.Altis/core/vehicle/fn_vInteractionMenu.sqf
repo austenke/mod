@@ -56,7 +56,7 @@ if(playerSide == west) then {
 	_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction;";
 
 	_Btn6 ctrlSetText localize "STR_vInAct_Seize";
-	_Btn6 buttonSetAction "[player,life_vInact_curTarget] spawn life_fnc_seizeAction;";
+	_Btn6 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_seizeAction;";
 	
 	if(_curTarget isKindOf "Ship") then {
 		_Btn7 ctrlSetText localize "STR_vInAct_PushBoat";
