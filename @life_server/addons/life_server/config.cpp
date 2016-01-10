@@ -132,6 +132,7 @@ class CfgFunctions
 			class setObjVar {};
 			class keyManagement {};
 			class vehicleInsurance {};
+			class seizeVehicle {};
 		};
 		
 		class Housing
