@@ -39,6 +39,9 @@ _Btn8 = _display displayCtrl Btn8;
 _Btn9 = _display displayCtrl Btn9;
 life_vInact_curTarget = _curTarget;
 
+_Btn8 ctrlShow false;
+_Btn9 ctrlShow false;
+
 //Set Repair Action
 _Btn1 ctrlSetText localize "STR_vInAct_Repair";
 _Btn1 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_repairTruck;";
@@ -109,6 +112,4 @@ if(playerSide == west) then {
 	_Btn5 ctrlShow false;
 	_Btn6 ctrlShow false;
 	_Btn7 ctrlShow false;
-	_Btn8 ctrlShow false;
-	_Btn9 ctrlShow false;
 };
