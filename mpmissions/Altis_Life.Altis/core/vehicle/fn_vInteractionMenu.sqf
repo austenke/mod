@@ -13,10 +13,8 @@
 #define Btn5 37454
 #define Btn6 37455
 #define Btn7 37456
-#define Btn8 37457
-#define Btn9 37458
 #define Title 37401
-private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn8","_Btn9"];
+private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7"];
 if(!dialog) then {
 	createDialog "vInteraction_Menu";
 };
@@ -35,12 +33,7 @@ _Btn4 = _display displayCtrl Btn4;
 _Btn5 = _display displayCtrl Btn5;
 _Btn6 = _display displayCtrl Btn6;
 _Btn7 = _display displayCtrl Btn7;
-_Btn8 = _display displayCtrl Btn8;
-_Btn9 = _display displayCtrl Btn9;
 life_vInact_curTarget = _curTarget;
-
-_Btn8 ctrlShow false;
-_Btn9 ctrlShow false;
 
 //Set Repair Action
 _Btn1 ctrlSetText localize "STR_vInAct_Repair";
