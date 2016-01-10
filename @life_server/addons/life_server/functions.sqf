@@ -147,7 +147,7 @@ compileFinal "
 	_to = ""The Police"";
 	if(_msg == """") exitWith {hint ""You must enter a message to send!"";ctrlShow[3016,true];};
 		
-	[[_msg,name player,1],""TON_fnc_clientMessage"",true,false] call life_fnc_MP;
+	[[_msg,name player,1,position player],""TON_fnc_clientMessage"",true,false] call life_fnc_MP;
 	[] call life_fnc_cellphone;
 	hint format[""You sent %1 a message: %2"",_to,_msg];
 
@@ -162,7 +162,7 @@ compileFinal "
 	_to = ""The Admins"";
 	if(_msg == """") exitWith {hint ""You must enter a message to send!"";ctrlShow[3017,true];};
 		
-	[[_msg,name player,2],""TON_fnc_clientMessage"",true,false] call life_fnc_MP;
+	[[_msg,name player,2,position player],""TON_fnc_clientMessage"",true,false] call life_fnc_MP;
 	[] call life_fnc_cellphone;
 	hint format[""You sent %1 a message: %2"",_to,_msg];
 	ctrlShow[3017,true];
@@ -217,6 +217,7 @@ compileFinal "
 	_msg = _this select 0;
 	_from = _this select 1;
 	_type = _this select 2;
+	_pos = _this select 3;
 	if(_from == """") exitWith {};
 	switch (_type) do
 	{
@@ -240,15 +241,14 @@ compileFinal "
 			[""PoliceDispatch"",[format[""A New Police Report From: %1"",_from]]] call bis_fnc_showNotification;
 			systemChat _message;
 
-			_markername = format[""911_call_%1"",_from];
-			_marker = createMarkerLocal [_markername];
+			_marker = createMarkerLocal [format[""911call%1"",_from],_pos];
 			_marker setMarkerColorLocal ""ColorBlue"";
 			_marker setMarkerTypeLocal ""hd_marker"";
-			_marker setMarkerTextLocal format[""911 call - %1"",_from];
+			_marker setMarkerTextLocal format[""911 Call - %1"",_from];
 
 			sleep 120;
 
-			deleteMarker _markername;
+			deleteMarker _marker;
 		};
 		
 		case 2 :
@@ -260,6 +260,15 @@ compileFinal "
 			
 			[""AdminDispatch"",[format[""%1 Has Requested An Admin!"",_from]]] call bis_fnc_showNotification;
 			systemChat _message;
+
+			_marker = createMarkerLocal [format[""admincall%1"",_from],_pos];
+			_marker setMarkerColorLocal ""ColorBlue"";
+			_marker setMarkerTypeLocal ""hd_marker"";
+			_marker setMarkerTextLocal format[""Admin Request - %1"",_from];
+
+			sleep 300;
+
+			deleteMarker _marker;
 		};
 		
 		case 3 :
