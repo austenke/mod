@@ -1,5 +1,3 @@
-//#include "..\..\script_macros.hpp"
-
 /*
 	File: fn_setupActions.sqf
 	
@@ -36,11 +34,11 @@ switch (playerSide) do {
 		life_actions = life_actions + [player addAction["Drop Barrel",life_fnc_interactOil,"",0,false,false,"",'
 		life_holdBarrel']];
 
-		//life_actions = life_actions + [player addAction["Pick Up Item",([cursorTarget,player,false] remoteExecCall ["TON_fnc_pickupAction",RSERV];),"",0,false,false,"",'
-		//cursorTarget distance player < 3.5 && speed cursorTarget < 1 && (typeOf cursorTarget) in _miscItems']];
+		life_actions = life_actions + [player addAction["Pick Up Item",([cursorTarget,player,false] remoteExecCall ["TON_fnc_pickupAction",RSERV];),"",0,false,false,"",'
+		cursorTarget distance player < 3.5 && speed cursorTarget < 1 && (typeOf cursorTarget) in ["Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Suitcase_F"] && {!(cursorTarget GVAR ["inUse",false])}']];
 
-		//life_actions = life_actions + [player addAction["Pick Up Money",([cursorTarget,player,true] remoteExecCall ["TON_fnc_pickupAction",RSERV];),"",0,false,false,"",'
-		// cursorTarget distance player < 3.5 && speed cursorTarget < 1 && EQUAL((typeOf cursorTarget),_money) && {!(cursorTarget GVAR ["inUse",false])}']];
+		life_actions = life_actions + [player addAction["Pick Up Money",([cursorTarget,player,true] remoteExecCall ["TON_fnc_pickupAction",RSERV];),"",0,false,false,"",'
+		cursorTarget distance player < 3.5 && speed cursorTarget < 1 && (typeOf cursorTarget) == "Land_Money_F" && {!(cursorTarget GVAR ["inUse",false])}']];
 	};
 
 	case west: {
