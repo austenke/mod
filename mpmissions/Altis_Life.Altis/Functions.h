@@ -97,6 +97,7 @@ class Life_Client_Core
 		class arrestAction {};
 		class escortAction {};
 		class impoundAction {};
+		class seizeAction {};
 		class pulloutAction {};
 		class putInCar {};
 		class stopEscorting {};
