@@ -1,3 +1,4 @@
+#include "..\..\script_macros.hpp"
 /*
 file: fn_robBank.sqf
 
