@@ -81,7 +81,8 @@ if(life_action_inUse) then
 	//[[1,format["911 - Gas Station: %1 was just robbed by %2 for a total of $%3", _shop, _robber, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 	[[format["%1 was just robbed by %2 for a total of $%3", _name,name _robber, [_kassa] call life_fnc_numberText],_name,1],"clientMessage",true,false] spawn life_fnc_MP;
 	[[getPlayerUID _robber,name _robber,"211"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
-	[[_shop],"life_fnc_robberyFinish",nil,true] spawn life_fnc_MP;
+	//[[_shop],"life_fnc_robberyFinish",nil,true] spawn life_fnc_MP;
+	playSound3D ["\sounds\robberyFinish.ogg", _shop, false, getPosASL _shop, 1, 1, 40];
 
 	//_rip = false;
 	life_use_atm = false;
