@@ -139,7 +139,8 @@ if(count (PISTOL_ITEMS) > 0) then {
     };
 } forEach [
 	"pickaxe","fuelEmpty","fuelFull", "spikeStrip", "lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","apple","peach","tbacon","donuts",
-	"rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtleSoup","hen","rooster","sheep","goat"
+	"rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtleSoup","hen","rooster","sheep","goat","speedbomb","defib","burlapsack","nitro","ziptie",
+    "chainsaw","boltcutter","blastingcharge","chainsaw"
 ];
 
 _return pushBack _uItems;
