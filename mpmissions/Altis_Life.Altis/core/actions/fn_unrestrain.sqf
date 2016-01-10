@@ -4,7 +4,8 @@
 */
 private["_unit"];
 _unit = param [0,ObjNull,[ObjNull]];
-if(isNull _unit OR !(_unit GVAR ["restrained",FALSE])) exitWith {}; //Error check?
+if(isNull _unit) exitWith {}; //Error check
+if(!(_unit GVAR ["restrained",FALSE]) && !(_unit GVAR ["civ_restrained",FALSE])) exitWith {}; //Error check
 
 _unit SVAR ["restrained",FALSE,TRUE];
 _unit SVAR ["Escorting",FALSE,TRUE];

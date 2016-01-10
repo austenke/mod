@@ -11,6 +11,7 @@ _unit = cursorTarget;
 if(isNull _unit) exitWith {}; //Not valid
 if((player distance _unit > 3)) exitWith {};
 if((_unit getVariable "restrained")) exitWith {};
+if((_unit getVariable "civ_restrained")) exitWith {};
 //if(side _unit == west) exitWith {};
 if(player == _unit) exitWith {};
 if(side player == civilian) exitWith {

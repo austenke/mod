@@ -35,22 +35,22 @@ switch (playerSide) do {
 		life_holdBarrel']];
 
 		life_actions = life_actions + [player addAction["Pick Up Item",([cursorTarget,player,false] remoteExecCall ["TON_fnc_pickupAction",RSERV];),"",0,false,false,"",'
-		cursorTarget distance player < 3.5 && speed cursorTarget < 1 && (typeOf cursorTarget) in ["Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Suitcase_F"] && {!(cursorTarget GVAR ["inUse",false])}']];
+		cursorTarget distance player < 7 && speed cursorTarget < 1 && (typeOf cursorTarget) in ["Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Suitcase_F"] && {!(cursorTarget GVAR ["inUse",false])}']];
 
 		life_actions = life_actions + [player addAction["Pick Up Money",([cursorTarget,player,true] remoteExecCall ["TON_fnc_pickupAction",RSERV];),"",0,false,false,"",'
-		cursorTarget distance player < 3.5 && speed cursorTarget < 1 && (typeOf cursorTarget) == "Land_Money_F" && {!(cursorTarget GVAR ["inUse",false])}']];
+		cursorTarget distance player < 7 && speed cursorTarget < 1 && (typeOf cursorTarget) == "Land_Money_F" && {!(cursorTarget GVAR ["inUse",false])}']];
 	};
 
 	case west: {
 		//CopEnter - Driver Seat 
 		life_actions = life_actions + [player addAction["Cop Enter as Driver",life_fnc_copEnter,"driver",200,false,false,"",'
-		cursorTarget isKindOf "Car" && cursorTarget distance player < 5.5 && (locked cursorTarget) !=0 && speed cursorTarget < 1 ']];
+		cursorTarget isKindOf "Car" && cursorTarget distance player < 7 && (locked cursorTarget) !=0 && speed cursorTarget < 1 ']];
 		//!isNull cursorTarget && (()||(cursorTarget isKindOf "Air")||(cursorTarget isKindOf "Ship"))
 		// (locked cursorTarget) != 0 && cursorTarget distance player < 3.5
 
 		//CopEnter - Passenger Seat 
 		life_actions = life_actions + [player addAction["Cop Enter as Passenger",life_fnc_copEnter,"passenger",100,false,false,"",'
-		cursorTarget isKindOf "Car" && cursorTarget distance player < 5.5 && (locked cursorTarget) !=0 && speed cursorTarget < 1 ']];
+		cursorTarget isKindOf "Car" && cursorTarget distance player < 7 && (locked cursorTarget) !=0 && speed cursorTarget < 1 ']];
 		// !isNull cursorTarget && ((cursorTarget isKindOf "Car")||(cursorTarget isKindOf "Air")||(cursorTarget isKindOf "Ship")) && (locked cursorTarget) != 0 && cursorTarget distance player < 3.5 ']];
 
 		//CopEnter - Exit 
@@ -61,9 +61,9 @@ switch (playerSide) do {
     	!isNull cursorTarget && animationState cursorTarget in ["Acts_InjuredLookingRifle01","incapacitated","Incapacitated","AinjPfalMstpSnonWnonDf_carried_fallwc"] && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
         
         life_actions = life_actions + [player addAction["Unrestrain",life_fnc_unrestrain,"",0,false,false,"",'
-        !isNull cursorTarget && cursorTarget getVariable ["restrained", false] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
+        !isNull cursorTarget && (cursorTarget getVariable ["restrained", false] || cursorTarget getVariable ["civ_restrained", false]) && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
 
         life_actions = life_actions + [player addAction["Escort",life_fnc_escortAction,"",0,false,false,"",'
-        !isNull cursorTarget && cursorTarget getVariable ["restrained", false] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
+        !isNull cursorTarget && (cursorTarget getVariable ["restrained", false] || cursorTarget getVariable ["civ_restrained", false]) && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
 	};
 };
