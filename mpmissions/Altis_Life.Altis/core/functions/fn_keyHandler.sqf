@@ -46,14 +46,16 @@ if(!(EQUAL(count (actionKeys "User10"),0)) && {(inputAction "User10" > 0)}) exit
 
 // Add redgull to user action 11
 if(!(EQUAL(count (actionKeys "User11"),0)) && {(inputAction "User11" > 0)} && life_inv_redgull > 1) exitWith {
-	[] spawn {
-		life_redgull_effect = time;
-		titleText[localize "STR_ISTR_RedGullEffect","PLAIN"];
-		player enableFatigue false;
-		waitUntil {!alive player OR ((time - life_redgull_effect) > (5 * 60))};
-		player enableFatigue true;
+	if(([false,_item,1] call life_fnc_handleInv)) then {
+		[] spawn {
+			life_redgull_effect = time;
+			titleText[localize "STR_ISTR_RedGullEffect","PLAIN"];
+			player enableFatigue false;
+			waitUntil {!alive player OR ((time - life_redgull_effect) > (5 * 60))};
+			player enableFatigue true;
+		};
+		true;
 	};
-	true;
 };
 
 
