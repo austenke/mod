@@ -56,7 +56,8 @@ _cP = 0.01;
  
 if(life_action_inUse) then
 {
-	[[_shop],"life_fnc_robberyStart",nil,true] spawn life_fnc_MP;
+	//[[_shop],"life_fnc_robberyStart",nil,true] spawn life_fnc_MP;
+	playSound3D ["\sounds\robberyStart.ogg", _shop, false, getPosASL _shop, 1, 1, 40];
 	while{true} do
 	{
 			sleep 1.70;
