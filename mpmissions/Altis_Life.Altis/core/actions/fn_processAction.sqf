@@ -17,7 +17,7 @@ if(isNull _vendor OR _type == "" OR (player distance _vendor > 10)) exitWith {};
 _error1 = false; // used below check the comment there ;) 
 _error2 = false;
 _min = 0;
-_toSelect = 0;
+_toSelect = [];
 //unprocessed item,processed item, cost if no license,Text to display (I.e Processing  (percent) ..."
  
 _itemInfo = switch (_type) do
@@ -122,11 +122,7 @@ if(_hasLicense) then
 		5 cutText ["","PLAIN"];
 		titleText[format["You have processed %1 to %2.",_itemNameo1,_itemName],"PLAIN"];
 	};
-	/*if(_toSelect select 0 != "") then
-	##{
-	##	[5,grpPlayer,_toSelect select 0,2000] remoteExecCall ["TON_fnc_updateGang",RSERV];
-	##};
-	*/
+	if(_toSelect select 0 != "") then { [5,grpPlayer,_toSelect select 0,2000] remoteExecCall ["TON_fnc_updateGang",RSERV]; };
 	if(!([true,_newItem,_min] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_min] call life_fnc_handleInv; life_is_processing = false;};
 	life_is_processing = false;
 			
@@ -134,43 +130,5 @@ if(_hasLicense) then
 }
 else
 {
-	if(life_cash < _cost) exitWith {hint format["You need $%1 to process without a license!",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
- 
- 
-	while{true} do
-	{
-			sleep  0.9;
-			_cP = _cP + 0.02;
-			_progress progressSetPosition _cP;
-			_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
-			if(_cP >= 1) exitWith {};
-			if(player distance _vendor > 10) exitWith {};
-	};
- 
- 
-	if(player distance _vendor > 10) exitWith {hint "You need to stay within 10m to process."; 5 cutText ["","PLAIN"]; life_is_processing = false;};
- 
-	if(life_cash < _cost) exitWith {hint format["You need $%1 to process  without a license!",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
-	
-	if(!([false,_oldItem,_min] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
-	//2vars
-	if(_2var) then 
-	{	
-		([false,_oldItem2,_min] call life_fnc_handleInv);
-		5 cutText ["","PLAIN"];
-		titleText[format["You have process %1 and %2 to %3 for %4$.",_itemNameo1,_itemNameo2,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
-	} else
-	{
-		
-		5 cutText ["","PLAIN"];
-		titleText[format["You have process %1 to %2 for %3$.",_itemNameo1,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
-	};
-	if(_toSelect select 0 != "") then
-	{
-		[5,grpPlayer,_toSelect select 0,2000] remoteExecCall ["TON_fnc_updateGang",RSERV];
-	};
-	if(!([true,_newItem,_min] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_min] call life_fnc_handleInv; life_is_processing = false;};
-	life_cash = life_cash - _cost;
-	
-	life_is_processing = false;
+	hint format["You need a license to process %1!",_itemNameo1];
 };
