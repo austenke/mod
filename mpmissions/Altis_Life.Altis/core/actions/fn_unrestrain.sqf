@@ -3,7 +3,7 @@
 	File: fn_unrestrain.sqf
 */
 private["_unit"];
-_unit = param [0,ObjNull,[ObjNull]];
+_unit = cursorTarget;
 if(isNull _unit) exitWith {}; //Error check
 if(!(_unit GVAR ["restrained",FALSE]) && !(_unit GVAR ["civ_restrained",FALSE])) exitWith {}; //Error check
 

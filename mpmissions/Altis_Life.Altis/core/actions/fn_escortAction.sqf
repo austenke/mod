@@ -3,7 +3,7 @@
 	File: fn_escortAction.sqf
 */
 private "_unit";
-_unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+_unit = cursorTarget;
 
 if(isNil "_unit" OR isNull _unit OR !isPlayer _unit) exitWith {};
 if(!(side _unit in [civilian,independent])) exitWith {};
