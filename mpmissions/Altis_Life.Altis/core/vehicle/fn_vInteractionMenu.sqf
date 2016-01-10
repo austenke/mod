@@ -54,20 +54,23 @@ if(playerSide == west) then {
 	
 	_Btn5 ctrlSetText localize "STR_vInAct_Impound";
 	_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction;";
+
+	_Btn6 ctrlSetText localize "STR_vInAct_Seize";
+	_Btn6 buttonSetAction "[player,life_vInact_curTarget] remoteExecCall [""TON_fnc_seizeVehicle"",RSERV];";
 	
 	if(_curTarget isKindOf "Ship") then {
-		_Btn6 ctrlSetText localize "STR_vInAct_PushBoat";
-		_Btn6 buttonSetAction "[] spawn life_fnc_pushObject; closeDialog 0;";
-		if(_curTarget isKindOf "Ship" && {local _curTarget} && {count crew _curTarget == 0}) then { _Btn6 ctrlEnable true;} else {_Btn6 ctrlEnable false};
+		_Btn7 ctrlSetText localize "STR_vInAct_PushBoat";
+		_Btn7 buttonSetAction "[] spawn life_fnc_pushObject; closeDialog 0;";
+		if(_curTarget isKindOf "Ship" && {local _curTarget} && {count crew _curTarget == 0}) then { _Btn7 ctrlEnable true;} else {_Btn7 ctrlEnable false};
 	} else {
 		if(typeOf (_curTarget) in ["C_Kart_01_Blu_F","C_Kart_01_Red_F","C_Kart_01_Fuel_F","C_Kart_01_Vrana_F"]) then {
-			_Btn6 ctrlSetText localize "STR_vInAct_GetInKart";
-			_Btn6 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
-			if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {_Btn6 ctrlEnable true;} else {_Btn6 ctrlEnable false};
+			_Btn7 ctrlSetText localize "STR_vInAct_GetInKart";
+			_Btn7 buttonSetAction "player moveInDriver life_vInact_curTarget; closeDialog 0;";
+			if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {_Btn7 ctrlEnable true;} else {_Btn7 ctrlEnable false};
 		} else {
-			_Btn6 ctrlSetText localize "STR_vInAct_Unflip";
-			_Btn6 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
-			if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn6 ctrlEnable false;} else {_Btn6 ctrlEnable true;};
+			_Btn7 ctrlSetText localize "STR_vInAct_Unflip";
+			_Btn7 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
+			if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn7 ctrlEnable false;} else {_Btn7 ctrlEnable true;};
 		};
 	};
 	

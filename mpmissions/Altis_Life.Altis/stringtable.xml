@@ -1636,6 +1636,13 @@
 			<Italian>Hai venduto un %1 per %2€</Italian>
 			<Portuguese>Você vendeu %1 por R$%2</Portuguese>
 		</Key>
+		<Key ID="STR_NOTF_SeizeFinishCar">
+			<Original>%1 has been seized by %2</Original>
+			<German>Du hast einen %1 für $%2 verkauft</German>
+			<French>Tu as vendu cet élément : %1 pour $%2</French>
+			<Italian>Hai venduto un %1 per %2€</Italian>
+			<Portuguese>Você vendeu %1 por R$%2</Portuguese>
+		</Key>
 		<Key ID="STR_NOTF_Picked">
 			<Original>You have picked %1 %2</Original>
 			<German>Du hast %1 %2 gesammelt</German>
@@ -4656,6 +4663,13 @@
 		</Key>
 		<Key ID="STR_vInAct_Impound">
 			<Original>Impound Vehicle</Original>
+			<German>Fahrzeug beschlagnahmen</German>
+			<French>Mise en fourrière</French>
+			<Italian>Sequestra Veicolo</Italian>
+			<Portuguese>Apreender Veículo</Portuguese>
+		</Key>
+		<Key ID="STR_vInAct_Seize">
+			<Original>Seize Vehicle</Original>
 			<German>Fahrzeug beschlagnahmen</German>
 			<French>Mise en fourrière</French>
 			<Italian>Sequestra Veicolo</Italian>
