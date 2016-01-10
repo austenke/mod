@@ -14,6 +14,7 @@ if(player distance cursorTarget > 10) exitWith {};
 
 _vehicleData = _vehicle GVAR ["vehicle_info_owners",[]];
 if(EQUAL((count _vehicleData),0)) exitWith {deleteVehicle _vehicle}; //Bad vehicle.
+if(!alive _vehicle) exitWith {deleteVehicle _vehicle; hint "This vehicle is destroyed";}; //Dead vehicle.
 _vehicleName = FETCH_CONFIG2(getText,CONFIG_VEHICLES,(typeOf _vehicle),"displayName");
 [0,"STR_NOTF_BeingImpounded",true,[SEL(SEL(_vehicleData,0),1),_vehicleName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 life_action_inUse = true;
