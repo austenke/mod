@@ -36,11 +36,11 @@ switch (playerSide) do {
 		life_actions = life_actions + [player addAction["Drop Barrel",life_fnc_interactOil,"",0,false,false,"",'
 		life_holdBarrel']];
 
-		life_actions = life_actions + [player addAction["Pick Up Item",([cursorTarget,player,false] remoteExecCall ["TON_fnc_pickupAction",RSERV];),"",0,false,false,"",'
-		cursorTarget distance player < 3.5 && speed cursorTarget < 1 && (typeOf cursorTarget) in _miscItems']];
+		//life_actions = life_actions + [player addAction["Pick Up Item",([cursorTarget,player,false] remoteExecCall ["TON_fnc_pickupAction",RSERV];),"",0,false,false,"",'
+		//cursorTarget distance player < 3.5 && speed cursorTarget < 1 && (typeOf cursorTarget) in _miscItems']];
 
-		life_actions = life_actions + [player addAction["Pick Up Money",([cursorTarget,player,true] remoteExecCall ["TON_fnc_pickupAction",RSERV];),"",0,false,false,"",'
-		 cursorTarget distance player < 3.5 && speed cursorTarget < 1 && EQUAL((typeOf cursorTarget),_money) && {!(cursorTarget GVAR ["inUse",false])}']];
+		//life_actions = life_actions + [player addAction["Pick Up Money",([cursorTarget,player,true] remoteExecCall ["TON_fnc_pickupAction",RSERV];),"",0,false,false,"",'
+		// cursorTarget distance player < 3.5 && speed cursorTarget < 1 && EQUAL((typeOf cursorTarget),_money) && {!(cursorTarget GVAR ["inUse",false])}']];
 	};
 
 	case west: {
