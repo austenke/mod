@@ -15,6 +15,7 @@ _vehicle = call compile format["%1", _vehicle];
 _nearVehicles = nearestObjects [getMarkerPos life_chopShop,["Car","Truck"],25];
 _vehicle = SEL(_nearVehicles,_vehicle);
 if(isNull _vehicle) exitWith {};
+if(playerSide == west) then {hint "You are a cop!";};
 
 hint localize "STR_Shop_ChopShopSelling";
 life_action_inUse = true;
