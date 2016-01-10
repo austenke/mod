@@ -243,7 +243,7 @@ compileFinal "
 
 			_marker = createMarkerLocal [format[""911call%1"",_from],_pos];
 			_marker setMarkerColorLocal ""ColorBlue"";
-			_marker setMarkerTypeLocal ""hd_marker"";
+			_marker setMarkerTypeLocal ""mil_dot"";
 			_marker setMarkerTextLocal format[""911 Call - %1"",_from];
 
 			sleep 120;
@@ -263,7 +263,7 @@ compileFinal "
 
 			_marker = createMarkerLocal [format[""admincall%1"",_from],_pos];
 			_marker setMarkerColorLocal ""ColorBlue"";
-			_marker setMarkerTypeLocal ""hd_marker"";
+			_marker setMarkerTypeLocal ""mil_dot"";
 			_marker setMarkerTextLocal format[""Admin Request - %1"",_from];
 
 			sleep 300;
