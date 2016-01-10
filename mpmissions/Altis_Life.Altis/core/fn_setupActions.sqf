@@ -20,7 +20,7 @@ switch (playerSide) do {
         !isNull cursorTarget && player distance cursorTarget < 5 && isPlayer cursorTarget && animationState cursorTarget in ["Incapacitated","amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon"]']];
 
         life_actions = life_actions + [player addAction["Restrain",life_fnc_restrainAction,"",0,false,false,"",'
-    	life_inv_ziptie > 1 && animationState cursorTarget in ["incapacitated","Incapacitated","AinjPfalMstpSnonWnonDf_carried_fallwc"] && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
+    	life_inv_ziptie > 1 && animationState cursorTarget in ["Acts_InjuredLookingRifle01","incapacitated","Incapacitated","AinjPfalMstpSnonWnonDf_carried_fallwc"] && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
         
         life_actions = life_actions + [player addAction["Unrestrain",life_fnc_unrestrain,"",0,false,false,"",'
         cursorTarget getVariable ["civ_restrained", false] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
@@ -56,5 +56,14 @@ switch (playerSide) do {
 		//CopEnter - Exit 
 		life_actions = life_actions + [player addAction["Cop Exit Vehicle",life_fnc_copEnter,"exit",100,false,false,"",'
 		(vehicle player != player) && (locked(vehicle player)!=0) ']];
+
+        life_actions = life_actions + [player addAction["Restrain",life_fnc_restrainAction,"",0,false,false,"",'
+    	!isNull cursorTarget && animationState cursorTarget in ["Acts_InjuredLookingRifle01","incapacitated","Incapacitated","AinjPfalMstpSnonWnonDf_carried_fallwc"] && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
+        
+        life_actions = life_actions + [player addAction["Unrestrain",life_fnc_unrestrain,"",0,false,false,"",'
+        !isNull cursorTarget && cursorTarget getVariable ["restrained", false] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
+
+        life_actions = life_actions + [player addAction["Escort",life_fnc_escortAction,"",0,false,false,"",'
+        !isNull cursorTarget && cursorTarget getVariable ["restrained", false] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
 	};
 };
