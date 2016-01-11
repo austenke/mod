@@ -155,11 +155,11 @@ class VirtualItems {
 
 	//Drugs
 	VITEMMACRO(heroin_unprocessed, "STR_Item_HeroinU", "heroinUnprocessed", 6, -1, -1, true, -1, "")
-	VITEMMACRO(heroin_processed, "STR_Item_HeroinP", "heroinProcessed", 5, 5800, 2560, true, -1, "icons\ico_heroinp.paa")
+	VITEMMACRO(heroin_processed, "STR_Item_HeroinP", "heroinProcessed", 5, 12000, 9000, true, -1, "icons\ico_heroinp.paa")
 	VITEMMACRO(cannabis, "STR_Item_Cannabis", "cannabis", 5, -1, -1, true, -1, "icons\ico_cannabis.paa")
 	VITEMMACRO(marijuana, "STR_Item_Marijuana", "marijuana", 4, 4000, 2350, true, -1, "icons\ico_marijuana.paa")
 	VITEMMACRO(cocaine_unprocessed, "STR_Item_CocaineU", "cocaineUnprocessed", 7, -1, 3000, true, -1, "icons\ico_cocaineup.paa")
-	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 6, 14000, 11000, true, -1, "icons\ico_cocainep.paa")
+	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 6, 15000, 14000, true, -1, "icons\ico_cocainep.paa")
 
 	//Drink
 	VITEMMACRO(redgull, "STR_Item_RedGull", "redgull", 1, 1500, 200, false, 100, "icons\ico_redgull.paa")
