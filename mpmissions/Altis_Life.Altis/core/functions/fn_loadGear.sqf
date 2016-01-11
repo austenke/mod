@@ -14,7 +14,7 @@ _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
 // Hack fix to stop medics spawning in combat gear
-if(playerSide == independent) exitWith {[] call life_fnc_medicLoadout;};
+if(playerSide == east) exitWith {[] call life_fnc_medicLoadout;};
 
 if(EQUAL(count _itemArray,0)) exitWith {
     switch(playerSide) do {
