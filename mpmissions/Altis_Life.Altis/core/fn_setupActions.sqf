@@ -14,7 +14,7 @@ switch (playerSide) do {
 		(surfaceisWater (getPos vehicle player)) && (vehicle player isKindOf "Ship") && life_carryWeight < life_maxWeight && speed (vehicle player) < 2 && speed (vehicle player) > -1 && !life_net_dropped ']];
 		//Rob person
 		life_actions = life_actions + [player addAction["Rob Person",life_fnc_robAction,"",0,false,false,"",'
-		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && animationState cursorTarget in ["Incapacitated","amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon"] && !(cursorTarget getVariable["robbed",FALSE]) ']];
+		!isNull cursorTarget && player distance cursorTarget < 5 && isPlayer cursorTarget && animationState cursorTarget in ["Incapacitated","amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon"] && !(cursorTarget getVariable["robbed",FALSE]) ']];
 		
 		life_actions = life_actions + [player addAction["Punch Balls",life_fnc_punchBallsAction,"",0,false,false,"",'
         !isNull cursorTarget && player distance cursorTarget < 5 && isPlayer cursorTarget && animationState cursorTarget in ["Incapacitated","amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon"]']];
@@ -29,7 +29,7 @@ switch (playerSide) do {
         cursorTarget getVariable ["civ_restrained", false] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
 
 		life_actions = life_actions + [player addAction["Pick Up Barrel",life_fnc_interactOil,"",0,false,false,"",'
-        !life_holdBarrel && (typeOf cursorTarget) in ["Land_BarrelWater_F","Land_MetalBarrel_F"] && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
+        !life_holdBarrel && (typeOf cursorTarget) in ["Land_BarrelWater_F","Land_MetalBarrel_F"] && cursorTarget distance player < 5 && speed cursorTarget < 1 ']];
 	
 		life_actions = life_actions + [player addAction["Drop Barrel",life_fnc_interactOil,"",0,false,false,"",'
 		life_holdBarrel']];
@@ -55,12 +55,18 @@ switch (playerSide) do {
 		(vehicle player != player) && (locked(vehicle player)!=0) ']];
 
         life_actions = life_actions + [player addAction["Restrain",life_fnc_restrainAction,"",0,false,false,"",'
-    	!isNull cursorTarget && animationState cursorTarget in ["Acts_InjuredLookingRifle01","incapacitated","Incapacitated","AinjPfalMstpSnonWnonDf_carried_fallwc"] && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
+    	!isNull cursorTarget && animationState cursorTarget in ["Acts_InjuredLookingRifle01","incapacitated","Incapacitated","AinjPfalMstpSnonWnonDf_carried_fallwc"] && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 5 && speed cursorTarget < 1 ']];
         
         life_actions = life_actions + [player addAction["Unrestrain",life_fnc_unrestrain,"",0,false,false,"",'
-        !isNull cursorTarget && (cursorTarget getVariable ["restrained", false] || cursorTarget getVariable ["civ_restrained", false]) && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
+        !isNull cursorTarget && (cursorTarget getVariable ["restrained", false] || cursorTarget getVariable ["civ_restrained", false]) && cursorTarget distance player < 5 && speed cursorTarget < 1 ']];
 
         life_actions = life_actions + [player addAction["Escort",life_fnc_escortAction,"",0,false,false,"",'
-        !isNull cursorTarget && (cursorTarget getVariable ["restrained", false] || cursorTarget getVariable ["civ_restrained", false]) && cursorTarget distance player < 3.5 && speed cursorTarget < 1 ']];
+        !isNull cursorTarget && (cursorTarget getVariable ["restrained", false] || cursorTarget getVariable ["civ_restrained", false]) && cursorTarget distance player < 5 && speed cursorTarget < 1 ']];
+	};
+
+	case east: {
+		//Revive
+		life_actions = life_actions + [player addAction["Revive Player",life_fnc_revivePlayer,"",200,false,false,"",'
+		!alive player && cursorTarget isKindOf "Man" && cursorTarget distance player < 9 ']];
 	};
 };

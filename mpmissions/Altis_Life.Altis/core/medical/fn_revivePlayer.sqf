@@ -7,7 +7,7 @@
 	Starts the revive process on the player.
 */
 private["_target","_revivable","_targetName","_ui","_progressBar","_titleText","_cP","_title"];
-_target = param [0,ObjNull,[ObjNull]];
+_target = cursorTarget;
 if(isNull _target) exitWith {}; //DAFUQ?@!%$!R?EFFD?TGSF?HBS?DHBFNFD?YHDGN?D?FJH
 
 if(life_inv_defib < 1) exitWith {titleText["You need a defibrillator first!","PLAIN"];};
