@@ -16,6 +16,8 @@ _name = [_this,3] call BIS_fnc_param;//Shop Name
 if(side _robber != civilian) exitWith { hint "You can not rob this station!" };
 if(_robber distance _shop > 5) exitWith { hint "You need to stay close to the gas station attendant to rob him" };
 
+if([west] call life_fnc_playerCount < 1) exitWith { hint "There must be at least one officer online to rob a shop!" };
+
 //if (isNull _kassa) then { _kassa = 1000; };
 if (life_action_inUse) exitWith { hint "Robbery already in progress!" };
 if (vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
