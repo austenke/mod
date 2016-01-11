@@ -141,14 +141,14 @@ life_radio_civ = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_N
 life_radio_indep = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
 
 //line added by GamerDF
-_seconds = 14400;
+_seconds = 999999999;
 diag_log "Set Sunny Weather";
 _seconds setOvercast 0;
 diag_log "Set Fog Minimal";
 _seconds setFog 0;
 diag_log "Set Rain";
 _seconds setRain 0;
-diag_log "Set New Weather Changes to 240min/4Hours";
+diag_log "Set New Weather Changes to 999999999 seconds";
 _seconds = nextWeatherChange;
 
 /* Set the amount of gold in the federal reserve at mission start */
