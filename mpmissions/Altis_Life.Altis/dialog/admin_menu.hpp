@@ -182,7 +182,7 @@ class life_admin_menu {
 
 		};
 		class CashWipe : Life_RscButtonMenu {
-			idc = 2914;
+			idc = 2915;
 			text = "$STR_Admin_Wipe_Cash";
 			onButtonClick = "[] spawn life_fnc_cashWipe;";
 			x = 0.42 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
