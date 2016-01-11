@@ -67,6 +67,6 @@ switch (playerSide) do {
 	case east: {
 		//Revive
 		life_actions = life_actions + [player addAction["Revive Player",life_fnc_revivePlayer,"",200,false,false,"",'
-		!alive player && cursorTarget isKindOf "Man" && cursorTarget distance player < 9 ']];
+		!isNull cursorTarget && !alive cursorTarget && cursorTarget isKindOf "Man" && cursorTarget distance player < 9 ']];
 	};
 };
