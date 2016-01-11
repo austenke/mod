@@ -27,7 +27,7 @@ switch(_shop) do {
 			default {
 				["Altis Cadet Shop",
 					[
-						["SMG_02_F",nil,50000],
+						["SMG_02_F",nil,25000],
 						["30Rnd_9x21_Mag",nil,200],
 						["optic_Holosight",nil,9000]
 					]
@@ -37,8 +37,8 @@ switch(_shop) do {
 			default {
 				["Altis Constable weapon Shop",
 					[
-						["arifle_MX_Black_F",nil,100000],
-						["arifle_MXC_Black_F",nil,100000],
+						["arifle_MX_Black_F",nil,50000],
+						["arifle_MXC_Black_F",nil,50000],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
 						["30Rnd_65x39_caseless_mag",nil,500],
 						["optic_Arco",nil,50],
@@ -53,8 +53,8 @@ switch(_shop) do {
 			default {
 				["Altis Corporal weapon Shop",
 					[
-						["arifle_MX_Black_F",nil,100000],
-						["arifle_MXC_Black_F",nil,100000],
+						["arifle_MX_Black_F",nil,50000],
+						["arifle_MXC_Black_F",nil,50000],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
 						["30Rnd_65x39_caseless_mag",nil,500],
 						["optic_Arco",nil,50],
@@ -63,7 +63,7 @@ switch(_shop) do {
 						["optic_DMS",nil,500],
 						["optic_Aco",nil,500],
 						["optic_Holosight",nil,500],
-						["MiniGrenade","FlashBang",10000]
+						["MiniGrenade","FlashBang",5000]
 					]
 				];
 			};
@@ -71,8 +71,8 @@ switch(_shop) do {
 			default {
 				["Altis Sergeant weapon Shop",
 					[
-						["arifle_MX_Black_F",nil,100000],
-						["arifle_MXC_Black_F",nil,100000],
+						["arifle_MX_Black_F",nil,50000],
+						["arifle_MXC_Black_F",nil,50000],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
 						["30Rnd_65x39_caseless_mag",nil,500],
 						["optic_Arco",nil,50],
@@ -85,7 +85,7 @@ switch(_shop) do {
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
 						["bipod_02_F_blk",nil,500],
-						["MiniGrenade","FlashBang",10000]
+						["MiniGrenade","FlashBang",5000]
 					]
 				];
 			};
@@ -93,9 +93,9 @@ switch(_shop) do {
 			default {
 				["Altis Lieutenant weapon Shop",
 					[
-						["arifle_MX_Black_F",nil,100000],
-						["arifle_MXC_Black_F",nil,100000],
-						["arifle_MXM_Black_F",nil,200000],
+						["arifle_MX_Black_F",nil,50000],
+						["arifle_MXC_Black_F",nil,50000],
+						["arifle_MXM_Black_F",nil,75000],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
 						["30Rnd_65x39_caseless_mag",nil,500],
 						["optic_Arco",nil,50],
@@ -108,7 +108,7 @@ switch(_shop) do {
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
 						["bipod_02_F_blk",nil,500],
-						["MiniGrenade","FlashBang",10000]
+						["MiniGrenade","FlashBang",5000]
 					]
 				];
 			};
@@ -116,9 +116,9 @@ switch(_shop) do {
 			default {
 				["Altis Captain weapon Shop",
 					[
-						["arifle_MX_Black_F",nil,100000],
-						["arifle_MXC_Black_F",nil,100000],
-						["arifle_MXM_Black_F",nil,200000],
+						["arifle_MX_Black_F",nil,50000],
+						["arifle_MXC_Black_F",nil,50000],
+						["arifle_MXM_Black_F",nil,75000],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
 						["30Rnd_65x39_caseless_mag",nil,500],
 						["optic_Arco",nil,50],
@@ -131,7 +131,7 @@ switch(_shop) do {
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
 						["bipod_02_F_blk",nil,500],
-						["MiniGrenade","FlashBang",10000]
+						["MiniGrenade","FlashBang",5000]
 					]
 				];
 			};
@@ -139,9 +139,9 @@ switch(_shop) do {
 			default {
 				["Altis Chief shop",
 					[
-						["arifle_MX_Black_F",nil,100000],
-						["arifle_MXC_Black_F",nil,100000],
-						["arifle_MXM_Black_F",nil,200000],
+						["arifle_MX_Black_F",nil,50000],
+						["arifle_MXC_Black_F",nil,50000],
+						["arifle_MXM_Black_F",nil,75000],
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
 						["30Rnd_65x39_caseless_mag",nil,500],
 						["optic_Arco",nil,50],
@@ -154,7 +154,7 @@ switch(_shop) do {
 						["optic_AMS",nil,500],
 						["optic_Holosight",nil,500],
 						["bipod_02_F_blk",nil,500],
-						["MiniGrenade","FlashBang",10000]
+						["MiniGrenade","FlashBang",5000]
 					]
 				];
 			};
