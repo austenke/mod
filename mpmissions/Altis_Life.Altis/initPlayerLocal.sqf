@@ -13,7 +13,7 @@ CONST(BIS_fnc_endMission,BIS_fnc_endMission);
 enableSentences false;
 
 _pid = getPlayerUID player;
-_side = side player
+_side = side player;
 [_pid,_side,"",2] call TON_fnc_keyManagement;
 
 // Execute JIP code.
