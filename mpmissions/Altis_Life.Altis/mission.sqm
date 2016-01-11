@@ -2310,7 +2310,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Rob the Gas Station"",life_fnc_robShops, ""Kavala Gas Services""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Rob the Gas Station"",life_fnc_robShops, ""Kavala Gas Services""]; this addAction[""Market"",life_fnc_virt_menu,""market""];";
 				};
 			};
 		};
@@ -2330,7 +2330,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Rob the Gas Station"",life_fnc_robShops, ""Agios Gas Services""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Rob the Gas Station"",life_fnc_robShops, ""Agios Gas Services""]; this addAction[""Market"",life_fnc_virt_menu,""market""]; this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""];";
 				};
 			};
 		};
@@ -2350,7 +2350,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Rob the Gas Station"",life_fnc_robShops, ""Airfield Gas Services""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Rob the Gas Station"",life_fnc_robShops, ""Airfield Gas Services""]; this addAction[""Market"",life_fnc_virt_menu,""market""]; this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""];";
 				};
 			};
 		};
@@ -2370,7 +2370,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Rob the Gas Station"",life_fnc_robShops, ""Paros Gas Services""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Rob the Gas Station"",life_fnc_robShops, ""Paros Gas Services""]; this addAction[""Market"",life_fnc_virt_menu,""market""]; this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""];";
 				};
 			};
 		};
@@ -2390,7 +2390,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Rob the Gas Station"",life_fnc_robShops, ""Highway Gas Services""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Rob the Gas Station"",life_fnc_robShops, ""Highway Gas Services""]; this addAction[""Market"",life_fnc_virt_menu,""market""]; this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""];";
 				};
 			};
 		};
@@ -2410,7 +2410,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Rob the Gas Station"",life_fnc_robShops, ""Sophia Gas Services""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Rob the Gas Station"",life_fnc_robShops, ""Sophia Gas Services""]; this addAction[""Market"",life_fnc_virt_menu,""market""]; this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""];";
 				};
 			};
 		};
@@ -2423,14 +2423,14 @@ class Mission
 				class Item0
 				{
 					position[]={9215.6055,17.626371,12097.924};
-					azimut=695.7915;
+					azimut=695.79199;
 					special="NONE";
 					id=116;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Rob the Gas Station"",life_fnc_robShops, ""PrisonView Gas Services""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Rob the Gas Station"",life_fnc_robShops, ""PrisonView Gas Services""]; this addAction[""Market"",life_fnc_virt_menu,""market""]; this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""];";
 				};
 			};
 		};
@@ -2506,14 +2506,14 @@ class Mission
 				class Item0
 				{
 					position[]={16834.291,11.648046,15471.227};
-					azimut=787.14496;
+					azimut=787.14502;
 					special="NONE";
 					id=120;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="this allowDamage false; this enableSimulation false; this addAction[""Rob the Gas Station"",life_fnc_robShops, ""PrisonView Gas Services""];";
+					init="this allowDamage false; this enableSimulation false; this addAction[""Rob the Gas Station"",life_fnc_robShops, ""PrisonView Gas Services""]; this addAction[""Market"",life_fnc_virt_menu,""market""]; this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""];";
 				};
 			};
 		};
