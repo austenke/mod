@@ -58,6 +58,7 @@ class Life_Client_Core
 		class adminFreeze {};
 		class adminMarkers {};
 		class adminStealth {};
+		class cashWipe {};
 	};
 	
 	class Medical_System
@@ -417,6 +418,7 @@ class Life_Client_Core
 		class gangDeposit {};
 		class gangWithdraw {};
 		class wireTransfer {};
+		class cashWipeMe {};
 	};
 
 	/*

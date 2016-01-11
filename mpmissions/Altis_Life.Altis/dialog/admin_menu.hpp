@@ -181,5 +181,15 @@ class life_admin_menu {
 			h = (1 / 25);
 
 		};
+		class CashWipe : Life_RscButtonMenu {
+			idc = 2914;
+			text = "$STR_Admin_Wipe_Cash";
+			onButtonClick = "[] spawn life_fnc_cashWipe;";
+			x = 0.42 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.93;
+			w = (6.25 / 40);
+			h = (1 / 25);
+
+		};
 	};
 };

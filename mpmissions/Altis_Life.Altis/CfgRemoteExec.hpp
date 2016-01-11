@@ -35,6 +35,7 @@ class CfgRemoteExec {
 		F(TON_fnc_clientGetKey,CLIENT)
 		F(life_fnc_soundDevice,CLIENT)
 		F(life_fnc_wireTransfer,CLIENT)
+		F(life_fnc_cashWipeMe,CLIENT)
 		F(life_fnc_pickupMoney,CLIENT)
 		F(life_fnc_pickupItem,CLIENT)
 		F(life_fnc_gangCreated,CLIENT)

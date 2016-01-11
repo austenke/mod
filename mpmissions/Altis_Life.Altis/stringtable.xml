@@ -288,6 +288,12 @@
 			<German>Revive</German>
 			<French>Revive</French>
 		</Key>
+		<Key ID="STR_Admin_Wipe_Cash">
+			<Original>Revive</Original>
+			<English>Revive</English>
+			<German>Revive</German>
+			<French>Revive</French>
+		</Key>
 		<Key ID="STR_Admin_Debug">
 			<Original>Debug</Original>
 			<English>Debug</English>
