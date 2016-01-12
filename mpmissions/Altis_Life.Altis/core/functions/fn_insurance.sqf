@@ -60,7 +60,7 @@ if(BANK < _price) exitWith
 {
     hint format["You do not have enough money in your bank account to complete this transaction, it requires $%1",_price];   
 };
-hint format["You have been charged $%1 to insure this vehicle. If it explodes, it will be placed back inside your garage.",_price];
+hint format["You have been charged $%1 to insure this vehicle. If it explodes, it will be placed back inside your garage after restart.",_price];
 SUB(BANK,_price);
 closeDialog 0;
 _vehicle setVariable["isInsured",true,true];
