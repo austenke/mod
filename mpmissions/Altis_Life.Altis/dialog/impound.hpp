@@ -73,7 +73,7 @@ class Life_impound_menu
 		{
 			idc = -1;
 			text = "$STR_Global_Retrieve";
-			onButtonClick = "[] call life_fnc_unimpound;";
+			onButtonClick = "[] call life_fnc_unimpound; closeDialog 0;";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.9 - (1 / 25);
 			w = (6.25 / 40);
