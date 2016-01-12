@@ -70,7 +70,7 @@ ADD(BANK,(LIFE_SETTINGS(getNumber,"revive_fee")));
 life_action_inUse = false;
 _target SVAR ["Revive",TRUE,TRUE];
 [profileName] remoteExecCall ["life_fnc_revived",_target];
-titleText[format[localize "STR_Medic_RevivePayReceive",_targetName,1500],"PLAIN"];
+titleText[format[localize "STR_Medic_RevivePayReceive",_targetName,10000],"PLAIN"];
 
 sleep .6;
 player reveal _target;
