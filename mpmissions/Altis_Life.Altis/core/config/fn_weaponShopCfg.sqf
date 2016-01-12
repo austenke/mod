@@ -169,11 +169,6 @@ switch(_shop) do {
 			default {
 				["Cadet Equipment",
 					[
-						["U_Marshal","Cadet Outfit",500],
-						["V_TacVest_blk_POLICE",nil,500],
-						["H_Cap_police",nil,500],
-						["G_Aviator",nil,500],
-						["NVGoggles_OPFOR",nil,500],
 						["ItemGPS",nil,500],
 						["Binocular",nil,500],
 						["FirstAidKit",nil,500]
@@ -184,11 +179,6 @@ switch(_shop) do {
 			default {
 				["Constable Equipment",
 					[
-						["U_Rangemaster",nil,500],
-						["V_TacVest_blk_POLICE",nil,500],
-						["H_Cap_police",nil,500],
-						["G_Aviator",nil,500],
-						["NVGoggles_OPFOR",nil,500],
 						["ItemGPS",nil,500],
 						["Binocular",nil,500],
 						["FirstAidKit",nil,500]
@@ -199,11 +189,6 @@ switch(_shop) do {
 			default {
 				["Corporal Equipment",
 					[
-						["U_Rangemaster",nil,500],
-						["V_TacVest_blk_POLICE",nil,500],
-						["H_Cap_police",nil,500],
-						["G_Aviator",nil,500],
-						["NVGoggles_OPFOR",nil,500],
 						["ItemGPS",nil,500],
 						["Binocular",nil,500],
 						["FirstAidKit",nil,500]
@@ -214,11 +199,6 @@ switch(_shop) do {
 			default {
 				["Sergeant Equipment",
 					[
-						["U_Rangemaster",nil,500],
-						["V_TacVest_blk_POLICE",nil,500],
-						["H_Cap_police",nil,500],
-						["G_Aviator",nil,500],
-						["NVGoggles_OPFOR",nil,500],
 						["ItemGPS",nil,500],
 						["Binocular",nil,500],
 						["FirstAidKit",nil,500]
@@ -229,16 +209,10 @@ switch(_shop) do {
 			default {
 				["Lieutenant Equipment",
 					[
-						["U_Rangemaster",nil,500],
-						["V_TacVest_blk_POLICE",nil,500],
-						["H_Cap_police",nil,500],
-						["G_Aviator",nil,500],
-						["NVGoggles_OPFOR",nil,500],
 						["ItemGPS",nil,500],
 						["Binocular",nil,500],
 						["FirstAidKit",nil,500],
-						["B_UavTerminal",nil,500],
-						["B_UAV_01_F",nil,500]
+						["B_UavTerminal",nil,500]
 					]
 				];
 			};
@@ -246,16 +220,10 @@ switch(_shop) do {
 			default {
 				["Captain Equipment",
 					[
-						["U_B_CombatUniform_mcam",nil,500],
-						["V_TacVest_blk_POLICE",nil,500],
-						["H_Cap_police",nil,500],
-						["G_Aviator",nil,500],
-						["NVGoggles_OPFOR",nil,500],
 						["ItemGPS",nil,500],
 						["Binocular",nil,500],
 						["FirstAidKit",nil,500],
-						["B_UavTerminal",nil,500],
-						["B_UAV_01_F",nil,500]
+						["B_UavTerminal",nil,500]
 					]
 				];
 			};
@@ -263,16 +231,10 @@ switch(_shop) do {
 			default {
 				["Cheif Equipment",
 					[
-						["U_B_CombatUniform_mcam",nil,500],
-						["V_TacVest_blk_POLICE",nil,500],
-						["H_Cap_police",nil,500],
-						["G_Aviator",nil,500],
-						["NVGoggles_OPFOR",nil,500],
 						["ItemGPS",nil,500],
 						["Binocular",nil,500],
 						["FirstAidKit",nil,500],
-						["B_UavTerminal",nil,500],
-						["B_UAV_01_F",nil,500]
+						["B_UavTerminal",nil,500]
 					]
 				];
 			};
