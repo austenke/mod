@@ -38,7 +38,7 @@ class CarShops {
 	class med_air_hs {
 		side = "med";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", 50000, "mAir" },
+			{ "B_Heli_Light_01_F", 50000, "" },
 		};
 	};
 
