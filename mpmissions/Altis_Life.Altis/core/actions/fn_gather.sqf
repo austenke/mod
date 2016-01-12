@@ -10,6 +10,7 @@ if(isNil "life_action_gathering") then {life_action_gathering = false;};
 private["_gather","_itemWeight","_diff","_itemName","_resourceZones","_zone"];
 _resourceZones = ["apple_1","apple_2","apple_3","apple_4","peaches_1","peaches_2","peaches_3","peaches_4","heroin_1","cocaine_1","weed_1","rye_1","hops_1","yeast_1","cornmeal_1","bucket_1"];
 _zone = "";
+_shift = SEL(_this,2);
 
 if(life_action_gathering) exitWith {}; //Action is in use, exit to prevent spamming.
 life_action_gathering = true;
@@ -44,6 +45,7 @@ life_action_inUse = true;
 for "_i" from 0 to 2 do {
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 	waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
+	if(_shift) then exitwith {hint "You can not tab out while gathering!"};
 	sleep 3;
 };
 
