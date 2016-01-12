@@ -93,7 +93,7 @@ if(_hasLicense) then
 	while{true} do
  
 	{
-		sleep  7.0;
+		sleep  2.5;
 		_cP = _cP + 0.02;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
