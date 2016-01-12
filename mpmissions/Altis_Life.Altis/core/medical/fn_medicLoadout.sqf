@@ -25,3 +25,4 @@ player assignItem "ItemWatch";
 
 [] call life_fnc_saveGear;
 [] call life_fnc_Uniformscolor;
+SVAR_MNS [pilot,true];
