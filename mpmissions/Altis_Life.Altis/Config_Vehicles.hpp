@@ -362,7 +362,7 @@ class CfgVehicles {
     };
 
 	class C_Offroad_01_F {
-        vItemSpace = 65;
+        vItemSpace = 70;
         storageFee[] = { 50, 50, 50, 50 };
 		garageSell[] = { 6500, 2500, 0, 0 };
         insurance = 2500;
@@ -551,7 +551,7 @@ class CfgVehicles {
     };
 
 	class O_Truck_03_covered_F {
-		vItemSpace = 250;
+		vItemSpace = 550;
 		storageFee[] = { 25000, 0, 0, 0 };
 		garageSell[] = { 65000, 0, 0, 0 };
 		insurance = 2500;
@@ -786,7 +786,7 @@ class CfgVehicles {
     };
 
 	class I_Heli_Transport_02_F {
-        vItemSpace = 375;
+        vItemSpace = 350;
         storageFee[] = { 250, 250, 0, 0 };
 		garageSell[] = { 125000, 0, 0, 0 };
         insurance = 2500;
