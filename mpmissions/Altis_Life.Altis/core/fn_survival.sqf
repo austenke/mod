@@ -65,8 +65,9 @@ while {true} do {
 		_bp = backpack player;
 	} else {
 		if(!(EQUAL(backpack player,"")) && {!(EQUAL(backpack player,_bp))}) then {
+			_oldbp = _bp
 			_bp = backpack player;
-			ADD(life_maxWeight,(round(FETCH_CONFIG2(getNumber,CONFIG_VEHICLES,_bp,"maximumload") / 4)));
+			ADD(life_maxWeight,SUB((round(FETCH_CONFIG2(getNumber,CONFIG_VEHICLES,_bp,"maximumload") / 4)),(round(FETCH_CONFIG2(getNumber,CONFIG_VEHICLES,_oldbp,"maximumload") / 4))));
 		};
 	};
 	
