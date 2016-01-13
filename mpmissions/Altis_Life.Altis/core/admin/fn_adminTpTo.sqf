@@ -15,5 +15,5 @@ if(isNil "_target") exitwith {};
 if(isNull _target) exitWith {};
 if(_unit == player) exitWith {hint localize "STR_ANOTF_Error";};
 
-player setPos (getPos _target);
+player setPos (getPosATL _target);
 hint format["You have teleported to the location of %1",_target getVariable["realname",name _target]];
