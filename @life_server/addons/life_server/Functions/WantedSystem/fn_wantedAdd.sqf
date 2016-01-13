@@ -59,3 +59,14 @@ if(_index != -1) then {
 } else {
 	life_wanted_list pushBack [_name,_uid,[(_type select 0)],(_type select 1)];
 };
+
+_tickTime = diag_tickTime;
+waitUntil{!DB_Async_Active};
+_query = format["wantedUpdate:%1",life_wanted_list];
+[_query,2] call DB_fnc_asyncCall;
+["diag_log",[
+	"------------- Wanted List Update -------------",
+	format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
+	format["Update: %1",_query],
+	"-------------------------------------------------"
+]] call TON_fnc_logIt;

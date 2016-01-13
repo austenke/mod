@@ -16,3 +16,14 @@ if(_index != -1) then {
 	life_wanted_list = life_wanted_list - [-1];
 	//publicVariable "life_wanted_list";
 };
+
+_tickTime = diag_tickTime;
+waitUntil{!DB_Async_Active};
+_query = format["wantedUpdate:%1",life_wanted_list];
+[_query,2] call DB_fnc_asyncCall;
+["diag_log",[
+	"------------- Wanted List Update -------------",
+	format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
+	format["Update: %1",_query],
+	"-------------------------------------------------"
+]] call TON_fnc_logIt;
