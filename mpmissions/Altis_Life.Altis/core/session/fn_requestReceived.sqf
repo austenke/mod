@@ -44,6 +44,8 @@ if(count (SEL(_this,6)) > 0) then {
 life_gear = SEL(_this,8);
 [true] call life_fnc_loadGear;
 
+life_position = (SEL(_this,9));
+
 //Parse side specific information.
 switch(playerSide) do {
 	case west: {
@@ -53,7 +55,6 @@ switch(playerSide) do {
 	};
 	
 	case civilian: {
-		life_position = (SEL(_this,9));
 		life_is_arrested = SEL(_this,7);
 		CONST(life_coplevel, 0);
 		CONST(life_medicLevel, 0);
