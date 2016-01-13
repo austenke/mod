@@ -151,7 +151,7 @@ class VirtualItems {
 	VITEMMACRO(rock, "STR_Item_Rock", "rock", 4, -1, -1, false, -1, "")
 	VITEMMACRO(cement, "STR_Item_CementBag", "cement", 3, -1, 2200, false, -1, "icons\ico_cement.paa")
 	VITEMMACRO(wood, "STR_Item_Wood", "wood", 5, 6100, 5300, false, -1, "icons\Wood.paa")
-	VITEMMACRO(waterBucket, "STR_Item_waterBucket", "waterBucket", 3, -1, -1, false,- 1, "")
+	VITEMMACRO(waterBucket, "STR_Item_waterBucket", "waterBucket", 3, -1, -1, false,- 1, "icons\waterb.paa")
 
 	//Drugs
 	VITEMMACRO(heroin_unprocessed, "STR_Item_HeroinU", "heroinUnprocessed", 6, -1, -1, true, -1, "")
