@@ -27,10 +27,10 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 		_cP = 0.01;
 		
 		while{true} do {
-			if(animationState player != "Acts_carFixingWheel") then {
-				[player,"Acts_carFixingWheel",true] remoteExecCall ["life_fnc_animSync",RCLIENT];
-				player switchMove "Acts_carFixingWheel";
-				player playMoveNow "Acts_carFixingWheel";
+			if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
+				[player,"AinvPknlMstpSnonWnonDnon_medic_1",true] remoteExecCall ["life_fnc_animSync",RCLIENT];
+				player switchMove "AinvPknlMstpSnonWnonDnon_medic_1";
+				player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
 			};
 			
 			sleep 0.27;
