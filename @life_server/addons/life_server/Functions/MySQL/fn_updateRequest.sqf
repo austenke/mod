@@ -13,6 +13,8 @@ _cash = [_this,3,0,[0]] call BIS_fnc_param;
 _bank = [_this,4,5000,[0]] call BIS_fnc_param;
 _licenses = [_this,5,[],[[]]] call BIS_fnc_param;
 _gear = [_this,6,[],[[]]] call BIS_fnc_param;
+_arrested = [_this,7,0,[0]] call BIS_fnc_param;
+_position = [_this,8,"",[""]] call BIS_fnc_param;
 
 //Get to those error checks.
 if((_uid == "") OR (_name == "")) exitWith {};
@@ -29,7 +31,7 @@ for "_i" from 0 to count(_licenses)-1 do {
 
 switch (_side) do {
 	case west: {_query = format["playerWestUpdate:%1:%2:%3:%4:%5:%6",_name,_cash,_bank,_gear,_licenses,_uid];};
-	case civilian: {_query = format["playerCivilianUpdate:%1:%2:%3:%4:%6:%7:%5",_name,_cash,_bank,_licenses,_uid,_gear,[_this select 7] call DB_fnc_bool];};
+	case civilian: {_query = format["playerCivilianUpdate:%1:%2:%3:%4:%6:%7:%5",_name,_cash,_bank,_licenses,_uid,_gear,_arrested,_position call DB_fnc_bool];};
 	case independent: {_query = format["playerIndependentUpdate:%1:%2:%3:%4:%5:%6",_name,_cash,_bank,_licenses,_gear,_uid];};
 };
 
