@@ -2677,7 +2677,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1540;
+		items=1541;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -18031,7 +18031,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this allowDamage false;this enableSimulation false; this setObjectTexture [0,""images\drunkenlife.jpg""];  this addAction[""Make Bottles"",life_fnc_processAction,""glassbottle"",0,false,false,"""",' life_inv_glass > 0 && !life_is_processing']; this addAction[""Bottle Beer"",life_fnc_processAction,""bottledbeer"",0,false,false,"""",'life_inv_beerp > 0 && !life_is_processing'];this addAction[""Bottle Whiskey"",life_fnc_processAction,""bottledwhiskey"",0,false,false,"""",'life_inv_whiskey > 0 && !life_is_processing'];this addAction[""Bottle Moonshine"",life_fnc_processAction,""bottledshine"",0,false,false,"""",'life_inv_moonshine > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""bottler"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""bottler"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""bottler"",0,false,false,"""",' !license_civ_bottler && playerSide == civilian '];";
+			init="this allowDamage false;this enableSimulation false; this setObjectTexture [0,""images\drunkenlife.jpg""];  this addAction[""Make Bottles"",life_fnc_processAction,""glassbottle"",0,false,false,"""",' life_inv_glass > 0 && !life_is_processing']; this addAction[""Bottle Beer"",life_fnc_processAction,""bottledbeer"",0,false,false,"""",'life_inv_beerp > 0 && !life_is_processing'];this addAction[""Bottle Whiskey"",life_fnc_processAction,""bottledwhiskey"",0,false,false,"""",'life_inv_whiskey > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""bottler"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""bottler"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""bottler"",0,false,false,"""",' !license_civ_bottler && playerSide == civilian '];";
 		};
 		class Item1421
 		{
@@ -19269,10 +19269,20 @@ class Mission
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false; this setPos [getPos this select 0, getPos this select 1, -1.4149]; this setVectorUp [0,0,1];";
 		};
+		class Item1540
+		{
+			position[]={11407.171,21.014566,14260.66};
+			azimut=62.883598;
+			id=1668;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V2_F";
+			skill=0.60000002;
+			init="this allowDamage false;this enableSimulation false; this setObjectTexture [0,""images\drunkenlife.jpg""];  this addAction[""Make Bottles"",life_fnc_processAction,""glassbottle"",0,false,false,"""",' life_inv_glass > 0 && !life_is_processing']; this addAction[""Bottle Whiskey"",life_fnc_processAction,""bottledwhiskey"",0,false,false,"""",'life_inv_whiskey > 0 && !life_is_processing'];this addAction[""Bottle Moonshine"",life_fnc_processAction,""bottledshine"",0,false,false,"""",'life_inv_moonshine > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""bottler"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""bottler"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""bottler"",0,false,false,"""",' !license_civ_bottler && playerSide == civilian '];";
+		};
 	};
 	class Markers
 	{
-		items=243;
+		items=247;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -21227,6 +21237,38 @@ class Mission
 			text="Clinic";
 			type="loc_Hospital";
 			colorName="ColorRed";
+		};
+		class Item243
+		{
+			position[]={6.1966491,-0.01225004,30674.074};
+			name="guide";
+			text="Moonshine = Water, Corn, Yeast";
+			type="mil_unknown";
+			colorName="ColorWhite";
+		};
+		class Item244
+		{
+			position[]={0.2220459,-0.0027550908,29127.283};
+			name="guide_2";
+			text="Beer = Hops, Yeast / Brewery then Bottler (sell at Pub)";
+			type="mil_unknown";
+			colorName="ColorWhite";
+		};
+		class Item245
+		{
+			position[]={-0.74225903,-0.014261615,27505.926};
+			name="Whiskey = Rye, Yeast / Distiller then Bottler (sell at Pub)";
+			text="Whiskey = Rye, Yeast / Distiller then Bottler (sell at Pub)";
+			type="mil_unknown";
+			colorName="ColorWhite";
+		};
+		class Item246
+		{
+			position[]={11407.384,21.002419,14261.155};
+			name="moon_bot";
+			text="Moonshine Bottling";
+			type="mil_triangle";
+			colorName="ColorEAST";
 		};
 	};
 	class Sensors
