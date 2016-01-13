@@ -39,6 +39,18 @@ _unit = SEL(_this,0);
 				SVAR_MNS [_itemName,0];
 			};
 		};
+
+		case "defib": {
+			if(_value > 0) then {
+				_pos = _unit modelToWorld[0,3,0];
+				_pos = [SEL(_pos,0), SEL(_pos,1), 0];
+				_obj = "Land_Defibrillator_F" createVehicle _pos;
+				[_obj] remoteExecCall ["life_fnc_simDisable",RANY];
+				_obj setPos _pos;
+				_obj SVAR ["item",[_item,_value],true];
+				SVAR_MNS [_itemName,0];
+			};
+		};
 		
 		case "redgull": {
 			if(_value > 0) then {
