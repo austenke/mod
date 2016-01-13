@@ -243,7 +243,6 @@ class Life_Client_Core
 		class Uniformscolor {};
 		class insurance {};
 		class handleFlashbang {};
-		class spawnMe {};
 	};
 	
 	class Network

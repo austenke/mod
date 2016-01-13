@@ -61,7 +61,6 @@ class CfgRemoteExec {
 		F(life_fnc_copLights,CLIENT)
 		F(life_fnc_ticketPrompt,CLIENT)
 		F(life_fnc_ticketPaid,CLIENT)
-		F(life_fnc_spawnMe,CLIENT)
 		
 		/* Server only functions */
 		F(bis_fnc_execvm,SERVER)
@@ -96,7 +95,6 @@ class CfgRemoteExec {
 		F(TON_fnc_updateHouseContainers,SERVER)
 		F(SPY_fnc_cookieJar,SERVER)
 		F(TON_fnc_vehicleCreate,SERVER)
-		F(life_fnc_getPos,SERVER)
 		
 		/* Functions for everyone */
 		F(life_fnc_broadcast,ANYONE)

@@ -132,7 +132,6 @@ class CfgFunctions
 			class setObjVar {};
 			class keyManagement {};
 			class vehicleInsurance {};
-			class getPos {};
 		};
 		
 		class Housing
