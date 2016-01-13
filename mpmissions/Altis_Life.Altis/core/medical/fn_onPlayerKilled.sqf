@@ -12,8 +12,6 @@ params [
 	["_killer",objNull,[objNull]]
 ];
 
-life_position = "";
-
 disableSerialization;
 
 //Set some vars
