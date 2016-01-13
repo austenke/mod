@@ -17,6 +17,7 @@ switch(_type) do
 {
 	case "187V": {_type = ["Vehicular Manslaughter",10000]};
 	case "187": {_type = ["Manslaughter",50000]};
+	case "188": {_type = ["Attempted Manslaughter",25000]};
 	case "901": {_type = ["Escaping Jail",75000]};
 	case "261": {_type = ["Rape",15000]}; //What type of sick bastard would add this?
 	case "261A": {_type = ["Attempted Rape",10000]};
@@ -34,6 +35,8 @@ switch(_type) do
 	case "459": {_type = ["Burglary",25000]};
 	case "390": {_type = ["Public Intoxication",10000]};
 	case "512": {_type = ["Jail Break",200000]};
+	case "600": {_type = ["Possession of an Illegal Firearm",75000]};
+	case "601": {_type = ["Possession of an Illegal Vehicle",10000]};
 	default {_type = [];};
 };
 
