@@ -7,7 +7,7 @@
 	meant to keep the network traffic down with large sums of data flowing
 	through life_fnc_MP
 */
-private["_mode","_packet","_array","_flag"];
+private["_mode","_packet","_array","_flag","_posInfo"];
 _mode = param [0,0,[0]];
 _packet = [steamid,playerSide,nil,_mode];
 _array = [];
@@ -49,7 +49,8 @@ switch(_mode) do {
 		_packet set[4,BANK];
 	};
 	case 8: {
-		_packet set[2,getPosATL player];
+		_posInfo = getPosATL player;
+		_packet set[2,_posInfo];
 	};
 };
 
