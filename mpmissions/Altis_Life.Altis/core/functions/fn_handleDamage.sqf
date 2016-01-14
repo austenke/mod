@@ -102,5 +102,6 @@ if (playerSide == civilian && life_is_arrested) then {
     _damage = 0;
 };
 
+[8] call SOCK_fnc_updatePartial;
 [] call life_fnc_hudUpdate;
 _damage;
