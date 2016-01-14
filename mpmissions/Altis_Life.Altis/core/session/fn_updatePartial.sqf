@@ -49,7 +49,7 @@ switch(_mode) do {
 		_packet set[4,BANK];
 	};
 	case 8: {
-		_posInfo = getPosATL player;
+		if (alive player) then {_posInfo = getPosATL player;} else {_posInfo = "";};
 		_packet set[2,_posInfo];
 	};
 };
