@@ -1,10 +1,3 @@
-/*
-		File: activateNitro.sqf
-		Author: John "Paratus" VanderZwet
-		
-		Description: Activates nitrous injector on car
-*/
-
 _vehicle = vehicle player;
 
 if (_vehicle == player) exitWith {};

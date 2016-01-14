@@ -1,10 +1,3 @@
-/*
-		File: nitro.sqf
-		Author: John "Paratus" VanderZwet
-		
-		Description: Attaches nitrous injector to a car
-*/
-
 _unit = cursorTarget;
 
 if (count (_unit getVariable ["vehicle_info_owners", []]) < 1 || !(_unit isKindOf "Car")) exitWith {hint "Your target is not a valid vehicle for nitrous oxide.";};
