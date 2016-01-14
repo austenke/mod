@@ -69,6 +69,8 @@ switch(playerSide) do {
 			[] spawn life_fnc_initGang;
 		};
 		[] spawn life_fnc_initHouses;
+
+		life_pos = SEL(_this,11);
 	};
 	
 	case independent: {
