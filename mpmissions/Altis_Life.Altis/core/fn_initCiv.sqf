@@ -19,6 +19,23 @@ if(life_is_arrested) then {
 	[] call life_fnc_spawnMenu;
 	waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 	waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
+	
+
+	//_pid = getPlayerUID player;
+	//_query = format["getLocation:%1",_pid];
+	//waitUntil {!DB_Async_Active};
+	//_tickTime = diag_tickTime;
+	//_queryResult = [_query,2,true] call DB_fnc_asyncCall;
+
+	//if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
+	//	["diag_log",[
+	//		"------------- Player Location Request -------------",
+	//		format["QUERY: %1",_query],
+	//		format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
+	//		format["Result: %1",_queryResult],
+	//		"-------------------------------------------------"
+	//	]] call TON_fnc_logIt;
+	//};
 };
 
 //[] call life_fnc_gangPayout;
