@@ -27,15 +27,13 @@ if(life_is_arrested) then {
 	waitUntil {!DB_Async_Active};
 	_queryResult = [_query,2,true] call DB_fnc_asyncCall;
 
-	if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
-		["diag_log",[
-			"------------- Player Location Request -------------",
-			format["QUERY: %1",_query],
-			format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
-			format["Result: %1",_queryResult],
-			"-------------------------------------------------"
-		]] call TON_fnc_logIt;
-	};
+	["diag_log",[
+		"------------- Player Location Request -------------",
+		format["QUERY: %1",_query],
+		format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
+		format["Result: %1",_queryResult],
+		"-------------------------------------------------"
+	]] call TON_fnc_logIt;
 };
 
 //[] call life_fnc_gangPayout;
