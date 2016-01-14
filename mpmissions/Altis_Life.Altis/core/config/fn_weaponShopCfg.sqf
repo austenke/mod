@@ -338,7 +338,7 @@ switch(_shop) do {
 						["NVGoggles",nil,1000],
 						["ItemGPS",nil,500],
 						["Binocular",nil,500],
-						["ToolKit",nil,20000],
+						["ToolKit",nil,2500],
 						["FirstAidKit",nil,500]
 					]
 				];
@@ -378,7 +378,7 @@ switch(_shop) do {
 			[
 				["Binocular",nil,150],
 				["ItemGPS",nil,100],
-				["ToolKit",nil,20000],
+				["ToolKit",nil,2500],
 				["FirstAidKit",nil,150],
 				["NVGoggles",nil,2000]
 			]
