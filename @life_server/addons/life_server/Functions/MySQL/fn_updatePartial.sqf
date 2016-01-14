@@ -76,7 +76,7 @@ switch(_mode) do {
 	};
 
 	case 8: {
-		_value1 = [_this,2,[],[[]]] call BIS_fnc_param;
+		_value1 = [_this,2,""] call BIS_fnc_param;
 		_query = format["updateLocation:%1:%2",_value1,_uid];
 	};
 };
