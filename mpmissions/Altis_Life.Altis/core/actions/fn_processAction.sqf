@@ -1,5 +1,5 @@
-#include <macro.h>
 #include "..\..\script_macros.hpp"
+#include <macro.h>
 /*
 	File: fn_processAction.sqf
 	Author: Bryan "Tonic" Boardwine
