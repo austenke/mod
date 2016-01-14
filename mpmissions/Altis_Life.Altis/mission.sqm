@@ -2677,7 +2677,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1538;
+		items=1549;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -19247,6 +19247,109 @@ class Mission
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
 			init="this allowDamage false;this enableSimulation false; this setObjectTexture [0,""images\drunkenlife.jpg""];  this addAction[""Make Bottles"",life_fnc_processAction,""glassbottle"",0,false,false,"""",' life_inv_glass > 0 && !life_is_processing']; this addAction[""Bottle Whiskey"",life_fnc_processAction,""bottledwhiskey"",0,false,false,"""",'life_inv_whiskey > 0 && !life_is_processing'];this addAction[""Bottle Moonshine"",life_fnc_processAction,""bottledshine"",0,false,false,"""",'life_inv_moonshine > 0 && !life_is_processing']; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""bottler"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""bottler"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""bottler"",0,false,false,"""",' !license_civ_bottler && playerSide == civilian '];";
+		};
+		class Item1538
+		{
+			position[]={8297.4473,76.366402,10062.42};
+			azimut=195.69901;
+			id=1666;
+			side="EMPTY";
+			vehicle="Land_LampHalogen_F";
+			skill=0.60000002;
+		};
+		class Item1539
+		{
+			position[]={8310.2949,75.836121,10041.721};
+			azimut=109.455;
+			offsetY=-0.0025634801;
+			id=1667;
+			side="EMPTY";
+			vehicle="Land_LampHalogen_F";
+			skill=0.60000002;
+		};
+		class Item1540
+		{
+			position[]={8336.5059,75.940002,10060.518};
+			azimut=6.24791;
+			id=1668;
+			side="EMPTY";
+			vehicle="Land_LampHalogen_F";
+			skill=0.60000002;
+		};
+		class Item1541
+		{
+			position[]={8322.1973,75.457153,10079.92};
+			azimut=282.53299;
+			offsetY=0.00144958;
+			id=1669;
+			side="EMPTY";
+			vehicle="Land_LampHalogen_F";
+			skill=0.60000002;
+		};
+		class Item1542
+		{
+			position[]={20057.891,101.09145,6739.3477};
+			azimut=194.745;
+			offsetY=0.00065612799;
+			id=1670;
+			side="EMPTY";
+			vehicle="Land_LampHalogen_F";
+			skill=0.60000002;
+		};
+		class Item1543
+		{
+			position[]={20110.289,100.02547,6727.4961};
+			offsetY=-0.000648499;
+			id=1671;
+			side="EMPTY";
+			vehicle="Land_LampHalogen_F";
+			skill=0.60000002;
+		};
+		class Item1544
+		{
+			position[]={20059.289,90.785004,6632.8765};
+			id=1672;
+			side="EMPTY";
+			vehicle="Land_LampHalogen_F";
+			skill=0.60000002;
+		};
+		class Item1545
+		{
+			position[]={15193.785,17.930405,17274.018};
+			azimut=75.313698;
+			id=1673;
+			side="EMPTY";
+			vehicle="Land_LampHalogen_F";
+			skill=0.60000002;
+		};
+		class Item1546
+		{
+			position[]={15131.285,17.583017,17339.717};
+			azimut=194.435;
+			offsetY=0.00016021699;
+			id=1674;
+			side="EMPTY";
+			vehicle="Land_LampHalogen_F";
+			skill=0.60000002;
+		};
+		class Item1547
+		{
+			position[]={15182.188,17.908552,17388.217};
+			azimut=277.716;
+			offsetY=0.00012207;
+			id=1675;
+			side="EMPTY";
+			vehicle="Land_LampHalogen_F";
+			skill=0.60000002;
+		};
+		class Item1548
+		{
+			position[]={15241.285,18.007092,17322.818};
+			offsetY=-2.6702901e-005;
+			id=1676;
+			side="EMPTY";
+			vehicle="Land_LampHalogen_F";
+			skill=0.60000002;
 		};
 	};
 	class Markers
