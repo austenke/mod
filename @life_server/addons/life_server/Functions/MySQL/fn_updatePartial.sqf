@@ -74,6 +74,11 @@ switch(_mode) do {
 		_array = [_this,2,[],[[]]] call BIS_fnc_param;
 		[_uid,_side,_array,0] call TON_fnc_keyManagement;
 	};
+
+	case 8: {
+		_value1 = [_this,2,0,[0]] call BIS_fnc_param;
+		_query = format["locationSync:%1:%2",_value1,_uid];
+	};
 };
 
 if(_query == "") exitWith {};

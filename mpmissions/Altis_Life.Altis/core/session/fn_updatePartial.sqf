@@ -48,6 +48,9 @@ switch(_mode) do {
 		_packet set[2,CASH];
 		_packet set[4,BANK];
 	};
+	case 8: {
+		_packet set[2,getPosATL player];
+	};
 };
 
 _packet remoteExecCall ["DB_fnc_updatePartial",RSERV];
