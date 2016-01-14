@@ -1,3 +1,4 @@
+#include "..\..\script_macros.hpp"
 /*
 	File: fn_initCiv.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -16,7 +17,7 @@ if(life_is_arrested) then {
 	life_is_arrested = false;
 	[player,true] spawn life_fnc_jail;
 } else {
-	if(!(isNull life_pos)) then {
+	if(!(EQUAL(count life_pos,0)) then {
 		player setPos ((life_pos select 0) select 0);
 	} else {
 		[] call life_fnc_spawnMenu;
