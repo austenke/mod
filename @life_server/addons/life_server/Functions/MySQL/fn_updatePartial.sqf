@@ -81,14 +81,8 @@ switch(_mode) do {
 	};
 };
 
+diag_log format ["Update Partial Call -- _query: %1", _query];
+
 if(_query == "") exitWith {};
 waitUntil {!DB_Async_Active};
 [_query,1] call DB_fnc_asyncCall;
-
-if((EQUAL(EXTDB_SETTINGS("MySQL_Query"),1))) then {
-	["diag_log",[
-		"------------- Player Update Request -------------",
-		format["QUERY: %1",_query],
-		"-------------------------------------------------"
-	]] call TON_fnc_logIt;
-};
