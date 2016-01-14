@@ -16,7 +16,7 @@ if(life_is_arrested) then {
 	life_is_arrested = false;
 	[player,true] spawn life_fnc_jail;
 } else {
-	if(life_pos == "") then {
+	if(isNull life_pos) then {
 		[] call life_fnc_spawnMenu;
 		waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 		waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
