@@ -35,7 +35,7 @@ switch (playerSide) do {
 		life_holdBarrel']];
 
 		life_actions = life_actions + [player addAction["Pick Up Items",life_fnc_scrollPickup,"",0,false,false,"",'
-		cursorTarget distance player < 7 && speed cursorTarget < 1 && (typeOf cursorTarget) in ["Land_Money_F","Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Suitcase_F"]']];
+		cursorTarget distance player < 7 && speed cursorTarget < 1 && (typeOf cursorTarget) in ["Land_Defibrillator_F","Land_Money_F","Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Suitcase_F"]']];
 	};
 
 	case west: {
