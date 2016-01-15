@@ -44,8 +44,6 @@ if(count (SEL(_this,6)) > 0) then {
 life_gear = SEL(_this,8);
 [true] call life_fnc_loadGear;
 
-life_position = (SEL(_this,9));
-
 //Parse side specific information.
 switch(playerSide) do {
 	case west: {
