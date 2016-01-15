@@ -2622,8 +2622,8 @@ class Mission
 				class Item0
 				{
 					position[]={5474.126,27.299999,15012.045};
-					azimut=128.70584;
-					offsetY=0.69999999;
+					azimut=128.70599;
+					offsetY=0.89999998;
 					special="NONE";
 					id=125;
 					side="CIV";
@@ -19334,7 +19334,8 @@ class Mission
 		class Item1551
 		{
 			position[]={5481.248,27.299999,15010.865};
-			azimut=-51.347122;
+			azimut=-51.347099;
+			offsetY=0.8;
 			id=1677;
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
