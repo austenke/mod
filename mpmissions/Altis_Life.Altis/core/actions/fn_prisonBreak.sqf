@@ -60,7 +60,7 @@ if(life_action_inUse) then
 	_counter = 0;
 	{
 		if(_x distance (getMarkerPos "jail_marker") < 40) then {
-			_x setPos _prison;
+			_x setPos (getPos _prison);
 			_counter = _counter + 1;
 		}
 	} forEach playableUnits;
