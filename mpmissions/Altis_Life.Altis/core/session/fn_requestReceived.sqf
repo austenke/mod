@@ -53,7 +53,7 @@ switch(playerSide) do {
 	};
 	
 	case civilian: {
-		life_is_arrested = SEL(_this,7) call DB_fnc_bool;
+		life_is_arrested = SEL(_this,7);
 		CONST(life_coplevel, 0);
 		CONST(life_medicLevel, 0);
 		life_houses = SEL(_this,9);
