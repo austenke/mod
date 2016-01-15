@@ -33,5 +33,7 @@ switch (_side) do {
 	case independent: {_query = format["playerIndependentUpdate:%1:%2:%3:%4:%5:%6",_name,_cash,_bank,_licenses,_gear,_uid];};
 };
 
+diag_log format ["Update Request -- _query: %1", _query];
+
 waitUntil{!DB_Async_Active};
 _queryResult = [_query,1] call DB_fnc_asyncCall;

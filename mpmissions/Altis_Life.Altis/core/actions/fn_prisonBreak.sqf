@@ -61,7 +61,7 @@ if(life_action_inUse) then
 
 	_counter = 0;
 	{
-		if(_x distance (getMarkerPos "jail_marker") < 40 &&) then {
+		if(_x distance (getMarkerPos "jail_marker") < 40) then {
 			_x setPos (getPos player);
 			_counter = _counter + 1;
 		}
