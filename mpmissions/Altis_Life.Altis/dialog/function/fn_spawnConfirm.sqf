@@ -62,7 +62,7 @@ if(life_firstSpawn) then {
 
 //Introcam
 [] spawn life_fnc_IntroCam;
-[8] call SOCK_fnc_updatePartial;
+if (playerSide == civilian) then {[8] call SOCK_fnc_updatePartial;};
 
 if(life_firstSpawn) then {
 	life_firstSpawn = false;
