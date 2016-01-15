@@ -20,7 +20,7 @@ lbClear _vehicles;
 //lbClear _plist;
 //_near_units = [];
 
-_crimes = ["187 - Manslaughter","901 - Escaping Jail",
+_crimes = ["187 - Manslaughter","188 - Attempted Manslaughter","600 - Possession of an Illegal Firearm","601 - Possession of an Illegal Vehicle","901 - Escaping Jail",
 	"215 - Attempted Auto Theft","213 - Use of Illegal Explosives",
 	"211 - Robbery","207 - Kidnapping","207A - Attempted Kidnapping",
 	"487 - Grand Theft","488 - Petty Theft","480 - Hit and Run","481 - Drug Posession",
