@@ -138,9 +138,12 @@ if(count (PISTOL_ITEMS) > 0) then {
 		_yItems pushBack [_x,_val];
     };
 } forEach [
-	"pickaxe","fuelEmpty","fuelFull", "spikeStrip", "lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","apple","peach","tbacon","donuts",
-	"rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtleSoup","hen","rooster","sheep","goat","speedbomb","defib","burlapsack","nitro","ziptie",
-    "chainsaw","boltcutter","blastingcharge","chainsaw"
+	"defib","pickaxe","fuelEmpty","fuelFull","spikeStrip","lockpick","blastingCharge","boltCutter","defuseKit","storageSmall","storageBig","bottledshine","bottledwhiskey",
+    "bottledbeer","moonshine","whiskey","beerp","rye","hops","yeast","cornmeal","mash","bottles","burlapsack","speedbomb","ziptie","chainsaw","nitro","copperUnrefined",
+    "copperRefined","ironUnrefined","ironRefined","saltUnrefined","saltRefined","sand","glass","diamondUncut","diamondCut","rock","cement","wood","waterBucket",
+    "heroinUnprocessed","heroinProcessed","cannabis","marijuana","cocaineUnprocessed","cocaineProcessed","redgull","coffee","waterBottle","apple","peach","tbacon",
+    "donuts","rabbitRaw","rabbit","salemaRaw","salema","ornateRaw","ornate","mackerelRaw","mackerel","tunaRaw","tuna","mulletRaw","mullet","catsharkRaw","catshark",
+    "turtleRaw","turtleSoup","henRaw","hen","roosterRaw","rooster","sheepRaw","sheep","goatRaw","goat"
 ];
 
 _return pushBack _uItems;
