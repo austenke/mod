@@ -56,7 +56,7 @@ if((license_civ_gun) && (_handgun) in _legal) then {
 		default
 		{
 			removeAllWeapons player;
-			[[0,format["%1 weapons were seized from %2", name player, name _cop]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+			[[0,format["%1's weapons were seized by %2", name player, name _cop]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 			{player removeMagazine _x} foreach (magazines player);
 		};
 	};
