@@ -25,8 +25,10 @@ _diff = [SEL(_mine,0),SEL(_mine,1),life_carryWeight,life_maxWeight] call life_fn
 if(EQUAL(_diff,0)) exitWith {hint localize "STR_NOTF_InvFull"};
 
 life_action_inUse = true;
+
+player say3D "chainsaw";
+
 for "_i" from 0 to 2 do {
-	player say3D "chainsaw";
 	
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 	waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
