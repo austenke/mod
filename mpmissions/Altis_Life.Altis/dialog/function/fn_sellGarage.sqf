@@ -26,7 +26,7 @@ _sellPrice = switch(playerSide) do {
 };
 
 if(!(EQUAL(typeName _sellPrice,typeName 0)) OR _sellPrice < 1) then {_sellPrice = 1000};
-[_vid,_pid,_sellPrice,player,life_garage_type] remoteExecCall ["TON_fnc_vehicleDelete",RSERV];
+[_vid] remoteExecCall ["TON_fnc_vehicleDead",RSERV];
 hint format[localize "STR_Garage_SoldCar",[_sellPrice] call life_fnc_numberText];
 ADD(BANK,_sellPrice);
 life_action_delay = time;
