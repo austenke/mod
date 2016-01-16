@@ -87,11 +87,16 @@ life_shop_cam = "CAMERA" camCreate getPos player;
 showCinemaBorder false;
 life_shop_cam cameraEffect ["Internal", "Back"];
 life_shop_cam camSetTarget (player modelToWorld [0,0,1]);
-life_shop_cam camSetPos (player modelToWorld [1,4,2]);
+_camDistance = 4;
+while {_camDistance > 1} do
+{
+	if (!lineIntersects [ATLToASL (player modelToWorld [1,_camDistance,2]), ATLToASL (player modelToWorld [0,0,1]), player]) exitWith {};
+	_camDistance = _camDistance - 0.5;
+};
+life_shop_cam camSetPos (player modelToWorld [1,_camDistance,2]);
 life_shop_cam camSetFOV .33;
 life_shop_cam camSetFocus [50, 0];
 life_shop_cam camCommit 0;
-life_cMenu_lock = false;
 
 if(isNull (findDisplay 3100)) exitWith {};
 _list = (findDisplay 3100) displayCtrl 3101;
