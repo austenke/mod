@@ -2,13 +2,15 @@
 /*
 	File: fn_clothingMenu.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Opens and initializes the clothing store menu.
 	Started clean, finished messy.
 */
 private["_list","_clothes","_pic","_filter","_pos","_oldPos","_oldDir","_flag","_shopTitle","_license","_shopSide","_exit"];
 _exit = false;
+
+player setBehaviour "SAFE";
 
 /* License check & config validation */
 if(!isClass(missionConfigFile >> "Clothing" >> (SEL(_this,3)))) exitWith {}; //Bad config entry.
@@ -29,6 +31,8 @@ ctrlSetText [3103,localize _shopTitle];
 /* Open up the menu */
 createDialog "Life_Clothing";
 disableSerialization;
+
+(findDisplay 3100) displaySetEventHandler ["KeyDown","if((_this select 1) == 1) then {closeDialog 0; [] call life_fnc_playerSkins;}"]; //Fix Custom Skin after ESC
 
 //Cop / Civ Pre Check
 if((SEL(_this,3) in ["bruce","dive","reb","kart"] && playerSide != civilian)) exitWith {hint localize "STR_Shop_NotaCiv"; closeDialog 0;};
@@ -114,6 +118,8 @@ life_oldBackpackItems = backpackItems player;
 life_oldGlasses = goggles player;
 life_oldHat = headgear player;
 
+[] call life_fnc_playerSkins;
+
 waitUntil {isNull (findDisplay 3100)};
 {if(_x != player) then {_x hideObject false;};} foreach playableUnits;
 detach player;
@@ -142,11 +148,11 @@ if(isNil "life_clothesPurchased") exitWith {
 			};
 		};
 	};
-	
+
 	if(count life_oldUniformItems > 0) then {
 		{[_x,true,false,false,true] call life_fnc_handleItem;} foreach life_oldUniformItems;
 	};
-	
+
 	if(vest player != "") then {
 		if(life_oldVest == "") then {
 			removeVest player;
@@ -157,13 +163,13 @@ if(isNil "life_clothesPurchased") exitWith {
 			};
 		};
 	};
+	[] call life_fnc_playerSkins;
 };
 life_clothesPurchased = nil;
 
 //Check uniform purchase.
 if((life_clothing_purchase select 0) == -1) then {
 	if(life_oldClothes != uniform player) then {player addUniform life_oldClothes;};
-	[] call life_fnc_Uniformscolor;
 };
 //Check hat
 if((life_clothing_purchase select 1) == -1) then {
@@ -202,4 +208,3 @@ if((life_clothing_purchase select 4) == -1) then {
 
 life_clothing_purchase = [-1,-1,-1,-1,-1];
 [] call life_fnc_saveGear;
-[] call life_fnc_Uniformscolor;
