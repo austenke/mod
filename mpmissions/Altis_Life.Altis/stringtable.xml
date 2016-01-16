@@ -3649,8 +3649,8 @@
 		<Key ID="STR_License_Bottler">
 			<Original>Bottling License</Original>
 		</Key>
-		<Key ID = "STR_License_Mash">
-			<Original>Mash License</Original>
+		<Key ID = "STR_License_Moonshine">
+			<Original>Moonshine License</Original>
 		</Key>
 		<Key ID="STR_License_Driver">
 			<Original>Driver License</Original>
@@ -4108,7 +4108,7 @@
 	</Package>
 		<Package name="Process_Action">
 		<Key ID = "STR_Process_Mash">
-			<Original>Making Mash</Original>
+			<Original>Mixing Ingredients</Original>
 		</Key>
 		<Key ID = "STR_Process_Whiskey">
 			<Original>Fermenting Whiskey</Original>

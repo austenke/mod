@@ -235,7 +235,7 @@ class Licenses {
 	LICENSEMACRO(stiller,"STR_License_Stiller","stiller",50000,false,"civ")
 	LICENSEMACRO(liquor,"STR_License_Liquor","liquor",100000,false,"civ")
 	LICENSEMACRO(bottler,"STR_License_Bottler","bottler",100000,false,"civ")
-	LICENSEMACRO(mash,"STR_License_Mash","mash",100000,false,"civ")
+	LICENSEMACRO(moonshine,"STR_License_Moonshine","moonshine",1000000,false,"civ")
 };
 
 class VirtualShops {

@@ -32,10 +32,10 @@ _itemInfo = switch (_type) do
 	case "cocaine": {_license = "cocaine";_toSelect = ((life_capture_list) select 1);["cocaine_unprocessed","cocaine_processed",999999,(localize "STR_Process_Cocaine"), false];};
 	case "marijuana": {_license = "marijuana";["cannabis","marijuana",999999,(localize "STR_Process_Marijuana"), false];};
 	case "cement": {_license = "cement";["rock","cement",999999,(localize "STR_Process_Cement"), false];};
-	case "mash": {_license = "stiller";["waterBucket","mash",999999,"Mixing Ingredients",true,"cornmeal"]};
+	case "mash": {_license = "moonshine";["waterBucket","mash",999999,"Mixing Ingredients",true,"cornmeal"]};
 	case "whiskey": {_license = "stiller";["yeast","whiskey",999999,"Fermenting Whiskey",true,"rye"]};
 	case "beer": {_license = "liquor";["yeast","beerp",99999,"Brewing Beer",true,"hops"]};
-	case "moonshine": {_license = "stiller";_toSelect = ((life_capture_list) select 2);["yeast","moonshine",999999,"Making Moonshine",true,"mash"]};
+	case "moonshine": {_license = "moonshine";_toSelect = ((life_capture_list) select 2);["yeast","moonshine",999999,"Making Moonshine",true,"mash"]};
 	case "bottledshine": {_license = "bottler";["moonshine","bottledshine",999999,"Bottling Moonshine",false]};
 	case "bottledbeer": {_license = "bottler";["beerp","bottledbeer",999999,"Bottling Beer",false]};
 	case "bottledwhiskey": {_license = "bottler";["whiskey","bottledwhiskey",999999,"Bottling Whiskey",false]};
