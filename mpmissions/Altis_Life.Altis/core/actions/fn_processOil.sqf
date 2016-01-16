@@ -14,6 +14,7 @@ if((isNull _Proc) OR (player distance _Proc > 10)) exitWith {};
 if (life_is_processing) exitWith {hint localize "STR_Process_Proc_InUse";};
 if (side player == west) exitWith {hint "You cannot preform this action as an officer."};
 if(!life_holdBarrel) exitWith {hint "You need a barrel first!"};
+if(!license_civ_oil) exitwith {hint "You need oil processing!"};
 
 
 _upp = localize "STR_Process_Proc_Oil";

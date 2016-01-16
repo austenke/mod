@@ -4058,7 +4058,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Device_assembled_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this allowDamage false;this setdir 190.32;this setVectorUp [0,0,1]; this addAction[""Process Oil"",life_fnc_processOil,""""];";
+			init="this enableSimulation true;this allowDamage false;this setdir 190.32;this setVectorUp [0,0,1]; this addAction[""Process Oil"",life_fnc_processOil,""""];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""oil"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""oil"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""oil"",0,false,false,"""",' !license_civ_oil && playerSide == civilian '];";
 		};
 		class Item136
 		{
