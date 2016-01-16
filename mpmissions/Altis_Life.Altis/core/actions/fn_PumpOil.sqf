@@ -30,8 +30,8 @@ _cP = 0.01;
 life_is_processing = true;
 
 while{true} do {
-	sleep  0.3;
-	_cP = _cP + 0.02;
+	sleep  0.6;
+	_cP = _cP + 0.01;
 	_progress progressSetPosition _cP;
 	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
 	if(_cP >= 1) exitWith {};
