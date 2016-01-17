@@ -11,5 +11,6 @@ _unit SVAR ["restrained",FALSE,TRUE];
 _unit SVAR ["Escorting",FALSE,TRUE];
 _unit SVAR ["transporting",FALSE,TRUE];
 detach _unit;
+player say3D "handcuff";
 
 [0,"STR_NOTF_Unrestrain",true,[_unit GVAR ["realname",name _unit], profileName]] remoteExecCall ["life_fnc_broadcast",west];

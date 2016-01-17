@@ -21,7 +21,7 @@ if(side player == civilian) exitWith {
 	[[player], "life_fnc_restrain", _unit, false] call life_fnc_MP;
 };
 if(!isPlayer _unit) exitWith {};
-
+player say3D "handcuff";
 
 _unit setVariable["restrained",true,true];
 [[player], "life_fnc_restrain", _unit, false] call life_fnc_MP;
