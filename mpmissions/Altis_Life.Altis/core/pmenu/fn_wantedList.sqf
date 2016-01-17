@@ -10,6 +10,9 @@ private["_display","_list","_units","_entry"];
 params [
 	["_info",[]]
 ];
+
+systemChat str _info;
+
  disableSerialization;
 _display = findDisplay 2400;
 _list = _display displayctrl 2401;
