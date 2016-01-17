@@ -1,3 +1,4 @@
+#define ITEM_NAME(varName) localize M_CONFIG(getText,"VirtualItems",varName,"displayName")
 /*
 	Description:
 	Dialog code for picking up items.
@@ -13,7 +14,7 @@ _list = ((findDisplay 1520) displayCtrl 1521);
 _lastItems = [];
 _itemName = ITEM_NAME(SEL(_itemInfo,0));
 
-while {!isNull (findDisplay 1520)} do
+while {!isNull (findDisplay 1520)}; do
 {
 	_items = [];
 	_objects = nearestObjects [player, [], 4];
