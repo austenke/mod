@@ -17,7 +17,6 @@ if(((life_capture_list select _x) select 2) > 0.98) then {
 	_string = (life_capture_list select _x) select 0;
 	_marker = format["capture_label_%1",(_x + 1)];
 	_marker setMarkerText format["%1 - %2",(life_capture_list select _x) select 1,_string];
-	["diag_log",[format["----- Iteration: %1 -- Item: %2 -----", _x, (life_capture_list select _x) select 1]]] call TON_fnc_logIt;
 };
 } forEach [0,1,2,3];
 KBW_fnc_handleCapture = {
