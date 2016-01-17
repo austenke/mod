@@ -60,7 +60,15 @@ if(!(EQUAL(count (actionKeys "User11"),0)) && {(inputAction "User11" > 0)} && li
 
 // Nearby items dialog
 if(!(EQUAL(count (actionKeys "User8"),0)) && {(inputAction "User8" > 0)}) exitWith {
-	createDialog "life_pickup_items";
+if(!_alt && !_ctrlKey) then {
+		if(player getVariable ["restrained", false]) then {
+			hint "You cannot pick up items while you're restrained!";
+		} else {
+			closeDialog 0;
+			createDialog "life_pickup_items";
+			_handled = true;
+		};
+	};
 };
 
 switch (_code) do {
