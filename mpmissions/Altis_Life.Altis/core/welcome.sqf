@@ -13,7 +13,7 @@ sleep 5; //Wait in seconds before the credits start after player is in-game
 _role1 = "Welcome"; //In yellow
 _role1names = ["To Drunken Life"]; //In white
 _role2 = "Developers";
-_role2names = ["Ohmslaw, Valiant, Index"];
+_role2names = ["Ohmslaw & Valiant & Index"];
 _role3 = "Restarts";
 _role3names = ["TBD"];
 _role4 = "blank";
@@ -32,13 +32,13 @@ sleep 2;
 _memberFunction = _x select 0;
 _memberNames = _x select 1;
 _finalText = format ["<t size='0.60' color='#f2cb0b' align='right'>%1<br /></t>", _memberFunction]; //Changes colours
-_finalText = _finalText + "<t size='1.05' color='#FFFFFF' align='right'>";
+_finalText = _finalText + "<t size='0.95' color='#FFFFFF' align='right'>";
 {_finalText = _finalText + format ["%1<br />", _x]} forEach _memberNames;
 _finalText = _finalText + "</t>";
 _onScreenTime + (((count _memberNames) - 1) * 0.5);
 [
 _finalText,
-[safezoneX + safezoneW - 0.8,0.50], //DEFAULT: 0.5,0.35
+[safezoneX + safezoneW - 0.5,0.35], //DEFAULT: 0.5,0.35
 [safezoneY + safezoneH - 0.8,0.7], //DEFAULT: 0.8,0.7
 _onScreenTime,
 0.5
