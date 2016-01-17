@@ -11,9 +11,8 @@ _value = parseNumber(ctrlText 2702);
 //Series of stupid checks
 _grpOwner = grpPlayer getVariable ["gang_owner",""];
 _ownerID = getPlayerUID player;
-if(steamid != _grpOwner) exitWith {hint "You are not the owner of this gang";};
 if(playerSide != civ) exitWith {hint "You are not a civilian!";};
-if(life_gangRank == 1) exitWith {hint "You need to be rank 2 or higher in the gang to withdraw money from the gang bank!";};
+if(life_gangRank == 1 && steamid != _grpOwner) exitWith {hint "You need to be rank 2 or higher in the gang to withdraw money from the gang bank!";};
 if(_value > 999999) exitWith {hint localize "STR_ATM_GreaterThan";};
 if(_value < 0) exitWith {hint "You need to enter a value greater than 0";};
 if(!([str(_value)] call life_fnc_isnumeric)) exitWith {hint localize "STR_ATM_notnumeric"};
