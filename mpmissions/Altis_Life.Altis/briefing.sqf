@@ -8,6 +8,7 @@ player createDiarySubject ["civrules","Rebel/Civ Info"];
 player createDiarySubject ["illegal","Illegal Possessions"];
 player createDiarySubject ["controls","Controls"];
 player createDiarySubject ["DLstuff","Drunken Life"];
+player createDiarySubject ["License Info","Drunken Life License Prices"];
 
 /*  Example
 	player createDiaryRecord ["", //Container
@@ -570,15 +571,43 @@ TS.DrunkenLife.ca<br/><br/>
 		]
 	];
 
-	player createDiaryRecord["DLstuff",
+	player createDiaryRecord["License Info",
 		[
-			"DL Credits",
+			"Drunken Life License Prices",
 				"
-The Developers of the server are credited by Valiant, Ohmslaw, and Index.<br/><br/>
-
-The Owner of the website and photo icons credits are credited by nKitsu<br/><br/>
-
-The Textures of skins were added to the server by Ohmslaw<br/><br/>
+Driver = $10,000<br/>
+Boat = $20,000<br/>
+Pilot = $500,000<br/>
+Gun = $25,000<br/>
+Diving = $15,000<br/>
+Oil = $1,500,000<br/>
+Cop Pilot = $500,000<br/>
+Coast Guard = $20,000<br/>
+Heroin = $500,000<br/>
+Marijuana = $500,000<br/> 
+Rebel = $2,000,000<br/>
+Trucking = $20,000<br/>
+Diamond = $500,000<br/>
+Salt = $300,000<br/>
+Cocaine = $500,000<br/>
+Iron = $100,000<br/>
+Copper = $5000<br/>
+Cement = $5000<br/>
+Medic Pilot = $20,000<br/>
+Home Owners = $1,000,000<br/>
+Jet Pilot = $5,000,000<br/>
+Distiller = $50,000<br/>
+Liquor = $100,000<br/>
+Bottler = $100,000<br/>
+Moonshine = $1,000,000<br/>  
+				"
+		]
+	];
+	player createDiaryRecord ["", //Container
+		[
+			"", //Subsection
+				"
+				TEXT HERE<br/><br/>
 				"
 		]
 	];
