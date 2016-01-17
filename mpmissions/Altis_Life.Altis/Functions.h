@@ -419,6 +419,7 @@ class Life_Client_Core
 		class gangWithdraw {};
 		class wireTransfer {};
 		class cashWipeMe {};
+		class pickupItems {};
 	};
 
 	/*

@@ -1187,6 +1187,12 @@
 			<Italian>Dai Chiave</Italian>
 			<Portuguese>Dar Chave</Portuguese>
 		</Key>
+		<Key ID="STR_Items_Title">
+			<Original>Near Items</Original>
+		</Key>
+		<Key ID="STR_Items_DropItem">
+			<Original>Drop Item</Original>
+		</Key>
 	</Package>
 	<Package name="Player_Menu">
 		<Key ID="STR_PM_Title">
