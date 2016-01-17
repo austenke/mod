@@ -128,6 +128,27 @@ class CfgSounds
 		sound[] = {"\sounds\robbankdone.ogg", 1.0, 1};
 		titles[] = {};
 	};
+	
+	class Cuff 
+	{		
+	name = "cuff";		
+	sound[] = {"\sounds\handcuff.ogg", 0.95, 0.95};
+	titles[] = {};	
+	};
+	
+    class ziptie 
+	{		
+	name = "ziptie";		
+	sound[] = {"\sounds\ziptie.ogg", 0.95, 0.95};
+	titles[] = {};	
+	};
+	
+    class defib 
+	{		
+	name = "defib";		
+	sound[] = {"\sounds\defib.ogg", 0.95, 0.95};
+	titles[] = {};	
+	};
 
 	class Flashbang
 	{
