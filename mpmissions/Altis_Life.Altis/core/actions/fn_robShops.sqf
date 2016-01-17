@@ -25,7 +25,7 @@ if (vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
 if !(alive _robber) exitWith {};
 if (currentWeapon _robber == "") exitWith { 
 											[[_shop],"life_fnc_robberyFail",nil,true] spawn life_fnc_MP;
-											hint "HaHa, you do not threaten me! Get out of here you hobo!" 
+											hint "Think you're hot shit punk? Get some real gear then come back!" 
 										  };
 if (_kassa == 0) exitWith { hint "There is no cash in the register!" };
 

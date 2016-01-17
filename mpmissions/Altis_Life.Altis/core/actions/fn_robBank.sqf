@@ -3,7 +3,7 @@
 file: fn_robBank.sqf
 
 */
-private["_robber","_shop","_name","_kassa","_ui","_progress","_pgText","_cP","_rip","_pos","_source"];
+private["_robber","_shop","_name","_kassa","_ui","_progress","_pgText","_cP","_pos","_source"];
 _shop = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param; //The object that has the action attached to it is _this. ,0, is the index of object, ObjNull is the default should there be nothing in the parameter or it's broken
 _robber = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param; //Can you guess? Alright, it's the player, or the "caller". The object is 0, the person activating the object is 1
 //_kassa = 1000; //The amount the shop has to rob, you could make this a parameter of the call ((https://community.bistudio.com/wiki/addAction Give it a try and post below ;)
@@ -16,17 +16,14 @@ if(_robber distance _shop > 5) exitWith { hint "You need to stay close to the ba
 if([west] call life_fnc_playerCount < 1) exitWith { hint "There must be at least one officer online to rob the bank!" };
 
 //if (isNull _kassa) then { _kassa = 1000; };
-if (_rip) exitWith { hint "Robbery already in progress!" };
+if (life_action_inUse) exitWith { hint "Robbery already in progress!" };
 if (vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
 
 if !(alive _robber) exitWith {};
-if (currentWeapon _robber == "") exitWith { 
-											
-											hint "You cannot rob the bank without a gun" 
-										  };
+if (currentWeapon _robber == "") exitWith { hint "You cannot rob the bank without a gun" };
 if (_kassa == 0) exitWith { hint "There is no cash in the register!" };
 
-_rip = true;
+life_action_inUse = true;
 _kassa = 12000 + round(random 400000);
 _shop removeAction _action;
 _shop switchMove "AmovPercMstpSsurWnonDnon";
@@ -55,7 +52,7 @@ _pgText ctrlSetText format["Robbery in Progress, stay close (10m) (1%1)...","%"]
 _progress progressSetPosition 0.01;
 _cP = 0.01;
  
-if(_rip) then
+if(life_action_inUse) then
 {
 	[[_shop],"life_fnc_bankAlarm",nil,true] spawn life_fnc_MP;
 	while{true} do
@@ -70,8 +67,8 @@ if(_rip) then
 		if!(alive _robber) exitWith {deleteMarker _marker; 5 cutText ["","PLAIN"]; life_action_inUse = false;};
 	};
 
-	if!(alive _robber) exitWith { _rip = false; deleteMarker _marker; };
-	if(_robber distance _shop > 10.5) exitWith { _shop switchMove ""; hint "You need to stay close to rob the bank. The vault has been sealed"; 5 cutText ["","PLAIN"]; _rip = false; deleteMarker _marker; };
+	if!(alive _robber) exitWith { life_action_inUse = false; deleteMarker _marker; };
+	if(_robber distance _shop > 10.5) exitWith { _shop switchMove ""; hint "You need to stay close to rob the bank. The vault has been sealed"; 5 cutText ["","PLAIN"]; life_action_inUse = false; deleteMarker _marker; };
 	5 cutText ["","PLAIN"];
 
 	titleText[format["You have stolen $%1, now get away before the cops arrive!",[_kassa] call life_fnc_numberText],"PLAIN"];
@@ -82,7 +79,7 @@ if(_rip) then
 	[[getPlayerUID _robber,name _robber,"211"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 	[[_shop],"life_fnc_robbankdone",nil,true] spawn life_fnc_MP;
 
-	_rip = false;
+	life_action_inUse = false;
 	life_use_atm = false;
 	sleep (30 + random(180));
 	life_use_atm = true;
