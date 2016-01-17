@@ -5,7 +5,7 @@
 	ASFSDFHAGFASF
 */
 private["_unit"];
-_unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+_unit = cursorTarget;
 if(isNull _unit) exitWith {}; //Not valid
 if(!(_unit getVariable "Escorting")) exitWith {}; //He's not being Escorted.
 if(side _unit != civilian) exitWith {}; //Not a civ
