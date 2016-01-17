@@ -42,6 +42,7 @@ life_blowUp = false;
 life_stealth = false;
 life_holdBarrel = false;
 life_pickup_open = false;
+life_pickup_item_array = [];
 
 //Uniform price (0),Hat Price (1),Glasses Price (2),Vest Price (3),Backpack Price (4)
 life_clothing_purchase = [-1,-1,-1,-1,-1];
