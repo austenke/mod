@@ -13,11 +13,11 @@ sleep 5; //Wait in seconds before the credits start after player is in-game
 _role1 = "Welcome"; //In yellow
 _role1names = ["To Drunken Life"]; //In white
 _role2 = "Developers";
-_role2names = ["Ohmslaw & Valiant & Index"];
+_role2names = ["Ohmslaw, Valiant, Index"];
 _role3 = "Restarts";
 _role3names = ["TBD"];
-_role4 = "blank";
-_role4names = ["blank"];
+_role4 = "Controls";
+_role4names = ["Check map for all controls"];
 _role5 = "Website";
 _role5names = ["www.DrunkenLife.ca"];
 _role6 = "Teamspeak";
