@@ -18,7 +18,7 @@ _gangName = grpPlayer getVariable "gang_name";
 _gangBank = GANG_FUNDS;
 _gangMax = grpPlayer getVariable "gang_maxMembers";
 
-if(_ownerID != steamid) then {
+if(_ownerID != steamid && life_gangRank < 3) then {
 	(CONTROL(2620,2622)) ctrlEnable false; //Upgrade
 	(CONTROL(2620,2624)) ctrlEnable false; // Kick
 	(CONTROL(2620,2625)) ctrlEnable false; //Set New Leader
