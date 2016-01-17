@@ -130,5 +130,7 @@ if(_hasLicense) then
 }
 else
 {
+	5 cutText ["","PLAIN"]; 
+	life_is_processing = false;
 	hint format["You need a license to process %1!",_itemNameo1];
 };
