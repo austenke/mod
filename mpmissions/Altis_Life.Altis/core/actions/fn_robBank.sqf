@@ -15,7 +15,7 @@ if(_robber distance _shop > 5) exitWith { hint "You need to stay close to the ba
 
 if([west] call life_fnc_playerCount < 1) exitWith { hint "There must be at least one officer online to rob the bank!" };
 
-if (isNull _kassa) then { _kassa = 1000; };
+//if (isNull _kassa) then { _kassa = 1000; };
 if (_rip) exitWith { hint "Robbery already in progress!" };
 if (vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
 
