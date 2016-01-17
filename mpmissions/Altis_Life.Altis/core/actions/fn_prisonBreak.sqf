@@ -11,8 +11,6 @@ _prison = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param; //The object that has 
 _criminal = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param; //Can you guess? Alright, it's the player, or the "caller". The object is 0, the person activating the object is 1
 _action = [_this,2] call BIS_fnc_param;//Action name
 
-if(true) exitWith { hint "This feature is not completed yet"; };
-
 if(side _criminal != civilian) exitWith { hint "Only civilians can break people out!"; };
 if(_criminal distance _prison > 20) exitWith { hint "You need to stay close to the prison to continue a prison break"; };
 
