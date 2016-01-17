@@ -1,4 +1,4 @@
-#define ITEM_NAME(varName) localize M_CONFIG(getText,"VirtualItems",varName,"displayName")
+#include <macro.h>
 /*
 	Description:
 	Dialog code for picking up items.
