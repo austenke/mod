@@ -79,6 +79,10 @@ switch (_side) do {
 		_query = format["getLocation:%1",_uid];
 		_queryResult2 = [_query,2,true] call DB_fnc_asyncCall;
 
+		waitUntil {!DB_Async_Active};
+		_query = format["getRank:%1",_uid];
+		_queryResult3 = [_query,2,true] call DB_fnc_asyncCall;
+
 		_queryResult set[7,([_queryResult select 7,1] call DB_fnc_bool)];
 		_houseData = _uid spawn TON_fnc_fetchPlayerHouses;
 		waitUntil {scriptDone _houseData};
@@ -86,7 +90,8 @@ switch (_side) do {
 		_gangData = _uid spawn TON_fnc_queryPlayerGang;
 		waitUntil{scriptDone _gangData};
 		_queryResult pushBack (missionNamespace getVariable[format["gang_%1",_uid],[]]);
-		_queryResult pushBack _queryResult2
+		_queryResult pushBack _queryResult2;
+		_queryResult pushBack _queryResult3;
 	};
 };
 
