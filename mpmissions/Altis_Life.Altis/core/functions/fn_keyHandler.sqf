@@ -62,7 +62,7 @@ if(!(EQUAL(count (actionKeys "User11"),0)) && {(inputAction "User11" > 0)} && li
 if(!(EQUAL(count (actionKeys "User8"),0)) && {(inputAction "User8" > 0)}) exitWith {
 		[] spawn {
 			private "_handle";
-			_handle = [] createDialog "life_pickup_items";
+			_handle = createDialog "life_pickup_items";
 			_handled = true;
 		};
 	};
