@@ -3,7 +3,6 @@
 	Dialog code for picking up items.
 */
 private["_objects","_items","_list","_lastItems","_itemName","_itemInfo","_picture"];
-_itemName = ITEM_NAME(SEL(_itemInfo,0));
 disableSerialization;
 
 if (isNull (findDisplay 1520) || life_pickup_open) exitWith {};
@@ -12,6 +11,7 @@ life_pickup_open = true;
 
 _list = ((findDisplay 1520) displayCtrl 1521);
 _lastItems = [];
+_itemName = ITEM_NAME(SEL(_itemInfo,0));
 
 while {!isNull (findDisplay 1520)} do
 {
