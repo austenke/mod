@@ -111,7 +111,7 @@ class Life_My_Gang_Diag {
 			text = "$STR_Gang_Invite_Player";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] spawn life_fnc_gangInvitePlayer";
-			y = .51;
+			y = .56;
 		};
 		
 		class DisbandGang : InviteMember
@@ -120,13 +120,22 @@ class Life_My_Gang_Diag {
 			text = "$STR_Gang_Disband_Gang";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			onButtonClick = "[] spawn life_fnc_gangDisband";
+			y = .51;
+		};
+
+		class GangPromote : InviteMember
+		{
+			idc = 2633;
+			text = "$STR_Gang_Promote_Member";
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+			onButtonClick = "[] spawn life_fnc_gangDisband";
 			y = .46;
 		};
 		
 		class ColorList : Life_RscCombo
 		{
 			idc = 2632;
-			x = 0.47; y = 0.56;
+			x = 0.47; y = 0.61;
 			w = (9 / 40); h = 0.03;
 		};
 		

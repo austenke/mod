@@ -733,6 +733,13 @@
 			<Italian>Sciogli Gang</Italian>		
 			<Portuguese>Desfazer Gangue</Portuguese>
 		</Key>
+		<Key ID="STR_Gang_Promote_Member">
+			<Original>Promote</Original>
+			<German>Promote</German>
+			<French>Promote</French>
+			<Italian>Promote</Italian>		
+			<Portuguese>Promote</Portuguese>
+		</Key>
 		<Key ID="STR_Gang_Invitation">
 			<Original>Gang Invitation</Original>
 			<German>Gang Einladung</German>	
