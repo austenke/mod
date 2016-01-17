@@ -61,9 +61,9 @@ if(life_action_inUse) then
 
 	_counter = 0;
 	{
-		if(_x distance (getMarkerPos "jail_marker") < 40) then {
-			_x setPos (getPos player);
+		if(_x distance (getMarkerPos "jail_marker") < 100) then {
 			_counter = _counter + 1;
+			[[player], "life_fnc_breakout", _x, false] call life_fnc_MP;
 		}
 	} forEach playableUnits;
 

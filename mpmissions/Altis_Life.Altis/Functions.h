@@ -265,6 +265,7 @@ class Life_Client_Core
 		file = "core\civilian";
 		class jailMe {};
 		class jail {};
+		class breakout {};
 		class tazed {};
 		class knockedOut {};
 		class knockoutAction {};
