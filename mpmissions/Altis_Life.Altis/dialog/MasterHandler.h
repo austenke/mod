@@ -27,3 +27,4 @@
 #include "federalReserve.h"
 #include "compensate.hpp"
 #include "mayor_ballot_menu.hpp"
+#include "pickup.hpp"
