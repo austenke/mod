@@ -3,6 +3,7 @@
 	Dialog code for picking up items.
 */
 private["_objects","_items","_list","_lastItems","_itemName","_itemInfo","_picture"];
+_itemName = ITEM_NAME(SEL(_itemInfo,0));
 disableSerialization;
 
 if (isNull (findDisplay 1520) || life_pickup_open) exitWith {};
@@ -27,7 +28,7 @@ while {!isNull (findDisplay 1520)} do
 		{
 			_itemInfo = _x getVariable ["item", ["Unknown",0]];
 			if (_itemInfo select 0 == "money") then { _list lbAdd format["$%1 Cash", [_itemInfo select 1] call life_fnc_numberText]; }
-			else { _list lbAdd format["%1x %2", _itemInfo select 1, [([_itemInfo select 0,0] call life_fnc_varHandle)] call life_fnc_varToStr]; };
+			else { _list lbAdd format["%1x %2", _itemInfo select 1, [(_itemInfo select 0,0] _itemName)]; };
 		} foreach _items;
 		if (count _items < 1) then { _list lbAdd "There are no objects nearby which you can pick up."; };
 		_list lbSetSelected [0, true];
