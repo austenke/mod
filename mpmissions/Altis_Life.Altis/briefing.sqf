@@ -541,17 +541,20 @@ U: Lock and unlock cars<br/><br/>
 F: Cop Siren (if cop)<br/><br/>
 
 T: Vehicle Trunk<br/><br/>
+
 Left Shift + R: Restrain (Cop Only)<br/><br/>
 
-Left Shift + G: To place your hands up<br/><br/>
+Cop Action menu: Left windows key or (set use action 10)
 
-Left Windows: Main Interaction key which is used for picking up items/money, gathering, interacting with cars (repair,etc) and for cops to interact with civilians. Can be rebound to a single key like H by pressing ESC->Configure->Controls->Custom->Use Action 10<br/><br/>
+Tab: To place your hands on your head<br/><br/>
 
-Left Shift + L: Activates cop siren lights (as a cop).<br/><br/>
+Left Windows: Gathering, Repair Vehicle, Use Defib, Cop Action menu. Can be rebound to a single key like H by pressing ESC->Configure->Controls->Custom->Use Action 10<br/><br/>
 
-Left Shift + H: Holster's your pistol<br/><br/>
+H: Holster's/Unholster your weapon<br/><br/>
 
-Left Shift + F: Unholster's your weapon<br/><br/>
+User Action 10 : Rebinds action key<bn/><br/>
+User Action 11 : RedGull Use<bn/><br/>
+
 				"
 		]
 	];
@@ -562,7 +565,7 @@ Left Shift + F: Unholster's your weapon<br/><br/>
 				"
 Welcome to Drunken Life server!<br/><br/>
 
-If you are interested to join our Forums please visit us at<br/>
+If you are interested in joinging our Forums, Becoming a Police officer, or a medic, please visit us at<br/>
 DrunkenLife.ca<br/><br/>
 
 If you want to join our community on Teamspeak please connect us at<br/>
@@ -573,7 +576,7 @@ TS.DrunkenLife.ca<br/><br/>
 
 	player createDiaryRecord["License Info",
 		[
-			"Drunken Life License Prices",
+			"License Prices",
 				"
 Driver = $10,000<br/>
 Boat = $20,000<br/>
