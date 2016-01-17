@@ -55,7 +55,7 @@ switch (playerSide) do {
 		(vehicle player != player) && (locked(vehicle player)!=0) ']];
 
         life_actions = life_actions + [player addAction["Restrain",life_fnc_restrainAction,"",0,false,false,"",'
-    	!isNull cursorTarget && (side cursorTarget) != west && !(cursorTarget getVariable ["restrained", false] || cursorTarget getVariable ["civ_restrained", false]) && alive cursorTarget && cursorTarget distance player < 5 && speed cursorTarget < 1 ']];
+    	!isNull cursorTarget && (side cursorTarget) != west && !(cursorTarget getVariable ["restrained", false] || cursorTarget getVariable ["civ_restrained", false]) && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 5 && speed cursorTarget < 1 ']];
         
         life_actions = life_actions + [player addAction["Unrestrain",life_fnc_unrestrain,"",0,false,false,"",'
         !isNull cursorTarget && (cursorTarget getVariable ["restrained", false] || cursorTarget getVariable ["civ_restrained", false]) && cursorTarget distance player < 5 && speed cursorTarget < 1 ']];
