@@ -31,8 +31,8 @@ _role8names = ["Have fun and follow the rules!"];
 sleep 2;
 _memberFunction = _x select 0;
 _memberNames = _x select 1;
-_finalText = format ["<t size='0.70' color='#f2cb0b' align='right'>%1<br /></t>", _memberFunction]; //Changes colours
-_finalText = _finalText + "<t size='0.60' color='#FFFFFF' align='right'>";
+_finalText = format ["<t size='0.60' color='#f2cb0b' align='right'>%1<br /></t>", _memberFunction]; //Changes colours
+_finalText = _finalText + "<t size='0.95' color='#FFFFFF' align='right'>";
 {_finalText = _finalText + format ["%1<br />", _x]} forEach _memberNames;
 _finalText = _finalText + "</t>";
 _onScreenTime + (((count _memberNames) - 1) * 0.5);
