@@ -63,8 +63,8 @@ if(!(EQUAL(count (actionKeys "User8"),0)) && {(inputAction "User8" > 0)}) exitWi
 		[] spawn {
 			private "_handle";
 			_handle = [] createDialog "life_pickup_items";
+			_handled = true;
 		};
-		true;
 	};
 };
 
