@@ -23,10 +23,10 @@ switch (playerSide) do {
     	!isNull cursorTarget && life_inv_ziptie > 1 && animationState cursorTarget in ["Acts_InjuredLookingRifle01","incapacitated","Incapacitated","AinjPfalMstpSnonWnonDf_carried_fallwc"] && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 6 && speed cursorTarget < 1 ']];
         
         life_actions = life_actions + [player addAction["Unrestrain",life_fnc_unrestrain,"",0,false,false,"",'
-        cursorTarget getVariable ["civ_restrained", false] && cursorTarget distance player < 3.5 && (isPlayer cursorTarget) && alive cursorTarget && speed cursorTarget < 1 ']];
+        !isNull cursorTarget && cursorTarget getVariable ["civ_restrained", false])] && cursorTarget distance player < 5 && speed cursorTarget < 1 ']];
 
         life_actions = life_actions + [player addAction["Escort",life_fnc_escortAction,"",0,false,false,"",'
-        cursorTarget getVariable ["civ_restrained", false] && cursorTarget distance player < 3.5 && (isPlayer cursorTarget) && alive cursorTarget && speed cursorTarget < 1 ']];
+        !isNull cursorTarget && (cursorTarget getVariable ["restrained", false] || cursorTarget getVariable ["civ_restrained", false]) && !(cursorTarget getVariable["Escorting",false]) && cursorTarget distance player < 5 && speed cursorTarget < 1 ']];
 
 		life_actions = life_actions + [player addAction["Pick Up Barrel",life_fnc_interactOil,"",0,false,false,"",'
         !life_holdBarrel && (typeOf cursorTarget) in ["Land_BarrelWater_F","Land_MetalBarrel_F"] && cursorTarget distance player < 5 && speed cursorTarget < 1 ']];
