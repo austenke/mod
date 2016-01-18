@@ -65,9 +65,9 @@ if(!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _ki
 	if(vehicle _killer isKindOf "LandVehicle") then {
 		[getPlayerUID _killer,_killer GVAR ["realname",name _killer],"187V"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
 		//Get rid of this if you don't want automatic vehicle license removal.
-		if(!local _killer) then {
-			[2] remoteExecCall ["life_fnc_removeLicenses",_killer];
-		};
+		//if(!local _killer) then {
+		//	[2] remoteExecCall ["life_fnc_removeLicenses",_killer];
+		//};
 	} else {
 		[getPlayerUID _killer,_killer GVAR ["realname",name _killer],"187"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
 		
