@@ -13,7 +13,6 @@ life_pickup_open = true;
 _list = ((findDisplay 1520) displayCtrl 1521);
 _lastItems = [];
 _itemInfo = _this GVAR ["item",[]]; if(EQUAL(count _itemInfo,0)) exitWith {deleteVehicle _this;};
-_itemName = ITEM_NAME(SEL(_itemInfo,0));
 
 while {!isNull (findDisplay 1520)} do
 {
@@ -28,6 +27,7 @@ while {!isNull (findDisplay 1520)} do
 		ctrlEnable [1522, (count _items > 0)];
 		lbClear _list;
 		{
+			_itemInfo = _this GVAR ["item",[]]; if(EQUAL(count _itemInfo,0)) exitWith {deleteVehicle _this;};
 			if (_itemInfo select 0 == "money") then { _list lbAdd format["$%1 Cash", [_itemInfo select 1] call life_fnc_numberText]; }
 			else { _list lbAdd format["%1x %2", _itemInfo select 1, [([_itemInfo select 0] call life_fnc_varHandle)] call life_fnc_varToStr]; };
 		} forEach _items;
