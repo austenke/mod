@@ -50,7 +50,7 @@ if ((life_cash > 29999) && (FETCH_CONST(life_coplevel) == 1)) then //cost = $30,
 }
 else
 {
- hintSilent "Sorry you do not have 30000 for this loadout";
+ hintSilent "Sorry you do not have $30,000 for this loadout";
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -97,7 +97,7 @@ if ((life_cash > 34999) && (FETCH_CONST(life_coplevel) == 2)) then //cost = $35,
 }
 else
 {
- hintSilent "Sorry you do not have 30000 for this loadout";
+ hintSilent "Sorry you do not have $35,000 for this loadout";
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -144,7 +144,7 @@ if ((life_cash > 34999) && (FETCH_CONST(life_coplevel) == 3)) then //cost = $35,
 }
 else
 {
- hintSilent "Sorry you do not have 30000 for this loadout";
+ hintSilent "Sorry you do not have $35,000 for this loadout";
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -193,14 +193,14 @@ if ((life_cash > 39999) && (FETCH_CONST(life_coplevel) == 4)) then //cost = $40,
 }
 else
 {
- hintSilent "Sorry you do not have 30000 for this loadout";
+ hintSilent "Sorry you do not have $40,000 for this loadout";
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 5)) then //cost = $45,000
 {
-	life_cash = life_cash - 45000;  //40k
+	life_cash = life_cash - 45000;  //45k
 	hintSilent "$45,000 has been removed for this kit";
 	sleep 1;
 	hintSilent "Please wait while your kit is being assembled, this may take a while";
@@ -242,14 +242,14 @@ if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 5)) then //cost = $45,
 }
 else
 {
- hintSilent "Sorry you do not have 30000 for this loadout";
+ hintSilent "Sorry you do not have $45,000 for this loadout";
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 6)) then //cost = $45,000
 {
-	life_cash = life_cash - 45000;  //40k
+	life_cash = life_cash - 45000;  //45k
 	hintSilent "$45,000 has been removed for this kit";
 	sleep 1;
 	hintSilent "Please wait while your kit is being assembled, this may take a while";
@@ -291,14 +291,14 @@ if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 6)) then //cost = $45,
 }
 else
 {
- hintSilent "Sorry you do not have 30000 for this loadout";
+ hintSilent "Sorry you do not have $45,000 for this loadout";
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 6)) then //cost = $45,000
+if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 7)) then //cost = $45,000
 {
-	life_cash = life_cash - 45000;  //40k
+	life_cash = life_cash - 45000;  //45k
 	hintSilent "$45,000 has been removed for this kit";
 	sleep 1;
 	hintSilent "Please wait while your kit is being assembled, this may take a while";
@@ -340,5 +340,5 @@ if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 6)) then //cost = $45,
 }
 else
 {
- hintSilent "Sorry you do not have 30000 for this loadout";
+ hintSilent "Sorry you do not have $45,000 for this loadout";
 };
