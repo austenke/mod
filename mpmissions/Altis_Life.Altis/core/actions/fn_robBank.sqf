@@ -48,7 +48,7 @@ _marker setMarkerColor "ColorRed";
 _marker setMarkerText " Robbery in Progress!";
 _marker setMarkerType "hd_warning";
 
-_pgText ctrlSetText format["Robbery in Progress, stay close (10m) (1%1)...","%"];
+_pgText ctrlSetText format["Robbery in Progress, stay close (20 meters) (1%1)...","%"];
 _progress progressSetPosition 0.01;
 _cP = 0.01;
  
@@ -60,15 +60,15 @@ if(life_action_inUse) then
 			sleep 10.70;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
-		_pgText ctrlSetText format["Robbery in Progress, stay close (10m) (%1%2)...",round(_cP * 100),"%"];
+		_pgText ctrlSetText format["Robbery in Progress, stay close (20 meters) (%1%2)...",round(_cP * 100),"%"];
 
 		if(_cP >= 1) exitWith {};
-		if(_robber distance _shop > 10.5) exitWith {deleteMarker _marker; 5 cutText ["","PLAIN"]; life_action_inUse = false;};
+		if(_robber distance _shop > 20.5) exitWith {deleteMarker _marker; 5 cutText ["","PLAIN"]; life_action_inUse = false;};
 		if!(alive _robber) exitWith {deleteMarker _marker; 5 cutText ["","PLAIN"]; life_action_inUse = false;};
 	};
 
 	if!(alive _robber) exitWith { life_action_inUse = false; deleteMarker _marker; };
-	if(_robber distance _shop > 10.5) exitWith { _shop switchMove ""; hint "You need to stay close to rob the bank. The vault has been sealed"; 5 cutText ["","PLAIN"]; life_action_inUse = false; deleteMarker _marker; };
+	if(_robber distance _shop > 20.5) exitWith { _shop switchMove ""; hint "You need to stay close to rob the bank. The vault has been sealed"; 5 cutText ["","PLAIN"]; life_action_inUse = false; deleteMarker _marker; };
 	5 cutText ["","PLAIN"];
 
 	titleText[format["You have stolen $%1, now get away before the cops arrive!",[_kassa] call life_fnc_numberText],"PLAIN"];
