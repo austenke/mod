@@ -35,6 +35,5 @@ life_action_in_use = false;
 if (_success) then
 {
 	_unit setVariable["nitro",3,true];
-	life_experience = life_experience + 20;
-	hint "Nitrous oxide injector added to vehicle (3 injections). Press Q when driving to activate.";
+	hint "Nitrous injector added to vehicle (3 injections). Press Q when driving to activate.";
 };
