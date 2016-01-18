@@ -91,7 +91,7 @@ switch (_side) do {
 		waitUntil{scriptDone _gangData};
 		_queryResult pushBack (missionNamespace getVariable[format["gang_%1",_uid],[]]);
 		_queryResult pushBack _queryResult2;
-		_queryResult pushBack _queryResult3;
+		_queryResult set[13,_queryResult3];
 	};
 };
 
