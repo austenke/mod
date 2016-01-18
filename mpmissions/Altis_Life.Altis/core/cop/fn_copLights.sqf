@@ -1,5 +1,5 @@
 /*
-	File: fn_sirenLights.sqf
+	File: fn_copLights.sqf
 	Author: mindstorm, modified by Adanteh
 	Link: http://forums.bistudio.com/showthread.php?157474-Offroad-Police-sirens-lights-and-underglow
 	
