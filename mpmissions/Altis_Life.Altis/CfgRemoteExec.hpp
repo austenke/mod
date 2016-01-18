@@ -27,6 +27,7 @@ class CfgRemoteExec {
 		F(life_fnc_giveDiff,CLIENT)
 		F(life_fnc_gangInvite,CLIENT)
 		F(TON_fnc_clientGangKick,CLIENT)
+		F(IND_fnc_clientGangPromote,CLIENT)
 		F(TON_fnc_clientGangLeader,CLIENT)
 		F(life_fnc_lightHouse,CLIENT)
 		F(life_fnc_medicRequest,CLIENT)

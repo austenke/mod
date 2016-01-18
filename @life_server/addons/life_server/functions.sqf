@@ -64,6 +64,20 @@ compileFinal "
 ";
 publicVariable "TON_fnc_clientGangKick";
 
+IND_fnc_clientGangPromote =
+compileFinal "
+	private[""_unit"",""_group""];
+	_unit = _this select 0;
+	_group = _this select 1;
+	if(isNil ""_unit"" OR isNil ""_group"") exitWith {};
+	if(player == _unit && (group player) == _group) then
+	{
+		life_gangRank = life_gangRank + 1;
+		hint ""You have been promoted."";
+	};
+";
+publicVariable "IND_fnc_clientGangPromote";
+
 TON_fnc_clientGetKey =
 compileFinal "
 	private[""_vehicle"",""_unit"",""_giver""];
