@@ -15,8 +15,10 @@ _lastItems = [];
 _itemInfo = _this GVAR ["item",[]]; if(EQUAL(count _itemInfo,0)) exitWith {deleteVehicle _this;};
 _itemName = ITEM_NAME(SEL(_itemInfo,0));
 
-while {!isNull (findDisplay 1520)}; do
+while {!isNull (findDisplay 1520)} do
 {
+	_items = [];
+	_objects = nearestObjects [player, [], 4];
 	{
 		if (count (_x getVariable ["item",[]]) > 0) then { _items set[count _items, _x]; };
 	} forEach _objects;
