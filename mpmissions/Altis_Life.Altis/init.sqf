@@ -6,7 +6,8 @@ life_versionInfo = "Altis Life RPG v3.1.5";
 [] execVM "KRON_Strings.sqf";
 [] execVM "scripts\Visuals.sqf";
 [] execVM "scripts\fn_statusBar.sqf";
-[] execVM "scripts\noVoice.sqf"
+[] execVM "scripts\noVoice.sqf";
+[] execVM "scripts\removeAnimals.sqf";
 [] execVM "IgiLoad\IgiLoadInit.sqf";
 [] execVM "core\welcome.sqf";
 
