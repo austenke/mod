@@ -25,7 +25,7 @@ while {!isNull (findDisplay 1520)} do
 		ctrlEnable [1522, (count _items > 0)];
 		lbClear _list;
 		{
-			_itemInfo = _this GVAR ["item", ["Unknown",0]];
+			_itemInfo = _x getVariable ["item", ["Unknown",0]];
 			if (_itemInfo select 0 == "money") then { _list lbAdd format["$%1 Cash", [_itemInfo select 1] call life_fnc_numberText]; }
 			else { _list lbAdd format["%1x %2", _itemInfo select 1, [([_itemInfo select 0,0] call life_fnc_varHandle)] call life_fnc_varToStr]; };
 		} foreach _items;
