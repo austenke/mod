@@ -12,7 +12,6 @@ life_pickup_open = true;
 
 _list = ((findDisplay 1520) displayCtrl 1521);
 _lastItems = [];
-_itemName = ITEM_NAME(SEL(_itemInfo,0));
 
 while {!isNull (findDisplay 1520)} do
 {
@@ -27,6 +26,7 @@ while {!isNull (findDisplay 1520)} do
 		ctrlEnable [1522, (count _items > 0)];
 		lbClear _list;
 		{
+			_itemName = ITEM_NAME(SEL(_itemInfo,0));
 			_itemInfo = _x getVariable ["item",[]]; if(count _itemInfo == 0) exitWith {deleteVehicle _x;};
 			//_itemInfo = _x getVariable ["item", ["Unknown",0]];
 			if (_itemInfo select 0 == "money") then { _list lbAdd format["$%1 Cash", [_itemInfo select 1] call life_fnc_numberText]; }
