@@ -79,6 +79,11 @@ switch(_mode) do {
 		_value1 = [_this,2,""] call BIS_fnc_param;
 		_query = format["updateLocation:%1:%2",_value1,_uid];
 	};
+
+	case 9: {
+		_value1 = [_this,2,""] call BIS_fnc_param;
+		_query = format["updateRank:%1:%2",_value1,_uid];
+	};
 };
 
 diag_log format ["Update Partial Call -- _query: %1", _query];

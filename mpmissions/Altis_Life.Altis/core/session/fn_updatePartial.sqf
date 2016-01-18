@@ -48,9 +48,14 @@ switch(_mode) do {
 		_packet set[2,CASH];
 		_packet set[4,BANK];
 	};
+
 	case 8: {
 		if (alive player) then {_posInfo = getPosATL player;} else {_posInfo = "";};
 		_packet set[2,_posInfo];
+	};
+
+	case 9: {
+		_packet set[2,life_gangRank];
 	};
 };
 
