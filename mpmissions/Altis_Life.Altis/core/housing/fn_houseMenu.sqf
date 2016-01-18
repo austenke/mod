@@ -48,32 +48,7 @@ if(_curTarget isKindOf "House_F" && playerSide == west) exitWith {
 		
 		_Btn2 ctrlSetText localize "STR_pInAct_CloseOpen";
 		_Btn2 buttonSetAction "[life_pInact_curTarget] call life_fnc_doorAnimate; closeDialog 0;";
-		_Btn2 ctrlShow true;
-		
-	} else {
-		if(!isNil {_curTarget GVAR "house_owner"}) then {
-			_Btn1 ctrlSetText localize "STR_House_Raid_Owner";
-			_Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_copHouseOwner;";
-			_Btn1 ctrlShow true;
-			
-			_Btn2 ctrlSetText localize "STR_pInAct_BreakDown";
-			_Btn2 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_copBreakDoor; closeDialog 0;";
-			_Btn2 ctrlShow true;
-			
-			_Btn3 ctrlSetText localize "STR_pInAct_SearchHouse";
-			_Btn3 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_raidHouse; closeDialog 0;";
-			_Btn3 ctrlShow true;
-			
-			if(player distance _curTarget > 3.6) then {
-				_Btn3 ctrlEnable false;
-			};
-			
-			_Btn4 ctrlSetText localize "STR_pInAct_LockHouse";
-			_Btn4 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_lockupHouse; closeDialog 0;";
-			_Btn4 ctrlShow true;
-		} else {
-			closeDialog 0;
-		};
+		_Btn2 ctrlShow true;	
 	};
 };
 
