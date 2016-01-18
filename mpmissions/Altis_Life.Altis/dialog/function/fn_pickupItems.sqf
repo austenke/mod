@@ -1,4 +1,3 @@
-#include <macro.h>
 /*
 	Description:
 	Dialog code for picking up items.
