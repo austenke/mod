@@ -1,9 +1,20 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//	IgiLoad v0.9.10_RC_d																					//
+//	IgiLoad v0.9.10_RC_e_(Arma3_1.32)																		//
 //	Version info: This is not official version of IgiLoad it is only WIP (RC)								//
 //	Author: Igi_PL																							//
 //	Web: http://www.igipl.net/																				//
-//	Version date: 2014.06.22																				//
+//	Version date: 2014.10.16																				//
+//																											//
+//	USE:																									//
+//	1. In mission "init.sqf" add line: "0 = execVM "IgiLoad\IgiLoadInit.sqf";".								//
+//	2. In vehicles "INITIALIZATION" field type: "0 = [this] execVM "IgiLoad\IgiLoad.sqf";"					//
+//	3. Unload from script or trigger:																		//
+//		a) Unloading cargo from script. Force unload: "0 = [Car, true, "L"] spawn IL_Do_Unload;"			//
+//		b) Unloading cargo from script. Force unload: "0 = [Car, true] spawn IL_Do_Unload;"					//
+//		c) Unloading cargo from script. Force unload: "0 = [Car] spawn IL_Do_Unload;"						//
+//	4. Loading cargo from script. Force load: "0 = [Car, [typeOf Box], "B", true, Box] spawn IL_Do_Load;"	//
+//																											//
+//	Ways from points 1 and 2 can not be used simultaneously!!!												//
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -38,7 +49,7 @@ if (isnil "IL_Variables") then
 	//-1 - do nothing
 	//0 - set to 0
 	//1 - keep such as before loading/unloading
-	IL_CDamage = 1;
+	IL_CDamage = 0;
 
 	//AddAction menu position
 	IL_Action_LU_Priority = 30; //Load and (para)unload
@@ -49,10 +60,13 @@ if (isnil "IL_Variables") then
 	IL_Num_Slots_OFFROAD = -2;
 	IL_Num_Slots_VAN = -3;
 	IL_Num_Slots_MOHAWK = -7;
+	IL_num_Slots_CHINOOK = -8;
 	IL_Num_Slots_KAMAZ = -4;
 	IL_Num_Slots_TEMPEST = -5;
 	IL_Num_Slots_HEMTT = -6;
 	IL_Num_Slots_MH9 = -1;
+	IL_Num_Slots_C130J = -12;
+	IL_Num_Slots_C17 = -22;
 	
 	//Player addScore after loading and unloading
 	IL_Load_Score = 20;
@@ -71,9 +85,9 @@ if (isnil "IL_Variables") then
 
 	//Set smoke and light for parachute drop.
 	IL_Para_Smoke = true;
-	IL_Para_Light = true;
+	IL_Para_Light = false;
 	//Additional smoke after landing
-	IL_Para_Smoke_Add = true;
+	IL_Para_Smoke_Add = false;
 	//Additional light after landing
 	IL_Para_Light_Add = true;
 	//Smoke and light color
@@ -103,43 +117,45 @@ if (isnil "IL_Variables") then
 	IL_Mass = true;
 	
 	// Supported vehicles
-	IL_Supported_Vehicles_OFFROAD = ["C_Offroad_01_F", "B_G_Offroad_01_F"];
+	IL_Supported_Vehicles_OFFROAD = ["C_Offroad_01_F", "B_G_Offroad_01_F", "B_mas_mar_Offroad_01_F"];
 	IL_Supported_Vehicles_VAN = ["C_Van_01_box_F", "B_G_Van_01_transport_F", "C_Van_01_transport_F"];
-	IL_Supported_Vehicles_HEMTT = ["B_Truck_01_covered_F", "B_Truck_01_transport_F", "B_Truck_01_box_F"];
-	IL_Supported_Vehicles_KAMAZ = ["I_Truck_02_transport_F", "O_Truck_02_transport_F", "I_Truck_02_covered_F", "O_Truck_02_covered_F"];
+	IL_Supported_Vehicles_HEMTT = ["B_Truck_01_covered_F", "B_Truck_01_transport_F", "B_Truck_01_box_F", "Marinir_Truck_01_box_FG", "Marinir_Truck_01_transport_FG", "Marinir_Truck_01_covered_FG", "B_mas_mar_Truck_01_covered_F", "B_mas_mar_Truck_01_transport_F"];
+	IL_Supported_Vehicles_KAMAZ = ["I_Truck_02_transport_F", "O_Truck_02_transport_F", "I_Truck_02_covered_F", "O_Truck_02_covered_F", "caf_HLVW_open_AR", "caf_HLVW_open", "caf_HLVW_covered_ar", "caf_HLVW_covered"];
 	IL_Supported_Vehicles_TEMPEST = ["O_Truck_03_transport_F", "O_Truck_03_covered_F"];
-	IL_Supported_Vehicles_MOHAWK = ["I_Heli_Transport_02_F"];
-	IL_Supported_Vehicles_BOAT = ["C_Rubberboat","C_Boat_Civil_01_F","C_Boat_Civil_01_rescue_F"];
-	IL_Supported_Vehicles_MH9 = ["B_Heli_Light_01_F","C_Heli_Light_01_civil_F"];
+	IL_Supported_Vehicles_MOHAWK = ["I_Heli_Transport_02_F", "CH49_Mohawk_FG", "Marinir_CH49_Mohawk_FG"];
+	IL_Supported_Vehicles_CHINOOK = ["CH_147F", "CH_47F", "kyo_MH47E_HC", "kyo_MH47E_Ramp", "kyo_MH47E_base"];
+	IL_Supported_Vehicles_MH9 = ["B_Heli_Light_01_F", "B_mas_mar_Heli_Light_01_F"];
+	IL_Supported_Vehicles_C130J = ["C130J_Cargo", "C130J"];
+	IL_Supported_Vehicles_C17 = ["globemaster_c17_altus", "globemaster_c17_701", "globemaster_c17_703", "globemaster_c17_704", "globemaster_c17_705", "globemaster_c17_dover", "globemaster_c17_edwards", "globemaster_c17_Elmendorf", "globemaster_c17", "globemaster_c17_hickam", "globemaster_c17_IAF", "globemaster_c17_March", "globemaster_c17_mcchord", "globemaster_c17_McGuire", "globemaster_c17_Mississipi", "globemaster_c17_NATO", "globemaster_c17_natoPAPA", "globemaster_c17_Qatar", "globemaster_c17_RAAF", "globemaster_c17_ZZ172_RAF", "globemaster_c17_RCAF", "globemaster_c17_Stewart", "globemaster_c17_therock", "globemaster_c17_travis", "globemaster_c17_UAE", "globemaster_c17_wright_patt"];
 	
-	IL_Supported_Vehicles_All = IL_Supported_Vehicles_BOAT + IL_Supported_Vehicles_MH9 + IL_Supported_Vehicles_MOHAWK + IL_Supported_Vehicles_KAMAZ + IL_Supported_Vehicles_TEMPEST + IL_Supported_Vehicles_HEMTT + IL_Supported_Vehicles_VAN + IL_Supported_Vehicles_OFFROAD;
+	IL_Supported_Vehicles_All = IL_Supported_Vehicles_C130J + IL_Supported_Vehicles_C17 + IL_Supported_Vehicles_MH9 + IL_Supported_Vehicles_MOHAWK + IL_Supported_Vehicles_KAMAZ + IL_Supported_Vehicles_TEMPEST + IL_Supported_Vehicles_HEMTT + IL_Supported_Vehicles_VAN + IL_Supported_Vehicles_OFFROAD + IL_Supported_Vehicles_CHINOOK;
 
 	// Vehicles with the ability to dropping the load on the parachute
-	IL_Para_Drop_Vehicles = IL_Supported_Vehicles_MH9 + IL_Supported_Vehicles_MOHAWK;
+	IL_Para_Drop_Vehicles = IL_Supported_Vehicles_MH9 + IL_Supported_Vehicles_MOHAWK + IL_Supported_Vehicles_C130J + IL_Supported_Vehicles_C17 + IL_Supported_Vehicles_CHINOOK;
 
 	//Supported cargo
-	IL_Supported_HEMTT = ["B_Truck_01_covered_F", "B_Truck_01_transport_F", "B_Truck_01_box_F", "B_Truck_01_mover_F", "B_Truck_01_ammo_F", "B_Truck_01_fuel_F", "B_Truck_01_medical_F", "B_Truck_01_Repair_F"];
-	IL_Supported_KAMAZ = ["I_Truck_02_transport_F", "O_Truck_02_transport_F", "I_Truck_02_covered_F", "O_Truck_02_covered_F"];
+	IL_Supported_HEMTT = ["B_Truck_01_covered_F", "B_Truck_01_transport_F", "B_Truck_01_box_F", "Marinir_Truck_01_box_FG", "Marinir_Truck_01_transport_FG", "Marinir_Truck_01_covered_FG", "B_mas_mar_Truck_01_covered_F", "B_mas_mar_Truck_01_transport_F", "B_Truck_01_mover_F", "B_Truck_01_ammo_F", "B_Truck_01_fuel_F", "B_Truck_01_medical_F", "B_Truck_01_Repair_F"];
+	IL_Supported_KAMAZ = ["I_Truck_02_transport_F", "O_Truck_02_transport_F", "I_Truck_02_covered_F", "O_Truck_02_covered_F", "caf_HLVW_open_AR", "caf_HLVW_open", "caf_HLVW_covered_ar", "caf_HLVW_covered"];
 	IL_Supported_TEMPEST = ["O_Truck_03_transport_F", "O_Truck_03_covered_F"];
-	IL_Supported_Strider = ["I_MRAP_03_F", "I_MRAP_03_gmg_F", "I_MRAP_03_hmg_F"];
-	IL_Supported_Hunter = ["B_MRAP_01_F", "B_MRAP_01_gmg_F", "B_MRAP_01_hmg_F"];
+	IL_Supported_Strider = ["I_MRAP_03_F", "I_MRAP_03_gmg_F", "I_MRAP_03_hmg_F", "CAF_TAPV_ar", "caf_tapv_gl_ar", "caf_tapv_50_ar", "CAF_TAPV_tw", "caf_tapv_gl_tw", "caf_tapv_50_tw", "Night_B_MRAP_03_F", "Night_B_MRAP_03_gmg_F", "Night_B_MRAP_03_hmg_F"];
+	IL_Supported_Hunter = ["B_MRAP_01_F", "B_MRAP_01_gmg_F", "B_MRAP_01_hmg_F", "Marinir_B_MRAP_01_FG" , "Marinir_MRAP_01_gmg_FG", "Marinir_MRAP_01_hmg_FG", "B_mas_mar_MRAP_01_med_F", "B_mas_mar_MRAP_01_F", "B_mas_mar_MRAP_01_gmg_F", "B_mas_mar_MRAP_01_hmg_F"];
 	IL_Supported_Ifrit = ["O_MRAP_02_F", "O_MRAP_02_gmg_F", "O_MRAP_02_hmg_F"];
 	IL_Supported_UGV = ["B_UGV_01_rcws_F", "B_UGV_01_F", "O_UGV_01_rcws_F", "O_UGV_01_F", "I_UGV_01_rcws_F", "I_UGV_01_F"];
 	IL_Supported_VAN = ["C_Van_01_box_F", "B_G_Van_01_transport_F", "C_Van_01_transport_F"];
-	IL_Supported_OFFROAD = ["C_Offroad_01_F", "B_G_Offroad_01_F", "B_G_Offroad_01_armed_F"];
-	IL_Supported_BOAT = ["C_Rubberboat","C_Boat_Civil_01_F","C_Boat_Civil_01_rescue_F"];
+	IL_Supported_OFFROAD = ["C_Offroad_01_F", "B_G_Offroad_01_F", "B_G_Offroad_01_armed_F", "JTF2_Offroad_armed_01", "B_mas_mar_Offroad_01_F", "B_mas_mar_Offroad_01_armed_F"];
 	IL_Supported_SUV = ["C_SUV_01_F"];
 	IL_Supported_Hatchback = ["C_Hatchback_01_F", "C_Hatchback_01_sport_F"];
+	IL_Supported_Hummvee = ["rc_hmmwv", "HMMWV2", "HMMWV_M1035", "M1114_AGS_ACR", "HMMWV_M1151_M2", "HMMWV2_M2", "HMMWV2_MK19", "HMMWV2_TOW", "HMMWV", "HMMWV_M2", "HMMWV_MK19", "HMMWV_TOW"];
 	IL_Supported_Quadbike = ["I_Quadbike_01_F", "C_Quadbike_01_F", "O_Quadbike_01_F", "B_G_Quadbike_01_F", "B_Quadbike_01_F", "CAF_Quadbike_OD", "CAF_Quadbike_AR", "Marinir_Quadbike_01_FG", "B_mas_mar_Quadbike_01_F"];
-	IL_Supported_Supply_Crate = ["IG_supplyCrate_F", "O_supplyCrate_F", "I_supplyCrate_F", "C_supplyCrate_F"];
+	IL_Supported_Supply_Crate = ["B_supplyCrate_F", "IG_supplyCrate_F", "O_supplyCrate_F", "I_supplyCrate_F", "C_supplyCrate_F"];
 	IL_Supported_Veh_Ammo = ["Box_NATO_AmmoVeh_F", "Box_East_AmmoVeh_F", "Box_IND_AmmoVeh_F", "Land_CargoBox_V1_F", "ASC_B_box"];
-	IL_Supported_Barrel = ["Land_BarrelEmpty_F", "Land_BarrelEmpty_grey_F", "Land_BarrelSand_F", "Land_BarrelSand_grey_F", "Land_BarrelTrash_F", "Land_BarrelTrash_grey_F", "Land_BarrelWater_grey_F"];//, "Land_MetalBarrel_empty_F", "MetalBarrel_burning_F"];
+	IL_Supported_Barrel = ["Land_BarrelEmpty_F", "Land_BarrelEmpty_grey_F", "Land_BarrelSand_F", "Land_BarrelSand_grey_F", "Land_BarrelTrash_F", "Land_BarrelTrash_grey_F", "Land_BarrelWater_F", "Land_BarrelWater_grey_F", "Land_MetalBarrel_F"];//, "Land_MetalBarrel_empty_F", "MetalBarrel_burning_F"];
 	IL_Supported_Tank = ["Land_WaterBarrel_F", "Land_WaterTank_F"];
 	IL_Supported_Rubberboat = ["I_Boat_Transport_01_F", "O_Boat_Transport_01_F", "B_G_Boat_Transport_01_F", "B_Boat_Transport_01_F", "C_Rubberboat", "O_Lifeboat", "B_Lifeboat", "Marinir_duck_base_F", "B_mas_mar_Boat_Transport_01_F"];
 	IL_Supported_SDV = ["I_SDV_01_F", "O_SDV_01_F", "B_SDV_01_F", "B_mas_mar_SDV_01_F"];
 	IL_Supported_Box_H1 = ["Box_NATO_Wps_F", "Box_East_Wps_F", "Box_IND_Wps_F", "Box_East_WpsLaunch_F", "Box_NATO_WpsLaunch_F", "Box_IND_WpsLaunch_F", "Box_IND_WpsSpecial_F", "Box_East_WpsSpecial_F", "Box_NATO_WpsSpecial_F", "Box_mas_all_rifle_Wps_F", "Box_mas_us_rifle_Wps_F", "Box_mas_ru_rifle_Wps_F", "Box_mas_mar_NATO_equip_F", "Box_mas_mar_NATO_Wps_F"];
 	IL_Supported_Box_H2 = ["Box_NATO_AmmoOrd_F", "Box_East_AmmoOrd_F", "Box_IND_AmmoOrd_F", "Box_NATO_Grenades_F", "Box_East_Grenades_F", "Box_IND_Grenades_F", "Box_NATO_Ammo_F", "Box_East_Ammo_F", "Box_IND_Ammo_F", "Box_IND_Support_F", "Box_East_Support_F", "Box_NATO_Support_F"];
-	IL_Supported_Cargo20 = [];
+	IL_Supported_Cargo20 = ["Land_Cargo20_blue_F", "Land_Cargo20_brick_red_F", "Land_Cargo20_cyan_F", "Land_Cargo20_grey_F", "Land_Cargo20_light_blue_F", "Land_Cargo20_light_green_F", "Land_Cargo20_military_green_F", "Land_Cargo20_orange_F", "Land_Cargo20_red_F", "Land_Cargo20_sand_F", "Land_Cargo20_white_F", "Land_Cargo20_yellow_F"];
 	//TODO
 	//IL_Supported_Backpack = ["B_AssaultPack_blk", "B_AssaultPack_cbr", "B_AssaultPack_dgtl", "B_AssaultPack_khk", "B_AssaultPack_mcamo", "B_AssaultPack_ocamo", "B_AssaultPack_rgr", "B_AssaultPack_sgg", "B_AssaultPackG", "B_Bergen_blk", "B_Bergen_mcamo", "B_Bergen_rgr", "B_Bergen_sgg", "B_BergenC_blu", "B_BergenC_grn", "B_BergenC_red", "B_BergenG", "B_Carryall_cbr", "B_Carryall_khk", "B_Carryall_mcamo", "B_Carryall_ocamo", "B_Carryall_oli", "B_Carryall_oucamo", "B_FieldPack_blk", "B_FieldPack_cbr", "B_FieldPack_khk", "B_FieldPack_ocamo", "B_FieldPack_oli", "B_FieldPack_oucamo", "B_HuntingBackpack", "B_Kitbag_cbr", "B_Kitbag_mcamo", "B_Kitbag_sgg", "B_OutdoorPack_blk", "B_OutdoorPack_blu", "B_OutdoorPack_tan", "B_TacticalPack_blk", "B_TacticalPack_mcamo", "B_TacticalPack_ocamo", "B_TacticalPack_oli", "B_TacticalPack_rgr", "C_Bergen_blu", "C_Bergen_grn", "C_Bergen_red", "G_AssaultPack", "G_Bergen"];
 	//IL_Supported_Backpack_Support = ["B_HMG_01_support_F", "B_HMG_01_support_high_F", "B_Mortar_01_support_F", "I_Mortar_01_support_F", "O_Mortar_01_support_F"];
@@ -148,7 +164,7 @@ if (isnil "IL_Variables") then
 	//IL_Supported_Parachute = ["B_Parachute"];
 
 	//IL_Supported_Backpack_All = IL_Supported_Backpack + IL_Supported_Backpack_Support + IL_Supported_Backpack_Weapon + IL_Supported_Backpack_Uav + IL_Supported_Parachute;
-	IL_Supported_Cargo_MH9 = IL_Supported_Supply_Crate; // + IL_Supported_Barrel; // + IL_Supported_Box_H1 + IL_Supported_Box_H2;// + IL_Supported_Backpack_All;
+	IL_Supported_Cargo_MH9 = IL_Supported_Supply_Crate + IL_Supported_Barrel; // + IL_Supported_Box_H1 + IL_Supported_Box_H2;// + IL_Supported_Backpack_All;
 	
 	IL_Supported_Cargo_Veh_Offroad = IL_Supported_Quadbike;
 	IL_Supported_Cargo_NonVeh_Offroad = (IL_Supported_Supply_Crate + IL_Supported_Veh_Ammo + IL_Supported_Barrel + IL_Supported_Tank + IL_Supported_Box_H1 + IL_Supported_Box_H2);// - ["Land_WaterTank_F"];
@@ -173,6 +189,18 @@ if (isnil "IL_Variables") then
 	IL_Supported_Cargo_Veh_Mohawk = IL_Supported_Quadbike + IL_Supported_Rubberboat + IL_Supported_SDV + IL_Supported_Hatchback + IL_Supported_UGV;
 	IL_Supported_Cargo_NonVeh_Mohawk = IL_Supported_Supply_Crate + IL_Supported_Veh_Ammo + IL_Supported_Barrel + IL_Supported_Tank;
 	IL_Supported_Cargo_Mohawk = IL_Supported_Cargo_Veh_Mohawk + IL_Supported_Cargo_NonVeh_Mohawk;
+	
+	IL_Supported_Cargo_Veh_CHINOOK = IL_Supported_Cargo_Veh_Mohawk;
+	IL_Supported_Cargo_NonVeh_CHINOOK = IL_Supported_Cargo_NonVeh_Mohawk;
+	IL_Supported_Cargo_CHINOOK = IL_Supported_Cargo_Veh_CHINOOK + IL_Supported_Cargo_NonVeh_CHINOOK;
+	
+	IL_Supported_Cargo_Veh_C130J = IL_Supported_Cargo_Veh_HEMTT + IL_Supported_Strider + IL_Supported_Hunter + IL_Supported_Ifrit + IL_Supported_Hummvee + IL_Supported_HEMTT;
+	IL_Supported_Cargo_NonVeh_C130J = IL_Supported_Cargo_NonVeh_Mohawk;// Damage the plane + IL_Supported_Cargo20;
+	IL_Supported_Cargo_C130J = IL_Supported_Cargo_Veh_C130J + IL_Supported_Cargo_NonVeh_C130J;
+	
+	IL_Supported_Cargo_Veh_C17 = IL_Supported_Cargo_Veh_C130J;
+	IL_Supported_Cargo_NonVeh_C17 = IL_Supported_Cargo_NonVeh_C130J;
+	IL_Supported_Cargo_C17 = IL_Supported_Cargo_Veh_C17 + IL_Supported_Cargo_NonVeh_C17;
 };
 //	END VARIABLES
 
@@ -203,14 +231,152 @@ if (isnil "IL_Procedures") then
 		_obj_type = (typeOf _obj);
 
 		if ((isNil {_obj getVariable "default_mass"}) || (_force)) then
-		{
-			if (isNil {_obj getVariable "default_mass"}) then
 			{
-				_obj setVariable["default_mass", getMass _obj];
+				if (isNil {_obj getVariable "default_mass"}) then
+				{
+					_obj setVariable["default_mass", getMass _obj, true];
+				}
+				else
+				{
+					_obj setMass (_obj getVariable "default_mass");
+				};
+			};
+		
+		if (_obj_type in IL_Supported_Vehicles_C130J) then
+		{
+			if ((isNil {_obj getVariable "box_num"}) || (_force)) then {_obj setVariable["box_num", 0, true];};
+			if ((isNil {_obj getVariable "can_load"}) || (_force)) then {_obj setVariable["can_load", true, true];};
+			if ((isNil {_obj getVariable "can_copilot"}) || (_force)) then {_obj setVariable["can_copilot", IL_Can_CoPilot, true];};
+			if ((isNil {_obj getVariable "can_outside"}) || (_force)) then {_obj setVariable["can_outside", IL_Can_Outside, true];};
+			if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", -4.57, true];};
+			if ((isNil {_obj getVariable "usable_ramp"}) || (_force)) then {_obj setVariable["usable_ramp", IL_Ramp, true];};
+			if (_obj_type == "C130J_Cargo") then
+			{
+				if ((isNil {_obj getVariable "slots_num"}) || (_force)) then {_obj setVariable["slots_num", IL_Num_Slots_C130J, true];};
+				if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", 8.5, true];};
 			}
 			else
 			{
-				_obj setMass (_obj getVariable "default_mass");
+				if ((isNil {_obj getVariable "slots_num"}) || (_force)) then {_obj setVariable["slots_num", (IL_Num_Slots_C130J / 2) - 1, true];};
+				if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", 13.5, true];};
+			};
+			
+		};
+		if (_obj_type in IL_Supported_Vehicles_C17) then
+		{
+			if ((isNil {_obj getVariable "box_num"}) || (_force)) then {_obj setVariable["box_num", 0, true];};
+			if ((isNil {_obj getVariable "slots_num"}) || (_force)) then {_obj setVariable["slots_num", IL_Num_Slots_C17, true];};
+			if ((isNil {_obj getVariable "can_load"}) || (_force)) then {_obj setVariable["can_load", true, true];};
+			if ((isNil {_obj getVariable "can_copilot"}) || (_force)) then {_obj setVariable["can_copilot", IL_Can_CoPilot, true];};
+			if ((isNil {_obj getVariable "can_outside"}) || (_force)) then {_obj setVariable["can_outside", IL_Can_Outside, true];};
+			if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", -1.25, true];};
+			if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", 16, true];};//4.5, true];};
+			if ((isNil {_obj getVariable "usable_ramp"}) || (_force)) then {_obj setVariable["usable_ramp", IL_Ramp, true];};
+		};
+		if (_obj_type in IL_Supported_Vehicles_MOHAWK) then
+		{
+			if ((isNil {_obj getVariable "box_num"}) || (_force)) then {_obj setVariable["box_num", 0, true];};
+			if ((isNil {_obj getVariable "slots_num"}) || (_force)) then {_obj setVariable["slots_num", IL_Num_Slots_MOHAWK, true];};
+			if ((isNil {_obj getVariable "can_load"}) || (_force)) then {_obj setVariable["can_load", true, true];};
+			if ((isNil {_obj getVariable "can_copilot"}) || (_force)) then {_obj setVariable["can_copilot", IL_Can_CoPilot, true];};
+			if ((isNil {_obj getVariable "can_outside"}) || (_force)) then {_obj setVariable["can_outside", IL_Can_Outside, true];};
+			if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", -2.25, true];};
+			if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", 4.5, true];};
+			if ((isNil {_obj getVariable "usable_ramp"}) || (_force)) then {_obj setVariable["usable_ramp", IL_Ramp, true];};
+		};
+		if (_obj_type in IL_Supported_Vehicles_CHINOOK) then
+		{
+			if ((isNil {_obj getVariable "box_num"}) || (_force)) then {_obj setVariable["box_num", 0, true];};
+			if ((isNil {_obj getVariable "can_load"}) || (_force)) then {_obj setVariable["can_load", true, true];};
+			if ((isNil {_obj getVariable "can_copilot"}) || (_force)) then {_obj setVariable["can_copilot", IL_Can_CoPilot, true];};
+			if ((isNil {_obj getVariable "can_outside"}) || (_force)) then {_obj setVariable["can_outside", IL_Can_Outside, true];};
+			if (_obj_type == "CH_47F") then
+			{
+				if ((isNil {_obj getVariable "slots_num"}) || (_force)) then {_obj setVariable["slots_num", IL_Num_Slots_CHINOOK - 2, true];};
+				if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", -3.1, true];};
+				if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", 4.5, true];};
+			};
+			if (_obj_type == "CH_147F") then
+			{
+				if ((isNil {_obj getVariable "slots_num"}) || (_force)) then {_obj setVariable["slots_num", IL_Num_Slots_CHINOOK, true];};
+				if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", -2.55, true];};
+				if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", 5.25, true];};
+			};
+			if (_obj_type in ["kyo_MH47E_HC", "kyo_MH47E_Ramp", "kyo_MH47E_base"]) then
+			{
+				if ((isNil {_obj getVariable "slots_num"}) || (_force)) then {_obj setVariable["slots_num", IL_Num_Slots_CHINOOK, true];};
+				if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", -1.5, true];};
+				if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", 6, true];};
+			};
+			if ((isNil {_obj getVariable "usable_ramp"}) || (_force)) then {_obj setVariable["usable_ramp", IL_Ramp, true];};
+		};
+		if (_obj_type in IL_Supported_Vehicles_MH9) then
+		{
+			if ((isNil {_obj getVariable "box_l"}) || (_force)) then {_obj setVariable["box_l", _obj, true];};
+			if ((isNil {_obj getVariable "box_r"}) || (_force)) then {_obj setVariable["box_r", _obj, true];};
+
+			if ((isNil {_obj getVariable "box_num_l"}) || (_force)) then {_obj setVariable["box_num_l", 0, true];};
+			if ((isNil {_obj getVariable "box_num_r"}) || (_force)) then {_obj setVariable["box_num_r", 0, true];};
+			if ((isNil {_obj getVariable "slots_num_l"}) || (_force)) then {_obj setVariable["slots_num_l", IL_Num_Slots_MH9, true];};
+			if ((isNil {_obj getVariable "slots_num_r"}) || (_force)) then {_obj setVariable["slots_num_r", IL_Num_Slots_MH9, true];};
+			if ((isNil {_obj getVariable "can_load"}) || (_force)) then {_obj setVariable["can_load", true, true];};
+			if ((isNil {_obj getVariable "can_copilot"}) || (_force)) then {_obj setVariable["can_copilot", IL_Can_CoPilot, true];};
+			if ((isNil {_obj getVariable "can_outside"}) || (_force)) then {_obj setVariable["can_outside", IL_Can_Outside, true];};
+			if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", -0.48, true];};
+			if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", 1, true];};
+			if ((isNil {_obj getVariable "usable_ramp"}) || (_force)) then {_obj setVariable["usable_ramp", IL_Ramp, true];};
+		};
+		if (_obj_type in IL_Supported_Vehicles_OFFROAD) then
+		{
+			if ((isNil {_obj getVariable "box_num"}) || (_force)) then {_obj setVariable["box_num", 0, true];};
+			if ((isNil {_obj getVariable "slots_num"}) || (_force)) then {_obj setVariable["slots_num", IL_Num_Slots_OFFROAD, true];};
+			if ((isNil {_obj getVariable "can_load"}) || (_force)) then {_obj setVariable["can_load", true, true];};
+			if ((isNil {_obj getVariable "can_outside"}) || (_force)) then {_obj setVariable["can_outside", IL_Can_Outside, true];};
+			if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", -0.65, true];};
+			if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", 1.5, true];};
+		};
+		if (_obj_type in IL_Supported_Vehicles_VAN) then
+		{
+			if ((isNil {_obj getVariable "box_num"}) || (_force)) then {_obj setVariable["box_num", 0, true];};
+			if ((isNil {_obj getVariable "slots_num"}) || (_force)) then {_obj setVariable["slots_num", IL_Num_Slots_VAN, true];};
+			if ((isNil {_obj getVariable "can_load"}) || (_force)) then {_obj setVariable["can_load", true, true];};
+			if ((isNil {_obj getVariable "can_outside"}) || (_force)) then {_obj setVariable["can_outside", IL_Can_Outside, true];};
+			if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", -0.6, true];};
+			if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", 1, true];};
+		};
+		if (_obj_type in IL_Supported_Vehicles_KAMAZ) then
+		{
+			if ((isNil {_obj getVariable "box_num"}) || (_force)) then {_obj setVariable["box_num", 0, true];};
+			if ((isNil {_obj getVariable "slots_num"}) || (_force)) then {_obj setVariable["slots_num", IL_Num_Slots_KAMAZ, true];};
+			if ((isNil {_obj getVariable "can_load"}) || (_force)) then {_obj setVariable["can_load", true, true];};
+			if ((isNil {_obj getVariable "can_outside"}) || (_force)) then {_obj setVariable["can_outside", IL_Can_Outside, true];};
+			if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", -0.8, true];};
+			if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", -0.5, true];};
+		};
+		if (_obj_type in IL_Supported_Vehicles_TEMPEST) then
+		{
+			if ((isNil {_obj getVariable "box_num"}) || (_force)) then {_obj setVariable["box_num", 0, true];};
+			if ((isNil {_obj getVariable "slots_num"}) || (_force)) then {_obj setVariable["slots_num", IL_Num_Slots_TEMPEST, true];};
+			if ((isNil {_obj getVariable "can_load"}) || (_force)) then {_obj setVariable["can_load", true, true];};
+			if ((isNil {_obj getVariable "can_outside"}) || (_force)) then {_obj setVariable["can_outside", IL_Can_Outside, true];};
+			if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", -0.4, true];};
+			if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", 0.5, true];};
+		};
+		if (_obj_type in IL_Supported_Vehicles_HEMTT) then
+		{
+			if ((isNil {_obj getVariable "box_num"}) || (_force)) then {_obj setVariable["box_num", 0, true];};
+			if ((isNil {_obj getVariable "slots_num"}) || (_force)) then {_obj setVariable["slots_num", IL_Num_Slots_HEMTT, true];};
+			if ((isNil {_obj getVariable "can_load"}) || (_force)) then {_obj setVariable["can_load", true, true];};
+			if ((isNil {_obj getVariable "can_outside"}) || (_force)) then {_obj setVariable["can_outside", IL_Can_Outside, true];};
+			if (_obj_type in ["B_Truck_01_box_F", "Marinir_Truck_01_box_FG"]) then
+			{
+				if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", -0.4, true];};
+				if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", 0.8, true];};
+			}
+			else
+			{
+				if ((isNil {_obj getVariable "zload"}) || (_force)) then {_obj setVariable["zload", -0.5, true];};
+				if ((isNil {_obj getVariable "load_offset"}) || (_force)) then {_obj setVariable["load_offset", 0, true];};
 			};
 		};
 	};
@@ -255,6 +421,33 @@ if (isnil "IL_Procedures") then
 			_obj setVariable["cargo_offset", 4.2, true];
 		};
 
+		if (_obj_type in IL_Supported_Hummvee) then
+		{
+			if (_obj_type in ["M1114_AGS_ACR", "HMMWV_M1151_M2"]) then
+			{
+				_obj setVariable["slots", 6, true];
+				_obj setVariable["cargo_offset", 2.2, true];
+			}
+			else
+			{
+				_obj setVariable["slots", 5, true];
+				if (_obj_type in ["HMMWV_M1035"]) then
+				{
+					_obj setVariable["cargo_offset", 1.9, true];
+				}
+				else
+				{
+					if (_obj_type in ["rc_hmmwv"]) then
+					{
+						_obj setVariable["cargo_offset", 2, true];
+					}
+					else
+					{
+						_obj setVariable["cargo_offset", 1.9, true];
+					};
+				};
+			};
+		};
 		if (_obj_type in IL_Supported_Strider) then
 		{
 			_obj setVariable["slots", 6, true];
@@ -810,8 +1003,6 @@ if (isnil "IL_Procedures") then
 		_counter = 0;
 		_done = false;
 		_turn = false;
-		
-		if (locked _v > 1) exitWith { hint "You cannot do this while your vehicle is locked.";_v setVariable["can_load", true, true]; };
 
 		if ((_obj_type in IL_Supported_Vehicles_VAN) && (_doors == "B")) then
 		{
@@ -821,17 +1012,6 @@ if (isnil "IL_Procedures") then
 			};
 			_sdist = IL_SDistL;
 			_spoint = _v modelToWorld [0,-4.5,-1.6];
-			_box_num = _v getVariable "box_num";
-			_slot_num = _v getVariable "slots_num";
-		};
-		if ((_obj_type in IL_Supported_Vehicles_BOAT) && (_doors == "B")) then
-		{
-			if (IL_DevMod) then
-			{
-				Player globalChat Format ["IgiLoad ""%1"". Do_load vehicle type: ""%2"" and doors: ""%3""", IL_Script_Inst, _obj_type, _doors];
-			};
-			_sdist = IL_SDistL;
-			_spoint = _v modelToWorld [0,-1,-0.4];
 			_box_num = _v getVariable "box_num";
 			_slot_num = _v getVariable "slots_num";
 		};
@@ -876,6 +1056,39 @@ if (isnil "IL_Procedures") then
 			};
 			_sdist = IL_SDistL;
 			_spoint = _v modelToWorld [0,-6.5 - (_v getVariable "load_offset"),0];
+			_box_num = _v getVariable "box_num";
+			_slot_num = _v getVariable "slots_num";
+		};
+		if ((_obj_type in IL_Supported_Vehicles_C130J) && (_doors == "B")) then
+		{
+			if (IL_DevMod) then
+			{
+				Player globalChat Format ["IgiLoad ""%1"". Do_load vehicle type: ""%2"" and doors: ""%3""", IL_Script_Inst, _obj_type, _doors];
+			};
+			_sdist = IL_SDistL + IL_SDistL_Heli_offset;
+			_spoint = _v modelToWorld [0,-9,-5.4];
+			_box_num = _v getVariable "box_num";
+			_slot_num = _v getVariable "slots_num";
+		};
+		if ((_obj_type in IL_Supported_Vehicles_C17) && (_doors == "B")) then
+		{
+			if (IL_DevMod) then
+			{
+				Player globalChat Format ["IgiLoad ""%1"". Do_load vehicle type: ""%2"" and doors: ""%3""", IL_Script_Inst, _obj_type, _doors];
+			};
+			_sdist = IL_SDistL + IL_SDistL_Heli_offset;
+			_spoint = _v modelToWorld [0,-16.5,-3];//Ramp end [0,-13.5,-3.2]
+			_box_num = _v getVariable "box_num";
+			_slot_num = _v getVariable "slots_num";
+		};
+		if ((_obj_type in IL_Supported_Vehicles_CHINOOK) && (_doors == "B")) then
+		{
+			if (IL_DevMod) then
+			{
+				Player globalChat Format ["IgiLoad ""%1"". Do_load vehicle type: ""%2"" and doors: ""%3""", IL_Script_Inst, _obj_type, _doors];
+			};
+			_sdist = IL_SDistL + IL_SDistL_Heli_offset;
+			_spoint = _v modelToWorld [0,-9,-3];
 			_box_num = _v getVariable "box_num";
 			_slot_num = _v getVariable "slots_num";
 		};
@@ -925,184 +1138,182 @@ if (isnil "IL_Procedures") then
 		if (count (_obj_lst) > 0) then
 		{
 			{
-				if (locked _x < 2 || playerSide == west) then
+				if (IL_DevMod) then
 				{
-					_vtrunk = _x getVariable ["Trunk", [[],0]];
-					if (count (_vtrunk select 0) < 1) then
+					Player globalChat Format ["IgiLoad ""%1"". Cargo: ""%2"" found.", IL_Script_Inst, _x];
+				};
+				if (isNil {_x getVariable "attachedPos"}) then
+				{
+					if (IL_DevMod) then
 					{
-						if (IL_DevMod) then
-						{
-							Player globalChat Format ["IgiLoad ""%1"". Cargo: ""%2"" found.", IL_Script_Inst, _x];
-						};
-						if (isNil {_x getVariable "attachedPos"}) then
-						{
-							if (IL_DevMod) then
-							{
-								Player globalChat Format ["IgiLoad ""%1"". Init box: ""%2"".", IL_Script_Inst, _x];
-							};
-							[_x] call IL_Init_Box;
-						};
-						if ((typeOf _x) in (IL_Supported_Cargo20 + ["Land_WaterTank_F"])) then
-						{
-							_turn = true;
-						};
-						//It allows you to load oversize loads, but they must be on the list of supported cargo!!!
-						if ((abs(_slot_num - _box_num) < (_x getVariable "slots")) && (_box_num != 0)) then
-						{
-							[_v, "This cargo is to big. "] call IL_Vehicle_Chat;
-						}
-						else
-						{
-							if (IL_DevMod) then
-							{
-								Player globalChat Format ["IgiLoad ""%1"". _box_num: ""%2"" _slot_num: ""%3""", IL_Script_Inst,  _box_num, _slot_num];
-							};
-							if (_obj_type in IL_Supported_Vehicles_MH9) then
-							{
-								_turn = !_turn;
-							};
-							if ((_box_num > _slot_num) && !_done) then
-							{
-								[_v, Format ["Loading ""%1"" on ""%2"" started", getText(configFile >> "cfgVehicles" >> typeOf _x >> "displayName"), getText(configFile >> "cfgVehicles" >> typeOf _v >> "displayName")]] call IL_Vehicle_Chat;
-								_done = true;
-								_counter = (_box_num);
-								_zload = (_v getVariable "zload") + (_x getVariable "zload_cargo");
-								_cargo_offset = (_v getVariable "load_offset") + (_x getVariable "cargo_offset");
-								if ((typeOf _x) in IL_Supported_UGV) then
-								{
-									_x_cargo_offset = -0.4;
-								}
-								else
-								{
-									_x_cargo_offset = 0;
-								};
-								_damage = getDammage _x;
-								
-								if ((typeOf _x) in IL_Supported_SDV) then
-								{
-									_x animate ["periscope", 3]; 
-									_x animate ["Antenna", 3]; 
-									_x animate ["HideScope", 3]; 
-									_x animate["display_on_R", 1];
-									//animationPhase
-									[_v, "Waiting for periscope."] call IL_Vehicle_Chat;
-									while {_x animationPhase "periscope" < 3} do
-									{
-										sleep 1;
-									};
-								};
-
-								if ((_obj_type in IL_Supported_Vehicles_VAN) && (_doors == "B")) then
-								{
-									[_v, _x, [_x_cargo_offset,-4.5,_zload], [_x_cargo_offset,_counter + 0.25 - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
-								};
-								if ((_obj_type in IL_Supported_Vehicles_OFFROAD) && (_doors == "B")) then
-								{
-									[_v, _x, [_x_cargo_offset,-4.5,_zload], [_x_cargo_offset,_counter + 0.25 - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
-								};
-								if ((_obj_type in IL_Supported_Vehicles_BOAT) && (_doors == "B")) then
-								{
-									[_v, _x, [_x_cargo_offset,-1,_zload], [_x_cargo_offset,_counter + 0.25 - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
-								};
-								if ((_obj_type in IL_Supported_Vehicles_KAMAZ) && (_doors == "B")) then
-								{
-									[_v, _x, [_x_cargo_offset,-6 - _cargo_offset,_zload], [_x_cargo_offset,_counter + 0.25 - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
-								};
-								if ((_obj_type in IL_Supported_Vehicles_HEMTT) && (_doors == "B")) then
-								{
-									[_v, _x, [_x_cargo_offset,-7 - _cargo_offset,_zload], [_x_cargo_offset,_counter + 0.25 - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
-								};
-								if ((_obj_type in IL_Supported_Vehicles_TEMPEST) && (_doors == "B")) then
-								{
-									[_v, _x, [_x_cargo_offset,-6.5 - _cargo_offset,_zload], [_x_cargo_offset,_counter - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
-								};
-								if ((_obj_type in IL_Supported_Vehicles_MOHAWK)  && (_doors == "B")) then
-								{
-									[_v, _x, [_x_cargo_offset,-6,-0.75 + _zload], [_x_cargo_offset,-4.5,-0.75 + _zload], 1, _turn] call IL_Move_Attach;
-									[_v, _x, [_x_cargo_offset,-4.5,-0.75 + _zload], [_x_cargo_offset,-1.5,_zload], 1, _turn] call IL_Move_Attach;
-									[_v, _x, [_x_cargo_offset,-1.5,_zload], [_x_cargo_offset,_counter + 9 - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
-								};
-								if ((_obj_type in IL_Supported_Vehicles_MH9)  && (_doors == "L")) then
-								{
-									[_v, _x, [_x_cargo_offset-3,1.3,-1.3 + _zload], [_x_cargo_offset-1,-0.2,_zload], 1, _turn] call IL_Move_Attach;
-								};
-								if ((_obj_type in IL_Supported_Vehicles_MH9)  && (_doors == "R")) then
-								{
-									[_v, _x, [_x_cargo_offset+3,1.3,-1.3 + _zload], [_x_cargo_offset+1,-0.2,_zload], 1, _turn] call IL_Move_Attach;
-								};
-
-								_counter = _counter - (_x getVariable "slots");
-
-								if (_doors == "B") then
-								{
-									_v setVariable["box_num", _counter, true];
-								};
-								if ((_obj_type in IL_Supported_Vehicles_MH9)  && (_doors == "L")) then
-								{
-									_v setVariable["box_num_l", _counter, true];
-									_v setVariable["box_l", _x, true];
-								};
-								if ((_obj_type in IL_Supported_Vehicles_MH9)  && (_doors == "R")) then
-								{
-									_v setVariable["box_num_r", _counter, true];
-									_v setVariable["box_r", _x, true];
-								};
-								
-								[_v] call IL_SetNewMass;
-								
-								if (_x isKindOf "AllVehicles") then
-								{
-									_x forceSpeed 0;
-								};
-								
-								_x setVariable["attachedPos", _counter, true];
-								_x setVariable["attachedTruck", _v, true];
-								_x setVariable["doors", _doors, true];
-								
-								if (IL_CDamage == 0) then
-								{
-									_x setDamage 0;
-								};
-								
-								if (IL_CDamage == 1) then
-								{
-									_x setDamage _damage;
-									if (_damage != (getDammage _x)) then
-									{
-										sleep 1;
-										_x setDamage _damage;
-									};
-								};
-								
-								if (_counter > _slot_num) then
-								{
-									[_v, Format ["""%1"" is loaded onto ""%2"". Free slots: ""%3"".", getText(configFile >> "cfgVehicles" >> typeOf _x >> "displayName"), getText(configFile >> "cfgVehicles" >> typeOf _v >> "displayName"), abs(_slot_num - _counter)], true] call IL_Vehicle_Chat;
-								}
-								else
-								{
-									[_v, Format ["""%1"" is loaded onto ""%2"" There is no more space.", getText(configFile >> "cfgVehicles" >> typeOf _x >> "displayName"), getText(configFile >> "cfgVehicles" >> typeOf _v >> "displayName")], true] call IL_Vehicle_Chat;
-								};
-								_x setVariable ["vLoaded", true, true];
-								//player addScore IL_Load_Score;
-								[Player, IL_Load_Score] call IL_Score;
-							}
-							else
-							{
-								if ((_box_num > _slot_num) && !_done) then
-								{
-									[_v, _NoBoxHint] call IL_Vehicle_Chat;
-								};
-							};
-						};
-					}
-					else
-					{
-						[_v, Format ["""%1"" could not be loaded with items in the trunk.", getText(configFile >> "cfgVehicles" >> typeOf _x >> "displayName")], true] call IL_Vehicle_Chat;
+						Player globalChat Format ["IgiLoad ""%1"". Init box: ""%2"".", IL_Script_Inst, _x];
 					};
+					[_x] call IL_Init_Box;
+				};
+				if ((typeOf _x) in (IL_Supported_Cargo20 + ["Land_WaterTank_F"])) then
+				{
+					_turn = true;
+				};
+				//It allows you to load oversize loads, but they must be on the list of supported cargo!!!
+				if ((abs(_slot_num - _box_num) < (_x getVariable "slots")) && (_box_num != 0)) then
+				{
+					[_v, "This cargo is to big. "] call IL_Vehicle_Chat;
 				}
 				else
 				{
-					[_v, Format ["""%1"" could not be loaded as it's locked.", getText(configFile >> "cfgVehicles" >> typeOf _x >> "displayName")], true] call IL_Vehicle_Chat;
+					if (IL_DevMod) then
+					{
+						Player globalChat Format ["IgiLoad ""%1"". _box_num: ""%2"" _slot_num: ""%3""", IL_Script_Inst,  _box_num, _slot_num];
+					};
+					if (_obj_type in IL_Supported_Vehicles_MH9) then
+					{
+						_turn = !_turn;
+					};
+					if ((_box_num > _slot_num) && !_done) then
+					{
+						[_v, Format ["Loading ""%1"" on ""%2"" started", getText(configFile >> "cfgVehicles" >> typeOf _x >> "displayName"), getText(configFile >> "cfgVehicles" >> typeOf _v >> "displayName")]] call IL_Vehicle_Chat;
+						_done = true;
+						_counter = (_box_num);
+						_zload = (_v getVariable "zload") + (_x getVariable "zload_cargo");
+						_cargo_offset = (_v getVariable "load_offset") + (_x getVariable "cargo_offset");
+						if ((typeOf _x) in IL_Supported_UGV) then
+						{
+							_x_cargo_offset = -0.4;
+						}
+						else
+						{
+							_x_cargo_offset = 0;
+						};
+						_damage = getDammage _x;
+						
+						if ((typeOf _x) in IL_Supported_SDV) then
+						{
+							_x animate ["periscope", 3]; 
+							_x animate ["Antenna", 3]; 
+							_x animate ["HideScope", 3]; 
+							_x animate["display_on_R", 1];
+							//animationPhase
+							[_v, "Waiting for periscope."] call IL_Vehicle_Chat;
+							while {_x animationPhase "periscope" < 3} do
+							{
+								sleep 1;
+							};
+						};
+
+						if ((_obj_type in IL_Supported_Vehicles_VAN) && (_doors == "B")) then
+						{
+							[_v, _x, [_x_cargo_offset,-4.5,_zload], [_x_cargo_offset,_counter + 0.25 - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
+						};
+						if ((_obj_type in IL_Supported_Vehicles_OFFROAD) && (_doors == "B")) then
+						{
+							[_v, _x, [_x_cargo_offset,-4.5,_zload], [_x_cargo_offset,_counter + 0.25 - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
+						};
+						if ((_obj_type in IL_Supported_Vehicles_KAMAZ) && (_doors == "B")) then
+						{
+							[_v, _x, [_x_cargo_offset,-6 - _cargo_offset,_zload], [_x_cargo_offset,_counter + 0.25 - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
+						};
+						if ((_obj_type in IL_Supported_Vehicles_HEMTT) && (_doors == "B")) then
+						{
+							[_v, _x, [_x_cargo_offset,-7 - _cargo_offset,_zload], [_x_cargo_offset,_counter + 0.25 - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
+						};
+						if ((_obj_type in IL_Supported_Vehicles_TEMPEST) && (_doors == "B")) then
+						{
+							[_v, _x, [_x_cargo_offset,-6.5 - _cargo_offset,_zload], [_x_cargo_offset,_counter - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
+						};
+						if ((_obj_type in IL_Supported_Vehicles_C130J)  && (_doors == "B")) then
+						{
+							[_v, _x, [_x_cargo_offset,-9,-0.93 + _zload], [_x_cargo_offset,-8,-0.93 + _zload], 1, _turn] call IL_Move_Attach;
+							[_v, _x, [_x_cargo_offset,-7,-0.93 + _zload], [_x_cargo_offset,-3.5,_zload], 1, _turn] call IL_Move_Attach;
+							[_v, _x, [_x_cargo_offset,-2.5,_zload], [_x_cargo_offset,_counter + 17 - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
+						};
+						if ((_obj_type in IL_Supported_Vehicles_C17)  && (_doors == "B")) then
+						{
+							[_v, _x, [_x_cargo_offset,-16.5,-1.75 + _zload], [_x_cargo_offset,-14,-1.75 + _zload], 1, _turn] call IL_Move_Attach;
+							[_v, _x, [_x_cargo_offset,-13,-1.75 + _zload], [_x_cargo_offset,-6.5,_zload], 1, _turn] call IL_Move_Attach;
+							[_v, _x, [_x_cargo_offset,-5.5,_zload], [_x_cargo_offset,_counter + 32 - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
+						};
+						if ((_obj_type in IL_Supported_Vehicles_CHINOOK)  && (_doors == "B")) then
+						{
+							[_v, _x, [_x_cargo_offset,-9,-0.75 + _zload], [_x_cargo_offset,-7,-0.75 + _zload], 1, _turn] call IL_Move_Attach;
+							[_v, _x, [_x_cargo_offset,-7,-0.75 + _zload], [_x_cargo_offset,-4,_zload], 1, _turn] call IL_Move_Attach;
+							[_v, _x, [_x_cargo_offset,-4,_zload], [_x_cargo_offset,_counter + 9 - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
+						};
+						if ((_obj_type in IL_Supported_Vehicles_MOHAWK)  && (_doors == "B")) then
+						{
+							[_v, _x, [_x_cargo_offset,-6,-0.75 + _zload], [_x_cargo_offset,-4.5,-0.75 + _zload], 1, _turn] call IL_Move_Attach;
+							[_v, _x, [_x_cargo_offset,-4.5,-0.75 + _zload], [_x_cargo_offset,-1.5,_zload], 1, _turn] call IL_Move_Attach;
+							[_v, _x, [_x_cargo_offset,-1.5,_zload], [_x_cargo_offset,_counter + 9 - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
+						};
+						if ((_obj_type in IL_Supported_Vehicles_MH9)  && (_doors == "L")) then
+						{
+							[_v, _x, [_x_cargo_offset-3,1.3,-1.3 + _zload], [_x_cargo_offset-1,-0.2,_zload], 1, _turn] call IL_Move_Attach;
+						};
+						if ((_obj_type in IL_Supported_Vehicles_MH9)  && (_doors == "R")) then
+						{
+							[_v, _x, [_x_cargo_offset+3,1.3,-1.3 + _zload], [_x_cargo_offset+1,-0.2,_zload], 1, _turn] call IL_Move_Attach;
+						};
+
+						_counter = _counter - (_x getVariable "slots");
+
+						if (_doors == "B") then
+						{
+							_v setVariable["box_num", _counter, true];
+						};
+						if ((_obj_type in IL_Supported_Vehicles_MH9)  && (_doors == "L")) then
+						{
+							_v setVariable["box_num_l", _counter, true];
+							_v setVariable["box_l", _x, true];
+						};
+						if ((_obj_type in IL_Supported_Vehicles_MH9)  && (_doors == "R")) then
+						{
+							_v setVariable["box_num_r", _counter, true];
+							_v setVariable["box_r", _x, true];
+						};
+						
+						[_v] call IL_SetNewMass;
+						
+						if (_x isKindOf "AllVehicles") then
+						{
+							_x forceSpeed 0;
+						};
+						
+						_x setVariable["attachedPos", _counter, true];
+						_x setVariable["attachedTruck", _v, true];
+						_x setVariable["doors", _doors, true];
+						
+						if (IL_CDamage == 0) then
+						{
+							_x setDamage 0;
+						};
+						
+						if (IL_CDamage == 1) then
+						{
+							_x setDamage _damage;
+							if (_damage != (getDammage _x)) then
+							{
+								sleep 1;
+								_x setDamage _damage;
+							};
+						};
+						
+						if (_counter > _slot_num) then
+						{
+							[_v, Format ["""%1"" is loaded onto ""%2"". Free slots: ""%3"".", getText(configFile >> "cfgVehicles" >> typeOf _x >> "displayName"), getText(configFile >> "cfgVehicles" >> typeOf _v >> "displayName"), abs(_slot_num - _counter)], true] call IL_Vehicle_Chat;
+						}
+						else
+						{
+							[_v, Format ["""%1"" is loaded onto ""%2"" There is no more space.", getText(configFile >> "cfgVehicles" >> typeOf _x >> "displayName"), getText(configFile >> "cfgVehicles" >> typeOf _v >> "displayName")], true] call IL_Vehicle_Chat;
+						};
+						//player addScore IL_Load_Score;
+						[Player, IL_Load_Score] call IL_Score;
+					}
+					else
+					{
+						if ((_box_num > _slot_num) && !_done) then
+						{
+							[_v, _NoBoxHint] call IL_Vehicle_Chat;
+						};
+					};
 				};
 				if (_done) exitWith {};
 			} forEach (_obj_lst);
@@ -1216,6 +1427,47 @@ if (isnil "IL_Procedures") then
 						{
 							[_v, _x, [_x_cargo_offset,_counter - _cargo_offset,_zload], [_x_cargo_offset,-6.5 - _cargo_offset,_zload], 1, _turn] call IL_Move_Attach;
 						};
+						if ((_obj_type in IL_Supported_Vehicles_C130J)  && (_doors == "B")) then
+						{
+							if !(_para) then
+							{
+								[_v, _x, [_x_cargo_offset,_counter + 17 - _cargo_offset,_zload], [_x_cargo_offset,-2.5,_zload], 1, _turn] call IL_Move_Attach;
+							};
+							[_v, _x, [_x_cargo_offset,-3.5,_zload], [_x_cargo_offset,-7,-0.93 + _zload], 1, _turn] call IL_Move_Attach;
+							[_v, _x, [_x_cargo_offset,-8,-0.93 + _zload], [_x_cargo_offset,-9,-0.93 + _zload], 1, _turn] call IL_Move_Attach;
+							if ((_para) && (_obj_type in IL_Para_Drop_Vehicles)) then
+							{
+								[_v, _x, [_x_cargo_offset,-10,-0.93 + _zload], [_x_cargo_offset,-12,-0.93 + _zload], 1, _turn] call IL_Move_Attach;
+								_last_attach_pos = [_x_cargo_offset,-12,_zload];
+							};
+						};
+						if ((_obj_type in IL_Supported_Vehicles_C17)  && (_doors == "B")) then
+						{
+							if !(_para) then
+							{
+								[_v, _x, [_x_cargo_offset,_counter + 32 - _cargo_offset,_zload], [_x_cargo_offset,-5.5,_zload], 1, _turn] call IL_Move_Attach;
+							};
+							[_v, _x, [_x_cargo_offset,-6.5,_zload], [_x_cargo_offset,-13,-1.75 + _zload], 1, _turn] call IL_Move_Attach;
+							[_v, _x, [_x_cargo_offset,-14,-1.75 + _zload], [_x_cargo_offset,-16.5,-1.75 + _zload], 1, _turn] call IL_Move_Attach;
+							if ((_para) && (_obj_type in IL_Para_Drop_Vehicles)) then
+							{
+								[_v, _x, [_x_cargo_offset,-16.5,-1.75 + _zload], [_x_cargo_offset,-19.5,-1.75 + _zload], 1, _turn] call IL_Move_Attach;
+								_last_attach_pos = [_x_cargo_offset,-19.5,-1.75 + _zload];
+							};
+						};
+						if ((_obj_type in IL_Supported_Vehicles_CHINOOK)  && (_doors == "B")) then
+						{
+							if !(_para) then
+							{
+								[_v, _x, [_x_cargo_offset,_counter + 9 - _cargo_offset,_zload], [_x_cargo_offset,-4,_zload], 1, _turn] call IL_Move_Attach;
+							};
+							[_v, _x, [_x_cargo_offset,-4,_zload], [_x_cargo_offset,-7,-0.75 + _zload], 1, _turn] call IL_Move_Attach;
+							[_v, _x, [_x_cargo_offset,-7,-0.75 + _zload], [_x_cargo_offset,-9,-0.75 + _zload], 1, _turn] call IL_Move_Attach;
+							if ((_para) && (_obj_type in IL_Para_Drop_Vehicles)) then
+							{
+								_last_attach_pos = [_x_cargo_offset,-10,-0.75 + _zload];
+							};
+						};
 						if ((_obj_type in IL_Supported_Vehicles_MOHAWK)  && (_doors == "B")) then
 						{
 							if !(_para) then
@@ -1304,7 +1556,6 @@ if (isnil "IL_Procedures") then
 						[_v, Format ["""%1"" was unloaded from the ""%2"". Free slots: ""%3"".", getText(configFile >> "cfgVehicles" >> typeOf _x >> "displayName"), getText(configFile >> "cfgVehicles" >> typeOf _v >> "displayName"), _free_slots], true] call IL_Vehicle_Chat;
 						//player addScore IL_Unload_Score;
 						[Player, IL_Unload_Score] call IL_Score;
-						_x setVariable ["vLoaded", nil, true];
 						sleep 1;
 					};
 				};
@@ -1370,6 +1621,21 @@ if (isnil "IL_Procedures") then
 		{
 			_dist_out = 5;
 			_dist_out_para = 11;
+		};
+		if ((typeOf _v) in IL_Supported_Vehicles_CHINOOK) then
+		{
+			_dist_out = 7;
+			_dist_out_para = 11;
+		};
+		if ((typeOf _v) in IL_Supported_Vehicles_C130J) then
+		{
+			_dist_out = 7;
+			_dist_out_para = 15;
+		};
+		if ((typeOf _v) in IL_Supported_Vehicles_C17) then
+		{
+			_dist_out = 15;
+			_dist_out_para = 20;
 		};
 		
 		_pos = (_v worldToModel (getPosATL _player));
@@ -1507,7 +1773,7 @@ if (_obj_main_type in IL_Supported_Vehicles_MOHAWK) then
 	{
 		(_this select 1) moveInCargo (_this select 0);
 	},[],IL_Action_LU_Priority,false,true,"",
-	"(_this in (nearestObjects[ _target modelToWorld [0,-6,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && ((_target emptyPositions 'cargo') > 0) && !(_this getVariable ['restrained',false]) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'CargoRamp_Open' > 0.43) && (_target getVariable 'usable_ramp')"
+	"(_this in (nearestObjects[ _target modelToWorld [0,-6,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && ((_target emptyPositions 'cargo') > 0) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'CargoRamp_Open' > 0.43) && (_target getVariable 'usable_ramp')"
 	];
 	
 	_obj_main addAction [
@@ -1515,7 +1781,7 @@ if (_obj_main_type in IL_Supported_Vehicles_MOHAWK) then
 	{
 		[_this select 0, _this select 1, false] call IL_GetOut;
 	},[],IL_Action_LU_Priority,false,true,"",
-	"('Cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && !(_this getVariable ['restrained',false]) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'CargoRamp_Open' > 0.43) && (_target getVariable 'usable_ramp')"
+	"('cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'CargoRamp_Open' > 0.43) && (_target getVariable 'usable_ramp')"
 	];
 
 	_obj_main addAction [
@@ -1523,7 +1789,7 @@ if (_obj_main_type in IL_Supported_Vehicles_MOHAWK) then
 	{
 		[_this select 0, _this select 1, true] call IL_GetOut;
 	},[],IL_Action_LU_Priority,false,true,"",
-	"('Cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && !(_this getVariable ['restrained',false]) && (((getPosATL _target) select 2) >= IL_Para_Jump_ATL) && (_target animationPhase 'CargoRamp_Open' > 0.43) && (_target getVariable 'usable_ramp')"
+	"('cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (((getPosATL _target) select 2) >= IL_Para_Jump_ATL) && (_target animationPhase 'CargoRamp_Open' > 0.43) && (_target getVariable 'usable_ramp')"
 	];
 	
 	_obj_main addAction [
@@ -1556,7 +1822,7 @@ if (_obj_main_type in IL_Supported_Vehicles_MOHAWK) then
 	_obj_main addAction [
 	"<t color=""#0000ff"">Open cargo ramp in CH-49</t>",
 	{
-		_this select 0 animate ['CargoRamp_Open', 1];
+		_this select 0 animatedoor ['CargoRamp_Open', 1];
 	},[],IL_Action_O_Priority,false,true,"",
 	"((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-6,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'CargoRamp_Open' == 0) && (_target getVariable 'can_load')"
 	];
@@ -1564,9 +1830,638 @@ if (_obj_main_type in IL_Supported_Vehicles_MOHAWK) then
 	_obj_main addAction [
 	"<t color=""#0000ff"">Close cargo ramp in CH-49</t>",
 	{
-		_this select 0 animate ['CargoRamp_Open', 0];
+		_this select 0 animatedoor ['CargoRamp_Open', 0];
 	},[],IL_Action_O_Priority,false,true,"",
 	"((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-6,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'CargoRamp_Open' == 1) && (_target getVariable 'can_load')"
+	];
+	
+	_obj_main addAction [
+	"<t color=""#0000ff"">Enable loading for Co-Pilot</t>",
+	{
+		(_this select 0) setVariable["can_copilot", true, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"((driver _target == _this) && !(_target getVariable 'can_copilot') && IL_Can_CoPilot)"
+	];
+
+	_obj_main addAction [
+	"<t color=""#0000ff"">Disable loading for Co-Pilot</t>",
+	{
+		(_this select 0) setVariable["can_copilot", false, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"((driver _target == _this) && (_target getVariable 'can_copilot') && IL_Can_CoPilot)"
+	];
+	
+	_obj_main addAction [
+	"<t color=""#0000ff"">Enable loading from outside</t>",
+	{
+		(_this select 0) setVariable["can_outside", true, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && !(_target getVariable 'can_outside') && IL_Can_Outside)"
+	];
+
+	_obj_main addAction [
+	"<t color=""#0000ff"">Disable loading from outside</t>",
+	{
+		(_this select 0) setVariable["can_outside", false, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_outside') && IL_Can_Outside)"
+	];
+
+	_obj_main addAction [
+	"<t color=""#0000ff"">Enable usable ramp</t>",
+	{
+		(_this select 0) setVariable["usable_ramp", true, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && !(_target getVariable 'usable_ramp') && IL_Ramp)"
+	];
+
+	_obj_main addAction [
+	"<t color=""#0000ff"">Disable usable ramp</t>",
+	{
+		(_this select 0) setVariable["usable_ramp", false, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'usable_ramp') && IL_Ramp)"
+	];
+};
+if (_obj_main_type in IL_Supported_Vehicles_CHINOOK) then
+{
+	if (IL_DevMod) then
+	{
+		Player globalChat Format["IgiLoad ""%1"" Vehicle is in IL_Supported_Vehicles_CHINOOK.", IL_Script_Inst];
+	};
+	_vsupported = true;
+	[_obj_main] call IL_Init_Veh;
+
+	if (typeOf _obj_main == "CH_147F") then
+	{
+		_obj_main addAction [
+		"<img image='IgiLoad\images\load.paa' /><t color=""#007f0e"">  Load cargo on Chinook</t>",
+		{
+			[_this select 0, IL_Supported_Cargo_NonVeh_CHINOOK] call IL_Do_Load;
+		},[],IL_Action_LU_Priority,true,true,"",
+		"(count(nearestObjects[ _target modelToWorld [0,-9,-3], IL_Supported_Cargo_NonVeh_CHINOOK, IL_SDistL + IL_SDistL_Heli_offset]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'box_num' > _target getVariable 'slots_num') && (_target getVariable 'can_load') && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'ani_ramp' == 1)"
+		];
+
+		_obj_main addAction [
+		"<img image='IgiLoad\images\load.paa' /><t color=""#007f0e"">  Load vehicle on Chinook</t>",
+		{
+			[_this select 0, IL_Supported_Cargo_Veh_CHINOOK] call IL_Do_Load;
+		},[],IL_Action_LU_Priority,true,true,"",
+		"(count(nearestObjects[ _target modelToWorld [0,-9,-3], IL_Supported_Cargo_Veh_CHINOOK, IL_SDistL + IL_SDistL_Heli_offset]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'box_num' > _target getVariable 'slots_num') && (_target getVariable 'can_load') && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'ani_ramp' == 1)"
+		];
+
+		_obj_main addAction [
+		"<t color=""#007f0e"">Get in Chinook Ride in back</t>",
+		{
+			(_this select 1) moveInCargo (_this select 0);
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && ((_target emptyPositions 'cargo') > 0) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'ani_ramp' > 0.43) && (_target getVariable 'usable_ramp')"
+		];
+		
+		_obj_main addAction [
+		"<t color=""#007f0e"">Get in Chinook</t>",
+		{
+			(_this select 1) setDir (getDir (_this select 0));
+			_pos = ([(_this select 0), 4.5, (getDir (_this select 0))] call BIS_fnc_relPos);
+			_pos = [_pos select 0, _pos select 1, ((getPosATL (_this select 0)) select 2) + 1];
+			(_this select 1) setPosATL _pos;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && ((_target emptyPositions 'cargo') > 0) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'ani_ramp' > 0.43) && (_target getVariable 'usable_ramp')"
+		];
+		
+		_obj_main addAction [
+		"<t color=""#ff0000"">Get out Chinook</t>",
+		{
+			[_this select 0, _this select 1, false] call IL_GetOut;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"('cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'ani_ramp' > 0.43) && (_target getVariable 'usable_ramp')"
+		];
+
+		_obj_main addAction [
+		"<img image='IgiLoad\images\unload_para.paa' /><t color=""#b200ff""> Eject</t>",
+		{
+			[_this select 0, _this select 1, true] call IL_GetOut;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"('cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (((getPosATL _target) select 2) >= IL_Para_Jump_ATL) && (_target animationPhase 'ani_ramp' > 0.43) && (_target getVariable 'usable_ramp')"
+		];
+		
+		_obj_main addAction [
+		"<img image='IgiLoad\images\unload.paa' /><t color=""#ff0000"">  Unload cargo from Chinook</t>",
+		{
+			[_this select 0] call IL_Do_Unload;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_target getVariable 'box_num' < 0) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'can_load') && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'ani_ramp' == 1)"
+		];
+
+		_obj_main addAction [
+		"<img image='IgiLoad\images\unload_para.paa' /><t color=""#b200ff"">  Unload cargo with parachute</t>",
+		{
+			[_this select 0, true] call IL_Do_Unload;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_target getVariable 'box_num' < 0) && ((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_load') && (((getPosATL _target) select 2) >= IL_Para_Drop_ATL) && (_target animationPhase 'ani_ramp' == 1)"
+		];
+		
+		_obj_main addAction [
+		"<img image='IgiLoad\images\unload_all_para.paa' /><t color=""#a50b00"">  Unload ALL cargo with parachute</t>",
+		{
+			while {((_this select 0) getVariable "box_num") != 0} do
+			{
+				[_this select 0, true] call IL_Do_Unload;
+			};
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_target getVariable 'box_num' < 0) && ((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_load') && (((getPosATL _target) select 2) >= IL_Para_Drop_ATL) && (_target animationPhase 'ani_ramp' == 1)"
+		];
+
+		_obj_main addAction [
+		"<t color=""#0000ff"">Open cargo ramp in Chinook</t>",
+		{
+			_this select 0 animatedoor ['ani_ramp', 1];
+			_this select 0 animatedoor ['ani_ramp2', 1];
+		},[],IL_Action_O_Priority,false,true,"",
+		"((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'ani_ramp' == 0) && (_target getVariable 'can_load')"
+		];
+
+		_obj_main addAction [
+		"<t color=""#0000ff"">Close cargo ramp in Chinook</t>",
+		{
+			_this select 0 animatedoor ['ani_ramp', 0];
+			_this select 0 animatedoor ['ani_ramp2', 0];
+		},[],IL_Action_O_Priority,false,true,"",
+		"((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'ani_ramp' == 1) && (_target getVariable 'can_load')"
+		];
+	};
+	if (typeOf _obj_main == "CH_47F") then
+	{
+		_obj_main addAction [
+		"<img image='IgiLoad\images\load.paa' /><t color=""#007f0e"">  Load cargo on Chinook</t>",
+		{
+			[_this select 0, IL_Supported_Cargo_NonVeh_CHINOOK] call IL_Do_Load;
+		},[],IL_Action_LU_Priority,true,true,"",
+		"(count(nearestObjects[ _target modelToWorld [0,-9,-3], IL_Supported_Cargo_NonVeh_CHINOOK, IL_SDistL + IL_SDistL_Heli_offset]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'box_num' > _target getVariable 'slots_num') && (_target getVariable 'can_load') && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Ramp' == 1)"
+		];
+
+		_obj_main addAction [
+		"<img image='IgiLoad\images\load.paa' /><t color=""#007f0e"">  Load vehicle on Chinook</t>",
+		{
+			[_this select 0, IL_Supported_Cargo_Veh_CHINOOK] call IL_Do_Load;
+		},[],IL_Action_LU_Priority,true,true,"",
+		"(count(nearestObjects[ _target modelToWorld [0,-9,-3], IL_Supported_Cargo_Veh_CHINOOK, IL_SDistL + IL_SDistL_Heli_offset]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'box_num' > _target getVariable 'slots_num') && (_target getVariable 'can_load') && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Ramp' == 1)"
+		];
+
+		_obj_main addAction [
+		"<t color=""#007f0e"">Get in Chinook Ride in back</t>",
+		{
+			(_this select 1) moveInCargo (_this select 0);
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && ((_target emptyPositions 'cargo') > 0) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Ramp' > 0.43) && (_target getVariable 'usable_ramp')"
+		];
+		
+		_obj_main addAction [
+		"<t color=""#007f0e"">Get in Chinook</t>",
+		{
+			(_this select 1) setDir (getDir (_this select 0));
+			_pos = ([(_this select 0), 4.5, (getDir (_this select 0))] call BIS_fnc_relPos);
+			_pos = [_pos select 0, _pos select 1, ((getPosATL (_this select 0)) select 2) + 1];
+			(_this select 1) setPosATL _pos;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && ((_target emptyPositions 'cargo') > 0) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Ramp' > 0.43) && (_target getVariable 'usable_ramp')"
+		];
+		
+		_obj_main addAction [
+		"<t color=""#ff0000"">Get out Chinook</t>",
+		{
+			[_this select 0, _this select 1, false] call IL_GetOut;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"('cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Ramp' > 0.43) && (_target getVariable 'usable_ramp')"
+		];
+
+		_obj_main addAction [
+		"<img image='IgiLoad\images\unload_para.paa' /><t color=""#b200ff""> Eject</t>",
+		{
+			[_this select 0, _this select 1, true] call IL_GetOut;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"('cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (((getPosATL _target) select 2) >= IL_Para_Jump_ATL) && (_target animationPhase 'Ramp' > 0.43) && (_target getVariable 'usable_ramp')"
+		];
+		
+		_obj_main addAction [
+		"<img image='IgiLoad\images\unload.paa' /><t color=""#ff0000"">  Unload cargo from Chinook</t>",
+		{
+			[_this select 0] call IL_Do_Unload;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_target getVariable 'box_num' < 0) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'can_load') && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Ramp' == 1)"
+		];
+
+		_obj_main addAction [
+		"<img image='IgiLoad\images\unload_para.paa' /><t color=""#b200ff"">  Unload cargo with parachute</t>",
+		{
+			[_this select 0, true] call IL_Do_Unload;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_target getVariable 'box_num' < 0) && ((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_load') && (((getPosATL _target) select 2) >= IL_Para_Drop_ATL) && (_target animationPhase 'Ramp' == 1)"
+		];
+		
+		_obj_main addAction [
+		"<img image='IgiLoad\images\unload_all_para.paa' /><t color=""#a50b00"">  Unload ALL cargo with parachute</t>",
+		{
+			while {((_this select 0) getVariable "box_num") != 0} do
+			{
+				[_this select 0, true] call IL_Do_Unload;
+			};
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_target getVariable 'box_num' < 0) && ((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_load') && (((getPosATL _target) select 2) >= IL_Para_Drop_ATL) && (_target animationPhase 'Ramp' == 1)"
+		];
+
+		_obj_main addAction [
+		"<t color=""#0000ff"">Open cargo ramp in Chinook</t>",
+		{
+			_this select 0 animate ['Ramp', 1];
+		},[],IL_Action_O_Priority,false,true,"",
+		"((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'Ramp' == 0) && (_target getVariable 'can_load')"
+		];
+
+		_obj_main addAction [
+		"<t color=""#0000ff"">Close cargo ramp in Chinook</t>",
+		{
+			_this select 0 animate ['Ramp', 0];
+		},[],IL_Action_O_Priority,false,true,"",
+		"((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'Ramp' == 1) && (_target getVariable 'can_load')"
+		];
+	};
+	if (typeOf _obj_main in ["kyo_MH47E_HC", "kyo_MH47E_Ramp", "kyo_MH47E_base"]) then
+	{
+		_obj_main addAction [
+		"<img image='IgiLoad\images\load.paa' /><t color=""#007f0e"">  Load cargo on Chinook</t>",
+		{
+			[_this select 0, IL_Supported_Cargo_NonVeh_CHINOOK] call IL_Do_Load;
+		},[],IL_Action_LU_Priority,true,true,"",
+		"(count(nearestObjects[ _target modelToWorld [0,-9,-3], IL_Supported_Cargo_NonVeh_CHINOOK, IL_SDistL + IL_SDistL_Heli_offset]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'box_num' > _target getVariable 'slots_num') && (_target getVariable 'can_load') && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Ani_Ramp' < 0.43)"
+		];
+
+		_obj_main addAction [
+		"<img image='IgiLoad\images\load.paa' /><t color=""#007f0e"">  Load vehicle on Chinook</t>",
+		{
+			[_this select 0, IL_Supported_Cargo_Veh_CHINOOK] call IL_Do_Load;
+		},[],IL_Action_LU_Priority,true,true,"",
+		"(count(nearestObjects[ _target modelToWorld [0,-9,-3], IL_Supported_Cargo_Veh_CHINOOK, IL_SDistL + IL_SDistL_Heli_offset]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'box_num' > _target getVariable 'slots_num') && (_target getVariable 'can_load') && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Ani_Ramp' < 0.43)"
+		];
+
+		_obj_main addAction [
+		"<t color=""#007f0e"">Get in Chinook Ride in back</t>",
+		{
+			(_this select 1) moveInCargo (_this select 0);
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && ((_target emptyPositions 'cargo') > 0) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Ani_Ramp' < 0.43) && (_target getVariable 'usable_ramp')"
+		];
+		
+		_obj_main addAction [
+		"<t color=""#007f0e"">Get in Chinook</t>",
+		{
+			(_this select 1) setDir (getDir (_this select 0));
+			_pos = ([(_this select 0), 4.5, (getDir (_this select 0))] call BIS_fnc_relPos);
+			_pos = [_pos select 0, _pos select 1, ((getPosATL (_this select 0)) select 2) + 1];
+			(_this select 1) setPosATL _pos;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && ((_target emptyPositions 'cargo') > 0) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Ani_Ramp' < 0.43) && (_target getVariable 'usable_ramp')"
+		];
+		
+		_obj_main addAction [
+		"<t color=""#ff0000"">Get out Chinook</t>",
+		{
+			[_this select 0, _this select 1, false] call IL_GetOut;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"('cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Ani_Ramp' < 0.43) && (_target getVariable 'usable_ramp')"
+		];
+
+		_obj_main addAction [
+		"<img image='IgiLoad\images\unload_para.paa' /><t color=""#b200ff""> Eject</t>",
+		{
+			[_this select 0, _this select 1, true] call IL_GetOut;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"('cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (((getPosATL _target) select 2) >= IL_Para_Jump_ATL) && (_target animationPhase 'Ani_Ramp' < 0.43) && (_target getVariable 'usable_ramp')"
+		];
+		
+		_obj_main addAction [
+		"<img image='IgiLoad\images\unload.paa' /><t color=""#ff0000"">  Unload cargo from Chinook</t>",
+		{
+			[_this select 0] call IL_Do_Unload;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_target getVariable 'box_num' < 0) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'can_load') && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'Ani_Ramp' < 0.43)"
+		];
+
+		_obj_main addAction [
+		"<img image='IgiLoad\images\unload_para.paa' /><t color=""#b200ff"">  Unload cargo with parachute</t>",
+		{
+			[_this select 0, true] call IL_Do_Unload;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_target getVariable 'box_num' < 0) && ((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_load') && (((getPosATL _target) select 2) >= IL_Para_Drop_ATL) && (_target animationPhase 'Ani_Ramp' < 0.43)"
+		];
+		
+		_obj_main addAction [
+		"<img image='IgiLoad\images\unload_all_para.paa' /><t color=""#a50b00"">  Unload ALL cargo with parachute</t>",
+		{
+			while {((_this select 0) getVariable "box_num") != 0} do
+			{
+				[_this select 0, true] call IL_Do_Unload;
+			};
+		},[],IL_Action_LU_Priority,false,true,"",
+		"(_target getVariable 'box_num' < 0) && ((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_load') && (((getPosATL _target) select 2) >= IL_Para_Drop_ATL) && (_target animationPhase 'Ani_Ramp' < 0.43)"
+		];
+
+		_obj_main addAction [
+		"<t color=""#0000ff"">Open cargo ramp in Chinook</t>",
+		{
+			_this select 0 animate ['Ani_Ramp', 0];
+		},[],IL_Action_O_Priority,false,true,"",
+		"((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'Ani_Ramp' == 1) && (_target getVariable 'can_load')"
+		];
+
+		_obj_main addAction [
+		"<t color=""#0000ff"">Close cargo ramp in Chinook</t>",
+		{
+			_this select 0 animate ['Ani_Ramp', 1];
+		},[],IL_Action_O_Priority,false,true,"",
+		"((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'Ani_Ramp' == 0) && (_target getVariable 'can_load')"
+		];
+	};
+	
+	_obj_main addAction [
+	"<t color=""#0000ff"">Enable loading for Co-Pilot</t>",
+	{
+		(_this select 0) setVariable["can_copilot", true, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"((driver _target == _this) && !(_target getVariable 'can_copilot') && IL_Can_CoPilot)"
+	];
+
+	_obj_main addAction [
+	"<t color=""#0000ff"">Disable loading for Co-Pilot</t>",
+	{
+		(_this select 0) setVariable["can_copilot", false, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"((driver _target == _this) && (_target getVariable 'can_copilot') && IL_Can_CoPilot)"
+	];
+	
+	_obj_main addAction [
+	"<t color=""#0000ff"">Enable loading from outside</t>",
+	{
+		(_this select 0) setVariable["can_outside", true, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && !(_target getVariable 'can_outside') && IL_Can_Outside)"
+	];
+
+	_obj_main addAction [
+	"<t color=""#0000ff"">Disable loading from outside</t>",
+	{
+		(_this select 0) setVariable["can_outside", false, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_outside') && IL_Can_Outside)"
+	];
+
+	_obj_main addAction [
+	"<t color=""#0000ff"">Enable usable ramp</t>",
+	{
+		(_this select 0) setVariable["usable_ramp", true, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && !(_target getVariable 'usable_ramp') && IL_Ramp)"
+	];
+
+	_obj_main addAction [
+	"<t color=""#0000ff"">Disable usable ramp</t>",
+	{
+		(_this select 0) setVariable["usable_ramp", false, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'usable_ramp') && IL_Ramp)"
+	];
+};
+if (_obj_main_type in IL_Supported_Vehicles_C130J) then
+{
+	if (IL_DevMod) then
+	{
+		Player globalChat Format["IgiLoad ""%1"" Vehicle is in IL_Supported_Vehicles_C130J.", IL_Script_Inst];
+	};
+	_vsupported = true;
+	[_obj_main] call IL_Init_Veh;
+	
+	if (_obj_main_type == "C130J") then
+	{
+		_obj_main addAction [
+		"<t color=""#ff0000"">Get out on the side of ramp</t>",
+		{
+			[_this select 0, _this select 1, false] call IL_GetOut;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"('cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'ramp_bottom' > 0.43) && (_target getVariable 'usable_ramp')"
+		];
+
+		_obj_main addAction [
+		"<img image='IgiLoad\images\unload_para.paa' /><t color=""#b200ff""> Eject</t>",
+		{
+			[_this select 0, _this select 1, true] call IL_GetOut;
+		},[],IL_Action_LU_Priority,false,true,"",
+		"('cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (((getPosATL _target) select 2) >= IL_Para_Drop_ATL) && (_target animationPhase 'ramp_bottom' > 0.9) && (_target getVariable 'usable_ramp')"
+		];
+//		"('cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (((getPosATL _target) select 2) >= IL_Para_Jump_ATL) && (_target animationPhase 'ramp_bottom' < 0.1) && (_target getVariable 'usable_ramp')"
+	};
+	
+	_obj_main addAction [
+	"<img image='IgiLoad\images\load.paa' /><t color=""#007f0e"">  Load cargo on C-130J</t>",
+	{
+		[_this select 0, IL_Supported_Cargo_NonVeh_C130J] call IL_Do_Load;
+	},[],IL_Action_LU_Priority,true,true,"",
+	"(count(nearestObjects[ _target modelToWorld [0,-9,-5.4], IL_Supported_Cargo_NonVeh_C130J, IL_SDistL + IL_SDistL_Heli_offset]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-5.4], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'box_num' > _target getVariable 'slots_num') && (_target getVariable 'can_load') && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'ramp_bottom' == 1) && (_target animationPhase 'ramp_top' == 1)"
+	];
+
+	_obj_main addAction [
+	"<img image='IgiLoad\images\load.paa' /><t color=""#007f0e"">  Load vehicle on C-130J</t>",
+	{
+		[_this select 0, IL_Supported_Cargo_Veh_C130J] call IL_Do_Load;
+	},[],IL_Action_LU_Priority,true,true,"",
+	"(count(nearestObjects[ _target modelToWorld [0,-9,-5.4], IL_Supported_Cargo_Veh_C130J, IL_SDistL + IL_SDistL_Heli_offset]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-5.4], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'box_num' > _target getVariable 'slots_num') && (_target getVariable 'can_load') && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'ramp_bottom' == 1) && (_target animationPhase 'ramp_top' == 1)"
+	];
+
+	_obj_main addAction [
+	"<img image='IgiLoad\images\unload.paa' /><t color=""#ff0000"">  Unload cargo from C-130J</t>",
+	{
+		[_this select 0] call IL_Do_Unload;
+	},[],IL_Action_LU_Priority,false,true,"",
+	"(_target getVariable 'box_num' < 0) && ((IL_Can_Inside && (driver _target == _this)) || (IL_Can_Inside && ('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-5.4], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'can_load') && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'ramp_bottom' == 1) && (_target animationPhase 'ramp_top' == 1)"
+	];
+
+	_obj_main addAction [
+	"<img image='IgiLoad\images\unload_para.paa' /><t color=""#b200ff"">  Unload cargo with parachute</t>",
+	{
+		[_this select 0, true] call IL_Do_Unload;
+	},[],IL_Action_LU_Priority,false,true,"",
+	"(_target getVariable 'box_num' < 0) && ((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_load') && (((getPosATL _target) select 2) >= IL_Para_Drop_ATL) && (_target animationPhase 'ramp_bottom' == 1) && (_target animationPhase 'ramp_top' == 1)"
+	];
+	
+	_obj_main addAction [
+	"<img image='IgiLoad\images\unload_all_para.paa' /><t color=""#a50b00"">  Unload ALL cargo with parachute</t>",
+	{
+		while {((_this select 0) getVariable "box_num") != 0} do
+		{
+			[_this select 0, true] call IL_Do_Unload;
+		};
+	},[],IL_Action_LU_Priority,false,true,"",
+	"(_target getVariable 'box_num' < 0) && ((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_load') && (((getPosATL _target) select 2) >= IL_Para_Drop_ATL) && (_target animationPhase 'ramp_bottom' == 1) && (_target animationPhase 'ramp_top' == 1)"
+	];
+	
+	// _obj_main addAction [
+	// "<t color=""#0000ff"">Open lower part of ramp in C-130J</t>",
+	// {
+		// _this select 0 animate ['ramp_bottom', 1];
+	// },[],IL_Action_O_Priority,false,true,"",
+	// "((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-5.4], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'ramp_bottom' == 0) && (_target getVariable 'can_load')"
+	// ];
+
+	// _obj_main addAction [
+	// "<t color=""#0000ff"">Close lower part of ramp in C-130J</t>",
+	// {
+		// _this select 0 animate ['ramp_bottom', 0];
+	// },[],IL_Action_O_Priority,false,true,"",
+	// "((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-9,-5.4], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'ramp_bottom' == 1) && (_target getVariable 'can_load')"
+	// ];
+	
+	_obj_main addAction [
+	"<t color=""#0000ff"">Enable loading for Co-Pilot</t>",
+	{
+		(_this select 0) setVariable["can_copilot", true, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"((driver _target == _this) && !(_target getVariable 'can_copilot') && IL_Can_CoPilot)"
+	];
+
+	_obj_main addAction [
+	"<t color=""#0000ff"">Disable loading for Co-Pilot</t>",
+	{
+		(_this select 0) setVariable["can_copilot", false, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"((driver _target == _this) && (_target getVariable 'can_copilot') && IL_Can_CoPilot)"
+	];
+	
+	_obj_main addAction [
+	"<t color=""#0000ff"">Enable loading from outside</t>",
+	{
+		(_this select 0) setVariable["can_outside", true, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && !(_target getVariable 'can_outside') && IL_Can_Outside)"
+	];
+
+	_obj_main addAction [
+	"<t color=""#0000ff"">Disable loading from outside</t>",
+	{
+		(_this select 0) setVariable["can_outside", false, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_outside') && IL_Can_Outside)"
+	];
+
+	_obj_main addAction [
+	"<t color=""#0000ff"">Enable usable ramp</t>",
+	{
+		(_this select 0) setVariable["usable_ramp", true, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && !(_target getVariable 'usable_ramp') && IL_Ramp)"
+	];
+
+	_obj_main addAction [
+	"<t color=""#0000ff"">Disable usable ramp</t>",
+	{
+		(_this select 0) setVariable["usable_ramp", false, true];;
+	},[],IL_Action_S_Priority,false,true,"",
+	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'usable_ramp') && IL_Ramp)"
+	];
+};
+if (_obj_main_type in IL_Supported_Vehicles_C17) then
+{
+	if (IL_DevMod) then
+	{
+		Player globalChat Format["IgiLoad ""%1"" Vehicle is in IL_Supported_Vehicles_C17.", IL_Script_Inst];
+	};
+	_vsupported = true;
+	[_obj_main] call IL_Init_Veh;
+
+	_obj_main addAction [
+	"<img image='IgiLoad\images\load.paa' /><t color=""#007f0e"">  Load cargo on C17</t>",
+	{
+		[_this select 0, IL_Supported_Cargo_C17] call IL_Do_Load;
+	},[],IL_Action_LU_Priority,true,true,"",
+	"(count(nearestObjects[ _target modelToWorld [0,-16.5,-3.2], IL_Supported_Cargo_NonVeh_C17, IL_SDistL + IL_SDistL_Heli_offset]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-16.5 + IL_SDistL + IL_SDistL_Heli_offset,-2], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'box_num' > _target getVariable 'slots_num') && (_target getVariable 'can_load') && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'back_ramp' == 1)"
+	];
+
+	_obj_main addAction [
+	"<img image='IgiLoad\images\load.paa' /><t color=""#007f0e"">  Load vehicle on C17</t>",
+	{
+		[_this select 0, IL_Supported_Cargo_C17] call IL_Do_Load;
+	},[],IL_Action_LU_Priority,true,true,"",
+	"(count(nearestObjects[ _target modelToWorld [0,-16.5,-3.2], IL_Supported_Cargo_Veh_C17, IL_SDistL + IL_SDistL_Heli_offset]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-16.5 + IL_SDistL + IL_SDistL_Heli_offset,-2], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'box_num' > _target getVariable 'slots_num') && (_target getVariable 'can_load') && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'back_ramp' == 1)"
+	];
+
+	_obj_main addAction [
+	"<t color=""#007f0e"">Get in C17</t>",
+	{
+		(_this select 1) moveInCargo (_this select 0);
+	},[],IL_Action_LU_Priority,false,true,"",
+	"(_this in (nearestObjects[ _target modelToWorld [0,-16.5 + IL_SDistL + IL_SDistL_Heli_offset,-2], [], IL_SDistL + IL_SDistL_Heli_offset])) && ((_target emptyPositions 'cargo') > 0) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'back_ramp' > 0.43) && (_target getVariable 'usable_ramp')"
+	];
+	
+	_obj_main addAction [
+	"<t color=""#ff0000"">Get out C17</t>",
+	{
+		[_this select 0, _this select 1, false] call IL_GetOut;
+	},[],IL_Action_LU_Priority,false,true,"",
+	"('cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'back_ramp' > 0.43) && (_target getVariable 'usable_ramp')"
+	];
+
+	_obj_main addAction [
+	"<img image='IgiLoad\images\unload_para.paa' /><t color=""#b200ff""> Eject</t>",
+	{
+		[_this select 0, _this select 1, true] call IL_GetOut;
+	},[],IL_Action_LU_Priority,false,true,"",
+	"('cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (((getPosATL _target) select 2) >= IL_Para_Drop_ATL) && (_target animationPhase 'back_ramp' > 0.43) && (_target getVariable 'usable_ramp')"
+	];
+	
+	_obj_main addAction [
+	"<img image='IgiLoad\images\unload.paa' /><t color=""#ff0000"">  Unload cargo from C17</t>",
+	{
+		[_this select 0] call IL_Do_Unload;
+	},[],IL_Action_LU_Priority,false,true,"",
+	"(_target getVariable 'box_num' < 0) && ((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-16.5 + IL_SDistL + IL_SDistL_Heli_offset,-2], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target getVariable 'can_load') && (abs(speed _target) <= IL_LU_Speed) && (((getPos _target) select 2) <= IL_LU_Alt) && (_target animationPhase 'back_ramp' == 1)"
+	];
+
+	_obj_main addAction [
+	"<img image='IgiLoad\images\unload_para.paa' /><t color=""#b200ff"">  Unload cargo with parachute</t>",
+	{
+		[_this select 0, true] call IL_Do_Unload;
+	},[],IL_Action_LU_Priority,false,true,"",
+	"(_target getVariable 'box_num' < 0) && ((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_load') && (((getPosATL _target) select 2) >= IL_Para_Drop_ATL) && (_target animationPhase 'back_ramp' == 1)"
+	];
+	
+	_obj_main addAction [
+	"<img image='IgiLoad\images\unload_all_para.paa' /><t color=""#a50b00"">  Unload ALL cargo with parachute</t>",
+	{
+		while {((_this select 0) getVariable "box_num") != 0} do
+		{
+			[_this select 0, true] call IL_Do_Unload;
+		};
+	},[],IL_Action_LU_Priority,false,true,"",
+	"(_target getVariable 'box_num' < 0) && ((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_load') && (((getPosATL _target) select 2) >= IL_Para_Drop_ATL) && (_target animationPhase 'back_ramp' == 1)"
+	];
+
+	_obj_main addAction [
+	"<t color=""#0000ff"">Open cargo doors in C17</t>",
+	{
+		_this select 0 animate ['back_ramp', 1];
+		_this select 0 animate ['back_ramp_door_main', 1];
+		_this select 0 animate ['back_ramp_st', 1];
+		
+	},[],IL_Action_O_Priority,false,true,"",
+	"((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-16.5 + IL_SDistL + IL_SDistL_Heli_offset,-2], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'back_ramp' == 0) && (_target getVariable 'can_load')"
+	];
+
+	_obj_main addAction [
+	"<t color=""#0000ff"">Close cargo doors in C17</t>",
+	{
+		_this select 0 animate ['back_ramp_st', 0];
+		_this select 0 animate ['back_ramp', 0];
+		_this select 0 animate ['back_ramp_door_main', 0];
+	},[],IL_Action_O_Priority,false,true,"",
+	"((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-16.5 + IL_SDistL + IL_SDistL_Heli_offset,-2], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'back_ramp' == 1) && (_target getVariable 'can_load')"
 	];
 	
 	_obj_main addAction [
@@ -1688,7 +2583,7 @@ if (_obj_main_type in IL_Supported_Vehicles_MH9) then
 	{
 		[_this select 0, _this select 1, true] call IL_GetOut;
 	},[],IL_Action_LU_Priority,false,true,"",
-	"('Cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (((getPosATL _target) select 2) >= IL_Para_Jump_ATL) && (_target getVariable 'usable_ramp')"
+	"('cargo' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (((getPosATL _target) select 2) >= IL_Para_Jump_ATL) && (_target getVariable 'usable_ramp')"
 	];
 //////////////////////////////////////////////////
 	_obj_main addAction [
@@ -1763,54 +2658,6 @@ if (_obj_main_type in IL_Supported_Vehicles_OFFROAD) then
 		[_this select 0, IL_Supported_Cargo_Veh_OFFROAD] call IL_Do_Load;
 	},[],IL_Action_LU_Priority,true,true,"",
 	"(count(nearestObjects[ _target modelToWorld [0,-4.5,0], IL_Supported_Cargo_Veh_OFFROAD, IL_SDistL]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || ((((_this in (nearestObjects[ _target modelToWorld [0,-4.5,0], [], IL_SDistL + IL_SDistL_Heli_offset]))) && (_target getVariable 'can_outside')))) && (_target getVariable 'box_num' > _target getVariable 'slots_num') && (_target getVariable 'can_load')"
-	];
-	
-	_obj_main addAction [
-	"<img image='IgiLoad\images\unload.paa' /><t color=""#ff0000"">  Unload cargo from Offroad</t>",
-	{
-		[_this select 0] call IL_Do_Unload;
-	},[],IL_Action_LU_Priority,false,true,"",
-	"(_target getVariable 'box_num' < 0) && ((IL_Can_Inside && (driver _target == _this)) || (((_this in (nearestObjects[ _target modelToWorld [0,-4.5,0], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside')))) && (_target getVariable 'can_load') && (abs(speed _target) <= IL_LU_Speed)"
-	];
-	_obj_main addAction [
-	"<t color=""#0000ff"">Enable loading from outside</t>",
-	{
-		(_this select 0) setVariable["can_outside", true, true];;
-	},[],IL_Action_S_Priority,false,true,"",
-	"((driver _target == _this) && !(_target getVariable 'can_outside') && IL_Can_Outside)"
-	];
-	
-	_obj_main addAction [
-	"<t color=""#0000ff"">Disable loading from outside</t>",
-	{
-		(_this select 0) setVariable["can_outside", false, true];;
-	},[],IL_Action_S_Priority,false,true,"",
-	"((driver _target == _this) && (_target getVariable 'can_outside') && IL_Can_Outside)"
-	];
-};
-if (_obj_main_type in IL_Supported_Vehicles_BOAT) then
-{
-	if (IL_DevMod) then
-	{
-		Player globalChat Format["IgiLoad ""%1"" Vehicle is in IL_Supported_Vehicles_BOAT.", IL_Script_Inst];
-	};
-	_vsupported = true;
-	[_obj_main] call IL_Init_Veh;
-	
-	_obj_main addAction [
-	"<img image='IgiLoad\images\load.paa' /><t color=""#007f0e"">  Load cargo on Offroad</t>",
-	{
-		[_this select 0, IL_Supported_Vehicles_BOAT] call IL_Do_Load;
-	},[],IL_Action_LU_Priority,true,true,"",
-	"(count(nearestObjects[ _target modelToWorld [0,-4.5,0], IL_Supported_Vehicles_BOAT, IL_SDistL]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || ((((_this in (nearestObjects[ _target modelToWorld [0,-4.5,0], [], IL_SDistL + IL_SDistL_Heli_offset]))) && (_target getVariable 'can_outside')))) && (_target getVariable 'box_num' > _target getVariable 'slots_num') && (_target getVariable 'can_load')"
-	];
-	
-	_obj_main addAction [
-	"<img image='IgiLoad\images\load.paa' /><t color=""#007f0e"">  Load vehicle on Offroad</t>",
-	{
-		[_this select 0, IL_Supported_Vehicles_BOAT] call IL_Do_Load;
-	},[],IL_Action_LU_Priority,true,true,"",
-	"(count(nearestObjects[ _target modelToWorld [0,-4.5,0], IL_Supported_Vehicles_BOAT, IL_SDistL]) > 0) && (abs(speed _target) <= IL_LU_Speed) && ((IL_Can_Inside && (driver _target == _this)) || ((((_this in (nearestObjects[ _target modelToWorld [0,-4.5,0], [], IL_SDistL + IL_SDistL_Heli_offset]))) && (_target getVariable 'can_outside')))) && (_target getVariable 'box_num' > _target getVariable 'slots_num') && (_target getVariable 'can_load')"
 	];
 	
 	_obj_main addAction [
