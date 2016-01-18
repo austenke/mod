@@ -18,6 +18,7 @@ disableSerialization;
 _unit SVAR ["Revive",FALSE,TRUE]; //Set the corpse to a revivable state.
 _unit SVAR ["name",profileName,TRUE]; //Set my name so they can say my name.
 _unit SVAR ["restrained",FALSE,TRUE];
+_unit SVAR ["civ_restrained",FALSE,TRUE];
 _unit SVAR ["Escorting",FALSE,TRUE];
 _unit SVAR ["transporting",FALSE,TRUE]; //Why the fuck do I have this? Is it used?
 _unit SVAR ["steam64id",(getPlayerUID player),true]; //Set the UID.

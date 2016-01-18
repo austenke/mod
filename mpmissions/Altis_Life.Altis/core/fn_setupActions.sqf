@@ -36,6 +36,10 @@ switch (playerSide) do {
 
 		life_actions = life_actions + [player addAction["Pick Up Items",life_fnc_scrollPickup,"",0,false,false,"",'
 		cursorTarget distance player < 7 && speed cursorTarget < 1 && (typeOf cursorTarget) in ["Land_Defibrillator_F","Land_Money_F","Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Suitcase_F"]']];
+	
+		//Revive
+		life_actions = life_actions + [player addAction["Revive Player",life_fnc_revivePlayer,"",200,false,false,"",'
+		!isNull cursorTarget && !alive cursorTarget && cursorTarget isKindOf "Man" && cursorTarget distance player < 9 ']];
 	};
 
 	case west: {
