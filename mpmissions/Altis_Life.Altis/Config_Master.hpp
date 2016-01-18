@@ -118,10 +118,10 @@ class VirtualItems {
 	VITEMMACRO(storagesmall, "STR_Item_StorageBS", "storageSmall", 10, 750000, -1, false, -1, "icons\ico_storageSmall.paa")
 	VITEMMACRO(storagebig, "STR_Item_StorageBL", "storageBig", 15, 1500000, -1, false, -1, "icons\ico_storageBig.paa")
 	VITEMMACRO(burlapsack, "STR_Item_BurlapSack","burlapsack",5,10000,75,false,-1,"icons\ico_blindfold.paa")
-	VITEMMACRO(speedbomb, "STR_Item_SpeedBomb","speedbomb",10,10000,75,true,-1,"icons\ico_speedbomb.paa")
+	VITEMMACRO(speedbomb, "STR_Item_SpeedBomb","speedbomb",10,350000,1000,true,-1,"icons\ico_speedbomb.paa")
 	VITEMMACRO(ziptie, "STR_Item_ZipTie","ziptie",3,300,75,false,-1,"")
-	VITEMMACRO(chainsaw, "STR_Item_Chainsaw", "chainsaw", 10, 750, 500, false,- 1, "icons\Chainsaw.paa")
-	VITEMMACRO(nitro, "STR_Item_nitro", "nitro", 10, 750, 500, false,- 1, "icons\nitro.paa")
+	VITEMMACRO(chainsaw, "STR_Item_Chainsaw", "chainsaw", 10, 750, 75, false,- 1, "icons\Chainsaw.paa")
+	VITEMMACRO(nitro, "STR_Item_nitro", "nitro", 10, 25000, 250, false,- 1, "icons\nitro.paa")
 
 	//Mined Items
 	VITEMMACRO(oil_unprocessed, "STR_Item_OilU", "oilUnprocessed", 5, -1, -1, true, -1, "icons\ico_oilunprocessed.paa")
