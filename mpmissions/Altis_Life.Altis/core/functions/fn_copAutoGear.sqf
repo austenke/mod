@@ -9,7 +9,6 @@
 if (playerSide == independent) exitWith {hint "You must be a cop to purchase this!"};  //cops only
 if (playerSide == civilian) exitWith {hint "You must be a cop to purchase this!"};  //cops only
 
-if (!life_cash > 29999) exitwith {hint "You do not have enough cash on you!"};
 if ((life_cash > 29999) && (FETCH_CONST(life_coplevel) == 1)) then //cost = $30,000
 {
 	life_cash = life_cash - 30000;  //30k
