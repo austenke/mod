@@ -84,7 +84,7 @@ if(life_action_inUse) then
 	sleep (30 + random(180));
 	life_use_atm = true;
 	if!(alive _robber) exitWith {};
-	[[1,format["NEWS: %1 was just robbed for a total of $%2", _name, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",civilian,false] spawn life_fnc_MP;
+	[[1,format["<t size='2'>BREAKING NEWS:</t> <br /> %1 was just robbed for a total of $%2", _name, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",civilian,false] spawn life_fnc_MP;
 };
 
 sleep 300;
