@@ -62,7 +62,7 @@ class Life_Pickup_Items {
 			idc = 1522;
 			text = "Pick Up";
 			colorBackground[] = {0.5, 0, 0, 0.5};
-			onButtonClick = "[0,player,false,1] call life_fnc_pickupAction";
+			onButtonClick = "[] call life_fnc_nearbyPickup";
 			x = 0.32;
 			y = 0.65;
 			w = (6.25 / 40);

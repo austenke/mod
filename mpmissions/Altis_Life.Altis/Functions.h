@@ -84,6 +84,7 @@ class Life_Client_Core
 		file = "core\actions";
 		class interactOil {};
 		class scrollPickup {};
+		class nearbyPickup {};
 		class buyLicense {};
 		class healHospital {};
 		class pushVehicle {};
