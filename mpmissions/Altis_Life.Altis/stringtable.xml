@@ -4608,6 +4608,13 @@
 			<Italian>Vendi Casa</Italian>
 			<Portuguese>Vender Casa</Portuguese>
 		</Key>
+		<Key ID="STR_pInAct_GangHouse">
+			<Original>Set as Gang House</Original>
+			<German>Set as Gang House</German>
+			<French>Set as Gang House</French>
+			<Italian>Set as Gang House</Italian>
+			<Portuguese>Set as Gang House</Portuguese>
+		</Key>
 		<Key ID="STR_pInAct_UnlockStorage">
 			<Original>Unlock Storage</Original>
 			<German>Lagerplatz aufsperren</German>
