@@ -9,13 +9,12 @@
 if (playerSide == independent) exitWith {hint "You must be a cop to purchase this!"};  //cops only
 if (playerSide == civilian) exitWith {hint "You must be a cop to purchase this!"};  //cops only
 
-if((FETCH_CONST(life_coplevel)) == 1) then
 /*
 {
 	exitWith { hint "You are not the right level!"};  //level 3+
 };
 */
-if (life_cash > 29999) then //30k
+if (life_cash > 29999) && (FETCH_CONST(life_coplevel) == 1) then //30k
 {
 	life_cash = life_cash - 30000;  //30k
 	hintSilent "30000 has been removed for this kit";
