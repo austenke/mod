@@ -471,19 +471,13 @@ class CfgVehicles {
 			} },
 			{ "Shark", "civ", {
 					"textures\hatch_sport\hb_shark.paa"
-			} },	
-			{ "PedoBear", "civ", {
-					"textures\hatch_sport\pedo.paa"
-			} },	
+			} },
 			{ "Monster", "civ", {
 					"textures\hatch_sport\monster.paa"
 			} },
 			{ "RedGull", "civ", {
 					"textures\hatch_sport\redgull_rally.paa"
 			} },
-			{ "Youtube", "civ", {
-					"textures\hatch_sport\youtube.paa"
-			} },	
             { "Police", "cop", {
                 "textures\cop\hatch_cop.paa"
             } }
@@ -620,12 +614,6 @@ class CfgVehicles {
 			} },		
 			{ "Ferrari", "civ", {
 					"textures\suv\ferrari.paa"
-			} },
-			{ "Pimp", "civ", {
-					"textures\suv\pimp.paa"
-			} },	
-			{ "Superman", "civ", {
-					"textures\suv\superman.paa"
 			} },
 			{ "Fireball", "civ", {
 					"textures\suv\suv_fireball.paa"
