@@ -44,7 +44,7 @@ if(!(EQUAL(count (actionKeys "User10"),0)) && {(inputAction "User10" > 0)}) exit
 	true;
 };
 
-if (_code in (actionKeys "User5")) then {
+if(!(EQUAL(count (actionKeys "User5"),0)) && {(inputAction "User5" > 0)}) exitWith {
 	// this action is for changing the emergency lights mode
 
 	_veh = vehicle player;
