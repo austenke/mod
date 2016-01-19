@@ -11,6 +11,6 @@ _unit SVAR ["restrained",FALSE,TRUE];
 _unit SVAR ["Escorting",FALSE,TRUE];
 _unit SVAR ["transporting",FALSE,TRUE];
 detach _unit;
-[[cursorTarget],"life_fnc_handcuff",nil,true] spawn life_fnc_MP;
+[[player],"life_fnc_handcuff",nil,true] spawn life_fnc_MP;
 
 [0,"STR_NOTF_Unrestrain",true,[_unit GVAR ["realname",name _unit], profileName]] remoteExecCall ["life_fnc_broadcast",west];
