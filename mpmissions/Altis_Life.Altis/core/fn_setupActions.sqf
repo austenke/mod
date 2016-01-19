@@ -81,7 +81,3 @@ switch (playerSide) do {
 		!isNull cursorTarget && life_inv_defib > 1 && !alive cursorTarget && cursorTarget isKindOf "Man" && cursorTarget distance player < 9 ']];
 	};
 };
-
-//Pickup Item
-life_actions pushBack (player addAction["Pickup Item(s)",{createDialog "life_pickup_items"},"",0,false,false,"",
-' !isNull life_cursorTarget && count (life_cursorTarget getVariable ["item",[]]) > 0 && player distance life_cursorTarget < 5 ']);
