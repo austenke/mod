@@ -58,10 +58,10 @@ if (_code in (actionKeys "User5")) then {
 		// toggle them on or off
 		if(_veh getVariable ["advancedLights",false]) then {
 			_veh setVariable ["advancedLights", false, true];
-			titleText ["SWAT lights: OFF", "PLAIN"];
+			titleText ["Police lights: OFF", "PLAIN"];
 		} else {
 			_veh setVariable ["advancedLights", true, true];
-			titleText ["SWAT lights: ON", "PLAIN"];
+			titleText ["Police lights: ON", "PLAIN"];
 		};
 		_handled = true;
 	};
