@@ -195,6 +195,7 @@ class Life_Client_Core
 		class robbankdone {};
 		class bankAlarm {};
 		class handcuff {};
+		class defib {};
 		class robberyFinish {};
 		class robberyStart {};
 		class robberyFail {};

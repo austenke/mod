@@ -31,7 +31,7 @@ _titleText = _ui displayCtrl 38202;
 _titleText ctrlSetText format["%2 (1%1)...","%",_title];
 _progressBar progressSetPosition 0.01;
 _cP = 0.01;
-player say3D "defib";
+[[player],"life_fnc_defib",nil,true] spawn life_fnc_MP;
 
 //Lets reuse the same thing!
 while {true} do {
