@@ -101,13 +101,6 @@ class CfgSounds
 		sound[] = {"\sounds\robberyFinish.ogg", 1.0, 1};
 		titles[] = {};
 	};
-
-	class detonate
-	{
-		name = "detonate";
-		sound[] = {"\sounds\detonate.ogg", 1.0, 1};
-		titles[] = {};
-	};
 	
 	class robberyFail
 	{

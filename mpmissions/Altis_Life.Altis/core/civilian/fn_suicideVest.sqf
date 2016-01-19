@@ -31,8 +31,6 @@ _bigBoom setPos (getPos player);
 
 _bigBoom setVelocity [100,0,0];
 
-player say3D "detonate";
-
 if(alive player) then {player setDamage 1;};
 
 life_blowUp = false; 

@@ -120,7 +120,6 @@ class Life_Client_Core
 		class surrender {}; //surrender action
 		class robShops {}; //Rob Gas Station & Shops Script
 		class robBank {}; 
-		class detonate {};
 		class BagHostage {};
 		class BaggedHostage {};
 		class UnBagHostage {};
