@@ -16,14 +16,14 @@ if(_robber distance _shop > 5) exitWith { hint "You need to stay close to the ba
 if([west] call life_fnc_playerCount < 1) exitWith { hint "There must be at least one officer online to rob the bank!" };
 
 //if (isNull _kassa) then { _kassa = 1000; };
-if (life_action_inUse) exitWith { hint "Robbery already in progress!" };
+if (life_action_robbing) exitWith { hint "Robbery already in progress!" };
 if (vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
 
 if !(alive _robber) exitWith {};
 if (currentWeapon _robber == "") exitWith { hint "You cannot rob the bank without a gun" };
 if (_kassa == 0) exitWith { hint "There is no cash in the register!" };
 
-life_action_inUse = true;
+life_action_robbing = true;
 _kassa = 12000 + round(random 400000);
 _shop removeAction _action;
 _shop switchMove "AmovPercMstpSsurWnonDnon";
@@ -52,7 +52,7 @@ _pgText ctrlSetText format["Robbery in Progress, stay close (20 meters) (1%1)...
 _progress progressSetPosition 0.01;
 _cP = 0.01;
  
-if(life_action_inUse) then
+if(life_action_robbing) then
 {
 	[[_shop],"life_fnc_bankAlarm",nil,true] spawn life_fnc_MP;
 	while{true} do
@@ -63,12 +63,12 @@ if(life_action_inUse) then
 		_pgText ctrlSetText format["Robbery in Progress, stay close (20 meters) (%1%2)...",round(_cP * 100),"%"];
 
 		if(_cP >= 1) exitWith {};
-		if(_robber distance _shop > 20.5) exitWith {deleteMarker _marker; 5 cutText ["","PLAIN"]; life_action_inUse = false;};
-		if!(alive _robber) exitWith {deleteMarker _marker; 5 cutText ["","PLAIN"]; life_action_inUse = false;};
+		if(_robber distance _shop > 20.5) exitWith {deleteMarker _marker; 5 cutText ["","PLAIN"]; life_action_robbing = false;};
+		if!(alive _robber) exitWith {deleteMarker _marker; 5 cutText ["","PLAIN"]; life_action_robbing = false;};
 	};
 
-	if!(alive _robber) exitWith { life_action_inUse = false; deleteMarker _marker; };
-	if(_robber distance _shop > 20.5) exitWith { _shop switchMove ""; hint "You need to stay close to rob the bank. The vault has been sealed"; 5 cutText ["","PLAIN"]; life_action_inUse = false; deleteMarker _marker; };
+	if!(alive _robber) exitWith { life_action_robbing = false; deleteMarker _marker; };
+	if(_robber distance _shop > 20.5) exitWith { _shop switchMove ""; hint "You need to stay close to rob the bank. The vault has been sealed"; 5 cutText ["","PLAIN"]; life_action_robbing = false; deleteMarker _marker; };
 	5 cutText ["","PLAIN"];
 
 	titleText[format["You have stolen $%1, now get away before the cops arrive!",[_kassa] call life_fnc_numberText],"PLAIN"];
@@ -79,7 +79,7 @@ if(life_action_inUse) then
 	[[getPlayerUID _robber,name _robber,"211"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 	[[_shop],"life_fnc_robbankdone",nil,true] spawn life_fnc_MP;
 
-	life_action_inUse = false;
+	life_action_robbing = false;
 	life_use_atm = false;
 	sleep (30 + random(180));
 	life_use_atm = true;
