@@ -8,7 +8,7 @@
 	Pickup for nearby items
 */
 
-private["_obj","itemName","_dialog","_list"];
+private["_obj","_itemName","_dialog","_list"];
 
 _dialog = findDisplay 1520;
 _list = _dialog displayCtrl 1521;
