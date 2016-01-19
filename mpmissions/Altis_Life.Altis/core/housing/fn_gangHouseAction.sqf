@@ -24,5 +24,5 @@ if(player == (_house GVAR ["owner",ObjNull])) then {
 	//_numOfDoors = FETCH_CONFIG2(getNumber,CONFIG_VEHICLES,(typeOf _house),"numberOfDoors");
 	//for "_i" from 1 to _numOfDoors do {
 	//	_house SVAR [format["bis_disabled_Door_%1",_i],1,true];
-	};
+	//};
 };
