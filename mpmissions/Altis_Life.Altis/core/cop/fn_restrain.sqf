@@ -32,7 +32,6 @@ if(isNull _cop) exitWith {};
 if((player GVAR["surrender",FALSE])) then { player SVAR["surrender",FALSE,TRUE]; player switchMove ""; };
 
 titleText[format[localize "STR_Cop_Retrained",_cop GVAR ["realname",name _cop]],"PLAIN"];
-player say3D "handcuff";
 
 if(!(player GVAR ["Escorting",false])) then {
 	detach player;

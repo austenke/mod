@@ -194,6 +194,7 @@ class Life_Client_Core
 		class LockCarSound {};
 		class robbankdone {};
 		class bankAlarm {};
+		class handcuff {};
 		class robberyFinish {};
 		class robberyStart {};
 		class robberyFail {};
