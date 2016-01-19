@@ -14,8 +14,8 @@ _unit = SEL(_this,0);
 	_value = ITEM_VALUE(_item);
 	_itemName = ITEM_VARNAME(_item);
 	
-	_randomx = round(random(4));
-	_randomy = round(random(4));
+	_randomx = round(random(4)) + 1;
+	_randomy = round(random(4)) + 1;
 
 	switch(_item) do {
 		case "waterBottle": {
