@@ -12,6 +12,7 @@ life_pickup_open = true;
 
 _list = ((findDisplay 1520) displayCtrl 1521);
 _lastItems = [];
+_itemInfo = _x getVariable ["item",[]]; if(count _itemInfo == 0) exitWith {deleteVehicle _x;};
 
 while {!isNull (findDisplay 1520)} do
 {
