@@ -57,7 +57,7 @@ if(life_action_inUse) then
 	[[_shop],"life_fnc_bankAlarm",nil,true] spawn life_fnc_MP;
 	while{true} do
 	{
-			sleep 10.70;
+			sleep 6.70;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format["Robbery in Progress, stay close (20 meters) (%1%2)...",round(_cP * 100),"%"];
