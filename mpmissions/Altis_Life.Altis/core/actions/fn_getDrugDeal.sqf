@@ -13,13 +13,14 @@ if (life_delivery_in_progress) exitWith{};
 
 _dp = LIFE_SETTINGS(getArray,"delivery_points") call BIS_fnc_selectRandom;
 _drug = "marijuana";
+_amount = 4;
 
 life_deal_in_progress = true;
 life_dp_point = call compile format["%1",_dp];
 
 _dp = [_dp,"_"," "] call KRON_Replace;
 life_cur_task = player createSimpleTask [format["Deal_%1",life_dp_point]];
-life_cur_task setSimpleTaskDescription [format["Deliver some %1 to %2",_drug,toUpper _dp],"Drug Deal",""];
+life_cur_task setSimpleTaskDescription [format["Deliver %1 %2 to %3",_amount,_drug,toUpper _dp],"Drug Deal",""];
 life_cur_task setTaskState "Assigned";
 player setCurrentTask life_cur_task;
 

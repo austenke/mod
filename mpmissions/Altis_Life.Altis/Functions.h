@@ -96,6 +96,7 @@ class Life_Client_Core
 		class dropFishingNet {};
 		class getDPMission {};
 		class getDrugDeal {};
+		class dealFinish {};
 		class postBail {};
 		class processAction {};
 		class arrestAction {};
