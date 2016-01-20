@@ -30,7 +30,7 @@ while {!isNull (findDisplay 1520)} do
 			_itemName = ITEM_NAME(SEL(_itemInfo,0));
 			//_itemInfo = _x getVariable ["item", ["Unknown",0]];
 			if (_itemInfo select 0 == "money") then { _list lbAdd format["$%1 Cash", [_itemInfo select 1] call life_fnc_numberText]; }
-			else { _list lbAdd format["%1x %2", _itemInfo select 1, _itemName]; };
+			else { _list lbAdd format["%1x %2", _itemInfo select 1, localize _itemName]; };
 			_list lbSetData [(lbSize _list)-1,_itemName];
 		} foreach _items;
 		if (count _items < 1) then { _list lbAdd "There are no objects nearby which you can pick up."; };
