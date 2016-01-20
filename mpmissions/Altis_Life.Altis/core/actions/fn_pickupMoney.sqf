@@ -8,7 +8,7 @@
 */
 private "_value";
 if((time - life_action_delay) < 1.5) exitWith {hint localize "STR_NOTF_ActionDelay"; _this SVAR ["inUse",false,true];};
-if(isNull _this OR {player distance _this > 20}) exitWith {_this SVAR ["inUse",false,true];};
+if(isNull _this OR {player distance _this > 30}) exitWith {_this SVAR ["inUse",false,true];};
 
 _value = SEL((_this GVAR "item"),1);
 if(!isNil "_value") exitWith {
