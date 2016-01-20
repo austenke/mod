@@ -138,7 +138,7 @@ class CfgFunctions
 		{
 			file = "\life_server\Functions\Housing";
 			class addHouse {};
-			class gangHouse {};
+			//class gangHouse {};
 			class fetchPlayerHouses {};
 			class initHouses {};
 			class sellHouse {};

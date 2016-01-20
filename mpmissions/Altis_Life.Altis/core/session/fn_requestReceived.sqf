@@ -71,7 +71,7 @@ switch(playerSide) do {
 		life_pos = SEL(_this,11);
 		life_gangRank = SEL(_this,13);
 
-		life_gangHouse = SEL(_this,14);
+		//life_gangHouse = SEL(_this,14);
 	};
 	
 	case independent: {

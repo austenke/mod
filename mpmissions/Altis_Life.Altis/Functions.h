@@ -147,7 +147,7 @@ class Life_Client_Core
 		class copHouseOwner {};
 		class lockHouse {};
 		class garageRefund {};
-		class gangHouseAction {};
+		//class gangHouseAction {};
 	};
 	
 	class Config
