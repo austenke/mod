@@ -8,7 +8,7 @@
 */
 private["_unit"];
 _unit = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
-if(isNull _cop) exitWith {};
+if(isNull _unit) exitWith {};
 
 if (life_is_arrested) then {
 	life_is_arrested = false;

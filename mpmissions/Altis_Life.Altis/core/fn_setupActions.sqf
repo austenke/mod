@@ -30,7 +30,7 @@ switch (playerSide) do {
 
 		life_actions = life_actions + [player addAction["Stop Escorting",life_fnc_stopEscorting,"",0,false,false,"",'
         !isNull cursorTarget && (cursorTarget getVariable["Escorting",false]) && cursorTarget distance player < 5 ']];
-		
+
 		life_actions = life_actions + [player addAction["Pick Up Barrel",life_fnc_interactOil,"",0,false,false,"",'
         !life_holdBarrel && (typeOf cursorTarget) in ["Land_BarrelWater_F","Land_MetalBarrel_F"] && cursorTarget distance player < 5 && speed cursorTarget < 1 ']];
 	
@@ -42,7 +42,7 @@ switch (playerSide) do {
 	
 		//Revive
 		life_actions = life_actions + [player addAction["Revive Player",life_fnc_revivePlayer,"",200,false,false,"",'
-		!isNull cursorTarget && life_inv_defib > 1 && !alive cursorTarget && cursorTarget isKindOf "Man" && cursorTarget distance player < 9 ']];
+		!isNull cursorTarget && life_inv_defib >= 1 && !alive cursorTarget && cursorTarget isKindOf "Man" && cursorTarget distance player < 9 ']];
 	};
 
 	case west: {

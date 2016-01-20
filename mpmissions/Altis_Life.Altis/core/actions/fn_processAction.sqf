@@ -54,11 +54,11 @@ _upp = _itemInfo select 3;
 _2var = _itemInfo select 4;
 if(_2var) then { _oldItem2 = _itemInfo select 5;};  
  
-if(_vendor in [mari_processor,coke_processor,heroin_processor]) then {
-	_hasLicense = true;
-} else {
-	_hasLicense = LICENSE_VALUE(_license,"civ");
-};
+//if(_vendor in [mari_processor,coke_processor,heroin_processor]) then {
+//	_hasLicense = true;
+//} else {
+_hasLicense = LICENSE_VALUE(_license,"civ");
+//};
  
 _itemName = ITEM_NAME(_newItem);
 _itemNameo1 = ITEM_NAME(_oldItem);

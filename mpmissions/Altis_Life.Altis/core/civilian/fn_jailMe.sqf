@@ -37,6 +37,7 @@ player addUniform "U_C_WorkerCoveralls";
 
 // Texture prison uniform
 if((uniform player) == "U_C_WorkerCoveralls") then { [player,0,"textures\prisoner_uniform.jpg"] remoteExecCall ["life_fnc_setTexture",RCLIENT]; };
+[] call life_fnc_Uniformscolor;
 
 [_bad] spawn {
 	life_canpay_bail = false;

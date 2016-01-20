@@ -34,7 +34,7 @@ _ui = uiNameSpace getVariable "life_progress";
 _progress = _ui displayCtrl 38201;
 _pgText = _ui displayCtrl 38202;
 
-_marker = createMarker ["prison_break"];
+_marker = createMarker ["prison_break", position player];
 _marker setMarkerColor "ColorRed";
 _marker setMarkerText "Prison break in progress!";
 _marker setMarkerType "hd_warning";
