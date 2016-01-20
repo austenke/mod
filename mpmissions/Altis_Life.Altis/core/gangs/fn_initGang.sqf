@@ -39,5 +39,5 @@ if(!isNil "_group") then {
 	_group SVAR ["gang_maxMembers",SEL(life_gangData,3),true];
 	_group SVAR ["gang_bank",SEL(life_gangData,4),true];
 	_group SVAR ["gang_members",SEL(life_gangData,5),true];
-	_group SVAR ["gang_house",SEL(life_gangData,6),true];
+	//_group SVAR ["gang_house",SEL(life_gangData,6),true];
 };
