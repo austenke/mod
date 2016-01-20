@@ -40,7 +40,7 @@ life_istazed = false;
 player allowDamage true;
 disableUserInput false;
 				
-while {player GVAR  "restrained"} do {
+while {player GVAR  "restrained" || player GVAR  "civ_restrained"} do {
 	if(vehicle player == player) then {
 		player playMove "AmovPercMstpSnonWnonDnon_Ease";
 	};
