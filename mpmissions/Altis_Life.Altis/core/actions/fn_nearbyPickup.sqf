@@ -13,7 +13,7 @@ private["_obj","_itemName","_dialog","_list"];
 _dialog = findDisplay 1520;
 _list = _dialog displayCtrl 1521;
 _itemName = lbData [ 1521, ( lbCurSel 1521 ) ]; // retrieve the data (previously set) from the listbox's currently selected index
-_objects = nearestObjects [player, [], 5];
+_objects = nearestObjects [player, [], 10];
 
 {
 	_itemInfo = _x getVariable ["item",[]];
