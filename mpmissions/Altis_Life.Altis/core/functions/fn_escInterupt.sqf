@@ -32,7 +32,7 @@ _escSync = {
 	
 	_abortButton = CONTROL(49,104);
 	[] call SOCK_fnc_updateRequest; //call our silent sync.
-	if (playerSide == civilian) then {[8] call SOCK_fnc_updatePartial;};
+	if (playerSide == civilian) then {[8] call SOCK_fnc_updatePartial;[9] call SOCK_fnc_updatePartial;};
 	
 	if(_this) then {
 		_thread = [] spawn _syncManager;
