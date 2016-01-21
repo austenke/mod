@@ -21,7 +21,7 @@ _version ctrlSetText format["BETA: 0.%1.%2",(productVersion select 2),(productVe
 	while {true} do
 	{
 		_dam = damage player;
-		_boun = life_bounty
+		_boun = life_bounty;
 		waitUntil {(damage player) != _dam || life_bounty != _boun};
 		[] call life_fnc_hudUpdate;
 	};
