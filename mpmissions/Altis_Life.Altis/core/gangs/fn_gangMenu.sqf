@@ -37,7 +37,7 @@ lbClear _members;
 		_members lbAdd format["%1 " +(localize "STR_GNOTF_GangLeader"),(_x GVAR ["realname",name _x])];
 		_members lbSetData [(lbSize _members)-1,str(_x)];
 	} else {
-		_members lbAdd format["%1",(_x GVAR ["realname",name _x])];
+		_members lbAdd format["%1 (%2)",(_x GVAR ["realname",name _x]),_x GVAR ["Rank",1]];
 		_members lbSetData [(lbSize _members)-1,str(_x)];
 	};
 } foreach (units grpPlayer);
