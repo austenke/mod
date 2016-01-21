@@ -78,8 +78,8 @@ while {true} do {
 		_chance = random(100);
 		if(_chance >= 95) then {
 			[] call life_fnc_getDrugDeal;	
-		}
-	}
+		};
+	};
 
 	/* Check if the player's state changed? */
 	if(vehicle player != _lastState OR {!alive player}) then {

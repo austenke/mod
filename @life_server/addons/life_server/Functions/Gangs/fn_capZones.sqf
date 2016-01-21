@@ -26,7 +26,7 @@ KBW_fnc_handleCapture = {
 		uiSleep 25;
 		_units = list (_this select 0); //Total units inside the zone
 		_nonUnits = [];
-		_recentCapture = toModify select 3;
+		_recentCapture = life_capture_list select _point select 3;
 		_recentTime = _recentCapture + 50;
 		diag_log format["_recentCapture: %1 -- _recentTime: %2 -- serverTime: %3",_recentCapture,_recentTime,serverTime];
 		{if(_recentTime > serverTime) then {[[],"life_fnc_alreadycappedNotice",_x,false] spawn life_fnc_MP};} forEach _units;
