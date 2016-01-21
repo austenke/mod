@@ -22,6 +22,6 @@ if(!(EQUAL(typeName _members,"ARRAY"))) exitWith {};
 SUB(_members,[_unitID]);
 grpPlayer SVAR ["gang_members",_members,true];
 
-[_unit,grpPlayer] remoteExec ["TON_fnc_clientGangPromote",_unit]; //Promote that bitch!
+[_unit,grpPlayer] remoteExec ["IND_fnc_clientGangPromote",_unit]; //Promote that bitch!
 [4,grpPlayer] remoteExec ["TON_fnc_updateGang",RSERV]; //Update the database.
 [] call life_fnc_gangMenu;
