@@ -196,6 +196,7 @@ class Life_Client_Core
 		class LockCarSound {};
 		class robbankdone {};
 		class bankAlarm {};
+		class bountyClient {};
 		class handcuff {};
 		class defib {};
 		class robberyFinish {};

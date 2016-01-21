@@ -90,6 +90,7 @@ class CfgFunctions
 			class wantedBounty {};
 			class wantedRemove {};
 			class wantedAdd {};
+			class bountyClient {};
 			class wantedPardon{};
 			class wantedPunish{};
 			class wantedTicket{};
