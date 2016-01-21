@@ -26,6 +26,10 @@ KBW_fnc_handleCapture = {
 		uiSleep 25;
 		_units = list (_this select 0); //Total units inside the zone
 		_nonUnits = [];
+		_recentCapture = toModify select 3;
+		_recentTime = _recentCapture + 50;
+		diag_log format["_recentCapture: %1 -- _recentTime: %2 -- serverTime: %3",_recentCapture,_recentTime,serverTime];
+		{if(_recentTime > serverTime) then {[[],"life_fnc_alreadycappedNotice",_x,false] spawn life_fnc_MP};} forEach _units;
 		{if(!isPlayer _x || (((group _x) getVariable["gang_name",""]) == "") || (_x getVariable["zipTie",false]) || ((primaryWeapon _x == "") && (handgunWeapon _x == ""))) then {_nonUnits pushBack _x};} forEach _units; //Remove non-units and non-gang players
 		_units = _units - _nonUnits;
 		if(count _units == 0) exitWith {};
@@ -60,6 +64,7 @@ KBW_fnc_handleCapture = {
 					toModify set[2,((toModify select 2) + 0.05)];
 					if((toModify select 2) >= 0.99) then {
 						toModify set[2,1];
+						toModify set[3,serverTime];
 						_winners = [];
 						{if(group _x getVariable["gang_name",""] == (toModify select 0)) then {_winners pushBack _x}} forEach playableUnits;
 						{[[toModify select 1,true],"life_fnc_capNotice",_x,false] spawn life_fnc_MP} forEach _winners;

@@ -49,6 +49,11 @@ waitUntil {life_session_completed};
 0 cutText["Finishing client setup procedure","BLACK FADED"];
 0 cutFadeOut 9999999;
 
+life_fnc_alreadycappedNotice = compileFinal
+"
+	hint ""This cartel has been captured too recently"";
+";
+
 life_fnc_capNotice = compileFinal
 "
 _zone = _this select 0;
