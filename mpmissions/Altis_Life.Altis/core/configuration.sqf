@@ -73,7 +73,7 @@ life_vehicles = [];
 
 switch (playerSide) do {
 	case west: {
-		BANK = 7000; //Starting Bank Money
+		BANK = 100000; //Starting Bank Money
 		life_paycheck = 1500; //Paycheck Amount
 	};
 	
@@ -83,7 +83,7 @@ switch (playerSide) do {
 	};
 	
 	case independent: {
-		BANK = 6500;
+		BANK = 100000;
 		life_paycheck = 2500;
 	};
 };
