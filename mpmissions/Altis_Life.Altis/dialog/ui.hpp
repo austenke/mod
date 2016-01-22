@@ -79,9 +79,9 @@ class playerHUD {
 	{
 		idc = 1003;
 		text = "";
-		x = 0.958906 * safezoneW + safezoneX;
+		x = 0.957906 * safezoneW + safezoneX;
 		y = 0.8014 * safezoneH + safezoneY;
-		w = 0.020625 * safezoneW;
+		w = 0.040625 * safezoneW;
 		h = 0.011 * safezoneH;
 	};
 	class LIFE_FOOD_TEXT: Life_RscText
