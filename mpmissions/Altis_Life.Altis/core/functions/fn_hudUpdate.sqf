@@ -26,7 +26,6 @@ if(isNull LIFEdisplay) then {[] call life_fnc_hudSetup;};
 LIFEctrl(IDC_LIFE_BAR_FOOD) progressSetPosition (1 / (100 / life_hunger));
 LIFEctrl(IDC_LIFE_BAR_WATER) progressSetPosition (1 / (100 / life_thirst));
 LIFEctrl(IDC_LIFE_BAR_HEALTH) progressSetPosition (1 - (damage player));
-LIFEctrl(2203) progressSetPosition (1);
 
 LIFEctrl(IDC_LIFE_FOOD_TEXT) ctrlsetText format["%1", life_hunger];
 LIFEctrl(IDC_LIFE_WATER_TEXT) ctrlsetText format["%1", life_thirst];

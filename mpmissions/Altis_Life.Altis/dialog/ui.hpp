@@ -22,11 +22,22 @@ class playerHUD {
 	name = "playerHUD";
 	onLoad = "uiNamespace setVariable ['playerHUD',_this select 0]";
 	objects[] = {};
+
+	class controlsBackground {
+		class Life_RscTitleBackground:Life_RscText {
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+			idc = -1;
+			x = 0.917 * safezoneW + safezoneX;
+			y = 0.789 * safezoneH + safezoneX;
+			w = 0.17 * safezoneW;
+			h = (1 / 25) * safezoneH;
+		};
+	};
+
 	controls[] = {
 		LIFE_BAR_FOOD,
 		LIFE_BAR_WATER,
 		LIFE_BAR_HEALTH,
-		LIFE_BAR_WANTED,
 		LIFE_PICTURE_FOOD,
 		LIFE_PICTURE_WATER,
 		LIFE_PICTURE_HEALTH,
@@ -40,16 +51,6 @@ class playerHUD {
 
 
 	/* Progress Bars */
-	class LIFE_BAR_WANTED: Life_RscProgress
-	{
-		idc = 2203;
-		x = 0.938281 * safezoneW + safezoneX;
-		y = 0.797 * safezoneH + safezoneY;
-		w = 0.061875 * safezoneW;
-		h = 0.022 * safezoneH;
-		colorBar[] = {0, 0, 0, 1};
-		//colorBar[] = {.69,.72,.73,1};
-	};
 	class LIFE_BAR_FOOD: Life_RscProgress
 	{
 		idc = IDC_LIFE_BAR_FOOD;
