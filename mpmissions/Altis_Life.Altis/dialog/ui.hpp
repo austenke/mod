@@ -47,7 +47,7 @@ class playerHUD {
 		y = 0.797 * safezoneH + safezoneY;
 		w = 0.061875 * safezoneW;
 		h = 0.022 * safezoneH;
-		colorBar[] = {1,1,1,1};
+		colorBar[] = {.69,.72,.73,1};
 	};
 	class LIFE_BAR_FOOD: Life_RscProgress
 	{
