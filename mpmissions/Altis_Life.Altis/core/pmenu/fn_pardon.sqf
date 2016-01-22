@@ -20,4 +20,4 @@ if(count _data == 0) exitWith {};
 _sName = _data select 0;
 _uid = _data select 1;
 [_uid] remoteExecCall ["life_fnc_wantedPardon",RSERV];
-[0,"STR_NOTF_Pardon",true,_sName,player] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+[[[0,1],format[localize "STR_NOTF_Pardon",_sName,name player]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
