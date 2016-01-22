@@ -80,7 +80,7 @@ class playerHUD {
 		idc = 1003;
 		text = "";
 		x = 0.958906 * safezoneW + safezoneX;
-		y = 0.8014 * safezoneH + safezoneY;
+		y = 0.77 * safezoneH + safezoneY;
 		w = 0.020625 * safezoneW;
 		h = 0.011 * safezoneH;
 	};
@@ -116,7 +116,7 @@ class playerHUD {
 	class LIFE_PICTURE_WANTED: life_RscPicture
 	{
 		idc = 1203;
-		text = "icons\food.paa";
+		text = "icons\handcuffs.paa";
 		x = 0.922813 * safezoneW + safezoneX;
 		y = 0.77 * safezoneH + safezoneY;
 		w = 0.03; h = 0.04;
