@@ -18,7 +18,10 @@ diag_log "bountyCheck executed";
 //Search the wanted list to make sure they are not on it.
 _index = [_uid,life_wanted_list] call TON_fnc_index;
 
+diag_log format["Index is: %1",_index];
+
 if(_index != -1) then {
+	diag_log "Index is not -1";
 	_data = life_wanted_list select _index;
 	diag_log format["bountyClient data: %1",_data];
 	[_data] remoteExecCall ["life_fnc_bountyClient",_ret];
