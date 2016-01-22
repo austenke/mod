@@ -19,7 +19,7 @@ disableSerialization;
 
 _bounty = life_bounty;
 if(life_bounty / 1000000 >= 1) then {
-	_bounty = format["$%1m",life_bounty / 1000000];
+	_bounty = format["%1m",life_bounty / 1000000];
 };
 
 if(isNull LIFEdisplay) then {[] call life_fnc_hudSetup;};
