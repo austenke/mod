@@ -14,15 +14,15 @@ _version = CONTROL(46,1000);
 2 cutRsc ["playerHUD","PLAIN"];
 _version ctrlSetText format["BETA: 0.%1.%2",(productVersion select 2),(productVersion select 3)];
 [] call life_fnc_hudUpdate;
+[[getPlayerUID player,player],"life_fnc_bountyCheck",false,false] spawn life_fnc_MP;
 
 [] spawn
 {
-	private["_dam","_boun"];
+	private["_dam"];
 	while {true} do
 	{
 		_dam = damage player;
-		_boun = life_bounty;
-		waitUntil {(damage player) != _dam || life_bounty != _boun};
+		waitUntil {(damage player) != _dam};
 		[] call life_fnc_hudUpdate;
 	};
 };

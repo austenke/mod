@@ -44,7 +44,7 @@ class playerHUD {
 	{
 		idc = 2203;
 		x = 0.938281 * safezoneW + safezoneX;
-		y = 0.77 * safezoneH + safezoneY;
+		y = 0.797 * safezoneH + safezoneY;
 		w = 0.061875 * safezoneW;
 		h = 0.022 * safezoneH;
 	};
@@ -80,7 +80,7 @@ class playerHUD {
 		idc = 1003;
 		text = "";
 		x = 0.958906 * safezoneW + safezoneX;
-		y = 0.77 * safezoneH + safezoneY;
+		y = 0.797 * safezoneH + safezoneY;
 		w = 0.020625 * safezoneW;
 		h = 0.011 * safezoneH;
 	};
@@ -118,7 +118,7 @@ class playerHUD {
 		idc = 1203;
 		text = "icons\handcuffs.paa";
 		x = 0.922813 * safezoneW + safezoneX;
-		y = 0.77 * safezoneH + safezoneY;
+		y = 0.797 * safezoneH + safezoneY;
 		w = 0.03; h = 0.04;
 	};
 	class LIFE_PICTURE_FOOD: life_RscPicture
