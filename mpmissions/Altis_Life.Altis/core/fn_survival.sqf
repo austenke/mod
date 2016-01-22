@@ -74,7 +74,7 @@ while {true} do {
 		};
 	};
 	
-	if(life_deal_in_progress) then {
+	if(!life_deal_in_progress) then {
 		_chance = random(100);
 		if(_chance >= 95) then {
 			[] call life_fnc_getDrugDeal;	
@@ -114,6 +114,8 @@ while {true} do {
 		_lastPos = visiblePosition player;
 		_lastPos = (SEL(_lastPos,0)) + (SEL(_lastPos,1));
 	};
+	[[getPlayerUID player,player],"life_fnc_bountyCheck",false,false] spawn life_fnc_MP;
+
 	uiSleep 2;
 };
 	
