@@ -28,9 +28,9 @@ class playerHUD {
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			idc = -1;
 			x = 0.917 * safezoneW + safezoneX;
-			y = 0.789 * safezoneH + safezoneX;
+			y = 0.6 * safezoneH + safezoneX;
 			w = 0.17 * safezoneW;
-			h = (1 / 25) * safezoneH;
+			h = (1 / 10) * safezoneH;
 		};
 	};
 
@@ -82,7 +82,7 @@ class playerHUD {
 	{
 		idc = 1003;
 		text = "";
-		x = 0.950 * safezoneW + safezoneX;
+		x = 0.955 * safezoneW + safezoneX;
 		y = 0.8014 * safezoneH + safezoneY;
 		w = 0.040625 * safezoneW;
 		h = 0.011 * safezoneH;
