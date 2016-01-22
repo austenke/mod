@@ -54,7 +54,7 @@ class playerHUD {
 		x = 0.938281 * safezoneW + safezoneX;
 		y = 0.83 * safezoneH + safezoneY;
 		w = 0.061875 * safezoneW;
-		h = 0.022 * safezoneH;
+		h = 0.0293 * safezoneH;
 	};
 	class LIFE_BAR_WATER: Life_RscProgress
 	{
