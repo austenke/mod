@@ -8,6 +8,7 @@
 private["_uid","_player","_index","_data"];
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
 _player = [_this,1,"",[""]] call BIS_fnc_param;
+diag_log format["_uid: %1 -- _player: %2",_uid,_player];
 if(_uid == "" OR _player == "") exitWith {["diag_log",["----- Tried to launch wanted, bad data passed -----"]] call TON_fnc_logIt;}; //Bad data passed.
 
 diag_log "bountyCheck executed";
