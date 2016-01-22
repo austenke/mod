@@ -16,6 +16,7 @@ _ret = owner _ret;
 diag_log "bountyCheck executed";
 
 //Search the wanted list to make sure they are not on it.
+diag_log str life_wanted_list;
 _index = [_uid,life_wanted_list] call TON_fnc_index;
 
 diag_log format["Index is: %1",_index];
