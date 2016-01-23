@@ -1,5 +1,5 @@
 author = "Ohmslaw & Valiant & Index";
-onLoadName = "Drunken Life v1.2";
+onLoadName = "Drunken Life v1.3";
 onLoadMission = "www.drunkenlife.ca";
 LoadScreen  = "images\logo.jpg";
 joinUnassigned = 1;
