@@ -21,7 +21,7 @@ if (vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
 
 if !(alive _robber) exitWith {};
 if (currentWeapon _robber == "") exitWith { hint "You cannot rob the bank without a gun" };
-if (_kassa == 0) exitWith { hint "There is no cash in the register!" };
+//if (_kassa == 0) exitWith { hint "There is no cash in the register!" };
 
 life_action_robbing = true;
 _kassa = 12000 + round(random 400000);
