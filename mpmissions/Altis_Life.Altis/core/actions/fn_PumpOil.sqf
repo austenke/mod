@@ -44,7 +44,7 @@ if(life_holdBarrel) exitWith {hint "You are already holding a barrel"; 5 cutText
 _barrel = "Land_BarrelWater_F" createVehicle position player;
 _barrel attachTo[player,[0,1,1.9]];
 _barrel allowDamage false;
-_barrel setVariable ["owner", player, true];
+_barrel setVariable ["holding", true, true];
 _barrel enableRopeAttach false;
 player reveal _barrel;
 life_pumped_barrel = _barrel;

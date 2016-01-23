@@ -32,7 +32,7 @@ switch (playerSide) do {
         !isNull cursorTarget && (cursorTarget getVariable["Escorting",false]) && cursorTarget distance player < 5 ']];
 
 		life_actions = life_actions + [player addAction["Pick Up Barrel",life_fnc_interactOil,"",0,false,false,"",'
-        !life_holdBarrel && (typeOf cursorTarget) in ["Land_BarrelWater_F","Land_MetalBarrel_F"] && cursorTarget distance player < 5 && speed cursorTarget < 1 ']];
+        !life_holdBarrel && (typeOf cursorTarget) in ["Land_BarrelWater_F","Land_MetalBarrel_F"] && cursorTarget distance player < 5 && speed cursorTarget < 1 && !(cursorTarget getVariable "holding") ']];
 	
 		life_actions = life_actions + [player addAction["Drop Barrel",life_fnc_interactOil,"",0,false,false,"",'
 		life_holdBarrel']];
