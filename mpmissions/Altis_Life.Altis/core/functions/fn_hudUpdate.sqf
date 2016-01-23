@@ -23,7 +23,7 @@ if(life_bounty / 1000000 >= 1) then {
 };
 if(playerSide != civilan) then {
 	_bounty = "";
-}
+};
 
 if(isNull LIFEdisplay) then {[] call life_fnc_hudSetup;};
 LIFEctrl(IDC_LIFE_BAR_FOOD) progressSetPosition (1 / (100 / life_hunger));
