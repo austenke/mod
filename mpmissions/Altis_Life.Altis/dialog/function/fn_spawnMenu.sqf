@@ -8,7 +8,7 @@
 private["_spCfg","_sp","_ctrl"];
 disableSerialization;
 
-if(life_is_arrested) exitWith {
+if(playerSide == civilian && life_is_arrested) exitWith {
 	[] call life_fnc_respawned;
 };
 
