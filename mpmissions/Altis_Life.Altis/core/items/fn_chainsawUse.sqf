@@ -26,7 +26,7 @@ if(EQUAL(_diff,0)) exitWith {hint localize "STR_NOTF_InvFull"};
 
 life_action_inUse = true;
 
-player say3D "chainsaw";
+//player say3D "chainsaw";
 
 for "_i" from 0 to 2 do {
 	
