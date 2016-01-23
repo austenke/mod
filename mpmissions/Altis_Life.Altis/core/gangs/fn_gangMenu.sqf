@@ -24,6 +24,7 @@ if(_ownerID != steamid && life_gangRank < 3) then {
 	(CONTROL(2620,2625)) ctrlEnable false; //Set New Leader
 	(CONTROL(2620,2630)) ctrlEnable false; //Invite Player
 	(CONTROL(2620,2631)) ctrlEnable false; //Disband Gang
+	(CONTROL(2620,2633)) ctrlEnable false; //Promote Gang
 };
 
 (CONTROL(2620,2629)) ctrlSetText _gangName;
