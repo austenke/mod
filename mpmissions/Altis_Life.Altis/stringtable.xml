@@ -4097,20 +4097,8 @@
 			<Italian>This item isn't usable.</Italian>
 			<Portuguese>Esse item não é usável.</Portuguese>
 		</Key>
-		<Key ID="STR_Process_Pumped_Oil">
-			<Original>You have pumped %1 barrel of Oil</Original>
-		</Key>
-		<Key ID="STR_Process_Pump_Stay">
-			<Original>You need to stay within 10m to pump oil.</Original>
-		</Key>
 		<Key ID="STR_Process_Proc_Stay">
 			<Original>You need to stay within 10m to process oil.</Original>
-		</Key>
-		<Key ID="STR_Process_Pump_Oil">
-			<Original>Pumping Oil</Original>
-		</Key>
-		<Key ID="STR_Process_Pump_Oil_Fail">
-			<Original>Your Inventory is full</Original>
 		</Key>
 		<Key ID="STR_Process_Pump_InUse">
 			<Original>You cannot use that pump currently.</Original>
@@ -4804,7 +4792,7 @@
 			<Portuguese>Você não selecionou a roupa que deseja comprar.</Portuguese>
 		</Key>
 		<Key ID="STR_Shop_sellOil">
-			<Original>You sold 1 barrel of Oil for $300,000.</Original>
+			<Original>You sold 1 barrel of Oil for $200,000.</Original>
 		</Key>
 		<Key ID="STR_Shop_NotEnoughClothes">
 			<Original>Sorry sir, you don't have enough money to buy those clothes.</Original>
