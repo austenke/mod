@@ -20,6 +20,8 @@ if(_badChar) exitWith {hint localize "STR_GNOTF_IncorrectChar";};
 if(BANK < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {hint format[localize "STR_GNOTF_NotEnoughMoney",[((LIFE_SETTINGS(getNumber,"gang_price")) - BANK)] call life_fnc_numberText];};
 
 [player,getPlayerUID player,_gangName] remoteExec ["TON_fnc_insertGang",RSERV];
+life_gangRank = 4;
+player SVAR ["Rank",life_gangRank,1];
 hint localize "STR_NOTF_SendingData";
 closeDialog 0;
 life_action_gangInUse = true;
