@@ -150,7 +150,7 @@ class VirtualItems {
 	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 6, 17000, 15000, true, -1, "icons\ico_cocainep.paa")
 
 	//Alcohol
-	VITEMMACRO(bottledshine, "STR_Item_BottledShine","bottledshine",4,25000,22000,true,-1,"icons\moonshine.paa")
+	VITEMMACRO(bottledshine, "STR_Item_BottledShine","bottledshine",4,35000,32000,true,-1,"icons\moonshine.paa")
 	VITEMMACRO(bottledwhiskey, "STR_Item_BottledWhiskey","bottledwhiskey",4,8000,5000,false,-1,"icons\whiskey.paa")
 	VITEMMACRO(bottledbeer, "STR_Item_BottledBeer","bottledbeer",4,6000,4000,false,-1,"icons\beer.paa")
 	VITEMMACRO(moonshine, "STR_Item_Moonshine","moonshine",4,8000,7000,true,-1,"icons\moonshine_unprocessed.paa")
