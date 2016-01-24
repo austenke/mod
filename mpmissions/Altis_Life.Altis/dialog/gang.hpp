@@ -128,7 +128,7 @@ class Life_My_Gang_Diag {
 			idc = 2633;
 			text = "$STR_Gang_Promote_Member";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			onButtonClick = "[] spawn life_fnc_gangDisband";
+			onButtonClick = "[] spawn life_fnc_gangPromote";
 			y = .46;
 		};
 		
