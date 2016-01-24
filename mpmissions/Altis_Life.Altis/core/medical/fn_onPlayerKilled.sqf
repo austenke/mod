@@ -71,9 +71,9 @@ if(!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _ki
 	} else {
 		[getPlayerUID _killer,_killer GVAR ["realname",name _killer],"187"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
 		
-		if(!local _killer) then {
-			[3] remoteExecCall ["life_fnc_removeLicenses",_killer];
-		};
+		//if(!local _killer) then {
+		//	[3] remoteExecCall ["life_fnc_removeLicenses",_killer];
+		//};
 	};
 };
 
