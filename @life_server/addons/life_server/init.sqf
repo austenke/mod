@@ -179,6 +179,8 @@ life_wanted_list = [];
 	life_wanted_list pushBack _x;
 } foreach _queryResult;
 
+diag_log format["The life_wanted_list is: %1",life_wanted_list];
+
 [] execFSM "\life_server\FSM\cleanup.fsm";
 [] spawn
 {
