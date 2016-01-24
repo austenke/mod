@@ -14,9 +14,9 @@ _dis = round((getPos life_dp_start) distance (getPos _dp));
 _price = (round(1.7 * _dis) * 3);
 
 
-if(!life_holdBarrel) exitWith {hint "You need to be holding a barrel first!";};
+if(!life_holdBarrel) exitWith {hint "You need to be holding an organ container first!";};
 {
-	if ((typeOf _x) in ["Land_BarrelWater_F","Land_MetalBarrel_F"]) exitWith { _barrelp = _x; };
+	if ((typeOf _x) in ["Land_MetalCase_01_large_F"]) exitWith { _barrelp = _x; };
 } forEach attachedObjects player;
 
 if(isNull _barrelp) exitWith {hint "You need to be holding a barrel first!";};

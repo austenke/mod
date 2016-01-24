@@ -22,7 +22,7 @@ waitUntil{!DB_Async_Active};
 _query = format["pardonWanted:%1",_uid];
 [_query,2] call DB_fnc_asyncCall;
 ["diag_log",[
-	"------------- Wanted List Update -------------",
+	"------------- Wanted List Pardon -------------",
 	format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
 	format["Update: %1",_query],
 	"-------------------------------------------------"
