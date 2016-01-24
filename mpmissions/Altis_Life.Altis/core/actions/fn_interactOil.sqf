@@ -10,7 +10,7 @@
 if (life_holdBarrel) exitWith {
 	life_holdBarrel = false;
 	{
-	  if ((typeOf _x) in ["Land_BarrelWater_F","Land_MetalBarrel_F"]) exitWith { detach _x;cursorTarget setVariable ["holding", false, true]; };
+	  if ((typeOf _x) in ["Land_BarrelWater_F","Land_MetalBarrel_F"]) exitWith { detach _x;_x setVariable ["holding", false, true]; };
 	} forEach attachedObjects player;
 };
 

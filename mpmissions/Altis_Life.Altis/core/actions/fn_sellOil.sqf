@@ -14,6 +14,8 @@ if(!life_holdBarrel) exitWith {hint "You need to be holding a barrel first!";};
 	if ((typeOf _x) in ["Land_BarrelWater_F","Land_MetalBarrel_F"]) exitWith { _barrelp = _x; };
 } forEach attachedObjects player;
 
+if(isNull _barrelp) exitWith {hint "You need to be holding a barrel first!";};
+
 _price = 200000;
 
 deletevehicle _barrelp;

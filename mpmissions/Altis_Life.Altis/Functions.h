@@ -83,6 +83,7 @@ class Life_Client_Core
 	{
 		file = "core\actions";
 		class interactOil {};
+		class interactOrgan {};
 		class scrollPickup {};
 		class nearbyPickup {};
 		class buyLicense {};
@@ -93,6 +94,7 @@ class Life_Client_Core
 		class catchFish {};
 		class catchTurtle {};
 		class dpFinish {};
+		class organFinish {};
 		class dropFishingNet {};
 		class getDPMission {};
 		class getDrugDeal {};
