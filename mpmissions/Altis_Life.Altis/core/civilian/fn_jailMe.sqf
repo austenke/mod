@@ -93,10 +93,6 @@ switch (true) do {
 		life_bail_paid = false;
 		player setPos (getMarkerPos "jail_release");
 		[5] call SOCK_fnc_updatePartial;
-		player addUniform life_prison_uniform;
-    	player addBackpack life_prison_backpack;
-    	player addHeadgear life_prison_headgear;
-    	player addVest life_prison_vest;
 	};
 	
 	case (alive player && !_bail): {
