@@ -70,6 +70,8 @@ if(!(EQUAL(count (actionKeys "User5"),0)) && {(inputAction "User5" > 0)}) exitWi
 // Add redgull to user action 11
 if(!(EQUAL(count (actionKeys "User11"),0)) && {(inputAction "User11" > 0)} && life_inv_redgull > 1) exitWith {
 	if(([false,"redgull",1] call life_fnc_handleInv)) then {
+		life_thirst = 100;
+		player setFatigue 0;
 		[] spawn {
 			life_redgull_effect = time;
 			titleText[localize "STR_ISTR_RedGullEffect","PLAIN"];
