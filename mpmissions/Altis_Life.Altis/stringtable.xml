@@ -4100,9 +4100,6 @@
 		<Key ID="STR_Process_Proc_Stay">
 			<Original>You need to stay within 10m to process oil.</Original>
 		</Key>
-		<Key ID="STR_Process_Pump_InUse">
-			<Original>You cannot use that pump currently.</Original>
-		</Key>
 		<Key ID="STR_Process_Proc_InUse">
 			<Original>You cannot process that currently.</Original>
 		</Key>
