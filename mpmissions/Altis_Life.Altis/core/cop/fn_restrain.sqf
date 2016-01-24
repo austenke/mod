@@ -12,22 +12,22 @@ _player = player;
 if(isNull _cop) exitWith {};
 
 //Monitor excessive restrainment
-[] spawn {
-	private "_time";
-	while {true} do {
-		_time = time;
-		waitUntil {(time - _time) > (5 * 60)};
-		
-		if(!(player GVAR ["restrained",FALSE])) exitWith {};
-		if(!([west,getPos player,30] call life_fnc_nearUnits) && (player GVAR ["restrained",FALSE]) && vehicle player == player) exitWith {
-			player SVAR ["restrained",FALSE,TRUE];
-			player SVAR ["Escorting",FALSE,TRUE];
-			player SVAR ["transporting",false,true];
-			detach player;
-			titleText[localize "STR_Cop_ExcessiveRestrain","PLAIN"];
-		};
-	};
-};
+//[] spawn {
+//	private "_time";
+//	while {true} do {
+//		_time = time;
+//		waitUntil {(time - _time) > (5 * 60)};
+//		
+//		if(!(player GVAR ["restrained",FALSE])) exitWith {};
+//		if(!([west,getPos player,30] call life_fnc_nearUnits) && (player GVAR ["restrained",FALSE]) && vehicle player == player) exitWith {
+//			player SVAR ["restrained",FALSE,TRUE];
+//			player SVAR ["Escorting",FALSE,TRUE];
+//			player SVAR ["transporting",false,true];
+//			detach player;
+//			titleText[localize "STR_Cop_ExcessiveRestrain","PLAIN"];
+//		};
+//	};
+//};
 
 if((player GVAR["surrender",FALSE])) then { player SVAR["surrender",FALSE,TRUE]; player switchMove ""; };
 
