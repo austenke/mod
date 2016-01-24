@@ -14,5 +14,6 @@ _unit = call compile format["%1",CONTROL_DATA(2621)];
 if(isNull _unit) exitWith {}; //Bad unit?
 if(_unit == player) exitWith {hint "You can't promote yourself!";};
 
+hint format["Promoting %1",name _unit];
 [_unit,grpPlayer] remoteExec ["IND_fnc_clientGangPromote",_unit]; //Promote that bitch!
 [] call life_fnc_gangMenu;
