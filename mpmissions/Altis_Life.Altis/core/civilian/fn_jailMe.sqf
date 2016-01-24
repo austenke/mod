@@ -64,6 +64,10 @@ while {true} do {
 		_bail = true;
 	};
 
+	if(life_breakout) exitWith {
+		_breakout = true;
+	};
+
 	if((round(_time - time)) < 1) exitWith {hint ""};
 	if(!alive player && ((round(_time - time)) > 0)) exitWith {};
 	sleep 0.1;
@@ -77,6 +81,17 @@ switch (true) do {
 		serv_wanted_remove = [player];
 		player setPos (getMarkerPos "jail_release");
 		[getPlayerUID player] remoteExecCall ["life_fnc_wantedRemove",RSERV];
+		[5] call SOCK_fnc_updatePartial;
+		player addUniform life_prison_uniform;
+    	player addBackpack life_prison_backpack;
+    	player addHeadgear life_prison_headgear;
+    	player addVest life_prison_vest;
+	};
+
+	case (_breakout): {
+		life_is_arrested = false;
+		life_bail_paid = false;
+		player setPos (getMarkerPos "jail_release");
 		[5] call SOCK_fnc_updatePartial;
 		player addUniform life_prison_uniform;
     	player addBackpack life_prison_backpack;

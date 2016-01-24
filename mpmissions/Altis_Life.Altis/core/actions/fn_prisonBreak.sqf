@@ -60,7 +60,6 @@ if(life_action_robbing) then
 	_counter = 0;
 	{
 		if(_x distance (getMarkerPos "jail_marker") < 100) then {
-			_counter = _counter + 1;
 			[[player], "life_fnc_breakout", _x, false] call life_fnc_MP;
 		}
 	} forEach playableUnits;
@@ -69,8 +68,7 @@ if(life_action_robbing) then
 	if(_criminal distance _prison > 20) exitWith { life_action_robbing = false; hint "You need to stay close to the prison to continue a prison break!"; 5 cutText ["","PLAIN"]; };
 	5 cutText ["","PLAIN"];
 
-	titleText[format["You have broken out %1 people, now get away before the cops arrive!",_counter],"PLAIN"];
-	[[0,format["%1 has broken %2 people out of prison!",name player,_counter]],"life_fnc_broadcast",true,false] call life_fnc_MP;
+	titleText["You have succeeded in your jail break, now get out of here before the cops arrive!","PLAIN"];
 	life_action_robbing = false;
 	[[getPlayerUID _criminal,name _criminal,"512"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 };
