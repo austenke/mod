@@ -80,7 +80,7 @@ switch (playerSide) do {
 
 	case east: {
 		life_actions = life_actions + [player addAction["Pick Up Organs",life_fnc_interactOrgan,"",0,false,false,"",'
-        !life_holdBarrel && (typeOf cursorTarget) in ["Land_BarrelWater_F","Land_MetalBarrel_F"] && cursorTarget distance player < 5 && speed cursorTarget < 1 && !(cursorTarget getVariable "holding") ']];
+        !life_holdBarrel && (typeOf cursorTarget) in ["Land_MetalCase_01_large_F"] && cursorTarget distance player < 5 && speed cursorTarget < 1 && !(cursorTarget getVariable "holding") ']];
 	
 		life_actions = life_actions + [player addAction["Drop Organs",life_fnc_interactOrgan,"",0,false,false,"",'
 		life_holdBarrel']];
