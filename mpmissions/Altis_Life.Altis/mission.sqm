@@ -2666,7 +2666,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1551;
+		items=1554;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -19361,10 +19361,44 @@ class Mission
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 		};
+		class Item1551
+		{
+			position[]={23020.191,3.1900001,17983.387};
+			azimut=54.6236;
+			offsetY=0.00023365;
+			id=1678;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V2_F";
+			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this addAction[""Car Shop"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,[""civ_car_6_1""],""civ"",""Bruce's New & Used Auto's""]]; this addAction[""Vehicle Garage"",  {   [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2]; life_garage_type = ""Car"";   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""civ_g_6_1"";  }];  this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
+		};
+		class Item1552
+		{
+			position[]={26856.996,24.331957,24591.811};
+			azimut=311.474;
+			offsetY=1.14441e-005;
+			id=1679;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V2_F";
+			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this addAction[""Vehicle Garage"",  {   [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""TON_fnc_getVehicles"",2];  life_garage_type = ""Air""; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""air_g_1_1"";  }]; this addAction[""Store vehicle in Garage"",  {   private[""_nearVehicle""];   _nearVehicle = nearestObjects[(getPos (_this select 0)),[""Car"",""Ship"",""Air""],35] select 0;   if(isNil ""_nearVehicle"") exitWith {hint ""There isn't a vehicle near this NPC."";};   [_nearVehicle,false,(_this select 1)] remoteExecCall [""TON_fnc_vehicleStore"",2];   hint ""The server is trying to store the vehicle please wait...."";   life_garage_store = true;  },"""",0,false,false,"""",'!life_garage_store'];";
+		};
+		class Item1553
+		{
+			position[]={23036.668,3.1900001,17987.123};
+			azimut=-39.463345;
+			offsetY=0.46926299;
+			id=1680;
+			side="EMPTY";
+			vehicle="Land_Atm_01_F";
+			skill=0.60000002;
+			text="a1_1";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+		};
 	};
 	class Markers
 	{
-		items=237;
+		items=241;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -20634,7 +20668,7 @@ class Mission
 		};
 		class Item159
 		{
-			position[]={23090.738,3.1900001,18049.088};
+			position[]={23130.488,3.1900001,18081.34};
 			name="Correctional Facility";
 			text="Altis Corrections";
 			type="mil_dot";
@@ -21264,6 +21298,35 @@ class Mission
 			type="loc_Tourism";
 			colorName="ColorGreen";
 			angle=-221.65602;
+		};
+		class Item237
+		{
+			position[]={23008.85,3.1900001,17981.861};
+			name="civ_car_6_1";
+			type="Empty";
+			angle=-118.24691;
+		};
+		class Item238
+		{
+			position[]={23011.826,3.1900001,17978.699};
+			name="civ_g_6_1";
+			type="Empty";
+			angle=-135.13034;
+		};
+		class Item239
+		{
+			position[]={26882.266,24.208551,24582.496};
+			name="air_g_1_1";
+			type="Empty";
+			angle=153.94191;
+		};
+		class Item240
+		{
+			position[]={23036.625,3.1900001,17987.123};
+			name="atm_marker_4_1_1";
+			type="loc_Tourism";
+			colorName="ColorGreen";
+			angle=143.45085;
 		};
 	};
 	class Sensors
