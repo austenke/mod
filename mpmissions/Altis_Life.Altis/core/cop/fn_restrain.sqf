@@ -69,6 +69,7 @@ while {player GVAR  "restrained" || player GVAR  "civ_restrained"} do {
 //disableUserInput false;
 		
 if(alive player) then {
+	player switchMove "AmovPercMstpSlowWrflDnon_SaluteIn";
 	player SVAR ["Escorting",false,true];
 	player SVAR ["transporting",false,true];
 	detach player;
