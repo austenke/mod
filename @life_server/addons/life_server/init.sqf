@@ -165,14 +165,19 @@ addMissionEventHandler ["HandleDisconnect",{_this call TON_fnc_clientDisconnect;
 
 _tickTime = diag_tickTime;
 waitUntil{!DB_Async_Active};
-_queryResult = (["wantedSync",2] call DB_fnc_asyncCall) select 0;
+_queryResult = (["wantedPull",2] call DB_fnc_asyncCall) select 0;
 ["diag_log",[
 	"------------- Wanted List Sync -------------",
 	format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
 	format["Result: %1",_queryResult],
 	"-------------------------------------------------"
 ]] call TON_fnc_logIt;
-life_wanted_list = _queryResult;
+
+life_wanted_list = [];
+
+{
+	life_wanted_list pushBack _x;
+} foreach _queryResult;
 
 [] execFSM "\life_server\FSM\cleanup.fsm";
 [] spawn

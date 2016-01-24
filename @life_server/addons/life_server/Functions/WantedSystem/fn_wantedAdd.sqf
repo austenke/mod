@@ -65,7 +65,7 @@ if(_index != -1) then {
 
 _tickTime = diag_tickTime;
 waitUntil{!DB_Async_Active};
-_query = format["wantedUpdate:%1",life_wanted_list];
+_query = format["wantedUpdate:%1:%2",[_name,_uid,[(_type select 0)],(_type select 1)],_uid];
 [_query,2] call DB_fnc_asyncCall;
 ["diag_log",[
 	"------------- Wanted List Update -------------",
