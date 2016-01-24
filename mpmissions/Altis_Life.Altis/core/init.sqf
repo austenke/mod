@@ -91,6 +91,7 @@ switch (playerSide) do {
 };
 
 player SVAR ["restrained",false,true];
+player SVAR ["civ_restrained",false,true];
 player SVAR ["Escorting",false,true];
 player SVAR ["transporting",false,true];
 
