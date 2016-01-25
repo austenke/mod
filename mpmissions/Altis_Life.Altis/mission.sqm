@@ -2666,7 +2666,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1554;
+		items=1558;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -19394,6 +19394,42 @@ class Mission
 			skill=0.60000002;
 			text="a1_1";
 			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+		};
+		class Item1554
+		{
+			position[]={14643.827,17.91,16743.648};
+			id=1681;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V2_F";
+			skill=0.60000002;
+			text="ugly_6";
+		};
+		class Item1555
+		{
+			position[]={14617.61,17.91,16737.721};
+			id=1682;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V2_F";
+			skill=0.60000002;
+			text="ugly_6_1";
+		};
+		class Item1556
+		{
+			position[]={14608.25,17.91,16721.803};
+			id=1683;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V2_F";
+			skill=0.60000002;
+			text="ugly_6_2";
+		};
+		class Item1557
+		{
+			position[]={14634.464,17.91,16722.428};
+			id=1684;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V2_F";
+			skill=0.60000002;
+			text="ugly_6_3";
 		};
 	};
 	class Markers
