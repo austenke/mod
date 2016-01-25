@@ -13,6 +13,8 @@ if (!(typeName _queryResult in ["ARRAY","STRING"])) then {_queryResult = [];};
 
 _queryResult = _queryResult select 0;
 
+diag_log format["Query result is: %1",_queryResult];
 if(typeName _queryResult == "STRING") then {_queryResult = call compile format["%1", _queryResult];};
-if(count _queryResult == 0) exitWith {};_queryResult set[0,_name];
+if(count _queryResult == 0) exitWith {};
+_queryResult set[0,_name];
 life_wanted_list pushBack _queryResult; 
