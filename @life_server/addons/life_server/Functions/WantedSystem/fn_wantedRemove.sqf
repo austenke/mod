@@ -14,4 +14,4 @@ if(_index == -1) exitWith {};
 life_wanted_list set[_index,-1];
 life_wanted_list = life_wanted_list - [-1];
 
-[[],_uid] spawn TON_fnc_wantedSave;
+[[],_uid] spawn life_fnc_wantedSave;

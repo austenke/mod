@@ -17,4 +17,4 @@ if(_index != -1) then {
 	//publicVariable "life_wanted_list";
 };
 
-[[],_uid] spawn TON_fnc_wantedSave;
+[[],_uid] spawn life_fnc_wantedSave;
