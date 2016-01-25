@@ -73,6 +73,7 @@ compileFinal "
 	if(player == _unit && (group player) == _group) then
 	{
 		life_gangRank = life_gangRank + 1;
+		player setVariable [""rank"",life_gangRank,true];
 		hint ""You have been promoted."";
 	};
 ";
