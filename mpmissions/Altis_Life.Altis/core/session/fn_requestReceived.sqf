@@ -70,7 +70,7 @@ switch(playerSide) do {
 
 		life_pos = SEL(_this,11);
 		life_gangRank = ((SEL(_this,13) select 0) select 0);
-		player SVAR ["Rank",life_gangRank,true];
+		player setVariable ["Rank",life_gangRank,true];
 		//life_rep = ((SEL(_this,14) select 0) select 0);
 
 		//life_gangHouse = SEL(_this,14);
