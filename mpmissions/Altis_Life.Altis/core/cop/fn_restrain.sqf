@@ -46,7 +46,7 @@ while {player GVAR  "restrained" || player GVAR  "civ_restrained"} do {
 	};
 	
 	_state = vehicle player;
-	waitUntil {animationState player != "AmovPercMstpSnonWnonDnon_Ease" || !(player GVAR "restrained") || vehicle player != _state};
+	waitUntil {animationState player != "AmovPercMstpSnonWnonDnon_Ease" || !(player GVAR "restrained") || !(player GVAR "civ_restrained") || vehicle player != _state};
 			
 	if(!alive player) exitWith {
 		player SVAR ["restrained",false,true];
