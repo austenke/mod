@@ -10,7 +10,6 @@ _queryResult = [_query,2] call DB_fnc_asyncCall;
 if (!(typeName _queryResult in ["ARRAY","STRING"])) then {_queryResult = [];};
 
 _queryResult = _queryResult select 0;
-_queryResult = [_queryResult] call DB_fnc_mresToArray;
 
 if(typeName _queryResult == "STRING") then {_queryResult = call compile format["%1", _queryResult];};
 if(count _queryResult == 0) exitWith {};_queryResult set[0,_name];
