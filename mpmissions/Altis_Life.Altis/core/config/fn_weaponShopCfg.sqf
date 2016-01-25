@@ -38,7 +38,7 @@ switch(_shop) do {
 					[
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
 						["30Rnd_65x39_caseless_mag",nil,500],
-						["optic_Arco",nil,50],
+						["optic_Arco",nil,500],
 						["optic_MRCO",nil,500],
 						["optic_Hamr",nil,500],
 						["optic_Aco",nil,500],
@@ -52,7 +52,7 @@ switch(_shop) do {
 					[
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
 						["30Rnd_65x39_caseless_mag",nil,500],
-						["optic_Arco",nil,50],
+						["optic_Arco",nil,500],
 						["optic_MRCO",nil,500],
 						["optic_Hamr",nil,500],
 						["optic_DMS",nil,500],
@@ -68,7 +68,7 @@ switch(_shop) do {
 					[
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
 						["30Rnd_65x39_caseless_mag",nil,500],
-						["optic_Arco",nil,50],
+						["optic_Arco",nil,500],
 						["optic_MRCO",nil,500],
 						["optic_Hamr",nil,500],
 						["optic_DMS",nil,500],
@@ -88,7 +88,7 @@ switch(_shop) do {
 					[
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
 						["30Rnd_65x39_caseless_mag",nil,500],
-						["optic_Arco",nil,50],
+						["optic_Arco",nil,500],
 						["optic_MRCO",nil,500],
 						["optic_Hamr",nil,500],
 						["optic_DMS",nil,500],
@@ -108,7 +108,7 @@ switch(_shop) do {
 					[
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
 						["30Rnd_65x39_caseless_mag",nil,500],
-						["optic_Arco",nil,50],
+						["optic_Arco",nil,500],
 						["optic_MRCO",nil,500],
 						["optic_Hamr",nil,500],
 						["optic_DMS",nil,500],
@@ -128,7 +128,7 @@ switch(_shop) do {
 					[
 						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
 						["30Rnd_65x39_caseless_mag",nil,500],
-						["optic_Arco",nil,50],
+						["optic_Arco",nil,500],
 						["optic_MRCO",nil,500],
 						["optic_Hamr",nil,500],
 						["optic_DMS",nil,500],
