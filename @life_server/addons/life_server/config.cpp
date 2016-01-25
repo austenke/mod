@@ -94,6 +94,8 @@ class CfgFunctions
 			class wantedPardon{};
 			class wantedPunish{};
 			class wantedTicket{};
+			class wantedLoad{};
+			class wantedSave{};
 		};
 		
 		class Jail_Sys

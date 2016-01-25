@@ -59,17 +59,8 @@ if(_index != -1) then {
 	_crimes pushBack (_type select 0);
 	_val = _data select 3;
 	life_wanted_list set[_index,[_name,_uid,_crimes,(_type select 1) + _val]];
+	[life_wanted_list select _index,_uid] spawn TON_fnc_wantedSave;
 } else {
 	life_wanted_list pushBack [_name,_uid,[(_type select 0)],(_type select 1)];
+	[[_name,_uid,[(_type select 0)],(_type select 1)],_uid] spawn TON_fnc_wantedSave;
 };
-
-_tickTime = diag_tickTime;
-waitUntil{!DB_Async_Active};
-_query = format["wantedUpdate:%1:%2",[_name,_uid,[(_type select 0)],(_type select 1)],_uid];
-[_query,2] call DB_fnc_asyncCall;
-["diag_log",[
-	"------------- Wanted List Update -------------",
-	format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
-	format["Update: %1",_query],
-	"-------------------------------------------------"
-]] call TON_fnc_logIt;

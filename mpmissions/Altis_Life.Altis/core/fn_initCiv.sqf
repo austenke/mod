@@ -30,3 +30,4 @@ if(life_is_arrested) then {
 
 player addRating 9999999;
 call life_fnc_Uniformscolor;
+[[getPlayerUID player, profileName],"TON_fnc_wantedLoad",false,false] spawn life_fnc_MP;

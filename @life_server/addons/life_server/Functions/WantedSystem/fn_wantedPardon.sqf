@@ -17,13 +17,4 @@ if(_index != -1) then {
 	//publicVariable "life_wanted_list";
 };
 
-_tickTime = diag_tickTime;
-waitUntil{!DB_Async_Active};
-_query = format["pardonWanted:%1",_uid];
-[_query,2] call DB_fnc_asyncCall;
-["diag_log",[
-	"------------- Wanted List Pardon -------------",
-	format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)],
-	format["Update: %1",_query],
-	"-------------------------------------------------"
-]] call TON_fnc_logIt;
+[[],_uid] spawn TON_fnc_wantedSave;
