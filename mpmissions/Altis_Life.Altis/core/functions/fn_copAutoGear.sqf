@@ -9,6 +9,7 @@
 if (playerSide == independent) exitWith {hint "You must be a cop to purchase this!"};  //cops only
 if (playerSide == civilian) exitWith {hint "You must be a cop to purchase this!"};  //cops only
 
+/*Cadet*/
 if ((life_cash > 29999) && (FETCH_CONST(life_coplevel) == 1)) then //cost = $30,000
 {
 	life_cash = life_cash - 30000;  //30k
@@ -25,7 +26,7 @@ if ((life_cash > 29999) && (FETCH_CONST(life_coplevel) == 1)) then //cost = $30,
 	sleep 10;
 	//Weapons & Clothes
 	player addUniform "U_Marshal";
-	player addVest "V_TacVest_blk_POLICE";
+	player addVest "V_Rangemaster_belt";
 	player addBackpack "B_Kitbag_mcamo";
 	player addHeadGear "H_Cap_police";
 	player addWeapon "SMG_02_F";
@@ -53,8 +54,9 @@ else
  hintSilent "Sorry you do not have $30,000 for this loadout";
 };
 
-//////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
 
+/*Constable*/
 if ((life_cash > 34999) && (FETCH_CONST(life_coplevel) == 2)) then //cost = $35,000
 {
 	life_cash = life_cash - 35000;  //35k
@@ -71,17 +73,17 @@ if ((life_cash > 34999) && (FETCH_CONST(life_coplevel) == 2)) then //cost = $35,
 	sleep 10;
 	//Weapons & Clothes
 	player addUniform "U_Rangemaster";
-	player addVest "V_TacVest_blk_POLICE";
+	player addVest "V_TacVest_blk";
 	player addBackpack "B_Kitbag_mcamo";
 	player addHeadGear "H_Cap_police";
-	player addWeapon "arifle_MX_Black_F";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag";
-	player addMagazine "30Rnd_65x39_caseless_mag";
+	player addWeapon "arifle_Mk20_F";
+	player addMagazine "30Rnd_556x45_Stanag_Tracer_Red";
+	player addMagazine "30Rnd_556x45_Stanag_Tracer_Red";
+	player addMagazine "30Rnd_556x45_Stanag_Tracer_Red";
+	player addMagazine "30Rnd_556x45_Stanag_Tracer_Red";
+	player addMagazine "30Rnd_556x45_Stanag_Tracer_Red";
+	player addMagazine "30Rnd_556x45_Stanag";
+	player addMagazine "30Rnd_556x45_Stanag";
 	player addWeapon "hgun_P07_snds_F";
 	player addMagazine "16Rnd_9x21_Mag";
 	player addMagazine "16Rnd_9x21_Mag";
@@ -102,6 +104,7 @@ else
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
+/*Corporal*/
 if ((life_cash > 34999) && (FETCH_CONST(life_coplevel) == 3)) then //cost = $35,000
 {
 	life_cash = life_cash - 35000;  //35k
@@ -121,14 +124,14 @@ if ((life_cash > 34999) && (FETCH_CONST(life_coplevel) == 3)) then //cost = $35,
 	player addVest "V_TacVest_blk_POLICE";
 	player addBackpack "B_Kitbag_mcamo";
 	player addHeadGear "H_Cap_police";
-	player addWeapon "arifle_MX_Black_F";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag";
-	player addMagazine "30Rnd_65x39_caseless_mag";
+	player addWeapon "arifle_Katiba_F";
+	player addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
+	player addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
+	player addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
+	player addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
+	player addMagazine "30Rnd_65x39_caseless_green_mag_Tracer";
+	player addMagazine "30Rnd_65x39_caseless_green";
+	player addMagazine "30Rnd_65x39_caseless_green";
 	player addWeapon "hgun_P07_snds_F";
 	player addMagazine "16Rnd_9x21_Mag";
 	player addMagazine "16Rnd_9x21_Mag";
@@ -149,6 +152,7 @@ else
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
+/*Sergeant*/
 if ((life_cash > 39999) && (FETCH_CONST(life_coplevel) == 4)) then //cost = $40,000
 {
 	life_cash = life_cash - 40000;  //40k
@@ -165,24 +169,22 @@ if ((life_cash > 39999) && (FETCH_CONST(life_coplevel) == 4)) then //cost = $40,
 	sleep 10;
 	//Weapons & Clothes
 	player addUniform "U_Rangemaster";
-	player addVest "V_TacVest_blk_POLICE";
+	player addVest "V_PlateCarrier1_blk";
 	player addBackpack "B_Kitbag_mcamo";
 	player addHeadGear "H_Cap_police";
-	player addWeapon "arifle_MX_Black_F";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag";
-	player addMagazine "30Rnd_65x39_caseless_mag";
+	player addWeapon "arifle_MX_SW_F";
+	player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+	player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+	player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+	player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+	player addMagazine "100Rnd_65x39_caseless_mag_Tracer";
+	player addMagazine "100Rnd_65x39_caseless_mag";
+	player addMagazine "100Rnd_65x39_caseless_mag";
 	player addWeapon "hgun_P07_snds_F";
 	player addMagazine "16Rnd_9x21_Mag";
 	player addMagazine "16Rnd_9x21_Mag";
 	player addItem "NVGoggles_OPFOR";
 	player assignItem "NVGoggles_OPFOR";
-	player addItem "bipod_02_F_blk";
-	player assignItem "bipod_02_F_blk";
 	//Virtual items
 	player addItem "redgull";
 	player assignItem "redgull";
@@ -198,6 +200,7 @@ else
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
+/*Lieutenant*/
 if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 5)) then //cost = $45,000
 {
 	life_cash = life_cash - 45000;  //45k
@@ -214,7 +217,7 @@ if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 5)) then //cost = $45,
 	sleep 10;
 	//Weapons & Clothes
 	player addUniform "U_Rangemaster";
-	player addVest "V_TacVest_blk_POLICE";
+	player addVest "V_PlateCarrierSpec_blk";
 	player addBackpack "B_Kitbag_mcamo";
 	player addHeadGear "H_Cap_police";
 	player addWeapon "arifle_MXM_Black_F";
@@ -230,8 +233,6 @@ if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 5)) then //cost = $45,
 	player addMagazine "16Rnd_9x21_Mag";
 	player addItem "NVGoggles_OPFOR";
 	player assignItem "NVGoggles_OPFOR";
-	player addItem "bipod_02_F_blk";
-	player assignItem "bipod_02_F_blk";
 	//Virtual items
 	player addItem "redgull";
 	player assignItem "redgull";
@@ -247,6 +248,7 @@ else
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
+/*Captain*/
 if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 6)) then //cost = $45,000
 {
 	life_cash = life_cash - 45000;  //45k
@@ -262,8 +264,8 @@ if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 6)) then //cost = $45,
 	removeHeadGear player;
 	sleep 10;
 	//Weapons & Clothes
-	player addUniform "U_Rangemaster";
-	player addVest "V_TacVest_blk_POLICE";
+	player addUniform "U_B_CombatUniform_mcam";
+	player addVest "V_PlateCarrierGL_rgr";
 	player addBackpack "B_Kitbag_mcamo";
 	player addHeadGear "H_Cap_police";
 	player addWeapon "arifle_MXM_Black_F";
@@ -296,6 +298,7 @@ else
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
+/*Cheif Of Police*/
 if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 7)) then //cost = $45,000
 {
 	life_cash = life_cash - 45000;  //45k
@@ -311,18 +314,18 @@ if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 7)) then //cost = $45,
 	removeHeadGear player;
 	sleep 10;
 	//Weapons & Clothes
-	player addUniform "U_Rangemaster";
-	player addVest "V_TacVest_blk_POLICE";
+	player addUniform "U_B_CombatUniform_mcam";
+	player addVest "V_PlateCarrierGL_rgr";
 	player addBackpack "B_Kitbag_mcamo";
 	player addHeadGear "H_Cap_police";
-	player addWeapon "arifle_MXM_Black_F";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag_Tracer";
-	player addMagazine "30Rnd_65x39_caseless_mag";
-	player addMagazine "30Rnd_65x39_caseless_mag";
+	player addWeapon "srifle_DMR_03_ARCO_F";
+	player addMagazine "20Rnd_762x51_Mag";
+	player addMagazine "20Rnd_762x51_Mag";
+	player addMagazine "20Rnd_762x51_Mag";
+	player addMagazine "20Rnd_762x51_Mag";
+	player addMagazine "20Rnd_762x51_Mag";
+	player addMagazine "20Rnd_762x51_Mag";
+	player addMagazine "20Rnd_762x51_Mag";
 	player addWeapon "hgun_P07_snds_F";
 	player addMagazine "16Rnd_9x21_Mag";
 	player addMagazine "16Rnd_9x21_Mag";

@@ -64,7 +64,7 @@ if(isPlayer _source && _source isKindOf "Man") then {
 // 	};
 // };
 
-if (_source != _unit && !(playerSide == west && _projectile == "") && ((_curMag in ["30Rnd_65x39_caseless_mag_Tracer","30Rnd_45ACP_Mag_SMG_01_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Green"]) || (_curWep in ["SMG_02_F","hgun_P07_F","hgun_P07_snds_F"]))) then {
+if (_source != _unit && !(playerSide == west && _projectile == "") && ((_curMag in ["30Rnd_9x21_Mag","arifle_Mk20_F","arifle_Katiba_F","arifle_MX_SW_F","arifle_MXM_Black_F","hgun_P07_snds_F"]) || (_curWep in ["SMG_02_F","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_65x39_caseless_green_mag_Tracer","100Rnd_65x39_caseless_mag_Tracer","30Rnd_65x39_caseless_mag_Tracer","16Rnd_9x21_Mag"]))) then {
     if (!(_part in ["","head","body"])) exitWith {_damage = 0;};
     //systemChat format["getDammage _unit = %1, _part = '%2', getHit _part = %3, _damage = %4", getDammage _unit, _part, _unit getHit _part, _damage];
     //diag_log format["_source = %1, _projectile = %2, _curMag = %3, _curWep = %4", _source, _projectile, _curMag, _curWep];

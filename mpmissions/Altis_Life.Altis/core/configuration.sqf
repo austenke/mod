@@ -74,10 +74,10 @@ life_bounty = 0;
 life_istazed = false;
 life_vehicles = [];
 
-switch (playerSide) do {
+switch (playerSide) do { //Cop
 	case west: {
 		BANK = 100000; //Starting Bank Money
-		life_paycheck = 1500; //Paycheck Amount
+		life_paycheck = 5000; //Paycheck Amount
 	};
 	
 	case civilian: {
@@ -85,9 +85,9 @@ switch (playerSide) do {
 		life_paycheck = 1000; //Paycheck Amount
 	};
 	
-	case independent: {
+	case independent: { //Medic
 		BANK = 100000;
-		life_paycheck = 2500;
+		life_paycheck = 7000;
 	};
 };
 
