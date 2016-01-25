@@ -6,16 +6,16 @@
 	Description:
 	Medic dp missions
 */
-private["_dp","_target"];
+private["_dp","_target","_pointList"];
 _target = param [0,ObjNull,[ObjNull]];
 if(playerSide != independent) exitWith {hint "You need medical training to handle organs!";};
-if(str(_target) in LIFE_SETTINGS(getArray,"delivery_points")) then {
+_pointList = ["organ_1","organ_2","organ_3"];
+if(str(_target) in _pointList) then {
 	private "_point";
-	_point = LIFE_SETTINGS(getArray,"delivery_points");
-	_point deleteAt (_point find (str(_target)));
-	_dp = _point call BIS_fnc_selectRandom;
+	_pointList deleteAt (_pointList find (str(_target)));
+	_dp = _pointList call BIS_fnc_selectRandom;
 } else {
-	_dp = LIFE_SETTINGS(getArray,"delivery_points") call BIS_fnc_selectRandom;
+	_dp = _pointList call BIS_fnc_selectRandom;
 };
 
 life_dp_start = _target;

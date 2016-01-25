@@ -8,6 +8,9 @@
 	Needs to be revised.
 */
 private["_dp","_target"];
+
+if(life_organ_in_progress) exitWith {};
+
 _target = param [0,ObjNull,[ObjNull]];
 if(str(_target) in LIFE_SETTINGS(getArray,"delivery_points")) then {
 	private "_point";
