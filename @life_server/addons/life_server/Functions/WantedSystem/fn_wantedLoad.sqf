@@ -6,6 +6,9 @@ _query = format["wantedLoad:%1",_uid];
 waitUntil{!DB_Async_Active};
 
 _queryResult = [_query,2] call DB_fnc_asyncCall;
+
+if (isNull _queryResult) then {_queryResult = [];};
+
 _queryResult = _queryResult select 0;
 _queryResult = [_queryResult] call DB_fnc_mresToArray;
 
