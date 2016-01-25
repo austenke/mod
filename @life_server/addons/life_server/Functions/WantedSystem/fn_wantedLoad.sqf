@@ -10,7 +10,6 @@ waitUntil{!DB_Async_Active};
 _queryResult = [_query,2] call DB_fnc_asyncCall;
 
 if(_queryResult select 0 == "") exitWith {};
-if(count _queryResult < 2) exitWith {};
 
 diag_log str _queryResult;
 
