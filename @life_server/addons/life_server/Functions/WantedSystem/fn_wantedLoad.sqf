@@ -9,12 +9,10 @@ waitUntil{!DB_Async_Active};
 
 _queryResult = [_query,2] call DB_fnc_asyncCall;
 
-diag_log format["1. Query result is: %1 typeName is %2",_queryResult,typeName _queryResult];
-if (!(typeName _queryResult in ["ARRAY","STRING"])) then {_queryResult = [];};
+if(typeName _queryResult select 0 == "STRING") then {_queryResult = call compile format["%1", _queryResult select 0];};
 
-diag_log format["2. Query result is: %1 typeName is %2",_queryResult,typeName _queryResult];
-if(typeName _queryResult == "STRING") then {_queryResult = call compile format["%1", _queryResult];};
+if (!(typeName _queryResult == "ARRAY")) then {_queryResult = [];};
 if(count _queryResult < 2) exitWith {};
+
 _queryResult set[0,_name];
-diag_log format["3. Final query result is: %1 typeName is %2",_queryResult,typeName _queryResult];
 life_wanted_list pushBack _queryResult; 
