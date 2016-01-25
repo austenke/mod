@@ -1,3 +1,5 @@
+// Thanks to Kevin Webb for initial source
+
 private["_uid","_crimes","_query","_queryResult"];
 _uid = [_this,1,"",[""]] call BIS_fnc_param;
 _crimes = [_this,0,[],[[]]] call BIS_fnc_param;
