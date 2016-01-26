@@ -2544,7 +2544,7 @@ class Mission
 					vehicle="C_man_polo_3_F";
 					leader=1;
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this addAction[""Medical Assistance"",life_fnc_healHospital]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					init="this enableSimulation false; this allowDamage false; this setObjectTexture [0,""images\medic_uniform.jpg""];  this addAction[""Medical Assistance"",life_fnc_healHospital]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 				};
 			};
 		};
@@ -2631,7 +2631,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15591.005,18.54237,17191.674};
+					position[]={15587.724,18.481443,17198.047};
 					azimut=-39.2113;
 					special="NONE";
 					id=125;
@@ -2652,7 +2652,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15598.12,18.46376,17208.445};
+					position[]={15587.562,18.449909,17208.809};
 					azimut=220;
 					special="NONE";
 					id=126;
@@ -19356,7 +19356,7 @@ class Mission
 		};
 		class Item1550
 		{
-			position[]={15590.523,18.559999,17184.518};
+			position[]={15585.246,18.546562,17191.26};
 			azimut=134.11658;
 			id=1677;
 			side="EMPTY";
@@ -21296,7 +21296,7 @@ class Mission
 		};
 		class Item236
 		{
-			position[]={15590.57,18.559999,17184.492};
+			position[]={15587.111,18.559999,17189.41};
 			name="atm_marker_1_2";
 			type="loc_Tourism";
 			colorName="ColorGreen";
