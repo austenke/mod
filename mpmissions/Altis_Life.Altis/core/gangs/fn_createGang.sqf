@@ -21,7 +21,7 @@ if(BANK < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {hint format[localiz
 
 [player,getPlayerUID player,_gangName] remoteExec ["TON_fnc_insertGang",RSERV];
 life_gangRank = 4;
-player SVAR ["Rank",life_gangRank,1];
+player SVAR ["gangRank",life_gangRank,1];
 hint localize "STR_NOTF_SendingData";
 closeDialog 0;
 life_action_gangInUse = true;

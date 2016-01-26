@@ -26,7 +26,7 @@ if(_action) then {
 	[player] join _group;
 	[4,_group] remoteExecCall ["TON_fnc_updateGang",RSERV];
 	life_gangRank = 1;
-	player SVAR ["rank",life_gangRank,1];
+	player SVAR ["gangRank",life_gangRank,1];
 } else {
 	_grpMembers = grpPlayer GVAR "gang_members";
 	SUB(_grpMembers,[steamid]);
