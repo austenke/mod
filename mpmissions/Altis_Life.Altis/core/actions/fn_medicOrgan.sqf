@@ -23,16 +23,12 @@ life_dp_start = _target;
 life_organ_in_progress = true;
 life_dp_point = call compile format["%1",_dp];
 
-systemChat _dp;
-
 _dpText = switch (_dp) do {
 	case "organ_1": {"Pyrgos Hospital";};
 	case "organ_2": {"Kavala Hospital";};
 	case "organ_3": {"Athira Hospital";};
 	default {"Can't find organ";};
 };
-
-systemChat _dpText;
 
 _dp = [_dp,"_"," "] call KRON_Replace;
 life_cur_task = player createSimpleTask [format["Delivery_%1",life_dp_point]];
