@@ -24,7 +24,7 @@ _crimes = ["187 - Manslaughter","188 - Attempted Manslaughter","600 - Possession
 	"215 - Attempted Auto Theft","213 - Use of Illegal Explosives",
 	"211 - Robbery","207 - Kidnapping","207A - Attempted Kidnapping",
 	"487 - Grand Theft","488 - Petty Theft","480 - Hit and Run","481 - Drug Posession",
-	"482 - Intent To Distribute","483 - Drug Trafficking","459 - Burglary","390 - Public Intoxication"];
+	"482 - Intent To Distribute","483 - Drug Trafficking","459 - Burglary","390 - Public Intoxication","602 - Evading Arrest", "603 - Illegal Items","604 - Terrorism"];
 
 {
 	_left=[_x,3] call KRON_StrLeft;

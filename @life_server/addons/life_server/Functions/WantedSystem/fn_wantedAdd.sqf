@@ -28,15 +28,18 @@ switch(_type) do
 	case "207A": {_type = ["Attempted Kidnapping",15000]};
 	case "487": {_type = ["Grand Theft",20000]};
 	case "488": {_type = ["Petty Theft",1000]};
-	case "480": {_type = ["Hit and run",5000]};
+	case "480": {_type = ["Hit and run",10000]};
 	case "481": {_type = ["Drug Possession",50000]};
+	case "602": {_type = ["Evading Arrest",25000]};
+	case "603": {_type = ["Illegal Items",30000]};
+	case "604": {_type = ["Terrorism",150000]};
 	case "482": {_type = ["Intent to distribute",60000]};
 	case "483": {_type = ["Drug Trafficking",60000]};
 	case "459": {_type = ["Burglary",25000]};
 	case "390": {_type = ["Public Intoxication",10000]};
 	case "512": {_type = ["Jail Break",200000]};
 	case "600": {_type = ["Possession of an Illegal Firearm",75000]};
-	case "601": {_type = ["Possession of an Illegal Vehicle",10000]};
+	case "601": {_type = ["Possession of an Illegal Vehicle",75000]};
 	default {_type = [];};
 };
 
