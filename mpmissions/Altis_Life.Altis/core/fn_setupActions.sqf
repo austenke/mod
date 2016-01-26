@@ -78,7 +78,7 @@ switch (playerSide) do {
 		!isNull cursorTarget && life_inv_defib > 1 && !alive cursorTarget && cursorTarget isKindOf "Man" && cursorTarget distance player < 9 ']];
 	};
 
-	case east: {
+	case independent: {
 		life_actions = life_actions + [player addAction["Pick Up Organs",life_fnc_interactOrgan,"",0,false,false,"",'
         !life_holdBarrel && (typeOf cursorTarget) in ["Land_MetalCase_01_large_F"] && cursorTarget distance player < 5 && speed cursorTarget < 1 && !(cursorTarget getVariable "holding") ']];
 	
