@@ -6,7 +6,7 @@
 	Description:
 	Medic dp missions
 */
-private["_dp","_target","_pointList"];
+private["_dp","_target","_pointList","_dpText"];
 _target = param [0,ObjNull,[ObjNull]];
 if(playerSide != independent) exitWith {hint "You need medical training to handle organs!";};
 _pointList = ["organ_1","organ_2","organ_3"];
@@ -25,12 +25,14 @@ life_dp_point = call compile format["%1",_dp];
 
 systemChat _dp;
 
-switch (_dp) do {
-	case "organ_1": {_dpText = "Pyrgos Hospital";};
-	case "organ_2": {_dpText = "Kavala Hospital";};
-	case "organ_3": {_dpText = "Athira Hospital";};
-	default {_dpText = "Can't find organ";};
+_dpText = switch (_dp) do {
+	case "organ_1": {"Pyrgos Hospital";};
+	case "organ_2": {"Kavala Hospital";};
+	case "organ_3": {"Athira Hospital";};
+	default {"Can't find organ";};
 };
+
+systemChat _dpText;
 
 _dp = [_dp,"_"," "] call KRON_Replace;
 life_cur_task = player createSimpleTask [format["Delivery_%1",life_dp_point]];
