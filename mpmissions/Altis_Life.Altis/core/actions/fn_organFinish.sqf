@@ -16,12 +16,8 @@ _price = (round(1.7 * _dis) * 3);
 
 if(!life_holdBarrel) exitWith {hint "You need to be holding an organ container first!";};
 {
-	if ((typeOf _x) == "Land_MetalCase_01_large_F") exitWith { _barrelp = _x; };
+	deletevehicle _x;
 } forEach attachedObjects player;
-
-if(isNull _barrelp) exitWith {hint "You need to be holding a barrel first!";};
-
-deletevehicle _barrelp;
 
 life_holdBarrel = false;
 
