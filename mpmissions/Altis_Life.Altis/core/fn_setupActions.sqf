@@ -90,3 +90,5 @@ switch (playerSide) do {
 		!isNull cursorTarget && life_inv_defib > 1 && !alive cursorTarget && cursorTarget isKindOf "Man" && cursorTarget distance player < 9 ']];
 	};
 };
+
+life_actions pushBack (player addAction["<t color='#0099FF'>Sit Down</t>",{[life_cursorTarget,player] execVM "Chair\sitdown.sqf"},true,1,true,true,"""",'player distance life_cursorTarget < 3 && {([str life_cursorTarget,"bench"] call KRON_StrInStr || [str life_cursorTarget,"chair"] call KRON_StrInStr)} ']);
