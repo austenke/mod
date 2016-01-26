@@ -73,6 +73,11 @@ switch (playerSide) do {
 		life_actions = life_actions + [player addAction["Stop Escorting",life_fnc_stopEscorting,"",0,false,false,"",'
         !isNull cursorTarget && (cursorTarget getVariable["Escorting",false]) && cursorTarget distance player < 5 ']];
 
+        //Cop Lights
+        life_actions pushBack (player addAction["Emergency Lights ON",{[vehicle player,"life_fnc_copLights",true,false] spawn BIS_fnc_MP;},"",0,false,false,"",' vehicle player != player && ((typeOf vehicle player) in ["I_Quadbike_01_F","C_Offroad_01_F","B_G_Offroad_01_armed_F","C_SUV_01_F","B_MRAP_01_F","C_Hatchback_01_sport_F","I_MRAP_03_F","B_Heli_Light_01_F","B_Heli_Transport_03_unarmed_F","I_Heli_light_03_unarmed_F","O_Heli_Light_02_unarmed_F","B_Heli_Transport_01_F"]) && !isNil {vehicle player getVariable "lights"} && ((driver vehicle player) == player) && !(vehicle player getVariable ["lights", false])']);
+
+		life_actions pushBack (player addAction["Emergency Lights OFF",{vehicle player setVariable["lights",false,true];},"",0,false,false,"", ' vehicle player != player && ((typeOf vehicle player) in ["I_Quadbike_01_F","C_Offroad_01_F","C_SUV_01_F","B_MRAP_01_F","C_Hatchback_01_sport_F","I_MRAP_03_F","B_G_Offroad_01_armed_F","B_Heli_Light_01_F","B_Heli_Transport_03_unarmed_F","I_Heli_light_03_unarmed_F","O_Heli_Light_02_unarmed_F","B_Heli_Transport_01_F"]) && !isNil {vehicle player getVariable "lights"} && ((driver vehicle player) == player) && (vehicle player getVariable ["lights", false]) ']);
+
         //Revive
 		life_actions = life_actions + [player addAction["Revive Player",life_fnc_revivePlayer,"",200,false,false,"",'
 		!isNull cursorTarget && life_inv_defib > 1 && !alive cursorTarget && cursorTarget isKindOf "Man" && cursorTarget distance player < 9 ']];
