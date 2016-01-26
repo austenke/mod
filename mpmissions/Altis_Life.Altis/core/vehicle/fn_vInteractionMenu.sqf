@@ -69,7 +69,7 @@ if(playerSide == west) then {
 			if(count crew _curTarget == 0 && {canMove _curTarget} && {locked _curTarget == 0}) then {_Btn7 ctrlEnable true;} else {_Btn7 ctrlEnable false};
 		} else {
 			_Btn7 ctrlSetText localize "STR_vInAct_Unflip";
-			_Btn7 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.8]; closeDialog 0;";
+			_Btn7 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+1.6]; closeDialog 0;";
 			if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn7 ctrlEnable false;} else {_Btn7 ctrlEnable true;};
 		};
 	};
