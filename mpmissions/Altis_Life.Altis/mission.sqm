@@ -2544,7 +2544,7 @@ class Mission
 					vehicle="C_man_polo_3_F";
 					leader=1;
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this setObjectTexture [0,""images\medic_uniform.jpg""];  this addAction[""Medical Assistance"",life_fnc_healHospital]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					init="this enableSimulation false; this allowDamage false; this setObjectTexture [0,""textures\medic_uniform.jpg""];  this addAction[""Medical Assistance"",life_fnc_healHospital]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 				};
 			};
 		};
