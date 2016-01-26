@@ -33,10 +33,10 @@ switch (true) do {
 		closeDialog 0;
 	};
 
-	case (EQUAL(_item,"defib")): {
-		[cursorTarget] spawn life_fnc_revivePlayer;
-		closeDialog 0;
-	};
+	//case (EQUAL(_item,"defib")): {
+	//	[cursorTarget] spawn life_fnc_revivePlayer;
+	//	closeDialog 0;
+	//};
 	
 	case (EQUAL(_item,"boltcutter")): {
 		[cursorTarget] spawn life_fnc_boltcutter;
