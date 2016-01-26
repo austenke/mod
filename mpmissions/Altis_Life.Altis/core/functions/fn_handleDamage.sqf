@@ -76,9 +76,6 @@ if (_source != _unit && !(playerSide == west && _projectile == "") && ((_curMag 
     };
 };
 
-"arifle_Mk20_F","arifle_Katiba_F","arifle_MX_SW_F","arifle_MXM_Black_F","hgun_P07_snds_F"
-"30Rnd_556x45_Stanag_Tracer_Red","30Rnd_65x39_caseless_green_mag_Tracer","100Rnd_65x39_caseless_mag_Tracer","30Rnd_65x39_caseless_mag_Tracer","16Rnd_9x21_Mag"
-
 if (vehicle _unit == _unit) then
 {
     if ( _source isKindOf "Air" OR _source isKindOf "Car" OR _source isKindOf "Boat" ) then
