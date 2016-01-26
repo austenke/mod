@@ -16,4 +16,5 @@ if(_unit == player) exitWith {hint "You can't promote yourself!";};
 
 hint format["Promoting %1",name _unit];
 [_unit,grpPlayer] remoteExec ["IND_fnc_clientGangPromote",_unit]; //Promote that bitch!
-[] call life_fnc_gangMenu;
+closeDialog 0;
+[] spawn life_fnc_gangMenu;

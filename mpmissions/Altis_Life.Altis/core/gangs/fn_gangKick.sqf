@@ -24,4 +24,5 @@ grpPlayer SVAR ["gang_members",_members,true];
 
 [_unit,grpPlayer] remoteExec ["TON_fnc_clientGangKick",_unit]; //Boot that bitch!
 [4,grpPlayer] remoteExec ["TON_fnc_updateGang",RSERV]; //Update the database.
-[] call life_fnc_gangMenu;
+closeDialog 0;
+[] spawn life_fnc_gangMenu;

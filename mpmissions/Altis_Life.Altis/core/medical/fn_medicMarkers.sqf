@@ -1,38 +1,10 @@
-/*
-	File: fn_medicMarkers.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Marks downed players on the map when it's open.
-*/
-private["_markers","_units"];
+private["_markers","_cops"];
 _markers = [];
-_units = [];
-_medics = [];
-_markers2 = [];
+_cops = [];
 
-sleep 0.25;
-
+sleep 0.5;
 if(visibleMap) then {
-	{
-		_name = _x getVariable "name";
-		_down = _x getVariable ["Revive",false];
-		if(!isNil "_name" && !_down) then {
-			_units pushBack _x;
-		};
-	} foreach allDeadMen;
-	
-	//Loop through and create markers.
-	{
-		_marker = createMarkerLocal [format["%1_dead_marker",_x],visiblePosition _x];
-		_marker setMarkerColorLocal "ColorRed";
-		_marker setMarkerTypeLocal "loc_Hospital";
-		_marker setMarkerTextLocal format["%1",(_x getVariable["name","Unknown Player"])];
-		_markers pushBack _marker;
-	} foreach _units;
-	
-	
-	{if(side _x == independent) then {_medics pushBack _x;}} foreach playableUnits; //Fetch list of medics
+	{if(side _x == independent) then {_cops pushBack _x;}} foreach playableUnits; //Fetch list of cops / blufor
 	
 	//Create markers
 	{
@@ -41,8 +13,8 @@ if(visibleMap) then {
 		_marker setMarkerTypeLocal "Mil_dot";
 		_marker setMarkerTextLocal format["%1", _x getVariable["realname",name _x]];
 	
-		_markers2 pushBack [_marker,_x];
-	} foreach _medics;
+		_markers pushBack [_marker,_x];
+	} foreach _cops;
 		
 	while {visibleMap} do {
 		{
@@ -54,13 +26,12 @@ if(visibleMap) then {
 					_marker setMarkerPosLocal (visiblePosition _unit);
 				};
 			};
-		} foreach _markers2;
+		} foreach _markers;
 		if(!visibleMap) exitWith {};
 		sleep 0.02;
 	};
 
-
-	waitUntil {!visibleMap};
-	{deleteMarkerLocal _x;} foreach _markers;
-	{deleteMarkerLocal _x;} foreach _markers2;
+	{deleteMarkerLocal (_x select 0);} foreach _markers;
+	_markers = [];
+	_cops = [];
 };

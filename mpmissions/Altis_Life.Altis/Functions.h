@@ -95,6 +95,7 @@ class Life_Client_Core
 		class catchTurtle {};
 		class dpFinish {};
 		class organFinish {};
+		class medicOrgan {};
 		class dropFishingNet {};
 		class getDPMission {};
 		class getDrugDeal {};
