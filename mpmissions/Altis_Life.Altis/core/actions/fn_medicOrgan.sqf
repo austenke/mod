@@ -26,9 +26,9 @@ life_dp_point = call compile format["%1",_dp];
 systemChat _dp;
 
 switch (_dp) do {
-	case "organ_1": {_dpText = "Pyrgos Hospital"};
-	case "organ_2": {_dpText = "Kavala Hospital"};
-	case "organ_3": {_dpText = "Telos Hospital"};
+	case organ_1: {_dpText = "Pyrgos Hospital"};
+	case organ_2: {_dpText = "Kavala Hospital"};
+	case organ_3: {_dpText = "Telos Hospital"};
 };
 
 _dp = [_dp,"_"," "] call KRON_Replace;
