@@ -23,6 +23,8 @@ life_dp_start = _target;
 life_organ_in_progress = true;
 life_dp_point = call compile format["%1",_dp];
 
+systemChat _dp;
+
 switch (_dp) do {
 	case "organ_1": {_dpText = "Pyrgos Hospital"};
 	case "organ_2": {_dpText = "Kavala Hospital"};
@@ -35,7 +37,7 @@ life_cur_task setSimpleTaskDescription [format[localize "STR_NOTF_DPStart",_dpTe
 life_cur_task setTaskState "Assigned";
 player setCurrentTask life_cur_task;
 
-["DeliveryAssigned",[format[localize "STR_NOTF_DPTask",toUpper _dp]]] call bis_fnc_showNotification;
+["DeliveryAssigned",[format[localize "STR_NOTF_DPTask",_dpText]]] call bis_fnc_showNotification;
 
 _barrel = "Land_MetalCase_01_large_F" createVehicle position player;
 _barrel attachTo[player,[0,1,1.9]];
