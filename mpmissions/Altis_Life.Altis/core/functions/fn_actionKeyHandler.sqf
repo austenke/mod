@@ -106,15 +106,23 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 				waitUntil {scriptDone _handle};
 			};
 		} else {
+
+			_objects = nearestObjects [player, [], 10];
+
+			{
+				_itemInfo = _x getVariable ["item",[]];
+				if (count _itemInfo > 0 && ITEM_NAME(SEL(_itemInfo,0)) == _itemName) exitWith { createDialog "life_pickup_items"; };
+			} forEach _objects;
+
 			//OK, it wasn't a vehicle so let's see what else it could be?
-			if((typeOf _curTarget) in _miscItems) then {
-				[_curTarget,player,false] remoteExecCall ["TON_fnc_pickupAction",RSERV];
-			} else {
-				//It wasn't a misc item so is it money?
-				if(EQUAL((typeOf _curTarget),_money) && {!(_curTarget GVAR ["inUse",false])}) then {
-					[_curTarget,player,true] remoteExecCall ["TON_fnc_pickupAction",RSERV];
-				};
-			};
+			//if((typeOf _curTarget) in _miscItems) then {
+			//	[_curTarget,player,false] remoteExecCall ["TON_fnc_pickupAction",RSERV];
+			//} else {
+			//	//It wasn't a misc item so is it money?
+			//	if(EQUAL((typeOf _curTarget),_money) && {!(_curTarget GVAR ["inUse",false])}) then {
+			//		[_curTarget,player,true] remoteExecCall ["TON_fnc_pickupAction",RSERV];
+			//	};
+			//};
 		};
 	};
 };
