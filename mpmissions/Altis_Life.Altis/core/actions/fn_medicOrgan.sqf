@@ -9,7 +9,7 @@
 private["_dp","_target","_pointList","_dpText"];
 _target = param [0,ObjNull,[ObjNull]];
 if(playerSide != independent) exitWith {hint "You need medical training to handle organs!";};
-_pointList = ["organ_1","organ_2","organ_3"];
+_pointList = ["organ_1","organ_2","organ_3","organ_4"];
 if(str(_target) in _pointList) then {
 	private "_point";
 	_pointList deleteAt (_pointList find (str(_target)));
@@ -27,6 +27,7 @@ _dpText = switch (_dp) do {
 	case "organ_1": {"Pyrgos Hospital";};
 	case "organ_2": {"Kavala Hospital";};
 	case "organ_3": {"Athira Hospital";};
+	case "organ_4": {"Sofia Clinic";};
 	default {"Can't find organ";};
 };
 
