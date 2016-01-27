@@ -253,6 +253,7 @@ class Life_Client_Core
 		class insurance {};
 		class handleFlashbang {};
 		class copAutoGear {};
+		class promoteMenu {};
 	};
 	
 	class Network
