@@ -35,7 +35,7 @@ switch (playerSide) do {
         !life_holdBarrel && (typeOf cursorTarget) in ["Land_BarrelWater_F","Land_MetalBarrel_F"] && cursorTarget distance player < 5 && speed cursorTarget < 1 && !(cursorTarget getVariable "holding") ']];
 	
 		life_actions = life_actions + [player addAction["Drop Barrel",life_fnc_interactOil,"",0,false,false,"",'
-		life_holdBarrel']];
+		life_holdBarrel && speed player < 1']];
 
 		life_actions = life_actions + [player addAction["Pick Up Items",life_fnc_scrollPickup,"",0,false,false,"",'
 		cursorTarget distance player < 7 && speed cursorTarget < 1 && (count (cursorTarget getVariable ["item",[]]) > 0)']];
@@ -88,7 +88,7 @@ switch (playerSide) do {
         !life_holdBarrel && (typeOf cursorTarget) in ["Land_MetalCase_01_large_F"] && cursorTarget distance player < 5 && speed cursorTarget < 1 && !(cursorTarget getVariable "holding") ']];
 	
 		life_actions = life_actions + [player addAction["Drop Organs",life_fnc_interactOrgan,"",0,false,false,"",'
-		life_holdBarrel']];
+		life_holdBarrel && speed player < 1']];
 
 		//Revive
 		life_actions = life_actions + [player addAction["Revive Player",life_fnc_revivePlayer,"",200,false,false,"",'
