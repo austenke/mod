@@ -70,10 +70,9 @@ if (_source != _unit && !(playerSide == west && _projectile == "") && ((_curMag 
     //diag_log format["_source = %1, _projectile = %2, _curMag = %3, _curWep = %4", _source, _projectile, _curMag, _curWep];
     //diag_log format["getDammage _unit = %1, _part = %2, getHit _part = %3, _damage = %4", getDammage _unit, _part, _unit getHit _part, _damage];
     _hitDam = if (_part == "") then { damage _unit } else { (_unit getHit _part) };
-    _vehicle = vehicle player;
     if (damage _unit >= 0.95 || (_hitDam + _damage >= 0.95)) then {
         _damage = 0;
-    	if (!(_vehicle in ["O_Heli_Light_02_unarmed_F","B_Heli_Transport_01_F","I_Heli_light_03_unarmed_F","B_Heli_Transport_03_unarmed_F"])) then { [_unit,_source] spawn life_fnc_tazed };
+    	[_unit,_source] spawn life_fnc_tazed;
     };
 };
 
