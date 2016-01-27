@@ -1286,13 +1286,6 @@
 			<Italian>Menu Admin</Italian>
 			<Portuguese>Menu do ADM</Portuguese>
 		</Key>
-		<Key ID="STR_PM_PromoteMenu">
-			<Original>Whitelist Player</Original>
-			<German>Admin Menü</German>
-			<French>Menu Admin</French>
-			<Italian>Menu Admin</Italian>
-			<Portuguese>Menu do ADM</Portuguese>
-		</Key>
 		<Key ID="STR_PM_SyncData">
 			<Original>Sync Data</Original>
 			<German>Daten speichern</German>

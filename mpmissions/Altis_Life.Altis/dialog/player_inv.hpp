@@ -298,16 +298,6 @@ class playerSettings {
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
-
-		class ButtonPromoteMenu : Life_RscButtonMenu {
-			idc = 2020;
-			text = "$STR_PM_PromoteMenu";
-			onButtonClick = "createDialog ""life_promote_menu"";";
-			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.805;
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
 		
 		class ButtonSyncData : life_RscButtonMenu {
 			idc = -1;
