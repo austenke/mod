@@ -10,7 +10,7 @@ _fnc_scriptName = "Player Synchronization";
 if(isNil "life_session_time") then {life_session_time = false;};
 if(life_session_time) exitWith {hint localize "STR_Session_SyncdAlready";};
 
-[8] call SOCK_fnc_updatePartial;
+if (playerSide == civilian) then {[8] call SOCK_fnc_updatePartial;};
 [] call SOCK_fnc_updateRequest;
 hint localize "STR_Session_SyncData";
 [] spawn {
