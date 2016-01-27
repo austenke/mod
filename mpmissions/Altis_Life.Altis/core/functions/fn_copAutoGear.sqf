@@ -46,7 +46,7 @@ if ((life_cash > 29999) && (FETCH_CONST(life_coplevel) == 1)) then //cost = $30,
 	player assignItem "redgull";
 	player addItem "tbacon";
 	player assignItem "tbacon";
-//
+
 	hintSilent "You are all kitted up and ready to stop crime, good luck officer!";
 }
 else
@@ -94,7 +94,7 @@ if ((life_cash > 34999) && (FETCH_CONST(life_coplevel) == 2)) then //cost = $35,
 	player assignItem "redgull";
 	player addItem "tbacon";
 	player assignItem "tbacon";
-//
+
 	hintSilent "You are all kitted up and ready to stop crime, good luck officer!";
 }
 else
@@ -142,7 +142,7 @@ if ((life_cash > 34999) && (FETCH_CONST(life_coplevel) == 3)) then //cost = $35,
 	player assignItem "redgull";
 	player addItem "tbacon";
 	player assignItem "tbacon";
-//
+
 	hintSilent "You are all kitted up and ready to stop crime, good luck officer!";
 }
 else
@@ -190,7 +190,7 @@ if ((life_cash > 39999) && (FETCH_CONST(life_coplevel) == 4)) then //cost = $40,
 	player assignItem "redgull";
 	player addItem "tbacon";
 	player assignItem "tbacon";
-//
+
 	hintSilent "You are all kitted up and ready to stop crime, good luck officer!";
 }
 else
@@ -238,7 +238,7 @@ if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 5)) then //cost = $45,
 	player assignItem "redgull";
 	player addItem "tbacon";
 	player assignItem "tbacon";
-//
+
 	hintSilent "You are all kitted up and ready to stop crime, good luck officer!";
 }
 else
@@ -288,7 +288,7 @@ if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 6)) then //cost = $45,
 	player assignItem "redgull";
 	player addItem "tbacon";
 	player assignItem "tbacon";
-//
+
 	hintSilent "You are all kitted up and ready to stop crime, good luck officer!";
 }
 else
@@ -338,7 +338,7 @@ if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 7)) then //cost = $45,
 	player assignItem "redgull";
 	player addItem "tbacon";
 	player assignItem "tbacon";
-//
+
 	hintSilent "You are all kitted up and ready to stop crime, good luck officer!";
 }
 else
