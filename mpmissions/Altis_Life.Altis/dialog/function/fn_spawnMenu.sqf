@@ -9,9 +9,10 @@ private["_spCfg","_sp","_ctrl"];
 disableSerialization;
 
 
-_arrested = life_is_arrested;
-if(playerSide == civilian && _arrested) exitWith {
-	[] call life_fnc_respawned;
+if(playerSide == civilian) then {
+	if (life_is_arrested) exitWith {
+		[] call life_fnc_respawned;
+	};
 };
 
 if(life_respawned) then {
