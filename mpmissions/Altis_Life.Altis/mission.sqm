@@ -2544,7 +2544,8 @@ class Mission
 					vehicle="C_man_polo_3_F";
 					leader=1;
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false; this setObjectTexture [0,""textures\medic_uniform.jpg""];  this addAction[""Medical Assistance"",life_fnc_healHospital]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
+					text = "organ_4";
+					init="this enableSimulation false; this allowDamage false; this setObjectTexture [0,""textures\medic_uniform.jpg""];  this addAction[""Medical Assistance"",life_fnc_healHospital]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];this addAction[""Deliver Organs"",life_fnc_organFinish,""organ_4"",0,false,false,"""",'!isNil ""life_dp_point"" && life_organ_in_progress && life_dp_point == _target '];this addAction[""Get Organ Delivery Mission"",life_fnc_medicOrgan,""organ_4"",0,false,false,"""",' isNil ""life_dp_point"" && !life_organ_in_progress && !life_delivery_in_progress '];";
 				};
 			};
 		};
