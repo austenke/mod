@@ -10,7 +10,7 @@ disableSerialization;
 
 if(EQUAL((lbCurSel 2621),-1)) exitWith {hint "Select someone to promote";};
 _unit = call compile format["%1",CONTROL_DATA(2621)];
-_unitRank = _unit getVariable "rank";
+_unitRank = _unit getVariable "gangRank";
 
 if(isNull _unit) exitWith {}; //Bad unit?
 if(_unit == player) exitWith {hint "You can't promote yourself!";};
