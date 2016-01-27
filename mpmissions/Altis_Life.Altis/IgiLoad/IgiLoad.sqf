@@ -1004,6 +1004,11 @@ if (isnil "IL_Procedures") then
 		_done = false;
 		_turn = false;
 
+		life_holdBarrel = false;
+		{
+			if ((typeOf _x) in ["Land_BarrelWater_F","Land_MetalBarrel_F","Land_MetalCase_01_large_F"]) exitWith { _x setVariable ["holding", false, true]; };
+		} forEach attachedObjects player;
+
 		if ((_obj_type in IL_Supported_Vehicles_VAN) && (_doors == "B")) then
 		{
 			if (IL_DevMod) then
