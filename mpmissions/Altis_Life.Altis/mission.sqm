@@ -2544,7 +2544,7 @@ class Mission
 					vehicle="C_man_polo_3_F";
 					leader=1;
 					skill=0.60000002;
-					text = "organ_4";
+					text="organ_4";
 					init="this enableSimulation false; this allowDamage false; this setObjectTexture [0,""textures\medic_uniform.jpg""];  this addAction[""Medical Assistance"",life_fnc_healHospital]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];this addAction[""Deliver Organs"",life_fnc_organFinish,""organ_4"",0,false,false,"""",'!isNil ""life_dp_point"" && life_organ_in_progress && life_dp_point == _target '];this addAction[""Get Organ Delivery Mission"",life_fnc_medicOrgan,""organ_4"",0,false,false,"""",' isNil ""life_dp_point"" && !life_organ_in_progress && !life_delivery_in_progress '];";
 				};
 			};
@@ -2668,7 +2668,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1554;
+		items=1555;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -19399,6 +19399,18 @@ class Mission
 			text="a1_1";
 			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 		};
+		class Item1554
+		{
+			position[]={20783.775,36.402363,6766.7441};
+			azimut=318.694;
+			offsetY=0.00019264199;
+			id=1681;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V2_F";
+			skill=0.60000002;
+			text="dp_25";
+			init="this allowDamage false; this enableSimulation false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this addAction[""Deliver Package"",life_fnc_dpFinish,""dp_1"",0,false,false,"""",'!isNil ""life_dp_point"" && life_delivery_in_progress && life_dp_point == _target '];  this addAction[""Get Delivery Mission"",life_fnc_getDPMission,""dp_1"",0,false,false,"""",' isNil ""life_dp_point"" && !life_delivery_in_progress '];";
+		};
 	};
 	class Markers
 	{
@@ -21229,7 +21241,7 @@ class Mission
 		class Item228
 		{
 			position[]={25694.629,19.985964,21316.074};
-			name="clinic";
+			name="medic_spawn_4";
 			text="Clinic";
 			type="loc_Hospital";
 			colorName="ColorRed";
@@ -21286,7 +21298,7 @@ class Mission
 			text="Hospital";
 			type="loc_Hospital";
 			colorName="ColorRed";
-			angle=-0.82971525;
+			angle=-0.82971501;
 		};
 		class Item235
 		{
