@@ -13,6 +13,32 @@ if (playerSide == civilian) exitWith {hint "You must be a cop to purchase this!"
 if (FETCH_CONST(life_coplevel) < 1) exitWith {};
 if ((life_cash > 29999) && (FETCH_CONST(life_coplevel) == 1))  then //cost = $30,000
 {
+
+_upp = localize "STR_Process_Cop_Gear";
+
+//Setup our progress bar.
+disableSerialization;
+5 cutRsc ["life_progress","PLAIN"];
+_ui = GVAR_UINS "life_progress";
+_progress = _ui displayCtrl 38201;
+_pgText = _ui displayCtrl 38202;
+_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
+_progress progressSetPosition 0.01;
+_cP = 0.01;
+
+life_is_processing = true;
+
+while{true} do {
+	sleep  1.0;
+	_cP = _cP + 0.01;
+	_progress progressSetPosition _cP;
+	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+	if(_cP >= 1) exitWith {};
+	if(player distance _Proc > 10) exitWith {};
+};
+	
+if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+
 	life_cash = life_cash - 30000;  //30k
 	hintSilent "$30,000 has been removed for this kit";
 	sleep 1;
@@ -61,6 +87,32 @@ else
 if (FETCH_CONST(life_coplevel) < 2) exitWith {};
 if ((life_cash > 34999) && (FETCH_CONST(life_coplevel) == 2)) then //cost = $35,000
 {
+
+_upp = localize "STR_Process_Cop_Gear";
+
+//Setup our progress bar.
+disableSerialization;
+5 cutRsc ["life_progress","PLAIN"];
+_ui = GVAR_UINS "life_progress";
+_progress = _ui displayCtrl 38201;
+_pgText = _ui displayCtrl 38202;
+_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
+_progress progressSetPosition 0.01;
+_cP = 0.01;
+
+life_is_processing = true;
+
+while{true} do {
+	sleep  1.0;
+	_cP = _cP + 0.01;
+	_progress progressSetPosition _cP;
+	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+	if(_cP >= 1) exitWith {};
+	if(player distance _Proc > 10) exitWith {};
+};
+	
+if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+
 	life_cash = life_cash - 35000;  //35k
 	hintSilent "$35,000 has been removed for this kit";
 	sleep 1;
@@ -110,6 +162,32 @@ else
 if (FETCH_CONST(life_coplevel) < 3) exitWith {};
 if ((life_cash > 34999) && (FETCH_CONST(life_coplevel) == 3)) then //cost = $35,000
 {
+
+_upp = localize "STR_Process_Cop_Gear";
+
+//Setup our progress bar.
+disableSerialization;
+5 cutRsc ["life_progress","PLAIN"];
+_ui = GVAR_UINS "life_progress";
+_progress = _ui displayCtrl 38201;
+_pgText = _ui displayCtrl 38202;
+_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
+_progress progressSetPosition 0.01;
+_cP = 0.01;
+
+life_is_processing = true;
+
+while{true} do {
+	sleep  1.0;
+	_cP = _cP + 0.01;
+	_progress progressSetPosition _cP;
+	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+	if(_cP >= 1) exitWith {};
+	if(player distance _Proc > 10) exitWith {};
+};
+	
+if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+
 	life_cash = life_cash - 35000;  //35k
 	hintSilent "$35,000 has been removed for this kit";
 	sleep 1;
@@ -159,6 +237,32 @@ else
 if (FETCH_CONST(life_coplevel) < 4) exitWith {};
 if ((life_cash > 39999) && (FETCH_CONST(life_coplevel) == 4)) then //cost = $40,000
 {
+
+_upp = localize "STR_Process_Cop_Gear";
+
+//Setup our progress bar.
+disableSerialization;
+5 cutRsc ["life_progress","PLAIN"];
+_ui = GVAR_UINS "life_progress";
+_progress = _ui displayCtrl 38201;
+_pgText = _ui displayCtrl 38202;
+_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
+_progress progressSetPosition 0.01;
+_cP = 0.01;
+
+life_is_processing = true;
+
+while{true} do {
+	sleep  1.0;
+	_cP = _cP + 0.01;
+	_progress progressSetPosition _cP;
+	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+	if(_cP >= 1) exitWith {};
+	if(player distance _Proc > 10) exitWith {};
+};
+	
+if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+
 	life_cash = life_cash - 40000;  //40k
 	hintSilent "$40,000 has been removed for this kit";
 	sleep 1;
@@ -208,6 +312,32 @@ else
 if (FETCH_CONST(life_coplevel) < 5) exitWith {};
 if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 5)) then //cost = $45,000
 {
+
+_upp = localize "STR_Process_Cop_Gear";
+
+//Setup our progress bar.
+disableSerialization;
+5 cutRsc ["life_progress","PLAIN"];
+_ui = GVAR_UINS "life_progress";
+_progress = _ui displayCtrl 38201;
+_pgText = _ui displayCtrl 38202;
+_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
+_progress progressSetPosition 0.01;
+_cP = 0.01;
+
+life_is_processing = true;
+
+while{true} do {
+	sleep  1.0;
+	_cP = _cP + 0.01;
+	_progress progressSetPosition _cP;
+	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+	if(_cP >= 1) exitWith {};
+	if(player distance _Proc > 10) exitWith {};
+};
+	
+if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+
 	life_cash = life_cash - 45000;  //45k
 	hintSilent "$45,000 has been removed for this kit";
 	sleep 1;
@@ -257,6 +387,32 @@ else
 if (FETCH_CONST(life_coplevel) < 6) exitWith {};
 if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 6)) then //cost = $45,000
 {
+
+_upp = localize "STR_Process_Cop_Gear";
+
+//Setup our progress bar.
+disableSerialization;
+5 cutRsc ["life_progress","PLAIN"];
+_ui = GVAR_UINS "life_progress";
+_progress = _ui displayCtrl 38201;
+_pgText = _ui displayCtrl 38202;
+_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
+_progress progressSetPosition 0.01;
+_cP = 0.01;
+
+life_is_processing = true;
+
+while{true} do {
+	sleep  1.0;
+	_cP = _cP + 0.01;
+	_progress progressSetPosition _cP;
+	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+	if(_cP >= 1) exitWith {};
+	if(player distance _Proc > 10) exitWith {};
+};
+	
+if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+
 	life_cash = life_cash - 45000;  //45k
 	hintSilent "$45,000 has been removed for this kit";
 	sleep 1;
@@ -308,6 +464,32 @@ else
 if (FETCH_CONST(life_coplevel) < 7) exitWith {};
 if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 7)) then //cost = $45,000
 {
+
+_upp = localize "STR_Process_Cop_Gear";
+
+//Setup our progress bar.
+disableSerialization;
+5 cutRsc ["life_progress","PLAIN"];
+_ui = GVAR_UINS "life_progress";
+_progress = _ui displayCtrl 38201;
+_pgText = _ui displayCtrl 38202;
+_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
+_progress progressSetPosition 0.01;
+_cP = 0.01;
+
+life_is_processing = true;
+
+while{true} do {
+	sleep  1.0;
+	_cP = _cP + 0.01;
+	_progress progressSetPosition _cP;
+	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+	if(_cP >= 1) exitWith {};
+	if(player distance _Proc > 10) exitWith {};
+};
+	
+if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+
 	life_cash = life_cash - 45000;  //45k
 	hintSilent "$45,000 has been removed for this kit";
 	sleep 1;

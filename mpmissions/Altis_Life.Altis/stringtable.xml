@@ -4100,6 +4100,9 @@
 		<Key ID="STR_Process_Proc_Stay">
 			<Original>You need to stay within 10m to process oil.</Original>
 		</Key>
+		<Key ID="STR_Process_Gear_Stay">
+			<Original>You need to stay within 10m to gear up.</Original>
+		</Key>
 		<Key ID="STR_Process_Proc_InUse">
 			<Original>You cannot process that currently.</Original>
 		</Key>
@@ -4235,6 +4238,9 @@
 		</Key>
 		<Key ID="STR_Process_Proc_Oil">
 			<Original>Processing Oil</Original>
+		</Key>
+		<Key ID="STR_Process_Cop_Gear">
+			<Original>Gearing Up</Original>
 		</Key>
 		<Key ID="STR_Process_ProcDone_Oil">
 			<Original>You have processed 1 Oil barrel</Original>
