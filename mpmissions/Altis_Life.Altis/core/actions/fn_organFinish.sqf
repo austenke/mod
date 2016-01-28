@@ -7,14 +7,13 @@
 	Finished organ DP
 */
 private["_dp","_dis","_price"];
+if(!life_holdBarrel) exitWith {hint "You need to be holding an organ container first!";};
 _dp = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 life_organ_in_progress = false;
 life_dp_point = nil;
 _dis = round((getPos life_dp_start) distance (getPos _dp));
 _price = (round(1.7 * _dis) * 3);
 
-
-if(!life_holdBarrel) exitWith {hint "You need to be holding an organ container first!";};
 {
 	deletevehicle _x;
 } forEach attachedObjects player;
