@@ -28,6 +28,9 @@ switch (playerSide) do {
         life_actions = life_actions + [player addAction["Escort",life_fnc_escortAction,"",0,false,false,"",'
         !isNull cursorTarget && (cursorTarget getVariable ["restrained", false] || cursorTarget getVariable ["civ_restrained", false]) && !(cursorTarget getVariable["Escorting",false]) && cursorTarget distance player < 5 && speed cursorTarget < 1 ']];
 
+		life_actions = life_actions + [player addAction["Disarm",life_fnc_disarmAction,"",0,false,false,"",'
+        !isNull cursorTarget && (cursorTarget getVariable ["restrained", false] || cursorTarget getVariable ["civ_restrained", false]) && !(cursorTarget getVariable["Escorting",false]) && cursorTarget distance player < 5 && speed cursorTarget < 1 ']];
+
 		life_actions = life_actions + [player addAction["Stop Escorting",life_fnc_stopEscorting,"",0,false,false,"",'
         !isNull cursorTarget && (cursorTarget getVariable["Escorting",false]) && cursorTarget distance player < 5 ']];
 

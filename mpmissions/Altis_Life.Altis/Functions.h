@@ -104,6 +104,7 @@ class Life_Client_Core
 		class processAction {};
 		class arrestAction {};
 		class escortAction {};
+		class disarmAction {};
 		class impoundAction {};
 		class seizeAction {};
 		class pulloutAction {};
