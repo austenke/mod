@@ -7,6 +7,8 @@
 */
 private["_val"];
 _val = parseNumber(ctrlText 2702);
+if(!(EQUAL(typeName BANK,typeName 0))) exitwith {hint "Something is wrong, please notify an admin and relog";};
+if(EQUAL(BANK, 0)) exitwith {};
 if(_val > 999999) exitWith {hint localize "STR_ATM_WithdrawMax";};
 if(_val < 0) exitwith {};
 if(!([str(_val)] call life_fnc_isnumeric)) exitWith {hint localize "STR_ATM_notnumeric"};
