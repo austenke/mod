@@ -10,7 +10,7 @@ if (playerSide == independent) exitWith {hint "You must be a cop to purchase thi
 if (playerSide == civilian) exitWith {hint "You must be a cop to purchase this!"};  //cops only
 
 /*Cadet*/
-if (FETCH_CONST(life_coplevel) < 1) exitWith
+if (FETCH_CONST(life_coplevel) < 1) exitWith {};
 if ((life_cash > 29999) && (FETCH_CONST(life_coplevel) == 1))  then //cost = $30,000
 {
 	life_cash = life_cash - 30000;  //30k
@@ -58,7 +58,7 @@ else
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*Constable*/
-if (FETCH_CONST(life_coplevel) < 2) exitWith
+if (FETCH_CONST(life_coplevel) < 2) exitWith {};
 if ((life_cash > 34999) && (FETCH_CONST(life_coplevel) == 2)) then //cost = $35,000
 {
 	life_cash = life_cash - 35000;  //35k
@@ -107,7 +107,7 @@ else
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*Corporal*/
-if (FETCH_CONST(life_coplevel) < 3) exitWith
+if (FETCH_CONST(life_coplevel) < 3) exitWith {};
 if ((life_cash > 34999) && (FETCH_CONST(life_coplevel) == 3)) then //cost = $35,000
 {
 	life_cash = life_cash - 35000;  //35k
@@ -156,7 +156,7 @@ else
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*Sergeant*/
-if (FETCH_CONST(life_coplevel) < 4) exitWith
+if (FETCH_CONST(life_coplevel) < 4) exitWith {};
 if ((life_cash > 39999) && (FETCH_CONST(life_coplevel) == 4)) then //cost = $40,000
 {
 	life_cash = life_cash - 40000;  //40k
@@ -205,7 +205,7 @@ else
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*Lieutenant*/
-if (FETCH_CONST(life_coplevel) < 5) exitWith
+if (FETCH_CONST(life_coplevel) < 5) exitWith {};
 if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 5)) then //cost = $45,000
 {
 	life_cash = life_cash - 45000;  //45k
@@ -254,7 +254,7 @@ else
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*Captain*/
-if (FETCH_CONST(life_coplevel) < 6) exitWith
+if (FETCH_CONST(life_coplevel) < 6) exitWith {};
 if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 6)) then //cost = $45,000
 {
 	life_cash = life_cash - 45000;  //45k
@@ -305,7 +305,7 @@ else
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*Cheif Of Police*/
-if (FETCH_CONST(life_coplevel) < 7) exitWith
+if (FETCH_CONST(life_coplevel) < 7) exitWith {};
 if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 7)) then //cost = $45,000
 {
 	life_cash = life_cash - 45000;  //45k
