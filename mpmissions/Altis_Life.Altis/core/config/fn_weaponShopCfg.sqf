@@ -36,8 +36,8 @@ switch(_shop) do {
 			default {
 				["Altis Constable weapon Shop",
 					[
-						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["30Rnd_65x39_caseless_mag",nil,500],
+						["30Rnd_556x45_Stanag_Tracer_Red",nil,500],
+						["30Rnd_556x45_Stanag",nil,500],
 						["optic_Arco",nil,500],
 						["optic_MRCO",nil,500],
 						["optic_Hamr",nil,500],
@@ -50,8 +50,8 @@ switch(_shop) do {
 			default {
 				["Altis Corporal weapon Shop",
 					[
-						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["30Rnd_65x39_caseless_mag",nil,500],
+						["30Rnd_65x39_caseless_green_mag_Tracer",nil,500],
+						["30Rnd_65x39_caseless_green",nil,500],
 						["optic_Arco",nil,500],
 						["optic_MRCO",nil,500],
 						["optic_Hamr",nil,500],
@@ -66,8 +66,8 @@ switch(_shop) do {
 			default {
 				["Altis Sergeant weapon Shop",
 					[
-						["30Rnd_65x39_caseless_mag_Tracer",nil,500],
-						["30Rnd_65x39_caseless_mag",nil,500],
+						["100Rnd_65x39_caseless_mag_Tracer",nil,500],
+						["100Rnd_65x39_caseless_mag",nil,500],
 						["optic_Arco",nil,500],
 						["optic_MRCO",nil,500],
 						["optic_Hamr",nil,500],
