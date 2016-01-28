@@ -64,6 +64,7 @@ if(life_is_arrested) exitWith {
 if(!isNil "life_copRecieve") then {
 	[player,life_copRecieve,true] remoteExecCall ["life_fnc_wantedBounty",RSERV];
 	life_copRecieve = nil;
+	life_removeWanted = true;
 };
 
 //So I guess a fellow gang member, cop or myself killed myself so get me off that Altis Most Wanted
