@@ -2,42 +2,22 @@
 /*
 	File: copAutoGear.sqf
 	Author: Jason_000
+	Modified by: Valiant
 	
 	Description:
 	Sets cop loadout gear with scroll option
 */
+
+_Proc = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+
 if (playerSide == independent) exitWith {hint "You must be a cop to purchase this!"};  //cops only
 if (playerSide == civilian) exitWith {hint "You must be a cop to purchase this!"};  //cops only
 
 /*Cadet*/
 if ((life_cash > 29999) && (FETCH_CONST(life_coplevel) == 1))  then //cost = $30,000
 {
-	if (FETCH_CONST(life_coplevel) < 1) exitWith {};
 
-_upp = localize "STR_Process_Cop_Gear";
-
-//Setup our progress bar.
-disableSerialization;
-5 cutRsc ["life_progress","PLAIN"];
-_ui = GVAR_UINS "life_progress";
-_progress = _ui displayCtrl 38201;
-_pgText = _ui displayCtrl 38202;
-_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
-_progress progressSetPosition 0.01;
-_cP = 0.01;
-
-life_is_processing = true;
-
-while{true} do {
-	sleep  1.0;
-	_cP = _cP + 0.01;
-	_progress progressSetPosition _cP;
-	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
-	if(_cP >= 1) exitWith {};
-	if(player distance _Proc > 10) exitWith {};
-};
-	
-if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+if (FETCH_CONST(life_coplevel) < 1) exitWith {};
 
 	life_cash = life_cash - 30000;  //30k
 	hintSilent "$30,000 has been removed for this kit";
@@ -51,6 +31,33 @@ if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 
 	removeBackpack player;
 	removeHeadGear player;
 	sleep 10;
+
+	_upp = localize "STR_Process_Cop_Gear";
+
+	//Setup our progress bar.
+	disableSerialization;
+	5 cutRsc ["life_progress","PLAIN"];
+	_ui = GVAR_UINS "life_progress";
+	_progress = _ui displayCtrl 38201;
+	_pgText = _ui displayCtrl 38202;
+	_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
+	_progress progressSetPosition 0.01;
+	_cP = 0.01;
+
+	life_is_processing = true;
+
+	while{true} do {
+		sleep  1.0;
+		_cP = _cP + 0.01;
+		_progress progressSetPosition _cP;
+		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+		if(_cP >= 1) exitWith {};
+		if(player distance _Proc > 10) exitWith {};
+	];
+};
+	
+if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+
 	//Weapons & Clothes
 	player addUniform "U_Marshal";
 	player addVest "V_Rangemaster_belt";
@@ -86,32 +93,8 @@ else
 /*Constable*/
 if ((life_cash > 34999) && (FETCH_CONST(life_coplevel) == 2)) then //cost = $35,000
 {
-	if (FETCH_CONST(life_coplevel) < 2) exitWith {};
 
-_upp = localize "STR_Process_Cop_Gear";
-
-//Setup our progress bar.
-disableSerialization;
-5 cutRsc ["life_progress","PLAIN"];
-_ui = GVAR_UINS "life_progress";
-_progress = _ui displayCtrl 38201;
-_pgText = _ui displayCtrl 38202;
-_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
-_progress progressSetPosition 0.01;
-_cP = 0.01;
-
-life_is_processing = true;
-
-while{true} do {
-	sleep  1.0;
-	_cP = _cP + 0.01;
-	_progress progressSetPosition _cP;
-	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
-	if(_cP >= 1) exitWith {};
-	if(player distance _Proc > 10) exitWith {};
-};
-	
-if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+if (FETCH_CONST(life_coplevel) < 2) exitWith {};
 
 	life_cash = life_cash - 35000;  //35k
 	hintSilent "$35,000 has been removed for this kit";
@@ -125,6 +108,33 @@ if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 
 	removeBackpack player;
 	removeHeadGear player;
 	sleep 10;
+
+	_upp = localize "STR_Process_Cop_Gear";
+
+	//Setup our progress bar.
+	disableSerialization;
+	5 cutRsc ["life_progress","PLAIN"];
+	_ui = GVAR_UINS "life_progress";
+	_progress = _ui displayCtrl 38201;
+	_pgText = _ui displayCtrl 38202;
+	_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
+	_progress progressSetPosition 0.01;
+	_cP = 0.01;
+
+	life_is_processing = true;
+
+	while{true} do {
+		sleep  1.0;
+		_cP = _cP + 0.01;
+		_progress progressSetPosition _cP;
+		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+		if(_cP >= 1) exitWith {};
+		if(player distance _Proc > 10) exitWith {};
+	];
+};
+	
+if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+
 	//Weapons & Clothes
 	player addUniform "U_Rangemaster";
 	player addVest "V_TacVest_blk";
@@ -161,32 +171,8 @@ else
 /*Corporal*/
 if ((life_cash > 34999) && (FETCH_CONST(life_coplevel) == 3)) then //cost = $35,000
 {
-	if (FETCH_CONST(life_coplevel) < 3) exitWith {};
-
-_upp = localize "STR_Process_Cop_Gear";
-
-//Setup our progress bar.
-disableSerialization;
-5 cutRsc ["life_progress","PLAIN"];
-_ui = GVAR_UINS "life_progress";
-_progress = _ui displayCtrl 38201;
-_pgText = _ui displayCtrl 38202;
-_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
-_progress progressSetPosition 0.01;
-_cP = 0.01;
-
-life_is_processing = true;
-
-while{true} do {
-	sleep  1.0;
-	_cP = _cP + 0.01;
-	_progress progressSetPosition _cP;
-	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
-	if(_cP >= 1) exitWith {};
-	if(player distance _Proc > 10) exitWith {};
-};
 	
-if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+if (FETCH_CONST(life_coplevel) < 3) exitWith {};
 
 	life_cash = life_cash - 35000;  //35k
 	hintSilent "$35,000 has been removed for this kit";
@@ -200,6 +186,33 @@ if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 
 	removeBackpack player;
 	removeHeadGear player;
 	sleep 10;
+
+	_upp = localize "STR_Process_Cop_Gear";
+
+	//Setup our progress bar.
+	disableSerialization;
+	5 cutRsc ["life_progress","PLAIN"];
+	_ui = GVAR_UINS "life_progress";
+	_progress = _ui displayCtrl 38201;
+	_pgText = _ui displayCtrl 38202;
+	_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
+	_progress progressSetPosition 0.01;
+	_cP = 0.01;
+
+	life_is_processing = true;
+
+	while{true} do {
+		sleep  1.0;
+		_cP = _cP + 0.01;
+		_progress progressSetPosition _cP;
+		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+		if(_cP >= 1) exitWith {};
+		if(player distance _Proc > 10) exitWith {};
+	];
+};
+	
+if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+
 	//Weapons & Clothes
 	player addUniform "U_Rangemaster";
 	player addVest "V_TacVest_blk_POLICE";
@@ -236,32 +249,8 @@ else
 /*Sergeant*/
 if ((life_cash > 39999) && (FETCH_CONST(life_coplevel) == 4)) then //cost = $40,000
 {
-	if (FETCH_CONST(life_coplevel) < 4) exitWith {};
-
-_upp = localize "STR_Process_Cop_Gear";
-
-//Setup our progress bar.
-disableSerialization;
-5 cutRsc ["life_progress","PLAIN"];
-_ui = GVAR_UINS "life_progress";
-_progress = _ui displayCtrl 38201;
-_pgText = _ui displayCtrl 38202;
-_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
-_progress progressSetPosition 0.01;
-_cP = 0.01;
-
-life_is_processing = true;
-
-while{true} do {
-	sleep  1.0;
-	_cP = _cP + 0.01;
-	_progress progressSetPosition _cP;
-	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
-	if(_cP >= 1) exitWith {};
-	if(player distance _Proc > 10) exitWith {};
-};
 	
-if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+if (FETCH_CONST(life_coplevel) < 4) exitWith {};
 
 	life_cash = life_cash - 40000;  //40k
 	hintSilent "$40,000 has been removed for this kit";
@@ -275,6 +264,33 @@ if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 
 	removeBackpack player;
 	removeHeadGear player;
 	sleep 10;
+
+	_upp = localize "STR_Process_Cop_Gear";
+
+	//Setup our progress bar.
+	disableSerialization;
+	5 cutRsc ["life_progress","PLAIN"];
+	_ui = GVAR_UINS "life_progress";
+	_progress = _ui displayCtrl 38201;
+	_pgText = _ui displayCtrl 38202;
+	_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
+	_progress progressSetPosition 0.01;
+	_cP = 0.01;
+
+	life_is_processing = true;
+
+	while{true} do {
+		sleep  1.0;
+		_cP = _cP + 0.01;
+		_progress progressSetPosition _cP;
+		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+		if(_cP >= 1) exitWith {};
+		if(player distance _Proc > 10) exitWith {};
+	];
+};
+	
+if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+
 	//Weapons & Clothes
 	player addUniform "U_Rangemaster";
 	player addVest "V_PlateCarrier1_blk";
@@ -311,32 +327,8 @@ else
 /*Lieutenant*/
 if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 5)) then //cost = $45,000
 {
-	if (FETCH_CONST(life_coplevel) < 5) exitWith {};
 
-_upp = localize "STR_Process_Cop_Gear";
-
-//Setup our progress bar.
-disableSerialization;
-5 cutRsc ["life_progress","PLAIN"];
-_ui = GVAR_UINS "life_progress";
-_progress = _ui displayCtrl 38201;
-_pgText = _ui displayCtrl 38202;
-_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
-_progress progressSetPosition 0.01;
-_cP = 0.01;
-
-life_is_processing = true;
-
-while{true} do {
-	sleep  1.0;
-	_cP = _cP + 0.01;
-	_progress progressSetPosition _cP;
-	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
-	if(_cP >= 1) exitWith {};
-	if(player distance _Proc > 10) exitWith {};
-};
-	
-if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+if (FETCH_CONST(life_coplevel) < 5) exitWith {};
 
 	life_cash = life_cash - 45000;  //45k
 	hintSilent "$45,000 has been removed for this kit";
@@ -350,6 +342,33 @@ if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 
 	removeBackpack player;
 	removeHeadGear player;
 	sleep 10;
+
+	_upp = localize "STR_Process_Cop_Gear";
+
+	//Setup our progress bar.
+	disableSerialization;
+	5 cutRsc ["life_progress","PLAIN"];
+	_ui = GVAR_UINS "life_progress";
+	_progress = _ui displayCtrl 38201;
+	_pgText = _ui displayCtrl 38202;
+	_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
+	_progress progressSetPosition 0.01;
+	_cP = 0.01;
+
+	life_is_processing = true;
+
+	while{true} do {
+		sleep  1.0;
+		_cP = _cP + 0.01;
+		_progress progressSetPosition _cP;
+		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+		if(_cP >= 1) exitWith {};
+		if(player distance _Proc > 10) exitWith {};
+	];
+};
+	
+if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+
 	//Weapons & Clothes
 	player addUniform "U_Rangemaster";
 	player addVest "V_PlateCarrierSpec_blk";
@@ -386,32 +405,8 @@ else
 /*Captain*/
 if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 6)) then //cost = $45,000
 {
-	if (FETCH_CONST(life_coplevel) < 6) exitWith {};
 
-_upp = localize "STR_Process_Cop_Gear";
-
-//Setup our progress bar.
-disableSerialization;
-5 cutRsc ["life_progress","PLAIN"];
-_ui = GVAR_UINS "life_progress";
-_progress = _ui displayCtrl 38201;
-_pgText = _ui displayCtrl 38202;
-_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
-_progress progressSetPosition 0.01;
-_cP = 0.01;
-
-life_is_processing = true;
-
-while{true} do {
-	sleep  1.0;
-	_cP = _cP + 0.01;
-	_progress progressSetPosition _cP;
-	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
-	if(_cP >= 1) exitWith {};
-	if(player distance _Proc > 10) exitWith {};
-};
-	
-if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+if (FETCH_CONST(life_coplevel) < 6) exitWith {};
 
 	life_cash = life_cash - 45000;  //45k
 	hintSilent "$45,000 has been removed for this kit";
@@ -425,6 +420,33 @@ if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 
 	removeBackpack player;
 	removeHeadGear player;
 	sleep 10;
+
+	_upp = localize "STR_Process_Cop_Gear";
+
+	//Setup our progress bar.
+	disableSerialization;
+	5 cutRsc ["life_progress","PLAIN"];
+	_ui = GVAR_UINS "life_progress";
+	_progress = _ui displayCtrl 38201;
+	_pgText = _ui displayCtrl 38202;
+	_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
+	_progress progressSetPosition 0.01;
+	_cP = 0.01;
+
+	life_is_processing = true;
+
+	while{true} do {
+		sleep  1.0;
+		_cP = _cP + 0.01;
+		_progress progressSetPosition _cP;
+		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+		if(_cP >= 1) exitWith {};
+		if(player distance _Proc > 10) exitWith {};
+	];
+};
+	
+if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+
 	//Weapons & Clothes
 	player addUniform "U_B_CombatUniform_mcam";
 	player addVest "V_PlateCarrierGL_rgr";
@@ -463,32 +485,8 @@ else
 /*Cheif Of Police*/
 if ((life_cash > 44999) && (FETCH_CONST(life_coplevel) == 7)) then //cost = $45,000
 {
-	if (FETCH_CONST(life_coplevel) < 7) exitWith {};
-
-_upp = localize "STR_Process_Cop_Gear";
-
-//Setup our progress bar.
-disableSerialization;
-5 cutRsc ["life_progress","PLAIN"];
-_ui = GVAR_UINS "life_progress";
-_progress = _ui displayCtrl 38201;
-_pgText = _ui displayCtrl 38202;
-_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
-_progress progressSetPosition 0.01;
-_cP = 0.01;
-
-life_is_processing = true;
-
-while{true} do {
-	sleep  1.0;
-	_cP = _cP + 0.01;
-	_progress progressSetPosition _cP;
-	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
-	if(_cP >= 1) exitWith {};
-	if(player distance _Proc > 10) exitWith {};
-};
 	
-if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+if (FETCH_CONST(life_coplevel) < 7) exitWith {};
 
 	life_cash = life_cash - 45000;  //45k
 	hintSilent "$45,000 has been removed for this kit";
@@ -502,6 +500,33 @@ if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 
 	removeBackpack player;
 	removeHeadGear player;
 	sleep 10;
+
+	_upp = localize "STR_Process_Cop_Gear";
+
+	//Setup our progress bar.
+	disableSerialization;
+	5 cutRsc ["life_progress","PLAIN"];
+	_ui = GVAR_UINS "life_progress";
+	_progress = _ui displayCtrl 38201;
+	_pgText = _ui displayCtrl 38202;
+	_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
+	_progress progressSetPosition 0.01;
+	_cP = 0.01;
+
+	life_is_processing = true;
+
+	while{true} do {
+		sleep  1.0;
+		_cP = _cP + 0.01;
+		_progress progressSetPosition _cP;
+		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+		if(_cP >= 1) exitWith {};
+		if(player distance _Proc > 10) exitWith {};
+	];
+};
+	
+if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+
 	//Weapons & Clothes
 	player addUniform "U_B_CombatUniform_mcam";
 	player addVest "V_PlateCarrierGL_rgr";
