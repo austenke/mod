@@ -7,6 +7,10 @@
 	Interact with an existing organ case
 */
 
+if(playerSide == west) {
+	deleteVehicle cursorTarget;
+};
+
 if (life_holdBarrel) exitWith {
 	life_holdBarrel = false;
 	{

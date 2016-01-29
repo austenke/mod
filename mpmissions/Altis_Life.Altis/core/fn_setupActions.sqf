@@ -84,6 +84,9 @@ switch (playerSide) do {
         //Revive
 		life_actions = life_actions + [player addAction["Revive Player",life_fnc_revivePlayer,"",200,false,false,"",'
 		!isNull cursorTarget && life_inv_defib > 1 && !alive cursorTarget && cursorTarget isKindOf "Man" && cursorTarget distance player < 9 ']];
+	
+		life_actions = life_actions + [player addAction["Seize Container",life_fnc_interactOrgan,"",0,false,false,"",'
+        !isNull cursorTarget && (typeOf cursorTarget) in ["Land_BarrelWater_F","Land_MetalBarrel_F","Land_MetalCase_01_large_F"] && cursorTarget distance player < 5 && speed cursorTarget < 1 && !(cursorTarget getVariable "holding") ']];
 	};
 
 	case independent: {
