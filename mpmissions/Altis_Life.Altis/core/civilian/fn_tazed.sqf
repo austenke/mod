@@ -49,6 +49,11 @@ if(_shooter isKindOf "Man" && alive player) then {
 		if(!(player GVAR ["Escorting",false])) then {
 			detach player;
 		};
+
+		{
+			if ((typeOf _x) in ["Land_BarrelWater_F","Land_MetalBarrel_F","Land_MetalCase_01_large_F"]) then {detach _x;};
+		} forEach attachedObjects player;
+
 		life_istazed = false;
 		player allowDamage true;
 		disableUserInput false;

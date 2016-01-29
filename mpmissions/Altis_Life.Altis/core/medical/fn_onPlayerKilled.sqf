@@ -90,6 +90,7 @@ if(side _killer == west && playerSide != west) then {
 _handle = [_unit] spawn life_fnc_dropItems;
 waitUntil {scriptDone _handle};
 
+life_holdBarrel = false;
 life_hunger = 100;
 life_thirst = 100;
 life_carryWeight = 0;
