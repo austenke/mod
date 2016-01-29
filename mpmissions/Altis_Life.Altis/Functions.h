@@ -434,20 +434,6 @@ class Life_Client_Core
 		class pickupItems {};
 	};
 
-	/*
-	class Mayor
-	{
-		file = "core\mayor";
-		class openBallotMenu {};
-		class populateBallotMenu {};
-		class selectBallotMenu {};
-		class voteBallotMenu {};
-		class applyBallotApplicationMenu {};
-		class openBallotApplicationMenu {};
-		class openBallotApplicationMenuClient {};
-	};
-	*/
-
 	class Cam
 	{
 	   file ="core";
