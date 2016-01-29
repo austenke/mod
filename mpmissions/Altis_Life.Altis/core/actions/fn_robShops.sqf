@@ -33,12 +33,13 @@ life_action_robbing = true;
 _kassa = 12000 + round(random 25000);
 _shop removeAction _action;
 _shop switchMove "AmovPercMstpSsurWnonDnon";
-_chance = random(100);
-if(_chance >= 80) then 
-{ 
-	hint "The cashier hit the silent alarm, police has been alerted!"; 
-	[[1,format[localize "STR_NOTF_RobShop",(name _robber), _name]],"life_fnc_broadcast",west,FALSE] call life_fnc_MP;
-};
+//_chance = random(100);
+//if(_chance >= 80) then 
+//{ 
+	//hint "The cashier hit the silent alarm, police has been alerted!"; 
+[//[1,format[localize "STR_NOTF_RobShop",(name _robber), _name]],"life_fnc_broadcast",west,FALSE] call life_fnc_MP;
+[0,"STR_NOTF_RobShop",true,[(name _robber), _name]] remoteExecCall ["life_fnc_broadcast",west];
+//};
  
 //Setup our progress bar.
 disableSerialization;
