@@ -17,6 +17,7 @@ _pgText ctrlSetText format["%2 (1%1)...","%",_upp];
 _progress progressSetPosition 0.01;
 _cP = 0.01;
 _success=false;
+closeDialog 0;
 while{true} do
 {
 	sleep 0.09;
