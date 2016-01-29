@@ -120,7 +120,6 @@ class Life_Client_Core
 		class packupSpikes {};
 		class storeVehicle {};
 		class robAction {};
-		class captureHideout {};
 		class gather {};
 		class gutAnimal {};
 		class surrender {}; //surrender action
