@@ -30,7 +30,6 @@ if (FETCH_CONST(life_coplevel) < 1) exitWith {};
 	removeVest player;
 	removeBackpack player;
 	removeHeadGear player;
-	sleep 10;
 
 	_upp = localize "STR_Process_Cop_Gear";
 
@@ -81,6 +80,8 @@ if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 
 	player assignItem "tbacon";
 
 	hintSilent "You are all kitted up and ready to stop crime, good luck officer!";
+	5 cutText ["","PLAIN"];
+	life_is_processing = false;
 }
 else
 {
@@ -106,7 +107,6 @@ if (FETCH_CONST(life_coplevel) < 2) exitWith {};
 	removeVest player;
 	removeBackpack player;
 	removeHeadGear player;
-	sleep 10;
 
 	_upp = localize "STR_Process_Cop_Gear";
 
@@ -158,6 +158,8 @@ if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 
 	player assignItem "tbacon";
 
 	hintSilent "You are all kitted up and ready to stop crime, good luck officer!";
+	5 cutText ["","PLAIN"];
+	life_is_processing = false;
 }
 else
 {
@@ -183,7 +185,6 @@ if (FETCH_CONST(life_coplevel) < 3) exitWith {};
 	removeVest player;
 	removeBackpack player;
 	removeHeadGear player;
-	sleep 10;
 
 	_upp = localize "STR_Process_Cop_Gear";
 
@@ -235,6 +236,8 @@ if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 
 	player assignItem "tbacon";
 
 	hintSilent "You are all kitted up and ready to stop crime, good luck officer!";
+	5 cutText ["","PLAIN"];
+	life_is_processing = false;
 }
 else
 {
@@ -260,7 +263,6 @@ if (FETCH_CONST(life_coplevel) < 4) exitWith {};
 	removeVest player;
 	removeBackpack player;
 	removeHeadGear player;
-	sleep 10;
 
 	_upp = localize "STR_Process_Cop_Gear";
 
@@ -312,6 +314,8 @@ if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 
 	player assignItem "tbacon";
 
 	hintSilent "You are all kitted up and ready to stop crime, good luck officer!";
+	5 cutText ["","PLAIN"];
+	life_is_processing = false;
 }
 else
 {
@@ -337,7 +341,6 @@ if (FETCH_CONST(life_coplevel) < 5) exitWith {};
 	removeVest player;
 	removeBackpack player;
 	removeHeadGear player;
-	sleep 10;
 
 	_upp = localize "STR_Process_Cop_Gear";
 
@@ -389,6 +392,8 @@ if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 
 	player assignItem "tbacon";
 
 	hintSilent "You are all kitted up and ready to stop crime, good luck officer!";
+	5 cutText ["","PLAIN"];
+	life_is_processing = false;
 }
 else
 {
@@ -414,7 +419,6 @@ if (FETCH_CONST(life_coplevel) < 6) exitWith {};
 	removeVest player;
 	removeBackpack player;
 	removeHeadGear player;
-	sleep 10;
 
 	_upp = localize "STR_Process_Cop_Gear";
 
@@ -468,6 +472,8 @@ if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 
 	player assignItem "tbacon";
 
 	hintSilent "You are all kitted up and ready to stop crime, good luck officer!";
+	5 cutText ["","PLAIN"];
+	life_is_processing = false;
 }
 else
 {
@@ -493,7 +499,6 @@ if (FETCH_CONST(life_coplevel) < 7) exitWith {};
 	removeVest player;
 	removeBackpack player;
 	removeHeadGear player;
-	sleep 10;
 
 	_upp = localize "STR_Process_Cop_Gear";
 
@@ -547,6 +552,8 @@ if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 
 	player assignItem "tbacon";
 
 	hintSilent "You are all kitted up and ready to stop crime, good luck officer!";
+	5 cutText ["","PLAIN"];
+	life_is_processing = false;
 }
 else
 {
