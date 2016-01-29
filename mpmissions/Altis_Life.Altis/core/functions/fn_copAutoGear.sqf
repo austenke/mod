@@ -53,7 +53,6 @@ if (FETCH_CONST(life_coplevel) < 1) exitWith {};
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
 		if(_cP >= 1) exitWith {};
 		if(player distance _Proc > 10) exitWith {};
-	];
 };
 	
 if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
@@ -130,7 +129,6 @@ if (FETCH_CONST(life_coplevel) < 2) exitWith {};
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
 		if(_cP >= 1) exitWith {};
 		if(player distance _Proc > 10) exitWith {};
-	];
 };
 	
 if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
@@ -208,7 +206,6 @@ if (FETCH_CONST(life_coplevel) < 3) exitWith {};
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
 		if(_cP >= 1) exitWith {};
 		if(player distance _Proc > 10) exitWith {};
-	];
 };
 	
 if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
@@ -286,7 +283,6 @@ if (FETCH_CONST(life_coplevel) < 4) exitWith {};
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
 		if(_cP >= 1) exitWith {};
 		if(player distance _Proc > 10) exitWith {};
-	];
 };
 	
 if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
@@ -364,7 +360,6 @@ if (FETCH_CONST(life_coplevel) < 5) exitWith {};
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
 		if(_cP >= 1) exitWith {};
 		if(player distance _Proc > 10) exitWith {};
-	];
 };
 	
 if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
@@ -442,7 +437,6 @@ if (FETCH_CONST(life_coplevel) < 6) exitWith {};
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
 		if(_cP >= 1) exitWith {};
 		if(player distance _Proc > 10) exitWith {};
-	];
 };
 	
 if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
@@ -522,7 +516,6 @@ if (FETCH_CONST(life_coplevel) < 7) exitWith {};
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
 		if(_cP >= 1) exitWith {};
 		if(player distance _Proc > 10) exitWith {};
-	];
 };
 	
 if(player distance _Proc > 10) exitWith {hint localize "STR_Process_Gear_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
