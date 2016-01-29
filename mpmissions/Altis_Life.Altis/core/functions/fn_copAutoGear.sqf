@@ -46,7 +46,7 @@ if (FETCH_CONST(life_coplevel) < 1) exitWith {};
 	life_is_processing = true;
 
 	while{true} do {
-		sleep  1.0;
+		sleep  0.5;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
@@ -123,7 +123,7 @@ if (FETCH_CONST(life_coplevel) < 2) exitWith {};
 	life_is_processing = true;
 
 	while{true} do {
-		sleep  1.0;
+		sleep  0.5;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
@@ -201,7 +201,7 @@ if (FETCH_CONST(life_coplevel) < 3) exitWith {};
 	life_is_processing = true;
 
 	while{true} do {
-		sleep  1.0;
+		sleep  0.5;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
@@ -279,7 +279,7 @@ if (FETCH_CONST(life_coplevel) < 4) exitWith {};
 	life_is_processing = true;
 
 	while{true} do {
-		sleep  1.0;
+		sleep  0.5;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
@@ -357,7 +357,7 @@ if (FETCH_CONST(life_coplevel) < 5) exitWith {};
 	life_is_processing = true;
 
 	while{true} do {
-		sleep  1.0;
+		sleep  0.5;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
@@ -435,7 +435,7 @@ if (FETCH_CONST(life_coplevel) < 6) exitWith {};
 	life_is_processing = true;
 
 	while{true} do {
-		sleep  1.0;
+		sleep  0.5;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
@@ -515,7 +515,7 @@ if (FETCH_CONST(life_coplevel) < 7) exitWith {};
 	life_is_processing = true;
 
 	while{true} do {
-		sleep  1.0;
+		sleep  0.5;
 		_cP = _cP + 0.01;
 		_progress progressSetPosition _cP;
 		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];

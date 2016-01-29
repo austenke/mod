@@ -4240,7 +4240,7 @@
 			<Original>Processing Oil</Original>
 		</Key>
 		<Key ID="STR_Process_Cop_Gear">
-			<Original>Gearing Up</Original>
+			<Original>Assembling Loadout</Original>
 		</Key>
 		<Key ID="STR_Process_ProcDone_Oil">
 			<Original>You have processed 1 Oil barrel</Original>
