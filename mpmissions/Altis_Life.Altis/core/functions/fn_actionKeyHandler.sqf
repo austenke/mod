@@ -111,7 +111,7 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 
 			{
 				_itemInfo = _x getVariable ["item",[]];
-				if (count _itemInfo > 0 && ITEM_NAME(SEL(_itemInfo,0)) == _itemName) exitWith { createDialog "life_pickup_items"; };
+				if (count _itemInfo > 0) exitWith { createDialog "life_pickup_items"; };
 			} forEach _objects;
 
 			//OK, it wasn't a vehicle so let's see what else it could be?
