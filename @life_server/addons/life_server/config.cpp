@@ -135,6 +135,7 @@ class CfgFunctions
 			class setObjVar {};
 			class keyManagement {};
 			class vehicleInsurance {};
+			class whitelistPlayer {};
 		};
 		
 		class Housing
