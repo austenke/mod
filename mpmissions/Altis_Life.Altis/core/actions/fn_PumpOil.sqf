@@ -45,7 +45,7 @@ _barrel = "Land_BarrelWater_F" createVehicle position player;
 _barrel attachTo[player,[0,1,1.9]];
 _barrel allowDamage false;
 _barrel setVariable ["holding", true, true];
-_barrel enableRopeAttach false;
+_barrel enableRopeAttach true;
 player reveal _barrel;
 life_pumped_barrel = _barrel;
 life_holdBarrel = true;
