@@ -3,7 +3,6 @@ private["_unit"];
 _unit = cursorTarget;
 if((!(_unit isKindOf "LandVehicle"))&&(!(_unit getVariable ["restrained",false]))) exitWith {hint "You cannot add a speed bomb to this."};
 if(player distance _unit > 7) exitWith {hint "You need to be within 7 feet!"};
-if(!([false,"speedbomb",1] call life_fnc_handleInv)) exitWith {};
 closeDialog 0;
 life_action_inUse = true;
 player playMove "AinvPknlMstpSnonWnonDnon_medic_1";
@@ -11,6 +10,7 @@ sleep 1.5;
 waitUntil {animationState player != "ainvpknlmstpsnonwnondnon_medic_1"};
 life_action_inUse = false;
 if(player distance _unit > 7) exitWith {titleText["You are not in range!","PLAIN"];};
+if(!([false,"speedbomb",1] call life_fnc_handleInv)) exitWith {};
 titleText["You have attached a speed bomb to this vehicle.","PLAIN"];
 [_unit] spawn {	
 	_veh = _this select 0;	
