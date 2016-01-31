@@ -21084,7 +21084,7 @@ class Mission
 		{
 			position[]={21996.693,28.352285,21052.029};
 			name="capture_label_4";
-			text="Heroin Cartel";
+			text="Oil Cartel";
 			type="hd_flag";
 			colorName="ColorRed";
 			angle=-350.99701;

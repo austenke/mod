@@ -22,9 +22,9 @@ _toSelect = [];
  
 _itemInfo = switch (_type) do
 {
-	case "oil": {_license = "oil";["oil_unprocessed","oil_processed",999999,(localize "STR_Process_Oil"), false];};
+	case "oil": {_license = "oil";_toSelect = ((life_capture_list) select 3);["oil_unprocessed","oil_processed",999999,(localize "STR_Process_Oil"), false];};
 	case "diamond": {_license = "diamond";["diamond_uncut","diamond_cut",999999,(localize "STR_Process_Diamond"), false];};
-	case "heroin": {_license = "heroin";_toSelect = ((life_capture_list) select 3);["heroin_unprocessed","heroin_processed",999999,(localize "STR_Process_Heroin"), false];};
+	case "heroin": {_license = "heroin";["heroin_unprocessed","heroin_processed",999999,(localize "STR_Process_Heroin"), false];};
 	case "copper": {_license = "copper";["copper_unrefined","copper_refined",999999,(localize "STR_Process_Copper"), false];};
 	case "iron": {_license = "iron";["iron_unrefined","iron_refined",999999,(localize "STR_Process_Iron"), false];};
 	case "sand": {_license = "sand";["sand","glass",999999,(localize "STR_Process_Sand"), false];};
