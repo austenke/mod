@@ -59,7 +59,7 @@ if (isnil "IL_Variables") then
 	//Maximum capacity for vehicles
 	IL_Num_Slots_OFFROAD = -2;
 	IL_Num_Slots_VAN = -3;
-	IL_Num_Slots_MOHAWK = -7;
+	IL_Num_Slots_MOHAWK = -6;
 	IL_num_Slots_CHINOOK = -8;
 	IL_Num_Slots_KAMAZ = -4;
 	IL_Num_Slots_TEMPEST = -5;
