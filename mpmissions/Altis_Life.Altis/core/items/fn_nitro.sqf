@@ -2,7 +2,6 @@ _unit = cursorTarget;
 
 if (count (_unit getVariable ["vehicle_info_owners", []]) < 1 || !(_unit isKindOf "Car")) exitWith {hint "Your target is not a valid vehicle for nitrous oxide.";};
 if (vehicle player != player) exitWith {};
-if (!([false,"nitro",1] call life_fnc_handleInv)) exitWith {};
 
 life_action_in_use = true;
 
@@ -30,6 +29,9 @@ while{true} do
 	if(speed player > 2) exitWith {};
 	if (!life_action_in_use) exitWith {};
 };
+
+if (!([false,"nitro",1] call life_fnc_handleInv)) exitWith {};
+
 5 cutText ["","PLAIN"];
 life_action_in_use = false;
 
