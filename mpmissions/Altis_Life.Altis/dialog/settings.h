@@ -180,6 +180,15 @@ class SettingsMenu
 			y = 0.43;
 	
 		};
+
+		class WL_id_value : Life_RscEdit
+		{
+			idc = 2973;
+			text = "";
+
+			x = 0.70; y = 0.43;
+			w = .08; h = .04;
+		};
 		
 		class SideChatONOFF : PlayerTagsONOFF
 		{
