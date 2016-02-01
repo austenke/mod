@@ -136,6 +136,7 @@ class Life_Client_Core
 		class prisonBreak {};
 		class shootPorn {};
 		class editPorn {};
+		class interAction {};
 	};
 	
 	class Housing
