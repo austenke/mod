@@ -125,7 +125,7 @@ class VirtualItems {
 
 	//Porn Items
 	VITEMMACRO(porn_unprocessed, "STR_Item_PornU", "pornUnprocessed", 30, -1, -1, false, -1, "") // Need icon
-	VITEMMACRO(porn_processed, "STR_Item_PornP", "pornProcessed", 30, -1, 5000, false, -1, "") // Need icon
+	VITEMMACRO(porn_processed, "STR_Item_PornP", "pornProcessed", 30, -1, 200000, false, -1, "") // Need icon
 
 	//Mined Items
 	VITEMMACRO(oil_unprocessed, "STR_Item_OilU", "oilUnprocessed", 5, -1, -1, true, -1, "icons\ico_oilunprocessed.paa")
