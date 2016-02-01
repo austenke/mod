@@ -11,7 +11,7 @@ _uid = steamid;
 if(isNull _house) exitWith {};
 if(!(_house isKindOf "House_F")) exitWith {};
 
-if(player == (_house GVAR ["owner",ObjNull])) then {
+if(steamid == ((_house GVAR ["house_owner",ObjNull]) select 1) then {
 	[grpPlayer GVAR "gang_id",_house] remoteExec ["TON_fnc_gangHouse",RSERV];
 
 	_house SVAR ["house_owner",[grpPlayer GVAR "gang_id",grpPlayer GVAR "gang_name"],true];
