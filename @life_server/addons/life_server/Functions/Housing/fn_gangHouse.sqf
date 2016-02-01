@@ -11,6 +11,7 @@ _houseID = _house getVariable["house_id",-1];
 
 if(isNull _house OR _newid == "") exitWith {};
 
+
 _query = format["housingSwapOwner:%1:%2",_newid,_houseID];
 waitUntil{!DB_Async_Active};
 [_query,1] call DB_fnc_asyncCall;

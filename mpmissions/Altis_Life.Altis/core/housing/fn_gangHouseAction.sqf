@@ -16,6 +16,7 @@ systemChat str ((_house GVAR ["house_owner",ObjNull]) select 1);
 systemChat str (getPlayerUID player);
 
 if(getPlayerUID player == ((_house GVAR ["house_owner",ObjNull]) select 0)) then {
+	systemChat "Sending request to server";
 	[grpPlayer GVAR "gang_id",_house] remoteExec ["TON_fnc_gangHouse",RSERV];
 
 	_house SVAR ["house_owner",[grpPlayer GVAR "gang_id",grpPlayer GVAR "gang_name"],true];
