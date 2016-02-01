@@ -273,6 +273,11 @@ class VirtualShops {
 		items[] = { "cocaine_processed", "heroin_processed", "marijuana" };
 	};
 
+	class porn {
+		name="STR_Shops_PornShop"
+		items[] = { "porn_processed" };
+	};
+
 	class oil {
 		name = "STR_Shops_Oil";
 		items[] = { "oil_processed", "pickaxe", "fuelFull" };

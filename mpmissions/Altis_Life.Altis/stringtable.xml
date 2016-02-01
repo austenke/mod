@@ -79,6 +79,9 @@
 			<French>Dealer de Drogue</French>
 			<Portuguese>Traficante</Portuguese>
 		</Key>
+		<Key ID="STR_Shops_PornShop">
+			<Original>Porn Shop</Original>
+		</Key>
 		<Key ID="STR_Shops_Oil">
 			<Original>Oil Buyer</Original>
 			<German>Ölhändler</German>

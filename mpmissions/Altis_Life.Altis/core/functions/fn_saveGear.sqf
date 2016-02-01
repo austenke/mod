@@ -143,7 +143,7 @@ if(count (PISTOL_ITEMS) > 0) then {
     "copperRefined","ironUnrefined","ironRefined","saltUnrefined","saltRefined","sand","glass","diamondUncut","diamondCut","rock","cement","wood","waterBucket",
     "heroinUnprocessed","heroinProcessed","cannabis","marijuana","cocaineUnprocessed","cocaineProcessed","redgull","coffee","waterBottle","apple","peach","tbacon",
     "donuts","rabbitRaw","rabbit","salemaRaw","salema","ornateRaw","ornate","mackerelRaw","mackerel","tunaRaw","tuna","mulletRaw","mullet","catsharkRaw","catshark",
-    "turtleRaw","turtleSoup","henRaw","hen","roosterRaw","rooster","sheepRaw","sheep","goatRaw","goat"
+    "turtleRaw","turtleSoup","henRaw","hen","roosterRaw","rooster","sheepRaw","sheep","goatRaw","goat","pornUnprocessed","pornProcessed"
 ];
 
 _return pushBack _uItems;
