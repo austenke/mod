@@ -15,7 +15,7 @@ if(!(_house isKindOf "House_F")) exitWith {};
 systemChat str ((_house GVAR ["house_owner",ObjNull]) select 1);
 systemChat str (getPlayerUID player);
 
-if(getPlayerUID player == ((_house GVAR ["house_owner",ObjNull]) select 1) then {
+if(getPlayerUID player == ((_house GVAR ["house_owner",ObjNull]) select 1)) then {
 	[grpPlayer GVAR "gang_id",_house] remoteExec ["TON_fnc_gangHouse",RSERV];
 
 	_house SVAR ["house_owner",[grpPlayer GVAR "gang_id",grpPlayer GVAR "gang_name"],true];
