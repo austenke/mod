@@ -134,6 +134,7 @@ class Life_Client_Core
 		class sellOil {};
 		class activateNitro {};
 		class prisonBreak {};
+		class shootPorn {};
 	};
 	
 	class Housing
