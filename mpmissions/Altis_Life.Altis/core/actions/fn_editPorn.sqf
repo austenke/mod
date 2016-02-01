@@ -42,7 +42,7 @@ while{true} do {
 if(player distance _Proc > 10) exitWith {hint "Stay close to the editor!"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 
 if(([true,"porn_processed",1] call life_fnc_handleInv)) then {
-	titleText["You have successfully filmed some porn, now you need to get it edited!","PLAIN"];
+	titleText["You have successfully edited the porn, go sell that shit!","PLAIN"];
 } else {
 	titleText ["Your inventory is full","PLAIN"];
 };
