@@ -7,7 +7,7 @@
 	Interact with an existing organ case
 */
 
-if(playerSide == west) {
+if (playerSide == west) then {
 	deleteVehicle cursorTarget;
 };
 
