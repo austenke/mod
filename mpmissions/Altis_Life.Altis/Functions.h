@@ -135,6 +135,7 @@ class Life_Client_Core
 		class activateNitro {};
 		class prisonBreak {};
 		class shootPorn {};
+		class editPorn {};
 	};
 	
 	class Housing
