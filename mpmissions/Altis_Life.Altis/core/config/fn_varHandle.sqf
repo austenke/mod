@@ -16,6 +16,8 @@ switch (_mode) do
 	{
 		switch (_var) do
 		{
+			case "pornp": {"life_inv_pornp"};
+			case "pornu": {"life_inv_pornu"};
 			case "oilu": {"life_inv_oilu"};
 			case "oilp": {"life_inv_oilp"};
 			case "heroinu": {"life_inv_heroinu"};

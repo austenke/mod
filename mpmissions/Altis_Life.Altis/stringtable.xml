@@ -3210,6 +3210,12 @@
 			<Italian>Pesca</Italian>
 			<Portuguese>Pêssego</Portuguese>
 		</Key>
+		<Key ID="STR_Item_PornU">
+			<Original>Porn Footage</Original>
+		</Key>
+		<Key ID="STR_Item_PornU">
+			<Original>Edited Porn</Original>
+		</Key>
 		<Key ID="STR_Item_Peaches">
 			<Original>Peaches</Original>
 			<German>Pfirsiche</German>
