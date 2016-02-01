@@ -99,12 +99,12 @@ switch (_side) do {
 		//_queryResult set[14,_queryResult4];
 
 
-		//_gangId = missionNamespace getVariable[format["gang_%1",_uid],[]] select 6;
-		//waitUntil {!DB_Async_Active};
-		//_query = format["housingFetchPlayerHouse:%1",_gangId];
-		//_queryResult4 = [_query,2,true] call DB_fnc_asyncCall;
+		_gangId = missionNamespace getVariable[format["gang_%1",_uid],[]] select 6;
+		waitUntil {!DB_Async_Active};
+		_query = format["housingFetchPlayerHouse:%1",_gangId];
+		_queryResult4 = [_query,2,true] call DB_fnc_asyncCall;
 
-		//_queryResult set[14,_queryResult4];
+		_queryResult set[14,_queryResult4];
 	};
 };
 

@@ -73,7 +73,11 @@ switch(playerSide) do {
 		player setVariable ["gangRank",life_gangRank,true];
 		//life_rep = ((SEL(_this,14) select 0) select 0);
 
-		//life_gangHouse = SEL(_this,14);
+		life_gangHouse = SEL(_this,14);
+		{
+			_house = nearestBuilding (call compile format["%1", SEL(_x,0)]);
+			life_vehicles pushBack _house;
+		} foreach life_gangHouse;
 	};
 	
 	case independent: {
