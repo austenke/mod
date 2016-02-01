@@ -6,6 +6,7 @@
 	Lights up the house.
 */
 private "_house";
+hint "gang house activated";
 _house = param [0,ObjNull,[ObjNull]];
 _uid = steamid;
 if(isNull _house) exitWith {};
