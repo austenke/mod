@@ -137,14 +137,7 @@ if(count (PISTOL_ITEMS) > 0) then {
     if (_val > 0) then {
 		_yItems pushBack [_x,_val];
     };
-} forEach [
-	"defib","pickaxe","fuelEmpty","fuelFull","spikeStrip","lockpick","blastingCharge","boltCutter","defuseKit","storageSmall","storageBig","bottledshine","bottledwhiskey",
-    "bottledbeer","moonshine","whiskey","beerp","rye","hops","yeast","cornmeal","mash","bottles","burlapsack","speedbomb","ziptie","chainsaw","nitro","copperUnrefined",
-    "copperRefined","ironUnrefined","ironRefined","saltUnrefined","saltRefined","sand","glass","diamondUncut","diamondCut","rock","cement","wood","waterBucket",
-    "heroinUnprocessed","heroinProcessed","cannabis","marijuana","cocaineUnprocessed","cocaineProcessed","redgull","coffee","waterBottle","apple","peach","tbacon",
-    "donuts","rabbitRaw","rabbit","salemaRaw","salema","ornateRaw","ornate","mackerelRaw","mackerel","tunaRaw","tuna","mulletRaw","mullet","catsharkRaw","catshark",
-    "turtleRaw","turtleSoup","henRaw","hen","roosterRaw","rooster","sheepRaw","sheep","goatRaw","goat","pornUnprocessed","pornProcessed"
-];
+} foreach ("true" configClasses (missionConfigFile >> "VirtualItems"));
 
 _return pushBack _uItems;
 _return pushBack _uMags;
