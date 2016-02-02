@@ -37,7 +37,7 @@ while{true} do {
 	if(player distance _player > 10) exitWith {};
 };
 	
-if(player distance _player > 10) exitWith {hint "You can't just walk away while filming!"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+if(player distance _player > 10) exitWith {hint "Hey, you forgot your pants!"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 
 if(([true,"porn_unprocessed",1] call life_fnc_handleInv)) then {
 	titleText["You have successfully filmed some porn, now you need to get it edited!","PLAIN"];
