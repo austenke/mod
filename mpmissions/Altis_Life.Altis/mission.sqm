@@ -2632,8 +2632,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15581.385,18.467798,17202.959};
-					azimut=-39.2113;
+					position[]={15578.232,18.472368,17203.918};
+					azimut=-90.787308;
 					special="NONE";
 					id=125;
 					side="CIV";
@@ -2653,8 +2653,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15579.797,18.513779,17210.709};
-					azimut=220;
+					position[]={15578.044,18.533903,17212.688};
+					azimut=181.3739;
 					special="NONE";
 					id=126;
 					side="CIV";
@@ -19357,8 +19357,8 @@ class Mission
 		};
 		class Item1550
 		{
-			position[]={15578.433,18.497107,17197.6};
-			azimut=134.11658;
+			position[]={15580.594,18.488657,17198.271};
+			azimut=82.54055;
 			id=1677;
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
@@ -21614,18 +21614,18 @@ class Mission
 		};
 		class Item235
 		{
-			position[]={15573.89,18.489666,17202.488};
+			position[]={15573.947,18.512861,17197.752};
 			name="med_car_3";
 			type="Empty";
-			angle=-130.62582;
+			angle=-182.20187;
 		};
 		class Item236
 		{
-			position[]={15579.187,18.498955,17197.176};
+			position[]={15581.396,18.485207,17198.6};
 			name="atm_marker_1_2";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=-221.65602;
+			angle=-273.23206;
 		};
 		class Item237
 		{
