@@ -41,8 +41,8 @@ _progressBar progressSetPosition 0.01;
 _cP = 0.01;
 
 switch (typeOf _building) do {
-	case "Land_Dome_Big_F": {_cpRate = 0.003;};
-	case "Land_Research_house_V1_F": {_cpRate = 0.0015;};
+	case "Land_Dome_Big_F": {_cpRate = 0.003;_boltMessage = "You have broken into the dome, now you need to bolt cut the vault container!";};
+	case "Land_Research_house_V1_F": {_cpRate = 0.0015;_boltMessage = "You have broken into the container, now place an explosive charge on the vault!";};
 	default {_cpRate = 0.08;}
 };
 
@@ -87,6 +87,7 @@ if((_building GVAR ["locked",false])) then {
 	_building SVAR ["locked",false,true];
 };
 [getPlayerUID player,profileName,"459"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
+titleText [_boltMessage,"PLAIN"];
 } else {
 	hint "You need to be at a fed dome first!";
 };
