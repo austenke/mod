@@ -9,6 +9,7 @@ if(life_markers) then {
 	PlayerMarkers = [];
 	FinishedLoop = false;
 	hint localize "STR_ANOTF_MEnabled";
+	diag_log format["%1 has activated markers",player];
 	while{life_markers} do {
 		{
 			if !(_x in allUnits) then {
@@ -32,6 +33,7 @@ if(life_markers) then {
 };
 FinishedLoop = true;
 } else {
+	diag_log format["%1 has deactivated markers",player];
 	if(isNil "FinishedLoop") exitWith {};
 	hint localize "STR_ANOTF_MDisabled";
 	waitUntil{FinishedLoop};
