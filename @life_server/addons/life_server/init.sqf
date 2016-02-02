@@ -152,7 +152,7 @@ diag_log "Set New Weather Changes to 999999999 seconds";
 _seconds = nextWeatherChange;
 
 /* Set the amount of gold in the federal reserve at mission start */
-fed_bank setVariable ["safe",count playableUnits,true];
+fed_bank setVariable ["safe",5,true];
 [] spawn TON_fnc_federalUpdate;
 
 /* Event handler for disconnecting players */
