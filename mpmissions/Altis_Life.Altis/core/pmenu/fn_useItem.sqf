@@ -33,6 +33,11 @@ switch (true) do {
 		closeDialog 0;
 	};
 
+	case (EQUAL(_item,"camera")): {
+		[cursorTarget] spawn life_fnc_filmPlayers;
+		closeDialog 0;
+	};
+
 	//case (EQUAL(_item,"defib")): {
 	//	[cursorTarget] spawn life_fnc_revivePlayer;
 	//	closeDialog 0;

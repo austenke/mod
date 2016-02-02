@@ -104,6 +104,7 @@ class Life_Settings {
 //Virtual Items
 class VirtualItems {
 	VITEMMACRO(defib, "STR_Item_Defib", "defib", 10, 20000, -1, false, -1, "icons\ico_defib.paa")
+	VITEMMACRO(camera, "STR_Item_Camera", "camera", 10, 5000, -1, false, -1, "") // Need icon
 
 	//Misc
 	VITEMMACRO(pickaxe, "STR_Item_Pickaxe", "pickaxe", 5, 750, 350, false, -1, "icons\ico_pickaxe.paa")

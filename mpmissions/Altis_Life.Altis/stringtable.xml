@@ -3157,6 +3157,13 @@
 			<Italian>Defibrillator</Italian>
 			<Portuguese>Defibrillator</Portuguese>
 		</Key>
+		<Key ID="STR_Item_Camera">
+			<Original>Camera</Original>
+			<German>Camera</German>
+			<French>Camera</French>
+			<Italian>Camera</Italian>
+			<Portuguese>Camera</Portuguese>
+		</Key>
 		<Key ID="STR_Item_nitro">
 			<Original>nitro</Original>
 			<German>nitro</German>
