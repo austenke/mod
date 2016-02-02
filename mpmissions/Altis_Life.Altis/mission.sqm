@@ -77,7 +77,8 @@ class Mission
 		"a3_characters_f",
 		"A3_Characters_F_Civil",
 		"A3_Characters_F_Gamma",
-		"A3_Modules_F_Curator_Curator",
+		"3DEN",
+		"a3_modules_f_curator_curator",
 		"A3_Modules_F",
 		"A3_Structures_F_Civ_Garbage",
 		"A3_Structures_F_Mil_Helipads",
@@ -2544,7 +2545,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="organ_4";
-					init="this enableSimulation false; this allowDamage false; this setObjectTexture [0,""textures\medic_uniform.jpg""];  this addAction[""Medical Assistance"",life_fnc_healHospital]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];this addAction[""Deliver Organs"",life_fnc_organFinish,""organ_4"",0,false,false,"""",'!isNil ""life_dp_point"" && life_organ_in_progress && life_dp_point == _target '];this addAction[""Get Organ Delivery Mission"",life_fnc_medicOrgan,""organ_4"",0,false,false,"""",' isNil ""life_dp_point"" && !life_organ_in_progress && !life_delivery_in_progress '];";
+					init="this enableSimulation false; this allowDamage false; this setObjectTexture [0,""textures\medic_uniform.jpg""];  this addAction[""Medical Assistance"",life_fnc_healHospital]; this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];this addAction[""Deliver Organs"",life_fnc_organFinish,""organ_4"",0,false,false,"""",'!isNil ""life_dp_point"" && life_organ_in_progress && life_dp_point == _target '];this addAction[""Get Organ Delivery Mission"",life_fnc_medicOrgan,""organ_4"",0,false,false,"""",' isNil ""life_dp_point"" && !life_organ_in_progress && !life_delivery_in_progress ']; this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_2_1"",""med"",""Kavala Hosptial""]]; ";
 				};
 			};
 		};
@@ -2631,7 +2632,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15587.724,18.481443,17198.047};
+					position[]={15581.385,18.467798,17202.959};
 					azimut=-39.2113;
 					special="NONE";
 					id=125;
@@ -2652,7 +2653,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15587.562,18.449909,17208.809};
+					position[]={15579.797,18.513779,17210.709};
 					azimut=220;
 					special="NONE";
 					id=126;
@@ -2667,7 +2668,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1585;
+		items=1586;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -17556,8 +17557,8 @@ class Mission
 		};
 		class Item1379
 		{
-			position[]={14336.979,18.586514,17428.438};
-			azimut=53.757301;
+			position[]={14338.038,27.365187,18604.066};
+			azimut=27.818521;
 			offsetY=0.118336;
 			id=1506;
 			side="EMPTY";
@@ -19356,7 +19357,7 @@ class Mission
 		};
 		class Item1550
 		{
-			position[]={15585.246,18.546562,17191.26};
+			position[]={15578.433,18.497107,17197.6};
 			azimut=134.11658;
 			id=1677;
 			side="EMPTY";
@@ -19710,10 +19711,22 @@ class Mission
 			vehicle="Land_HBarrierBig_F";
 			skill=0.40000001;
 		};
+		class Item1585
+		{
+			position[]={25882.271,16.243063,21263.357};
+			azimut=33.196892;
+			offsetY=0.118336;
+			id=1712;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V2_F";
+			skill=0.60000002;
+			text="dealer_2_1";
+			init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this addAction[""Drug Dealer"",life_fnc_virt_menu,""drugdealer"",0,false,false,"""",' vehicle player == player && player distance _target < 5 && playerSide == civilian ']; this addAction[""Question Dealer"",life_fnc_questionDealer,"""",0,false,false,"""",' vehicle player == player && player distance _target < 5 && playerSide == west && !life_action_inUse '];";
+		};
 	};
 	class Markers
 	{
-		items=241;
+		items=243;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -20297,12 +20310,12 @@ class Mission
 		};
 		class Item73
 		{
-			position[]={14337.55,18.585384,17428.805};
+			position[]={14338.396,27.382032,18604.67};
 			name="Dealer_1_4";
 			text="Drug Dealer";
 			type="mil_dot";
 			colorName="ColorRed";
-			angle=-57.933102;
+			angle=-83.871864;
 		};
 		class Item74
 		{
@@ -21608,7 +21621,7 @@ class Mission
 		};
 		class Item236
 		{
-			position[]={15587.111,18.559999,17189.41};
+			position[]={15579.187,18.498955,17197.176};
 			name="atm_marker_1_2";
 			type="loc_Tourism";
 			colorName="ColorGreen";
@@ -21642,6 +21655,22 @@ class Mission
 			type="loc_Tourism";
 			colorName="ColorGreen";
 			angle=143.45085;
+		};
+		class Item241
+		{
+			position[]={25882.682,16.242443,21263.926};
+			name="Dealer_1_4_1";
+			text="Drug Dealer";
+			type="mil_dot";
+			colorName="ColorRed";
+			angle=-78.4935;
+		};
+		class Item242
+		{
+			position[]={25678.98,19.94084,21327.57};
+			name="med_car_2_1";
+			type="Empty";
+			angle=-138.86894;
 		};
 	};
 	class Sensors
