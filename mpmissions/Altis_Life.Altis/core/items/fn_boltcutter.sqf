@@ -12,12 +12,9 @@ if(isNull _building) exitWith {};
 if(!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a house door."};
 if(isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
 
-if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building) then {
+if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building OR (nearestObject [[16019.5,16952.9,0],"Land_Research_house_V1_F"]) == _building) then {
 	if([west] call life_fnc_playerCount < 3) exitWith { hint "There must be at least three officers online to rob the fed!" };
 	[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
-} else {
-	[0,"STR_ISTR_Bolt_AlertHouse",true,[profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
-};
 
 _doors = FETCH_CONFIG2(getNumber,CONFIG_VEHICLES,(typeOf _building), "numberOfDoors");
 
@@ -90,3 +87,6 @@ if((_building GVAR ["locked",false])) then {
 	_building SVAR ["locked",false,true];
 };
 [getPlayerUID player,profileName,"459"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
+} else {
+	hint "You need to be at a fed dome first!";
+};
