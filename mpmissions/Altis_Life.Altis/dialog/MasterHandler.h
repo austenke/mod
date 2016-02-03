@@ -27,3 +27,4 @@
 #include "federalReserve.h"
 #include "compensate.hpp"
 #include "pickup.hpp"
+#include "whitelist.hpp"
