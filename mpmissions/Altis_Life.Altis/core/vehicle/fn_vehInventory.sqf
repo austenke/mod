@@ -60,7 +60,7 @@ if(EQUAL(count _data,0)) then {_veh setVariable["Trunk",[[],0],true]; _data = []
 	};
 } foreach _data;
 
-if((_val < 1) then {
+if(_val < 1) then {
 	_sack = "Land_Sacks_heap_F" createVehicle position player;
 	_sack attachTo[_veh,[1,1,1]];
 	_sack allowDamage false;
