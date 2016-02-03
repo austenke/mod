@@ -37,15 +37,16 @@ class Life_whitelist_players {
 			w = 0.6;
 			h = (1 / 25);
 		};
-		
-		class KeyChainList : Life_RscListBox 
+
+		class PlayerID : Life_RscEdit
 		{
-			idc = 2701;
-			text = "";
-			sizeEx = 0.035;
+			idc = 2522;
+			text = "Player ID";
 			
-			x = 0.12; y = 0.26;
-			w = 0.56; h = 0.370;
+			x = 0.04 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.35;
+			w = (13 / 40);
+			h = (1 / 25);
 		};
 
 		class CloseButtonKey : Life_RscButtonMenu {
@@ -58,10 +59,10 @@ class Life_whitelist_players {
 			h = (1 / 25);
 		};
 		
-		class DropKey : life_RscButtonMenu {
+		class whitelist : life_RscButtonMenu {
 			idc = -1;
 			text = "Whitelist";
-			onButtonClick = "[] call life_fnc_whitelist";
+			onButtonClick = "[] call life_fnc_whitelist","closeDialog 0;";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.8 - (1 / 25);
 			w = (6.25 / 40);
