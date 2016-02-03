@@ -57,11 +57,13 @@ if(EQUAL(count _data,0)) then {_veh setVariable["Trunk",[[],0],true]; _data = []
 		if(!(EQUAL(_icon,""))) then {
 			_tInv lbSetPicture [(lbSize _tInv)-1,_icon];
 		};
-	if((_val < 1) && (vehicle _unit) == "O_Truck_03_transport_F") then
-		_sack = "Land_Sacks_heap_F" createVehicle position player;
-		_sack attachTo[_veh,[1,1,1]];
-		_sack allowDamage false;
-		_sack enableRopeAttach false;
-		_sack disableCollisionWith _veh;
 	};
 } foreach _data;
+
+if((_val < 1) && (vehicle _unit) == "O_Truck_03_transport_F") then
+	_sack = "Land_Sacks_heap_F" createVehicle position player;
+	_sack attachTo[_veh,[1,1,1]];
+	_sack allowDamage false;
+	_sack enableRopeAttach false;
+	_sack disableCollisionWith _veh;
+};
