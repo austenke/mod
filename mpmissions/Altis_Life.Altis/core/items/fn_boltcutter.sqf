@@ -89,5 +89,5 @@ if((_building GVAR ["locked",false])) then {
 [getPlayerUID player,profileName,"459"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
 titleText [_boltMessage,"PLAIN"];
 } else {
-	hint "You need to be at a fed dome first!";
+	hint "You are not at the Federal Reserve!";
 };
