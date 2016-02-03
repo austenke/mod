@@ -65,5 +65,4 @@ if((_val < 1) then {
 	_sack attachTo[_veh,[1,1,1]];
 	_sack allowDamage false;
 	_sack enableRopeAttach false;
-	_sack disableCollisionWith _veh;
 };
