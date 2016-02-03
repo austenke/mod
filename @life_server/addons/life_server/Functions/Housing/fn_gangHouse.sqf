@@ -10,6 +10,7 @@ _house = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
 _houseID = _house getVariable["house_id",-1];
 
 if(isNull _house OR _newid == "") exitWith {};
+if(!(isNull SEL(life_gangData,6))) exitWith {};
 
 diag_log format["----------- House ID: %1 -------- Gang ID: %2",_houseID,_newid];
 

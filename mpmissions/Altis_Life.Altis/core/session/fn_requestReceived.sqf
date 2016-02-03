@@ -62,7 +62,9 @@ switch(playerSide) do {
 			life_vehicles pushBack _house;
 		} foreach life_houses;
 		
+		life_gangHouse = SEL(_this,14);
 		life_gangData = SEL(_this,10);
+		life_gangData pushBack life_gangHouse;
 		if(!(EQUAL(count life_gangData,0))) then {
 			[] spawn life_fnc_initGang;
 		};
@@ -73,7 +75,6 @@ switch(playerSide) do {
 		player setVariable ["gangRank",life_gangRank,true];
 		//life_rep = ((SEL(_this,14) select 0) select 0);
 
-		life_gangHouse = SEL(_this,14);
 		{
 			_house = nearestBuilding (call compile format["%1", SEL(_x,0)]);
 			life_vehicles pushBack _house;
