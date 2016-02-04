@@ -214,7 +214,6 @@ class Life_Client_Core
 		class hudSetup {};
 		class hudUpdate {};
 		class tazeSound {};
-		class introsound {};
 		class animSync {};
 		class simDisable {};
 		class keyHandler {};
@@ -435,10 +434,3 @@ class Life_Client_Core
 		class cashWipeMe {};
 		class pickupItems {};
 	};
-
-	class Cam
-	{
-	   file ="core";
-	   class IntroCam {};
-	};
-};
