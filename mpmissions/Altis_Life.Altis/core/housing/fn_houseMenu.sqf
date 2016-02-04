@@ -81,6 +81,7 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 		_Btn3 buttonSetAction "[life_pInact_curTarget,player] spawn life_fnc_storeVehicle; closeDialog 0;";
 		_Btn3 ctrlShow true;
 	} else {
+		systemChat "House section";
 		_Btn1 ctrlSetText localize "STR_pInAct_SellHouse";
 		_Btn1 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_sellHouse; closeDialog 0;";
 		_Btn1 ctrlShow true;
