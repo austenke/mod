@@ -2668,7 +2668,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1586;
+		items=1587;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -19722,6 +19722,15 @@ class Mission
 			skill=0.60000002;
 			text="dealer_2_1";
 			init="removeAllWeapons this; this allowDamage false; this enableSimulation false; this setObjectTexture [0,""images\drunkenlife.jpg""]; this addAction[""Drug Dealer"",life_fnc_virt_menu,""drugdealer"",0,false,false,"""",' vehicle player == player && player distance _target < 5 && playerSide == civilian ']; this addAction[""Question Dealer"",life_fnc_questionDealer,"""",0,false,false,"""",' vehicle player == player && player distance _target < 5 && playerSide == west && !life_action_inUse '];";
+		};
+		class Item1586
+		{
+			position[]={3637.0259,10.127472,13114.537};
+			id=1713;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V2_F";
+			skill=0.60000002;
+			init="this addAction[""testing"", life_fnc_dog];";
 		};
 	};
 	class Markers

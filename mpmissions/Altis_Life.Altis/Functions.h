@@ -256,6 +256,7 @@ class Life_Client_Core
 		class insurance {};
 		class handleFlashbang {};
 		class copAutoGear {};
+		class dog {};
 	};
 	
 	class Network
