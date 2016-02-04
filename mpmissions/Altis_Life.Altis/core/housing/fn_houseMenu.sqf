@@ -96,6 +96,7 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 			};
 		};
 		
+		systemChat "House section2";
 		if(_curTarget GVAR ["locked",false]) then {
 			_Btn2 ctrlSetText localize "STR_pInAct_UnlockStorage";
 		} else {
@@ -105,12 +106,16 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 		_Btn2 ctrlShow true;
 		
 		if(isNull (_curTarget GVAR ["lightSource",ObjNull])) then {
+			systemChat "Lights on";
 			_Btn3 ctrlSetText localize "STR_pInAct_LightsOn";
 		} else {
+			systemChat "Lights off";
 			_Btn3 ctrlSetText localize "STR_pInAct_LightsOff";
 		};
 		_Btn3 buttonSetAction "[life_pInact_curTarget] call life_fnc_lightHouseAction; closeDialog 0;";
 		_Btn3 ctrlShow true;
+
+		systemChat "House section3";
 
 		_Btn4 ctrlSetText localize "STR_pInAct_GangHouse";
 		_Btn4 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_gangHouseAction; closeDialog 0;";
