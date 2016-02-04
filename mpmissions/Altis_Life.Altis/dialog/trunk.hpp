@@ -85,6 +85,7 @@ class TrunkMenu
 			idc = 3503;
 			text = "";
 			sizeEx = 0.030;
+			//onLBDblClick = "[0,_this select 1] call life_fnc_s_onSliderChange;";
 			
 			x = 0.49; y = 0.29;
 			w = 0.3; h = 0.42;

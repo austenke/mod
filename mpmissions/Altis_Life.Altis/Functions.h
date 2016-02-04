@@ -188,6 +188,7 @@ class Life_Client_Core
 		class keyGive {};
 		class keyDrop {};
 		class s_onSliderChange {};
+		class s_onTrunkChange {};
 		class updateViewDistance {};
 		class settingsMenu {};
 		class s_onChar {};
