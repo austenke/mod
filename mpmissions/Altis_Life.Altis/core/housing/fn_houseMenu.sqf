@@ -117,14 +117,14 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 
 		systemChat "House section3";
 
-		_Btn4 ctrlSetText localize "STR_pInAct_GangHouse";
-		_Btn4 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_gangHouseAction; closeDialog 0;";
-		_Btn4 ctrlShow true;
+		//_Btn4 ctrlSetText localize "STR_pInAct_GangHouse";
+		//_Btn4 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_gangHouseAction; closeDialog 0;";
+		//_Btn4 ctrlShow true;
 
-		if(typeName ((_curTarget GVAR "house_owner") select 0) != "STRING") then {
-			if(((_curTarget GVAR "house_owner") select 0) == (grpPlayer GVAR "gang_id")) then {
-				_Btn4 ctrlEnable false;
-			};
-		};
+		//if(typeName ((_curTarget GVAR "house_owner") select 0) != "STRING") then {
+		//	if(((_curTarget GVAR "house_owner") select 0) == (grpPlayer GVAR "gang_id")) then {
+		//		_Btn4 ctrlEnable false;
+		//	};
+		//};
 	};
 };
