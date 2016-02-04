@@ -137,6 +137,7 @@ class Life_Client_Core
 		class shootPorn {};
 		class editPorn {};
 		class interAction {};
+		class interActionClient {};
 	};
 	
 	class Housing
