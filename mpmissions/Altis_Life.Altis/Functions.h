@@ -434,3 +434,4 @@ class Life_Client_Core
 		class cashWipeMe {};
 		class pickupItems {};
 	};
+};
