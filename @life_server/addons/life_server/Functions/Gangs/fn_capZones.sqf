@@ -106,7 +106,7 @@ KBW_fnc_handleCapture = {
 			case "Arms Dealer": {format["Arms Dealer - %1",_string]};
 			case "Cocaine Cartel": {format["Cocaine Cartel - %1",_string]};
 			case "Moonshine Cartel": {format["Moonshine Cartel - %1",_string]};
-			case "Heroin Cartel": {format["Heroin Cartel - %1",_string]};
+			case "Oil Cartel": {format["Oil Cartel - %1",_string]};
 		};
 		_marker setMarkerText format["%1",_name];
 	};
