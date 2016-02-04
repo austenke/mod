@@ -34,7 +34,7 @@ switch (true) do {
 	};
 
 	case (EQUAL(_item,"camera")): {
-		[cursorTarget] spawn life_fnc_filmPlayers;
+		[cursorTarget] spawn life_fnc_shootPorn;
 		closeDialog 0;
 	};
 
