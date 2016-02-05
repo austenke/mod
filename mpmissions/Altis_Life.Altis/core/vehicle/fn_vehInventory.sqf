@@ -11,6 +11,7 @@ _veh = param [0,ObjNull,[ObjNull]];
 if(isNull _veh OR !alive _veh) exitWith {closeDialog 0;}; //If null / dead exit menu
 disableSerialization;
 
+_unit = SEL(_this,0);
 _tInv = CONTROL(3500,3502);
 _pInv = CONTROL(3500,3503);
 lbClear _tInv;
@@ -58,3 +59,11 @@ if(EQUAL(count _data,0)) then {_veh setVariable["Trunk",[[],0],true]; _data = []
 		};
 	};
 } foreach _data;
+
+if(_val < 1) then {
+	_sack = "Land_Sacks_heap_F" createVehicle position player;
+	_sack attachTo[_veh,[1,1,1]];
+	_sack allowDamage false;
+	_sack enableRopeAttach false;
+	_sack disableCollisionWith _veh;
+};
