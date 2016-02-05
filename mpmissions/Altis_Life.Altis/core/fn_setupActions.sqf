@@ -45,7 +45,7 @@ switch (playerSide) do {
 	
 		//Revive
 		life_actions = life_actions + [player addAction["Revive Player",life_fnc_revivePlayer,"",200,false,false,"",'
-		!isNull cursorTarget && life_inv_defib >= 1 && !alive cursorTarget && cursorTarget isKindOf "Man" && cursorTarget distance player < 9 ']];
+		!isNull cursorTarget && life_inv_defib >= 1 && !alive cursorTarget && isPlayer cursorTarget && cursorTarget isKindOf "Man" && cursorTarget distance player < 9 ']];
 	};
 
 	case west: {

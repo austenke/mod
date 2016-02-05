@@ -66,7 +66,7 @@ life_action_inUse = true;
 };
 
 //Check if it's a dead body.
-if(_curTarget isKindOf "Man" && {!alive _curTarget}) exitWith {
+if(_curTarget isKindOf "Man" && {!alive _curTarget} && isPlayer _curTarget) exitWith {
 	//Hotfix code by ins0
 	[_curTarget] call life_fnc_revivePlayer;
 };
