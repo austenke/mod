@@ -51,9 +51,11 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then {
 			[_item,true] spawn life_fnc_handleItem;
 			[1,grpPlayer] remoteExecCall ["TON_fnc_updateGang",RSERV];
 		} else {
-			if(_price > CASH) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
+			if(_price > CASH && life_inv_debit < 1) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
+			if(_price > CASH && _price > BANK && life_inv_debit > 0) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
+			if(_price > CASH && life_inv_debit > 0 && _price > 30000) exitWith {hint "Debit cards only work for prices under $30,000"};
 			hint parseText format[localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
-			SUB(CASH,_price);
+			if(_price < CASH) then {SUB(CASH,_price);} else {SUB(BANK,_price);};
 			[_item,true] spawn life_fnc_handleItem;
 		};
 	} else {

@@ -3150,6 +3150,13 @@
 		<Key ID="STR_Item_Cornmeal">
 			<Original>Cornmeal Grains</Original>
 		</Key>
+		<Key ID="STR_Item_Debit">
+			<Original>Debit Card</Original>
+			<German>Debit Card</German>
+			<French>Debit Card</French>
+			<Italian>Debit Card</Italian>
+			<Portuguese>Debit Card</Portuguese>
+		</Key>
 		<Key ID="STR_Item_Defib">
 			<Original>Defibrillator</Original>
 			<German>Defibrillator</German>

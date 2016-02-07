@@ -45,8 +45,10 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 			[5,grpPlayer,_toSelect select 0,1000] remoteExecCall ["TON_fnc_updateGang",RSERV];
 		} else {
 			if((_price * _amount) > CASH) exitWith {[false,_type,_amount] call life_fnc_handleInv; hint localize "STR_NOTF_NotEnoughMoney";};
+			if((_price * _amount) > CASH && (_price * _amount) > BANK && life_inv_debit > 0) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
+			if((_price * _amount) > CASH && life_inv_debit > 0 && (_price * _amount) > 30000) exitWith {hint "Debit cards only work for prices under $30,000"};
 			hint format[localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText];
-			SUB(CASH,_price * _amount);
+			if((_price * _amount) < CASH) then {SUB(CASH,(_price * _amount));} else {SUB(BANK,(_price * _amount));};
 			[5,grpPlayer,_toSelect select 0,1000] remoteExecCall ["TON_fnc_updateGang",RSERV];
 		};
 	} else {
