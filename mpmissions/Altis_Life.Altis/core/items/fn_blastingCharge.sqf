@@ -13,9 +13,10 @@ if(typeOf _vault != "Land_CargoBox_V1_F") exitWith {hint localize "STR_ISTR_Blas
 if(_vault GVAR ["chargeplaced",false]) exitWith {hint localize "STR_ISTR_Blast_AlreadyPlaced"};
 if(_vault GVAR ["safe_open",false]) exitWith {hint localize "STR_ISTR_Blast_AlreadyOpen"};
 if(!([false,"blastingcharge",1] call life_fnc_handleInv)) exitWith {}; //Error?
+if([west] call life_fnc_playerCount < 2) exitWith { hint "There must be at least three officers online to rob the fed!" };
 
 _vault SVAR ["chargeplaced",true,true];
-[0,"STR_ISTR_Blast_Placed"] remoteExecCall ["life_fnc_broadcast",west];
+[0,"STR_ISTR_Blast_Placed",true] remoteExecCall ["life_fnc_broadcast",west];
 hint localize "STR_ISTR_Blast_KeepOff";
 _handle = [] spawn life_fnc_demoChargeTimer;
 [] remoteExec ["life_fnc_demoChargeTimer",west];
