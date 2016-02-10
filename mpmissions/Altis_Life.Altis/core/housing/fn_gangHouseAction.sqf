@@ -16,10 +16,19 @@ systemChat str ((_house GVAR ["house_owner",ObjNull]) select 1);
 systemChat str (getPlayerUID player);
 
 if(getPlayerUID player == ((_house GVAR ["house_owner",ObjNull]) select 0)) then {
-	systemChat "Sending request to server";
-	[grpPlayer GVAR "gang_id",_house] remoteExec ["TON_fnc_gangHouse",RSERV];
 
-	_house SVAR ["house_owner",[grpPlayer GVAR "gang_id",grpPlayer GVAR "gang_name"],true];
+	_houseID = _house getVariable["house_id",-1];
+	_gangID = grpPlayer getVariable ["gang_id",-1];
+	_gangName = grpPlayer getVariable "gang_name";
+
+	if(_houseID == -1) exitWith {hint "The ID for this house does not exist";};
+	if(_gangID == -1) exitWith {hint "You are not in a gang!";};
+
+	systemChat "Sending request to server";
+	[_gangID,_houseID] remoteExec ["TON_fnc_gangHouse",RSERV];
+
+	_house SVAR ["house_owner",[_gangID,_gangName],true];
+	_house SVAR ["locked",true,true];
 
 	//_marker = createMarkerLocal [format["house_%1",(_house GVAR "uid")],getPosATL _house];
 	//_houseName = FETCH_CONFIG2(getText,CONFIG_VEHICLES,(typeOf _house), "displayName");
